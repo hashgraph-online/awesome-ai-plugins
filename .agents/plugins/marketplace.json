@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-07T19:23:12.673697+00:00",
+  "last_updated": "2026-04-07T19:30:18.497135+00:00",
   "plugins": [
     {
       "name": "AgentOps",
@@ -27,6 +27,24 @@
       "owner": "avivsinai",
       "repo": "bitbucket-cli",
       "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Blueprint",
+      "url": "https://github.com/JuliusBrussee/blueprint",
+      "owner": "JuliusBrussee",
+      "repo": "blueprint",
+      "description": "Specification-driven development pipeline with testable acceptance criteria",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Brooks Lint",
+      "url": "https://github.com/hyhmrright/brooks-lint",
+      "owner": "hyhmrright",
+      "repo": "brooks-lint",
+      "description": "AI code reviews grounded in six classic engineering books",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },

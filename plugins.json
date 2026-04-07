@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-04-07",
-  "total": 37,
+  "total": 39,
   "platforms": [
     "codex",
     "claude-code",
@@ -36,6 +36,24 @@
       "owner": "avivsinai",
       "repo": "bitbucket-cli",
       "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Blueprint",
+      "url": "https://github.com/JuliusBrussee/blueprint",
+      "owner": "JuliusBrussee",
+      "repo": "blueprint",
+      "description": "Specification-driven development pipeline with testable acceptance criteria",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Brooks Lint",
+      "url": "https://github.com/hyhmrright/brooks-lint",
+      "owner": "hyhmrright",
+      "repo": "brooks-lint",
+      "description": "AI code reviews grounded in six classic engineering books",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
