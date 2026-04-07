@@ -1,0 +1,50 @@
+name: Sync from awesome-codex-plugins
+
+on:
+  repository_dispatch:
+    types: [sync-to-ai-plugins]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from awesome-codex-plugins
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout awesome-ai-plugins
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Checkout awesome-codex-plugins
+        uses: actions/checkout@v4
+        with:
+          repository: hashgraph-online/awesome-codex-plugins
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: source-repo
+          fetch-depth: 1
+
+      - name: Sync files
+        run: |
+          # Copy Codex plugin entries from source
+          cp source-repo/README.md README.md
+          cp source-repo/plugins.json plugins.json
+          cp -r source-repo/.agents/plugins/ .agents/ 2>/dev/null || true
+
+      - name: Regenerate combined JSON
+        run: |
+          python3 scripts/generate_plugins_json.py || true
+
+      - name: Commit and push
+        run: |
+          if ! git diff --quiet -- README.md plugins.json .agents/plugins/marketplace.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md plugins.json .agents/plugins/marketplace.json
+            git commit -m "chore: sync from awesome-codex-plugins"
+            git push
+          else
+            echo "No changes to sync"
+          fi
