@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "source": "awesome-ai-plugins",
+  "last_updated": "2026-04-07T19:22:42.111770+00:00",
+  "plugins": [
+    {
+      "name": "AgentOps",
+      "url": "https://github.com/boshu2/agentops",
+      "owner": "boshu2",
+      "repo": "agentops",
+      "description": "DevOps layer for coding agents with flow, feedback, and memory",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Apple Productivity",
+      "url": "https://github.com/matk0shub/apple-productivity-mcp",
+      "owner": "matk0shub",
+      "repo": "apple-productivity-mcp",
+      "description": "Local Apple Calendar and Reminders for macOS",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Bitbucket CLI",
+      "url": "https://github.com/avivsinai/bitbucket-cli",
+      "owner": "avivsinai",
+      "repo": "bitbucket-cli",
+      "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Code for Codex",
+      "url": "https://github.com/sendbird/cc-plugin-codex",
+      "owner": "sendbird",
+      "repo": "cc-plugin-codex",
+      "description": "Use Claude Code from Codex for reviews and rescue tasks",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Octopus",
+      "url": "https://github.com/nyldn/claude-octopus",
+      "owner": "nyldn",
+      "repo": "claude-octopus",
+      "description": "Multi-LLM orchestration dispatching to 8 providers",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Codex Agenteam",
+      "url": "https://github.com/yimwoo/codex-agenteam",
+      "owner": "yimwoo",
+      "repo": "codex-agenteam",
+      "description": "Specialist AI agents orchestrated as a configurable team pipeline",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "HOTL Plugin",
+      "url": "https://github.com/yimwoo/hotl-plugin",
+      "owner": "yimwoo",
+      "repo": "hotl-plugin",
+      "description": "Human-on-the-Loop AI coding workflow plugin",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Langfuse Observability",
+      "url": "https://github.com/avivsinai/langfuse-mcp",
+      "owner": "avivsinai",
+      "repo": "langfuse-mcp",
+      "description": "Query traces, debug exceptions, analyze sessions",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Registry Broker",
+      "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
+      "owner": "hashgraph-online",
+      "repo": "registry-broker-codex-plugin",
+      "description": "Delegate tasks to specialist AI agents via the HOL Registry",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Remotion Plugin",
+      "url": "https://github.com/tim-osterhus/codex-remotion-plugin",
+      "owner": "tim-osterhus",
+      "repo": "codex-remotion-plugin",
+      "description": "Build parameterized Remotion videos in Codex",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Agent Skills",
+      "url": "https://github.com/anthropics/skills",
+      "owner": "anthropics",
+      "repo": "skills",
+      "description": "Public repository for Claude Code agent skills",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Code Harness",
+      "url": "https://github.com/dadwadw233/claude-code-harness",
+      "owner": "dadwadw233",
+      "repo": "claude-code-harness",
+      "description": "Blueprint skill for turning vague agent ideas into concrete designs",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Code Skills",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "owner": "alirezarezvani",
+      "repo": "claude-skills",
+      "description": "223 production-ready skills, 23 agents, and 298 Python tools",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Octopus",
+      "url": "https://github.com/nyldn/claude-octopus",
+      "owner": "nyldn",
+      "repo": "claude-octopus",
+      "description": "Multi-LLM orchestration dispatching to Codex, Gemini, Copilot, Qwen, Perplexity, OpenRouter, Ollama, OpenCode",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Codex Reviewer",
+      "url": "https://github.com/schuettc/codex-reviewer",
+      "owner": "schuettc",
+      "repo": "codex-reviewer",
+      "description": "Second-pass review of Claude-driven plans",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "OpenCode",
+      "url": "https://opencode.com",
+      "owner": "schuettc",
+      "repo": "codex-reviewer",
+      "description": "OpenAI's AI coding CLI",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Gemini CLI",
+      "url": "https://github.com/google/gemini-cli",
+      "owner": "google",
+      "repo": "gemini-cli",
+      "description": "Official Gemini CLI and extension system",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Brave Search",
+      "url": "https://github.com/modelcontextprotocol/server-brave-search",
+      "owner": "modelcontextprotocol",
+      "repo": "server-brave-search",
+      "description": "Web search via Brave API",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Code MCP",
+      "url": "https://github.com/anthropics/mcp-claude-code",
+      "owner": "anthropics",
+      "repo": "mcp-claude-code",
+      "description": "Official MCP server for Claude Code",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Codex MCP",
+      "url": "https://github.com/openai/mcp-codex",
+      "owner": "openai",
+      "repo": "mcp-codex",
+      "description": "Official MCP server for Codex",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Filesystem",
+      "url": "https://github.com/modelcontextprotocol/server-filesystem",
+      "owner": "modelcontextprotocol",
+      "repo": "server-filesystem",
+      "description": "Read and write to local filesystem",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/modelcontextprotocol/server-github",
+      "owner": "modelcontextprotocol",
+      "repo": "server-github",
+      "description": "Manage GitHub repos, issues, PRs",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://github.com/modelcontextprotocol/server-google-maps",
+      "owner": "modelcontextprotocol",
+      "repo": "server-google-maps",
+      "description": "Location and mapping services",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "PostgreSQL",
+      "url": "https://github.com/modelcontextprotocol/server-postgres",
+      "owner": "modelcontextprotocol",
+      "repo": "server-postgres",
+      "description": "Database queries and operations",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Puppeteer",
+      "url": "https://github.com/modelcontextprotocol/server-puppeteer",
+      "owner": "modelcontextprotocol",
+      "repo": "server-puppeteer",
+      "description": "Browser automation",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Slack",
+      "url": "https://github.com/modelcontextprotocol/server-slack",
+      "owner": "modelcontextprotocol",
+      "repo": "server-slack",
+      "description": "Slack workspace interactions",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Claude Desktop",
+      "url": "https://claude.ai/download",
+      "owner": "modelcontextprotocol",
+      "repo": "server-slack",
+      "description": "Anthropic's desktop app with MCP integration",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Codex",
+      "url": "https://openai.com/codex",
+      "owner": "modelcontextprotocol",
+      "repo": "server-slack",
+      "description": "OpenAI's CLI with MCP support",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.sh",
+      "owner": "modelcontextprotocol",
+      "repo": "server-slack",
+      "description": "AI-powered code editor with MCP support",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Windsurf",
+      "url": "https://windsurf.ai",
+      "owner": "modelcontextprotocol",
+      "repo": "server-slack",
+      "description": "Codeium's AI agent with MCP support",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "awesome-ai-agents",
+      "url": "https://github.com/e2b-dev/awesome-ai-agents",
+      "owner": "e2b-dev",
+      "repo": "awesome-ai-agents",
+      "description": "AI agent frameworks and tools (27k stars)",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "awesome-codex-plugins",
+      "url": "https://github.com/hashgraph-online/awesome-codex-plugins",
+      "owner": "hashgraph-online",
+      "repo": "awesome-codex-plugins",
+      "description": "Codex-specific plugin list",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "repo": "awesome-llm-apps",
+      "description": "LLM app examples (104k stars)",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "awesome-mcp-clients",
+      "url": "https://github.com/punkpeye/awesome-mcp-clients",
+      "owner": "punkpeye",
+      "repo": "awesome-mcp-clients",
+      "description": "MCP client applications",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "owner": "punkpeye",
+      "repo": "awesome-mcp-servers",
+      "description": "Comprehensive MCP server list (84k stars)",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "codex-plugin-scanner",
+      "url": "https://github.com/hashgraph-online/codex-plugin-scanner",
+      "owner": "hashgraph-online",
+      "repo": "codex-plugin-scanner",
+      "description": "Codex plugin quality gate",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "HOL Registry",
+      "url": "https://hol.org/registry",
+      "owner": "hashgraph-online",
+      "repo": "codex-plugin-scanner",
+      "description": "Discover and install plugins",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    }
+  ]
+}
