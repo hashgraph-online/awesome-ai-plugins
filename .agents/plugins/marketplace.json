@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-08T08:19:09.977731+00:00",
+  "last_updated": "2026-04-08T08:39:41.107711+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -373,15 +373,6 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Codex Reviewer",
-      "url": "https://github.com/schuettc/codex-reviewer",
-      "owner": "schuettc",
-      "repo": "codex-reviewer",
-      "description": "Second-pass review of Claude-driven plans",
-      "platform": "claude-code",
-      "source": "awesome-ai-plugins"
-    },
-    {
       "name": "Oh My Claude",
       "url": "https://github.com/2lab-ai/oh-my-claude",
       "owner": "2lab-ai",
@@ -396,42 +387,6 @@
       "owner": "2lab-ai",
       "repo": "oh-my-claude",
       "description": "OpenAI's AI coding CLI",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Agent Message Queue",
-      "url": "https://github.com/avivsinai/agent-message-queue",
-      "owner": "avivsinai",
-      "repo": "agent-message-queue",
-      "description": "File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "AgentOps",
-      "url": "https://github.com/boshu2/agentops",
-      "owner": "boshu2",
-      "repo": "agentops",
-      "description": "DevOps layer for coding agents with flow, feedback, and memory",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Apple Productivity",
-      "url": "https://github.com/matk0shub/apple-productivity-mcp",
-      "owner": "matk0shub",
-      "repo": "apple-productivity-mcp",
-      "description": "Local Apple Calendar and Reminders for macOS",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Bitbucket CLI",
-      "url": "https://github.com/avivsinai/bitbucket-cli",
-      "owner": "avivsinai",
-      "repo": "bitbucket-cli",
-      "description": "Manage Bitbucket repos, PRs, and pipelines",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -454,299 +409,11 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Blueprint",
-      "url": "https://github.com/JuliusBrussee/blueprint",
-      "owner": "JuliusBrussee",
-      "repo": "blueprint",
-      "description": "Specification-driven development pipeline with testable acceptance criteria",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Brooks Lint",
-      "url": "https://github.com/hyhmrright/brooks-lint",
-      "owner": "hyhmrright",
-      "repo": "brooks-lint",
-      "description": "AI code reviews grounded in six classic engineering books",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Chrome DevTools",
-      "url": "https://github.com/win4r/chrome-devtools-codex-plugin",
-      "owner": "win4r",
-      "repo": "chrome-devtools-codex-plugin",
-      "description": "One-click Codex plugin wrapper for chrome-devtools-mcp",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Claude Code for Codex",
-      "url": "https://github.com/sendbird/cc-plugin-codex",
-      "owner": "sendbird",
-      "repo": "cc-plugin-codex",
-      "description": "Use Claude Code from Codex for reviews and rescue tasks",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Claude Octopus",
-      "url": "https://github.com/nyldn/claude-octopus",
-      "owner": "nyldn",
-      "repo": "claude-octopus",
-      "description": "Multi-LLM orchestration dispatching to 8 providers",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Agenteam",
-      "url": "https://github.com/yimwoo/codex-agenteam",
-      "owner": "yimwoo",
-      "repo": "codex-agenteam",
-      "description": "Specialist AI agents orchestrated as a configurable team pipeline",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Be Serious",
-      "url": "https://github.com/lulucatdev/codex-be-serious",
-      "owner": "lulucatdev",
-      "repo": "codex-be-serious",
-      "description": "Enforce formal, textbook-grade written register across all agent output",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Mem",
-      "url": "https://github.com/2kDarki/codex-mem",
-      "owner": "2kDarki",
-      "repo": "codex-mem",
-      "description": "Automatically capture, compress, and inject session context back into future Codex sessions",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Multi Auth",
-      "url": "https://github.com/ndycode/codex-multi-auth",
-      "owner": "ndycode",
-      "repo": "codex-multi-auth",
-      "description": "Multi-account OAuth manager for the official Codex CLI with switching, health checks, and recovery tools",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex SEO",
-      "url": "https://github.com/BestLemoon/codex-seo",
-      "owner": "BestLemoon",
-      "repo": "codex-seo",
-      "description": "Full-stack SEO audits, Google API workflows, backlinks analysis, reporting, and optional MCP extensions for Codex",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Context Pack",
-      "url": "https://github.com/Rothschildiuk/context-pack",
-      "owner": "Rothschildiuk",
-      "repo": "context-pack",
-      "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Flow Studio Power Automate",
-      "url": "https://github.com/ninihen1/power-automate-mcp-skills",
-      "owner": "ninihen1",
-      "repo": "power-automate-mcp-skills",
-      "description": "Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "HOTL Plugin",
-      "url": "https://github.com/yimwoo/hotl-plugin",
-      "owner": "yimwoo",
-      "repo": "hotl-plugin",
-      "description": "Human-on-the-Loop AI coding workflow plugin",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Jenkins CLI",
-      "url": "https://github.com/avivsinai/jenkins-cli",
-      "owner": "avivsinai",
-      "repo": "jenkins-cli",
-      "description": "GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "KiCad Happy",
-      "url": "https://github.com/aklofas/kicad-happy",
-      "owner": "aklofas",
-      "repo": "kicad-happy",
-      "description": "KiCad EDA skills for schematic analysis, PCB layout review, component sourcing, BOM management, and manufacturing preparation",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Langfuse Observability",
-      "url": "https://github.com/avivsinai/langfuse-mcp",
-      "owner": "avivsinai",
-      "repo": "langfuse-mcp",
-      "description": "Query traces, debug exceptions, analyze sessions",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Launch Fast",
-      "url": "https://github.com/BlockchainHB/launchfast_codex_plugin",
-      "owner": "BlockchainHB",
-      "repo": "launchfast_codex_plugin",
-      "description": "Official Launch Fast plugin adapter for rapid SaaS deployment",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OC ChatGPT Multi Auth",
-      "url": "https://github.com/ndycode/oc-chatgpt-multi-auth",
-      "owner": "ndycode",
-      "repo": "oc-chatgpt-multi-auth",
-      "description": "Codex setup skill and OpenCode plugin for ChatGPT Plus/Pro OAuth, GPT-5/Codex presets, and multi-account failover",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OpenProject",
-      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
-      "owner": "varaprasadreddy9676",
-      "repo": "team-codex-plugins",
-      "description": "Team collaboration via OpenProject integration",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OrgX",
-      "url": "https://github.com/useorgx/orgx-codex-plugin",
-      "owner": "useorgx",
-      "repo": "orgx-codex-plugin",
-      "description": "MCP access and initiative-aware skills for organizational workflows",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "PANews Agent Toolkit",
-      "url": "https://github.com/panewslab/skills",
-      "owner": "panewslab",
-      "repo": "skills",
-      "description": "Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "PapersFlow",
-      "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
-      "owner": "papersflow-ai",
-      "repo": "papersflow-codex-plugin",
-      "description": "Paper discovery, citation verification, graph exploration, and DeepScan analysis",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Project Autopilot",
-      "url": "https://github.com/AlexMi64/codex-project-autopilot",
-      "owner": "AlexMi64",
-      "repo": "codex-project-autopilot",
-      "description": "Turn an idea into a structured project workflow with planning, execution, verification, and handoff",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
       "name": "Registry Broker",
       "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
       "owner": "hashgraph-online",
       "repo": "registry-broker-codex-plugin",
       "description": "Delegate tasks to specialist AI agents via the HOL Registry",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Remotion Plugin",
-      "url": "https://github.com/tim-osterhus/codex-remotion-plugin",
-      "owner": "tim-osterhus",
-      "repo": "codex-remotion-plugin",
-      "description": "Build parameterized Remotion videos in Codex",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "ru-text",
-      "url": "https://github.com/talkstream/ru-text",
-      "owner": "talkstream",
-      "repo": "ru-text",
-      "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "sitemd",
-      "url": "https://github.com/sitemd-cc/sitemd",
-      "owner": "sitemd-cc",
-      "repo": "sitemd",
-      "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Synta MCP",
-      "url": "https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta",
-      "owner": "Synta-ai",
-      "repo": "n8n-mcp-codex-plugin-synta",
-      "description": "Build, edit, validate, and self-heal n8n workflows with Synta MCP tools and Codex-ready workflow guidance",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Task Scheduler",
-      "url": "https://github.com/6Delta9/task-scheduler-codex-plugin",
-      "owner": "6Delta9",
-      "repo": "task-scheduler-codex-plugin",
-      "description": "OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "TokRepo Search",
-      "url": "https://github.com/henu-wang/tokrepo-codex-plugin",
-      "owner": "henu-wang",
-      "repo": "tokrepo-codex-plugin",
-      "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Upwork Autopilot",
-      "url": "https://github.com/klajdikkolaj/upwork-autopilot",
-      "owner": "klajdikkolaj",
-      "repo": "upwork-autopilot",
-      "description": "Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "VibePortrait",
-      "url": "https://github.com/dadwadw233/VibePortrait",
-      "owner": "dadwadw233",
-      "repo": "VibePortrait",
-      "description": "Developer personality portrait generator \u2014 analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\"",
-      "platform": "opencode",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Yandex Direct",
-      "url": "https://github.com/nebelov/yandex-direct-for-all",
-      "owner": "nebelov",
-      "repo": "yandex-direct-for-all",
-      "description": "GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -760,38 +427,20 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Agent Message Queue",
-      "url": "https://github.com/avivsinai/agent-message-queue",
-      "owner": "avivsinai",
-      "repo": "agent-message-queue",
-      "description": "File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations",
+      "name": "ATXP",
+      "url": "https://github.com/atxp-dev/atxp",
+      "owner": "atxp-dev",
+      "repo": "atxp",
+      "description": "Give your Gemini CLI agent a wallet, email address, phone number, and 100+ paid MCP tools",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "AgentOps",
-      "url": "https://github.com/boshu2/agentops",
-      "owner": "boshu2",
-      "repo": "agentops",
-      "description": "DevOps layer for coding agents with flow, feedback, and memory",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Apple Productivity",
-      "url": "https://github.com/matk0shub/apple-productivity-mcp",
-      "owner": "matk0shub",
-      "repo": "apple-productivity-mcp",
-      "description": "Local Apple Calendar and Reminders for macOS",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Bitbucket CLI",
-      "url": "https://github.com/avivsinai/bitbucket-cli",
-      "owner": "avivsinai",
-      "repo": "bitbucket-cli",
-      "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "name": "Blender",
+      "url": "https://github.com/xprilion/gemini-cli-blender-extension",
+      "owner": "xprilion",
+      "repo": "gemini-cli-blender-extension",
+      "description": "Enable Blender via MCP for Gemini CLI",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
@@ -805,11 +454,155 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Computer use",
+      "url": "https://github.com/automateyournetwork/GeminiCLI_ComputerUse_Extension",
+      "owner": "automateyournetwork",
+      "repo": "GeminiCLI_ComputerUse_Extension",
+      "description": "Enable Gemini Computer Use from the CLI",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Conductor",
       "url": "https://github.com/gemini-cli-extensions/conductor",
       "owner": "gemini-cli-extensions",
       "repo": "conductor",
       "description": "Specify, plan, and implement multi-step tasks",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Figma",
+      "url": "https://github.com/figma/figma-gemini-cli-extension",
+      "owner": "figma",
+      "repo": "figma-gemini-cli-extension",
+      "description": "Official Figma extension for Gemini CLI",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Firebase",
+      "url": "https://github.com/gemini-cli-extensions/firebase",
+      "owner": "gemini-cli-extensions",
+      "repo": "firebase",
+      "description": "Firebase-specific capabilities and expertise",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Flutter",
+      "url": "https://github.com/gemini-cli-extensions/flutter",
+      "owner": "gemini-cli-extensions",
+      "repo": "flutter",
+      "description": "Help create, build, test, and run Flutter apps",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "gcloud",
+      "url": "https://github.com/gemini-cli-extensions/gcloud",
+      "owner": "gemini-cli-extensions",
+      "repo": "gcloud",
+      "description": "Google Cloud CLI integration",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "gemini-beads",
+      "url": "https://github.com/thoreinstein/gemini-beads",
+      "owner": "thoreinstein",
+      "repo": "gemini-beads",
+      "description": "Git-backed persistent memory and task management",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "GitLab",
+      "url": "https://github.com/GitLab-Ecosystem/GitLab-CLI-Extensions",
+      "owner": "GitLab-Ecosystem",
+      "repo": "GitLab-CLI-Extensions",
+      "description": "Exposes custom `/gitlab:*` commands for issues, MRs, pipelines",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Google Fonts",
+      "url": "https://github.com/rodydavis/google-fonts-gemini-cli-extension",
+      "owner": "rodydavis",
+      "repo": "google-fonts-gemini-cli-extension",
+      "description": "Google Fonts + Material Icons",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Jules",
+      "url": "https://github.com/gemini-cli-extensions/jules",
+      "owner": "gemini-cli-extensions",
+      "repo": "jules",
+      "description": "Orchestrate the Jules asynchronous agent for bug fixing and refactoring",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Maestro",
+      "url": "https://github.com/josstei/maestro-gemini",
+      "owner": "josstei",
+      "repo": "maestro-gemini",
+      "description": "Turn Gemini CLI into a multi-agent platform with 12 specialized subagents",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "MCP Toolbox",
+      "url": "https://github.com/gemini-cli-extensions/mcp-toolbox",
+      "owner": "gemini-cli-extensions",
+      "repo": "mcp-toolbox",
+      "description": "Develop and query custom tools using natural language",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "MySQL",
+      "url": "https://github.com/gemini-cli-extensions/mysql",
+      "owner": "gemini-cli-extensions",
+      "repo": "mysql",
+      "description": "Tools to interact with MySQL instances",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Nanobanana",
+      "url": "https://github.com/gemini-cli-extensions/nanobanana",
+      "owner": "gemini-cli-extensions",
+      "repo": "nanobanana",
+      "description": "Generate and manipulate images using Gemini 2.5 Flash Image model",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://github.com/thoreinstein/gemini-obsidian",
+      "owner": "thoreinstein",
+      "repo": "gemini-obsidian",
+      "description": "Connect Gemini to your Obsidian vault through a local RAG MCP server",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Plan commands",
+      "url": "https://github.com/jjdelorme/plan-commands",
+      "owner": "jjdelorme",
+      "repo": "plan-commands",
+      "description": "Custom commands for plan, refine, implement",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "PostgreSQL",
+      "url": "https://github.com/gemini-cli-extensions/postgres",
+      "owner": "gemini-cli-extensions",
+      "repo": "postgres",
+      "description": "Tools to interact with PostgreSQL instances",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
@@ -823,299 +616,20 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Blueprint",
-      "url": "https://github.com/JuliusBrussee/blueprint",
-      "owner": "JuliusBrussee",
-      "repo": "blueprint",
-      "description": "Specification-driven development pipeline with testable acceptance criteria",
+      "name": "Self Command",
+      "url": "https://github.com/stevenAthompson/self-command",
+      "owner": "stevenAthompson",
+      "repo": "self-command",
+      "description": "Allow Gemini CLI to send commands to itself, run long commands in background",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Brooks Lint",
-      "url": "https://github.com/hyhmrright/brooks-lint",
-      "owner": "hyhmrright",
-      "repo": "brooks-lint",
-      "description": "AI code reviews grounded in six classic engineering books",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Chrome DevTools",
-      "url": "https://github.com/win4r/chrome-devtools-codex-plugin",
-      "owner": "win4r",
-      "repo": "chrome-devtools-codex-plugin",
-      "description": "One-click Codex plugin wrapper for chrome-devtools-mcp",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Claude Code for Codex",
-      "url": "https://github.com/sendbird/cc-plugin-codex",
-      "owner": "sendbird",
-      "repo": "cc-plugin-codex",
-      "description": "Use Claude Code from Codex for reviews and rescue tasks",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Claude Octopus",
-      "url": "https://github.com/nyldn/claude-octopus",
-      "owner": "nyldn",
-      "repo": "claude-octopus",
-      "description": "Multi-LLM orchestration dispatching to 8 providers",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Agenteam",
-      "url": "https://github.com/yimwoo/codex-agenteam",
-      "owner": "yimwoo",
-      "repo": "codex-agenteam",
-      "description": "Specialist AI agents orchestrated as a configurable team pipeline",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Be Serious",
-      "url": "https://github.com/lulucatdev/codex-be-serious",
-      "owner": "lulucatdev",
-      "repo": "codex-be-serious",
-      "description": "Enforce formal, textbook-grade written register across all agent output",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Mem",
-      "url": "https://github.com/2kDarki/codex-mem",
-      "owner": "2kDarki",
-      "repo": "codex-mem",
-      "description": "Automatically capture, compress, and inject session context back into future Codex sessions",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex Multi Auth",
-      "url": "https://github.com/ndycode/codex-multi-auth",
-      "owner": "ndycode",
-      "repo": "codex-multi-auth",
-      "description": "Multi-account OAuth manager for the official Codex CLI with switching, health checks, and recovery tools",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Codex SEO",
-      "url": "https://github.com/BestLemoon/codex-seo",
-      "owner": "BestLemoon",
-      "repo": "codex-seo",
-      "description": "Full-stack SEO audits, Google API workflows, backlinks analysis, reporting, and optional MCP extensions for Codex",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Context Pack",
-      "url": "https://github.com/Rothschildiuk/context-pack",
-      "owner": "Rothschildiuk",
-      "repo": "context-pack",
-      "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Flow Studio Power Automate",
-      "url": "https://github.com/ninihen1/power-automate-mcp-skills",
-      "owner": "ninihen1",
-      "repo": "power-automate-mcp-skills",
-      "description": "Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "HOTL Plugin",
-      "url": "https://github.com/yimwoo/hotl-plugin",
-      "owner": "yimwoo",
-      "repo": "hotl-plugin",
-      "description": "Human-on-the-Loop AI coding workflow plugin",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Jenkins CLI",
-      "url": "https://github.com/avivsinai/jenkins-cli",
-      "owner": "avivsinai",
-      "repo": "jenkins-cli",
-      "description": "GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "KiCad Happy",
-      "url": "https://github.com/aklofas/kicad-happy",
-      "owner": "aklofas",
-      "repo": "kicad-happy",
-      "description": "KiCad EDA skills for schematic analysis, PCB layout review, component sourcing, BOM management, and manufacturing preparation",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Langfuse Observability",
-      "url": "https://github.com/avivsinai/langfuse-mcp",
-      "owner": "avivsinai",
-      "repo": "langfuse-mcp",
-      "description": "Query traces, debug exceptions, analyze sessions",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Launch Fast",
-      "url": "https://github.com/BlockchainHB/launchfast_codex_plugin",
-      "owner": "BlockchainHB",
-      "repo": "launchfast_codex_plugin",
-      "description": "Official Launch Fast plugin adapter for rapid SaaS deployment",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OC ChatGPT Multi Auth",
-      "url": "https://github.com/ndycode/oc-chatgpt-multi-auth",
-      "owner": "ndycode",
-      "repo": "oc-chatgpt-multi-auth",
-      "description": "Codex setup skill and OpenCode plugin for ChatGPT Plus/Pro OAuth, GPT-5/Codex presets, and multi-account failover",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OpenProject",
-      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
-      "owner": "varaprasadreddy9676",
-      "repo": "team-codex-plugins",
-      "description": "Team collaboration via OpenProject integration",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "OrgX",
-      "url": "https://github.com/useorgx/orgx-codex-plugin",
-      "owner": "useorgx",
-      "repo": "orgx-codex-plugin",
-      "description": "MCP access and initiative-aware skills for organizational workflows",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "PANews Agent Toolkit",
-      "url": "https://github.com/panewslab/skills",
-      "owner": "panewslab",
-      "repo": "skills",
-      "description": "Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "PapersFlow",
-      "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
-      "owner": "papersflow-ai",
-      "repo": "papersflow-codex-plugin",
-      "description": "Paper discovery, citation verification, graph exploration, and DeepScan analysis",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Project Autopilot",
-      "url": "https://github.com/AlexMi64/codex-project-autopilot",
-      "owner": "AlexMi64",
-      "repo": "codex-project-autopilot",
-      "description": "Turn an idea into a structured project workflow with planning, execution, verification, and handoff",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Registry Broker",
-      "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
-      "owner": "hashgraph-online",
-      "repo": "registry-broker-codex-plugin",
-      "description": "Delegate tasks to specialist AI agents via the HOL Registry",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Remotion Plugin",
-      "url": "https://github.com/tim-osterhus/codex-remotion-plugin",
-      "owner": "tim-osterhus",
-      "repo": "codex-remotion-plugin",
-      "description": "Build parameterized Remotion videos in Codex",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "ru-text",
-      "url": "https://github.com/talkstream/ru-text",
-      "owner": "talkstream",
-      "repo": "ru-text",
-      "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "sitemd",
-      "url": "https://github.com/sitemd-cc/sitemd",
-      "owner": "sitemd-cc",
-      "repo": "sitemd",
-      "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Synta MCP",
-      "url": "https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta",
-      "owner": "Synta-ai",
-      "repo": "n8n-mcp-codex-plugin-synta",
-      "description": "Build, edit, validate, and self-heal n8n workflows with Synta MCP tools and Codex-ready workflow guidance",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Task Scheduler",
-      "url": "https://github.com/6Delta9/task-scheduler-codex-plugin",
-      "owner": "6Delta9",
-      "repo": "task-scheduler-codex-plugin",
-      "description": "OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "TokRepo Search",
-      "url": "https://github.com/henu-wang/tokrepo-codex-plugin",
+      "name": "TokRepo",
+      "url": "https://github.com/henu-wang/tokrepo-gemini-extension",
       "owner": "henu-wang",
-      "repo": "tokrepo-codex-plugin",
-      "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Upwork Autopilot",
-      "url": "https://github.com/klajdikkolaj/upwork-autopilot",
-      "owner": "klajdikkolaj",
-      "repo": "upwork-autopilot",
-      "description": "Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "VibePortrait",
-      "url": "https://github.com/dadwadw233/VibePortrait",
-      "owner": "dadwadw233",
-      "repo": "VibePortrait",
-      "description": "Developer personality portrait generator \u2014 analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\"",
-      "platform": "gemini-cli",
-      "source": "awesome-ai-plugins"
-    },
-    {
-      "name": "Yandex Direct",
-      "url": "https://github.com/nebelov/yandex-direct-for-all",
-      "owner": "nebelov",
-      "repo": "yandex-direct-for-all",
-      "description": "GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat",
+      "repo": "tokrepo-gemini-extension",
+      "description": "Search TokRepo for installable skills, prompts, MCP configs",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
