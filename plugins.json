@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-04-08",
-  "total": 138,
+  "total": 144,
   "platforms": [
     "codex",
     "claude-code",
@@ -391,10 +391,19 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Oh My Claude",
+      "url": "https://github.com/2lab-ai/oh-my-claude",
+      "owner": "2lab-ai",
+      "repo": "oh-my-claude",
+      "description": "Claude Code plugin for AI-powered iterative development loops",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "OpenCode",
       "url": "https://opencode.com",
-      "owner": "schuettc",
-      "repo": "codex-reviewer",
+      "owner": "2lab-ai",
+      "repo": "oh-my-claude",
       "description": "OpenAI's AI coding CLI",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
@@ -414,6 +423,15 @@
       "owner": "boshu2",
       "repo": "agentops",
       "description": "DevOps layer for coding agents with flow, feedback, and memory",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "AI Plugin Scanner",
+      "url": "https://github.com/hashgraph-online/ai-plugin-scanner",
+      "owner": "hashgraph-online",
+      "repo": "ai-plugin-scanner",
+      "description": "Security and best-practices scanner for AI plugins",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -585,6 +603,15 @@
       "owner": "BlockchainHB",
       "repo": "launchfast_codex_plugin",
       "description": "Official Launch Fast plugin adapter for rapid SaaS deployment",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "MCD Agent Toolkit",
+      "url": "https://github.com/monte-carlo-data/mcd-agent-toolkit",
+      "owner": "monte-carlo-data",
+      "repo": "mcd-agent-toolkit",
+      "description": "Official Monte Carlo toolkit for AI coding agents",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -823,6 +850,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Code Review",
+      "url": "https://github.com/gemini-cli-extensions/code-review",
+      "owner": "gemini-cli-extensions",
+      "repo": "code-review",
+      "description": "AI-powered code review for Gemini CLI",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Codex Agenteam",
       "url": "https://github.com/yimwoo/codex-agenteam",
       "owner": "yimwoo",
@@ -864,6 +900,15 @@
       "owner": "BestLemoon",
       "repo": "codex-seo",
       "description": "Full-stack SEO audits, Google API workflows, backlinks analysis, reporting, and optional MCP extensions for Codex",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Conductor",
+      "url": "https://github.com/gemini-cli-extensions/conductor",
+      "owner": "gemini-cli-extensions",
+      "repo": "conductor",
+      "description": "Specify, plan, and implement multi-step tasks",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
@@ -1008,6 +1053,15 @@
       "owner": "talkstream",
       "repo": "ru-text",
       "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Security",
+      "url": "https://github.com/gemini-cli-extensions/security",
+      "owner": "gemini-cli-extensions",
+      "repo": "security",
+      "description": "Find vulnerabilities in code with Google security tools",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
