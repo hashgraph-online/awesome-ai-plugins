@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-07T20:17:31.634580+00:00",
+  "last_updated": "2026-04-08T08:18:13.131121+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
