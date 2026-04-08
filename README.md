@@ -143,6 +143,7 @@ Claude Code extends Anthropic's CLI with custom skills and tools. The official s
 - [Claude Code Skills](https://github.com/alirezarezvani/claude-skills) - 223 production-ready skills, 23 agents, and 298 Python tools.
 - [Claude Octopus](https://github.com/nyldn/claude-octopus) - Multi-LLM orchestration dispatching to Codex, Gemini, Copilot, Qwen, Perplexity, OpenRouter, Ollama, OpenCode.
 - [Codex Reviewer](https://github.com/schuettc/codex-reviewer) - Second-pass review of Claude-driven plans.
+- [Oh My Claude](https://github.com/2lab-ai/oh-my-claude) - Claude Code plugin for AI-powered iterative development loops.
 
 ---
 
@@ -163,6 +164,8 @@ _Contributions welcome - submit via PR_
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders for macOS.
 - [Bitbucket CLI](https://github.com/avivsinai/bitbucket-cli) - Manage Bitbucket repos, PRs, and pipelines.
+- [AI Plugin Scanner](https://github.com/hashgraph-online/ai-plugin-scanner) - Security and best-practices scanner for AI plugins.
+- [MCD Agent Toolkit](https://github.com/monte-carlo-data/mcd-agent-toolkit) - Official Monte Carlo toolkit for AI coding agents.
 - [Blueprint](https://github.com/JuliusBrussee/blueprint) - Specification-driven development pipeline with testable acceptance criteria.
 - [Brooks Lint](https://github.com/hyhmrright/brooks-lint) - AI code reviews grounded in six classic engineering books.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
@@ -216,6 +219,9 @@ _Contributions welcome - submit via PR_
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders for macOS.
 - [Bitbucket CLI](https://github.com/avivsinai/bitbucket-cli) - Manage Bitbucket repos, PRs, and pipelines.
+- [Code Review](https://github.com/gemini-cli-extensions/code-review) - AI-powered code review for Gemini CLI.
+- [Conductor](https://github.com/gemini-cli-extensions/conductor) - Specify, plan, and implement multi-step tasks.
+- [Security](https://github.com/gemini-cli-extensions/security) - Find vulnerabilities in code with Google security tools.
 - [Blueprint](https://github.com/JuliusBrussee/blueprint) - Specification-driven development pipeline with testable acceptance criteria.
 - [Brooks Lint](https://github.com/hyhmrright/brooks-lint) - AI code reviews grounded in six classic engineering books.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
