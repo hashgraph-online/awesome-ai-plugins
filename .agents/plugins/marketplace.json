@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-08T08:18:13.131121+00:00",
+  "last_updated": "2026-04-08T08:19:09.977731+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -382,10 +382,19 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Oh My Claude",
+      "url": "https://github.com/2lab-ai/oh-my-claude",
+      "owner": "2lab-ai",
+      "repo": "oh-my-claude",
+      "description": "Claude Code plugin for AI-powered iterative development loops",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "OpenCode",
       "url": "https://opencode.com",
-      "owner": "schuettc",
-      "repo": "codex-reviewer",
+      "owner": "2lab-ai",
+      "repo": "oh-my-claude",
       "description": "OpenAI's AI coding CLI",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
@@ -423,6 +432,24 @@
       "owner": "avivsinai",
       "repo": "bitbucket-cli",
       "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "AI Plugin Scanner",
+      "url": "https://github.com/hashgraph-online/ai-plugin-scanner",
+      "owner": "hashgraph-online",
+      "repo": "ai-plugin-scanner",
+      "description": "Security and best-practices scanner for AI plugins",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "MCD Agent Toolkit",
+      "url": "https://github.com/monte-carlo-data/mcd-agent-toolkit",
+      "owner": "monte-carlo-data",
+      "repo": "mcd-agent-toolkit",
+      "description": "Official Monte Carlo toolkit for AI coding agents",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -765,6 +792,33 @@
       "owner": "avivsinai",
       "repo": "bitbucket-cli",
       "description": "Manage Bitbucket repos, PRs, and pipelines",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Code Review",
+      "url": "https://github.com/gemini-cli-extensions/code-review",
+      "owner": "gemini-cli-extensions",
+      "repo": "code-review",
+      "description": "AI-powered code review for Gemini CLI",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Conductor",
+      "url": "https://github.com/gemini-cli-extensions/conductor",
+      "owner": "gemini-cli-extensions",
+      "repo": "conductor",
+      "description": "Specify, plan, and implement multi-step tasks",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Security",
+      "url": "https://github.com/gemini-cli-extensions/security",
+      "owner": "gemini-cli-extensions",
+      "repo": "security",
+      "description": "Find vulnerabilities in code with Google security tools",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
