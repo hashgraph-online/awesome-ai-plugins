@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-04-08",
-  "total": 90,
+  "last_updated": "2026-04-09",
+  "total": 93,
   "platforms": [
     "codex",
     "claude-code",
@@ -688,6 +688,24 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Sverklo",
+      "url": "https://github.com/sverklo/sverklo",
+      "owner": "sverklo",
+      "repo": "sverklo",
+      "description": "Local-first code intelligence with hybrid BM25+vector search, symbol-level impact analysis, diff-aware review, and git-tied memory",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "EnvCP",
+      "url": "https://github.com/fentz26/EnvCP",
+      "owner": "fentz26",
+      "repo": "EnvCP",
+      "description": "Encrypted environment variable vault with AI access policies, keeping secrets safe from AI agents",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Google Maps",
       "url": "https://github.com/modelcontextprotocol/server-google-maps",
       "owner": "modelcontextprotocol",
@@ -724,10 +742,19 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "MCP EU AI Act",
+      "url": "https://github.com/ark-forge/mcp-eu-ai-act",
+      "owner": "ark-forge",
+      "repo": "mcp-eu-ai-act",
+      "description": "EU AI Act and GDPR compliance scanner for AI projects with risk classification, audit reports, and remediation templates",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Claude Desktop",
       "url": "https://claude.ai/download",
-      "owner": "modelcontextprotocol",
-      "repo": "server-slack",
+      "owner": "ark-forge",
+      "repo": "mcp-eu-ai-act",
       "description": "Anthropic's desktop app with MCP integration",
       "platform": "mcp",
       "source": "awesome-ai-plugins"
@@ -735,8 +762,8 @@
     {
       "name": "Codex",
       "url": "https://openai.com/codex",
-      "owner": "modelcontextprotocol",
-      "repo": "server-slack",
+      "owner": "ark-forge",
+      "repo": "mcp-eu-ai-act",
       "description": "OpenAI's CLI with MCP support",
       "platform": "mcp",
       "source": "awesome-ai-plugins"
@@ -744,8 +771,8 @@
     {
       "name": "Cursor",
       "url": "https://cursor.sh",
-      "owner": "modelcontextprotocol",
-      "repo": "server-slack",
+      "owner": "ark-forge",
+      "repo": "mcp-eu-ai-act",
       "description": "AI-powered code editor with MCP support",
       "platform": "mcp",
       "source": "awesome-ai-plugins"
@@ -753,8 +780,8 @@
     {
       "name": "Windsurf",
       "url": "https://windsurf.ai",
-      "owner": "modelcontextprotocol",
-      "repo": "server-slack",
+      "owner": "ark-forge",
+      "repo": "mcp-eu-ai-act",
       "description": "Codeium's AI agent with MCP support",
       "platform": "mcp",
       "source": "awesome-ai-plugins"
