@@ -221,6 +221,10 @@ Model Context Protocol (MCP) servers work across multiple AI assistants that sup
 - [Puppeteer](https://github.com/modelcontextprotocol/server-puppeteer) - Browser automation.
 - [Slack](https://github.com/modelcontextprotocol/server-slack) - Slack workspace interactions.
 
+#### Compliance & Governance
+
+- [MCP EU AI Act](https://github.com/ark-forge/mcp-eu-ai-act) - EU AI Act and GDPR compliance scanner for AI projects with risk classification, audit reports, and remediation templates.
+
 ### MCP Clients
 
 - [Claude Desktop](https://claude.ai/download) - Anthropic's desktop app with MCP integration.
