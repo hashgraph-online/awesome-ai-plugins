@@ -215,6 +215,10 @@ Model Context Protocol (MCP) servers work across multiple AI assistants that sup
 - [GitHub](https://github.com/modelcontextprotocol/server-github) - Manage GitHub repos, issues, PRs.
 - [Sverklo](https://github.com/sverklo/sverklo) - Local-first code intelligence with hybrid BM25+vector search, symbol-level impact analysis, diff-aware review, and git-tied memory.
 
+#### Security
+
+- [EnvCP](https://github.com/fentz26/EnvCP) - Encrypted environment variable vault with AI access policies, keeping secrets safe from AI agents.
+
 #### Data & APIs
 
 - [Google Maps](https://github.com/modelcontextprotocol/server-google-maps) - Location and mapping services.
