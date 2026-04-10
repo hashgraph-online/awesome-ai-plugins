@@ -39,7 +39,7 @@ This list covers the ecosystem of AI assistant plugins. Each platform has its ow
 | Platform | Format | Repository |
 |----------|--------|------------|
 | OpenAI Codex | `.codex-plugin/plugin.json` + skills | [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) |
-| Claude Code | Skills (`SKILL.md` + tools) | [anthropics/skills](https://github.com/anthropics/skills) |
+| Claude Code | Plugin (`.claude-plugin/plugin.json`) | [anthropics/claude-code](https://github.com/anthropics/claude-code) |
 | OpenCode | Plugins (`.opencode/`) | [awesome-opencode-plugins](https://github.com/awesome-opencode/awesome-opencode-plugins) |
 | Gemini CLI | Extensions (`.gemini/`) | [Piebald-AI/awesome-gemini-cli-extensions](https://github.com/Piebald-AI/awesome-gemini-cli-extensions) |
 
