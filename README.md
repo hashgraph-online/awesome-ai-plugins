@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  This list covers plugins for <strong>OpenAI Codex</strong>, <strong>Claude Code</strong>, <strong>OpenCode</strong>, <strong>Google Gemini CLI</strong>, and cross-platform <strong>MCP servers</strong> that work across multiple AI assistants.
+  This list covers plugins for <strong>OpenAI Codex</strong>, <strong>Claude Code</strong>, <strong>OpenCode</strong>, and <strong>Google Gemini CLI</strong>.
 </p>
 
 <br>
@@ -27,7 +27,6 @@
 - [Claude Code Plugins](#claude-code-plugins)
 - [OpenCode Plugins](#opencode-plugins)
 - [Google Gemini CLI Plugins](#google-gemini-cli-plugins)
-- [MCP Servers (Cross-Platform)](#mcp-servers-cross-platform)
 - [Related Projects](#related-projects)
 - [Contributing](#contributing)
 
@@ -43,7 +42,7 @@ This list covers the ecosystem of AI assistant plugins. Each platform has its ow
 | Claude Code | Skills (`SKILL.md` + tools) | [anthropics/skills](https://github.com/anthropics/skills) |
 | OpenCode | Plugins (`.opencode/`) | [awesome-opencode-plugins](https://github.com/awesome-opencode/awesome-opencode-plugins) |
 | Gemini CLI | Extensions (`.gemini/`) | [Piebald-AI/awesome-gemini-cli-extensions](https://github.com/Piebald-AI/awesome-gemini-cli-extensions) |
-| Cross-AI | MCP servers (`mcp.json`) | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) |
+
 
 ### Quick Validation
 
@@ -52,9 +51,6 @@ Before publishing plugins, validate them:
 ```bash
 # Codex plugins
 pipx run codex-plugin-scanner lint .
-
-# MCP servers
-npx @modelcontextprotocol/server-validator
 ```
 
 ---
@@ -197,45 +193,6 @@ _Contributions welcome - submit via PR_
 - [Security](https://github.com/gemini-cli-extensions/security) - Find vulnerabilities in code with Google security tools.
 - [Self Command](https://github.com/stevenAthompson/self-command) - Allow Gemini CLI to send commands to itself, run long commands in background.
 - [TokRepo](https://github.com/henu-wang/tokrepo-gemini-extension) - Search TokRepo for installable skills, prompts, MCP configs.
-
----
-
-## MCP Servers (Cross-Platform)
-
-Model Context Protocol (MCP) servers work across multiple AI assistants that support the protocol. See the comprehensive list: [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (84k stars)
-
-### Popular MCP Servers
-
-#### Development
-
-- [Brave Search](https://github.com/modelcontextprotocol/server-brave-search) - Web search via Brave API.
-- [Claude Code MCP](https://github.com/anthropics/mcp-claude-code) - Official MCP server for Claude Code.
-- [Codex MCP](https://github.com/openai/mcp-codex) - Official MCP server for Codex.
-- [Filesystem](https://github.com/modelcontextprotocol/server-filesystem) - Read and write to local filesystem.
-- [GitHub](https://github.com/modelcontextprotocol/server-github) - Manage GitHub repos, issues, PRs.
-- [Sverklo](https://github.com/sverklo/sverklo) - Local-first code intelligence with hybrid BM25+vector search, symbol-level impact analysis, diff-aware review, and git-tied memory.
-
-#### Security
-
-- [EnvCP](https://github.com/fentz26/EnvCP) - Encrypted environment variable vault with AI access policies, keeping secrets safe from AI agents.
-
-#### Data & APIs
-
-- [Google Maps](https://github.com/modelcontextprotocol/server-google-maps) - Location and mapping services.
-- [PostgreSQL](https://github.com/modelcontextprotocol/server-postgres) - Database queries and operations.
-- [Puppeteer](https://github.com/modelcontextprotocol/server-puppeteer) - Browser automation.
-- [Slack](https://github.com/modelcontextprotocol/server-slack) - Slack workspace interactions.
-
-#### Compliance & Governance
-
-- [MCP EU AI Act](https://github.com/ark-forge/mcp-eu-ai-act) - EU AI Act and GDPR compliance scanner for AI projects with risk classification, audit reports, and remediation templates.
-
-### MCP Clients
-
-- [Claude Desktop](https://claude.ai/download) - Anthropic's desktop app with MCP integration.
-- [Codex](https://openai.com/codex) - OpenAI's CLI with MCP support.
-- [Cursor](https://cursor.sh) - AI-powered code editor with MCP support.
-- [Windsurf](https://windsurf.ai) - Codeium's AI agent with MCP support.
 
 ---
 
