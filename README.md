@@ -120,6 +120,7 @@ Third-party plugins built by the community.
 - [Upwork Autopilot](https://github.com/klajdikkolaj/upwork-autopilot) - Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile.
 - [VibePortrait](https://github.com/dadwadw233/VibePortrait) - Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI "think like you".
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
+- [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
 ---
 
@@ -130,6 +131,7 @@ Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anth
 - [code-review](https://github.com/anthropics/claude-code/tree/main/plugins/code-review) - Automated PR code review using multiple specialized agents with confidence-based scoring to filter false positives.
 - [commit-commands](https://github.com/anthropics/claude-code/tree/main/plugins/commit-commands) - Git workflow automation for committing, pushing, and creating pull requests.
 - [feature-dev](https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev) - Comprehensive feature development workflow with a structured 7-phase approach.
+- [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
 ---
 
