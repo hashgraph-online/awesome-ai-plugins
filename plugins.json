@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-04-10",
-  "total": 78,
+  "last_updated": "2026-04-12",
+  "total": 79,
   "platforms": [
     "codex",
     "claude-code",
@@ -351,6 +351,15 @@
       "repo": "yandex-direct-for-all",
       "description": "GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat",
       "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "oh-my-forge",
+      "url": "https://github.com/rlagycks/oh-my-forge",
+      "owner": "rlagycks",
+      "repo": "oh-my-forge",
+      "description": "Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation",
+      "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
     {
