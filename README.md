@@ -130,6 +130,7 @@ Third-party plugins built by the community.
 
 Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anthropics/claude-code](https://github.com/anthropics/claude-code)
 
+- [claude-ops](https://github.com/Lifecycle-Innovations-Limited/claude-ops) - Business operating system for Claude Code — morning briefing, unified inbox (Slack/Telegram/WhatsApp/Gmail), autonomous PR merge pipeline, production incident dashboard, AWS cost tracking, and YOLO autonomous mode with 4 parallel C-suite agents. 14 slash commands, 9 agents.
 - [code-review](https://github.com/anthropics/claude-code/tree/main/plugins/code-review) - Automated PR code review using multiple specialized agents with confidence-based scoring to filter false positives.
 - [commit-commands](https://github.com/anthropics/claude-code/tree/main/plugins/commit-commands) - Git workflow automation for committing, pushing, and creating pull requests.
 - [feature-dev](https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev) - Comprehensive feature development workflow with a structured 7-phase approach.
