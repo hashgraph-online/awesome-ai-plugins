@@ -116,6 +116,7 @@ Third-party plugins built by the community.
 - [Remotion Plugin](https://github.com/tim-osterhus/codex-remotion-plugin) - Build parameterized Remotion videos in Codex.
 - [ru-text](https://github.com/talkstream/ru-text) - Russian text quality — ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence.
 - [sitemd](https://github.com/sitemd-cc/sitemd) - Build websites from Markdown via MCP — 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages.
+- [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
 - [Synta MCP](https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta) - Build, edit, validate, and self-heal n8n workflows with Synta MCP tools and Codex-ready workflow guidance.
 - [Task Scheduler](https://github.com/6Delta9/task-scheduler-codex-plugin) - OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output.
 - [TokRepo Search](https://github.com/henu-wang/tokrepo-codex-plugin) - Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.
@@ -135,6 +136,7 @@ Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anth
 - [feature-dev](https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev) - Comprehensive feature development workflow with a structured 7-phase approach.
 - [immich-photo-manager](https://github.com/drolosoft/immich-photo-manager) - MCP server for intelligent photo management with Immich — search, geographic album curation, library cleanup, duplicate detection, and interactive HTML galleries.
 - [oh-my-forge](https://github.com/rlagycks/oh-my-forge) - Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation.
+- [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
 - [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
 ---
@@ -191,6 +193,7 @@ _Contributions welcome - submit via PR_
 - [PostgreSQL](https://github.com/gemini-cli-extensions/postgres) - Tools to interact with PostgreSQL instances.
 - [Security](https://github.com/gemini-cli-extensions/security) - Find vulnerabilities in code with Google security tools.
 - [Self Command](https://github.com/stevenAthompson/self-command) - Allow Gemini CLI to send commands to itself, run long commands in background.
+- [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
 - [TokRepo](https://github.com/henu-wang/tokrepo-gemini-extension) - Search TokRepo for installable skills, prompts, MCP configs.
 
 ---
