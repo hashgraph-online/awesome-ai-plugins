@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-12T02:08:58.240204+00:00",
+  "last_updated": "2026-04-15T10:28:21.934240+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -301,6 +301,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "SocratiCode",
+      "url": "https://github.com/giancarloerra/SocratiCode",
+      "owner": "giancarloerra",
+      "repo": "SocratiCode",
+      "description": "Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Synta MCP",
       "url": "https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta",
       "owner": "Synta-ai",
@@ -364,6 +373,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "claude-ops",
+      "url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops",
+      "owner": "Lifecycle-Innovations-Limited",
+      "repo": "claude-ops",
+      "description": "Business operating system for Claude Code \u2014 morning briefing, unified inbox (Slack/Telegram/WhatsApp/Gmail), autonomous PR merge pipeline, production incident dashboard, AWS cost tracking, and YOLO autonomous mode with 4 parallel C-suite agents. 14 slash commands, 9 agents",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "code-review",
       "url": "https://github.com/anthropics/claude-code/tree/main/plugins/code-review",
       "owner": "anthropics",
@@ -400,11 +418,29 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Lastest",
+      "url": "https://github.com/las-team/lastest",
+      "owner": "las-team",
+      "repo": "lastest",
+      "description": "Self-hosted visual regression testing platform with AI-generated tests, MCP server integration, and collaborative diff review",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "oh-my-forge",
       "url": "https://github.com/rlagycks/oh-my-forge",
       "owner": "rlagycks",
       "repo": "oh-my-forge",
       "description": "Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "SocratiCode",
+      "url": "https://github.com/giancarloerra/SocratiCode",
+      "owner": "giancarloerra",
+      "repo": "SocratiCode",
+      "description": "Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -657,6 +693,15 @@
       "owner": "stevenAthompson",
       "repo": "self-command",
       "description": "Allow Gemini CLI to send commands to itself, run long commands in background",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "SocratiCode",
+      "url": "https://github.com/giancarloerra/SocratiCode",
+      "owner": "giancarloerra",
+      "repo": "SocratiCode",
+      "description": "Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
