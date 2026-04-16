@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-04-15",
-  "total": 86,
+  "last_updated": "2026-04-16",
+  "total": 87,
   "platforms": [
     "codex",
     "claude-code",
@@ -431,6 +431,15 @@
       "owner": "las-team",
       "repo": "lastest",
       "description": "Self-hosted visual regression testing platform with AI-generated tests, MCP server integration, and collaborative diff review",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "MorningAI",
+      "url": "https://github.com/octo-patch/MorningAI",
+      "owner": "octo-patch",
+      "repo": "MorningAI",
+      "description": "AI news tracking skill that monitors 80+ entities across 6 sources (Reddit, HN, GitHub, HuggingFace, arXiv, X), generates scored daily reports with infographics and message digests",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
