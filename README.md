@@ -112,6 +112,7 @@ Third-party plugins built by the community.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
 - [Paper Pilot](https://github.com/aytzey/paper-pilot) - Academic research copilot that searches 6 databases, downloads real PDFs, extracts evidence, renders figures, and syncs to Zotero.
 - [Project Autopilot](https://github.com/AlexMi64/codex-project-autopilot) - Turn an idea into a structured project workflow with planning, execution, verification, and handoff.
+- [prompt-to-asset](https://github.com/MohamedAbdallah-14/prompt-to-asset) - Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface. `npm install -g prompt-to-asset`
 - [Registry Broker](https://github.com/hashgraph-online/registry-broker-codex-plugin) - Delegate tasks to specialist AI agents via the HOL Registry.
 - [Remotion Plugin](https://github.com/tim-osterhus/codex-remotion-plugin) - Build parameterized Remotion videos in Codex.
 - [ru-text](https://github.com/talkstream/ru-text) - Russian text quality — ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence.
@@ -120,6 +121,7 @@ Third-party plugins built by the community.
 - [Synta MCP](https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta) - Build, edit, validate, and self-heal n8n workflows with Synta MCP tools and Codex-ready workflow guidance.
 - [Task Scheduler](https://github.com/6Delta9/task-scheduler-codex-plugin) - OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output.
 - [TokRepo Search](https://github.com/henu-wang/tokrepo-codex-plugin) - Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.
+- [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. `npm install -g unslop`
 - [Upwork Autopilot](https://github.com/klajdikkolaj/upwork-autopilot) - Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile.
 - [VibePortrait](https://github.com/dadwadw233/VibePortrait) - Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI "think like you".
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
@@ -139,7 +141,9 @@ Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anth
 - [Lastest](https://github.com/las-team/lastest) - Self-hosted visual regression testing platform with AI-generated tests, MCP server integration, and collaborative diff review.
 - [MorningAI](https://github.com/octo-patch/MorningAI) - AI news tracking skill that monitors 80+ entities across 6 sources (Reddit, HN, GitHub, HuggingFace, arXiv, X), generates scored daily reports with infographics and message digests.
 - [oh-my-forge](https://github.com/rlagycks/oh-my-forge) - Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation.
+- [prompt-to-asset](https://github.com/MohamedAbdallah-14/prompt-to-asset) - Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface. `npm install -g prompt-to-asset`
 - [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
+- [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. `npm install -g unslop`
 - [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
 ---
