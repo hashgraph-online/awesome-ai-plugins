@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-04-16T11:00:38.522288+00:00",
+  "last_updated": "2026-05-02T12:50:32.979261+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -265,6 +265,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "prompt-to-asset",
+      "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
+      "owner": "MohamedAbdallah-14",
+      "repo": "prompt-to-asset",
+      "description": "Route image-generation prompts to 30+ models \u2014 DALL-E, Stable Diffusion, Flux, Midjourney, and more \u2014 through a single MCP interface",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Registry Broker",
       "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
       "owner": "hashgraph-online",
@@ -333,6 +342,15 @@
       "owner": "henu-wang",
       "repo": "tokrepo-codex-plugin",
       "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "unslop",
+      "url": "https://github.com/MohamedAbdallah-14/unslop",
+      "owner": "MohamedAbdallah-14",
+      "repo": "unslop",
+      "description": "Strip AI writing patterns from text \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -445,11 +463,29 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "prompt-to-asset",
+      "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
+      "owner": "MohamedAbdallah-14",
+      "repo": "prompt-to-asset",
+      "description": "Route image-generation prompts to 30+ models \u2014 DALL-E, Stable Diffusion, Flux, Midjourney, and more \u2014 through a single MCP interface",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "SocratiCode",
       "url": "https://github.com/giancarloerra/SocratiCode",
       "owner": "giancarloerra",
       "repo": "SocratiCode",
       "description": "Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "unslop",
+      "url": "https://github.com/MohamedAbdallah-14/unslop",
+      "owner": "MohamedAbdallah-14",
+      "repo": "unslop",
+      "description": "Strip AI writing patterns from text \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
