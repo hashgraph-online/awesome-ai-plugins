@@ -143,6 +143,7 @@ Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anth
 - [oh-my-forge](https://github.com/rlagycks/oh-my-forge) - Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation.
 - [prompt-to-asset](https://github.com/MohamedAbdallah-14/prompt-to-asset) - Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface.
 - [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
+- [Bring Your AI](https://bringyour.ai) - Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content.
 - [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
@@ -211,6 +212,7 @@ _Contributions welcome - submit via PR_
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-specific plugin list
 - [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) - LLM app examples (104k stars)
 - [awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients) - MCP client applications
+- [agentprobe](https://agentprobe.fly.dev) - Free API that scores any site 0–100 for agentic commerce readiness (CERTIFIED / AGENT_READY / PARTIAL / NOT_READY). MCP server at `/mcp` + CI GitHub Action (`unitedideas/agentprobe-check-action@v1`) for automated grade gating in workflows.
 - [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) - Comprehensive MCP server list (84k stars)
 - [codex-plugin-scanner](https://github.com/hashgraph-online/codex-plugin-scanner) - Codex plugin quality gate
 - [HOL Registry](https://hol.org/registry) - Discover and install plugins
