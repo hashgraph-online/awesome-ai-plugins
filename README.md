@@ -85,6 +85,7 @@ Third-party plugins built by the community.
 
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory.
+- [agenttrace](https://github.com/luoyuctl/agenttrace) - Local Codex plugin and TUI for inspecting AI coding agent session cost, latency, tool failures, and health.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders for macOS.
 - [BikeScout](https://github.com/hifly81/bikescout) - Specialized MCP server for technical cycling providing terrain-aware routing, predictive mud-risk analysis, and UCI-standard climb categorization.
 - [Bitbucket CLI](https://github.com/avivsinai/bitbucket-cli) - Manage Bitbucket repos, PRs, and pipelines.
@@ -109,8 +110,8 @@ Third-party plugins built by the community.
 - [OpenProject](https://github.com/varaprasadreddy9676/team-codex-plugins) - Team collaboration via OpenProject integration.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
-- [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
 - [Paper Pilot](https://github.com/aytzey/paper-pilot) - Academic research copilot that searches 6 databases, downloads real PDFs, extracts evidence, renders figures, and syncs to Zotero.
+- [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
 - [Project Autopilot](https://github.com/AlexMi64/codex-project-autopilot) - Turn an idea into a structured project workflow with planning, execution, verification, and handoff.
 - [prompt-to-asset](https://github.com/MohamedAbdallah-14/prompt-to-asset) - Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface.
 - [Registry Broker](https://github.com/hashgraph-online/registry-broker-codex-plugin) - Delegate tasks to specialist AI agents via the HOL Registry.

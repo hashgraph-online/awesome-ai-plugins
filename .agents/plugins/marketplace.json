@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-02T13:11:20.929065+00:00",
+  "last_updated": "2026-05-10T05:08:04.771771+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -18,6 +18,15 @@
       "owner": "boshu2",
       "repo": "agentops",
       "description": "DevOps layer for coding agents with flow, feedback, and memory",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "agenttrace",
+      "url": "https://github.com/luoyuctl/agenttrace",
+      "owner": "luoyuctl",
+      "repo": "agenttrace",
+      "description": "Local Codex plugin and TUI for inspecting AI coding agent session cost, latency, tool failures, and health",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -238,20 +247,20 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "PapersFlow",
-      "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
-      "owner": "papersflow-ai",
-      "repo": "papersflow-codex-plugin",
-      "description": "Paper discovery, citation verification, graph exploration, and DeepScan analysis",
-      "platform": "codex",
-      "source": "awesome-ai-plugins"
-    },
-    {
       "name": "Paper Pilot",
       "url": "https://github.com/aytzey/paper-pilot",
       "owner": "aytzey",
       "repo": "paper-pilot",
       "description": "Academic research copilot that searches 6 databases, downloads real PDFs, extracts evidence, renders figures, and syncs to Zotero",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "PapersFlow",
+      "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
+      "owner": "papersflow-ai",
+      "repo": "papersflow-codex-plugin",
+      "description": "Paper discovery, citation verification, graph exploration, and DeepScan analysis",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
