@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-05-02",
-  "total": 91,
+  "last_updated": "2026-05-10",
+  "total": 94,
   "platforms": [
     "codex",
     "claude-code",
@@ -152,6 +152,15 @@
       "owner": "Rothschildiuk",
       "repo": "context-pack",
       "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -426,6 +435,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "feature-dev",
       "url": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
       "owner": "anthropics",
@@ -521,6 +539,15 @@
       "owner": "hashgraph-online",
       "repo": "ai-plugin-scanner",
       "description": "Security and best-practices scanner for AI plugins",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },

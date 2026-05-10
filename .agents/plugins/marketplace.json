@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-02T13:11:20.929065+00:00",
+  "last_updated": "2026-05-10T04:19:46.252498+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -144,6 +144,15 @@
       "owner": "Rothschildiuk",
       "repo": "context-pack",
       "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -418,6 +427,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "feature-dev",
       "url": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
       "owner": "anthropics",
@@ -513,6 +531,15 @@
       "owner": "hashgraph-online",
       "repo": "ai-plugin-scanner",
       "description": "Security and best-practices scanner for AI plugins",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
