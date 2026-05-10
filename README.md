@@ -123,6 +123,7 @@ Third-party plugins built by the community.
 - [TokRepo Search](https://github.com/henu-wang/tokrepo-codex-plugin) - Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content.
 - [Upwork Autopilot](https://github.com/klajdikkolaj/upwork-autopilot) - Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile.
+- [Vibe](https://github.com/anubhavg-icpl/vibe) - Unified AI coding workflow library with Codex-ready skills, agents, commands, and modes for major coding-agent CLIs.
 - [VibePortrait](https://github.com/dadwadw233/VibePortrait) - Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI "think like you".
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
 - [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
