@@ -100,6 +100,7 @@ Third-party plugins built by the community.
 - [Codex Multi Auth](https://github.com/ndycode/codex-multi-auth) - Multi-account OAuth manager for the official Codex CLI with switching, health checks, and recovery tools.
 - [Codex SEO](https://github.com/BestLemoon/codex-seo) - Full-stack SEO audits, Google API workflows, backlinks analysis, reporting, and optional MCP extensions for Codex.
 - [Context Pack](https://github.com/Rothschildiuk/context-pack) - Generate compact first-pass repository briefings for coding agents before deeper exploration.
+- [Dodo Payments](https://github.com/dodopayments/dodo-agent-plugin) - Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth.
 - [Flow Studio Power Automate](https://github.com/ninihen1/power-automate-mcp-skills) - Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs.
 - [HOTL Plugin](https://github.com/yimwoo/hotl-plugin) - Human-on-the-Loop AI coding workflow plugin.
 - [Jenkins CLI](https://github.com/avivsinai/jenkins-cli) - GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes.
@@ -136,9 +137,11 @@ Third-party plugins built by the community.
 
 Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anthropics/claude-code](https://github.com/anthropics/claude-code)
 
+- [Bring Your AI](https://bringyour.ai) - Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license.
 - [claude-ops](https://github.com/Lifecycle-Innovations-Limited/claude-ops) - Business operating system for Claude Code — morning briefing, unified inbox (Slack/Telegram/WhatsApp/Gmail), autonomous PR merge pipeline, production incident dashboard, AWS cost tracking, and YOLO autonomous mode with 4 parallel C-suite agents. 14 slash commands, 9 agents.
 - [code-review](https://github.com/anthropics/claude-code/tree/main/plugins/code-review) - Automated PR code review using multiple specialized agents with confidence-based scoring to filter false positives.
 - [commit-commands](https://github.com/anthropics/claude-code/tree/main/plugins/commit-commands) - Git workflow automation for committing, pushing, and creating pull requests.
+- [Dodo Payments](https://github.com/dodopayments/dodo-agent-plugin) - Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth.
 - [feature-dev](https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev) - Comprehensive feature development workflow with a structured 7-phase approach.
 - [immich-photo-manager](https://github.com/drolosoft/immich-photo-manager) - MCP server for intelligent photo management with Immich — search, geographic album curation, library cleanup, duplicate detection, and interactive HTML galleries.
 - [Lastest](https://github.com/las-team/lastest) - Self-hosted visual regression testing platform with AI-generated tests, MCP server integration, and collaborative diff review.
@@ -146,7 +149,6 @@ Claude Code extends Anthropic's CLI with custom plugins. Official plugins: [anth
 - [oh-my-forge](https://github.com/rlagycks/oh-my-forge) - Claude Code plugin with ontology-driven guardrails and harness-engineered agent workflows for TDD, planning, code review, and CI automation.
 - [prompt-to-asset](https://github.com/MohamedAbdallah-14/prompt-to-asset) - Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface.
 - [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration.
-- [Bring Your AI](https://bringyour.ai) - Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content.
 - [Zotero Fulltext](https://github.com/statzhero/zotero-fulltext) - Search and read your Zotero library with citekey lookup and fulltext access.
 
@@ -165,6 +167,7 @@ Plugins for OpenAI's OpenCode. See: [awesome-opencode-plugins](https://github.co
 _Contributions welcome - submit via PR_
 
 - [AI Plugin Scanner](https://github.com/hashgraph-online/ai-plugin-scanner) - Security and best-practices scanner for AI plugins.
+- [Dodo Payments](https://github.com/dodopayments/dodo-agent-plugin) - Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth.
 - [MCD Agent Toolkit](https://github.com/monte-carlo-data/mcd-agent-toolkit) - Official Monte Carlo toolkit for AI coding agents.
 - [Registry Broker](https://github.com/hashgraph-online/registry-broker-codex-plugin) - Delegate tasks to specialist AI agents via the HOL Registry.
 

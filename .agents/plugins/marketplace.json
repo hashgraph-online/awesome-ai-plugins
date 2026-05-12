@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-12T03:12:08.547136+00:00",
+  "last_updated": "2026-05-12T03:18:42.088071+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -157,6 +157,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "Flow Studio Power Automate",
       "url": "https://github.com/ninihen1/power-automate-mcp-skills",
       "owner": "ninihen1",
@@ -287,7 +296,7 @@
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "owner": "MohamedAbdallah-14",
       "repo": "prompt-to-asset",
-      "description": "Route image-generation prompts to 30+ models \u2014 DALL-E, Stable Diffusion, Flux, Midjourney, and more \u2014 through a single MCP interface",
+      "description": "Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -314,7 +323,7 @@
       "url": "https://github.com/talkstream/ru-text",
       "owner": "talkstream",
       "repo": "ru-text",
-      "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
+      "description": "Russian text quality — ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -323,7 +332,7 @@
       "url": "https://github.com/sitemd-cc/sitemd",
       "owner": "sitemd-cc",
       "repo": "sitemd",
-      "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
+      "description": "Build websites from Markdown via MCP — 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -368,7 +377,7 @@
       "url": "https://github.com/MohamedAbdallah-14/unslop",
       "owner": "MohamedAbdallah-14",
       "repo": "unslop",
-      "description": "Strip AI writing patterns from text \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
+      "description": "Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -395,7 +404,7 @@
       "url": "https://github.com/dadwadw233/VibePortrait",
       "owner": "dadwadw233",
       "repo": "VibePortrait",
-      "description": "Developer personality portrait generator \u2014 analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\"",
+      "description": "Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\"",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
@@ -418,11 +427,20 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Bring Your AI",
+      "url": "https://bringyour.ai",
+      "owner": "",
+      "repo": "",
+      "description": "Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "claude-ops",
       "url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops",
       "owner": "Lifecycle-Innovations-Limited",
       "repo": "claude-ops",
-      "description": "Business operating system for Claude Code \u2014 morning briefing, unified inbox (Slack/Telegram/WhatsApp/Gmail), autonomous PR merge pipeline, production incident dashboard, AWS cost tracking, and YOLO autonomous mode with 4 parallel C-suite agents. 14 slash commands, 9 agents",
+      "description": "Business operating system for Claude Code — morning briefing, unified inbox (Slack/Telegram/WhatsApp/Gmail), autonomous PR merge pipeline, production incident dashboard, AWS cost tracking, and YOLO autonomous mode with 4 parallel C-suite agents. 14 slash commands, 9 agents",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -445,6 +463,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "feature-dev",
       "url": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
       "owner": "anthropics",
@@ -458,7 +485,7 @@
       "url": "https://github.com/drolosoft/immich-photo-manager",
       "owner": "drolosoft",
       "repo": "immich-photo-manager",
-      "description": "MCP server for intelligent photo management with Immich \u2014 search, geographic album curation, library cleanup, duplicate detection, and interactive HTML galleries",
+      "description": "MCP server for intelligent photo management with Immich — search, geographic album curation, library cleanup, duplicate detection, and interactive HTML galleries",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -494,7 +521,7 @@
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "owner": "MohamedAbdallah-14",
       "repo": "prompt-to-asset",
-      "description": "Route image-generation prompts to 30+ models \u2014 DALL-E, Stable Diffusion, Flux, Midjourney, and more \u2014 through a single MCP interface",
+      "description": "Route image-generation prompts to 30+ models — DALL-E, Stable Diffusion, Flux, Midjourney, and more — through a single MCP interface",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -508,20 +535,11 @@
       "source": "awesome-ai-plugins"
     },
     {
-      "name": "Bring Your AI",
-      "url": "https://bringyour.ai",
-      "owner": "giancarloerra",
-      "repo": "SocratiCode",
-      "description": "Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license",
-      "platform": "claude-code",
-      "source": "awesome-ai-plugins"
-    },
-    {
       "name": "unslop",
       "url": "https://github.com/MohamedAbdallah-14/unslop",
       "owner": "MohamedAbdallah-14",
       "repo": "unslop",
-      "description": "Strip AI writing patterns from text \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
+      "description": "Strip AI writing patterns from text — removes filler phrases, hedging language, and generic constructs to produce cleaner written content",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -549,6 +567,15 @@
       "owner": "hashgraph-online",
       "repo": "ai-plugin-scanner",
       "description": "Security and best-practices scanner for AI plugins",
+      "platform": "opencode",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Dodo Payments",
+      "url": "https://github.com/dodopayments/dodo-agent-plugin",
+      "owner": "dodopayments",
+      "repo": "dodo-agent-plugin",
+      "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth",
       "platform": "opencode",
       "source": "awesome-ai-plugins"
     },
@@ -836,7 +863,7 @@
       "url": "https://agentprobe.fly.dev",
       "owner": "punkpeye",
       "repo": "awesome-mcp-clients",
-      "description": "Free API that scores any site 0\u2013100 for agentic commerce readiness (CERTIFIED / AGENT_READY / PARTIAL / NOT_READY). MCP server at `/mcp` + CI GitHub Action (`unitedideas/agentprobe-check-action@v1`) for automated grade gating in workflows",
+      "description": "Free API that scores any site 0–100 for agentic commerce readiness (CERTIFIED / AGENT_READY / PARTIAL / NOT_READY). MCP server at `/mcp` + CI GitHub Action (`unitedideas/agentprobe-check-action@v1`) for automated grade gating in workflows",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
