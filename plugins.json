@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-05-12",
-  "total": 99,
+  "total": 100,
   "platforms": [
     "codex",
     "claude-code",
@@ -332,6 +332,15 @@
       "owner": "talkstream",
       "repo": "ru-text",
       "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Sensei",
+      "url": "https://github.com/onehorizonai/sensei",
+      "owner": "onehorizonai",
+      "repo": "sensei",
+      "description": "Senior engineering coach for code review, debugging, planning, refactoring, and test-quality practice",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },

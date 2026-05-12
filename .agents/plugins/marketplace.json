@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-12T03:21:02.098341+00:00",
+  "last_updated": "2026-05-12T03:21:37.437286+00:00",
   "plugins": [
     {
       "name": "Agent Message Queue",
@@ -324,6 +324,15 @@
       "owner": "talkstream",
       "repo": "ru-text",
       "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Sensei",
+      "url": "https://github.com/onehorizonai/sensei",
+      "owner": "onehorizonai",
+      "repo": "sensei",
+      "description": "Senior engineering coach for code review, debugging, planning, refactoring, and test-quality practice",
       "platform": "codex",
       "source": "awesome-ai-plugins"
     },
