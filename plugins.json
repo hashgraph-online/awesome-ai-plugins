@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-05-10",
-  "total": 92,
+  "last_updated": "2026-05-12",
+  "total": 96,
   "platforms": [
     "codex",
     "claude-code",
@@ -219,6 +219,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Obsidian Vault MCP",
+      "url": "https://github.com/luffysolution-svg/obsidian-vault-mcp",
+      "owner": "luffysolution-svg",
+      "repo": "obsidian-vault-mcp",
+      "description": "Maintain a local Obsidian vault as a persistent linked wiki with 57 MCP tools for file I/O, wikilinks, Zotero import, MinerU PDF parsing, Canvas/Bases creation, and batch editing",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "OC ChatGPT Multi Auth",
       "url": "https://github.com/ndycode/oc-chatgpt-multi-auth",
       "owner": "ndycode",
@@ -381,6 +390,15 @@
       "source": "awesome-ai-plugins"
     },
     {
+      "name": "Vibe",
+      "url": "https://github.com/anubhavg-icpl/vibe",
+      "owner": "anubhavg-icpl",
+      "repo": "vibe",
+      "description": "Unified AI coding workflow library with Codex-ready skills, agents, commands, and modes for major coding-agent CLIs",
+      "platform": "codex",
+      "source": "awesome-ai-plugins"
+    },
+    {
       "name": "VibePortrait",
       "url": "https://github.com/dadwadw233/VibePortrait",
       "owner": "dadwadw233",
@@ -494,6 +512,15 @@
       "owner": "giancarloerra",
       "repo": "SocratiCode",
       "description": "Codebase intelligence MCP server with semantic search, dependency graph analysis, and context artifact exploration",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "Bring Your AI",
+      "url": "https://bringyour.ai",
+      "owner": "giancarloerra",
+      "repo": "SocratiCode",
+      "description": "Local-first migration tool that moves Claude Code rules, skills, hooks, MCP config, and memories to Codex or other targets without uploading harness data. Includes a no-data remote MCP discovery endpoint (`preview_move`, `install_local_cli`, `list_targets`). $49 lifetime license",
       "platform": "claude-code",
       "source": "awesome-ai-plugins"
     },
@@ -809,6 +836,15 @@
       "owner": "punkpeye",
       "repo": "awesome-mcp-clients",
       "description": "MCP client applications",
+      "platform": "gemini-cli",
+      "source": "awesome-ai-plugins"
+    },
+    {
+      "name": "agentprobe",
+      "url": "https://agentprobe.fly.dev",
+      "owner": "punkpeye",
+      "repo": "awesome-mcp-clients",
+      "description": "Free API that scores any site 0\u2013100 for agentic commerce readiness (CERTIFIED / AGENT_READY / PARTIAL / NOT_READY). MCP server at `/mcp` + CI GitHub Action (`unitedideas/agentprobe-check-action@v1`) for automated grade gating in workflows",
       "platform": "gemini-cli",
       "source": "awesome-ai-plugins"
     },
