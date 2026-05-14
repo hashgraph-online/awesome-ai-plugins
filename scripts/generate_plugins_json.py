@@ -71,7 +71,12 @@ def normalize_plugin(plugin: dict) -> dict:
 def load_codex_plugins() -> list[dict]:
     """Load the current Codex plugin catalog used as the AI plugin seed."""
     with urllib.request.urlopen(CODEX_PLUGINS_JSON_URL, timeout=30) as response:
+        if response.status != 200:
+            raise RuntimeError(f"Upstream returned {response.status}")
         payload = json.loads(response.read().decode("utf-8"))
+
+    if not isinstance(payload, dict):
+        return []
 
     plugins = payload.get("plugins", [])
     if not isinstance(plugins, list):
@@ -88,9 +93,10 @@ def load_codex_plugins() -> list[dict]:
 
 def marketplace_entry(plugin: dict) -> dict:
     """Build a portable marketplace entry without local plugin clones."""
+    name = str(plugin.get("name", "")).strip()
     entry = {
-        "name": plugin.get("name"),
-        "displayName": plugin.get("name"),
+        "name": name,
+        "displayName": name,
         "description": plugin.get("description", ""),
         "category": plugin.get("category", ""),
         "source": "awesome-ai-plugins",
@@ -124,6 +130,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
     
     plugins = []
     current_platform = None
+    current_category = ""
     
     for line in content.split("\n"):
         # Check for platform headers
@@ -135,6 +142,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             # Check for subcategory headers (###)
             category_match = re.match(r"^### (.+)", line.strip())
             if category_match:
+                current_category = category_match.group(1)
                 continue
             
             # Parse plugin entries: - [Name](url) - Description
@@ -157,6 +165,13 @@ def parse_plugins(readme_path: Path) -> list[dict]:
                 if owner_match:
                     owner = owner_match.group(1)
                     repo = owner_match.group(2)
+
+                install_url = (
+                    "https://raw.githubusercontent.com/"
+                    f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
+                    if owner and repo
+                    else ""
+                )
                 
                 plugins.append({
                     "name": name,
@@ -164,8 +179,10 @@ def parse_plugins(readme_path: Path) -> list[dict]:
                     "owner": owner,
                     "repo": repo,
                     "description": desc,
+                    "category": current_category,
                     "platform": current_platform,
                     "source": "awesome-ai-plugins",
+                    "install_url": install_url,
                 })
     
     return sort_plugins(plugins)
