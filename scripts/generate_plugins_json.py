@@ -25,12 +25,12 @@ PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 
 
 def normalize_repo_key(plugin: dict) -> str:
-    owner = str(plugin.get("owner", "")).strip().lower()
-    repo = str(plugin.get("repo", "")).strip().lower()
+    owner = str(plugin.get("owner", "")).strip().rstrip("/").lower()
+    repo = str(plugin.get("repo", "")).strip().rstrip("/").removesuffix(".git").lower()
     if owner and repo:
         return f"{owner}/{repo}"
 
-    url = str(plugin.get("url", "")).strip()
+    url = str(plugin.get("url", "")).strip().rstrip("/")
     match = re.match(r"https://github\.com/([^/]+)/([^/#?]+)", url)
     if match:
         return f"{match.group(1).lower()}/{match.group(2).removesuffix('.git').lower()}"
@@ -150,7 +150,10 @@ def parse_plugins(readme_path: Path) -> list[dict]:
                 repo = ""
                 
                 # Extract owner/repo from github.com URLs
-                owner_match = re.match(r"https://github\.com/([^/]+)/([^/]+)", url)
+                owner_match = re.match(
+                    r"https://github\.com/([^/]+)/([^/]+)",
+                    url.rstrip("/"),
+                )
                 if owner_match:
                     owner = owner_match.group(1)
                     repo = owner_match.group(2)
