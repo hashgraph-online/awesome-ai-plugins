@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-15T19:46:24.479738+00:00",
+  "last_updated": "2026-05-15T19:52:40.686980+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -245,6 +245,21 @@
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "ejentum-mcp",
+      "displayName": "ejentum-mcp",
+      "description": "MCP server exposing reasoning, code, anti-deception, and memory harness tools for Codex.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ejentum",
+      "repo": "ejentum-mcp",
+      "url": "https://github.com/ejentum/ejentum-mcp",
+      "install_url": "https://raw.githubusercontent.com/ejentum/ejentum-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Frappe Agent",
       "displayName": "Frappe Agent",
       "description": "Frappe and ERPNext coding, customization, bench, and review intelligence for Codex.",
@@ -288,6 +303,21 @@
       "repo": "hotl-plugin",
       "url": "https://github.com/yimwoo/hotl-plugin",
       "install_url": "https://raw.githubusercontent.com/yimwoo/hotl-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Praxis",
+      "displayName": "Praxis",
+      "description": "Token-lean triage-driven workflow skills for coding agents: design, planning, TDD, debugging, review, worktree, subagents, and release. 10\u201340\u00d7 cheaper per skill than comparable frameworks while preserving full workflow discipline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ouonet",
+      "repo": "praxis",
+      "url": "https://github.com/ouonet/praxis",
+      "install_url": "https://raw.githubusercontent.com/ouonet/praxis/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Project Autopilot",
@@ -335,6 +365,21 @@
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Stark",
+      "displayName": "Stark",
+      "description": "UI/UX design plugin for AI coding agents with product-flow routing, platform-native interface guidance, asset planning, and shipped-reference analysis before code.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "f0d010c",
+      "repo": "stark",
+      "url": "https://github.com/f0d010c/stark",
+      "install_url": "https://raw.githubusercontent.com/f0d010c/stark/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "tailtest",
       "displayName": "tailtest",
       "description": "Hook-powered test generation -- detects files changed during an agent turn and instructs Codex to write and run tests automatically. Zero config, 8 languages.",
@@ -348,6 +393,21 @@
       "repo": "tailtest-codex",
       "url": "https://github.com/avansaber/tailtest-codex",
       "install_url": "https://raw.githubusercontent.com/avansaber/tailtest-codex/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Tandem Workflow Architect",
+      "displayName": "Tandem Workflow Architect",
+      "description": "Plan Tandem workflows in Codex, then validate, preview, and run them through the governed Tandem engine.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "frumu-ai",
+      "repo": "tandem-codex-plugin",
+      "url": "https://github.com/frumu-ai/tandem-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/frumu-ai/tandem-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Tartiner Labs",
@@ -393,6 +453,21 @@
       "repo": "claude-skills",
       "url": "https://github.com/dragon1086/claude-skills",
       "install_url": "https://raw.githubusercontent.com/dragon1086/claude-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Unity Agent Workflows",
+      "displayName": "Unity Agent Workflows",
+      "description": "Codex plugin and skill for Unity 2D agents that enforces \"No proof, no edit\" workflows with runtime-owner proof, Teach structure maps, and validation gates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AUN-PN",
+      "repo": "unity-agent-workflows",
+      "url": "https://github.com/AUN-PN/unity-agent-workflows",
+      "install_url": "https://raw.githubusercontent.com/AUN-PN/unity-agent-workflows/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Universal Design Principles",
@@ -635,6 +710,21 @@
       "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Data Product Builder for dbt",
+      "displayName": "Data Product Builder for dbt",
+      "description": "Full data-product lifecycle on dbt for Entropy Data: scaffold, audit, and integrate projects with ODCS, ODPS, OpenLineage, and GitHub Actions.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "entropy-data",
+      "repo": "dataproduct-builder-dbt",
+      "url": "https://github.com/entropy-data/dataproduct-builder-dbt",
+      "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Dodo Payments",
       "displayName": "Dodo Payments",
       "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth.",
@@ -678,6 +768,21 @@
       "repo": "power-automate-mcp-skills",
       "url": "https://github.com/ninihen1/power-automate-mcp-skills",
       "install_url": "https://raw.githubusercontent.com/ninihen1/power-automate-mcp-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GH Project",
+      "displayName": "GH Project",
+      "description": "Create GitHub repositories from Codex with inferred defaults, native menus, explicit confirmation, and deterministic local cloning.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "zfifteen",
+      "repo": "gh-project-plugin",
+      "url": "https://github.com/zfifteen/gh-project-plugin",
+      "install_url": "https://raw.githubusercontent.com/zfifteen/gh-project-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Jenkins CLI",
