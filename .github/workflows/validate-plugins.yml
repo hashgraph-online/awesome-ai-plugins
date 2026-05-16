@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -38,7 +39,7 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add plugins.json .agents/plugins/marketplace.json
             git commit -m "chore: sync marketplace artifacts with README"
-            git push
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           else
             echo "marketplace artifacts are up to date"
           fi
