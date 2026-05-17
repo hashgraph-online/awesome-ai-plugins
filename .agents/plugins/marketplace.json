@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-17T21:14:49.475863+00:00",
+  "last_updated": "2026-05-17T21:15:50.848072+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -78,6 +78,21 @@
       "repo": "antigravity-workspace-template",
       "url": "https://github.com/study8677/antigravity-workspace-template",
       "install_url": "https://raw.githubusercontent.com/study8677/antigravity-workspace-template/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Archcore",
+      "displayName": "Archcore",
+      "description": "Gives coding agents the architecture, rules, and prior decisions of the repo via skills, hooks, and MCP \u2014 so new changes land where the project says they belong across Claude Code, Cursor, and Codex CLI.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "archcore-ai",
+      "repo": "plugin",
+      "url": "https://github.com/archcore-ai/plugin",
+      "install_url": "https://raw.githubusercontent.com/archcore-ai/plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Bring Your AI Migration Auditor",
@@ -243,6 +258,21 @@
       "repo": "codex-rg-guard",
       "url": "https://github.com/Rycen7822/codex-rg-guard",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Development Skills",
+      "displayName": "Development Skills",
+      "description": "Three-tier triage (PASS_THROUGH / LIGHT / FULL 4-phase) development workflow for Codex and Claude Code with language auto-detection (Python, Java, TypeScript, Swift, frontend) and a staff-reviewer subagent for fresh-eyes review on every change.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "reidemeister94",
+      "repo": "development-skills",
+      "url": "https://github.com/reidemeister94/development-skills",
+      "install_url": "https://raw.githubusercontent.com/reidemeister94/development-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "ejentum-mcp",
