@@ -42,15 +42,15 @@
 New plugin workflow:
 
 1. Create with `$plugin-creator`
-2. Validate with [`codex-plugin-scanner`](https://github.com/hashgraph-online/codex-plugin-scanner)
-3. Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/hol-codex-plugin-scanner-action)
+2. Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)
+3. Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)
 4. Ship or submit with confidence
 
 Quick preflight:
 
 ```bash
-pipx run codex-plugin-scanner lint .
-pipx run codex-plugin-scanner verify .
+pipx run plugin-scanner lint .
+pipx run plugin-scanner verify .
 ```
 
 This repo publishes a Codex repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points at mirrored installable plugin bundles under `./plugins/`, so a clone of this repo can act as a curated plugin source in Codex.
@@ -252,21 +252,21 @@ For this curated list, the machine-readable source of truth is the generated rep
 
 ## Validate Before You Ship
 
-After scaffolding with `$plugin-creator`, use [codex-plugin-scanner](https://github.com/hashgraph-online/codex-plugin-scanner) as your quality gate before publishing, review, or distribution.
+After scaffolding with `$plugin-creator`, use [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard) as your quality gate before publishing, review, or distribution.
 
 For skill/plugin authoring workflows, [Codex SkillForge](https://github.com/f0d010c/skillforge) provides an ESLint-style CLI and GitHub Action for scaffolding, linting, smoke-testing, and packaging Codex skills/plugins before publishing.
 
 ### Local Preflight
 
 ```bash
-pipx run codex-plugin-scanner lint .
-pipx run codex-plugin-scanner verify .
+pipx run plugin-scanner lint .
+pipx run plugin-scanner verify .
 ```
 
 ### PR Gate (GitHub Actions)
 
 ```yaml
-- uses: hashgraph-online/hol-codex-plugin-scanner-action@v1
+- uses: hashgraph-online/ai-plugin-scanner-action@v1
   with:
     plugin_dir: "."
     fail_on_severity: high
@@ -303,7 +303,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Plugin Trust Scores
 
-Every plugin in this list is automatically ingested by the [HOL Plugin Registry](https://hol.org/registry/plugins), which runs each through the [codex-plugin-scanner](https://github.com/hashgraph-online/codex-plugin-scanner) to produce a trust score and security analysis.
+Every plugin in this list is automatically ingested by the [HOL Plugin Registry](https://hol.org/registry/plugins), which runs each through the [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard) to produce a trust score and security analysis.
 
 Each plugin gets a detailed breakdown across six factors:
 
