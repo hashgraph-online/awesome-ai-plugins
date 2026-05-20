@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-18T18:57:54.098200+00:00",
+  "last_updated": "2026-05-20T14:45:23.227902+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -288,6 +288,21 @@
       "repo": "ejentum-mcp",
       "url": "https://github.com/ejentum/ejentum-mcp",
       "install_url": "https://raw.githubusercontent.com/ejentum/ejentum-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Everything OpenAI Codex",
+      "displayName": "Everything OpenAI Codex",
+      "description": "EOC is an open-source operating system for Codex workflows with 200+ skills, agents, hooks, rules, memory, safety gates, install profiles, and cross-harness adapters.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mturac",
+      "repo": "everything-openai-codex",
+      "url": "https://github.com/mturac/everything-openai-codex",
+      "install_url": "https://raw.githubusercontent.com/mturac/everything-openai-codex/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Frappe Agent",
