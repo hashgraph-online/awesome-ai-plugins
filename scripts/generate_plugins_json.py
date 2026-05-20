@@ -14,6 +14,7 @@ from __future__ import annotations
 import datetime
 import json
 import re
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -22,6 +23,43 @@ OUTPUT = Path(__file__).parent.parent / "plugins.json"
 MARKETPLACE_OUTPUT = Path(__file__).parent.parent / ".agents" / "plugins" / "marketplace.json"
 CODEX_PLUGINS_JSON_URL = "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/main/plugins.json"
 PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
+
+# Candidate manifest paths inside a plugin repo, in priority order. The first
+# template that resolves to an HTTP 200 wins. Some upstream entries (e.g.
+# apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
+# `plugins/<name>/.codex-plugin/` rather than the repo root.
+INSTALL_PATH_CANDIDATES = (
+    ".codex-plugin/plugin.json",
+    "plugins/{repo}/.codex-plugin/plugin.json",
+    ".codex/plugin.json",
+)
+INSTALL_URL_PROBE_TIMEOUT = 6.0
+
+
+def probe_install_url(owner: str, repo: str) -> str | None:
+    """Return the first GitHub raw URL that resolves for a plugin manifest.
+
+    Used for README-only additions so non-root manifest layouts don't end up
+    with broken `install_url` values in the generated artifacts. Returns None
+    on network errors or when no candidate exists; the caller decides whether
+    to fall back to a default path or omit the field.
+    """
+    for template in INSTALL_PATH_CANDIDATES:
+        path = template.format(repo=repo)
+        url = (
+            f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}"
+        )
+        req = urllib.request.Request(url, method="HEAD")
+        try:
+            with urllib.request.urlopen(req, timeout=INSTALL_URL_PROBE_TIMEOUT) as resp:
+                if 200 <= resp.status < 300:
+                    return url
+        except urllib.error.HTTPError:
+            continue
+        except (urllib.error.URLError, TimeoutError, OSError):
+            # Network unavailable — caller will keep its default.
+            return None
+    return None
 
 
 def normalize_repo_key(plugin: dict) -> str:
@@ -201,7 +239,9 @@ def merge_readme_additions(
     The upstream Codex catalog is the primary source. Plugins added directly
     to this repo's README (without a corresponding submission upstream) would
     otherwise never reach plugins.json or marketplace.json. This merges them
-    in, deduplicated by owner/repo.
+    in, deduplicated by owner/repo, and probes for the manifest location so
+    plugins with non-root layouts get a working `install_url` instead of a
+    hardcoded path that 404s.
     """
     seen = {key for key in (normalize_repo_key(p) for p in upstream) if key}
     additions: list[dict] = []
@@ -210,6 +250,20 @@ def merge_readme_additions(
         if not key or key in seen:
             continue
         seen.add(key)
+
+        probed = probe_install_url(plugin["owner"], plugin["repo"])
+        if probed:
+            plugin["install_url"] = probed
+        else:
+            # Probe returned None (no candidate matched, or network down).
+            # Keep the default install_url; flag for the operator so a broken
+            # path can be hand-corrected upstream if needed.
+            print(
+                f"WARN: could not verify manifest for {plugin['name']} "
+                f"({plugin['owner']}/{plugin['repo']}); "
+                f"keeping default install_url"
+            )
+
         additions.append(normalize_plugin(plugin))
     return upstream + additions, len(additions)
 
