@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-05-20",
-  "total": 81,
+  "total": 83,
   "platforms": [
     "codex"
   ],
@@ -66,6 +66,20 @@
       ]
     },
     {
+      "name": "agenttrace",
+      "url": "https://github.com/luoyuctl/agenttrace",
+      "owner": "luoyuctl",
+      "repo": "agenttrace",
+      "description": "Audit local AI coding-agent sessions for costs, token waste, failures, latency, anomalies, health, diffs, and CI gate signals.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/luoyuctl/agenttrace/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Antigravity Workspace Template",
       "url": "https://github.com/study8677/antigravity-workspace-template",
       "owner": "study8677",
@@ -88,6 +102,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/archcore-ai/plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Atelier Arith Julia Development Skills",
+      "url": "https://github.com/AtelierArith/atelier-arith-julia-development-skills",
+      "owner": "AtelierArith",
+      "repo": "atelier-arith-julia-development-skills",
+      "description": "Codex skills for Julia installation, package creation, app creation, and test workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/AtelierArith/atelier-arith-julia-development-skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"

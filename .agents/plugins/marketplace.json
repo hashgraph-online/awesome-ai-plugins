@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-20T14:47:04.065441+00:00",
+  "last_updated": "2026-05-20T14:47:25.468598+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -65,6 +65,21 @@
       "install_url": "https://raw.githubusercontent.com/boshu2/agentops/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "agenttrace",
+      "displayName": "agenttrace",
+      "description": "Audit local AI coding-agent sessions for costs, token waste, failures, latency, anomalies, health, diffs, and CI gate signals.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "luoyuctl",
+      "repo": "agenttrace",
+      "url": "https://github.com/luoyuctl/agenttrace",
+      "install_url": "https://raw.githubusercontent.com/luoyuctl/agenttrace/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Antigravity Workspace Template",
       "displayName": "Antigravity Workspace Template",
       "description": "Multi-agent codebase knowledge graph generator with context-aware planning and automatic scope management \u2014 turns codebases into coherent agent workspaces.",
@@ -93,6 +108,21 @@
       "repo": "plugin",
       "url": "https://github.com/archcore-ai/plugin",
       "install_url": "https://raw.githubusercontent.com/archcore-ai/plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Atelier Arith Julia Development Skills",
+      "displayName": "Atelier Arith Julia Development Skills",
+      "description": "Codex skills for Julia installation, package creation, app creation, and test workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AtelierArith",
+      "repo": "atelier-arith-julia-development-skills",
+      "url": "https://github.com/AtelierArith/atelier-arith-julia-development-skills",
+      "install_url": "https://raw.githubusercontent.com/AtelierArith/atelier-arith-julia-development-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Bring Your AI Migration Auditor",
