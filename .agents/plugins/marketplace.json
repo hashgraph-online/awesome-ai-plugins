@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-20T14:53:53.169124+00:00",
+  "last_updated": "2026-05-20T17:09:37.060733+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1233,6 +1233,126 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Staff Engineer Mode",
+      "displayName": "Staff Engineer Mode",
+      "description": "Engineering skill pack that routes architecture, reliability, security, API, data, release, and operations prompts to specialist skill files for structured, standards-informed guidance",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sirmarkz",
+      "repo": "staff-engineer-mode",
+      "url": "https://github.com/sirmarkz/staff-engineer-mode",
+      "install_url": "https://raw.githubusercontent.com/sirmarkz/staff-engineer-mode/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "antigravity-awesome-skills",
+      "displayName": "antigravity-awesome-skills",
+      "description": "Cross-agent skill library (Claude, Codex, Cursor, Gemini)",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sickn33",
+      "repo": "antigravity-awesome-skills",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills#readme",
+      "install_url": "https://raw.githubusercontent.com/sickn33/antigravity-awesome-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "awesome-ai-plugins",
+      "displayName": "awesome-ai-plugins",
+      "description": "Umbrella list covering Codex, Claude Code, Gemini CLI, and MCP servers",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hashgraph-online",
+      "repo": "awesome-ai-plugins",
+      "url": "https://github.com/hashgraph-online/awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/awesome-ai-plugins/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "awesome-claude-code",
+      "displayName": "awesome-claude-code",
+      "description": "Claude Code resources",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hesreallyhim",
+      "repo": "awesome-claude-code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code#readme",
+      "install_url": "https://raw.githubusercontent.com/hesreallyhim/awesome-claude-code/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "awesome-coding-agents",
+      "displayName": "awesome-coding-agents",
+      "description": "Curated list of AI coding agents",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "e2b-dev",
+      "repo": "awesome-ai-agents",
+      "url": "https://github.com/e2b-dev/awesome-ai-agents#readme",
+      "install_url": "https://raw.githubusercontent.com/e2b-dev/awesome-ai-agents/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "awesome-mcp-servers",
+      "displayName": "awesome-mcp-servers",
+      "description": "MCP server directory",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "wong2",
+      "repo": "awesome-mcp-servers",
+      "url": "https://github.com/wong2/awesome-mcp-servers#readme",
+      "install_url": "https://raw.githubusercontent.com/wong2/awesome-mcp-servers/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "EchoCoding",
+      "displayName": "EchoCoding",
+      "description": "Voice-enabled audio layer for coding agents with ambient soundscapes, event-driven SFX, and optional cloud TTS/ASR interaction",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "launsion-boop",
+      "repo": "EchoCoding",
+      "url": "https://github.com/launsion-boop/EchoCoding",
+      "install_url": "https://raw.githubusercontent.com/launsion-boop/EchoCoding/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Emdash Skills",
+      "displayName": "Emdash Skills",
+      "description": "14-category autonomous product-building OS for AI coding tools with 94 reference docs, 18 agents, and cross-tool support (Claude Code, Codex, Cursor, Copilot, 30+ more)",
+      "category": "Submission Preflight",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "megabytespace",
+      "repo": "claude-skills",
+      "url": "https://github.com/megabytespace/claude-skills",
+      "install_url": "https://raw.githubusercontent.com/megabytespace/claude-skills/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
