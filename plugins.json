@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-05-20",
-  "total": 82,
+  "last_updated": "2026-05-23",
+  "total": 83,
   "platforms": [
     "codex"
   ],
@@ -269,6 +269,7 @@
       "description": "MCP server exposing reasoning, code, anti-deception, and memory harness tools for Codex.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
+      "icon": "./plugins/ejentum/ejentum-mcp/assets/ejentum-icon.svg",
       "install_url": "https://raw.githubusercontent.com/ejentum/ejentum-mcp/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
@@ -382,6 +383,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Sealos",
+      "url": "https://github.com/labring/sealos-skills",
+      "owner": "labring",
+      "repo": "sealos-skills",
+      "description": "Deploy apps to Sealos Cloud from Codex with readiness checks, Dockerfile generation, Compose conversion, image builds, and rollout updates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/labring/sealos-skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
