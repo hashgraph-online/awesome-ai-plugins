@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-05-25",
-  "total": 89,
+  "total": 92,
   "platforms": [
     "codex"
   ],
@@ -976,21 +976,6 @@
       ]
     },
     {
-      "name": "Mantis",
-      "url": "https://github.com/deonmenezes/mantishack",
-      "owner": "deonmenezes",
-      "repo": "mantishack",
-      "description": "Autonomous bug bounty hunter for authorized engagements \u2014 7-phase FSM (RECON \u2192 AUTH \u2192 HUNT \u2192 CHAIN \u2192 VERIFY \u2192 GRADE \u2192 REPORT), parallel hunter sub-agents, cryptographic scope enforcement, and BLAKE3/Ed25519 Merkle event logs.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/deonmenezes/mantishack/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex",
-        "claude-code"
-      ]
-    },
-    {
       "name": "Mobazha",
       "url": "https://github.com/mobazha/mobazha-skills",
       "owner": "mobazha",
@@ -1252,6 +1237,62 @@
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json",
       "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Spellbook Skills",
+      "url": "https://github.com/yyykf/spellbook-skills",
+      "owner": "yyykf",
+      "repo": "spellbook-skills",
+      "description": "Practical Claude Code and Codex skills for worktrees, PR/MR automation, review cleanup, YApi lookup, and Java DDD guidance",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yyykf/spellbook-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Allscreenshots",
+      "url": "https://github.com/allscreenshots/allscreenshots-plugin",
+      "owner": "allscreenshots",
+      "repo": "allscreenshots-plugin",
+      "description": "Capture website screenshots from Codex with viewport sizing, full-page capture, dark mode, and ad or cookie banner blocking",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/allscreenshots/allscreenshots-plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "File Organizer MCP",
+      "url": "https://github.com/kridaydave/File-Organizer-MCP",
+      "owner": "kridaydave",
+      "repo": "File-Organizer-MCP",
+      "description": "Security-hardened MCP server for intelligent file organization with categorization, duplicate detection, metadata extraction, and smart scheduling",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/kridaydave/File-Organizer-MCP/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Mantis",
+      "url": "https://github.com/deonmenezes/mantishack",
+      "owner": "deonmenezes",
+      "repo": "mantishack",
+      "description": "Autonomous bug bounty hunter for authorized engagements \u2014 7-phase FSM (RECON \u2192 AUTH \u2192 HUNT \u2192 CHAIN \u2192 VERIFY \u2192 GRADE \u2192 REPORT), parallel hunter sub-agents, cryptographic scope enforcement, and BLAKE3/Ed25519 Merkle event logs",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/deonmenezes/mantishack/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
