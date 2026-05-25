@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-05-23",
-  "total": 83,
+  "total": 84,
   "platforms": [
     "codex"
   ],
@@ -918,6 +918,21 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "Mantis",
+      "url": "https://github.com/deonmenezes/mantishack",
+      "owner": "deonmenezes",
+      "repo": "mantishack",
+      "description": "Autonomous bug bounty hunter for authorized engagements — 7-phase FSM (RECON → AUTH → HUNT → CHAIN → VERIFY → GRADE → REPORT), parallel hunter sub-agents, cryptographic scope enforcement, and BLAKE3/Ed25519 Merkle event logs.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/deonmenezes/mantishack/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "claude-code"
       ]
     },
     {
