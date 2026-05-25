@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-23T16:04:55.160143+00:00",
+  "last_updated": "2026-05-25T18:07:01.394764+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -63,6 +63,21 @@
       "repo": "agentops",
       "url": "https://github.com/boshu2/agentops",
       "install_url": "https://raw.githubusercontent.com/boshu2/agentops/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Anchor",
+      "displayName": "Anchor",
+      "description": "Engineering discipline pack for Claude Code & Codex CLI with task-scope locking, anti-drift braking, condition-based codex review, project-CLAUDE.md pitfall writeback, and PreToolUse hooks that block irreversible bash patterns.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "biefan",
+      "repo": "anchor",
+      "url": "https://github.com/biefan/anchor",
+      "install_url": "https://raw.githubusercontent.com/biefan/anchor/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Antigravity Workspace Template",
@@ -440,6 +455,21 @@
       "install_url": "https://raw.githubusercontent.com/Kanevry/session-orchestrator/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Simple Man",
+      "displayName": "Simple Man",
+      "description": "High-compression communication mode for Codex agents that removes filler while preserving search, validation, and implementation effort.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Maksim-Burtsev",
+      "repo": "simple-man",
+      "url": "https://github.com/Maksim-Burtsev/simple-man",
+      "install_url": "https://raw.githubusercontent.com/Maksim-Burtsev/simple-man/HEAD/plugins/simple-man/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Spec-Driven Development",
       "displayName": "Spec-Driven Development",
       "description": "Three-phase Requirements \u2192 Design \u2192 Tasks workflow for Claude Code and Codex \u2014 EARS notation acceptance criteria, autonomous execution loop, cross-spec dependencies, and post-implementation acceptance testing.",
@@ -453,6 +483,21 @@
       "repo": "spec-driven-plugin",
       "url": "https://github.com/Habib0x0/spec-driven-plugin",
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Staff Engineer Mode",
+      "displayName": "Staff Engineer Mode",
+      "description": "Routes engineering design, delivery, reliability, security, operations, and maintenance prompts to focused staff-level specialist guidance for AI coding agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sirmarkz",
+      "repo": "staff-engineer-mode",
+      "url": "https://github.com/sirmarkz/staff-engineer-mode",
+      "install_url": "https://raw.githubusercontent.com/sirmarkz/staff-engineer-mode/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Stark",
@@ -1008,6 +1053,21 @@
       "repo": "MorningAI",
       "url": "https://github.com/octo-patch/MorningAI",
       "install_url": "https://raw.githubusercontent.com/octo-patch/MorningAI/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Nullcost",
+      "displayName": "Nullcost",
+      "description": "Catalog-backed free-tier, free-trial, and cheap developer-tool recommendations for Codex through bundled skills and MCP tools.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "johnvouros",
+      "repo": "nullcost-plugin",
+      "url": "https://github.com/johnvouros/nullcost-plugin",
+      "install_url": "https://raw.githubusercontent.com/johnvouros/nullcost-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "OC ChatGPT Multi Auth",
