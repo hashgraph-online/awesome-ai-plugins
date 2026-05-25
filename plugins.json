@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-05-25",
-  "total": 87,
+  "total": 88,
   "platforms": [
     "codex"
   ],
@@ -256,6 +256,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Dev Skills",
+      "url": "https://github.com/Jason-chen-coder/dev-skills",
+      "owner": "Jason-chen-coder",
+      "repo": "dev-skills",
+      "description": "Team workflow skills for specs, plans, TDD, debugging, verification, review, branch finishing, and design context.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Jason-chen-coder/dev-skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
