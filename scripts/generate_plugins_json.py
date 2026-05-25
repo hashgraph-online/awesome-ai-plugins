@@ -14,6 +14,7 @@ from __future__ import annotations
 import datetime
 import json
 import re
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -22,6 +23,43 @@ OUTPUT = Path(__file__).parent.parent / "plugins.json"
 MARKETPLACE_OUTPUT = Path(__file__).parent.parent / ".agents" / "plugins" / "marketplace.json"
 CODEX_PLUGINS_JSON_URL = "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/main/plugins.json"
 PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
+
+# Candidate manifest paths inside a plugin repo, in priority order. The first
+# template that resolves to an HTTP 200 wins. Some upstream entries (e.g.
+# apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
+# `plugins/<name>/.codex-plugin/` rather than the repo root.
+INSTALL_PATH_CANDIDATES = (
+    ".codex-plugin/plugin.json",
+    "plugins/{repo}/.codex-plugin/plugin.json",
+    ".codex/plugin.json",
+)
+INSTALL_URL_PROBE_TIMEOUT = 6.0
+
+
+def probe_install_url(owner: str, repo: str) -> str | None:
+    """Return the first GitHub raw URL that resolves for a plugin manifest.
+
+    Used for README-only additions so non-root manifest layouts don't end up
+    with broken `install_url` values in the generated artifacts. Returns None
+    on network errors or when no candidate exists; the caller decides whether
+    to fall back to a default path or omit the field.
+    """
+    for template in INSTALL_PATH_CANDIDATES:
+        path = template.format(repo=repo)
+        url = (
+            f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}"
+        )
+        req = urllib.request.Request(url, method="HEAD")
+        try:
+            with urllib.request.urlopen(req, timeout=INSTALL_URL_PROBE_TIMEOUT) as resp:
+                if 200 <= resp.status < 300:
+                    return url
+        except urllib.error.HTTPError:
+            continue
+        except (urllib.error.URLError, TimeoutError, OSError):
+            # Network unavailable — caller will keep its default.
+            return None
+    return None
 
 
 def normalize_repo_key(plugin: dict) -> str:
@@ -115,77 +153,119 @@ def marketplace_entry(plugin: dict) -> dict:
     return entry
 
 
-def parse_plugins(readme_path: Path) -> list[dict]:
-    """Parse plugins from README by platform section."""
-    content = readme_path.read_text(encoding="utf-8")
-    
-    # Define platform sections to parse
-    platforms = {
-        "OpenAI Codex Plugins": "codex",
-        "Claude Code Plugins": "claude-code",
-        "OpenCode Plugins": "opencode",
-        "Google Gemini CLI Plugins": "gemini-cli",
-        "MCP Servers (Cross-Platform)": "mcp",
-    }
-    
-    plugins = []
-    current_platform = None
-    current_category = ""
-    
-    for line in content.split("\n"):
-        # Check for platform headers
-        for platform_name, platform_id in platforms.items():
-            if line.strip() == f"## {platform_name}":
-                current_platform = platform_id
-                break
-        else:
-            # Check for subcategory headers (###)
-            category_match = re.match(r"^### (.+)", line.strip())
-            if category_match:
-                current_category = category_match.group(1)
-                continue
-            
-            # Parse plugin entries: - [Name](url) - Description
-            plugin_match = re.match(
-                r"^- \[([^\]]+)\]\(([^)]+)\)\s*[-–]\s*(.+)",
-                line.strip(),
-            )
-            if plugin_match and current_platform:
-                name = plugin_match.group(1)
-                url = plugin_match.group(2)
-                desc = plugin_match.group(3).rstrip(".")
-                owner = ""
-                repo = ""
-                
-                # Extract owner/repo from github.com URLs
-                owner_match = re.match(
-                    r"https://github\.com/([^/]+)/([^/]+)",
-                    url.rstrip("/"),
-                )
-                if owner_match:
-                    owner = owner_match.group(1)
-                    repo = owner_match.group(2)
+PLATFORM_SECTIONS = {
+    "OpenAI Codex Plugins": "codex",
+    "Claude Code Plugins": "claude-code",
+    "OpenCode Plugins": "opencode",
+    "Google Gemini CLI Plugins": "gemini-cli",
+    "MCP Servers (Cross-Platform)": "mcp",
+    # Current README structure: a single `## Community Plugins` section with
+    # `###` subcategories. Treat its entries as codex marketplace plugins.
+    "Community Plugins": "codex",
+}
 
-                install_url = (
-                    "https://raw.githubusercontent.com/"
-                    f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
-                    if owner and repo
-                    else ""
-                )
-                
-                plugins.append({
-                    "name": name,
-                    "url": url,
-                    "owner": owner,
-                    "repo": repo,
-                    "description": desc,
-                    "category": current_category,
-                    "platform": current_platform,
-                    "source": "awesome-ai-plugins",
-                    "install_url": install_url,
-                })
-    
+
+def parse_plugins(readme_path: Path) -> list[dict]:
+    """Parse plugin entries from README by platform section.
+
+    Recognized `## ...` headings (see PLATFORM_SECTIONS) put the parser into
+    a plugin-collecting state. Any other `## ...` heading (Plugin Development,
+    Guides & Articles, Related Projects, etc.) clears that state so their
+    GitHub links are not misread as marketplace plugins.
+    """
+    content = readme_path.read_text(encoding="utf-8")
+
+    plugins: list[dict] = []
+    current_platform: str | None = None
+    current_category = ""
+
+    h2_re = re.compile(r"^##\s+(.+?)\s*$")
+    h3_re = re.compile(r"^###\s+(.+?)\s*$")
+    item_re = re.compile(r"^- \[([^\]]+)\]\(([^)]+)\)\s*[-–—]\s*(.+)")
+
+    for line in content.split("\n"):
+        h2 = h2_re.match(line)
+        if h2:
+            current_platform = PLATFORM_SECTIONS.get(h2.group(1).strip())
+            current_category = ""
+            continue
+
+        h3 = h3_re.match(line.strip())
+        if h3:
+            current_category = h3.group(1)
+            continue
+
+        item = item_re.match(line.strip())
+        if not (item and current_platform):
+            continue
+
+        name = item.group(1)
+        url = item.group(2).strip()
+        desc = item.group(3).rstrip(".")
+
+        # github.com URLs only; relative paths (./plugins/...) are skipped.
+        owner_match = re.match(
+            r"https://github\.com/([^/]+)/([^/#?]+)",
+            url.rstrip("/"),
+        )
+        if not owner_match:
+            continue
+        owner = owner_match.group(1)
+        repo = owner_match.group(2).removesuffix(".git")
+
+        plugins.append({
+            "name": name,
+            "url": url,
+            "owner": owner,
+            "repo": repo,
+            "description": desc,
+            "category": current_category,
+            "platform": current_platform,
+            "source": "awesome-ai-plugins",
+            "install_url": (
+                "https://raw.githubusercontent.com/"
+                f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
+            ),
+        })
+
     return sort_plugins(plugins)
+
+
+def merge_readme_additions(
+    upstream: list[dict], readme_path: Path
+) -> tuple[list[dict], int]:
+    """Append README plugin entries not already present in `upstream`.
+
+    The upstream Codex catalog is the primary source. Plugins added directly
+    to this repo's README (without a corresponding submission upstream) would
+    otherwise never reach plugins.json or marketplace.json. This merges them
+    in, deduplicated by owner/repo, and probes for the manifest location so
+    plugins with non-root layouts get a working `install_url` instead of a
+    hardcoded path that 404s.
+    """
+    seen = {key for key in (normalize_repo_key(p) for p in upstream) if key}
+    additions: list[dict] = []
+    for plugin in parse_plugins(readme_path):
+        key = normalize_repo_key(plugin)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+
+        probed = probe_install_url(plugin["owner"], plugin["repo"])
+        if probed:
+            plugin["install_url"] = probed
+        else:
+            # Probe returned None (no candidate matched, or network down).
+            # Keep the default install_url; flag for the operator so a broken
+            # path can be hand-corrected upstream if needed.
+            print(
+                f"WARN: could not verify manifest for {plugin['name']} "
+                f"({plugin['owner']}/{plugin['repo']}); "
+                f"keeping default install_url"
+            )
+
+        additions.append(normalize_plugin(plugin))
+    return upstream + additions, len(additions)
 
 
 def generate_plugins_json(plugins: list[dict]) -> dict:
@@ -225,7 +305,12 @@ def main():
     except Exception as exc:
         print(f"Upstream feed unavailable, falling back to README: {exc}")
         plugins = parse_plugins(README)
-    print(f"Found {len(plugins)} plugins")
+    print(f"Found {len(plugins)} plugins from upstream catalog")
+
+    plugins, added = merge_readme_additions(plugins, README)
+    if added:
+        print(f"Merged {added} README-only addition(s) from {README.name}")
+    print(f"Total plugins after merge: {len(plugins)}")
 
     if not plugins:
         raise SystemExit("No plugins found; refusing to write empty registry feeds")
