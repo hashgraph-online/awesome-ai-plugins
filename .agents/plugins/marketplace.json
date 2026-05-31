@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-05-27T12:23:34.568505+00:00",
+  "last_updated": "2026-05-31T06:11:46.501432+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -335,6 +335,21 @@
       "install_url": "https://raw.githubusercontent.com/ejentum/ejentum-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Epic Harness",
+      "displayName": "Epic Harness",
+      "description": "Auto-trigger quality skills + self-evolving agent harness \u2014 orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "epicsagas",
+      "repo": "epic-harness",
+      "url": "https://github.com/epicsagas/epic-harness",
+      "install_url": "https://raw.githubusercontent.com/epicsagas/epic-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Espresso",
       "displayName": "Espresso",
       "description": "Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.",
@@ -453,6 +468,21 @@
       "repo": "codex-project-autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Runtype Skills",
+      "displayName": "Runtype Skills",
+      "description": "Supercharge your coding agent for AI product development \u2014 build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "runtypelabs",
+      "repo": "skills",
+      "url": "https://github.com/runtypelabs/skills",
+      "install_url": "https://raw.githubusercontent.com/runtypelabs/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Sealos",
@@ -723,6 +753,21 @@
       "repo": "agent-vision",
       "url": "https://github.com/zfifteen/agent-vision",
       "install_url": "https://raw.githubusercontent.com/zfifteen/agent-vision/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Agentgram",
+      "displayName": "Agentgram",
+      "description": "Send explicit Telegram messages from Codex and local AI agents through a Telegram bot token and chat id.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jerryfane",
+      "repo": "agentgram",
+      "url": "https://github.com/jerryfane/agentgram",
+      "install_url": "https://raw.githubusercontent.com/jerryfane/agentgram/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Apple Productivity",
@@ -1353,36 +1398,6 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Epic Harness",
-      "displayName": "Epic Harness",
-      "description": "Auto-trigger quality skills + self-evolving agent harness \u2014 orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "epicsagas",
-      "repo": "epic-harness",
-      "url": "https://github.com/epicsagas/epic-harness",
-      "install_url": "https://raw.githubusercontent.com/epicsagas/epic-harness/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Runtype Skills",
-      "displayName": "Runtype Skills",
-      "description": "Supercharge your coding agent for AI product development \u2014 build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "runtypelabs",
-      "repo": "skills",
-      "url": "https://github.com/runtypelabs/skills",
-      "install_url": "https://raw.githubusercontent.com/runtypelabs/skills/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
