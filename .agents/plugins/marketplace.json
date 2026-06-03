@@ -757,7 +757,7 @@
     {
       "name": "Agentgram",
       "displayName": "Agentgram",
-      "description": "Send explicit Telegram messages from Codex and local AI agents through a Telegram bot token and chat id.",
+      "description": "Send Telegram messages, files, and forwarded inbox imports from Codex and local AI agents through a Telegram bot token and chat id.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
