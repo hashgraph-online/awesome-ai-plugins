@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-04T01:50:03.530378+00:00",
+  "last_updated": "2026-06-04T01:50:42.181065+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -708,6 +708,21 @@
       "repo": "VibePortrait",
       "url": "https://github.com/dadwadw233/VibePortrait",
       "install_url": "https://raw.githubusercontent.com/dadwadw233/VibePortrait/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "VillageSQL Skills",
+      "displayName": "VillageSQL Skills",
+      "description": "Skills for VillageSQL including building extensions from scratch and porting PostgreSQL extensions to VillageSQL.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "villagesql",
+      "repo": "villagesql-skills",
+      "url": "https://github.com/villagesql/villagesql-skills",
+      "install_url": "https://raw.githubusercontent.com/villagesql/villagesql-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Writer's Loop",
