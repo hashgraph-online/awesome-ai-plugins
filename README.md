@@ -182,6 +182,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Universal Design Principles](https://github.com/HDeibler/universal-design-principles) - Cross-agent UX and product-design marketplace with a root Codex collection plugin, five focused plugin bundles, and 137 Agent Skills for design review, accessibility, layout, interaction, cognition, and product polish.
 - [VibePortrait](https://github.com/dadwadw233/VibePortrait) - Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI "think like you".
 - [VillageSQL Skills](https://github.com/villagesql/villagesql-skills) - Skills for VillageSQL including building extensions from scratch and porting PostgreSQL extensions to VillageSQL.
+- [Workflow Kit](https://github.com/Le-Xuan-Thang/workflow-kit) - Full product lifecycle plugin for Claude Code, Codex CLI, and OpenCode: define Vision/Mission/Core → generate workplan → execute with mandatory cross-provider reviewer agents → synthesize deliverables → maintain, with parallel task execution, crash recovery, and AgentOps metrics.
 - [Writer's Loop](https://github.com/xxsang/writers-loop) - Structured AI writing workflow for planning, critique, revision, translation, style distillation, and opt-in local preference learning.
 - [Zagrosi Forge](https://github.com/zagrosi-code/zagrosi-forge) - Decompose broad project briefs into researched plans and implement sectioned work with TDD, quality gates, and traceability.
 
@@ -190,7 +191,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
 - [Agentgram](https://github.com/jerryfane/agentgram) - Send explicit Telegram messages from Codex and local AI agents through a Telegram bot token and chat id.
-- [Aient](https://github.com/haf/aient-codex-plugin) - AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.
+- [Aient](https://github.com/aient-ai/aient-codex-plugin) - AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders tooling for macOS with Codex plugin adapters.
 - [AxonFlow](https://github.com/getaxonflow/axonflow-codex-plugin) - Runtime governance for Codex with policy enforcement on terminal commands, advisory checks for non-terminal tools via skills, PII/secret detection, and compliance-grade audit trails. Self-hosted via Docker.
 - [Bitbucket CLI](https://github.com/avivsinai/bitbucket-cli) - Manage Bitbucket repos, PRs, branches, issues, webhooks, and pipelines for Data Center and Cloud.

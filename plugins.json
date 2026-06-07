@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-06-04",
-  "total": 98,
+  "last_updated": "2026-06-07",
+  "total": 99,
   "platforms": [
     "codex"
   ],
@@ -22,6 +22,20 @@
         "codex"
       ],
       "featured": true
+    },
+    {
+      "name": "A Team",
+      "url": "https://github.com/RBraga01/a-team",
+      "owner": "RBraga01",
+      "repo": "a-team",
+      "description": "Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "Aegis",
@@ -682,6 +696,20 @@
       ]
     },
     {
+      "name": "Workflow Kit",
+      "url": "https://github.com/Le-Xuan-Thang/workflow-kit",
+      "owner": "Le-Xuan-Thang",
+      "repo": "workflow-kit",
+      "description": "Full product lifecycle plugin for Claude Code, Codex CLI, and OpenCode: define Vision/Mission/Core \u2192 generate workplan \u2192 execute with mandatory cross-provider reviewer agents \u2192 synthesize deliverables \u2192 maintain, with parallel task execution, crash recovery, and AgentOps metrics.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Le-Xuan-Thang/workflow-kit/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Writer's Loop",
       "url": "https://github.com/xxsang/writers-loop",
       "owner": "xxsang",
@@ -746,6 +774,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/jerryfane/agentgram/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Aient",
+      "url": "https://github.com/aient-ai/aient-codex-plugin",
+      "owner": "aient-ai",
+      "repo": "aient-codex-plugin",
+      "description": "AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1349,34 +1391,6 @@
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json",
       "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "A Team",
-      "url": "https://github.com/RBraga01/a-team",
-      "owner": "RBraga01",
-      "repo": "a-team",
-      "description": "Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Aient",
-      "url": "https://github.com/haf/aient-codex-plugin",
-      "owner": "haf",
-      "repo": "aient-codex-plugin",
-      "description": "AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/haf/aient-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

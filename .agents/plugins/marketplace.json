@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-04T01:55:16.608104+00:00",
+  "last_updated": "2026-06-07T15:20:55.919488+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -18,6 +18,21 @@
       "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/registry-broker-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "featured": true
+    },
+    {
+      "name": "A Team",
+      "displayName": "A Team",
+      "description": "Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "RBraga01",
+      "repo": "a-team",
+      "url": "https://github.com/RBraga01/a-team",
+      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Aegis",
@@ -725,6 +740,21 @@
       "install_url": "https://raw.githubusercontent.com/villagesql/villagesql-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Workflow Kit",
+      "displayName": "Workflow Kit",
+      "description": "Full product lifecycle plugin for Claude Code, Codex CLI, and OpenCode: define Vision/Mission/Core \u2192 generate workplan \u2192 execute with mandatory cross-provider reviewer agents \u2192 synthesize deliverables \u2192 maintain, with parallel task execution, crash recovery, and AgentOps metrics.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Le-Xuan-Thang",
+      "repo": "workflow-kit",
+      "url": "https://github.com/Le-Xuan-Thang/workflow-kit",
+      "install_url": "https://raw.githubusercontent.com/Le-Xuan-Thang/workflow-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Writer's Loop",
       "displayName": "Writer's Loop",
       "description": "Structured AI writing workflow for planning, critique, revision, translation, style distillation, and opt-in local preference learning.",
@@ -798,6 +828,21 @@
       "repo": "agentgram",
       "url": "https://github.com/jerryfane/agentgram",
       "install_url": "https://raw.githubusercontent.com/jerryfane/agentgram/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Aient",
+      "displayName": "Aient",
+      "description": "AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "aient-ai",
+      "repo": "aient-codex-plugin",
+      "url": "https://github.com/aient-ai/aient-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Apple Productivity",
@@ -1443,36 +1488,6 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "A Team",
-      "displayName": "A Team",
-      "description": "Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "RBraga01",
-      "repo": "a-team",
-      "url": "https://github.com/RBraga01/a-team",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Aient",
-      "displayName": "Aient",
-      "description": "AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "haf",
-      "repo": "aient-codex-plugin",
-      "url": "https://github.com/haf/aient-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/haf/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
