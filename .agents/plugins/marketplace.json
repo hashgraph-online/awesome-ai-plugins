@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-07T15:24:54.509138+00:00",
+  "last_updated": "2026-06-07T22:48:55.474253+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -723,6 +723,21 @@
       "repo": "universal-design-principles",
       "url": "https://github.com/HDeibler/universal-design-principles",
       "install_url": "https://raw.githubusercontent.com/HDeibler/universal-design-principles/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Velith",
+      "displayName": "Velith",
+      "description": "AI-native publishing system with a 6-phase pipeline from ideation to EPUB/PDF across 8 genres.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "epicsagas",
+      "repo": "Velith",
+      "url": "https://github.com/epicsagas/Velith",
+      "install_url": "https://raw.githubusercontent.com/epicsagas/Velith/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "VibePortrait",
