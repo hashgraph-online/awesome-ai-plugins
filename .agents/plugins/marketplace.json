@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-07T22:48:55.474253+00:00",
+  "last_updated": "2026-06-07T22:50:07.488387+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1533,6 +1533,21 @@
       "repo": "vidseeds-mcp",
       "url": "https://github.com/CarrotGamesStudios/vidseeds-mcp",
       "install_url": "https://raw.githubusercontent.com/CarrotGamesStudios/vidseeds-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "X Twitter Scraper",
+      "displayName": "X Twitter Scraper",
+      "description": "X/Twitter data, monitored workflows, HMAC webhooks, and MCP access through the Xquik REST API with confirmation-gated write guidance.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Xquik-dev",
+      "repo": "x-twitter-scraper",
+      "url": "https://github.com/Xquik-dev/x-twitter-scraper",
+      "install_url": "https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Yandex Direct",
