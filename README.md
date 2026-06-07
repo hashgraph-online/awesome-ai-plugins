@@ -42,16 +42,29 @@
 New plugin workflow:
 
 1. Create with `$plugin-creator`
-2. Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)
-3. Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)
+2. **Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)** — **Required: score ≥ 80, no high/critical findings**
+3. **Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)** — **Required for listing**
 4. Ship or submit with confidence
 
-Quick preflight:
+### Quick preflight
 
 ```bash
 pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
+
+### Scanner Requirements (Mandatory for This List)
+
+All plugins submitted to **Awesome Codex Plugins** must pass the HOL AI Plugin Scanner:
+
+| Requirement | Threshold |
+|-------------|-----------|
+| **Score** | ≥ 80 / 130 |
+| **Severity** | No critical or high findings |
+| **CI** | Scanner must run in your repo's GitHub Actions |
+
+See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
+See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
 This repo publishes a Codex repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points at mirrored installable plugin bundles under `./plugins/`, so a clone of this repo can act as a curated plugin source in Codex.
 
