@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-07T15:20:55.919488+00:00",
+  "last_updated": "2026-06-07T15:24:54.509138+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -455,6 +455,21 @@
       "install_url": "https://raw.githubusercontent.com/yimwoo/hotl-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "LLM Transpile",
+      "displayName": "LLM Transpile",
+      "description": "Auto-compress .md, .html, and .txt files via PostToolUse hook, cutting context usage by up to 40% with zero workflow change.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "epicsagas",
+      "repo": "llm-transpile",
+      "url": "https://github.com/epicsagas/llm-transpile",
+      "install_url": "https://raw.githubusercontent.com/epicsagas/llm-transpile/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Personal Data Protection",
       "displayName": "Personal Data Protection",
       "description": "Engineer-facing personal-data-protection compliance reference \u2014 Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA \u2014 organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.",
@@ -843,6 +858,21 @@
       "repo": "aient-codex-plugin",
       "url": "https://github.com/aient-ai/aient-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Antigravity 2.0",
+      "displayName": "Antigravity 2.0",
+      "description": "Local Codex bridge for Antigravity desktop with setup checks, model limit summaries, DevTools UI automation, and safe project/chat handoff.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "comprono",
+      "repo": "antigravity-2-codex-plugin",
+      "url": "https://github.com/comprono/antigravity-2-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/comprono/antigravity-2-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Apple Productivity",
@@ -1293,6 +1323,21 @@
       "repo": "papersflow-codex-plugin",
       "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/papersflow-ai/papersflow-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "PDF Monster",
+      "displayName": "PDF Monster",
+      "description": "Analyzes PDFs as extracted text, OCR text, rendered page images, and embedded figures for coding agents.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jbaehova",
+      "repo": "pdf-monster",
+      "url": "https://github.com/jbaehova/pdf-monster",
+      "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "prompt-to-asset",
