@@ -343,7 +343,9 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers#readme) - MCP server directory.
 - [EchoCoding](https://github.com/launsion-boop/EchoCoding) - Voice-enabled audio layer for coding agents with ambient soundscapes, event-driven SFX, and optional cloud TTS/ASR interaction.
 - [Emdash Skills](https://github.com/megabytespace/claude-skills) - 14-category autonomous product-building OS for AI coding tools with 94 reference docs, 18 agents, and cross-tool support (Claude Code, Codex, Cursor, Copilot, 30+ more).
-- [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
+- [HOL Guard](https://github.com/hashgraph-online/hol-guard) — Open-source AI agent security scanner
+- [HOL Guard Examples](https://github.com/zerocodefast/hol-guard-examples) — Security guides and tutorials for AI plugin development
+- [HOL Plugin Registry](https://hol.org/registry/plugins) — Browse plugins with scanner-backed security analysis and trust scores.
 
 ## Plugin Trust Scores
 
@@ -383,5 +385,7 @@ To add a plugin:
 **Requirements:**
 
 - Plugin must have a public GitHub repository
-- Must include `.codex-plugin/plugin.json`
+- Must include `.codex-plugin/plugin.json` or equivalent manifest
 - Must be functional and well-documented
+- **Must pass HOL Plugin Scanner with score ≥ 80/130 and no critical/high findings**
+- **Must run scanner in CI/CD (GitHub Actions preferred)**
