@@ -17,12 +17,30 @@ Thank you for considering a contribution!
 Before submitting:
 
 ```bash
-# Codex plugins
-pipx run codex-plugin-scanner lint .
-pipx run codex-plugin-scanner verify .
+# Run the HOL Plugin Scanner (required for all submissions)
+pipx run plugin-scanner lint .
+pipx run plugin-scanner verify .
 ```
 
-## Submitting
+**Scanner Requirements (Mandatory for This List):**
+
+All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scanner:
+
+| Requirement | Threshold |
+|-------------|-----------|
+| **Score** | ≥ 80 / 130 |
+| **Severity** | No critical or high findings |
+| **CI** | Scanner must run in your repo's GitHub Actions |
+
+See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
+See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+
+Use scanner outputs as evidence for maintainers/reviewers:
+- Structural lint results
+- Publish-readiness verification output
+- SARIF/findings for CI and code scanning
+
+The score is best used as a quick trust signal and triage summary (not the only readiness signal).
 
 Open a PR with:
 - Clear description of the extension
