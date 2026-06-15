@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-10T07:34:34.922700+00:00",
+  "last_updated": "2026-06-15T03:49:38.767536+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1175,6 +1175,21 @@
       "install_url": "https://raw.githubusercontent.com/zfifteen/gh-project-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Hermes Tweet",
+      "displayName": "Hermes Tweet",
+      "description": "Hermes Agent X/Twitter plugin for read-first social research, monitoring, and approval-gated actions through Xquik.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Xquik-dev",
+      "repo": "hermes-tweet",
+      "url": "https://github.com/Xquik-dev/hermes-tweet",
+      "install_url": "https://raw.githubusercontent.com/Xquik-dev/hermes-tweet/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Jenkins CLI",
       "displayName": "Jenkins CLI",
       "description": "GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes.",
@@ -1593,6 +1608,21 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GCF Proxy",
+      "displayName": "GCF Proxy",
+      "description": "Save 71% on MCP tool call tokens by wrapping any server with GCF encoding, with session stats hook and setup skill",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "blackwell-systems",
+      "repo": "gcf-codex-plugin",
+      "url": "https://github.com/blackwell-systems/gcf-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/blackwell-systems/gcf-codex-plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }

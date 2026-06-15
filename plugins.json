@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-06-10",
-  "total": 106,
+  "last_updated": "2026-06-15",
+  "total": 108,
   "platforms": [
     "codex"
   ],
@@ -1102,6 +1102,20 @@
       ]
     },
     {
+      "name": "Hermes Tweet",
+      "url": "https://github.com/Xquik-dev/hermes-tweet",
+      "owner": "Xquik-dev",
+      "repo": "hermes-tweet",
+      "description": "Hermes Agent X/Twitter plugin for read-first social research, monitoring, and approval-gated actions through Xquik.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Xquik-dev/hermes-tweet/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Jenkins CLI",
       "url": "https://github.com/avivsinai/jenkins-cli",
       "owner": "avivsinai",
@@ -1489,6 +1503,20 @@
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json",
       "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "GCF Proxy",
+      "url": "https://github.com/blackwell-systems/gcf-codex-plugin",
+      "owner": "blackwell-systems",
+      "repo": "gcf-codex-plugin",
+      "description": "Save 71% on MCP tool call tokens by wrapping any server with GCF encoding, with session stats hook and setup skill",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/blackwell-systems/gcf-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
