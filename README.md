@@ -256,6 +256,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [TokRepo Search](https://github.com/henu-wang/tokrepo-codex-plugin) - Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text output — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.
 - [Upwork Autopilot](https://github.com/klajdikkolaj/upwork-autopilot) - Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile.
+- [Vibe Browser](https://github.com/VibeTechnologies/vibe-browser-codex-plugin) - Drive your real, already-logged-in Chrome from Codex through the Vibe extension and relay with navigate, accessibility snapshot, click, type, and screenshot tools.
 - [VidSeeds.ai](https://github.com/CarrotGamesStudios/vidseeds-mcp) - Hosted MCP connector for pre-upload video SEO, metadata optimization, AI thumbnails, and multi-platform publishing with workflow skills for Codex agents.
 - [X Twitter Scraper](https://github.com/Xquik-dev/x-twitter-scraper) - X/Twitter data, monitored workflows, HMAC webhooks, and MCP access through the Xquik REST API with confirmation-gated write guidance.
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
