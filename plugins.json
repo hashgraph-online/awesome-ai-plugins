@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-06-16",
-  "total": 109,
+  "total": 111,
   "platforms": [
     "codex"
   ],
@@ -66,20 +66,6 @@
       ]
     },
     {
-      "name": "Agentizer",
-      "url": "https://github.com/Humiris/wwa-transform",
-      "owner": "Humiris",
-      "repo": "wwa-transform",
-      "description": "Turn any website into an AI-powered agentfront with split-pane",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Humiris/wwa-transform/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Agent Workflow System",
       "url": "https://github.com/1139030773-cmd/agent-workflow-system",
       "owner": "1139030773-cmd",
@@ -88,6 +74,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/1139030773-cmd/agent-workflow-system/HEAD/plugins/agent-workflow-system/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Agentizer",
+      "url": "https://github.com/Humiris/wwa-transform",
+      "owner": "Humiris",
+      "repo": "wwa-transform",
+      "description": "Turn any website into an AI-powered agentfront with split-pane",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Humiris/wwa-transform/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -200,6 +200,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/hyhmrright/brooks-lint/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Casefile",
+      "url": "https://github.com/x4cc3/casefile",
+      "owner": "x4cc3",
+      "repo": "casefile",
+      "description": "Persistent security case tracking for bug bounties, CTFs, and security audits.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -326,6 +340,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "debt-ops",
+      "url": "https://github.com/bcanfield/agentic-tech-debt",
+      "owner": "bcanfield",
+      "repo": "agentic-tech-debt",
+      "description": "Catches AI-introduced tech debt at write-time: hooks log every deferral to a registry in your repo and a review skill ranks paydown by file churn.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bcanfield/agentic-tech-debt/HEAD/codex/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1522,15 +1550,15 @@
       ]
     },
     {
-      "name": "Casefile",
-      "url": "https://github.com/x4cc3/casefile",
-      "owner": "x4cc3",
-      "repo": "casefile",
-      "description": "Persistent security case tracking for bug bounties, CTFs, and security audits",
-      "category": "Development & Workflow",
+      "name": "Val Town",
+      "url": "https://github.com/val-town/plugins",
+      "owner": "val-town",
+      "repo": "plugins",
+      "description": "Build and deploy serverless TypeScript on Val Town from Codex \u2014 hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI",
+      "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

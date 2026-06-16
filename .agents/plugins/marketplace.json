@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-16T15:54:09.971366+00:00",
+  "last_updated": "2026-06-16T15:56:53.173023+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -65,21 +65,6 @@
       "install_url": "https://raw.githubusercontent.com/yfge/agent-harness-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Agentizer",
-      "displayName": "Agentizer",
-      "description": "Turn any website into an AI-powered agentfront with split-pane",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Humiris",
-      "repo": "wwa-transform",
-      "url": "https://github.com/Humiris/wwa-transform",
-      "install_url": "https://raw.githubusercontent.com/Humiris/wwa-transform/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "Agent Workflow System",
       "displayName": "Agent Workflow System",
       "description": "\u4e00\u5957\u4e2d\u6587AI\u5de5\u4f5c\u6d41\u7cfb\u7edf\uff1a7\u4e2a\u534f\u4f5c\u6280\u80fd + \u884c\u4e3a\u89c4\u8303\u5baa\u6cd5 + \u4f1a\u8bdd\u6062\u590d\u673a\u5236\uff0c\u6a21\u7cca\u76ee\u6807\u2192\u53ef\u6267\u884c\u4efb\u52a1\uff0c\u5168\u751f\u547d\u5468\u671f\u5f15\u5bfc\u3002Codex & Claude Code \u53cc\u5e73\u53f0\uff0c\u65b0\u624b\u53cb\u597d\u3002",
@@ -93,6 +78,21 @@
       "repo": "agent-workflow-system",
       "url": "https://github.com/1139030773-cmd/agent-workflow-system",
       "install_url": "https://raw.githubusercontent.com/1139030773-cmd/agent-workflow-system/HEAD/plugins/agent-workflow-system/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Agentizer",
+      "displayName": "Agentizer",
+      "description": "Turn any website into an AI-powered agentfront with split-pane",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Humiris",
+      "repo": "wwa-transform",
+      "url": "https://github.com/Humiris/wwa-transform",
+      "install_url": "https://raw.githubusercontent.com/Humiris/wwa-transform/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "AgentOps",
@@ -213,6 +213,21 @@
       "repo": "brooks-lint",
       "url": "https://github.com/hyhmrright/brooks-lint",
       "install_url": "https://raw.githubusercontent.com/hyhmrright/brooks-lint/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Casefile",
+      "displayName": "Casefile",
+      "description": "Persistent security case tracking for bug bounties, CTFs, and security audits.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "x4cc3",
+      "repo": "casefile",
+      "url": "https://github.com/x4cc3/casefile",
+      "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Claude Code for Codex",
@@ -348,6 +363,21 @@
       "repo": "codex-rg-guard",
       "url": "https://github.com/Rycen7822/codex-rg-guard",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "debt-ops",
+      "displayName": "debt-ops",
+      "description": "Catches AI-introduced tech debt at write-time: hooks log every deferral to a registry in your repo and a review skill ranks paydown by file churn.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "bcanfield",
+      "repo": "agentic-tech-debt",
+      "url": "https://github.com/bcanfield/agentic-tech-debt",
+      "install_url": "https://raw.githubusercontent.com/bcanfield/agentic-tech-debt/HEAD/codex/.codex-plugin/plugin.json"
     },
     {
       "name": "Dev Skills",
@@ -1625,19 +1655,19 @@
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
     },
     {
-      "name": "Casefile",
-      "displayName": "Casefile",
-      "description": "Persistent security case tracking for bug bounties, CTFs, and security audits",
-      "category": "Development & Workflow",
+      "name": "Val Town",
+      "displayName": "Val Town",
+      "description": "Build and deploy serverless TypeScript on Val Town from Codex \u2014 hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI",
+      "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "x4cc3",
-      "repo": "casefile",
-      "url": "https://github.com/x4cc3/casefile",
-      "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json"
+      "owner": "val-town",
+      "repo": "plugins",
+      "url": "https://github.com/val-town/plugins",
+      "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
