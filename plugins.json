@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-06-16",
-  "total": 112,
+  "total": 118,
   "platforms": [
     "codex"
   ],
@@ -1508,6 +1508,20 @@
       ]
     },
     {
+      "name": "Val Town",
+      "url": "https://github.com/val-town/plugins",
+      "owner": "val-town",
+      "repo": "plugins",
+      "description": "Build and deploy serverless TypeScript on Val Town from Codex \u2014 hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "VidSeeds.ai",
       "url": "https://github.com/CarrotGamesStudios/vidseeds-mcp",
       "owner": "CarrotGamesStudios",
@@ -1554,25 +1568,95 @@
       "url": "https://github.com/ScrapeGraphAI/just-scrape",
       "owner": "ScrapeGraphAI",
       "repo": "just-scrape",
-      "description": "AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API",
+      "description": "AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.",
       "category": "Tools & Integrations",
-      "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/ScrapeGraphAI/just-scrape/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
       "ecosystems": [
         "codex"
       ]
     },
     {
-      "name": "Val Town",
-      "url": "https://github.com/val-town/plugins",
-      "owner": "val-town",
-      "repo": "plugins",
-      "description": "Build and deploy serverless TypeScript on Val Town from Codex \u2014 hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI",
-      "category": "Tools & Integrations",
-      "platform": "codex",
+      "name": "AgentBox",
+      "url": "https://github.com/madarco/agentbox",
+      "owner": "madarco",
+      "repo": "agentbox",
+      "description": "Run coding agents in parallel, each in its own sandboxed box (local Docker or cloud VMs via Hetzner/Daytona/Vercel/E2B), with sub-1s checkpoint starts, a per-box browser + VS Code, and host-held git credentials.",
+      "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/madarco/agentbox/HEAD/plugins/agentbox/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Skill Routing Kit",
+      "url": "https://github.com/juew/Skill-Routing-Kit",
+      "owner": "juew",
+      "repo": "Skill-Routing-Kit",
+      "description": "Local-first Codex routing guard that improves skill and plugin selection with a capability registry, negative examples, and explainable diagnostics.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/juew/Skill-Routing-Kit/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Citadel",
+      "url": "https://github.com/SethGammon/Citadel",
+      "owner": "SethGammon",
+      "repo": "Citadel",
+      "description": "Agent orchestration layer for OpenAI Codex and Claude Code with durable campaign memory, /do intent routing, lifecycle safety hooks, cost telemetry, and parallel agents in isolated git worktrees.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/SethGammon/Citadel/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "MailAgent",
+      "url": "https://github.com/Alex0nder/MailAgent",
+      "owner": "Alex0nder",
+      "repo": "MailAgent",
+      "description": "Temporary inboxes for Codex - OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Vanguard Frontier Agentic",
+      "url": "https://github.com/Raishin/vanguard-frontier-agentic",
+      "owner": "Raishin",
+      "repo": "vanguard-frontier-agentic",
+      "description": "Enterprise-grade agentic workflow marketplace with cloud, zero-trust, compliance, ERP, and platform specialist agents, skills, MCP references, and live-mutation guardrails across Codex and other coding agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/HEAD/plugins/Raishin/vanguard-frontier-agentic/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Generative Media Skills",
+      "url": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+      "owner": "SamurAIGPT",
+      "repo": "Generative-Media-Skills",
+      "description": "13 skills for image, video, and audio generation using 100+ models - FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, and HunyuanVideo via muapi.ai.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/SamurAIGPT/Generative-Media-Skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
       "ecosystems": [
         "codex"
       ]
