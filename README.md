@@ -66,9 +66,9 @@ This repo publishes a Codex-compatible marketplace at `.agents/plugins/marketpla
 
 ### Use this marketplace
 
-Install plugins directly from this curated list. The marketplace uses the Codex manifest format, which is compatible with multiple AI coding agents:
+This repo publishes a Codex-compatible marketplace at `.agents/plugins/marketplace.json`. Each plugin entry includes an `install_url` pointing at the upstream `.codex-plugin/plugin.json` manifest. Pick your agent below.
 
-**CLI:**
+#### Codex (CLI)
 
 ```bash
 # Add this repo as a marketplace source (one-time setup)
@@ -77,7 +77,7 @@ codex plugin marketplace add \
   --ref 'main' \
   --sparse '.agents/plugins'
 
-# Then browse and install (the marketplace name is derived from the repo name)
+# Browse and install
 codex plugin list --source awesome-ai-plugins
 codex plugin install <plugin-name> --source awesome-ai-plugins
 ```
@@ -86,9 +86,9 @@ Do not use the raw `marketplace.json` URL with `codex plugin marketplace add`.
 The Codex marketplace command clones a Git repository, so a raw GitHub file URL is
 treated like a repo URL and fails with `remote: 404: Not Found`.
 
-**Desktop App / IDE Extension:**
+#### Codex (Desktop App / IDE Extension)
 
-1. Open your agent's plugin settings (e.g. Codex settings) → Plugins → Next to search plugins input click on menu and select → `+Add More...`
+1. Open Codex settings → Plugins → click the menu next to search → `+Add More...`
    <img width="1462" height="466" alt="image" src="https://github.com/user-attachments/assets/ae15f505-58a8-4199-bb7b-56a07b670b10" />
 
 2. Add this URL:
@@ -101,7 +101,80 @@ treated like a repo URL and fails with `remote: 404: Not Found`.
 
 3. The curated plugin list appears as an available marketplace source.
 
-Each plugin entry includes an `install_url` for the upstream plugin manifest, so Codex can install from the generated marketplace metadata.
+#### Claude Code
+
+Claude Code has its own plugin system. Install a plugin from its upstream repo:
+
+```bash
+# Add the plugin's GitHub repo as a marketplace source
+/plugin marketplace add <owner>/<repo>
+
+# Install the plugin
+/plugin install <plugin-name>@<owner>
+
+# Reload to activate
+/reload-plugins
+```
+
+For MCP-only plugins (no `.codex-plugin` or `.claude-plugin` manifest), add the server directly:
+
+```bash
+claude mcp add <server-name> npx -- -y @<owner>/<package>
+```
+
+Or edit `.claude/plugins.json` in your project to point at a plugin repo.
+
+#### Cursor
+
+Cursor supports MCP servers via project-level or global config. Add a plugin's MCP server to `.cursor/mcp.json` in your project root:
+
+```json
+{
+  "mcpServers": {
+    "<plugin-name>": {
+      "command": "npx",
+      "args": ["-y", "@<owner>/<package>"]
+    }
+  }
+}
+```
+
+For plugins that bundle skills or slash commands (not just MCP), clone the repo into your project and reference it from Cursor's rules.
+
+#### Gemini CLI
+
+Gemini CLI supports MCP servers via `settings.json`. Add a plugin's server:
+
+```json
+{
+  "mcpServers": {
+    "<server-name>": {
+      "command": "npx",
+      "args": ["-y", "@<owner>/<package>"]
+    }
+  }
+}
+```
+
+Antigravity (Gemini desktop) also supports direct plugin installation:
+
+```bash
+agy plugins install https://github.com/<owner>/<repo>
+```
+
+#### OpenCode
+
+OpenCode loads plugins from `opencode.json`. Add a plugin by its Git URL:
+
+```json
+{
+  "plugin": ["<plugin-name>@git+https://github.com/<owner>/<repo>.git"]
+}
+```
+
+#### Other agents (Cline, GitHub Copilot CLI, etc.)
+
+Most agents that support MCP can use the MCP servers bundled in these plugins. Find the plugin's `.mcp.json` or MCP config in its repo and point your agent's MCP settings at it. The `.codex-plugin/plugin.json` manifest format is increasingly adopted as a cross-agent standard via [agentskills.io](https://agentskills.io).
 
 ## Official Plugins
 
