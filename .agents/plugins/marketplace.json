@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-24T11:59:27.700922+00:00",
+  "last_updated": "2026-06-24T12:00:14.550834+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -558,6 +558,21 @@
       "repo": "llm-transpile",
       "url": "https://github.com/epicsagas/llm-transpile",
       "install_url": "https://raw.githubusercontent.com/epicsagas/llm-transpile/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "LVTD Skills",
+      "displayName": "LVTD Skills",
+      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "LVTD-LLC",
+      "repo": "skills",
+      "url": "https://github.com/LVTD-LLC/skills",
+      "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Personal Data Protection",
@@ -1368,6 +1383,21 @@
       "repo": "launchfast_codex_plugin",
       "url": "https://github.com/BlockchainHB/launchfast_codex_plugin",
       "install_url": "https://raw.githubusercontent.com/BlockchainHB/launchfast_codex_plugin/HEAD/plugins/launchfast/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Maestro: Costguard",
+      "displayName": "Maestro: Costguard",
+      "description": "Cost auditor for Codex that flags CI/cron and cloud-spend waste via read-only provider checks, then previews and applies surgical CI workflow fixes locally without writing to provider accounts or pushing git.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mbanderas",
+      "repo": "costguard",
+      "url": "https://github.com/mbanderas/costguard",
+      "install_url": "https://raw.githubusercontent.com/mbanderas/costguard/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Mobazha",
