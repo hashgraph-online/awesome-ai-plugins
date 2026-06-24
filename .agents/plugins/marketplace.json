@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-16T16:02:05.913855+00:00",
+  "last_updated": "2026-06-24T11:59:27.700922+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -483,6 +483,21 @@
       "repo": "gcf-codex-plugin",
       "url": "https://github.com/blackwell-systems/gcf-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/blackwell-systems/gcf-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Generative Media Skills",
+      "displayName": "Generative Media Skills",
+      "description": "13 skills for image, video, and audio generation using 100+ models - FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, and HunyuanVideo via muapi.ai.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "SamurAIGPT",
+      "repo": "Generative-Media-Skills",
+      "url": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+      "install_url": "https://raw.githubusercontent.com/SamurAIGPT/Generative-Media-Skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "GrayMatter",
@@ -1280,6 +1295,51 @@
       "install_url": "https://raw.githubusercontent.com/aklofas/kicad-happy/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Kreuzberg",
+      "displayName": "Kreuzberg",
+      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kreuzberg-dev",
+      "repo": "plugins",
+      "url": "https://github.com/kreuzberg-dev/plugins",
+      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/kreuzberg/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Kreuzberg Cloud",
+      "displayName": "Kreuzberg Cloud",
+      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kreuzberg-dev",
+      "repo": "plugins",
+      "url": "https://github.com/kreuzberg-dev/plugins",
+      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/kreuzberg-cloud/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Kreuzcrawl",
+      "displayName": "Kreuzcrawl",
+      "description": "Web crawling and scraping for Codex with skills for single-page scraping, site crawls, URL mapping, and headless browser fallback.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kreuzberg-dev",
+      "repo": "plugins",
+      "url": "https://github.com/kreuzberg-dev/plugins",
+      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/kreuzcrawl/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Langfuse Observability",
       "displayName": "Langfuse Observability",
       "description": "Query traces, debug exceptions, analyze sessions, and manage prompts via MCP tools.",
@@ -1475,21 +1535,6 @@
       "install_url": "https://raw.githubusercontent.com/tim-osterhus/codex-remotion-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "ru-text",
-      "displayName": "ru-text",
-      "description": "Russian text quality \u2014 ~1,040 rules for typography, info-style, editorial, UX writing, and business correspondence.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "talkstream",
-      "repo": "ru-text",
-      "url": "https://github.com/talkstream/ru-text",
-      "install_url": "https://raw.githubusercontent.com/talkstream/ru-text/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "Rust Reverse Engineering",
       "displayName": "Rust Reverse Engineering",
       "description": "Reverse engineer Rust binaries and libraries: triage targets, demangle symbols, recover crate namespaces, and map panic, unwind, async, and FFI paths.",
@@ -1503,6 +1548,21 @@
       "repo": "rust-reverse-engineering-skill",
       "url": "https://github.com/jingjing2222/rust-reverse-engineering-skill",
       "install_url": "https://raw.githubusercontent.com/jingjing2222/rust-reverse-engineering-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ScrapeGraph AI",
+      "displayName": "ScrapeGraph AI",
+      "description": "AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ScrapeGraphAI",
+      "repo": "just-scrape",
+      "url": "https://github.com/ScrapeGraphAI/just-scrape",
+      "install_url": "https://raw.githubusercontent.com/ScrapeGraphAI/just-scrape/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
@@ -1668,111 +1728,6 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "ScrapeGraph AI",
-      "displayName": "ScrapeGraph AI",
-      "description": "AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "ScrapeGraphAI",
-      "repo": "just-scrape",
-      "url": "https://github.com/ScrapeGraphAI/just-scrape",
-      "install_url": "https://raw.githubusercontent.com/ScrapeGraphAI/just-scrape/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "AgentBox",
-      "displayName": "AgentBox",
-      "description": "Run coding agents in parallel, each in its own sandboxed box (local Docker or cloud VMs via Hetzner/Daytona/Vercel/E2B), with sub-1s checkpoint starts, a per-box browser + VS Code, and host-held git credentials.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "madarco",
-      "repo": "agentbox",
-      "url": "https://github.com/madarco/agentbox",
-      "install_url": "https://raw.githubusercontent.com/madarco/agentbox/HEAD/plugins/agentbox/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Skill Routing Kit",
-      "displayName": "Skill Routing Kit",
-      "description": "Local-first Codex routing guard that improves skill and plugin selection with a capability registry, negative examples, and explainable diagnostics.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "juew",
-      "repo": "Skill-Routing-Kit",
-      "url": "https://github.com/juew/Skill-Routing-Kit",
-      "install_url": "https://raw.githubusercontent.com/juew/Skill-Routing-Kit/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Citadel",
-      "displayName": "Citadel",
-      "description": "Agent orchestration layer for OpenAI Codex and Claude Code with durable campaign memory, /do intent routing, lifecycle safety hooks, cost telemetry, and parallel agents in isolated git worktrees.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "SethGammon",
-      "repo": "Citadel",
-      "url": "https://github.com/SethGammon/Citadel",
-      "install_url": "https://raw.githubusercontent.com/SethGammon/Citadel/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "MailAgent",
-      "displayName": "MailAgent",
-      "description": "Temporary inboxes for Codex - OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Alex0nder",
-      "repo": "MailAgent",
-      "url": "https://github.com/Alex0nder/MailAgent",
-      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Vanguard Frontier Agentic",
-      "displayName": "Vanguard Frontier Agentic",
-      "description": "Enterprise-grade agentic workflow marketplace with cloud, zero-trust, compliance, ERP, and platform specialist agents, skills, MCP references, and live-mutation guardrails across Codex and other coding agents.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Raishin",
-      "repo": "vanguard-frontier-agentic",
-      "url": "https://github.com/Raishin/vanguard-frontier-agentic",
-      "install_url": "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/HEAD/plugins/Raishin/vanguard-frontier-agentic/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Generative Media Skills",
-      "displayName": "Generative Media Skills",
-      "description": "13 skills for image, video, and audio generation using 100+ models - FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, and HunyuanVideo via muapi.ai.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "SamurAIGPT",
-      "repo": "Generative-Media-Skills",
-      "url": "https://github.com/SamurAIGPT/Generative-Media-Skills",
-      "install_url": "https://raw.githubusercontent.com/SamurAIGPT/Generative-Media-Skills/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
