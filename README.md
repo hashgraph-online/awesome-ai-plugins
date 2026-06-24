@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  OpenAI <a href="https://openai.com/academy/codex-plugins-and-skills/">documents plugins and skills for Codex</a>, packaging skills, MCP servers, and app integrations into shareable, installable bundles across the Codex app, CLI, and IDE extensions.
+  AI coding agents — <a href="https://openai.com/academy/codex-plugins-and-skills/">Codex</a>, <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a>, <a href="https://cursor.com">Cursor</a>, <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a>, and others — support plugins that package skills, MCP servers, hooks, and app integrations into shareable, installable bundles. This list catalogs the best community-built plugins across all major platforms.
 </p>
 
 <br>
@@ -62,11 +62,11 @@ All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scan
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
 See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
-This repo publishes a Codex repo marketplace at `.agents/plugins/marketplace.json`. The marketplace contains generated plugin metadata and install URLs, so a clone of this repo can act as a curated plugin source in Codex.
+This repo publishes a Codex-compatible marketplace at `.agents/plugins/marketplace.json` with generated plugin metadata and install URLs. The same catalog works with Claude Code, Cursor, Gemini CLI, and any agent that supports the `.codex-plugin/plugin.json` manifest format or the broader [agentskills.io](https://agentskills.io) standard.
 
-### Use this marketplace in Codex
+### Use this marketplace
 
-Install plugins directly from this curated list by pointing Codex at the repo marketplace:
+Install plugins directly from this curated list. The marketplace uses the Codex manifest format, which is compatible with multiple AI coding agents:
 
 **CLI:**
 
@@ -88,7 +88,7 @@ treated like a repo URL and fails with `remote: 404: Not Found`.
 
 **Desktop App / IDE Extension:**
 
-1. Open Codex settings → Plugins → Next to search plugins input click on menu and select → `+Add More...`
+1. Open your agent's plugin settings (e.g. Codex settings) → Plugins → Next to search plugins input click on menu and select → `+Add More...`
    <img width="1462" height="466" alt="image" src="https://github.com/user-attachments/assets/ae15f505-58a8-4199-bb7b-56a07b670b10" />
 
 2. Add this URL:
@@ -106,7 +106,7 @@ Each plugin entry includes an `install_url` for the upstream plugin manifest, so
 ## Official Plugins
 
 <details>
-<summary>Curated by OpenAI — available in the built-in Codex Plugin Directory</summary>
+<summary>Curated by OpenAI — built-in Codex Plugin Directory (other agents have their own)</summary>
 
 - Box - Access and manage files.
 - Cloudflare - Manage Workers, Pages, DNS, and infrastructure.
@@ -125,7 +125,7 @@ Each plugin entry includes an `install_url` for the upstream plugin manifest, so
 
 ## Community Plugins
 
-Third-party plugins built by the community. [PRs welcome](#contributing)!
+Third-party plugins built by the community, compatible with Codex, Claude Code, Cursor, Gemini CLI, and other AI coding agents. [PRs welcome](#contributing)!
 
 ### Development & Workflow
 
@@ -284,10 +284,13 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 
 ### Plugin Anatomy
 
+Most agents use a similar structure. The `.codex-plugin/plugin.json` manifest is the most widely supported format (Codex, Cursor, and others). Claude Code uses `.claude-plugin/` or `CLAUDE.md`-based skills. Many plugins ship both formats.
+
 ```
 my-plugin/
 ├── .codex-plugin/
-│   └── plugin.json          # Required: name, version, description, skills path
+│   └── plugin.json          # Codex/Cursor/agentskills.io manifest
+├── .claude-plugin/          # Optional: Claude Code manifest
 ├── skills/
 │   └── my-skill/
 │       ├── SKILL.md          # Required: skill instructions + metadata
@@ -307,15 +310,15 @@ $plugin-creator
 
 ### Publishing
 
-Currently no self-serve marketplace submission. Plugins are distributed via local marketplaces (`~/.agents/plugins/marketplace.json`), repo marketplaces (`$REPO_ROOT/.agents/plugins/marketplace.json`), or GitHub repos by pointing a marketplace source at a repo. OpenAI has stated third-party marketplace submissions are coming soon.
+Each agent has its own distribution path: Codex uses local marketplaces (`~/.agents/plugins/marketplace.json`) and repo sources, Claude Code loads skills from `.claude/` directories, Cursor supports MCP servers and slash commands, and Gemini CLI reads from its own config. The `.codex-plugin/plugin.json` format is the most widely adopted and works across multiple agents.
 
-For this curated list, the machine-readable source of truth is the generated repo marketplace at `.agents/plugins/marketplace.json`. We keep the README for humans and `plugins.json` as a compatibility export for existing automation.
+For this curated list, the machine-readable source of truth is the generated marketplace at `.agents/plugins/marketplace.json`. We keep the README for humans and `plugins.json` as a compatibility export for existing automation.
 
 ## Validate Before You Ship
 
 After scaffolding with `$plugin-creator`, use [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard) as your quality gate before publishing, review, or distribution.
 
-For skill/plugin authoring workflows, [Codex SkillForge](https://github.com/f0d010c/skillforge) provides an ESLint-style CLI and GitHub Action for scaffolding, linting, smoke-testing, and packaging Codex skills/plugins before publishing.
+For skill/plugin authoring workflows, [Codex SkillForge](https://github.com/f0d010c/skillforge) provides an ESLint-style CLI and GitHub Action for scaffolding, linting, smoke-testing, and packaging skills/plugins before publishing.
 
 ### Local Preflight
 
@@ -345,8 +348,9 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Guides & Articles
 
+- [agentskills.io](https://agentskills.io) - Open standard for cross-agent skills.
 - [Codex Plugins, Visually Explained](https://adithyan.io/blog/codex-plugins-visual-explainer) - Visual walkthrough by @adithyan.
-- [Codex Plugins: Slack, Figma, Google Drive](https://arstechnica.com/ai/2026/03/openai-brings-plugins-to-codex-closing-some-of-the-gap-with-claude-code/) - Ars Technica feature deep dive.
+- [Codex Plugins: Slack, Figma, Google Drive](https://arstechnica.com/ai/2026/03/openai-brings-plugins-to-codex-closing-some-of-the-gap-with-claude-code/) - Ars Technica feature on the Codex plugin ecosystem.
 - [Codex v0.117.0 Plugin Walkthrough](https://reddit.com/r/codex/) - Reddit explainer.
 - [OpenAI's Codex Gets Plugins](https://thenewstack.io/openais-codex-gets-plugins/) - The New Stack ecosystem overview.
 
@@ -354,7 +358,6 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 - [agentskills.io](https://agentskills.io) - Open agent skills standard.
 - [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills#readme) - Cross-agent skill library (Claude, Codex, Cursor, Gemini).
-- [awesome-ai-plugins](https://github.com/hashgraph-online/awesome-ai-plugins) - Umbrella list covering Codex, Claude Code, Gemini CLI, and MCP servers.
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code#readme) - Claude Code resources.
 - [awesome-coding-agents](https://github.com/e2b-dev/awesome-ai-agents#readme) - Curated list of AI coding agents.
 - [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers#readme) - MCP server directory.
