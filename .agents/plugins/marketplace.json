@@ -1610,9 +1610,9 @@
       "install_url": "https://raw.githubusercontent.com/ndycode/oc-chatgpt-multi-auth/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "OpenProject",
-      "displayName": "OpenProject",
-      "description": "Team collaboration via OpenProject integration.",
+      "name": "OpenProject Codex",
+      "displayName": "OpenProject Codex",
+      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1620,9 +1620,9 @@
         "codex"
       ],
       "owner": "varaprasadreddy9676",
-      "repo": "team-codex-plugins",
-      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/team-codex-plugins/HEAD/plugins/openproject/.codex-plugin/plugin.json"
+      "repo": "openproject-codex-plugin",
+      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "OrgX",

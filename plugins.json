@@ -1508,14 +1508,14 @@
       ]
     },
     {
-      "name": "OpenProject",
-      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
+      "name": "OpenProject Codex",
+      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
       "owner": "varaprasadreddy9676",
-      "repo": "team-codex-plugins",
-      "description": "Team collaboration via OpenProject integration.",
+      "repo": "openproject-codex-plugin",
+      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/team-codex-plugins/HEAD/plugins/openproject/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
