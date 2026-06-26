@@ -270,6 +270,7 @@ Third-party plugins built by the community, compatible with Codex, Claude Code, 
 - [Standup Generator](https://github.com/hashgraph-online/awesome-codex-plugins/tree/main/plugins/mturac/standup-gen) - Daily standup notes from git activity across repos.
 - [Stark](https://github.com/f0d010c/stark) - UI/UX design plugin for AI coding agents with product-flow routing, platform-native interface guidance, asset planning, and shipped-reference analysis before code.
 - [tailtest](https://github.com/avansaber/tailtest-codex) - Hook-powered test generation -- detects files changed during an agent turn and instructs Codex to write and run tests automatically. Zero config, 8 languages.
+- [Tamir's Superpowers](https://github.com/Tamircohen28/tamirs-superpowers) - 17 skills, worktree hooks, specialist subagents, and MCP stubs for plan-to-merge workflows across Claude Code, Cursor, and Codex.
 - [Tandem Workflow Architect](https://github.com/frumu-ai/tandem-codex-plugin) - Plan Tandem workflows in Codex, then validate, preview, and run them through the governed Tandem engine.
 - [Tartiner Labs](https://github.com/tartinerlabs/skills) - Agent skills for git workflows, GitHub automation, security audits, code refactoring, and project tooling.
 - [Team Skills Platform](https://github.com/Colin4k1024/tsp) - Role-based team delivery framework — Tech Lead-orchestrated 8-role system with 195+ skills, 27 specialist agents, 80+ commands, hooks, and ECC harness for Claude Code, Codex, and OpenCode.
