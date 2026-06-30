@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-06-30",
-  "total": 133,
+  "total": 134,
   "platforms": [
     "codex"
   ],
@@ -1536,14 +1536,14 @@
       ]
     },
     {
-      "name": "OpenProject Codex",
-      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
+      "name": "OpenProject",
+      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
       "owner": "varaprasadreddy9676",
-      "repo": "openproject-codex-plugin",
-      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.",
+      "repo": "team-codex-plugins",
+      "description": "Team collaboration via OpenProject integration.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/team-codex-plugins/HEAD/plugins/openproject/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1853,6 +1853,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "OpenProject Codex",
+      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
+      "owner": "varaprasadreddy9676",
+      "repo": "openproject-codex-plugin",
+      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
