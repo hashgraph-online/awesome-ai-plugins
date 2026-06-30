@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-28T10:32:26.581443+00:00",
+  "last_updated": "2026-06-30T21:27:48.224379+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -243,6 +243,21 @@
       "repo": "armorCodex",
       "url": "https://github.com/armoriq/armorCodex",
       "install_url": "https://raw.githubusercontent.com/armoriq/armorCodex/HEAD/plugins/armorcodex/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Boss",
+      "displayName": "Boss",
+      "description": "BMAD pipeline plugin that orchestrates a full requirements-to-deploy workflow across nine specialist agents with an auditable runtime DAG and quality gates, for Claude Code, Codex, OpenClaw, and Antigravity.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "echoVic",
+      "repo": "boss-skill",
+      "url": "https://github.com/echoVic/boss-skill",
+      "install_url": "https://raw.githubusercontent.com/echoVic/boss-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Bring Your AI Migration Auditor",
@@ -1008,6 +1023,21 @@
       "repo": "villagesql-skills",
       "url": "https://github.com/villagesql/villagesql-skills",
       "install_url": "https://raw.githubusercontent.com/villagesql/villagesql-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Waggle",
+      "displayName": "Waggle",
+      "description": "Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Abhigyan-Shekhar",
+      "repo": "Waggle-mcp",
+      "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
+      "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Wingman",
@@ -1925,34 +1955,19 @@
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
     },
     {
-      "name": "Boss",
-      "displayName": "Boss",
-      "description": "BMAD pipeline plugin that orchestrates a full requirements-to-deploy workflow across nine specialist agents with an auditable runtime DAG and quality gates, for Claude Code, Codex, OpenClaw, and Antigravity",
+      "name": "Pencil Skill",
+      "displayName": "Pencil Skill",
+      "description": "AI coding skill plugin that teaches agents to design, edit, and validate pencil.dev (.pen) UIs through the Pencil MCP server, for Claude Code, Cursor, Codex, and Gemini CLI",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "echoVic",
-      "repo": "boss-skill",
-      "url": "https://github.com/echoVic/boss-skill",
-      "install_url": "https://raw.githubusercontent.com/echoVic/boss-skill/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Waggle",
-      "displayName": "Waggle",
-      "description": "Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Abhigyan-Shekhar",
-      "repo": "Waggle-mcp",
-      "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
-      "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json"
+      "owner": "Nisus74",
+      "repo": "pencil-skill",
+      "url": "https://github.com/Nisus74/pencil-skill",
+      "install_url": "https://raw.githubusercontent.com/Nisus74/pencil-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
