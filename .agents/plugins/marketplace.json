@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-06-30T21:29:43.585615+00:00",
+  "last_updated": "2026-07-01T01:47:54.907893+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -740,6 +740,36 @@
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Pronounce",
+      "displayName": "Pronounce",
+      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "anzy-renlab-ai",
+      "repo": "pronounce",
+      "url": "https://github.com/anzy-renlab-ai/pronounce",
+      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Reviewable HTML Workbench",
+      "displayName": "Reviewable HTML Workbench",
+      "description": "Generate reviewable HTML documents, serve previews, collect inline review comments, and feed review outcomes back into agent workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "u-ichi",
+      "repo": "reviewable-html-workbench",
+      "url": "https://github.com/u-ichi/reviewable-html-workbench",
+      "install_url": "https://raw.githubusercontent.com/u-ichi/reviewable-html-workbench/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "River Review",
       "displayName": "River Review",
       "description": "Versioned Skill Registry of code-review skills driven by a perspective-based review agent (code, security, performance, architecture, testing, adversarial) that verifies findings against the diff.",
@@ -873,6 +903,21 @@
       "repo": "stark",
       "url": "https://github.com/f0d010c/stark",
       "install_url": "https://raw.githubusercontent.com/f0d010c/stark/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Superloopy",
+      "displayName": "Superloopy",
+      "description": "Evidence-gated Codex loop harness with specialist skills, including near-pixel authorized website cloning backed by screenshots, assets, build output, and visual QA.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "beefiker",
+      "repo": "superloopy",
+      "url": "https://github.com/beefiker/superloopy",
+      "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "tailtest",
@@ -1025,6 +1070,21 @@
       "install_url": "https://raw.githubusercontent.com/villagesql/villagesql-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Wingman",
+      "displayName": "Wingman",
+      "description": "Cross-platform AI coding-agent plugin for repo-local project memory, data-contract checks, and project-map discovery before agents edit code.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "lsshym",
+      "repo": "wingman.ai",
+      "url": "https://github.com/lsshym/wingman.ai",
+      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Waggle",
       "displayName": "Waggle",
       "description": "Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions.",
@@ -1038,21 +1098,6 @@
       "repo": "Waggle-mcp",
       "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
       "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Wingman",
-      "displayName": "Wingman",
-      "description": "Cross-platform AI coding plugin for project memory, data-contract alignment, and project-map discovery across Codex, Claude Code, Cursor, and Gemini.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "lsshym",
-      "repo": "wingman.ai",
-      "url": "https://github.com/lsshym/wingman.ai",
-      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Workflow Kit",
@@ -1655,6 +1700,21 @@
       "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/team-codex-plugins/HEAD/plugins/openproject/.codex-plugin/plugin.json"
     },
     {
+      "name": "Ophis",
+      "displayName": "Ophis",
+      "description": "Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ophis-fi",
+      "repo": "skills",
+      "url": "https://github.com/ophis-fi/skills",
+      "install_url": "https://raw.githubusercontent.com/ophis-fi/skills/HEAD/plugins/ophis/.codex-plugin/plugin.json"
+    },
+    {
       "name": "OrgX",
       "displayName": "OrgX",
       "description": "MCP access and initiative-aware skills for organizational workflows.",
@@ -1953,36 +2013,6 @@
       "repo": "yandex-direct-for-all",
       "url": "https://github.com/nebelov/yandex-direct-for-all",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Superloopy",
-      "displayName": "Superloopy",
-      "description": "Evidence-gated Codex loop harness with specialist skills, including near-pixel authorized website cloning backed by screenshots, assets, build output, and visual QA",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "beefiker",
-      "repo": "superloopy",
-      "url": "https://github.com/beefiker/superloopy",
-      "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Ophis",
-      "displayName": "Ophis",
-      "description": "Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "ophis-fi",
-      "repo": "skills",
-      "url": "https://github.com/ophis-fi/skills",
-      "install_url": "https://raw.githubusercontent.com/ophis-fi/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",

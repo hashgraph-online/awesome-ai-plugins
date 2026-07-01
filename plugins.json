@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-06-30",
-  "total": 133,
+  "last_updated": "2026-07-01",
+  "total": 135,
   "platforms": [
     "codex"
   ],
@@ -696,6 +696,34 @@
       ]
     },
     {
+      "name": "Pronounce",
+      "url": "https://github.com/anzy-renlab-ai/pronounce",
+      "owner": "anzy-renlab-ai",
+      "repo": "pronounce",
+      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Reviewable HTML Workbench",
+      "url": "https://github.com/u-ichi/reviewable-html-workbench",
+      "owner": "u-ichi",
+      "repo": "reviewable-html-workbench",
+      "description": "Generate reviewable HTML documents, serve previews, collect inline review comments, and feed review outcomes back into agent workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/u-ichi/reviewable-html-workbench/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "River Review",
       "url": "https://github.com/s977043/river-review",
       "owner": "s977043",
@@ -816,6 +844,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/f0d010c/stark/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Superloopy",
+      "url": "https://github.com/beefiker/superloopy",
+      "owner": "beefiker",
+      "repo": "superloopy",
+      "description": "Evidence-gated Codex loop harness with specialist skills, including near-pixel authorized website cloning backed by screenshots, assets, build output, and visual QA.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -962,6 +1004,20 @@
       ]
     },
     {
+      "name": "Wingman",
+      "url": "https://github.com/lsshym/wingman.ai",
+      "owner": "lsshym",
+      "repo": "wingman.ai",
+      "description": "Cross-platform AI coding-agent plugin for repo-local project memory, data-contract checks, and project-map discovery before agents edit code.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Waggle",
       "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
       "owner": "Abhigyan-Shekhar",
@@ -970,20 +1026,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Wingman",
-      "url": "https://github.com/lsshym/wingman.ai",
-      "owner": "lsshym",
-      "repo": "wingman.ai",
-      "description": "Cross-platform AI coding plugin for project memory, data-contract alignment, and project-map discovery across Codex, Claude Code, Cursor, and Gemini.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1550,6 +1592,20 @@
       ]
     },
     {
+      "name": "Ophis",
+      "url": "https://github.com/ophis-fi/skills",
+      "owner": "ophis-fi",
+      "repo": "skills",
+      "description": "Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ophis-fi/skills/HEAD/plugins/ophis/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "OrgX",
       "url": "https://github.com/useorgx/orgx-codex-plugin",
       "owner": "useorgx",
@@ -1825,34 +1881,6 @@
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json",
       "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Superloopy",
-      "url": "https://github.com/beefiker/superloopy",
-      "owner": "beefiker",
-      "repo": "superloopy",
-      "description": "Evidence-gated Codex loop harness with specialist skills, including near-pixel authorized website cloning backed by screenshots, assets, build output, and visual QA",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Ophis",
-      "url": "https://github.com/ophis-fi/skills",
-      "owner": "ophis-fi",
-      "repo": "skills",
-      "description": "Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/ophis-fi/skills/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
