@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-01",
-  "total": 139,
+  "last_updated": "2026-07-02",
+  "total": 143,
   "platforms": [
     "codex"
   ],
@@ -690,20 +690,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Pronounce",
-      "url": "https://github.com/anzy-renlab-ai/pronounce",
-      "owner": "anzy-renlab-ai",
-      "repo": "pronounce",
-      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1662,6 +1648,20 @@
       ]
     },
     {
+      "name": "Pronounce",
+      "url": "https://github.com/anzy-renlab-ai/pronounce",
+      "owner": "anzy-renlab-ai",
+      "repo": "pronounce",
+      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "prompt-to-asset",
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "owner": "MohamedAbdallah-14",
@@ -1928,6 +1928,48 @@
       ]
     },
     {
+      "name": "AutoCAD Tianzheng Tools",
+      "url": "https://github.com/summer521521/AutoCAD_Tianzheng_plugin",
+      "owner": "summer521521",
+      "repo": "AutoCAD_Tianzheng_plugin",
+      "description": "Connects Codex to AutoCAD and Tianzheng HVAC through a local MCP server for DWG-aware HVAC drawing inspection and workflow automation",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/summer521521/AutoCAD_Tianzheng_plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "CONTAM Tools",
+      "url": "https://github.com/summer521521/CONTAM_plugin",
+      "owner": "summer521521",
+      "repo": "CONTAM_plugin",
+      "description": "Runs and inspects CONTAM airflow projects through a local MCP server with project guards, diagnostics, simulation helpers, and bridge workflows",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/summer521521/CONTAM_plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "MATLAB Simulink Tools",
+      "url": "https://github.com/summer521521/MATLAB_Simulink_plugin",
+      "owner": "summer521521",
+      "repo": "MATLAB_Simulink_plugin",
+      "description": "Connects Codex to MATLAB and Simulink through a local MCP server for model inspection, script execution, and engineering workflow automation",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/summer521521/MATLAB_Simulink_plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "OpenProject Codex",
       "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
       "owner": "varaprasadreddy9676",
@@ -1951,6 +1993,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Zotero Research Tools",
+      "url": "https://github.com/summer521521/Zotero_Research_plugin",
+      "owner": "summer521521",
+      "repo": "Zotero_Research_plugin",
+      "description": "Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/summer521521/Zotero_Research_plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
