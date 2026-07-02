@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-02T10:38:47.783790+00:00",
+  "last_updated": "2026-07-02T10:44:17.501144+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -243,6 +243,21 @@
       "repo": "armorCodex",
       "url": "https://github.com/armoriq/armorCodex",
       "install_url": "https://raw.githubusercontent.com/armoriq/armorCodex/HEAD/plugins/armorcodex/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "BABOK Analyst",
+      "displayName": "BABOK Analyst",
+      "description": "BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "GSkuza",
+      "repo": "BABOK_ANALYST",
+      "url": "https://github.com/GSkuza/BABOK_ANALYST",
+      "install_url": "https://raw.githubusercontent.com/GSkuza/BABOK_ANALYST/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Boss",
@@ -665,6 +680,21 @@
       "install_url": "https://raw.githubusercontent.com/yimwoo/hotl-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Krypton",
+      "displayName": "Krypton",
+      "description": "Goal-based planning and proof gate for Codex and Claude Code that turns requests into ownership, cutover, review-gate, and acceptance-evidence plans.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jturntdev",
+      "repo": "krypton",
+      "url": "https://github.com/jturntdev/krypton",
+      "install_url": "https://raw.githubusercontent.com/jturntdev/krypton/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "LLM Transpile",
       "displayName": "LLM Transpile",
       "description": "Auto-compress .md, .html, and .txt files via PostToolUse hook, cutting context usage by up to 40% with zero workflow change.",
@@ -738,6 +768,21 @@
       "repo": "codex-project-autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "RAG Reviewer",
+      "displayName": "RAG Reviewer",
+      "description": "Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mimfort",
+      "repo": "rag_for_git",
+      "url": "https://github.com/mimfort/rag_for_git",
+      "install_url": "https://raw.githubusercontent.com/mimfort/rag_for_git/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Reviewable HTML Workbench",
@@ -1220,6 +1265,21 @@
       "install_url": "https://raw.githubusercontent.com/matk0shub/apple-productivity-mcp/HEAD/plugins/apple-calendar/.codex-plugin/plugin.json"
     },
     {
+      "name": "AutoCAD Tianzheng Tools",
+      "displayName": "AutoCAD Tianzheng Tools",
+      "description": "Connects Codex to AutoCAD and Tianzheng HVAC through a local MCP server for DWG-aware HVAC drawing inspection and workflow automation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "summer521521",
+      "repo": "AutoCAD_Tianzheng_plugin",
+      "url": "https://github.com/summer521521/AutoCAD_Tianzheng_plugin",
+      "install_url": "https://raw.githubusercontent.com/summer521521/AutoCAD_Tianzheng_plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "AxonFlow",
       "displayName": "AxonFlow",
       "description": "Runtime governance for Codex with policy enforcement on terminal commands, advisory checks for non-terminal tools via skills, PII/secret detection, and compliance-grade audit trails. Self-hosted via Docker.",
@@ -1383,6 +1443,21 @@
       "repo": "context-pack",
       "url": "https://github.com/Rothschildiuk/context-pack",
       "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "CONTAM Tools",
+      "displayName": "CONTAM Tools",
+      "description": "Runs and inspects CONTAM airflow projects through a local MCP server with project guards, diagnostics, simulation helpers, and bridge workflows.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "summer521521",
+      "repo": "CONTAM_plugin",
+      "url": "https://github.com/summer521521/CONTAM_plugin",
+      "install_url": "https://raw.githubusercontent.com/summer521521/CONTAM_plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Data Product Builder for dbt",
@@ -1610,6 +1685,21 @@
       "install_url": "https://raw.githubusercontent.com/mbanderas/costguard/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "MATLAB Simulink Tools",
+      "displayName": "MATLAB Simulink Tools",
+      "description": "Connects Codex to MATLAB and Simulink through a local MCP server for model inspection, script execution, and engineering workflow automation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "summer521521",
+      "repo": "MATLAB_Simulink_plugin",
+      "url": "https://github.com/summer521521/MATLAB_Simulink_plugin",
+      "install_url": "https://raw.githubusercontent.com/summer521521/MATLAB_Simulink_plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Mobazha",
       "displayName": "Mobazha",
       "description": "Decentralized e-commerce skills \u2014 deploy self-hosted stores, import products from Shopify/Amazon, configure custom domains and Telegram bots, set up Tor privacy, and manage your store via MCP.",
@@ -1670,9 +1760,9 @@
       "install_url": "https://raw.githubusercontent.com/ndycode/oc-chatgpt-multi-auth/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "OpenProject",
-      "displayName": "OpenProject",
-      "description": "Team collaboration via OpenProject integration.",
+      "name": "OpenProject Codex",
+      "displayName": "OpenProject Codex",
+      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1680,9 +1770,9 @@
         "codex"
       ],
       "owner": "varaprasadreddy9676",
-      "repo": "team-codex-plugins",
-      "url": "https://github.com/varaprasadreddy9676/team-codex-plugins",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/team-codex-plugins/HEAD/plugins/openproject/.codex-plugin/plugin.json"
+      "repo": "openproject-codex-plugin",
+      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.agents/plugins/plugins/openproject-codex/.codex-plugin/plugin.json"
     },
     {
       "name": "Ophis",
@@ -2015,54 +2105,9 @@
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json"
     },
     {
-      "name": "BABOK Analyst",
-      "displayName": "BABOK Analyst",
-      "description": "BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "GSkuza",
-      "repo": "BABOK_ANALYST",
-      "url": "https://github.com/GSkuza/BABOK_ANALYST",
-      "install_url": "https://raw.githubusercontent.com/GSkuza/BABOK_ANALYST/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Krypton",
-      "displayName": "Krypton",
-      "description": "Goal-based planning and proof gate for Codex and Claude Code that turns requests into ownership, cutover, review-gate, and acceptance-evidence plans",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "jturntdev",
-      "repo": "krypton",
-      "url": "https://github.com/jturntdev/krypton",
-      "install_url": "https://raw.githubusercontent.com/jturntdev/krypton/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "RAG Reviewer",
-      "displayName": "RAG Reviewer",
-      "description": "Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "mimfort",
-      "repo": "rag_for_git",
-      "url": "https://github.com/mimfort/rag_for_git",
-      "install_url": "https://raw.githubusercontent.com/mimfort/rag_for_git/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "AutoCAD Tianzheng Tools",
-      "displayName": "AutoCAD Tianzheng Tools",
-      "description": "Connects Codex to AutoCAD and Tianzheng HVAC through a local MCP server for DWG-aware HVAC drawing inspection and workflow automation",
+      "name": "Zotero Research Tools",
+      "displayName": "Zotero Research Tools",
+      "description": "Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2070,54 +2115,24 @@
         "codex"
       ],
       "owner": "summer521521",
-      "repo": "AutoCAD_Tianzheng_plugin",
-      "url": "https://github.com/summer521521/AutoCAD_Tianzheng_plugin",
-      "install_url": "https://raw.githubusercontent.com/summer521521/AutoCAD_Tianzheng_plugin/HEAD/.codex-plugin/plugin.json"
+      "repo": "Zotero_Research_plugin",
+      "url": "https://github.com/summer521521/Zotero_Research_plugin",
+      "install_url": "https://raw.githubusercontent.com/summer521521/Zotero_Research_plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "CONTAM Tools",
-      "displayName": "CONTAM Tools",
-      "description": "Runs and inspects CONTAM airflow projects through a local MCP server with project guards, diagnostics, simulation helpers, and bridge workflows",
+      "name": "Chuzom",
+      "displayName": "Chuzom",
+      "description": "Routes every Codex/Claude task to the cheapest capable model across 20+ providers (Gemini Flash, Haiku, Ollama, Perplexity), tracking cross-session savings and enforcing routing policy",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "summer521521",
-      "repo": "CONTAM_plugin",
-      "url": "https://github.com/summer521521/CONTAM_plugin",
-      "install_url": "https://raw.githubusercontent.com/summer521521/CONTAM_plugin/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "MATLAB Simulink Tools",
-      "displayName": "MATLAB Simulink Tools",
-      "description": "Connects Codex to MATLAB and Simulink through a local MCP server for model inspection, script execution, and engineering workflow automation",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "summer521521",
-      "repo": "MATLAB_Simulink_plugin",
-      "url": "https://github.com/summer521521/MATLAB_Simulink_plugin",
-      "install_url": "https://raw.githubusercontent.com/summer521521/MATLAB_Simulink_plugin/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "OpenProject Codex",
-      "displayName": "OpenProject Codex",
-      "description": "OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "varaprasadreddy9676",
-      "repo": "openproject-codex-plugin",
-      "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json"
+      "owner": "Chuzom",
+      "repo": "Chuzom",
+      "url": "https://github.com/Chuzom/Chuzom",
+      "install_url": "https://raw.githubusercontent.com/Chuzom/Chuzom/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
@@ -2133,21 +2148,6 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Zotero Research Tools",
-      "displayName": "Zotero Research Tools",
-      "description": "Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "summer521521",
-      "repo": "Zotero_Research_plugin",
-      "url": "https://github.com/summer521521/Zotero_Research_plugin",
-      "install_url": "https://raw.githubusercontent.com/summer521521/Zotero_Research_plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
