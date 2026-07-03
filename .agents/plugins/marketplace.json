@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-03T13:06:14.733690+00:00",
+  "last_updated": "2026-07-03T13:26:18.311568+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2133,6 +2133,21 @@
       "repo": "Zotero_Research_plugin",
       "url": "https://github.com/summer521521/Zotero_Research_plugin",
       "install_url": "https://raw.githubusercontent.com/summer521521/Zotero_Research_plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "HOL Guard",
+      "displayName": "HOL Guard",
+      "description": "Security plugin for protecting Grok Build with HOL Guard: harness protection, approval broker, and plugin scanner integration.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "hashgraph-online",
+      "repo": "hol-guard-grok-plugin",
+      "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
       "name": "AgentGuards",

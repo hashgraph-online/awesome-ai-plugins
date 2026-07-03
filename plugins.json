@@ -3,9 +3,10 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-03",
-  "total": 145,
+  "total": 146,
   "platforms": [
-    "codex"
+    "codex",
+    "grok"
   ],
   "plugins": [
     {
@@ -1995,6 +1996,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "HOL Guard",
+      "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
+      "owner": "hashgraph-online",
+      "repo": "hol-guard-grok-plugin",
+      "description": "Security plugin for protecting Grok Build with HOL Guard: harness protection, approval broker, and plugin scanner integration.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
       ]
     },
     {
