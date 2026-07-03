@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-03",
   "total": 145,
   "platforms": [
     "codex"
