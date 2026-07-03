@@ -22,6 +22,7 @@ README = Path(__file__).parent.parent / "README.md"
 OUTPUT = Path(__file__).parent.parent / "plugins.json"
 MARKETPLACE_OUTPUT = Path(__file__).parent.parent / ".agents" / "plugins" / "marketplace.json"
 CODEX_PLUGINS_JSON_URL = "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/main/plugins.json"
+GROK_PLUGINS_JSON_URL = "https://raw.githubusercontent.com/hashgraph-online/awesome-grok-plugins/main/plugins.json"
 PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 
 # Candidate manifest paths inside a plugin repo, in priority order. The first
@@ -94,7 +95,13 @@ def normalize_plugin(plugin: dict) -> dict:
     """Normalize upstream records for the multi-ecosystem registry feed."""
     entry = dict(plugin)
     entry["source"] = "awesome-ai-plugins"
-    entry.setdefault("platform", "codex")
+
+    # Determine platform from upstream source field or fall back to codex
+    upstream_source = str(plugin.get("source", "")).strip()
+    if upstream_source == "awesome-grok-plugins":
+        entry.setdefault("platform", "grok")
+    else:
+        entry.setdefault("platform", "codex")
 
     ecosystems = entry.get("ecosystems")
     if not isinstance(ecosystems, list) or not ecosystems:
@@ -112,6 +119,32 @@ def load_codex_plugins() -> list[dict]:
         if response.status != 200:
             raise RuntimeError(f"Upstream returned {response.status}")
         payload = json.loads(response.read().decode("utf-8"))
+
+    if not isinstance(payload, dict):
+        return []
+
+    plugins = payload.get("plugins", [])
+    if not isinstance(plugins, list):
+        return []
+
+    normalized = [
+        normalize_plugin(plugin)
+        for plugin in plugins
+        if isinstance(plugin, dict)
+    ]
+
+    return sort_plugins(normalized)
+
+
+def load_grok_plugins() -> list[dict]:
+    """Load the current Grok plugin catalog."""
+    try:
+        with urllib.request.urlopen(GROK_PLUGINS_JSON_URL, timeout=30) as response:
+            if response.status != 200:
+                return []
+            payload = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return []
 
     if not isinstance(payload, dict):
         return []
@@ -306,6 +339,30 @@ def main():
         print(f"Upstream feed unavailable, falling back to README: {exc}")
         plugins = parse_plugins(README)
     print(f"Found {len(plugins)} plugins from upstream catalog")
+
+    # Merge Grok plugins from awesome-grok-plugins upstream
+    grok_plugins = load_grok_plugins()
+    if grok_plugins:
+        print(f"Found {len(grok_plugins)} plugins from grok upstream catalog")
+        # Deduplicate by owner/repo: grok plugins that also exist in codex
+        # are tagged with both ecosystems rather than duplicated
+        existing_keys = {normalize_repo_key(p) for p in plugins}
+        for gp in grok_plugins:
+            key = normalize_repo_key(gp)
+            if key and key in existing_keys:
+                # Plugin exists in both ecosystems: add grok to ecosystems
+                for existing in plugins:
+                    if normalize_repo_key(existing) == key:
+                        ecos = existing.get("ecosystems", [])
+                        if "grok" not in ecos:
+                            ecos.append("grok")
+                            existing["ecosystems"] = ecos
+                        break
+            else:
+                plugins.append(gp)
+        print(f"Total after grok merge: {len(plugins)}")
+    else:
+        print("No grok plugins found upstream (repo may be empty or unavailable)")
 
     plugins, added = merge_readme_additions(plugins, README)
     if added:
