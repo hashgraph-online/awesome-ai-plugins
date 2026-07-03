@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-03",
-  "total": 146,
+  "total": 147,
   "platforms": [
     "codex",
     "grok"
@@ -2010,6 +2010,20 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "falsegreen-skill",
+      "url": "https://github.com/vinicq/falsegreen-skill",
+      "owner": "vinicq",
+      "repo": "falsegreen-skill",
+      "description": "Detects false-positive tests that pass even when the code breaks, using the J1-J6 judgment framework across Python, TypeScript, JavaScript, and Robot Framework",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/vinicq/falsegreen-skill/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {

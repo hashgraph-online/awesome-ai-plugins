@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-03T13:26:18.311568+00:00",
+  "last_updated": "2026-07-03T16:27:14.135331+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2148,6 +2148,21 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "falsegreen-skill",
+      "displayName": "falsegreen-skill",
+      "description": "Detects false-positive tests that pass even when the code breaks, using the J1-J6 judgment framework across Python, TypeScript, JavaScript, and Robot Framework",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "vinicq",
+      "repo": "falsegreen-skill",
+      "url": "https://github.com/vinicq/falsegreen-skill",
+      "install_url": "https://raw.githubusercontent.com/vinicq/falsegreen-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "AgentGuards",
