@@ -1159,6 +1159,20 @@
       ]
     },
     {
+      "name": "AgentGuards",
+      "url": "https://github.com/alelaguard/agentguards-plugins",
+      "owner": "alelaguard",
+      "repo": "agentguards-plugins",
+      "description": "LLM security guardrails for Codex with enforcing hooks and MCP tools: jailbreak and prompt-injection detection, web-content scanning, data-exfiltration blocking, and destructive-command authorization.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/alelaguard/agentguards-plugins/HEAD/codex/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Aient",
       "url": "https://github.com/aient-ai/aient-codex-plugin",
       "owner": "aient-ai",
@@ -1265,6 +1279,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Ratnam-Mishra/canvas-apps-plugin-codex/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "CarsXE",
+      "url": "https://github.com/carsxe/carsxe-codex-plugin",
+      "owner": "carsxe",
+      "repo": "carsxe-codex-plugin",
+      "description": "Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/carsxe/carsxe-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2010,34 +2038,6 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
-      ]
-    },
-    {
-      "name": "AgentGuards",
-      "url": "https://github.com/alelaguard/agentguards-plugins",
-      "owner": "alelaguard",
-      "repo": "agentguards-plugins",
-      "description": "LLM security guardrails for Codex with enforcing hooks and MCP tools: jailbreak and prompt-injection detection, web-content scanning, data-exfiltration blocking, and destructive-command authorization",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/alelaguard/agentguards-plugins/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "CarsXE",
-      "url": "https://github.com/carsxe/carsxe-codex-plugin",
-      "owner": "carsxe",
-      "repo": "carsxe-codex-plugin",
-      "description": "Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/carsxe/carsxe-codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
