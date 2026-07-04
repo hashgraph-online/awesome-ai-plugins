@@ -34,7 +34,10 @@
 - [Plugin Development](#plugin-development)
 - [Guides & Articles](#guides--articles)
 - [Related Projects](#related-projects)
-
+- [Claim Your Plugin](#claim-your-plugin)
+- [Plugin Trust Scores](#plugin-trust-scores)
+- [Plugin Quality](#plugin-quality)
+- [Contributing](#contributing)
 ---
 
 ## Start Here
@@ -178,7 +181,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Env Lint](./plugins/mturac/env-lint) - `.env` vs `.env.example` key parity — never prints values.
 - [Epic Harness](https://github.com/epicsagas/epic-harness) - Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.
 - [Espresso](https://github.com/mirkobozzetto/espresso) - Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.
-- [falsegreen-skill](https://github.com/vinicq/falsegreen-skill) - Detects false-positive tests that pass even when the code breaks, using the J1-J6 judgment framework across Python, TypeScript, JavaScript, and Robot Framework.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
 - [Frappe Agent](https://github.com/Dkm0315/frappe-agent) - Frappe and ERPNext coding, customization, bench, and review intelligence for Codex.
 - [GCF Proxy](https://github.com/blackwell-systems/gcf-codex-plugin) - Save 71% on MCP tool call tokens by wrapping any server with GCF encoding, with session stats hook and setup skill.
@@ -384,6 +386,21 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [EchoCoding](https://github.com/launsion-boop/EchoCoding) - Voice-enabled audio layer for coding agents with ambient soundscapes, event-driven SFX, and optional cloud TTS/ASR interaction.
 - [Emdash Skills](https://github.com/megabytespace/claude-skills) - 14-category autonomous product-building OS for AI coding tools with 94 reference docs, 18 agents, and cross-tool support (Claude Code, Codex, Cursor, Copilot, 30+ more).
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
+
+## Claim Your Plugin
+
+Verify ownership of your plugin on the [HOL Plugin Registry](https://hol.org/registry/plugins) to display a verified badge on your listing.
+
+### How to claim
+
+1. Go to [hol.org/guard/plugins](https://hol.org/guard/plugins) and sign in with GitHub
+2. Find your plugin in the list and click **Verify Ownership**
+3. Authorize the read-only GitHub connection (view your profile, email, and public org membership — no write access)
+4. Once verified, your plugin listing will display a **Verified** badge
+
+That's it. The verification confirms you are the repository owner or an organization admin. Plugins owned by organizations may require additional review.
+
+> **Note:** You only need to verify once per plugin. If your verification needs to be reset, contact support at `support@hol.org`.
 
 ## Plugin Trust Scores
 
