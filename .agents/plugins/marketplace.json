@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-04T16:08:30.047747+00:00",
+  "last_updated": "2026-07-04T18:06:58.865005+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2223,6 +2223,21 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Vibe Browser",
+      "displayName": "Vibe Browser",
+      "description": "Drive your real, already-logged-in Chrome from Codex through the Vibe extension and relay with navigate, accessibility snapshot, click, type, and screenshot tools",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "VibeTechnologies",
+      "repo": "vibe-browser-codex-plugin",
+      "url": "https://github.com/VibeTechnologies/vibe-browser-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/VibeTechnologies/vibe-browser-codex-plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }

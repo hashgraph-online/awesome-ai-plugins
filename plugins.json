@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-04",
-  "total": 148,
+  "total": 149,
   "platforms": [
     "codex",
     "grok"
@@ -2078,6 +2078,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Vibe Browser",
+      "url": "https://github.com/VibeTechnologies/vibe-browser-codex-plugin",
+      "owner": "VibeTechnologies",
+      "repo": "vibe-browser-codex-plugin",
+      "description": "Drive your real, already-logged-in Chrome from Codex through the Vibe extension and relay with navigate, accessibility snapshot, click, type, and screenshot tools",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/VibeTechnologies/vibe-browser-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
