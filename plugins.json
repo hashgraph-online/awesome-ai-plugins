@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-04",
-  "total": 148,
+  "total": 149,
   "platforms": [
     "codex",
     "grok"
@@ -159,6 +159,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AgiFlow/ai-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AIBoarding",
+      "url": "https://github.com/gustavo-meilus/aiboarding",
+      "owner": "gustavo-meilus",
+      "repo": "aiboarding",
+      "description": "Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/aiboarding/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2055,15 +2069,15 @@
       ]
     },
     {
-      "name": "AIBoarding",
-      "url": "https://github.com/gustavo-meilus/aiboarding",
-      "owner": "gustavo-meilus",
-      "repo": "aiboarding",
-      "description": "Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks",
+      "name": "Maestro",
+      "url": "https://github.com/mbanderas/maestro",
+      "owner": "mbanderas",
+      "repo": "maestro",
+      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/aiboarding/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

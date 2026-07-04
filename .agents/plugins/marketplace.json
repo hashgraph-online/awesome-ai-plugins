@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-04T21:19:28.306699+00:00",
+  "last_updated": "2026-07-04T21:40:14.867191+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -168,6 +168,21 @@
       "repo": "ai-plugin",
       "url": "https://github.com/AgiFlow/ai-plugin",
       "install_url": "https://raw.githubusercontent.com/AgiFlow/ai-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AIBoarding",
+      "displayName": "AIBoarding",
+      "description": "Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "gustavo-meilus",
+      "repo": "aiboarding",
+      "url": "https://github.com/gustavo-meilus/aiboarding",
+      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/aiboarding/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Alcove",
@@ -2195,19 +2210,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "AIBoarding",
-      "displayName": "AIBoarding",
-      "description": "Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks",
+      "name": "Maestro",
+      "displayName": "Maestro",
+      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "gustavo-meilus",
-      "repo": "aiboarding",
-      "url": "https://github.com/gustavo-meilus/aiboarding",
-      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/aiboarding/HEAD/.codex-plugin/plugin.json"
+      "owner": "mbanderas",
+      "repo": "maestro",
+      "url": "https://github.com/mbanderas/maestro",
+      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
