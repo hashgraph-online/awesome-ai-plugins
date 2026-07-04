@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-04T12:02:47.503053+00:00",
+  "last_updated": "2026-07-04T14:37:54.824493+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -245,21 +245,6 @@
       "install_url": "https://raw.githubusercontent.com/armoriq/armorCodex/HEAD/plugins/armorcodex/.codex-plugin/plugin.json"
     },
     {
-      "name": "BGS Modding Superpowers",
-      "displayName": "BGS Modding Superpowers",
-      "description": "Agentic Bethesda Game Studio modpack curation toolkit with MCP-driven xEdit conflict audit, MO2 control plane, BA2/BSA and Papyrus tooling, and skills for setup, dev-log, and release-changelog workflows.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "BB-84C",
-      "repo": "bgs-modding-superpowers",
-      "url": "https://github.com/BB-84C/bgs-modding-superpowers",
-      "install_url": "https://raw.githubusercontent.com/BB-84C/bgs-modding-superpowers/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "BABOK Analyst",
       "displayName": "BABOK Analyst",
       "description": "BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates.",
@@ -273,6 +258,21 @@
       "repo": "BABOK_ANALYST",
       "url": "https://github.com/GSkuza/BABOK_ANALYST",
       "install_url": "https://raw.githubusercontent.com/GSkuza/BABOK_ANALYST/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "BGS Modding Superpowers",
+      "displayName": "BGS Modding Superpowers",
+      "description": "Agentic Bethesda Game Studio modpack curation toolkit with MCP-driven xEdit conflict audit, MO2 control plane, BA2/BSA and Papyrus tooling, and skills for setup, dev-log, and release-changelog workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "BB-84C",
+      "repo": "bgs-modding-superpowers",
+      "url": "https://github.com/BB-84C/bgs-modding-superpowers",
+      "install_url": "https://raw.githubusercontent.com/BB-84C/bgs-modding-superpowers/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Boss",
@@ -1115,21 +1115,6 @@
       "install_url": "https://raw.githubusercontent.com/villagesql/villagesql-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Wingman",
-      "displayName": "Wingman",
-      "description": "Cross-platform AI coding-agent plugin for repo-local project memory, data-contract checks, and project-map discovery before agents edit code.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "lsshym",
-      "repo": "wingman.ai",
-      "url": "https://github.com/lsshym/wingman.ai",
-      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "Waggle",
       "displayName": "Waggle",
       "description": "Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions.",
@@ -1143,6 +1128,21 @@
       "repo": "Waggle-mcp",
       "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
       "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Wingman",
+      "displayName": "Wingman",
+      "description": "Cross-platform AI coding-agent plugin for repo-local project memory, data-contract checks, and project-map discovery before agents edit code.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "lsshym",
+      "repo": "wingman.ai",
+      "url": "https://github.com/lsshym/wingman.ai",
+      "install_url": "https://raw.githubusercontent.com/lsshym/wingman.ai/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Workflow Kit",
@@ -1475,21 +1475,6 @@
       "install_url": "https://raw.githubusercontent.com/douglasmonsky/codex-usage-tracker/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Context Pack",
-      "displayName": "Context Pack",
-      "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Rothschildiuk",
-      "repo": "context-pack",
-      "url": "https://github.com/Rothschildiuk/context-pack",
-      "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "CONTAM Tools",
       "displayName": "CONTAM Tools",
       "description": "Runs and inspects CONTAM airflow projects through a local MCP server with project guards, diagnostics, simulation helpers, and bridge workflows.",
@@ -1503,6 +1488,21 @@
       "repo": "CONTAM_plugin",
       "url": "https://github.com/summer521521/CONTAM_plugin",
       "install_url": "https://raw.githubusercontent.com/summer521521/CONTAM_plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Context Pack",
+      "displayName": "Context Pack",
+      "description": "Generate compact first-pass repository briefings for coding agents before deeper exploration.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Rothschildiuk",
+      "repo": "context-pack",
+      "url": "https://github.com/Rothschildiuk/context-pack",
+      "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Data Product Builder for dbt",
@@ -1895,21 +1895,6 @@
       "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Pronounce",
-      "displayName": "Pronounce",
-      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "anzy-renlab-ai",
-      "repo": "pronounce",
-      "url": "https://github.com/anzy-renlab-ai/pronounce",
-      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "prompt-to-asset",
       "displayName": "prompt-to-asset",
       "description": "Route image-generation prompts to 30+ models (DALL-E, Stable Diffusion, Flux, Midjourney, and more) through a single MCP interface. Install: `npm install -g prompt-to-asset`.",
@@ -1923,6 +1908,21 @@
       "repo": "prompt-to-asset",
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "install_url": "https://raw.githubusercontent.com/MohamedAbdallah-14/prompt-to-asset/HEAD/plugins/prompt-to-asset/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Pronounce",
+      "displayName": "Pronounce",
+      "description": "Pronounce developer jargon out loud: an MCP server (lookup/search) and skill backed by a 1,721-entry sourced dictionary with IPA, audio, and cited pronunciations for kubectl, nginx, YAML, JWT, and more.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "anzy-renlab-ai",
+      "repo": "pronounce",
+      "url": "https://github.com/anzy-renlab-ai/pronounce",
+      "install_url": "https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Remotion Plugin",
