@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-04",
-  "total": 149,
+  "total": 150,
   "platforms": [
     "codex",
     "grok"
@@ -2078,6 +2078,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Superpipelines",
+      "url": "https://github.com/gustavo-meilus/superpipelines",
+      "owner": "gustavo-meilus",
+      "repo": "superpipelines",
+      "description": "Design and run write/review-isolated multi-agent AI pipelines across Codex, Claude Code, OpenCode, Cursor, Windsurf, and Cline",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/superpipelines/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
