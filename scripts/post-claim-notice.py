@@ -86,7 +86,7 @@ MARKER = "<!-- hol-claim-notice -->"
 
 def api_request(url, headers=None, method="GET", data=None):
     """Make an HTTP request and return parsed JSON."""
-    req_headers = {"Accept": "application/json"}
+    req_headers = {"Accept": "application/json", "User-Agent": "hol-claim-notice/1.0"}
     if headers:
         req_headers.update(headers)
     if data is not None:
@@ -189,7 +189,7 @@ def parse_pr_diff_for_repos():
 
 
 def has_existing_claim_comment():
-    """Check if the PR already has a claim-notice comment."""
+    """Check if the PR already has a claim-notice or manual claim comment."""
     url = f"https://api.github.com/repos/{REPO_FULL}/issues/{PR_NUMBER}/comments"
     headers = {"Authorization": f"token {GH_TOKEN}"}
     comments = api_request(url, headers=headers)
@@ -198,6 +198,9 @@ def has_existing_claim_comment():
     for comment in comments:
         body = comment.get("body") or ""
         if MARKER in body:
+            return True
+        # Also detect manual claim comments posted before automation
+        if "Claim your plugin" in body and "hol.org/guard/plugins" in body:
             return True
     return False
 
