@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-04T15:24:46.819573+00:00",
+  "last_updated": "2026-07-04T16:08:30.047747+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2178,6 +2178,36 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "Mantis",
+      "displayName": "Mantis",
+      "description": "Autonomous bug bounty hunter for authorized engagements \u2014 7-phase FSM (RECON \u2192 AUTH \u2192 HUNT \u2192 CHAIN \u2192 VERIFY \u2192 GRADE \u2192 REPORT), parallel hunter sub-agents, cryptographic scope enforcement, and BLAKE3/Ed25519 Merkle event logs",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hashgraph-online",
+      "repo": "awesome-codex-plugins",
+      "url": "https://github.com/hashgraph-online/awesome-codex-plugins/tree/main/plugins/deonmenezes/mantishack",
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/awesome-codex-plugins/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Miller",
+      "displayName": "Miller",
+      "description": "Code answers, not code dumps \u2014 pinpoint symbol search, call graphs, and impact analysis for token-conscious AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "anortham",
+      "repo": "miller",
+      "url": "https://github.com/anortham/miller",
+      "install_url": "https://raw.githubusercontent.com/anortham/miller/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
