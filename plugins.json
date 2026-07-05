@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-04",
-  "total": 150,
+  "last_updated": "2026-07-05",
+  "total": 151,
   "platforms": [
     "codex",
     "grok"
@@ -711,6 +711,20 @@
       ]
     },
     {
+      "name": "Maestro",
+      "url": "https://github.com/mbanderas/maestro",
+      "owner": "mbanderas",
+      "repo": "maestro",
+      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Personal Data Protection",
       "url": "https://github.com/AltByteSG/personal-data-protection-skill",
       "owner": "AltByteSG",
@@ -929,6 +943,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Superpipelines",
+      "url": "https://github.com/gustavo-meilus/superpipelines",
+      "owner": "gustavo-meilus",
+      "repo": "superpipelines",
+      "description": "Design and run write/review-isolated multi-agent AI pipelines across Codex, Claude Code, OpenCode, Cursor, Windsurf, and Cline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/superpipelines/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2069,29 +2097,15 @@
       ]
     },
     {
-      "name": "Maestro",
-      "url": "https://github.com/mbanderas/maestro",
-      "owner": "mbanderas",
-      "repo": "maestro",
-      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer",
-      "category": "Development & Workflow",
+      "name": "plori",
+      "url": "https://github.com/plori-ai/codex-plugin",
+      "owner": "plori-ai",
+      "repo": "codex-plugin",
+      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery",
+      "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Superpipelines",
-      "url": "https://github.com/gustavo-meilus/superpipelines",
-      "owner": "gustavo-meilus",
-      "repo": "superpipelines",
-      "description": "Design and run write/review-isolated multi-agent AI pipelines across Codex, Claude Code, OpenCode, Cursor, Windsurf, and Cline",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/superpipelines/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

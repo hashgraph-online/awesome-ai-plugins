@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-04T21:40:34.120188+00:00",
+  "last_updated": "2026-07-05T21:17:10.869443+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -755,6 +755,21 @@
       "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Maestro",
+      "displayName": "Maestro",
+      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mbanderas",
+      "repo": "maestro",
+      "url": "https://github.com/mbanderas/maestro",
+      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Personal Data Protection",
       "displayName": "Personal Data Protection",
       "description": "Engineer-facing personal-data-protection compliance reference \u2014 Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA \u2014 organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.",
@@ -993,6 +1008,21 @@
       "repo": "superloopy",
       "url": "https://github.com/beefiker/superloopy",
       "install_url": "https://raw.githubusercontent.com/beefiker/superloopy/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Superpipelines",
+      "displayName": "Superpipelines",
+      "description": "Design and run write/review-isolated multi-agent AI pipelines across Codex, Claude Code, OpenCode, Cursor, Windsurf, and Cline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "gustavo-meilus",
+      "repo": "superpipelines",
+      "url": "https://github.com/gustavo-meilus/superpipelines",
+      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/superpipelines/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "tailtest",
@@ -2210,34 +2240,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Maestro",
-      "displayName": "Maestro",
-      "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer",
-      "category": "Development & Workflow",
+      "name": "plori",
+      "displayName": "plori",
+      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery",
+      "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "mbanderas",
-      "repo": "maestro",
-      "url": "https://github.com/mbanderas/maestro",
-      "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Superpipelines",
-      "displayName": "Superpipelines",
-      "description": "Design and run write/review-isolated multi-agent AI pipelines across Codex, Claude Code, OpenCode, Cursor, Windsurf, and Cline",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "gustavo-meilus",
-      "repo": "superpipelines",
-      "url": "https://github.com/gustavo-meilus/superpipelines",
-      "install_url": "https://raw.githubusercontent.com/gustavo-meilus/superpipelines/HEAD/.codex-plugin/plugin.json"
+      "owner": "plori-ai",
+      "repo": "codex-plugin",
+      "url": "https://github.com/plori-ai/codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
