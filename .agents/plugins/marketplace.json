@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-06T12:59:16.850173+00:00",
+  "last_updated": "2026-07-06T14:41:54.128900+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1715,9 +1715,9 @@
       "install_url": "https://raw.githubusercontent.com/aklofas/kicad-happy/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Kreuzberg",
-      "displayName": "Kreuzberg",
-      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
+      "name": "Kreuzberg Cloud",
+      "displayName": "Kreuzberg Cloud",
+      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1730,9 +1730,9 @@
       "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json"
     },
     {
-      "name": "Kreuzberg Cloud",
-      "displayName": "Kreuzberg Cloud",
-      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
+      "name": "Kreuzberg",
+      "displayName": "Kreuzberg",
+      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2107,7 +2107,7 @@
     {
       "name": "Taisly Agent Kit",
       "displayName": "Taisly Agent Kit",
-      "description": "Publish short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook from Codex through Taisly.",
+      "description": "Publish short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook from Codex with the Taisly MCP server and bundled social media posting skill.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2298,6 +2298,21 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "WakeWire",
+      "displayName": "WakeWire",
+      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "glenncalleja",
+      "repo": "wakewire",
+      "url": "https://github.com/glenncalleja/wakewire",
+      "install_url": "https://raw.githubusercontent.com/glenncalleja/wakewire/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
