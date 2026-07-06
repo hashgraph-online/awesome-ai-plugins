@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-05",
-  "total": 152,
+  "last_updated": "2026-07-06",
+  "total": 153,
   "platforms": [
     "codex",
     "grok"
@@ -1481,6 +1481,20 @@
       ]
     },
     {
+      "name": "Digital Marketing Pro",
+      "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
+      "owner": "indranilbanerjee",
+      "repo": "digital-marketing-pro",
+      "description": "Open-source AI marketing plugin for agencies \u2014 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Dodo Payments",
       "url": "https://github.com/dodopayments/dodo-agent-plugin",
       "owner": "dodopayments",
@@ -1831,6 +1845,20 @@
       ]
     },
     {
+      "name": "plori",
+      "url": "https://github.com/plori-ai/codex-plugin",
+      "owner": "plori-ai",
+      "repo": "codex-plugin",
+      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "prompt-to-asset",
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "owner": "MohamedAbdallah-14",
@@ -1937,6 +1965,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Synta-ai/n8n-mcp-codex-plugin-synta/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Taisly Agent Kit",
+      "url": "https://github.com/taisly/agent",
+      "owner": "taisly",
+      "repo": "agent",
+      "description": "Publish short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook from Codex through Taisly.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/taisly/agent/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2094,34 +2136,6 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
-      ]
-    },
-    {
-      "name": "Digital Marketing Pro",
-      "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
-      "owner": "indranilbanerjee",
-      "repo": "digital-marketing-pro",
-      "description": "Open-source AI marketing plugin for agencies \u2014 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "plori",
-      "url": "https://github.com/plori-ai/codex-plugin",
-      "owner": "plori-ai",
-      "repo": "codex-plugin",
-      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
       ]
     },
     {

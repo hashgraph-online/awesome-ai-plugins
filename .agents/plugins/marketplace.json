@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-05T21:18:09.056223+00:00",
+  "last_updated": "2026-07-06T12:59:16.850173+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1580,6 +1580,21 @@
       "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Digital Marketing Pro",
+      "displayName": "Digital Marketing Pro",
+      "description": "Open-source AI marketing plugin for agencies \u2014 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "indranilbanerjee",
+      "repo": "digital-marketing-pro",
+      "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
+      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Dodo Payments",
       "displayName": "Dodo Payments",
       "description": "Payments integration for checkouts, subscriptions, and billing with live API and documentation MCP servers with browser OAuth.",
@@ -1955,6 +1970,21 @@
       "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "plori",
+      "displayName": "plori",
+      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "plori-ai",
+      "repo": "codex-plugin",
+      "url": "https://github.com/plori-ai/codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "prompt-to-asset",
       "displayName": "prompt-to-asset",
       "description": "Route image-generation prompts to 30+ models (DALL-E, Stable Diffusion, Flux, Midjourney, and more) through a single MCP interface. Install: `npm install -g prompt-to-asset`.",
@@ -2073,6 +2103,21 @@
       "repo": "n8n-mcp-codex-plugin-synta",
       "url": "https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta",
       "install_url": "https://raw.githubusercontent.com/Synta-ai/n8n-mcp-codex-plugin-synta/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Taisly Agent Kit",
+      "displayName": "Taisly Agent Kit",
+      "description": "Publish short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook from Codex through Taisly.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "taisly",
+      "repo": "agent",
+      "url": "https://github.com/taisly/agent",
+      "install_url": "https://raw.githubusercontent.com/taisly/agent/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Task Scheduler",
@@ -2238,36 +2283,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "Digital Marketing Pro",
-      "displayName": "Digital Marketing Pro",
-      "description": "Open-source AI marketing plugin for agencies \u2014 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "indranilbanerjee",
-      "repo": "digital-marketing-pro",
-      "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
-      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "plori",
-      "displayName": "plori",
-      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "plori-ai",
-      "repo": "codex-plugin",
-      "url": "https://github.com/plori-ai/codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
