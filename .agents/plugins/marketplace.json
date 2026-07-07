@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-06T14:41:54.128900+00:00",
+  "last_updated": "2026-07-07T13:01:27.673713+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2225,6 +2225,21 @@
       "install_url": "https://raw.githubusercontent.com/CarrotGamesStudios/vidseeds-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "WakeWire",
+      "displayName": "WakeWire",
+      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "glenncalleja",
+      "repo": "wakewire",
+      "url": "https://github.com/glenncalleja/wakewire",
+      "install_url": "https://raw.githubusercontent.com/glenncalleja/wakewire/HEAD/plugin/.codex-plugin/plugin.json"
+    },
+    {
       "name": "X Twitter Scraper",
       "displayName": "X Twitter Scraper",
       "description": "X/Twitter data, monitored workflows, HMAC webhooks, and MCP access through the Xquik REST API with confirmation-gated write guidance.",
@@ -2285,6 +2300,21 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
+      "name": "LinkedIn Skills",
+      "displayName": "LinkedIn Skills",
+      "description": "Codex-ready LinkedIn marketing bundle with a native .codex-plugin manifest and 10 skills: post writing with 16 tested hook formulas, AI-tell humanizer, pre-publish audit, comment and reply drafting, hook extraction, content planning, profile optimization, engager analytics, and thread monitoring; also works in Claude Code",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "linkedin-skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "sitemd",
       "displayName": "sitemd",
       "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
@@ -2298,21 +2328,6 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "WakeWire",
-      "displayName": "WakeWire",
-      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "glenncalleja",
-      "repo": "wakewire",
-      "url": "https://github.com/glenncalleja/wakewire",
-      "install_url": "https://raw.githubusercontent.com/glenncalleja/wakewire/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-06",
-  "total": 154,
+  "last_updated": "2026-07-07",
+  "total": 155,
   "platforms": [
     "codex",
     "grok"
@@ -2083,6 +2083,20 @@
       ]
     },
     {
+      "name": "WakeWire",
+      "url": "https://github.com/glenncalleja/wakewire",
+      "owner": "glenncalleja",
+      "repo": "wakewire",
+      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/glenncalleja/wakewire/HEAD/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "X Twitter Scraper",
       "url": "https://github.com/Xquik-dev/x-twitter-scraper",
       "owner": "Xquik-dev",
@@ -2139,6 +2153,20 @@
       ]
     },
     {
+      "name": "LinkedIn Skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills",
+      "owner": "sergebulaev",
+      "repo": "linkedin-skills",
+      "description": "Codex-ready LinkedIn marketing bundle with a native .codex-plugin manifest and 10 skills: post writing with 16 tested hook formulas, AI-tell humanizer, pre-publish audit, comment and reply drafting, hook extraction, content planning, profile optimization, engager analytics, and thread monitoring; also works in Claude Code",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "owner": "sitemd-cc",
@@ -2148,20 +2176,6 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "WakeWire",
-      "url": "https://github.com/glenncalleja/wakewire",
-      "owner": "glenncalleja",
-      "repo": "wakewire",
-      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/glenncalleja/wakewire/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
