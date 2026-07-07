@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-07T13:01:27.673713+00:00",
+  "last_updated": "2026-07-07T19:15:13.194042+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1442,7 +1442,7 @@
       "owner": "carsxe",
       "repo": "carsxe-codex-plugin",
       "url": "https://github.com/carsxe/carsxe-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/carsxe/carsxe-codex-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/carsxe/carsxe-codex-plugin/HEAD/plugins/carsxe/.codex-plugin/plugin.json"
     },
     {
       "name": "Chrome DevTools",
@@ -1788,6 +1788,21 @@
       "repo": "launchfast_codex_plugin",
       "url": "https://github.com/BlockchainHB/launchfast_codex_plugin",
       "install_url": "https://raw.githubusercontent.com/BlockchainHB/launchfast_codex_plugin/HEAD/plugins/launchfast/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "LinkedIn Skills",
+      "displayName": "LinkedIn Skills",
+      "description": "Codex-ready LinkedIn marketing bundle with a native .codex-plugin manifest and 10 skills: post writing with 16 tested hook formulas, AI-tell humanizer, pre-publish audit, comment and reply drafting, hook extraction, content planning, profile optimization, engager analytics, and thread monitoring; also works in Claude Code.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "linkedin-skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-marketplace/linkedin-skills/.codex-plugin/plugin.json"
     },
     {
       "name": "Maestro: Costguard",
@@ -2300,19 +2315,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "LinkedIn Skills",
-      "displayName": "LinkedIn Skills",
-      "description": "Codex-ready LinkedIn marketing bundle with a native .codex-plugin manifest and 10 skills: post writing with 16 tested hook formulas, AI-tell humanizer, pre-publish audit, comment and reply drafting, hook extraction, content planning, profile optimization, engager analytics, and thread monitoring; also works in Claude Code",
+      "name": "Shots",
+      "displayName": "Shots",
+      "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "sergebulaev",
-      "repo": "linkedin-skills",
-      "url": "https://github.com/sergebulaev/linkedin-skills",
-      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-plugin/plugin.json"
+      "owner": "hitSlop",
+      "repo": "shots",
+      "url": "https://github.com/hitSlop/shots",
+      "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
