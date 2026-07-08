@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-07",
-  "total": 156,
+  "last_updated": "2026-07-08",
+  "total": 157,
   "platforms": [
     "codex",
     "grok"
@@ -1971,6 +1971,20 @@
       ]
     },
     {
+      "name": "Shots",
+      "url": "https://github.com/hitSlop/shots",
+      "owner": "hitSlop",
+      "repo": "shots",
+      "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Synta MCP",
       "url": "https://github.com/Synta-ai/n8n-mcp-codex-plugin-synta",
       "owner": "Synta-ai",
@@ -2167,15 +2181,15 @@
       ]
     },
     {
-      "name": "Shots",
-      "url": "https://github.com/hitSlop/shots",
-      "owner": "hitSlop",
-      "repo": "shots",
-      "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server",
+      "name": "Coolify",
+      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
+      "owner": "Sevi-py",
+      "repo": "coolify-codex-plugin",
+      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools",
       "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

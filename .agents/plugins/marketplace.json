@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-07T19:15:13.194042+00:00",
+  "last_updated": "2026-07-08T01:19:50.309642+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2105,6 +2105,21 @@
       "install_url": "https://raw.githubusercontent.com/avalonreset/seo-dungeon/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Shots",
+      "displayName": "Shots",
+      "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hitSlop",
+      "repo": "shots",
+      "url": "https://github.com/hitSlop/shots",
+      "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Synta MCP",
       "displayName": "Synta MCP",
       "description": "Build, edit, validate, and self-heal n8n workflows with Synta MCP tools and Codex-ready workflow guidance.",
@@ -2315,19 +2330,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Shots",
-      "displayName": "Shots",
-      "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server",
+      "name": "Coolify",
+      "displayName": "Coolify",
+      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "hitSlop",
-      "repo": "shots",
-      "url": "https://github.com/hitSlop/shots",
-      "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json"
+      "owner": "Sevi-py",
+      "repo": "coolify-codex-plugin",
+      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
