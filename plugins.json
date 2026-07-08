@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-08",
-  "total": 157,
+  "total": 158,
   "platforms": [
     "codex",
     "grok"
@@ -1467,6 +1467,20 @@
       ]
     },
     {
+      "name": "Coolify",
+      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
+      "owner": "Sevi-py",
+      "repo": "coolify-codex-plugin",
+      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Data Product Builder for dbt",
       "url": "https://github.com/entropy-data/dataproduct-builder-dbt",
       "owner": "entropy-data",
@@ -2181,15 +2195,15 @@
       ]
     },
     {
-      "name": "Coolify",
-      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
-      "owner": "Sevi-py",
-      "repo": "coolify-codex-plugin",
-      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools",
-      "category": "Tools & Integrations",
+      "name": "Tree Ring Memory",
+      "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
+      "owner": "TerminallyLazy",
+      "repo": "tree-ring-memory-codex-plugin",
+      "description": "Codex plugin wrapper for local-first agent memory lifecycle guidance: scoped recall, explicit writes, evidence records, audit, forgetting, and consolidation without transcript dumping",
+      "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
