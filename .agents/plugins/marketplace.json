@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-08T01:19:50.309642+00:00",
+  "last_updated": "2026-07-08T09:57:05.447112+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1565,6 +1565,21 @@
       "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Coolify",
+      "displayName": "Coolify",
+      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Sevi-py",
+      "repo": "coolify-codex-plugin",
+      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Data Product Builder for dbt",
       "displayName": "Data Product Builder for dbt",
       "description": "Full data-product lifecycle on dbt for Entropy Data: scaffold, audit, and integrate projects with ODCS, ODPS, OpenLineage, and GitHub Actions.",
@@ -2330,19 +2345,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Coolify",
-      "displayName": "Coolify",
-      "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools",
-      "category": "Tools & Integrations",
+      "name": "Tree Ring Memory",
+      "displayName": "Tree Ring Memory",
+      "description": "Local-first memory lifecycle guidance for Codex agents with recall, evidence-backed lessons, privacy-safe memory capture, audit, consolidation, and explicit forgetting",
+      "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "Sevi-py",
-      "repo": "coolify-codex-plugin",
-      "url": "https://github.com/Sevi-py/coolify-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/Sevi-py/coolify-codex-plugin/HEAD/.codex-plugin/plugin.json"
+      "owner": "TerminallyLazy",
+      "repo": "tree-ring-memory-codex-plugin",
+      "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
