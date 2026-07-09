@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T12:58:25.251258+00:00",
+  "last_updated": "2026-07-09T13:01:38.131025+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -560,6 +560,21 @@
       "install_url": "https://raw.githubusercontent.com/reidemeister94/development-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Docflow",
+      "displayName": "Docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ejentum-mcp",
       "displayName": "ejentum-mcp",
       "description": "MCP server exposing reasoning, code, anti-deception, and memory harness tools for Codex.",
@@ -963,6 +978,21 @@
       "repo": "spec-driven-plugin",
       "url": "https://github.com/Habib0x0/spec-driven-plugin",
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "spec-superflow",
+      "displayName": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Spellbook Skills",
@@ -2373,36 +2403,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "Docflow",
-      "displayName": "Docflow",
-      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "MedAdemBHA",
-      "repo": "docflow",
-      "url": "https://github.com/MedAdemBHA/docflow",
-      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "spec-superflow",
-      "displayName": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "MageByte-Zero",
-      "repo": "spec-superflow",
-      "url": "https://github.com/MageByte-Zero/spec-superflow",
-      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
