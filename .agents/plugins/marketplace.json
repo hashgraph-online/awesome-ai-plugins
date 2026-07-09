@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T13:07:52.740882+00:00",
+  "last_updated": "2026-07-09T13:20:01.096629+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -275,6 +275,21 @@
       "install_url": "https://raw.githubusercontent.com/GSkuza/BABOK_ANALYST/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "basemind",
+      "displayName": "basemind",
+      "description": "Full AI context layer over MCP with a tree-sitter code-map, document RAG, shared agent memory, web crawl, and git history across 300+ languages.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Goldziher",
+      "repo": "basemind",
+      "url": "https://github.com/Goldziher/basemind",
+      "install_url": "https://raw.githubusercontent.com/Goldziher/basemind/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "BGS Modding Superpowers",
       "displayName": "BGS Modding Superpowers",
       "description": "Agentic Bethesda Game Studio modpack curation toolkit with MCP-driven xEdit conflict audit, MO2 control plane, BA2/BSA and Papyrus tooling, and skills for setup, dev-log, and release-changelog workflows.",
@@ -333,6 +348,21 @@
       "repo": "brooks-lint",
       "url": "https://github.com/hyhmrright/brooks-lint",
       "install_url": "https://raw.githubusercontent.com/hyhmrright/brooks-lint/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "BurpSuite MCP Bridge",
+      "displayName": "BurpSuite MCP Bridge",
+      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "6jeffr3y",
+      "repo": "burpsuite-mcp-bridge",
+      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
+      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Casefile",
@@ -800,6 +830,21 @@
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json"
     },
     {
+      "name": "Open Dynamic Workflows",
+      "displayName": "Open Dynamic Workflows",
+      "description": "An open-source dynamic multi-agent workflow engine for AI coding agents (OpenCode, Codex, Antigravity, VS Code) that plans, orchestrates, and adversarially verifies parallel agents, shipping a Codex/Antigravity skill and an OpenCode plugin with bring-your-own-model support.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Suraj1235",
+      "repo": "open-dynamic-workflows",
+      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
+      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/packages/codex-adapter/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Personal Data Protection",
       "displayName": "Personal Data Protection",
       "description": "Engineer-facing personal-data-protection compliance reference \u2014 Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA \u2014 organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.",
@@ -843,6 +888,21 @@
       "repo": "codex-project-autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Quality Engineering Skills",
+      "displayName": "Quality Engineering Skills",
+      "description": "22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "RBraga01",
+      "repo": "Quality-Engineering-Skills",
+      "url": "https://github.com/RBraga01/Quality-Engineering-Skills",
+      "install_url": "https://raw.githubusercontent.com/RBraga01/Quality-Engineering-Skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "RAG Reviewer",
@@ -2403,36 +2463,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "basemind",
-      "displayName": "basemind",
-      "description": "Full AI context layer over MCP with a tree-sitter code-map, document RAG, shared agent memory, web crawl, and git history across 300+ languages",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Goldziher",
-      "repo": "basemind",
-      "url": "https://github.com/Goldziher/basemind",
-      "install_url": "https://raw.githubusercontent.com/Goldziher/basemind/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Open Dynamic Workflows",
-      "displayName": "Open Dynamic Workflows",
-      "description": "An open-source dynamic multi-agent workflow engine for AI coding agents (OpenCode, Codex, Antigravity, VS Code) that plans, orchestrates, and adversarially verifies parallel agents, shipping a Codex/Antigravity skill and an OpenCode plugin with bring-your-own-model support",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Suraj1235",
-      "repo": "open-dynamic-workflows",
-      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
-      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
