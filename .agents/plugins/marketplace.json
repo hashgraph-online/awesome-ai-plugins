@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T13:20:01.096629+00:00",
+  "last_updated": "2026-07-09T13:25:14.787243+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -348,21 +348,6 @@
       "repo": "brooks-lint",
       "url": "https://github.com/hyhmrright/brooks-lint",
       "install_url": "https://raw.githubusercontent.com/hyhmrright/brooks-lint/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "BurpSuite MCP Bridge",
-      "displayName": "BurpSuite MCP Bridge",
-      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "6jeffr3y",
-      "repo": "burpsuite-mcp-bridge",
-      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
-      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Casefile",
@@ -1520,6 +1505,21 @@
       "install_url": "https://raw.githubusercontent.com/avivsinai/bitbucket-cli/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "BurpSuite MCP Bridge",
+      "displayName": "BurpSuite MCP Bridge",
+      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "6jeffr3y",
+      "repo": "burpsuite-mcp-bridge",
+      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
+      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Call-E",
       "displayName": "Call-E",
       "description": "Plan, run, and inspect Call-E phone call workflows from Codex through the calle CLI.",
@@ -2463,6 +2463,36 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "AI Mobile",
+      "displayName": "AI Mobile",
+      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "comprono",
+      "repo": "Ai-Mobile-Codex-plugin",
+      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Haunt MCP",
+      "displayName": "Haunt MCP",
+      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Darko893",
+      "repo": "mcp-server",
+      "url": "https://github.com/Darko893/mcp-server",
+      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
