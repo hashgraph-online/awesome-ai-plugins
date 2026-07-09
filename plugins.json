@@ -151,6 +151,20 @@
       ]
     },
     {
+      "name": "AI Mobile",
+      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
+      "owner": "comprono",
+      "repo": "Ai-Mobile-Codex-plugin",
+      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AgiFlow",
       "url": "https://github.com/AgiFlow/ai-plugin",
       "owner": "AgiFlow",
@@ -593,6 +607,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mirkobozzetto/espresso/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Haunt MCP",
+      "url": "https://github.com/Darko893/mcp-server",
+      "owner": "Darko893",
+      "repo": "mcp-server",
+      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2307,34 +2335,6 @@
       ]
     },
     {
-      "name": "AI Mobile",
-      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
-      "owner": "comprono",
-      "repo": "Ai-Mobile-Codex-plugin",
-      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Haunt MCP",
-      "url": "https://github.com/Darko893/mcp-server",
-      "owner": "Darko893",
-      "repo": "mcp-server",
-      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Obsidian CLI Plugins",
       "url": "https://github.com/DXShelley/obsidian-cli-plugins-skill",
       "owner": "DXShelley",
@@ -2377,11 +2377,11 @@
       ]
     },
     {
-      "name": "linkedin-skills",
-      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin",
+      "name": "linkedin-growth",
+      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin-growth",
       "owner": "Linked-API",
       "repo": "linkedin-skills",
-      "description": "Fetch LinkedIn profiles, search people and companies, send messages, manage connections, create posts, react, comment, and run custom LinkedIn workflows from Claude Code, Codex, Cursor, and Windsurf",
+      "description": "Import leads from LinkedIn or Sales Navigator searches, qualify them against an ideal-customer profile, schedule safe connection invites across accounts, track acceptances, and withdraw stale pending requests",
       "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",

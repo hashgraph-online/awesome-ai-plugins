@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T13:26:30.847119+00:00",
+  "last_updated": "2026-07-09T13:29:36.134035+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -153,6 +153,21 @@
       "repo": "agentry-public",
       "url": "https://github.com/fr33dr4g0n/agentry-public",
       "install_url": "https://raw.githubusercontent.com/fr33dr4g0n/agentry-public/HEAD/plugins/agentry/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AI Mobile",
+      "displayName": "AI Mobile",
+      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "comprono",
+      "repo": "Ai-Mobile-Codex-plugin",
+      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "AgiFlow",
@@ -633,6 +648,21 @@
       "repo": "espresso",
       "url": "https://github.com/mirkobozzetto/espresso",
       "install_url": "https://raw.githubusercontent.com/mirkobozzetto/espresso/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Haunt MCP",
+      "displayName": "Haunt MCP",
+      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Darko893",
+      "repo": "mcp-server",
+      "url": "https://github.com/Darko893/mcp-server",
+      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Frappe Agent",
@@ -2465,36 +2495,6 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "AI Mobile",
-      "displayName": "AI Mobile",
-      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "comprono",
-      "repo": "Ai-Mobile-Codex-plugin",
-      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Haunt MCP",
-      "displayName": "Haunt MCP",
-      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Darko893",
-      "repo": "mcp-server",
-      "url": "https://github.com/Darko893/mcp-server",
-      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "Obsidian CLI Plugins",
       "displayName": "Obsidian CLI Plugins",
       "description": "Integrates Codex with Obsidian vault automation for journal records, Tasks todos, project notes, attachments, plugin commands, safe reads, and Git-backed sync",
@@ -2540,9 +2540,9 @@
       "install_url": "https://raw.githubusercontent.com/dazuiba/handoff/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "linkedin-skills",
-      "displayName": "linkedin-skills",
-      "description": "Fetch LinkedIn profiles, search people and companies, send messages, manage connections, create posts, react, comment, and run custom LinkedIn workflows from Claude Code, Codex, Cursor, and Windsurf",
+      "name": "linkedin-growth",
+      "displayName": "linkedin-growth",
+      "description": "Import leads from LinkedIn or Sales Navigator searches, qualify them against an ideal-customer profile, schedule safe connection invites across accounts, track acceptances, and withdraw stale pending requests",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2551,7 +2551,7 @@
       ],
       "owner": "Linked-API",
       "repo": "linkedin-skills",
-      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin",
+      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin-growth",
       "install_url": "https://raw.githubusercontent.com/Linked-API/linkedin-skills/HEAD/.codex-plugin/plugin.json"
     }
   ]
