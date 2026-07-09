@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T02:22:45.186575+00:00",
+  "last_updated": "2026-07-09T12:58:25.251258+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -768,6 +768,21 @@
       "repo": "maestro",
       "url": "https://github.com/mbanderas/maestro",
       "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "memi",
+      "displayName": "memi",
+      "description": "Interface understanding and design-system memory for Codex, Claude Code, Cursor, and MCP agents with UI audits, Tailwind token extraction, shadcn registry workflows, and a bundled Codex plugin.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sarveshsea",
+      "repo": "memi",
+      "url": "https://github.com/sarveshsea/memi",
+      "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json"
     },
     {
       "name": "Personal Data Protection",
@@ -2360,19 +2375,34 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "memi",
-      "displayName": "memi",
-      "description": "Interface understanding and design-system memory for Codex, Claude Code, Cursor, and MCP agents with UI audits, Tailwind token extraction, shadcn registry workflows, and a bundled Codex plugin",
+      "name": "Docflow",
+      "displayName": "Docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "sarveshsea",
-      "repo": "memi",
-      "url": "https://github.com/sarveshsea/memi",
-      "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/.codex-plugin/plugin.json"
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "spec-superflow",
+      "displayName": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",

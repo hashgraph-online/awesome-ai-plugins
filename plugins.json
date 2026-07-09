@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-09",
-  "total": 159,
+  "total": 161,
   "platforms": [
     "codex",
     "grok"
@@ -719,6 +719,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "memi",
+      "url": "https://github.com/sarveshsea/memi",
+      "owner": "sarveshsea",
+      "repo": "memi",
+      "description": "Interface understanding and design-system memory for Codex, Claude Code, Cursor, and MCP agents with UI audits, Tailwind token extraction, shadcn registry workflows, and a bundled Codex plugin.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2209,15 +2223,29 @@
       ]
     },
     {
-      "name": "memi",
-      "url": "https://github.com/sarveshsea/memi",
-      "owner": "sarveshsea",
-      "repo": "memi",
-      "description": "Interface understanding and design-system memory for Codex, Claude Code, Cursor, and MCP agents with UI audits, Tailwind token extraction, shadcn registry workflows, and a bundled Codex plugin",
+      "name": "Docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
