@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-09",
-  "total": 170,
+  "total": 162,
   "platforms": [
     "codex",
     "grok"
@@ -151,20 +151,6 @@
       ]
     },
     {
-      "name": "AI Mobile",
-      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
-      "owner": "comprono",
-      "repo": "Ai-Mobile-Codex-plugin",
-      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "AgiFlow",
       "url": "https://github.com/AgiFlow/ai-plugin",
       "owner": "AgiFlow",
@@ -271,20 +257,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/GSkuza/BABOK_ANALYST/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "basemind",
-      "url": "https://github.com/Goldziher/basemind",
-      "owner": "Goldziher",
-      "repo": "basemind",
-      "description": "Full AI context layer over MCP with a tree-sitter code-map, document RAG, shared agent memory, web crawl, and git history across 300+ languages.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Goldziher/basemind/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -557,20 +529,6 @@
       ]
     },
     {
-      "name": "Docflow",
-      "url": "https://github.com/MedAdemBHA/docflow",
-      "owner": "MedAdemBHA",
-      "repo": "docflow",
-      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "ejentum-mcp",
       "url": "https://github.com/ejentum/ejentum-mcp",
       "owner": "ejentum",
@@ -607,20 +565,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mirkobozzetto/espresso/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Haunt MCP",
-      "url": "https://github.com/Darko893/mcp-server",
-      "owner": "Darko893",
-      "repo": "mcp-server",
-      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -795,20 +739,6 @@
       ]
     },
     {
-      "name": "Open Dynamic Workflows",
-      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
-      "owner": "Suraj1235",
-      "repo": "open-dynamic-workflows",
-      "description": "An open-source dynamic multi-agent workflow engine for AI coding agents (OpenCode, Codex, Antigravity, VS Code) that plans, orchestrates, and adversarially verifies parallel agents, shipping a Codex/Antigravity skill and an OpenCode plugin with bring-your-own-model support.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/packages/codex-adapter/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Personal Data Protection",
       "url": "https://github.com/AltByteSG/personal-data-protection-skill",
       "owner": "AltByteSG",
@@ -845,20 +775,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Quality Engineering Skills",
-      "url": "https://github.com/RBraga01/Quality-Engineering-Skills",
-      "owner": "RBraga01",
-      "repo": "Quality-Engineering-Skills",
-      "description": "22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/Quality-Engineering-Skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -985,20 +901,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "spec-superflow",
-      "url": "https://github.com/MageByte-Zero/spec-superflow",
-      "owner": "MageByte-Zero",
-      "repo": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1433,20 +1335,6 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/avivsinai/bitbucket-cli/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "BurpSuite MCP Bridge",
-      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
-      "owner": "6jeffr3y",
-      "repo": "burpsuite-mcp-bridge",
-      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2335,15 +2223,29 @@
       ]
     },
     {
-      "name": "Obsidian CLI Plugins",
-      "url": "https://github.com/DXShelley/obsidian-cli-plugins-skill",
-      "owner": "DXShelley",
-      "repo": "obsidian-cli-plugins-skill",
-      "description": "Integrates Codex with Obsidian vault automation for journal records, Tasks todos, project notes, attachments, plugin commands, safe reads, and Git-backed sync",
-      "category": "Tools & Integrations",
+      "name": "Docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
+      "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/DXShelley/obsidian-cli-plugins-skill/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -2358,20 +2260,6 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "handoff",
-      "url": "https://github.com/dazuiba/handoff",
-      "owner": "dazuiba",
-      "repo": "handoff",
-      "description": "Cross-agent task dispatcher: delegate work to DeepSeek V4, Claude Opus, or Codex right inside your Claude Code / Codex session. Runs in background; result returns automatically",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/dazuiba/handoff/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
