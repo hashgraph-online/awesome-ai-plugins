@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-09T13:25:14.787243+00:00",
+  "last_updated": "2026-07-09T13:26:30.847119+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2495,6 +2495,21 @@
       "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Obsidian CLI Plugins",
+      "displayName": "Obsidian CLI Plugins",
+      "description": "Integrates Codex with Obsidian vault automation for journal records, Tasks todos, project notes, attachments, plugin commands, safe reads, and Git-backed sync",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "DXShelley",
+      "repo": "obsidian-cli-plugins-skill",
+      "url": "https://github.com/DXShelley/obsidian-cli-plugins-skill",
+      "install_url": "https://raw.githubusercontent.com/DXShelley/obsidian-cli-plugins-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "sitemd",
       "displayName": "sitemd",
       "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
@@ -2508,6 +2523,36 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "handoff",
+      "displayName": "handoff",
+      "description": "Cross-agent task dispatcher: delegate work to DeepSeek V4, Claude Opus, or Codex right inside your Claude Code / Codex session. Runs in background; result returns automatically",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dazuiba",
+      "repo": "handoff",
+      "url": "https://github.com/dazuiba/handoff",
+      "install_url": "https://raw.githubusercontent.com/dazuiba/handoff/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "linkedin-skills",
+      "displayName": "linkedin-skills",
+      "description": "Fetch LinkedIn profiles, search people and companies, send messages, manage connections, create posts, react, comment, and run custom LinkedIn workflows from Claude Code, Codex, Cursor, and Windsurf",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Linked-API",
+      "repo": "linkedin-skills",
+      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin",
+      "install_url": "https://raw.githubusercontent.com/Linked-API/linkedin-skills/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }

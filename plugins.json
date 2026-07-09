@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-09",
-  "total": 167,
+  "total": 170,
   "platforms": [
     "codex",
     "grok"
@@ -2335,6 +2335,20 @@
       ]
     },
     {
+      "name": "Obsidian CLI Plugins",
+      "url": "https://github.com/DXShelley/obsidian-cli-plugins-skill",
+      "owner": "DXShelley",
+      "repo": "obsidian-cli-plugins-skill",
+      "description": "Integrates Codex with Obsidian vault automation for journal records, Tasks todos, project notes, attachments, plugin commands, safe reads, and Git-backed sync",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/DXShelley/obsidian-cli-plugins-skill/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "owner": "sitemd-cc",
@@ -2344,6 +2358,34 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "handoff",
+      "url": "https://github.com/dazuiba/handoff",
+      "owner": "dazuiba",
+      "repo": "handoff",
+      "description": "Cross-agent task dispatcher: delegate work to DeepSeek V4, Claude Opus, or Codex right inside your Claude Code / Codex session. Runs in background; result returns automatically",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/dazuiba/handoff/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "linkedin-skills",
+      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin",
+      "owner": "Linked-API",
+      "repo": "linkedin-skills",
+      "description": "Fetch LinkedIn profiles, search people and companies, send messages, manage connections, create posts, react, comment, and run custom LinkedIn workflows from Claude Code, Codex, Cursor, and Windsurf",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Linked-API/linkedin-skills/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
