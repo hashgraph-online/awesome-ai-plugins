@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-08",
-  "total": 158,
+  "last_updated": "2026-07-09",
+  "total": 159,
   "platforms": [
     "codex",
     "grok"
@@ -1033,6 +1033,20 @@
       ]
     },
     {
+      "name": "Tree Ring Memory",
+      "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
+      "owner": "TerminallyLazy",
+      "repo": "tree-ring-memory-codex-plugin",
+      "description": "Local-first memory lifecycle guidance for Codex agents with recall, evidence-backed lessons, privacy-safe memory capture, audit, consolidation, and explicit forgetting.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Unity Agent Workflows",
       "url": "https://github.com/AUN-PN/unity-agent-workflows",
       "owner": "AUN-PN",
@@ -1621,11 +1635,11 @@
       ]
     },
     {
-      "name": "Kreuzberg Cloud",
+      "name": "Kreuzberg",
       "url": "https://github.com/kreuzberg-dev/plugins",
       "owner": "kreuzberg-dev",
       "repo": "plugins",
-      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
+      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json",
@@ -1635,11 +1649,11 @@
       ]
     },
     {
-      "name": "Kreuzberg",
+      "name": "Kreuzberg Cloud",
       "url": "https://github.com/kreuzberg-dev/plugins",
       "owner": "kreuzberg-dev",
       "repo": "plugins",
-      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
+      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json",
@@ -2195,15 +2209,15 @@
       ]
     },
     {
-      "name": "Tree Ring Memory",
-      "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
-      "owner": "TerminallyLazy",
-      "repo": "tree-ring-memory-codex-plugin",
-      "description": "Local-first memory lifecycle guidance for Codex agents with recall, evidence-backed lessons, privacy-safe memory capture, audit, consolidation, and explicit forgetting",
+      "name": "memi",
+      "url": "https://github.com/sarveshsea/memi",
+      "owner": "sarveshsea",
+      "repo": "memi",
+      "description": "Interface understanding and design-system memory for Codex, Claude Code, Cursor, and MCP agents with UI audits, Tailwind token extraction, shadcn registry workflows, and a bundled Codex plugin",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
