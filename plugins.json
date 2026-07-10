@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-09",
-  "total": 168,
+  "last_updated": "2026-07-10",
+  "total": 162,
   "platforms": [
     "codex",
     "grok"
@@ -529,20 +529,6 @@
       ]
     },
     {
-      "name": "Docflow",
-      "url": "https://github.com/MedAdemBHA/docflow",
-      "owner": "MedAdemBHA",
-      "repo": "docflow",
-      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "ejentum-mcp",
       "url": "https://github.com/ejentum/ejentum-mcp",
       "owner": "ejentum",
@@ -915,20 +901,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "spec-superflow",
-      "url": "https://github.com/MageByte-Zero/spec-superflow",
-      "owner": "MageByte-Zero",
-      "repo": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2251,85 +2223,43 @@
       ]
     },
     {
-      "name": "basemind",
-      "url": "https://github.com/Goldziher/basemind",
-      "owner": "Goldziher",
-      "repo": "basemind",
-      "description": "Full AI context layer over MCP with a tree-sitter code-map, document RAG, shared agent memory, web crawl, and git history across 300+ languages",
+      "name": "Docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Goldziher/basemind/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
     },
     {
-      "name": "Open Dynamic Workflows",
-      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
-      "owner": "Suraj1235",
-      "repo": "open-dynamic-workflows",
-      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support",
+      "name": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
     },
     {
-      "name": "Quality Engineering Skills",
-      "url": "https://github.com/RBraga01/quality-engineering-skills",
-      "owner": "RBraga01",
-      "repo": "quality-engineering-skills",
-      "description": "22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA",
+      "name": "Unforgit",
+      "url": "https://github.com/MiguelMedeiros/unforgit-codex-plugin",
+      "owner": "MiguelMedeiros",
+      "repo": "unforgit-codex-plugin",
+      "description": "Git-backed repository memory for Codex and other coding agents via MCP, with durable local knowledge for decisions, conventions, gotchas, and playbooks",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/quality-engineering-skills/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "AI Mobile",
-      "url": "https://github.com/comprono/Ai-Mobile-Codex-plugin",
-      "owner": "comprono",
-      "repo": "Ai-Mobile-Codex-plugin",
-      "description": "Mobile-started Codex bridge for low-RAM Antigravity CLI, Antigravity desktop UI, and Claude Code workers on Windows, with model checks and compact bridge-job artifacts",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/comprono/Ai-Mobile-Codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "BurpSuite MCP Bridge",
-      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
-      "owner": "6jeffr3y",
-      "repo": "burpsuite-mcp-bridge",
-      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Haunt MCP",
-      "url": "https://github.com/Darko893/mcp-server",
-      "owner": "Darko893",
-      "repo": "mcp-server",
-      "description": "Web extraction MCP for permitted public pages. Returns clean JSON, Markdown, article fields, metadata, and usage with clear blocked-page errors",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Darko893/mcp-server/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MiguelMedeiros/unforgit-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -2344,20 +2274,6 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "linkedin-growth",
-      "url": "https://github.com/Linked-API/linkedin-skills/tree/main/linkedin-growth",
-      "owner": "Linked-API",
-      "repo": "linkedin-skills",
-      "description": "Import leads from LinkedIn or Sales Navigator searches, qualify them against an ideal-customer profile, schedule safe connection invites across accounts, track acceptances, and withdraw stale pending requests",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Linked-API/linkedin-skills/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
