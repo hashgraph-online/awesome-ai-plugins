@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-10",
-  "total": 163,
+  "total": 164,
   "platforms": [
     "codex",
     "grok"
@@ -733,6 +733,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "MailAgent",
+      "url": "https://github.com/Alex0nder/MailAgent",
+      "owner": "Alex0nder",
+      "repo": "MailAgent",
+      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2265,15 +2279,15 @@
       ]
     },
     {
-      "name": "MailAgent",
-      "url": "https://github.com/Alex0nder/MailAgent",
-      "owner": "Alex0nder",
-      "repo": "MailAgent",
-      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools)",
+      "name": "Open Dynamic Workflows",
+      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
+      "owner": "Suraj1235",
+      "repo": "open-dynamic-workflows",
+      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

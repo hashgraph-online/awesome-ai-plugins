@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-10T12:12:10.924961+00:00",
+  "last_updated": "2026-07-10T22:44:53.694616+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -783,6 +783,21 @@
       "repo": "maestro",
       "url": "https://github.com/mbanderas/maestro",
       "install_url": "https://raw.githubusercontent.com/mbanderas/maestro/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "MailAgent",
+      "displayName": "MailAgent",
+      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Alex0nder",
+      "repo": "MailAgent",
+      "url": "https://github.com/Alex0nder/MailAgent",
+      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "memi",
@@ -2420,19 +2435,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "MailAgent",
-      "displayName": "MailAgent",
-      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools)",
+      "name": "Open Dynamic Workflows",
+      "displayName": "Open Dynamic Workflows",
+      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "Alex0nder",
-      "repo": "MailAgent",
-      "url": "https://github.com/Alex0nder/MailAgent",
-      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/.codex-plugin/plugin.json"
+      "owner": "Suraj1235",
+      "repo": "open-dynamic-workflows",
+      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
+      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
