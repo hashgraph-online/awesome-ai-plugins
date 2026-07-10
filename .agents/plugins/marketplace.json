@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-10T10:36:06.242804+00:00",
+  "last_updated": "2026-07-10T12:12:10.924961+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -560,6 +560,21 @@
       "install_url": "https://raw.githubusercontent.com/reidemeister94/development-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Docflow",
+      "displayName": "Docflow",
+      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MedAdemBHA",
+      "repo": "docflow",
+      "url": "https://github.com/MedAdemBHA/docflow",
+      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ejentum-mcp",
       "displayName": "ejentum-mcp",
       "description": "MCP server exposing reasoning, code, anti-deception, and memory harness tools for Codex.",
@@ -965,6 +980,21 @@
       "install_url": "https://raw.githubusercontent.com/Habib0x0/spec-driven-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "spec-superflow",
+      "displayName": "spec-superflow",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MageByte-Zero",
+      "repo": "spec-superflow",
+      "url": "https://github.com/MageByte-Zero/spec-superflow",
+      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Spellbook Skills",
       "displayName": "Spellbook Skills",
       "description": "Practical Claude Code and Codex skills for worktrees, PR/MR automation, review cleanup, YApi lookup, and Java DDD guidance.",
@@ -1128,6 +1158,21 @@
       "repo": "tree-ring-memory-codex-plugin",
       "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Unforgit",
+      "displayName": "Unforgit",
+      "description": "Git-backed repository memory for Codex and other coding agents via MCP, with durable local knowledge for decisions, conventions, gotchas, and playbooks.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MiguelMedeiros",
+      "repo": "unforgit-codex-plugin",
+      "url": "https://github.com/MiguelMedeiros/unforgit-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/MiguelMedeiros/unforgit-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Unity Agent Workflows",
@@ -2375,49 +2420,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Docflow",
-      "displayName": "Docflow",
-      "description": "Lightweight documentation memory for AI coding agents that scaffolds a 7-category docs tree, runs readiness checks, validates docs before finishing, and keeps a monthly changelog across Claude Code and Codex",
+      "name": "MailAgent",
+      "displayName": "MailAgent",
+      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools)",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "MedAdemBHA",
-      "repo": "docflow",
-      "url": "https://github.com/MedAdemBHA/docflow",
-      "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "spec-superflow",
-      "displayName": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "MageByte-Zero",
-      "repo": "spec-superflow",
-      "url": "https://github.com/MageByte-Zero/spec-superflow",
-      "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Unforgit",
-      "displayName": "Unforgit",
-      "description": "Git-backed repository memory for Codex and other coding agents via MCP, with durable local knowledge for decisions, conventions, gotchas, and playbooks",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "MiguelMedeiros",
-      "repo": "unforgit-codex-plugin",
-      "url": "https://github.com/MiguelMedeiros/unforgit-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/MiguelMedeiros/unforgit-codex-plugin/HEAD/.codex-plugin/plugin.json"
+      "owner": "Alex0nder",
+      "repo": "MailAgent",
+      "url": "https://github.com/Alex0nder/MailAgent",
+      "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
