@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-11T12:08:33.089258+00:00",
+  "last_updated": "2026-07-11T12:26:45.539346+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1012,7 +1012,7 @@
     {
       "name": "spec-superflow",
       "displayName": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills and guarded execution contracts.",
+      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills, Node 20 support, model profiles, and evidence-based review gates.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2448,6 +2448,21 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "RunAPI CLI Skill",
+      "displayName": "RunAPI CLI Skill",
+      "description": "Run AI image, video, music, audio, and LLM model API jobs from Codex, Claude Code, Gemini CLI, and other coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "runapi-ai",
+      "repo": "cli-skill",
+      "url": "https://github.com/runapi-ai/cli-skill",
+      "install_url": "https://raw.githubusercontent.com/runapi-ai/cli-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
