@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-10T22:44:53.694616+00:00",
+  "last_updated": "2026-07-11T12:08:33.089258+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -813,6 +813,21 @@
       "repo": "memi",
       "url": "https://github.com/sarveshsea/memi",
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Open Dynamic Workflows",
+      "displayName": "Open Dynamic Workflows",
+      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Suraj1235",
+      "repo": "open-dynamic-workflows",
+      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
+      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/packages/codex-adapter/.codex-plugin/plugin.json"
     },
     {
       "name": "Personal Data Protection",
@@ -2433,21 +2448,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "Open Dynamic Workflows",
-      "displayName": "Open Dynamic Workflows",
-      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Suraj1235",
-      "repo": "open-dynamic-workflows",
-      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
-      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",

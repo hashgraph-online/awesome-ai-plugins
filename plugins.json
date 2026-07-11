@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-10",
+  "last_updated": "2026-07-11",
   "total": 164,
   "platforms": [
     "codex",
@@ -761,6 +761,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Open Dynamic Workflows",
+      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
+      "owner": "Suraj1235",
+      "repo": "open-dynamic-workflows",
+      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/packages/codex-adapter/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2276,20 +2290,6 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
-      ]
-    },
-    {
-      "name": "Open Dynamic Workflows",
-      "url": "https://github.com/Suraj1235/open-dynamic-workflows",
-      "owner": "Suraj1235",
-      "repo": "open-dynamic-workflows",
-      "description": "Local-first MIT dynamic multi-agent workflows for Codex, OpenCode, Antigravity, Cursor, and VS Code with a daemon, MCP bridge, Codex skills, OpenCode plugin, and bring-your-own-model support",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
