@@ -202,13 +202,13 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [PR Storyteller](./plugins/mturac/pr-storyteller) - PR title + body + test plan from commits and diff vs base branch.
 - [Praxis](https://github.com/ouonet/praxis) - Intent-driven workflow skills for coding agents: describe what done looks like, not the steps. Triage-first design keeps token costs low across design, TDD, debug, review, and release.
 - [Project Autopilot](https://github.com/AlexMi64/codex-project-autopilot) - Turn an idea into a structured project workflow with planning, execution, verification, and handoff.
+- [Quality Engineering Skills](https://github.com/RBraga01/Quality-Engineering-Skills) - 22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.
 - [RAG Reviewer](https://github.com/mimfort/rag_for_git) - Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.
 - [Registry Broker](https://github.com/hashgraph-online/registry-broker-codex-plugin) - Delegate tasks to specialist AI agents via the HOL Registry, plan, find, summon, and recover sessions.
 - [Reviewable HTML Workbench](https://github.com/u-ichi/reviewable-html-workbench) - Generate reviewable HTML documents, serve previews, collect inline review comments, and feed review outcomes back into agent workflows.
 - [River Review](https://github.com/s977043/river-review) - Versioned Skill Registry of code-review skills driven by a perspective-based review agent (code, security, performance, architecture, testing, adversarial) that verifies findings against the diff.
 - [RoadmapSmith](https://github.com/PapiScholz/roadmapsmith) - Evidence-backed ROADMAP.md workflows for AI coding agents with validation, sync, and roadmap generation across any tech stack.
 - [Runtype Skills](https://github.com/runtypelabs/skills) - Supercharge your coding agent for AI product development — build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime.
-- [RunAPI CLI Skill](https://github.com/runapi-ai/cli-skill) - Run AI image, video, music, audio, and LLM model API jobs from Codex, Claude Code, Gemini CLI, and other coding agents.
 - [Sealos](https://github.com/labring/sealos-skills) - Deploy apps to Sealos Cloud from Codex with readiness checks, Dockerfile generation, Compose conversion, image builds, and rollout updates.
 - [Secret Guard](./plugins/mturac/secret-guard) - Pre-commit secret scanner using pattern and entropy detection.
 - [Session Orchestrator](https://github.com/Kanevry/session-orchestrator) - Session orchestration for Claude Code, Codex, and Cursor IDE — structured planning, wave-based execution, VCS integration (GitLab + GitHub), quality gates, and clean session close-out with issue tracking.
