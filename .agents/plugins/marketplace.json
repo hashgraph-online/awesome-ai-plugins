@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-12T13:46:23.537659+00:00",
+  "last_updated": "2026-07-12T19:46:19.121096+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -873,6 +873,21 @@
       "repo": "codex-project-autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Quality Engineering Skills",
+      "displayName": "Quality Engineering Skills",
+      "description": "22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "RBraga01",
+      "repo": "Quality-Engineering-Skills",
+      "url": "https://github.com/RBraga01/Quality-Engineering-Skills",
+      "install_url": "https://raw.githubusercontent.com/RBraga01/Quality-Engineering-Skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "RAG Reviewer",
@@ -2448,21 +2463,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "Quality Engineering Skills",
-      "displayName": "Quality Engineering Skills",
-      "description": "22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "RBraga01",
-      "repo": "Quality-Engineering-Skills",
-      "url": "https://github.com/RBraga01/Quality-Engineering-Skills",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/Quality-Engineering-Skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",

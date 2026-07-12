@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="https://hol.org/registry/plugins">
-    <img src="assets/awesome-codex-plugins-hol.png" alt="Awesome Codex Plugins by HOL" width="960" height="540">
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9e063332-fd6c-4196-a8cb-e6880f8c06d1" />
+
   </a>
 </p>
 
