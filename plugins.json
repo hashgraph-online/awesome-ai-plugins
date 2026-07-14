@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-14",
-  "total": 168,
+  "total": 169,
   "platforms": [
     "codex",
     "grok"
@@ -333,6 +333,20 @@
       ]
     },
     {
+      "name": "Claude Code Codex Plugin",
+      "url": "https://github.com/davidq888/claude-code-codex-plugin",
+      "owner": "davidq888",
+      "repo": "claude-code-codex-plugin",
+      "description": "Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/davidq888/claude-code-codex-plugin/HEAD/plugins/claude-code/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Claude Code for Codex",
       "url": "https://github.com/sendbird/cc-plugin-codex",
       "owner": "sendbird",
@@ -641,6 +655,20 @@
       ]
     },
     {
+      "name": "Hera Agent Godot",
+      "url": "https://github.com/NotNull92/hera-agent-godot",
+      "owner": "NotNull92",
+      "repo": "hera-agent-godot",
+      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/plugins/hera-godot/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "HOL Guard Plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-plugin",
       "owner": "hashgraph-online",
@@ -761,6 +789,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Ontoly",
+      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
+      "owner": "0xsarwagya",
+      "repo": "ontoly-codex-plugin",
+      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1082,7 +1124,7 @@
       "description": "Agent skills for git workflows, GitHub automation, security audits, code refactoring, and project tooling.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/tartinerlabs/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2307,43 +2349,15 @@
       ]
     },
     {
-      "name": "Claude Code Codex Plugin",
-      "url": "https://github.com/davidq888/claude-code-codex-plugin",
-      "owner": "davidq888",
-      "repo": "claude-code-codex-plugin",
-      "description": "Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage",
+      "name": "Ditto",
+      "url": "https://github.com/ohad6k/ditto",
+      "owner": "ohad6k",
+      "repo": "ditto",
+      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/davidq888/claude-code-codex-plugin/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Hera Agent Godot",
-      "url": "https://github.com/NotNull92/hera-agent-godot",
-      "owner": "NotNull92",
-      "repo": "hera-agent-godot",
-      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Ontoly",
-      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
-      "owner": "0xsarwagya",
-      "repo": "ontoly-codex-plugin",
-      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

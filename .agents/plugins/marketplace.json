@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-14T12:01:03.268297+00:00",
+  "last_updated": "2026-07-14T19:10:06.075483+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -350,6 +350,21 @@
       "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Claude Code Codex Plugin",
+      "displayName": "Claude Code Codex Plugin",
+      "description": "Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "davidq888",
+      "repo": "claude-code-codex-plugin",
+      "url": "https://github.com/davidq888/claude-code-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/davidq888/claude-code-codex-plugin/HEAD/plugins/claude-code/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Claude Code for Codex",
       "displayName": "Claude Code for Codex",
       "description": "Reverse of OpenAI's official Claude-hosted plugin: use Claude Code from Codex for reviews, rescue tasks, tracked background jobs, and hook-powered review gates.",
@@ -680,6 +695,21 @@
       "install_url": "https://raw.githubusercontent.com/ValkyrLabs/GrayMatter/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Hera Agent Godot",
+      "displayName": "Hera Agent Godot",
+      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "NotNull92",
+      "repo": "hera-agent-godot",
+      "url": "https://github.com/NotNull92/hera-agent-godot",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/plugins/hera-godot/.codex-plugin/plugin.json"
+    },
+    {
       "name": "HOL Guard Plugin",
       "displayName": "HOL Guard Plugin",
       "description": "AI antivirus workflow for Codex, Claude Code, Cursor, Gemini, OpenCode, MCP servers, skills, and plugin release checks with local approvals and receipts.",
@@ -813,6 +843,21 @@
       "repo": "memi",
       "url": "https://github.com/sarveshsea/memi",
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Ontoly",
+      "displayName": "Ontoly",
+      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "0xsarwagya",
+      "repo": "ontoly-codex-plugin",
+      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Open Dynamic Workflows",
@@ -1157,7 +1202,7 @@
       "owner": "tartinerlabs",
       "repo": "skills",
       "url": "https://github.com/tartinerlabs/skills",
-      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/tartinerlabs/.codex-plugin/plugin.json"
     },
     {
       "name": "Team Skills Platform",
@@ -2465,49 +2510,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Claude Code Codex Plugin",
-      "displayName": "Claude Code Codex Plugin",
-      "description": "Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage",
+      "name": "Ditto",
+      "displayName": "Ditto",
+      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "davidq888",
-      "repo": "claude-code-codex-plugin",
-      "url": "https://github.com/davidq888/claude-code-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/davidq888/claude-code-codex-plugin/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Hera Agent Godot",
-      "displayName": "Hera Agent Godot",
-      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "NotNull92",
-      "repo": "hera-agent-godot",
-      "url": "https://github.com/NotNull92/hera-agent-godot",
-      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Ontoly",
-      "displayName": "Ontoly",
-      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "0xsarwagya",
-      "repo": "ontoly-codex-plugin",
-      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json"
+      "owner": "ohad6k",
+      "repo": "ditto",
+      "url": "https://github.com/ohad6k/ditto",
+      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
