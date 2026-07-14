@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-14",
-  "total": 166,
+  "total": 168,
   "platforms": [
     "codex",
     "grok"
@@ -2304,6 +2304,34 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "Claude Code Codex Plugin",
+      "url": "https://github.com/davidq888/claude-code-codex-plugin",
+      "owner": "davidq888",
+      "repo": "claude-code-codex-plugin",
+      "description": "Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/davidq888/claude-code-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Hera Agent Godot",
+      "url": "https://github.com/NotNull92/hera-agent-godot",
+      "owner": "NotNull92",
+      "repo": "hera-agent-godot",
+      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
