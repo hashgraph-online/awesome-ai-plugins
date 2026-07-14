@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-12",
-  "total": 165,
+  "last_updated": "2026-07-14",
+  "total": 166,
   "platforms": [
     "codex",
     "grok"
@@ -2304,6 +2304,20 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "Ontoly",
+      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
+      "owner": "0xsarwagya",
+      "repo": "ontoly-codex-plugin",
+      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-12T19:46:19.121096+00:00",
+  "last_updated": "2026-07-14T12:00:15.361655+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2463,6 +2463,21 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "Ontoly",
+      "displayName": "Ontoly",
+      "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "0xsarwagya",
+      "repo": "ontoly-codex-plugin",
+      "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/0xsarwagya/ontoly-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
