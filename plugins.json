@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-15",
-  "total": 170,
+  "total": 171,
   "platforms": [
     "codex",
     "grok"
@@ -481,6 +481,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Codex TUI Proof",
+      "url": "https://github.com/bnc4vk/codex-tui-proof",
+      "owner": "bnc4vk",
+      "repo": "codex-tui-proof",
+      "description": "Visually validate real local terminal UIs in Codex's in-app browser with screenshots and session evidence.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bnc4vk/codex-tui-proof/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2363,15 +2377,15 @@
       ]
     },
     {
-      "name": "Codex TUI Proof",
-      "url": "https://github.com/bnc4vk/codex-tui-proof",
-      "owner": "bnc4vk",
-      "repo": "codex-tui-proof",
-      "description": "Visually validate real local terminal UIs in Codex's in-app browser with screenshots and session evidence",
+      "name": "CodeTruss",
+      "url": "https://github.com/DeliriumPulse/codetruss-plugins",
+      "owner": "DeliriumPulse",
+      "repo": "codetruss-plugins",
+      "description": "Local-first acceptance gate that checks coding-agent scope, sensitive surfaces, deterministic analyzers, and repository verification from immutable Git snapshots, then writes signed receipts before the PR",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/bnc4vk/codex-tui-proof/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/DeliriumPulse/codetruss-plugins/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
