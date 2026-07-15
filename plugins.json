@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-07-14",
-  "total": 169,
+  "last_updated": "2026-07-15",
+  "total": 170,
   "platforms": [
     "codex",
     "grok"
@@ -537,6 +537,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/reidemeister94/development-skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Ditto",
+      "url": "https://github.com/ohad6k/ditto",
+      "owner": "ohad6k",
+      "repo": "ditto",
+      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2349,15 +2363,15 @@
       ]
     },
     {
-      "name": "Ditto",
-      "url": "https://github.com/ohad6k/ditto",
-      "owner": "ohad6k",
-      "repo": "ditto",
-      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot",
+      "name": "Codex TUI Proof",
+      "url": "https://github.com/bnc4vk/codex-tui-proof",
+      "owner": "bnc4vk",
+      "repo": "codex-tui-proof",
+      "description": "Visually validate real local terminal UIs in Codex's in-app browser with screenshots and session evidence",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/bnc4vk/codex-tui-proof/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-14T19:10:06.075483+00:00",
+  "last_updated": "2026-07-15T14:25:15.480856+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -573,6 +573,21 @@
       "repo": "development-skills",
       "url": "https://github.com/reidemeister94/development-skills",
       "install_url": "https://raw.githubusercontent.com/reidemeister94/development-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Ditto",
+      "displayName": "Ditto",
+      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ohad6k",
+      "repo": "ditto",
+      "url": "https://github.com/ohad6k/ditto",
+      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Docflow",
@@ -2510,19 +2525,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Ditto",
-      "displayName": "Ditto",
-      "description": "Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot",
+      "name": "Codex TUI Proof",
+      "displayName": "Codex TUI Proof",
+      "description": "Visually validate real local terminal UIs in Codex's in-app browser with screenshots and session evidence",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "ohad6k",
-      "repo": "ditto",
-      "url": "https://github.com/ohad6k/ditto",
-      "install_url": "https://raw.githubusercontent.com/ohad6k/ditto/HEAD/.codex-plugin/plugin.json"
+      "owner": "bnc4vk",
+      "repo": "codex-tui-proof",
+      "url": "https://github.com/bnc4vk/codex-tui-proof",
+      "install_url": "https://raw.githubusercontent.com/bnc4vk/codex-tui-proof/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
