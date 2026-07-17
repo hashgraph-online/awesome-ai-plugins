@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-15T20:36:33.214898+00:00",
+  "last_updated": "2026-07-17T11:10:46.052439+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -453,6 +453,21 @@
       "repo": "codebase-recon-skill",
       "url": "https://github.com/yujiachen-y/codebase-recon-skill",
       "install_url": "https://raw.githubusercontent.com/yujiachen-y/codebase-recon-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "CodeTruss",
+      "displayName": "CodeTruss",
+      "description": "Local-first acceptance gate that checks coding-agent scope, sensitive surfaces, deterministic analyzers, and repository verification from immutable Git snapshots, then writes signed receipts before the PR.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "DeliriumPulse",
+      "repo": "codetruss-plugins",
+      "url": "https://github.com/DeliriumPulse/codetruss-plugins",
+      "install_url": "https://raw.githubusercontent.com/DeliriumPulse/codetruss-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex Agenteam",
@@ -2538,21 +2553,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "CodeTruss",
-      "displayName": "CodeTruss",
-      "description": "Local-first acceptance gate that checks coding-agent scope, sensitive surfaces, deterministic analyzers, and repository verification from immutable Git snapshots, then writes signed receipts before the PR",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "DeliriumPulse",
-      "repo": "codetruss-plugins",
-      "url": "https://github.com/DeliriumPulse/codetruss-plugins",
-      "install_url": "https://raw.githubusercontent.com/DeliriumPulse/codetruss-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
