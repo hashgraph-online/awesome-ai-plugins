@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-17T11:10:46.052439+00:00",
+  "last_updated": "2026-07-18T06:03:46.356392+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2553,6 +2553,21 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "OutcomeLoop",
+      "displayName": "OutcomeLoop",
+      "description": "Outcome-verified Codex runner and plugin that resumes one GPT-5.6 session until an external verifier passes, then seals the evidence in an Ed25519-signed receipt",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tinyopsstudio",
+      "repo": "outcomeloop-build-week",
+      "url": "https://github.com/tinyopsstudio/outcomeloop-build-week",
+      "install_url": "https://raw.githubusercontent.com/tinyopsstudio/outcomeloop-build-week/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
