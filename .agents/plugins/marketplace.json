@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-17T11:10:46.052439+00:00",
+  "last_updated": "2026-07-18T08:37:37.752721+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2553,6 +2553,21 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "claude-math",
+      "displayName": "claude-math",
+      "description": "Emit mathematics as copy- and search-safe inline Unicode (\u2211, \u2264, \u211d, x\u00b2, matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "vladimirrott",
+      "repo": "claude-math",
+      "url": "https://github.com/vladimirrott/claude-math",
+      "install_url": "https://raw.githubusercontent.com/vladimirrott/claude-math/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
