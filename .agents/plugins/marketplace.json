@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-18T08:37:37.752721+00:00",
+  "last_updated": "2026-07-20T12:50:05.643090+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1670,6 +1670,21 @@
       "install_url": "https://raw.githubusercontent.com/win4r/chrome-devtools-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "claude-math",
+      "displayName": "claude-math",
+      "description": "Emit mathematics as copy- and search-safe inline Unicode (\u2211, \u2264, \u211d, x\u00b2, matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "vladimirrott",
+      "repo": "claude-math",
+      "url": "https://github.com/vladimirrott/claude-math",
+      "install_url": "https://raw.githubusercontent.com/vladimirrott/claude-math/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Codex Be Serious",
       "displayName": "Codex Be Serious",
       "description": "Enforce formal, textbook-grade written register across all agent output.",
@@ -2555,19 +2570,19 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "claude-math",
-      "displayName": "claude-math",
-      "description": "Emit mathematics as copy- and search-safe inline Unicode (\u2211, \u2264, \u211d, x\u00b2, matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code",
-      "category": "Tools & Integrations",
+      "name": "Agent Deck",
+      "displayName": "Agent Deck",
+      "description": "One MCP for context management: bind self-improving playbooks, MCP tools, and API keys to the session",
+      "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "owner": "vladimirrott",
-      "repo": "claude-math",
-      "url": "https://github.com/vladimirrott/claude-math",
-      "install_url": "https://raw.githubusercontent.com/vladimirrott/claude-math/HEAD/.codex-plugin/plugin.json"
+      "owner": "not-so-fat",
+      "repo": "agent-deck",
+      "url": "https://github.com/not-so-fat/agent-deck",
+      "install_url": "https://raw.githubusercontent.com/not-so-fat/agent-deck/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
