@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-22T12:36:31.531292+00:00",
+  "last_updated": "2026-07-22T12:36:47.308004+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2628,6 +2628,21 @@
       "repo": "codex-skin-packs",
       "url": "https://github.com/ChannelerH/codex-skin-packs",
       "install_url": "https://raw.githubusercontent.com/ChannelerH/codex-skin-packs/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Hera Agent Unity",
+      "displayName": "Hera Agent Unity",
+      "description": "Controls and verifies a live Unity Editor through a low-token CLI, with scene, asset, Inspector, Play Mode, test, screenshot, and runtime C# workflows for Codex and other coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "NotNull92",
+      "repo": "hera-agent-unity",
+      "url": "https://github.com/NotNull92/hera-agent-unity",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "UIZZE",

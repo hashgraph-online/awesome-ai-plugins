@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-22",
-  "total": 179,
+  "total": 180,
   "platforms": [
     "codex",
     "grok"
@@ -2456,6 +2456,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/ChannelerH/codex-skin-packs/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Hera Agent Unity",
+      "url": "https://github.com/NotNull92/hera-agent-unity",
+      "owner": "NotNull92",
+      "repo": "hera-agent-unity",
+      "description": "Controls and verifies a live Unity Editor through a low-token CLI, with scene, asset, Inspector, Play Mode, test, screenshot, and runtime C# workflows for Codex and other coding agents",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
