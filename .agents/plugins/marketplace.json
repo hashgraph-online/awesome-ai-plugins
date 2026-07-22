@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-22T12:35:53.666313+00:00",
+  "last_updated": "2026-07-22T12:36:31.531292+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2613,6 +2613,21 @@
       "repo": "codex-process-jobs",
       "url": "https://github.com/joelfarthing/codex-process-jobs",
       "install_url": "https://raw.githubusercontent.com/joelfarthing/codex-process-jobs/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Skin Pack Installer",
+      "displayName": "Codex Skin Pack Installer",
+      "description": "Codex plugin and Skill that stages verified desktop skin packs from GitHub releases, validates files, and keeps restore guidance visible",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ChannelerH",
+      "repo": "codex-skin-packs",
+      "url": "https://github.com/ChannelerH/codex-skin-packs",
+      "install_url": "https://raw.githubusercontent.com/ChannelerH/codex-skin-packs/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "UIZZE",
