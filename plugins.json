@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-22",
-  "total": 175,
+  "total": 176,
   "platforms": [
     "codex",
     "grok"
@@ -2456,6 +2456,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Token Harbor",
+      "url": "https://github.com/NickHOI/Token-Harbor",
+      "owner": "NickHOI",
+      "repo": "Token-Harbor",
+      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
