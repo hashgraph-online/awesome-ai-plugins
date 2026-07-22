@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-22T12:37:11.917474+00:00",
+  "last_updated": "2026-07-22T20:15:15.051197+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -515,6 +515,21 @@
       "install_url": "https://raw.githubusercontent.com/ndycode/codex-multi-auth/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Codex Process Jobs",
+      "displayName": "Codex Process Jobs",
+      "description": "Run long local builds, tests, benchmarks, and inference jobs as durable detached processes with tracked status, bounded results, and completion delivery across Codex surfaces.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "joelfarthing",
+      "repo": "codex-process-jobs",
+      "url": "https://github.com/joelfarthing/codex-process-jobs",
+      "install_url": "https://raw.githubusercontent.com/joelfarthing/codex-process-jobs/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Codex Reviewer",
       "displayName": "Codex Reviewer",
       "description": "Second-pass review of Claude-driven plans and implementations.",
@@ -543,6 +558,21 @@
       "repo": "codex-rg-guard",
       "url": "https://github.com/Rycen7822/codex-rg-guard",
       "install_url": "https://raw.githubusercontent.com/Rycen7822/codex-rg-guard/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Skin Pack Installer",
+      "displayName": "Codex Skin Pack Installer",
+      "description": "Codex plugin and Skill that stages verified desktop skin packs from GitHub releases, validates files, and keeps restore guidance visible.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ChannelerH",
+      "repo": "codex-skin-packs",
+      "url": "https://github.com/ChannelerH/codex-skin-packs",
+      "install_url": "https://raw.githubusercontent.com/ChannelerH/codex-skin-packs/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex TUI Proof",
@@ -768,6 +798,21 @@
       "repo": "hera-agent-godot",
       "url": "https://github.com/NotNull92/hera-agent-godot",
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-godot/HEAD/plugins/hera-godot/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Hera Agent Unity",
+      "displayName": "Hera Agent Unity",
+      "description": "Controls and verifies a live Unity Editor through a low-token CLI, with scene, asset, Inspector, Play Mode, test, screenshot, and runtime C# workflows for Codex and other coding agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "NotNull92",
+      "repo": "hera-agent-unity",
+      "url": "https://github.com/NotNull92/hera-agent-unity",
+      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/plugins/hera-unity/.codex-plugin/plugin.json"
     },
     {
       "name": "HOL Guard Plugin",
@@ -1132,7 +1177,7 @@
     {
       "name": "spec-superflow",
       "displayName": "spec-superflow",
-      "description": "Spec-first workflow that bridges OpenSpec-style planning and Superpowers-style execution discipline with nine skills, Node 20 support, model profiles, and evidence-based review gates.",
+      "description": "Spec-first workflow with nine skills, auditable recovery commands, guarded workflow-path recommendations, Node 20 support, and evidence-based review gates.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1280,6 +1325,21 @@
       "install_url": "https://raw.githubusercontent.com/Colin4k1024/tsp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "token-optimizer",
+      "displayName": "token-optimizer",
+      "description": "Cut token usage 60-90% with caching, compression, and smart file tools \u2014 diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ooples",
+      "repo": "token-optimizer-mcp",
+      "url": "https://github.com/ooples/token-optimizer-mcp",
+      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/integrations/codex/plugin/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Tool Advisor",
       "displayName": "Tool Advisor",
       "description": "Read-only meta-skill that scans your MCP servers, skills, plugins, and CLI tools, then suggests up to three ranked approaches (Methodical / Fast / Deep) with a copy-paste Quick Action table.",
@@ -1308,6 +1368,21 @@
       "repo": "tree-ring-memory-codex-plugin",
       "url": "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/TerminallyLazy/tree-ring-memory-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "UIZZE",
+      "displayName": "UIZZE",
+      "description": "STOP UI SLOP. Gives Codex 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate before generic UI ships; connect it at https://uizze.com.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "samuelbushi",
+      "repo": "uizze",
+      "url": "https://github.com/samuelbushi/uizze",
+      "install_url": "https://raw.githubusercontent.com/samuelbushi/uizze/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Unforgit",
@@ -1880,6 +1955,21 @@
       "install_url": "https://raw.githubusercontent.com/GarethManning/education-agent-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Feishu to Codex",
+      "displayName": "Feishu to Codex",
+      "description": "Connect Codex to Feishu/Lark workflows for Docs, Messenger, Drive, Sheets, Base, Calendar, Tasks, Meetings, Mail, approvals, and more through the official Lark CLI.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "zlsbksdxl",
+      "repo": "codex-lark",
+      "url": "https://github.com/zlsbksdxl/codex-lark",
+      "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-lark/HEAD/plugins/feishu2codex/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Flow Studio Power Automate",
       "displayName": "Flow Studio Power Automate",
       "description": "Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs.",
@@ -2450,6 +2540,21 @@
       "install_url": "https://raw.githubusercontent.com/hanhuark/mechanical-engineering-research-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Token Harbor",
+      "displayName": "Token Harbor",
+      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "NickHOI",
+      "repo": "Token-Harbor",
+      "url": "https://github.com/NickHOI/Token-Harbor",
+      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "TokRepo Search",
       "displayName": "TokRepo Search",
       "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.",
@@ -2600,84 +2705,9 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
-      "name": "Codex Process Jobs",
-      "displayName": "Codex Process Jobs",
-      "description": "Run long local builds, tests, benchmarks, and inference jobs as durable detached processes with tracked status, bounded results, and completion delivery across Codex surfaces",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "joelfarthing",
-      "repo": "codex-process-jobs",
-      "url": "https://github.com/joelfarthing/codex-process-jobs",
-      "install_url": "https://raw.githubusercontent.com/joelfarthing/codex-process-jobs/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Codex Skin Pack Installer",
-      "displayName": "Codex Skin Pack Installer",
-      "description": "Codex plugin and Skill that stages verified desktop skin packs from GitHub releases, validates files, and keeps restore guidance visible",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "ChannelerH",
-      "repo": "codex-skin-packs",
-      "url": "https://github.com/ChannelerH/codex-skin-packs",
-      "install_url": "https://raw.githubusercontent.com/ChannelerH/codex-skin-packs/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Hera Agent Unity",
-      "displayName": "Hera Agent Unity",
-      "description": "Controls and verifies a live Unity Editor through a low-token CLI, with scene, asset, Inspector, Play Mode, test, screenshot, and runtime C# workflows for Codex and other coding agents",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "NotNull92",
-      "repo": "hera-agent-unity",
-      "url": "https://github.com/NotNull92/hera-agent-unity",
-      "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "token-optimizer",
-      "displayName": "token-optimizer",
-      "description": "Cut token usage 60-90% with caching, compression, and smart file tools \u2014 diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "ooples",
-      "repo": "token-optimizer-mcp",
-      "url": "https://github.com/ooples/token-optimizer-mcp",
-      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "UIZZE",
-      "displayName": "UIZZE",
-      "description": "STOP UI SLOP. Gives Codex 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate before generic UI ships; connect it at https://uizze.com",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "samuelbushi",
-      "repo": "uizze",
-      "url": "https://github.com/samuelbushi/uizze",
-      "install_url": "https://raw.githubusercontent.com/samuelbushi/uizze/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Feishu to Codex",
-      "displayName": "Feishu to Codex",
-      "description": "Connect Codex to Feishu/Lark workflows for Docs, Messenger, Drive, Sheets, Base, Calendar, Tasks, Meetings, Mail, approvals, and more through the official Lark CLI",
+      "name": "Exa Web Search",
+      "displayName": "Exa Web Search",
+      "description": "Search and fetch current web sources in Codex through the official Exa MCP server with browser OAuth",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2685,9 +2715,9 @@
         "codex"
       ],
       "owner": "zlsbksdxl",
-      "repo": "codex-lark",
-      "url": "https://github.com/zlsbksdxl/codex-lark",
-      "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-lark/HEAD/.codex-plugin/plugin.json"
+      "repo": "codex-exa",
+      "url": "https://github.com/zlsbksdxl/codex-exa",
+      "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-exa/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "sitemd",
@@ -2703,21 +2733,6 @@
       "repo": "sitemd",
       "url": "https://github.com/sitemd-cc/sitemd",
       "install_url": "https://raw.githubusercontent.com/sitemd-cc/sitemd/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Token Harbor",
-      "displayName": "Token Harbor",
-      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "NickHOI",
-      "repo": "Token-Harbor",
-      "url": "https://github.com/NickHOI/Token-Harbor",
-      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
