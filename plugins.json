@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-07-22",
-  "total": 180,
+  "total": 181,
   "platforms": [
     "codex",
     "grok"
@@ -2470,6 +2470,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "token-optimizer",
+      "url": "https://github.com/ooples/token-optimizer-mcp",
+      "owner": "ooples",
+      "repo": "token-optimizer-mcp",
+      "description": "Cut token usage 60-90% with caching, compression, and smart file tools \u2014 diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-22T12:36:47.308004+00:00",
+  "last_updated": "2026-07-22T12:37:11.917474+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2643,6 +2643,21 @@
       "repo": "hera-agent-unity",
       "url": "https://github.com/NotNull92/hera-agent-unity",
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "token-optimizer",
+      "displayName": "token-optimizer",
+      "description": "Cut token usage 60-90% with caching, compression, and smart file tools \u2014 diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ooples",
+      "repo": "token-optimizer-mcp",
+      "url": "https://github.com/ooples/token-optimizer-mcp",
+      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "UIZZE",
