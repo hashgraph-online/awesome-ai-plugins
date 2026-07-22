@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-07-22T12:35:10.638422+00:00",
+  "last_updated": "2026-07-22T12:35:53.666313+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2598,6 +2598,36 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Process Jobs",
+      "displayName": "Codex Process Jobs",
+      "description": "Run long local builds, tests, benchmarks, and inference jobs as durable detached processes with tracked status, bounded results, and completion delivery across Codex surfaces",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "joelfarthing",
+      "repo": "codex-process-jobs",
+      "url": "https://github.com/joelfarthing/codex-process-jobs",
+      "install_url": "https://raw.githubusercontent.com/joelfarthing/codex-process-jobs/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "UIZZE",
+      "displayName": "UIZZE",
+      "description": "STOP UI SLOP. Gives Codex 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate before generic UI ships; connect it at https://uizze.com",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "samuelbushi",
+      "repo": "uizze",
+      "url": "https://github.com/samuelbushi/uizze",
+      "install_url": "https://raw.githubusercontent.com/samuelbushi/uizze/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Feishu to Codex",
