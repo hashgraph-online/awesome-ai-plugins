@@ -75,51 +75,13 @@ All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scan
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
 See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
-The README is the human-readable cross-platform catalog. For clients that support the Codex marketplace format, this repo also publishes `.agents/plugins/marketplace.json` with mirrored installable bundles under `./plugins/`.
+The README is the human-readable cross-platform catalog. Machine-readable compatibility exports are available in `plugins.json` and `.agents/plugins/marketplace.json` for registry and automation consumers.
 
 ### Browse the catalog
 
 Browse the sections below or use the searchable [HOL Plugin Registry](https://hol.org/registry/plugins). Installation varies by client and project, so follow the linked project's setup guide.
 
-### Optional: use the Codex-compatible marketplace
-
-Codex users can install compatible entries directly by adding this repository as a marketplace source:
-
-**CLI:**
-
-```bash
-# Add this repo as a marketplace source (one-time setup)
-codex plugin marketplace add \
-  'https://github.com/hashgraph-online/awesome-ai-plugins.git' \
-  --ref 'main' \
-  --sparse '.agents/plugins' \
-  --sparse 'plugins'
-
-# Then browse and install (the marketplace name is derived from the repo name)
-codex plugin list --source awesome-ai-plugins
-codex plugin install <plugin-name> --source awesome-ai-plugins
-```
-
-Do not use the raw `marketplace.json` URL with `codex plugin marketplace add`.
-The Codex marketplace command clones a Git repository, so a raw GitHub file URL is
-treated like a repo URL and fails with `remote: 404: Not Found`.
-
-**Desktop App / IDE Extension:**
-
-1. Open Codex settings → Plugins → Next to search plugins input click on menu and select → `+Add More...`
-   <img width="1462" height="466" alt="image" src="https://github.com/user-attachments/assets/ae15f505-58a8-4199-bb7b-56a07b670b10" />
-
-2. Add this URL:
-
-   ```
-   https://github.com/hashgraph-online/awesome-ai-plugins.git
-   ```
-
-   <img width="1974" height="1064" alt="image" src="https://github.com/user-attachments/assets/ffbae59f-41ae-4ee3-9d52-864273ecdcb3" />
-
-3. The curated plugin list appears as an available marketplace source.
-
-Each plugin entry includes a `source.path` pointing at a mirrored bundle under `./plugins/` in this repo, so installations are fast and reproducible without hitting upstream repos at install time.
+This repository is a discovery catalog, not a universal installer. Follow each linked project's instructions for the clients and formats it supports.
 
 ## Official Plugins
 
@@ -398,7 +360,7 @@ $plugin-creator
 
 Distribution varies by client. Most projects publish from a GitHub repository; compatible Codex bundles can also use local marketplaces (`~/.agents/plugins/marketplace.json`) or repo marketplaces (`$REPO_ROOT/.agents/plugins/marketplace.json`). Follow each target client's current packaging and installation documentation.
 
-For this curated list, the machine-readable source of truth is the generated repo marketplace at `.agents/plugins/marketplace.json`. We keep the README for humans and `plugins.json` as a compatibility export for existing automation.
+For this curated list, the README is the editorial source of truth. Generated JSON files provide compatibility exports for registry and automation consumers; they are not a promise that every entry can be installed directly from this repository.
 
 ## Validate Before You Ship
 

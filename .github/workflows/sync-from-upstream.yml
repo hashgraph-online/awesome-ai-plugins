@@ -18,36 +18,16 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 1
 
-      - name: Checkout awesome-codex-plugins
-        uses: actions/checkout@v4
-        with:
-          repository: hashgraph-online/awesome-codex-plugins
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: codex-source
-          fetch-depth: 1
-
-      - name: Checkout awesome-grok-plugins
-        uses: actions/checkout@v4
-        with:
-          repository: hashgraph-online/awesome-grok-plugins
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: grok-source
-          fetch-depth: 1
-
-      - name: Sync README from codex
-        run: |
-          cp codex-source/README.md README.md
-
       - name: Regenerate combined JSON from all upstream sources
         run: |
           python3 scripts/generate_plugins_json.py || true
 
       - name: Commit and push
         run: |
-          if ! git diff --quiet -- README.md plugins.json .agents/plugins/marketplace.json; then
+          if ! git diff --quiet -- plugins.json .agents/plugins/marketplace.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md plugins.json .agents/plugins/marketplace.json
+            git add plugins.json .agents/plugins/marketplace.json
             git commit -m "chore: sync from upstream registries"
             git push
           else
