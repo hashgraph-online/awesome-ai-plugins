@@ -4,14 +4,13 @@
   <br>
 </p>
 
-<h1 align="center">Awesome Codex & ChatGPT Plugins</h1>
+<h1 align="center">Awesome AI Plugins</h1>
 
-<p align="center">A curated list of awesome plugins, skills, and resources for OpenAI Codex and ChatGPT.</p>
+<p align="center">A curated, cross-platform list of plugins, skills, MCP servers, apps, and agent tools for AI assistants.</p>
 
 <p align="center">
   <a href="https://hol.org/registry/plugins">
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9e063332-fd6c-4196-a8cb-e6880f8c06d1" />
-
+    <img src="assets/awesome-ai-plugins-hol.png" alt="Awesome AI Plugins by HOL" width="960" height="540">
   </a>
 </p>
 
@@ -23,11 +22,11 @@
 </p>
 
 <p align="center">
-  OpenAI <a href="https://openai.com/academy/codex-plugins-and-skills/">documents plugins and skills for Codex</a>, packaging skills, MCP servers, and app integrations into shareable, installable bundles across the Codex app, CLI, and IDE extensions.
+  Discover extensions for Codex, ChatGPT, Claude Code, Gemini CLI, Cursor, OpenCode, and other compatible AI assistants from one community-maintained catalog.
 </p>
 
 <p align="center">
-  Codex is now available inside the ChatGPT desktop app, while remaining a distinct coding workspace. OpenAI plugins can support workflows in ChatGPT, Codex, or both; this repository remains a Codex-compatible marketplace.
+  Listings may target one assistant, several assistants, or open standards such as Agent Skills and MCP. Check each project for its supported clients and installation instructions.
 </p>
 
 <br>
@@ -37,7 +36,7 @@
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
-- [Plugin Development](#plugin-development)
+- [Formats & Development](#formats--development)
 - [Guides & Articles](#guides--articles)
 - [Related Projects](#related-projects)
 - [Claim Your Plugin](#claim-your-plugin)
@@ -48,12 +47,13 @@
 
 ## Start Here
 
-New plugin workflow:
+New extension workflow:
 
-1. Create with `$plugin-creator`
-2. **Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)** — **Required: score ≥ 80, no high/critical findings**
-3. **Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)** — **Required for listing**
-4. Ship or submit with confidence
+1. Choose the clients and open formats you support
+2. Build the plugin, skill, MCP server, app, or agent tool
+3. **Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)** — **Required: score ≥ 80, no high/critical findings**
+4. **Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)** — **Required for listing**
+5. Ship or submit with confidence
 
 ### Quick preflight
 
@@ -64,7 +64,7 @@ pipx run plugin-scanner verify .
 
 ### Scanner Requirements (Mandatory for This List)
 
-All plugins submitted to **Awesome Codex Plugins** must pass the HOL AI Plugin Scanner:
+All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scanner:
 
 | Requirement  | Threshold                                      |
 | ------------ | ---------------------------------------------- |
@@ -75,25 +75,29 @@ All plugins submitted to **Awesome Codex Plugins** must pass the HOL AI Plugin S
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
 See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
-This repo publishes a Codex repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points at mirrored installable plugin bundles under `./plugins/`, so a clone of this repo can act as a curated plugin source in Codex.
+The README is the human-readable cross-platform catalog. For clients that support the Codex marketplace format, this repo also publishes `.agents/plugins/marketplace.json` with mirrored installable bundles under `./plugins/`.
 
-### Use this marketplace in Codex
+### Browse the catalog
 
-Install plugins directly from this curated list by pointing Codex at the repo marketplace:
+Browse the sections below or use the searchable [HOL Plugin Registry](https://hol.org/registry/plugins). Installation varies by client and project, so follow the linked project's setup guide.
+
+### Optional: use the Codex-compatible marketplace
+
+Codex users can install compatible entries directly by adding this repository as a marketplace source:
 
 **CLI:**
 
 ```bash
 # Add this repo as a marketplace source (one-time setup)
 codex plugin marketplace add \
-  'https://github.com/hashgraph-online/awesome-codex-plugins.git' \
+  'https://github.com/hashgraph-online/awesome-ai-plugins.git' \
   --ref 'main' \
   --sparse '.agents/plugins' \
   --sparse 'plugins'
 
 # Then browse and install (the marketplace name is derived from the repo name)
-codex plugin list --source awesome-codex-plugins
-codex plugin install <plugin-name> --source awesome-codex-plugins
+codex plugin list --source awesome-ai-plugins
+codex plugin install <plugin-name> --source awesome-ai-plugins
 ```
 
 Do not use the raw `marketplace.json` URL with `codex plugin marketplace add`.
@@ -108,7 +112,7 @@ treated like a repo URL and fails with `remote: 404: Not Found`.
 2. Add this URL:
 
    ```
-   https://github.com/hashgraph-online/awesome-codex-plugins.git
+   https://github.com/hashgraph-online/awesome-ai-plugins.git
    ```
 
    <img width="1974" height="1064" alt="image" src="https://github.com/user-attachments/assets/ffbae59f-41ae-4ee3-9d52-864273ecdcb3" />
@@ -147,6 +151,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 
 - [A Team](https://github.com/RBraga01/a-team) - Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.
 - [Aegis](https://github.com/GanyuanRan/Aegis) - An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.
+- [Agency Continuity Audit](https://github.com/revertcreations/agency-continuity-audit) - Read-only audit that distinguishes durable agent goals, state, corrections, restart evidence, authority boundaries, scheduler claims, and commercial proof from self-reported health.
 - [Agent Deck](https://github.com/not-so-fat/agent-deck) - One MCP for context management: bind self-improving playbooks, MCP tools, and API keys to the session.
 - [Agent Guard](https://github.com/JeongJaeSoon/agent-guard) - Real-time secret-leak guardrails for AI coding agents (Claude Code, Codex), Git hooks, and CI.
 - [Agent Harness Skills](https://github.com/yfge/agent-harness-skills) - Designs agent-ready repository harnesses with entrypoints, validation surfaces, runtime evidence, delivery records, and atomic commit guidance.
@@ -154,7 +159,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Agentizer](https://github.com/Humiris/wwa-transform) - Turn any website into an AI-powered agentfront with split-pane
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory that compounds between sessions.
 - [AgentPack](https://github.com/vishal2612200/agentpack) - Ranks repo context for Codex with likely files, skill recommendations, agent rules, commands, warnings, and compact task-focused packs before editing.
-- [Agency Continuity Audit](https://github.com/revertcreations/agency-continuity-audit) - Read-only audit that distinguishes durable agent goals, state, corrections, restart evidence, authority boundaries, scheduler claims, and commercial proof from self-reported health.
 - [Agentry Observability](https://github.com/fr33dr4g0n/agentry-public) - Agent-native product analytics, error logging, and deploy attribution for coding agents through one HTTP API.
 - [AgiFlow](https://github.com/AgiFlow/ai-plugin) - Project management workflows for AI coding agents with planning, grooming, task execution, review, and AgiFlow MCP integration.
 - [AIBoarding](https://github.com/gustavo-meilus/aiboarding) - Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.
@@ -357,7 +361,9 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
 
-## Plugin Development
+## Formats & Development
+
+AI extensions use several overlapping formats. Agent Skills provide reusable instructions, MCP servers expose tools and data, and client-specific plugin manifests package those capabilities for installation. Prefer open formats where practical, then add client adapters for the assistants you support.
 
 ### Getting Started
 
@@ -365,7 +371,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Official Docs: Build Plugins](https://developers.openai.com/codex/plugins/build) - Author and package plugins.
 - [Plugin Structure](https://developers.openai.com/codex/plugins/build#create-a-plugin-manually) - `.codex-plugin/plugin.json` manifest format.
 
-### Plugin Anatomy
+### Codex-Compatible Plugin Anatomy
 
 ```
 my-plugin/
@@ -380,7 +386,7 @@ my-plugin/
 └── mcp.json                  # Optional: MCP server configuration
 ```
 
-### Plugin Creator
+### Codex Plugin Creator
 
 Use the built-in skill to scaffold a new plugin:
 
@@ -390,7 +396,7 @@ $plugin-creator
 
 ### Publishing
 
-Currently no self-serve marketplace submission. Plugins are distributed via local marketplaces (`~/.agents/plugins/marketplace.json`), repo marketplaces (`$REPO_ROOT/.agents/plugins/marketplace.json`), or GitHub repos by pointing a marketplace source at a repo. OpenAI has stated third-party marketplace submissions are coming soon.
+Distribution varies by client. Most projects publish from a GitHub repository; compatible Codex bundles can also use local marketplaces (`~/.agents/plugins/marketplace.json`) or repo marketplaces (`$REPO_ROOT/.agents/plugins/marketplace.json`). Follow each target client's current packaging and installation documentation.
 
 For this curated list, the machine-readable source of truth is the generated repo marketplace at `.agents/plugins/marketplace.json`. We keep the README for humans and `plugins.json` as a compatibility export for existing automation.
 
@@ -435,7 +441,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Related Projects
 
-- [awesome-ai-plugins](https://github.com/hashgraph-online/awesome-ai-plugins) - Umbrella list covering Codex, Claude Code, Gemini CLI, and MCP servers.
+- [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
 
 ## Claim Your Plugin

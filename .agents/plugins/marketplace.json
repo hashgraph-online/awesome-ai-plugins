@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-09T16:05:30.757440+00:00",
+  "last_updated": "2026-08-09T17:29:48.777374+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -648,6 +648,21 @@
       "repo": "codex-usage-and-resets",
       "url": "https://github.com/joelfarthing/codex-usage-and-resets",
       "install_url": "https://raw.githubusercontent.com/joelfarthing/codex-usage-and-resets/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Context Guard",
+      "displayName": "Context Guard",
+      "description": "Preserves authoritative requirements and verification evidence across long-running Codex tasks and context compaction.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "GreenLv",
+      "repo": "codex-context-guard",
+      "url": "https://github.com/GreenLv/codex-context-guard",
+      "install_url": "https://raw.githubusercontent.com/GreenLv/codex-context-guard/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "debt-ops",
@@ -2240,6 +2255,21 @@
       "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json"
     },
     {
+      "name": "Lacuna Music",
+      "displayName": "Lacuna Music",
+      "description": "Generate original instrumental music and vocal songs from Codex through the Lacuna MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "JOYLINK-LTD",
+      "repo": "lacuna-plugin",
+      "url": "https://github.com/JOYLINK-LTD/lacuna-plugin",
+      "install_url": "https://raw.githubusercontent.com/JOYLINK-LTD/lacuna-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Langfuse Observability",
       "displayName": "Langfuse Observability",
       "description": "Query traces, debug exceptions, analyze sessions, and manage prompts via MCP tools.",
@@ -2898,36 +2928,6 @@
       "repo": "hol-guard-grok-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
-    },
-    {
-      "name": "Context Guard",
-      "displayName": "Context Guard",
-      "description": "Preserves authoritative requirements and verification evidence across long-running Codex tasks and context compaction",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "GreenLv",
-      "repo": "codex-context-guard",
-      "url": "https://github.com/GreenLv/codex-context-guard",
-      "install_url": "https://raw.githubusercontent.com/GreenLv/codex-context-guard/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Lacuna Music",
-      "displayName": "Lacuna Music",
-      "description": "Generate original instrumental music and vocal songs from Codex through the Lacuna MCP server",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "JOYLINK-LTD",
-      "repo": "lacuna-plugin",
-      "url": "https://github.com/JOYLINK-LTD/lacuna-plugin",
-      "install_url": "https://raw.githubusercontent.com/JOYLINK-LTD/lacuna-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "PDF Monster",
