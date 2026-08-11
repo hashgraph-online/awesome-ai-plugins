@@ -193,6 +193,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Quality Engineering Skills](https://github.com/RBraga01/Quality-Engineering-Skills) - 22 structured quality engineering skills for automotive and manufacturing: ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.
 - [RAG Reviewer](https://github.com/mimfort/rag_for_git) - Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.
 - [Registry Broker](https://github.com/hashgraph-online/registry-broker-codex-plugin) - Delegate tasks to specialist AI agents via the HOL Registry, plan, find, summon, and recover sessions.
+- [remem](https://github.com/remem-io/remem) - Persistent reasoning memory layer for AI agents with LLM-powered importance scoring, contradiction detection, knowledge graph construction, and session consolidation via MCP, CLI, and REST API.
 - [Reviewable HTML Workbench](https://github.com/u-ichi/reviewable-html-workbench) - Generate reviewable HTML documents, serve previews, collect inline review comments, and feed review outcomes back into agent workflows.
 - [River Review](https://github.com/s977043/river-review) - Versioned Skill Registry of code-review skills driven by a perspective-based review agent (code, security, performance, architecture, testing, adversarial) that verifies findings against the diff.
 - [RoadmapSmith](https://github.com/PapiScholz/roadmapsmith) - Evidence-backed ROADMAP.md workflows for AI coding agents with validation, sync, and roadmap generation across any tech stack.
