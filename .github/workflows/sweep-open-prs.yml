@@ -132,7 +132,7 @@ jobs:
       contents: read
       checks: write
       issues: write
-      pull-requests: read
+      pull-requests: write
     steps:
       - name: Check out validator
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2

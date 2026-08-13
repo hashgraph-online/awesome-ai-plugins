@@ -42,7 +42,11 @@ def github_api(repository: str, path: str, token: str, *, method: str = "GET", p
     try:
         with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
             return json.loads(response.read().decode("utf-8"))
-    except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError) as error:
+    except HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace").strip()
+        suffix = f": {detail}" if detail else ""
+        raise RuntimeError(f"GitHub API {method} {path} failed: HTTP {error.code}{suffix}") from error
+    except (URLError, TimeoutError, OSError, json.JSONDecodeError) as error:
         raise RuntimeError(f"GitHub API {method} {path} failed: {error}") from error
 
 
