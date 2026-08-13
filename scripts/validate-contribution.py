@@ -28,6 +28,11 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+try:
+    import yaml
+except ModuleNotFoundError:  # pragma: no cover - exercised in minimal runners
+    yaml = None
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 README_PATH = REPO_ROOT / "README.md"
 REQUEST_TIMEOUT_SECONDS = 30
@@ -36,19 +41,8 @@ USER_AGENT = "awesome-ai-plugins-contribution-validator"
 
 README_ENTRY_RE = re.compile(
     r"^- \[([^\]]+)\]\((https://github\.com/"
-    r"([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)(?:[?#][^)]*)?)\)\s*[-\u2013\u2014]\s*(.+)$"
-)
-SCANNER_ACTION_RE = re.compile(
-    r"^\s*(?:-\s*)?uses:\s*hashgraph-online/ai-plugin-scanner-action@[^\s#]+",
-    re.IGNORECASE | re.MULTILINE,
-)
-TRIGGER_BLOCK_RE = re.compile(
-    r"^\s*(?:pull_request|push)\s*:",
-    re.IGNORECASE | re.MULTILINE,
-)
-TRIGGER_INLINE_RE = re.compile(
-    r"^\s*on\s*:\s*(?:\[[^\]]*\b(?:pull_request|push)\b[^\]]*\]|(?:pull_request|push)\b)",
-    re.IGNORECASE | re.MULTILINE,
+    r"([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)(?:[?#][^)]*)?)\)\s*[-\u2013\u2014]\s*(.+)$",
+    re.MULTILINE,
 )
 
 
@@ -65,10 +59,62 @@ class ValidationError(Exception):
     """A user-facing contribution validation error."""
 
 
-def has_ci_trigger(workflow_text: str) -> bool:
-    """Return whether a workflow runs on push or pull_request."""
+def workflow_has_ci_trigger(document: object) -> bool:
+    """Return whether a parsed workflow runs on push or pull_request."""
 
-    return bool(TRIGGER_BLOCK_RE.search(workflow_text) or TRIGGER_INLINE_RE.search(workflow_text))
+    if not isinstance(document, dict):
+        return False
+
+    # PyYAML's YAML 1.1 resolver can load the key ``on`` as True.
+    trigger = document.get("on", document.get(True))
+    if isinstance(trigger, str):
+        return trigger in {"push", "pull_request"}
+    if isinstance(trigger, list):
+        return any(item in {"push", "pull_request"} for item in trigger)
+    if isinstance(trigger, dict):
+        return any(key in {"push", "pull_request"} for key in trigger)
+    return False
+
+
+def scanner_steps(document: object) -> list[str]:
+    """Return scanner action references from parsed workflow steps."""
+
+    if not isinstance(document, dict):
+        return []
+    jobs = document.get("jobs")
+    if not isinstance(jobs, dict):
+        return []
+
+    references: list[str] = []
+    for job in jobs.values():
+        if not isinstance(job, dict):
+            continue
+        steps = job.get("steps")
+        if not isinstance(steps, list):
+            continue
+        for step in steps:
+            if not isinstance(step, dict):
+                continue
+            uses = step.get("uses")
+            if not isinstance(uses, str):
+                continue
+            normalized = uses.strip()
+            if normalized.lower().startswith("hashgraph-online/ai-plugin-scanner-action@"):
+                references.append(normalized)
+    return references
+
+
+def parse_workflow_document(name: str, text: str) -> object:
+    """Parse workflow YAML with a safe loader and a clear dependency error."""
+
+    if yaml is None:
+        raise ValidationError(
+            "PyYAML is required to inspect source workflows; install PyYAML before running validation"
+        )
+    try:
+        return yaml.safe_load(text)
+    except yaml.YAMLError as error:
+        raise ValidationError(f"{name} is not valid workflow YAML: {error}") from error
 
 
 def git(*args: str) -> str:
@@ -213,19 +259,21 @@ def validate_scanner_ci(contribution: Contribution) -> None:
             f"{contribution.url} does not expose readable GitHub Actions workflows: {error}"
         ) from error
 
-    scanner_workflows = [
-        (name, text)
-        for name, text in files
-        if SCANNER_ACTION_RE.search(text)
-    ]
+    scanner_workflows: list[tuple[str, object, list[str]]] = []
+    for name, text in files:
+        document = parse_workflow_document(name, text)
+        references = scanner_steps(document)
+        if references:
+            scanner_workflows.append((name, document, references))
+
     if not scanner_workflows:
         raise ValidationError(
             f"{contribution.url} must invoke "
             "hashgraph-online/ai-plugin-scanner-action in .github/workflows"
         )
 
-    if not any(has_ci_trigger(text) for _, text in scanner_workflows):
-        names = ", ".join(name for name, _ in scanner_workflows)
+    if not any(workflow_has_ci_trigger(document) for _, document, _ in scanner_workflows):
+        names = ", ".join(name for name, _, _ in scanner_workflows)
         raise ValidationError(
             f"{contribution.url} scanner workflow ({names}) must run on push or pull_request"
         )
