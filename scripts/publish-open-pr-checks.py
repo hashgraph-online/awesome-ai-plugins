@@ -16,7 +16,7 @@ API_ROOT = "https://api.github.com"
 CHECK_NAME = "Open Plugin Contribution Gate"
 USER_AGENT = "awesome-ai-plugins-open-pr-sweep"
 REQUEST_TIMEOUT_SECONDS = 30
-SCAN_JOB_RE = re.compile(r"Scan PR #(\d+) source")
+SCAN_JOB_RE = re.compile(r"Scan PR (?:#(\d+) source|\((\d+),)")
 
 
 def github_api(repository: str, path: str, token: str, *, method: str = "GET", payload: object | None = None) -> object:
@@ -65,7 +65,8 @@ def scan_conclusions(repository: str, run_id: str, token: str) -> dict[int, list
                 continue
             match = SCAN_JOB_RE.search(name)
             if match:
-                conclusions.setdefault(int(match.group(1)), []).append(conclusion)
+                number = match.group(1) or match.group(2)
+                conclusions.setdefault(int(number), []).append(conclusion)
         if len(jobs) < 100:
             return conclusions
         page += 1
