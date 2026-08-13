@@ -34,6 +34,12 @@ All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scan
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
+Pull requests that add a Community Plugin entry are checked automatically by
+`.github/workflows/validate-contribution.yml`. The check confirms that the
+linked public repository runs `hashgraph-online/ai-plugin-scanner-action` from
+GitHub Actions, then scans the contributed repository with the same score and
+severity thresholds above.
+
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
 - Publish-readiness verification output
