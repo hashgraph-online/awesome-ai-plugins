@@ -67,6 +67,7 @@ class OpenPullRequest:
     head_sha: str
     base_ref: str
     base_sha: str
+    author_login: str = ""
 
 
 class ValidationError(Exception):
@@ -369,6 +370,7 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
         if not isinstance(head, dict) or not isinstance(base, dict):
             continue
         head_repository_payload = head.get("repo")
+        user_payload = payload.get("user")
         head_ref = head.get("ref")
         head_sha = head.get("sha")
         base_ref = base.get("ref")
@@ -382,6 +384,9 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
             continue
         if not isinstance(head_sha, str) or not isinstance(base_sha, str):
             continue
+        author_login = user_payload.get("login", "") if isinstance(user_payload, dict) else ""
+        if not isinstance(author_login, str):
+            author_login = ""
         pull_requests.append(
             OpenPullRequest(
                 number=number,
@@ -391,6 +396,7 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
                 head_sha=head_sha,
                 base_ref=base_ref,
                 base_sha=base_sha,
+                author_login=author_login,
             )
         )
     return pull_requests
@@ -458,6 +464,7 @@ def scan_open_pull_requests(
                     "pr_number": pull_request.number,
                     "title": pull_request.title,
                     "head_sha": pull_request.head_sha,
+                    "author_login": pull_request.author_login,
                     "state": "failure",
                     "contributions": [],
                     "failure_reasons": [str(error)],
@@ -472,6 +479,7 @@ def scan_open_pull_requests(
                     "pr_number": pull_request.number,
                     "title": pull_request.title,
                     "head_sha": pull_request.head_sha,
+                    "author_login": pull_request.author_login,
                     "state": "success",
                     "contributions": [],
                     "failure_reasons": [],
@@ -514,6 +522,7 @@ def scan_open_pull_requests(
                 "pr_number": pull_request.number,
                 "title": pull_request.title,
                 "head_sha": pull_request.head_sha,
+                "author_login": pull_request.author_login,
                 "state": "failure" if scanner_failures else "scan",
                 "contributions": scanner_contributions,
                 "failure_reasons": scanner_failures,

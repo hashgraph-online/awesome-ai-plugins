@@ -14,9 +14,11 @@ from urllib.request import Request, urlopen
 
 API_ROOT = "https://api.github.com"
 CHECK_NAME = "Open Plugin Contribution Gate"
+COMMENT_MARKER = "<!-- awesome-ai-plugins-contribution-gate -->"
 USER_AGENT = "awesome-ai-plugins-open-pr-sweep"
 REQUEST_TIMEOUT_SECONDS = 30
 SCAN_JOB_RE = re.compile(r"Scan PR (?:#(\d+) source|\((\d+),)")
+GITHUB_LOGIN_RE = re.compile(r"^[A-Za-z0-9-]{1,39}$")
 
 
 def github_api(repository: str, path: str, token: str, *, method: str = "GET", payload: object | None = None) -> object:
@@ -115,6 +117,125 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
     raise RuntimeError(f"unknown validator result state: {state}")
 
 
+def list_issue_comments(repository: str, number: int, token: str) -> list[dict[str, object]]:
+    """Return all issue comments for a pull request."""
+
+    comments: list[dict[str, object]] = []
+    page = 1
+    while True:
+        payload = github_api(
+            repository,
+            f"/issues/{number}/comments?per_page=100&page={page}",
+            token,
+        )
+        if not isinstance(payload, list):
+            raise RuntimeError(f"GitHub returned an invalid comments response for PR #{number}")
+        page_comments = [item for item in payload if isinstance(item, dict)]
+        comments.extend(page_comments)
+        if len(payload) < 100:
+            return comments
+        page += 1
+
+
+def remediation_comment(
+    result: dict[str, object],
+    conclusion: str,
+    check_title: str,
+    summary: str,
+    run_url: str,
+) -> str:
+    """Build an idempotent contributor-facing remediation comment."""
+
+    author_login = result.get("author_login")
+    mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
+    if conclusion == "success":
+        return (
+            f"{COMMENT_MARKER}\n\n"
+            f"✅ **Contribution gate passed.** {mention}, no action is required.\n\n"
+            f"The previous contribution-gate failure is resolved. "
+            f"[View the latest sweep]({run_url})."
+        )
+
+    if result.get("state") == "failure":
+        guidance = (
+            "1. Add a workflow under `.github/workflows/` in the linked source repository.\n"
+            "2. Trigger it on both `push` and `pull_request`, and invoke "
+            "`hashgraph-online/ai-plugin-scanner-action`.\n"
+            "3. Configure `plugin_dir: \".\"`, `mode: scan`, `min_score: 80`, and "
+            "`fail_on_severity: high`."
+        )
+    else:
+        guidance = (
+            "1. Run `pipx run plugin-scanner lint .`.\n"
+            "2. Run `pipx run plugin-scanner verify . --format text`.\n"
+            "3. Fix all critical/high findings and reach a score of at least 80, "
+            "then push the fixes and rerun the workflow."
+        )
+
+    return f"""{COMMENT_MARKER}
+
+{mention} — this pull request needs updates before it can be merged.
+
+### {check_title}
+{summary}
+
+### How to fix it
+{guidance}
+
+See the repository's [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) and [scanner guide](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md).
+
+After pushing the changes, this check and comment will update automatically: {run_url}
+"""
+
+
+def upsert_remediation_comment(
+    repository: str,
+    result: dict[str, object],
+    conclusion: str,
+    check_title: str,
+    summary: str,
+    run_url: str,
+    token: str,
+) -> None:
+    """Create or update the single contribution-gate comment for a PR."""
+
+    number = result.get("pr_number")
+    if not isinstance(number, int):
+        raise RuntimeError("validator returned an invalid PR number")
+    comments = list_issue_comments(repository, number, token)
+    existing = next(
+        (
+            comment
+            for comment in comments
+            if isinstance(comment.get("body"), str) and COMMENT_MARKER in comment["body"]
+        ),
+        None,
+    )
+    if conclusion == "success" and existing is None:
+        return
+
+    body = remediation_comment(result, conclusion, check_title, summary, run_url)
+    if existing is not None and isinstance(existing.get("id"), int):
+        github_api(
+            repository,
+            f"/issues/comments/{existing['id']}",
+            token,
+            method="PATCH",
+            payload={"body": body},
+        )
+        print(f"Updated contribution-gate comment for PR #{number}")
+        return
+
+    github_api(
+        repository,
+        f"/issues/{number}/comments",
+        token,
+        method="POST",
+        payload={"body": body},
+    )
+    print(f"Posted contribution-gate comment for PR #{number}")
+
+
 def publish_check(
     repository: str,
     result: dict[str, object],
@@ -169,6 +290,7 @@ def publish_check(
     else:
         github_api(repository, "/check-runs", token, method="POST", payload=payload)
     print(f"Published {CHECK_NAME} for PR #{number}: {conclusion}")
+    upsert_remediation_comment(repository, result, conclusion, check_title, summary, run_url, token)
 
 
 def main() -> int:
