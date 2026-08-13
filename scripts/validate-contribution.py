@@ -28,7 +28,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
 try:
@@ -63,7 +63,9 @@ class OpenPullRequest:
     number: int
     title: str
     head_repository: str
+    head_ref: str
     head_sha: str
+    base_ref: str
     base_sha: str
 
 
@@ -367,12 +369,16 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
         if not isinstance(head, dict) or not isinstance(base, dict):
             continue
         head_repository_payload = head.get("repo")
+        head_ref = head.get("ref")
         head_sha = head.get("sha")
+        base_ref = base.get("ref")
         base_sha = base.get("sha")
         if not isinstance(head_repository_payload, dict):
             continue
         head_repository = head_repository_payload.get("full_name")
         if not isinstance(head_repository, str):
+            continue
+        if not isinstance(head_ref, str) or not isinstance(base_ref, str):
             continue
         if not isinstance(head_sha, str) or not isinstance(base_sha, str):
             continue
@@ -381,7 +387,9 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
                 number=number,
                 title=title,
                 head_repository=head_repository,
+                head_ref=head_ref,
                 head_sha=head_sha,
+                base_ref=base_ref,
                 base_sha=base_sha,
             )
         )
@@ -391,7 +399,21 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
 def entries_for_open_pull_request(repository: str, pull_request: OpenPullRequest) -> list[Contribution]:
     """Extract new Community Plugin entries from a PR's exact base/head refs."""
 
-    base_readme = content_file(repository, "README.md", pull_request.base_sha)
+    head_owner = pull_request.head_repository.split("/", maxsplit=1)[0]
+    compare_ref = quote(
+        f"{pull_request.base_ref}...{head_owner}:{pull_request.head_ref}",
+        safe=".../:",
+    )
+    compare_url = f"https://api.github.com/repos/{repository}/compare/{compare_ref}"
+    compare_payload = github_json(compare_url)
+    if not isinstance(compare_payload, dict):
+        raise ValidationError("GitHub returned an invalid merge-base comparison")
+    merge_base_commit = compare_payload.get("merge_base_commit")
+    if not isinstance(merge_base_commit, dict) or not isinstance(merge_base_commit.get("sha"), str):
+        raise ValidationError("GitHub did not return a merge base for this pull request")
+    merge_base_sha = merge_base_commit["sha"]
+
+    base_readme = content_file(repository, "README.md", merge_base_sha)
     head_readme = content_file(pull_request.head_repository, "README.md", pull_request.head_sha)
     diff = "".join(
         difflib.unified_diff(
