@@ -40,6 +40,11 @@ linked public repository runs `hashgraph-online/ai-plugin-scanner-action` from
 GitHub Actions, then scans the contributed repository with the same score and
 severity thresholds above.
 
+Existing open pull requests are covered by the scheduled and manually
+dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
+PR's exact README base/head revisions without executing fork code, reports
+missing scanner CI, and runs the scanner for entries that pass the CI check.
+
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
 - Publish-readiness verification output

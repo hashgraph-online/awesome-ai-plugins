@@ -18,6 +18,8 @@ documented in CONTRIBUTING.md.
 from __future__ import annotations
 
 import argparse
+import base64
+import difflib
 import json
 import os
 import re
@@ -26,6 +28,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 try:
@@ -53,6 +56,15 @@ class Contribution:
     owner: str
     repo: str
     description: str
+
+
+@dataclass(frozen=True)
+class OpenPullRequest:
+    number: int
+    title: str
+    head_repository: str
+    head_sha: str
+    base_sha: str
 
 
 class ValidationError(Exception):
@@ -150,19 +162,17 @@ def current_readme_section(readme_lines: list[str], line_number: int) -> str:
     return heading
 
 
-def get_new_readme_entries(base_ref: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in the README diff."""
+def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: str) -> list[Contribution]:
+    """Find newly added Community Plugins entries in a README diff."""
 
-    diff = git("diff", base_ref, "--", "README.md")
-    if not diff or not README_PATH.exists():
+    if not diff:
         return []
 
-    base_readme = git("show", f"{base_ref}:README.md")
     base_urls = {
         normalize_url(match.group(2))
         for match in README_ENTRY_RE.finditer(base_readme)
     }
-    readme_lines = README_PATH.read_text(encoding="utf-8").splitlines()
+    readme_lines = head_readme.splitlines()
 
     entries: list[Contribution] = []
     seen_urls: set[str] = set()
@@ -196,7 +206,19 @@ def get_new_readme_entries(base_ref: str) -> list[Contribution]:
     return entries
 
 
-def request_bytes(url: str) -> bytes:
+def get_new_readme_entries(base_ref: str) -> list[Contribution]:
+    """Find newly added Community Plugins entries in the local README diff."""
+
+    diff = git("diff", base_ref, "--", "README.md")
+    if not diff or not README_PATH.exists():
+        return []
+
+    base_readme = git("show", f"{base_ref}:README.md")
+    head_readme = README_PATH.read_text(encoding="utf-8")
+    return get_new_readme_entries_from_diff(diff, base_readme, head_readme)
+
+
+def request_bytes(url: str, *, max_bytes: int = MAX_WORKFLOW_BYTES) -> bytes:
     """Fetch a bounded GitHub API/raw response."""
 
     headers = {
@@ -211,9 +233,9 @@ def request_bytes(url: str) -> bytes:
     try:
         with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
             content_length = response.headers.get("Content-Length")
-            if content_length and int(content_length) > MAX_WORKFLOW_BYTES:
-                raise ValidationError(f"workflow file is larger than {MAX_WORKFLOW_BYTES} bytes")
-            payload = response.read(MAX_WORKFLOW_BYTES + 1)
+            if content_length and int(content_length) > max_bytes:
+                raise ValidationError(f"response is larger than {max_bytes} bytes")
+            payload = response.read(max_bytes + 1)
     except HTTPError as error:
         if error.code == 404:
             raise ValidationError("source repository or workflow directory was not found") from error
@@ -221,9 +243,51 @@ def request_bytes(url: str) -> bytes:
     except (URLError, TimeoutError, OSError) as error:
         raise ValidationError(f"could not fetch GitHub metadata: {error}") from error
 
-    if len(payload) > MAX_WORKFLOW_BYTES:
-        raise ValidationError(f"workflow file is larger than {MAX_WORKFLOW_BYTES} bytes")
+    if len(payload) > max_bytes:
+        raise ValidationError(f"response is larger than {max_bytes} bytes")
     return payload
+
+
+def github_json(url: str) -> object:
+    """Fetch a bounded GitHub API JSON response."""
+
+    try:
+        return json.loads(request_bytes(url, max_bytes=4 * 1024 * 1024).decode("utf-8"))
+    except json.JSONDecodeError as error:
+        raise ValidationError(f"GitHub returned invalid JSON for {url}") from error
+
+
+def github_api_list(url: str) -> list[dict[str, object]]:
+    """Fetch all pages from a GitHub API list endpoint."""
+
+    values: list[dict[str, object]] = []
+    page = 1
+    while True:
+        separator = "&" if "?" in url else "?"
+        payload = github_json(f"{url}{separator}{urlencode({'per_page': 100, 'page': page})}")
+        if not isinstance(payload, list):
+            raise ValidationError(f"GitHub returned a non-list response for {url}")
+        page_values = [item for item in payload if isinstance(item, dict)]
+        values.extend(page_values)
+        if len(payload) < 100:
+            return values
+        page += 1
+
+
+def content_file(repository: str, path: str, ref: str) -> str:
+    """Read a UTF-8 file from a public repository at an exact ref."""
+
+    url = f"https://api.github.com/repos/{repository}/contents/{path}?{urlencode({'ref': ref})}"
+    payload = github_json(url)
+    if not isinstance(payload, dict):
+        raise ValidationError(f"{repository}/{path} is not a file")
+    encoded = payload.get("content")
+    if not isinstance(encoded, str):
+        raise ValidationError(f"GitHub did not return content for {repository}/{path}")
+    try:
+        return base64.b64decode(encoded, validate=False).decode("utf-8")
+    except (ValueError, UnicodeDecodeError) as error:
+        raise ValidationError(f"Could not decode {repository}/{path}") from error
 
 
 def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
@@ -279,6 +343,161 @@ def validate_scanner_ci(contribution: Contribution) -> None:
         )
 
 
+def list_open_pull_requests(repository: str, pull_request_number: int | None) -> list[OpenPullRequest]:
+    """Return open pull requests without checking out untrusted fork code."""
+
+    if pull_request_number is not None:
+        url = f"https://api.github.com/repos/{repository}/pulls/{pull_request_number}"
+        payload = github_json(url)
+        payloads = [payload]
+    else:
+        url = f"https://api.github.com/repos/{repository}/pulls?state=open"
+        payloads = github_api_list(url)
+
+    pull_requests: list[OpenPullRequest] = []
+    for payload in payloads:
+        if not isinstance(payload, dict):
+            continue
+        number = payload.get("number")
+        title = payload.get("title")
+        head = payload.get("head")
+        base = payload.get("base")
+        if not isinstance(number, int) or not isinstance(title, str):
+            continue
+        if not isinstance(head, dict) or not isinstance(base, dict):
+            continue
+        head_repository_payload = head.get("repo")
+        head_sha = head.get("sha")
+        base_sha = base.get("sha")
+        if not isinstance(head_repository_payload, dict):
+            continue
+        head_repository = head_repository_payload.get("full_name")
+        if not isinstance(head_repository, str):
+            continue
+        if not isinstance(head_sha, str) or not isinstance(base_sha, str):
+            continue
+        pull_requests.append(
+            OpenPullRequest(
+                number=number,
+                title=title,
+                head_repository=head_repository,
+                head_sha=head_sha,
+                base_sha=base_sha,
+            )
+        )
+    return pull_requests
+
+
+def entries_for_open_pull_request(repository: str, pull_request: OpenPullRequest) -> list[Contribution]:
+    """Extract new Community Plugin entries from a PR's exact base/head refs."""
+
+    base_readme = content_file(repository, "README.md", pull_request.base_sha)
+    head_readme = content_file(pull_request.head_repository, "README.md", pull_request.head_sha)
+    diff = "".join(
+        difflib.unified_diff(
+            base_readme.splitlines(keepends=True),
+            head_readme.splitlines(keepends=True),
+            fromfile="README.md",
+            tofile="README.md",
+        )
+    )
+    return get_new_readme_entries_from_diff(diff, base_readme, head_readme)
+
+
+def scan_open_pull_requests(
+    repository: str,
+    pull_request_number: int | None,
+    matrix_output: Path | None,
+    report_output: Path | None,
+    status_output: Path | None,
+) -> int:
+    """Validate open PR source repositories and emit a scanner matrix/report."""
+
+    pull_requests = list_open_pull_requests(repository, pull_request_number)
+    matrix: list[dict[str, object]] = []
+    report_lines = [
+        "## Open contribution sweep",
+        "",
+        f"Repository: `{repository}`",
+        f"Open pull requests checked: {len(pull_requests)}",
+        "",
+    ]
+    failures: list[dict[str, object]] = []
+
+    for pull_request in pull_requests:
+        prefix = f"PR #{pull_request.number} — {pull_request.title}"
+        try:
+            entries = entries_for_open_pull_request(repository, pull_request)
+        except ValidationError as error:
+            failures.append({"pr_number": pull_request.number, "error": str(error)})
+            report_lines.append(f"- **{prefix}: FAIL** — {error}")
+            continue
+
+        if not entries:
+            report_lines.append(f"- **{prefix}: PASS** — no new Community Plugins entries")
+            continue
+
+        report_lines.append(f"- **{prefix}**")
+        for entry in entries:
+            contribution = f"{entry.owner}/{entry.repo}"
+            try:
+                validate_scanner_ci(entry)
+            except ValidationError as error:
+                failures.append(
+                    {
+                        "pr_number": pull_request.number,
+                        "repository": contribution,
+                        "error": str(error),
+                    }
+                )
+                report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
+                continue
+
+            matrix.append(
+                {
+                    "pr_number": pull_request.number,
+                    "owner": entry.owner,
+                    "repo": entry.repo,
+                }
+            )
+            report_lines.append(f"  - `{contribution}`: scanner CI present; queued for score scan")
+
+    if not pull_requests:
+        report_lines.append("No open pull requests found.")
+    elif failures:
+        report_lines.extend(
+            [
+                "",
+                f"Scanner CI validation failures: {len(failures)}",
+                "Source repositories must add the HOL AI Plugin Scanner workflow before merge.",
+            ]
+        )
+    else:
+        report_lines.extend(["", "All open contribution entries passed scanner CI validation."])
+
+    report = "\n".join(report_lines) + "\n"
+    if matrix_output:
+        matrix_output.parent.mkdir(parents=True, exist_ok=True)
+        matrix_output.write_text(json.dumps(matrix, separators=(",", ":")), encoding="utf-8")
+    if report_output:
+        report_output.parent.mkdir(parents=True, exist_ok=True)
+        report_output.write_text(report, encoding="utf-8")
+    if status_output:
+        status_output.parent.mkdir(parents=True, exist_ok=True)
+        status_output.write_text(
+            json.dumps({"has_failures": bool(failures), "failures": failures}, separators=(",", ":")),
+            encoding="utf-8",
+        )
+
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with Path(summary_path).open("a", encoding="utf-8") as summary:
+            summary.write(report)
+
+    print(report, end="")
+    return 0
+
+
 def write_matrix(path: Path, entries: list[Contribution]) -> None:
     """Write the scanner job matrix as compact JSON."""
 
@@ -293,6 +512,21 @@ def write_matrix(path: Path, entries: list[Contribution]) -> None:
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--open-prs",
+        action="store_true",
+        help="Validate open pull requests through the GitHub API without checking out fork code",
+    )
+    parser.add_argument(
+        "--repository",
+        default=os.environ.get("GITHUB_REPOSITORY", ""),
+        help="owner/repository to inspect in --open-prs mode",
+    )
+    parser.add_argument(
+        "--pr-number",
+        type=int,
+        help="Limit --open-prs mode to one pull request",
+    )
+    parser.add_argument(
         "--base-ref",
         default=os.environ.get("GITHUB_BASE_REF", "origin/main"),
         help="Git ref to compare against (default: GITHUB_BASE_REF or origin/main)",
@@ -302,11 +536,33 @@ def parse_args():
         type=Path,
         help="Write the scanner job matrix JSON to this path",
     )
+    parser.add_argument(
+        "--report-output",
+        type=Path,
+        help="Write the open-PR Markdown report to this path",
+    )
+    parser.add_argument(
+        "--status-output",
+        type=Path,
+        help="Write open-PR validation status JSON to this path",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.open_prs:
+        if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", args.repository):
+            print("ERROR: --repository must be an owner/repository pair", file=sys.stderr)
+            return 1
+        return scan_open_pull_requests(
+            args.repository,
+            args.pr_number,
+            args.matrix_output,
+            args.report_output,
+            args.status_output,
+        )
+
     if not git("rev-parse", "--verify", args.base_ref):
         print(f"ERROR: base ref '{args.base_ref}' is not available", file=sys.stderr)
         return 1
