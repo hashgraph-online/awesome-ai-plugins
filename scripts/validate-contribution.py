@@ -445,6 +445,7 @@ def scan_open_pull_requests(
         "",
     ]
     failures: list[dict[str, object]] = []
+    results: list[dict[str, object]] = []
 
     for pull_request in pull_requests:
         prefix = f"PR #{pull_request.number} — {pull_request.title}"
@@ -452,14 +453,36 @@ def scan_open_pull_requests(
             entries = entries_for_open_pull_request(repository, pull_request)
         except ValidationError as error:
             failures.append({"pr_number": pull_request.number, "error": str(error)})
+            results.append(
+                {
+                    "pr_number": pull_request.number,
+                    "title": pull_request.title,
+                    "head_sha": pull_request.head_sha,
+                    "state": "failure",
+                    "contributions": [],
+                    "failure_reasons": [str(error)],
+                }
+            )
             report_lines.append(f"- **{prefix}: FAIL** — {error}")
             continue
 
         if not entries:
+            results.append(
+                {
+                    "pr_number": pull_request.number,
+                    "title": pull_request.title,
+                    "head_sha": pull_request.head_sha,
+                    "state": "success",
+                    "contributions": [],
+                    "failure_reasons": [],
+                }
+            )
             report_lines.append(f"- **{prefix}: PASS** — no new Community Plugins entries")
             continue
 
         report_lines.append(f"- **{prefix}**")
+        scanner_contributions: list[dict[str, str]] = []
+        scanner_failures: list[str] = []
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
             try:
@@ -472,9 +495,11 @@ def scan_open_pull_requests(
                         "error": str(error),
                     }
                 )
+                scanner_failures.append(f"{contribution}: {error}")
                 report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
                 continue
 
+            scanner_contributions.append({"owner": entry.owner, "repo": entry.repo})
             matrix.append(
                 {
                     "pr_number": pull_request.number,
@@ -483,6 +508,17 @@ def scan_open_pull_requests(
                 }
             )
             report_lines.append(f"  - `{contribution}`: scanner CI present; queued for score scan")
+
+        results.append(
+            {
+                "pr_number": pull_request.number,
+                "title": pull_request.title,
+                "head_sha": pull_request.head_sha,
+                "state": "failure" if scanner_failures else "scan",
+                "contributions": scanner_contributions,
+                "failure_reasons": scanner_failures,
+            }
+        )
 
     if not pull_requests:
         report_lines.append("No open pull requests found.")
@@ -507,7 +543,14 @@ def scan_open_pull_requests(
     if status_output:
         status_output.parent.mkdir(parents=True, exist_ok=True)
         status_output.write_text(
-            json.dumps({"has_failures": bool(failures), "failures": failures}, separators=(",", ":")),
+            json.dumps(
+                {
+                    "has_failures": bool(failures),
+                    "failures": failures,
+                    "results": results,
+                },
+                separators=(",", ":"),
+            ),
             encoding="utf-8",
         )
 

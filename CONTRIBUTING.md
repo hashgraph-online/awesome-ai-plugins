@@ -43,7 +43,8 @@ severity thresholds above.
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
 PR's exact README base/head revisions without executing fork code, reports
-missing scanner CI, and runs the scanner for entries that pass the CI check.
+missing scanner CI, runs the scanner for entries that pass the CI check, and
+publishes the result on each PR head for scheduled/manual sweeps.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
