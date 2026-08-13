@@ -146,6 +146,7 @@ def publish_check(
             "summary": f"PR #{number} — {title}\n\n{summary}",
         },
     }
+    update_payload = {key: value for key, value in payload.items() if key != "head_sha"}
 
     existing = github_api(
         repository,
@@ -157,7 +158,13 @@ def publish_check(
         item for item in check_runs if isinstance(item, dict) and item.get("name") == CHECK_NAME
     ]
     if matching and isinstance(matching[-1].get("id"), int):
-        github_api(repository, f"/check-runs/{matching[-1]['id']}", token, method="PATCH", payload=payload)
+        github_api(
+            repository,
+            f"/check-runs/{matching[-1]['id']}",
+            token,
+            method="PATCH",
+            payload=update_payload,
+        )
     else:
         github_api(repository, "/check-runs", token, method="POST", payload=payload)
     print(f"Published {CHECK_NAME} for PR #{number}: {conclusion}")
