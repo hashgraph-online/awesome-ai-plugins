@@ -58,16 +58,34 @@ The scanner checks 7 categories totaling 142 points:
 ```yaml
 name: Plugin Security Scan
 on: [pull_request, push]
+permissions:
+  contents: read
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: hashgraph-online/ai-plugin-scanner-action@v1
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: hashgraph-online/ai-plugin-scanner-action@55616c962cf86368423f7673b2ecdfdbe613d1af # v1.2.515
         with:
           plugin_dir: "."
+          min_score: 80
           fail_on_severity: high
 ```
+
+### Supply-chain properties
+
+The recommended workflow is intentionally constrained:
+
+- `contents: read` is the only GitHub permission;
+- no repository secrets are required;
+- checkout credentials are not persisted;
+- online probing and SARIF upload are disabled unless explicitly enabled;
+- the scanner action and its dependencies are pinned;
+- the scanner wheel is checked against a committed SHA-256 and verified PyPI provenance before installation.
+
+Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner-action) and pinned commit before enabling it. A passing result is a consistent baseline for community review, not a claim that software is risk-free.
 
 ### Required for Awesome AI Plugins listing
 

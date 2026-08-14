@@ -12,6 +12,12 @@ Thank you for considering a contribution!
    ```
 4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, MCP servers, or Cross-AI tools
 
+## What an accepted listing provides
+
+Accepted extensions can be indexed in the [HOL Plugin Registry](https://hol.org/registry/plugins), where they receive a dedicated public profile with trust signals and links to the project.
+
+The registry profile includes a standard **dofollow backlink** to the extension's repository or homepage. This gives search engines a crawlable reference from HOL and may improve discovery and SEO, although no search ranking is guaranteed.
+
 ## Validation
 
 Before submitting:
@@ -33,6 +39,31 @@ All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scan
 | **CI** | Scanner must run in your repo's GitHub Actions |
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
+
+### Why scanner CI is required
+
+AI extensions can register hooks, execute commands, read environment variables, and influence an agent's behavior. A compromised extension can therefore affect users outside the original repository. Scanner CI gives every community listing the same reproducible baseline for identifying:
+
+- committed secrets and unsafe credential handling;
+- dangerous hooks or command execution;
+- overly broad GitHub Actions permissions;
+- unpinned third-party actions and dependencies;
+- malformed or misleading extension metadata.
+
+A passing scan is not a guarantee that an extension is harmless. It is reviewable evidence that every listed project cleared the same minimum checks, which helps maintainers catch common supply-chain risks before users install the extension.
+
+### What the scanner workflow can access
+
+The recommended workflow:
+
+- grants only `contents: read`;
+- does not require repository secrets or write permissions;
+- keeps live network probing disabled by default;
+- installs a fixed scanner release;
+- verifies the scanner wheel's SHA-256 and PyPI provenance;
+- uploads SARIF only when the maintainer explicitly enables it.
+
+The example in [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md) pins GitHub Actions to immutable commit SHAs so a mutable tag cannot silently change the code executed by the workflow.
 
 Pull requests that add a Community Plugin entry are checked automatically by
 `.github/workflows/validate-contribution.yml`. The check confirms that the
