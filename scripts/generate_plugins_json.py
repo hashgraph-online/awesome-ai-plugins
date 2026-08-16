@@ -372,7 +372,10 @@ def generate_marketplace_json(plugins: list[dict]) -> dict:
     return {
         "schema_version": "1.0",
         "source": "awesome-ai-plugins",
-        "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        # Keep regeneration deterministic within a day. A wall-clock
+        # timestamp would make the sync workflow commit on every run and
+        # retrigger itself indefinitely.
+        "last_updated": datetime.date.today().isoformat(),
         "plugins": plugins,
     }
 

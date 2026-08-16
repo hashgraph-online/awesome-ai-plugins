@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 SCRIPT_PATH = Path(__file__).resolve().parents[1] / "scripts/generate_plugins_json.py"
@@ -13,6 +14,11 @@ SPEC.loader.exec_module(MODULE)
 
 
 class GeneratePluginsJsonTests(unittest.TestCase):
+    def test_marketplace_timestamp_is_stable_for_the_day(self) -> None:
+        marketplace = MODULE.generate_marketplace_json([])
+
+        self.assertEqual(marketplace["last_updated"], date.today().isoformat())
+
     def test_merges_deepseek_ecosystem_into_existing_repository(self) -> None:
         upstream = [
             {
