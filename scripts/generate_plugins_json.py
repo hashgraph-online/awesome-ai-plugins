@@ -35,6 +35,15 @@ INSTALL_PATH_CANDIDATES = (
     ".codex/plugin.json",
 )
 INSTALL_URL_PROBE_TIMEOUT = 6.0
+DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
+
+# Community entries live under one README section. Keep the platform attached
+# to each subsection so a DeepSeek Harness entry is not misclassified as a
+# Codex plugin merely because both catalogs share the same human-readable
+# section.
+COMMUNITY_CATEGORY_PLATFORMS = {
+    "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
+}
 
 
 def probe_install_url(owner: str, repo: str) -> str | None:
@@ -192,6 +201,7 @@ PLATFORM_SECTIONS = {
     "OpenCode Plugins": "opencode",
     "Google Gemini CLI Plugins": "gemini-cli",
     "MCP Servers (Cross-Platform)": "mcp",
+    "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
     # Current README structure: a single `## Community Plugins` section with
     # `###` subcategories. Treat its entries as codex marketplace plugins.
     "Community Plugins": "codex",
@@ -210,6 +220,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
     plugins: list[dict] = []
     current_platform: str | None = None
+    current_section = ""
     current_category = ""
 
     h2_re = re.compile(r"^##\s+(.+?)\s*$")
@@ -219,13 +230,19 @@ def parse_plugins(readme_path: Path) -> list[dict]:
     for line in content.split("\n"):
         h2 = h2_re.match(line)
         if h2:
-            current_platform = PLATFORM_SECTIONS.get(h2.group(1).strip())
+            current_section = h2.group(1).strip()
+            current_platform = PLATFORM_SECTIONS.get(current_section)
             current_category = ""
             continue
 
         h3 = h3_re.match(line.strip())
         if h3:
-            current_category = h3.group(1)
+            current_category = h3.group(1).strip()
+            if current_section == "Community Plugins":
+                current_platform = COMMUNITY_CATEGORY_PLATFORMS.get(
+                    current_category,
+                    PLATFORM_SECTIONS["Community Plugins"],
+                )
             continue
 
         item = item_re.match(line.strip())
@@ -246,7 +263,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         owner = owner_match.group(1)
         repo = owner_match.group(2).removesuffix(".git")
 
-        plugins.append({
+        plugin = {
             "name": name,
             "url": url,
             "owner": owner,
@@ -255,11 +272,15 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             "category": current_category,
             "platform": current_platform,
             "source": "awesome-ai-plugins",
-            "install_url": (
+        }
+        # DeepSeek Harness plugins are Cordis/npm modules and intentionally do
+        # not require a Codex-style .codex-plugin/plugin.json manifest.
+        if current_platform != DEEPSEEK_HARNESS_PLATFORM:
+            plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
-            ),
-        })
+            )
+        plugins.append(plugin)
 
     return sort_plugins(plugins)
 
@@ -283,6 +304,13 @@ def merge_readme_additions(
         if not key or key in seen:
             continue
         seen.add(key)
+
+        if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+            # DSH resolves package/git specs through `dsh plugin add`; a
+            # Codex manifest URL would be misleading and usually 404.
+            plugin.pop("install_url", None)
+            additions.append(normalize_plugin(plugin))
+            continue
 
         probed = probe_install_url(plugin["owner"], plugin["repo"])
         if probed:

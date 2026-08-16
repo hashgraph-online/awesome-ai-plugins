@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  Discover extensions for Codex, ChatGPT, Claude Code, Gemini CLI, Cursor, OpenCode, and other compatible AI assistants from one community-maintained catalog.
+  Discover extensions for Codex, ChatGPT, Claude Code, Gemini CLI, DeepSeek Harness, Cursor, OpenCode, and other compatible AI assistants from one community-maintained catalog.
 </p>
 
 <p align="center">
@@ -36,6 +36,7 @@
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
+  - [DeepSeek Harness Plugins](#deepseek-harness-plugins)
 - [Formats & Development](#formats--development)
 - [Guides & Articles](#guides--articles)
 - [Related Projects](#related-projects)
@@ -330,9 +331,18 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
 
+### DeepSeek Harness Plugins
+
+DeepSeek Harness (DSH) plugins are Cordis modules or npm packages that expose a
+`dsh.bundle` manifest and can be installed with `dsh plugin add`. Add verified
+community plugins here in alphabetical order. See the [official DeepSeek Harness
+plugin tutorial](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-tutorial/01-first-plugin.md)
+and the [`dsh-plugin` community topic](https://github.com/topics/dsh-plugin) before
+submitting a repository.
+
 ## Formats & Development
 
-AI extensions use several overlapping formats. Agent Skills provide reusable instructions, MCP servers expose tools and data, and client-specific plugin manifests package those capabilities for installation. Prefer open formats where practical, then add client adapters for the assistants you support.
+AI extensions use several overlapping formats. Agent Skills provide reusable instructions, MCP servers expose tools and data, DeepSeek Harness loads Cordis modules/npm packages, and client-specific plugin manifests package those capabilities for installation. Prefer open formats where practical, then add client adapters for the assistants you support.
 
 ### Getting Started
 
@@ -353,6 +363,28 @@ my-plugin/
 │       └── references/       # Optional: docs and templates
 ├── apps/                     # Optional: app integrations
 └── mcp.json                  # Optional: MCP server configuration
+```
+
+### DeepSeek Harness Plugin Anatomy
+
+DeepSeek Harness plugins export a Cordis `apply` function. Installable packages
+declare a `dsh.bundle` entry in `package.json`; they do not need a
+`.codex-plugin/plugin.json` file.
+
+```ts
+import type { Context } from '@deepseek-ai/cordis'
+
+export const name = 'my-plugin'
+
+export function apply(ctx: Context) {
+  // Register services, tools, or UI contributions with ctx.
+}
+```
+
+Install a published package or GitHub package through the DSH profile manager:
+
+```bash
+dsh plugin add <npm-package-or-github-spec>
 ```
 
 ### Codex Plugin Creator
@@ -410,6 +442,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Related Projects
 
+- [Awesome DeepSeek Harness Plugins](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) - Community-maintained DSH plugin list and discovery reference.
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
 

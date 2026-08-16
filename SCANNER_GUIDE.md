@@ -37,7 +37,9 @@ plugin-scanner verify /path/to/plugin --format text
 
 ## Scoring System
 
-The scanner checks 7 categories totaling 142 points:
+The scanner checks 7 categories totaling 142 points. For DeepSeek Harness
+packages, the scanner evaluates the repository and package surfaces even though
+the runtime uses Cordis and `dsh.bundle` rather than a Codex manifest:
 
 | Category | Points | Key Checks |
 |----------|--------|------------|
@@ -50,6 +52,14 @@ The scanner checks 7 categories totaling 142 points:
 | Code Quality | 10 | No TODOs, no debug code, consistent style |
 
 **Passing criteria:** Score ≥ 80/142, with no critical or high severity findings.
+
+### DeepSeek Harness package checks
+
+DeepSeek Harness plugins should keep the installable `dsh.bundle` declaration in
+`package.json`, export a Cordis `apply(ctx)` entry point, and document a tested
+`dsh plugin add <package-or-github-spec>` flow. The scanner CI gate remains the
+same for every ecosystem: score at least 80 and fail on high or critical
+findings.
 
 ## CI/CD Integration
 

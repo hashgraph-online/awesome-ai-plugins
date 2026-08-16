@@ -10,7 +10,15 @@ Thank you for considering a contribution!
    ```
    - [Extension Name](https://github.com/owner/repo) - Description (max 1 sentence).
    ```
-4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, MCP servers, or Cross-AI tools
+4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+
+### DeepSeek Harness submissions
+
+DeepSeek Harness (DSH) plugins are Cordis modules or npm packages. A listed
+package must expose an `apply(ctx)` plugin entry point and declare an installable
+`dsh.bundle` in `package.json`; a Codex `.codex-plugin/plugin.json` manifest is
+not required. Use the exact GitHub repository URL in the README and document the
+package name or `dsh plugin add` command in that repository's README.
 
 ## What an accepted listing provides
 
@@ -65,7 +73,8 @@ The recommended workflow:
 
 The example in [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md) pins GitHub Actions to immutable commit SHAs so a mutable tag cannot silently change the code executed by the workflow.
 
-Pull requests that add a Community Plugin entry are checked automatically by
+Pull requests that add a Community Plugin entry, including the DeepSeek Harness
+Plugins subsection, are checked automatically by
 `.github/workflows/validate-contribution.yml`. The check confirms that the
 linked public repository runs `hashgraph-online/ai-plugin-scanner-action` from
 GitHub Actions, then scans the contributed repository with the same score and
