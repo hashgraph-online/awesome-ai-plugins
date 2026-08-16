@@ -301,8 +301,26 @@ def merge_readme_additions(
     additions: list[dict] = []
     for plugin in parse_plugins(readme_path):
         key = normalize_repo_key(plugin)
-        if not key or key in seen:
+        if not key:
             continue
+
+        if key in seen:
+            # A repository can support multiple runtimes. Preserve a
+            # DeepSeek Harness contribution when the same repository already
+            # exists in an upstream Codex (or earlier README) catalog entry.
+            if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+                for existing in (*upstream, *additions):
+                    if normalize_repo_key(existing) != key:
+                        continue
+                    ecosystems = existing.get("ecosystems")
+                    if not isinstance(ecosystems, list) or not ecosystems:
+                        ecosystems = [existing.get("platform", "codex")]
+                        existing["ecosystems"] = ecosystems
+                    if DEEPSEEK_HARNESS_PLATFORM not in ecosystems:
+                        ecosystems.append(DEEPSEEK_HARNESS_PLATFORM)
+                    break
+            continue
+
         seen.add(key)
 
         if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
