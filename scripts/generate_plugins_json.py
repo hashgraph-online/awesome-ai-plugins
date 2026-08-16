@@ -39,6 +39,7 @@ KIMI_MANIFEST_PATH_CANDIDATES = (
     ".kimi-plugin/plugin.json",
     "plugin.json",
 )
+GROK_MANIFEST_PATH_CANDIDATES = (".grok-plugin/plugin.json",)
 INSTALL_URL_PROBE_TIMEOUT = 6.0
 DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
 GROK_PLATFORM = "grok"
@@ -371,6 +372,15 @@ def merge_readme_additions(
             continue
 
         if plugin.get("platform") == GROK_PLATFORM:
+            probed = probe_install_url(
+                plugin["owner"],
+                plugin["repo"],
+                GROK_MANIFEST_PATH_CANDIDATES,
+            )
+            if probed:
+                plugin["install_url"] = probed
+            else:
+                plugin.pop("install_url", None)
             additions.append(normalize_plugin(plugin))
             continue
 

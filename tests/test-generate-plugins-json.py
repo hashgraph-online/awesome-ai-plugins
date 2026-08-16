@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 SCRIPT_PATH = Path(__file__).resolve().parents[1] / "scripts/generate_plugins_json.py"
 SPEC = importlib.util.spec_from_file_location("generate_plugins_json", SCRIPT_PATH)
@@ -93,6 +94,21 @@ class GeneratePluginsJsonTests(unittest.TestCase):
 
         self.assertEqual(added, 0)
         self.assertEqual(plugins[0]["ecosystems"], ["codex", "kimi"])
+
+    def test_omits_optional_grok_manifest_when_probe_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### Grok Plugins\n\n"
+                "- [Grok Demo](https://github.com/example/grok-demo) - Grok plugin.\n"
+            )
+
+            with patch.object(MODULE, "probe_install_url", return_value=None):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 1)
+        self.assertNotIn("install_url", plugins[0])
 
 
 if __name__ == "__main__":
