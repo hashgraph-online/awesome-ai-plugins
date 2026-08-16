@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  Discover extensions for Codex, ChatGPT, Claude Code, Gemini CLI, DeepSeek Harness, Cursor, OpenCode, and other compatible AI assistants from one community-maintained catalog.
+  Discover extensions for Codex, ChatGPT, Claude Code, Gemini CLI, Grok, Kimi, DeepSeek Harness, Cursor, OpenCode, and other compatible AI assistants from one community-maintained catalog.
 </p>
 
 <p align="center">
@@ -36,6 +36,8 @@
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
+  - [Grok Plugins](#grok-plugins)
+  - [Kimi Plugins](#kimi-plugins)
   - [DeepSeek Harness Plugins](#deepseek-harness-plugins)
 - [Formats & Development](#formats--development)
 - [Guides & Articles](#guides--articles)
@@ -331,6 +333,25 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
 
+### Grok Plugins
+
+xAI Grok Build plugins can bundle skills, commands, agents, hooks, MCP servers,
+and language-server configuration. A native plugin may include
+`.grok-plugin/plugin.json`; install a repository with `grok plugin install
+owner/repo --trust`. Add verified community plugins here in alphabetical order.
+See the [official xAI plugin marketplace](https://github.com/xai-org/plugin-marketplace)
+and [Grok plugin guide](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/09-plugins.md)
+before submitting.
+
+### Kimi Plugins
+
+Kimi Code plugins package skills, agents, and MCP servers for the Kimi runtime.
+Depending on the plugin version, a repository can expose `kimi.plugin.json` or
+`.kimi-plugin/plugin.json`; install a GitHub repository with Kimi Code's
+`/plugins install https://github.com/owner/repo` command. Add verified community
+plugins here in alphabetical order. See the [official Kimi plugin documentation](https://github.com/MoonshotAI/kimi-code/blob/main/docs/en/customization/plugins.md)
+before submitting.
+
 ### DeepSeek Harness Plugins
 
 DeepSeek Harness (DSH) plugins are Cordis modules or npm packages that expose a
@@ -342,7 +363,7 @@ submitting a repository.
 
 ## Formats & Development
 
-AI extensions use several overlapping formats. Agent Skills provide reusable instructions, MCP servers expose tools and data, DeepSeek Harness loads Cordis modules/npm packages, and client-specific plugin manifests package those capabilities for installation. Prefer open formats where practical, then add client adapters for the assistants you support.
+AI extensions use several overlapping formats. Agent Skills provide reusable instructions, MCP servers expose tools and data, DeepSeek Harness loads Cordis modules/npm packages, and client-specific plugin manifests package those capabilities for installation. Grok Build and Kimi Code each have native plugin manifests and runtime installers. Prefer open formats where practical, then add client adapters for the assistants you support.
 
 ### Getting Started
 
@@ -385,6 +406,50 @@ Install a published package or GitHub package through the DSH profile manager:
 
 ```bash
 dsh plugin add <npm-package-or-github-spec>
+```
+
+### Grok Plugin Anatomy
+
+Grok Build plugins can group skills, commands, agents, hooks, MCP servers, and
+LSP configuration. A repository can describe the bundle with an optional
+`.grok-plugin/plugin.json` manifest and can publish it through a Grok
+marketplace catalog.
+
+```text
+my-plugin/
+├── .grok-plugin/
+│   └── plugin.json          # Optional native manifest
+├── skills/                  # Optional Agent Skills
+├── commands/                # Optional slash commands
+├── agents/                  # Optional subagents
+└── .mcp.json                # Optional MCP servers
+```
+
+Install a GitHub repository with:
+
+```bash
+grok plugin install owner/repo --trust
+```
+
+### Kimi Plugin Anatomy
+
+Kimi Code plugins can expose skills, agents, and MCP servers. Current Kimi Code
+plugins use `kimi.plugin.json`; earlier plugin bundles may use
+`.kimi-plugin/plugin.json` or `plugin.json`. Follow the repository's manifest
+and installation instructions.
+
+```text
+my-plugin/
+├── kimi.plugin.json         # Current Kimi Code manifest
+├── skills/                  # Optional skills
+├── agents/                  # Optional agents
+└── mcpServers/              # Optional MCP server definitions
+```
+
+Install a GitHub repository from Kimi Code with:
+
+```text
+/plugins install https://github.com/owner/repo
 ```
 
 ### Codex Plugin Creator
@@ -445,6 +510,8 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [Awesome DeepSeek Harness Plugins](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) - Community-maintained DSH plugin list and discovery reference.
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
+- [Kimi Code](https://github.com/MoonshotAI/kimi-code) - Official Kimi Code runtime and plugin documentation.
+- [xAI Grok Plugin Marketplace](https://github.com/xai-org/plugin-marketplace) - Official Grok Build plugin marketplace and catalog format.
 
 ## Claim Your Plugin
 

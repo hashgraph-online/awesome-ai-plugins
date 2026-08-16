@@ -34,19 +34,37 @@ INSTALL_PATH_CANDIDATES = (
     "plugins/{repo}/.codex-plugin/plugin.json",
     ".codex/plugin.json",
 )
+KIMI_MANIFEST_PATH_CANDIDATES = (
+    "kimi.plugin.json",
+    ".kimi-plugin/plugin.json",
+    "plugin.json",
+)
 INSTALL_URL_PROBE_TIMEOUT = 6.0
 DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
+GROK_PLATFORM = "grok"
+KIMI_PLATFORM = "kimi"
+
+# Native runtime manifests should not inherit the Codex manifest fallback.
+PLATFORM_MANIFEST_PATHS = {
+    GROK_PLATFORM: ".grok-plugin/plugin.json",
+    KIMI_PLATFORM: "kimi.plugin.json",
+}
 
 # Community entries live under one README section. Keep the platform attached
-# to each subsection so a DeepSeek Harness entry is not misclassified as a
-# Codex plugin merely because both catalogs share the same human-readable
-# section.
+# to each subsection so native Grok, Kimi, and DeepSeek Harness entries are not
+# misclassified as Codex plugins merely because catalogs share one section.
 COMMUNITY_CATEGORY_PLATFORMS = {
+    "Grok Plugins": GROK_PLATFORM,
+    "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
 }
 
 
-def probe_install_url(owner: str, repo: str) -> str | None:
+def probe_install_url(
+    owner: str,
+    repo: str,
+    candidates: tuple[str, ...] = INSTALL_PATH_CANDIDATES,
+) -> str | None:
     """Return the first GitHub raw URL that resolves for a plugin manifest.
 
     Used for README-only additions so non-root manifest layouts don't end up
@@ -54,7 +72,7 @@ def probe_install_url(owner: str, repo: str) -> str | None:
     on network errors or when no candidate exists; the caller decides whether
     to fall back to a default path or omit the field.
     """
-    for template in INSTALL_PATH_CANDIDATES:
+    for template in candidates:
         path = template.format(repo=repo)
         url = (
             f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}"
@@ -108,7 +126,7 @@ def normalize_plugin(plugin: dict) -> dict:
     # Determine platform from upstream source field or fall back to codex
     upstream_source = str(plugin.get("source", "")).strip()
     if upstream_source == "awesome-grok-plugins":
-        entry.setdefault("platform", "grok")
+        entry.setdefault("platform", GROK_PLATFORM)
     else:
         entry.setdefault("platform", "codex")
 
@@ -201,6 +219,8 @@ PLATFORM_SECTIONS = {
     "OpenCode Plugins": "opencode",
     "Google Gemini CLI Plugins": "gemini-cli",
     "MCP Servers (Cross-Platform)": "mcp",
+    "Grok Plugins": GROK_PLATFORM,
+    "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
     # Current README structure: a single `## Community Plugins` section with
     # `###` subcategories. Treat its entries as codex marketplace plugins.
@@ -273,9 +293,13 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             "platform": current_platform,
             "source": "awesome-ai-plugins",
         }
-        # DeepSeek Harness plugins are Cordis/npm modules and intentionally do
-        # not require a Codex-style .codex-plugin/plugin.json manifest.
-        if current_platform != DEEPSEEK_HARNESS_PLATFORM:
+        manifest_path = PLATFORM_MANIFEST_PATHS.get(current_platform)
+        if manifest_path:
+            plugin["install_url"] = (
+                "https://raw.githubusercontent.com/"
+                f"{owner}/{repo}/HEAD/{manifest_path}"
+            )
+        elif current_platform != DEEPSEEK_HARNESS_PLATFORM:
             plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
@@ -305,10 +329,15 @@ def merge_readme_additions(
             continue
 
         if key in seen:
-            # A repository can support multiple runtimes. Preserve a
-            # DeepSeek Harness contribution when the same repository already
-            # exists in an upstream Codex (or earlier README) catalog entry.
-            if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+            # A repository can support multiple runtimes. Preserve a native
+            # runtime contribution when the same repository already exists in
+            # an upstream or earlier README catalog entry.
+            if plugin.get("platform") in {
+                DEEPSEEK_HARNESS_PLATFORM,
+                GROK_PLATFORM,
+                KIMI_PLATFORM,
+            }:
+                platform = plugin["platform"]
                 for existing in (*upstream, *additions):
                     if normalize_repo_key(existing) != key:
                         continue
@@ -316,17 +345,32 @@ def merge_readme_additions(
                     if not isinstance(ecosystems, list) or not ecosystems:
                         ecosystems = [existing.get("platform", "codex")]
                         existing["ecosystems"] = ecosystems
-                    if DEEPSEEK_HARNESS_PLATFORM not in ecosystems:
-                        ecosystems.append(DEEPSEEK_HARNESS_PLATFORM)
+                    if platform not in ecosystems:
+                        ecosystems.append(platform)
                     break
             continue
 
         seen.add(key)
 
         if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
-            # DSH resolves package/git specs through `dsh plugin add`; a
-            # Codex manifest URL would be misleading and usually 404.
+            # Native runtimes resolve repository sources through their own
+            # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") == KIMI_PLATFORM:
+            probed = probe_install_url(
+                plugin["owner"],
+                plugin["repo"],
+                KIMI_MANIFEST_PATH_CANDIDATES,
+            )
+            if probed:
+                plugin["install_url"] = probed
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") == GROK_PLATFORM:
             additions.append(normalize_plugin(plugin))
             continue
 
@@ -403,8 +447,8 @@ def main():
                 for existing in plugins:
                     if normalize_repo_key(existing) == key:
                         ecos = existing.get("ecosystems", [])
-                        if "grok" not in ecos:
-                            ecos.append("grok")
+                        if GROK_PLATFORM not in ecos:
+                            ecos.append(GROK_PLATFORM)
                             existing["ecosystems"] = ecos
                         break
             else:

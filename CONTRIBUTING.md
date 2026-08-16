@@ -10,7 +10,26 @@ Thank you for considering a contribution!
    ```
    - [Extension Name](https://github.com/owner/repo) - Description (max 1 sentence).
    ```
-4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+
+### Grok submissions
+
+Grok Build plugins can package skills, commands, agents, hooks, MCP servers, or
+LSP configuration. Include the repository's native `.grok-plugin/plugin.json`
+when the project uses one and document the tested
+`grok plugin install owner/repo --trust` flow. Review the [official xAI plugin
+marketplace](https://github.com/xai-org/plugin-marketplace) and [Grok plugin
+guide](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/09-plugins.md)
+before submitting.
+
+### Kimi submissions
+
+Kimi Code plugins can package skills, agents, and MCP servers. Current bundles
+use `kimi.plugin.json`; older bundles may use `.kimi-plugin/plugin.json` or
+`plugin.json`. Document a tested `/plugins install
+https://github.com/owner/repo` flow and follow the [official Kimi plugin
+documentation](https://github.com/MoonshotAI/kimi-code/blob/main/docs/en/customization/plugins.md)
+before submitting.
 
 ### DeepSeek Harness submissions
 

@@ -53,6 +53,22 @@ the runtime uses Cordis and `dsh.bundle` rather than a Codex manifest:
 
 **Passing criteria:** Score ≥ 80/142, with no critical or high severity findings.
 
+### Grok plugin checks
+
+Grok Build plugins should keep their native `.grok-plugin/plugin.json` manifest
+when the project uses one, document the tested `grok plugin install
+owner/repo --trust` flow, and keep the same scanner CI gate as every other
+ecosystem. The scanner result is a repository safety baseline; it does not
+replace Grok's runtime validation.
+
+### Kimi plugin checks
+
+Kimi Code plugins may use `kimi.plugin.json`, `.kimi-plugin/plugin.json`, or the
+older `plugin.json` manifest. Document the tested `/plugins install
+https://github.com/owner/repo` flow and keep the same scanner CI gate. The
+scanner result is a repository safety baseline; it does not replace Kimi's
+runtime validation.
+
 ### DeepSeek Harness package checks
 
 DeepSeek Harness plugins should keep the installable `dsh.bundle` declaration in
