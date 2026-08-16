@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-16T11:02:52.264523+00:00",
+  "last_updated": "2026-08-16T15:16:53.696703+00:00",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -678,6 +678,21 @@
       "repo": "agentic-tech-debt",
       "url": "https://github.com/bcanfield/agentic-tech-debt",
       "install_url": "https://raw.githubusercontent.com/bcanfield/agentic-tech-debt/HEAD/codex/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "DeepSeek Mini-Router",
+      "displayName": "DeepSeek Mini-Router",
+      "description": "Task-aware spec/react/flash working-contract plugin that fixes DeepSeek weak default reasoning inside Codex, with a measured BigCodeBench harness included.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hccccc01333",
+      "repo": "codex-deepseek-mini-router",
+      "url": "https://github.com/hccccc01333/codex-deepseek-mini-router",
+      "install_url": "https://raw.githubusercontent.com/hccccc01333/codex-deepseek-mini-router/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Designer Skill",
