@@ -278,6 +278,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Flow Studio Power Automate](https://github.com/ninihen1/power-automate-mcp-skills) - Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs.
 - [GH Project](https://github.com/zfifteen/gh-project-plugin) - Create GitHub repositories from Codex with inferred defaults, native menus, explicit confirmation, and deterministic local cloning.
 - [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) - Hermes Agent X/Twitter plugin for read-first social research, monitoring, and approval-gated actions through Xquik.
+- [img2obj](https://github.com/vinhhien112/img2obj) - Turn a reference image into a quality-gated, animation-ready procedural Three.js object built entirely with code.
 - [Jenkins CLI](https://github.com/avivsinai/jenkins-cli) - GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes.
 - [Kachilu Browser](https://github.com/kachilu-inc/kachilu-browser) - Anti-bot-aware browser automation for AI agents with MCP tools, CAPTCHA-aware workflows, and WSL2 Windows browser support.
 - [KiCad Happy](https://github.com/aklofas/kicad-happy) - KiCad EDA skills for schematic analysis, PCB layout review, component sourcing, BOM management, and manufacturing preparation.
