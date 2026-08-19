@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-18",
+  "last_updated": "2026-08-20",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2988,6 +2988,21 @@
       "repo": "embedded-workbench",
       "url": "https://github.com/AmethystLuna/embedded-workbench",
       "install_url": "https://raw.githubusercontent.com/AmethystLuna/embedded-workbench/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "go-ultimate",
+      "displayName": "go-ultimate",
+      "description": "Opinionated Go skill that routes any Go task (CLI, library, backend service, MCP server, AI agent) to the right architecture, conventions, and review checklist across Claude Code, Codex, Cursor, Grok Build, Copilot CLI, and OpenCode",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Djarvur",
+      "repo": "go-ultimate",
+      "url": "https://github.com/Djarvur/go-ultimate",
+      "install_url": "https://raw.githubusercontent.com/Djarvur/go-ultimate/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Logic Probe",
