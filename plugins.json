@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-08-18",
-  "total": 207,
+  "last_updated": "2026-08-20",
+  "total": 208,
   "platforms": [
     "codex",
     "grok"
@@ -2792,6 +2792,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AmethystLuna/embedded-workbench/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "go-ultimate",
+      "url": "https://github.com/Djarvur/go-ultimate",
+      "owner": "Djarvur",
+      "repo": "go-ultimate",
+      "description": "Opinionated Go skill that routes any Go task (CLI, library, backend service, MCP server, AI agent) to the right architecture, conventions, and review checklist across Claude Code, Codex, Cursor, Grok Build, Copilot CLI, and OpenCode",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Djarvur/go-ultimate/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
