@@ -343,7 +343,7 @@ See the [official xAI plugin marketplace](https://github.com/xai-org/plugin-mark
 and [Grok plugin guide](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/09-plugins.md)
 before submitting.
 
-- [taskflow](https://github.com/heggria/taskflow) - Declarative, verifiable DAG orchestration for Grok Build subagents — fan-out, gates, loops, tournaments, approvals, and resumable runs, with intermediate transcripts kept out of context.
+- [taskflow](https://github.com/heggria/taskflow) - Declarative, verifiable DAG orchestration for Grok Build subagents — fan-out, gates, loops, tournaments, approvals, and resumable runs via MCP tools, with intermediate transcripts kept out of context.
 
 ### Kimi Plugins
 
