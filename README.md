@@ -343,6 +343,8 @@ See the [official xAI plugin marketplace](https://github.com/xai-org/plugin-mark
 and [Grok plugin guide](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/09-plugins.md)
 before submitting.
 
+- [OverClick](https://github.com/ustoppble/overclick) - Open-source, self-hosted task board with an MCP server where AI agents claim and deliver work (task_create/claim/deliver), with plugins for Claude Code, Codex, Grok, and Kimi.
+
 ### Kimi Plugins
 
 Kimi Code plugins package skills, agents, and MCP servers for the Kimi runtime.
