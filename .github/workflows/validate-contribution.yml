@@ -60,7 +60,7 @@ jobs:
           CONTRIBUTION_URL: https://github.com/${{ matrix.contribution.owner }}/${{ matrix.contribution.repo }}.git
         run: git clone --depth 1 "$CONTRIBUTION_URL" "$RUNNER_TEMP/contributed"
       - name: Run HOL AI Plugin Scanner
-        uses: hashgraph-online/ai-plugin-scanner-action@55616c962cf86368423f7673b2ecdfdbe613d1af # v1.2.515
+        uses: hashgraph-online/ai-plugin-scanner-action@432eebe0fb9212be97c8d15cb1da9668a91e7914 # v1.2.531
         with:
           plugin_dir: ${{ runner.temp }}/contributed
           mode: scan
