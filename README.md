@@ -352,6 +352,8 @@ Depending on the plugin version, a repository can expose `kimi.plugin.json` or
 plugins here in alphabetical order. See the [official Kimi plugin documentation](https://github.com/MoonshotAI/kimi-code/blob/main/docs/en/customization/plugins.md)
 before submitting.
 
+- [GoodMemory](https://github.com/hjqcan/GoodMemory) - Local-first, auditable cross-session project memory for Kimi Code with scoped recall, traceable provenance, and approval-gated writes.
+
 ### DeepSeek Harness Plugins
 
 DeepSeek Harness (DSH) plugins are Cordis modules or npm packages that expose a
