@@ -343,6 +343,8 @@ See the [official xAI plugin marketplace](https://github.com/xai-org/plugin-mark
 and [Grok plugin guide](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/09-plugins.md)
 before submitting.
 
+- [Grok Imagine Cinematic Studio](https://github.com/FineComputer14451/Grok-Imagine-Cinematic-Studio) - Independent multi-agent cinematic production suite (25 Role-Card agents, 64 skills, Production Bible workflow, Character DNA locking, native Grok Imagine Video 1.5 support) for Grok Build.
+
 ### Kimi Plugins
 
 Kimi Code plugins package skills, agents, and MCP servers for the Kimi runtime.
