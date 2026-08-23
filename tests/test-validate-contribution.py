@@ -89,6 +89,15 @@ class ValidateContributionTests(unittest.TestCase):
             inspection = MODULE.inspect_scanner_ci(contribution())
         self.assertEqual(inspection.status, "unknown")
 
+    def test_missing_source_repository_fails_catalog_validation(self) -> None:
+        with patch.object(
+            MODULE,
+            "github_json",
+            side_effect=MODULE.ValidationError("source repository or workflow directory was not found"),
+        ):
+            with self.assertRaisesRegex(MODULE.ValidationError, "reachable public GitHub repository"):
+                MODULE.ensure_public_github_repository(contribution("missing-plugin"))
+
     def test_malformed_readme_change_still_fails(self) -> None:
         head = (
             "## Community Plugins\n"

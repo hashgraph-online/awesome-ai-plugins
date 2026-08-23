@@ -322,6 +322,22 @@ def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
     return files
 
 
+def ensure_public_github_repository(contribution: Contribution) -> None:
+    """Fail catalog validation when the source repository is not reachable."""
+
+    url = f"https://api.github.com/repos/{contribution.owner}/{contribution.repo}"
+    try:
+        payload = github_json(url)
+    except ValidationError as error:
+        raise ValidationError(
+            f"{contribution.url} is not a reachable public GitHub repository: {error}"
+        ) from error
+    if not isinstance(payload, dict):
+        raise ValidationError(
+            f"{contribution.url} is not a reachable public GitHub repository"
+        )
+
+
 def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
     """Detect maintainer scanner CI without treating absence as a hard failure."""
 
@@ -543,8 +559,15 @@ def scan_open_pull_requests(
 
         report_lines.append(f"- **{prefix}**")
         scanner_contributions: list[dict[str, str]] = []
+        catalog_failures: list[str] = []
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
+            try:
+                ensure_public_github_repository(entry)
+            except ValidationError as error:
+                catalog_failures.append(str(error))
+                report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
+                continue
             inspection = inspect_scanner_ci(entry)
             scanner_contributions.append(
                 {
@@ -564,15 +587,26 @@ def scan_open_pull_requests(
                 f"  - `{contribution}`: scanner CI {inspection.status}; queued for advisory scan"
             )
 
+        if catalog_failures:
+            failures.extend(
+                {"pr_number": pull_request.number, "error": item}
+                for item in catalog_failures
+            )
+        if catalog_failures:
+            result_state = "failure"
+        elif scanner_contributions:
+            result_state = "scan"
+        else:
+            result_state = "success"
         results.append(
             {
                 "pr_number": pull_request.number,
                 "title": pull_request.title,
                 "head_sha": pull_request.head_sha,
                 "author_login": pull_request.author_login,
-                "state": "scan",
+                "state": result_state,
                 "contributions": scanner_contributions,
-                "failure_reasons": [],
+                "failure_reasons": catalog_failures,
             }
         )
 
@@ -711,10 +745,27 @@ def main() -> int:
             write_matrix(args.matrix_output, [])
         return 0
 
+    catalog_failures = 0
     for entry in entries:
         print(f"Checking {entry.display_name} ({entry.owner}/{entry.repo})...")
+        try:
+            ensure_public_github_repository(entry)
+        except ValidationError as error:
+            catalog_failures += 1
+            print(f"  FAIL: {error}", file=sys.stderr)
+            continue
         inspection = inspect_scanner_ci(entry)
         print(f"  scanner CI {inspection.status}; queued for advisory centralized scan")
+
+    if catalog_failures:
+        print(
+            f"\nContribution validation failed for {catalog_failures} "
+            f"entr{'y' if catalog_failures == 1 else 'ies'}.",
+            file=sys.stderr,
+        )
+        if args.matrix_output:
+            write_matrix(args.matrix_output, [])
+        return 1
 
     print(
         f"\nAll {len(entries)} contribution entr{'y' if len(entries) == 1 else 'ies'} passed catalog validation."
