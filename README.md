@@ -347,6 +347,8 @@ Depending on the plugin version, a repository can expose `kimi.plugin.json` or
 plugins here in alphabetical order. See the [official Kimi plugin documentation](https://github.com/MoonshotAI/kimi-code/blob/main/docs/en/customization/plugins.md)
 before submitting.
 
+- [deja](https://github.com/vshulcz/deja-vu) - Recalls the sessions the other coding agents on the machine already wrote to disk, including work from before it was installed, through MCP tools, a `/deja:recall` command and recall on every prompt.
+
 ### DeepSeek Harness Plugins
 
 DeepSeek Harness (DSH) plugins are Cordis modules or npm packages that expose a
@@ -355,6 +357,8 @@ community plugins here in alphabetical order. See the [official DeepSeek Harness
 plugin tutorial](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-tutorial/01-first-plugin.md)
 and the [`dsh-plugin` community topic](https://github.com/topics/dsh-plugin) before
 submitting a repository.
+
+- [dsh-deja](https://github.com/vshulcz/deja-vu/tree/main/extensions/dsh) - Brings the session history of nineteen other coding agents into DeepSeek Harness: recall, session digest and per-file history tools over a local index, plus optional automatic recall.
 
 ## Formats & Development
 
