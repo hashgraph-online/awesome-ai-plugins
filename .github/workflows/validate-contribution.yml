@@ -30,7 +30,7 @@ jobs:
           python-version: "3.12"
       - name: Install validator dependencies
         run: python3 -m pip install --disable-pip-version-check --no-input "PyYAML==6.0.2"
-      - name: Validate changed entries and source scanner CI
+      - name: Validate changed catalog entries
         env:
           BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'origin/main' }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -50,6 +50,7 @@ jobs:
     needs: validate
     if: needs.validate.outputs.matrix != '[]'
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:

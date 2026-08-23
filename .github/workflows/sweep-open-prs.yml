@@ -74,6 +74,7 @@ jobs:
     needs: discover
     if: needs.discover.outputs.matrix != '[]'
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
@@ -111,14 +112,14 @@ jobs:
             exit 1
           fi
           if [[ "$HAS_VALIDATION_FAILURES" == "true" ]]; then
-            echo "One or more open contributions are missing required scanner CI."
+            echo "One or more open contributions failed catalog validation."
             exit 1
           fi
           if [[ "$SCAN_RESULT" != "success" && "$SCAN_RESULT" != "skipped" ]]; then
-            echo "One or more source-repository scanner jobs failed."
-            exit 1
+            echo "scan findings: one or more advisory source-repository scanner jobs did not pass."
+            exit 0
           fi
-          echo "All checked open contributions satisfy the scanner gate."
+          echo "Catalog validation passed. Centralized scanner results are advisory."
 
   publish:
     name: Publish per-PR contribution checks

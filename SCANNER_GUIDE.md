@@ -73,9 +73,8 @@ runtime validation.
 
 DeepSeek Harness plugins should keep the installable `dsh.bundle` declaration in
 `package.json`, export a Cordis `apply(ctx)` entry point, and document a tested
-`dsh plugin add <package-or-github-spec>` flow. The scanner CI gate remains the
-same for every ecosystem: score at least 80 and fail on high or critical
-findings.
+`dsh plugin add <package-or-github-spec>` flow. Scanner CI is optional for
+every ecosystem. HOL still scans listed projects independently.
 
 ## CI/CD Integration
 
@@ -113,13 +112,9 @@ The recommended workflow is intentionally constrained:
 
 Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner-action) and pinned commit before enabling it. A passing result is a consistent baseline for community review, not a claim that software is risk-free.
 
-### Required for Awesome AI Plugins listing
+### Optional for Awesome AI Plugins listing
 
-All plugins submitted to this list must:
-
-1. **Score ≥ 80/142** in the scanner
-2. **Have zero critical or high findings**
-3. **Run the scanner in CI/CD** (GitHub Actions preferred)
+Scanner CI is optional. HOL scans listed projects independently. Projects that maintain the scanner in their own CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction for missing continuous security verification.
 
 Add the scanner badge to your README:
 

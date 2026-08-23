@@ -54,8 +54,8 @@ New extension workflow:
 
 1. Choose the clients and open formats you support
 2. Build the plugin, skill, MCP server, app, or agent tool
-3. **Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)** — **Required: score ≥ 80, no high/critical findings**
-4. **Gate PRs with the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)** — **Required for listing**
+3. **Validate with [`plugin-scanner`](https://github.com/hashgraph-online/hol-guard)** — recommended local preflight
+4. **Optionally add the [HOL scanner GitHub Action](https://github.com/hashgraph-online/ai-plugin-scanner-action)** — optional continuous scanning
 5. Ship or submit with confidence
 
 ### Quick preflight
@@ -65,15 +65,9 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-### Scanner Requirements (Mandatory for This List)
+### Scanner CI (Optional)
 
-All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scanner:
-
-| Requirement  | Threshold                                      |
-| ------------ | ---------------------------------------------- |
-| **Score**    | ≥ 80 / 130                                     |
-| **Severity** | No critical or high findings                   |
-| **CI**       | Scanner must run in your repo's GitHub Actions |
+Scanner CI is optional. HOL scans listed projects independently. Projects that maintain the scanner in their own CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction for missing continuous security verification.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)  
 See contributing requirements: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
@@ -576,8 +570,7 @@ Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md
 
 To add a plugin:
 
-1. Set up the HOL Plugin Scanner in your plugin repo (see [CONTRIBUTING.md](CONTRIBUTING.md))
-2. Fork this repo and add a single line to the appropriate section in `README.md` (alphabetical order)
-3. Submit a PR with your scanner score and plugin repo URL
+1. Fork this repo and add a single line to the appropriate section in `README.md` (alphabetical order)
+2. Submit a PR with the plugin repo URL. Scanner CI in the source repository is optional.
 
 **You do not need to copy plugin files into this repo.** A generator fetches your bundle from your source repo and regenerates catalog files automatically.

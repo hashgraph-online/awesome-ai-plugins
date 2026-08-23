@@ -6,13 +6,12 @@ validator therefore checks the contribution at the same boundary a maintainer
 reviews it:
 
 * only newly added Community Plugins entries are considered;
-* each source repository is public and exposes workflow-based scanner CI; and
-* the workflow is triggered by a push or pull request and invokes the HOL AI
-  Plugin Scanner action.
+* catalog format and discovery failures are hard errors; and
+* maintainer-owned scanner CI is inspected as advisory metadata, not a merge gate.
 
 The workflow that calls this script emits a matrix of source repositories.  A
-follow-up job scans each repository with the same 80-point/high-severity gate
-documented in CONTRIBUTING.md.
+follow-up job scans each repository independently. Scanner absence, findings, or
+outage do not fail the required contribution check.
 """
 
 from __future__ import annotations
@@ -56,6 +55,13 @@ class Contribution:
     owner: str
     repo: str
     description: str
+
+
+@dataclass(frozen=True)
+class ScannerCiInspection:
+    status: str
+    workflow_paths: tuple[str, ...] = ()
+    detail: str = ""
 
 
 @dataclass(frozen=True)
@@ -316,34 +322,75 @@ def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
     return files
 
 
-def validate_scanner_ci(contribution: Contribution) -> None:
-    """Require a push/PR workflow that invokes the HOL scanner action."""
+def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
+    """Detect maintainer scanner CI without treating absence as a hard failure."""
 
     try:
         files = workflow_files(contribution.owner, contribution.repo)
-    except (ValidationError, json.JSONDecodeError) as error:
-        raise ValidationError(
-            f"{contribution.url} does not expose readable GitHub Actions workflows: {error}"
-        ) from error
+    except ValidationError as error:
+        message = str(error)
+        if "not found" in message.lower():
+            return ScannerCiInspection(status="not_detected", detail=message)
+        return ScannerCiInspection(status="unknown", detail=message)
+    except json.JSONDecodeError as error:
+        return ScannerCiInspection(status="unknown", detail=str(error))
 
     scanner_workflows: list[tuple[str, object, list[str]]] = []
+    unreadable = False
     for name, text in files:
-        document = parse_workflow_document(name, text)
+        try:
+            document = parse_workflow_document(name, text)
+        except ValidationError:
+            unreadable = True
+            continue
         references = scanner_steps(document)
         if references:
             scanner_workflows.append((name, document, references))
 
-    if not scanner_workflows:
-        raise ValidationError(
-            f"{contribution.url} must invoke "
-            "hashgraph-online/ai-plugin-scanner-action in .github/workflows"
+    maintained_paths = tuple(
+        name
+        for name, document, _ in scanner_workflows
+        if workflow_has_ci_trigger(document)
+    )
+    if maintained_paths:
+        return ScannerCiInspection(status="maintained", workflow_paths=maintained_paths)
+    if unreadable:
+        return ScannerCiInspection(
+            status="unknown",
+            detail="workflow contents could not be read reliably",
         )
+    return ScannerCiInspection(
+        status="not_detected",
+        workflow_paths=tuple(name for name, _, _ in scanner_workflows),
+    )
 
-    if not any(workflow_has_ci_trigger(document) for _, document, _ in scanner_workflows):
-        names = ", ".join(name for name, _, _ in scanner_workflows)
-        raise ValidationError(
-            f"{contribution.url} scanner workflow ({names}) must run on push or pull_request"
-        )
+
+def malformed_community_plugin_lines(diff: str, head_readme: str) -> list[str]:
+    """Return added Community Plugins bullets that do not match the catalog format."""
+
+    if not diff:
+        return []
+    readme_lines = head_readme.splitlines()
+    malformed: list[str] = []
+    added_line_number = 0
+    for line in diff.splitlines():
+        if line.startswith("@@"):
+            hunk = re.search(r"\+(\d+)", line)
+            added_line_number = int(hunk.group(1)) if hunk else 0
+            continue
+        if line.startswith("+") and not line.startswith("+++"):
+            content = line[1:].strip()
+            if (
+                current_readme_section(readme_lines, added_line_number) == "Community Plugins"
+                and content.startswith("- [")
+                and README_ENTRY_RE.match(content) is None
+            ):
+                malformed.append(content)
+            added_line_number += 1
+            continue
+        if not line.startswith("-"):
+            added_line_number += 1
+    return malformed
 
 
 def list_open_pull_requests(repository: str, pull_request_number: int | None) -> list[OpenPullRequest]:
@@ -429,6 +476,12 @@ def entries_for_open_pull_request(repository: str, pull_request: OpenPullRequest
             tofile="README.md",
         )
     )
+    malformed = malformed_community_plugin_lines(diff, head_readme)
+    if malformed:
+        raise ValidationError(
+            "Community Plugins entries must use `- [Name](https://github.com/owner/repo) - description`: "
+            + "; ".join(malformed)
+        )
     return get_new_readme_entries_from_diff(diff, base_readme, head_readme)
 
 
@@ -490,24 +543,16 @@ def scan_open_pull_requests(
 
         report_lines.append(f"- **{prefix}**")
         scanner_contributions: list[dict[str, str]] = []
-        scanner_failures: list[str] = []
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
-            try:
-                validate_scanner_ci(entry)
-            except ValidationError as error:
-                failures.append(
-                    {
-                        "pr_number": pull_request.number,
-                        "repository": contribution,
-                        "error": str(error),
-                    }
-                )
-                scanner_failures.append(f"{contribution}: {error}")
-                report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
-                continue
-
-            scanner_contributions.append({"owner": entry.owner, "repo": entry.repo})
+            inspection = inspect_scanner_ci(entry)
+            scanner_contributions.append(
+                {
+                    "owner": entry.owner,
+                    "repo": entry.repo,
+                    "scanner_ci": inspection.status,
+                }
+            )
             matrix.append(
                 {
                     "pr_number": pull_request.number,
@@ -515,7 +560,9 @@ def scan_open_pull_requests(
                     "repo": entry.repo,
                 }
             )
-            report_lines.append(f"  - `{contribution}`: scanner CI present; queued for score scan")
+            report_lines.append(
+                f"  - `{contribution}`: scanner CI {inspection.status}; queued for advisory scan"
+            )
 
         results.append(
             {
@@ -523,9 +570,9 @@ def scan_open_pull_requests(
                 "title": pull_request.title,
                 "head_sha": pull_request.head_sha,
                 "author_login": pull_request.author_login,
-                "state": "failure" if scanner_failures else "scan",
+                "state": "scan",
                 "contributions": scanner_contributions,
-                "failure_reasons": scanner_failures,
+                "failure_reasons": [],
             }
         )
 
@@ -535,12 +582,17 @@ def scan_open_pull_requests(
         report_lines.extend(
             [
                 "",
-                f"Scanner CI validation failures: {len(failures)}",
-                "Source repositories must add the HOL AI Plugin Scanner workflow before merge.",
+                f"Catalog validation failures: {len(failures)}",
+                "Malformed catalog changes and discovery failures still block merge.",
             ]
         )
     else:
-        report_lines.extend(["", "All open contribution entries passed scanner CI validation."])
+        report_lines.extend(
+            [
+                "",
+                "Catalog validation passed. Centralized scanner results are advisory.",
+            ]
+        )
 
     report = "\n".join(report_lines) + "\n"
     if matrix_output:
@@ -641,6 +693,17 @@ def main() -> int:
         print(f"ERROR: base ref '{args.base_ref}' is not available", file=sys.stderr)
         return 1
 
+    diff = git("diff", args.base_ref, "--", "README.md")
+    head_readme = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
+    malformed = malformed_community_plugin_lines(diff, head_readme)
+    if malformed:
+        print("ERROR: malformed Community Plugins entries:", file=sys.stderr)
+        for line in malformed:
+            print(f"  {line}", file=sys.stderr)
+        if args.matrix_output:
+            write_matrix(args.matrix_output, [])
+        return 1
+
     entries = get_new_readme_entries(args.base_ref)
     if not entries:
         print("No new Community Plugins entries found; contribution checks are complete.")
@@ -648,22 +711,14 @@ def main() -> int:
             write_matrix(args.matrix_output, [])
         return 0
 
-    failures = 0
     for entry in entries:
         print(f"Checking {entry.display_name} ({entry.owner}/{entry.repo})...")
-        try:
-            validate_scanner_ci(entry)
-        except ValidationError as error:
-            failures += 1
-            print(f"  FAIL: {error}", file=sys.stderr)
-        else:
-            print("  PASS: scanner CI is present and push/PR-triggered")
+        inspection = inspect_scanner_ci(entry)
+        print(f"  scanner CI {inspection.status}; queued for advisory centralized scan")
 
-    if failures:
-        print(f"\nContribution validation failed for {failures} entr{'y' if failures == 1 else 'ies'}.", file=sys.stderr)
-        return 1
-
-    print(f"\nAll {len(entries)} contribution entr{'y' if len(entries) == 1 else 'ies'} passed.")
+    print(
+        f"\nAll {len(entries)} contribution entr{'y' if len(entries) == 1 else 'ies'} passed catalog validation."
+    )
     if args.matrix_output:
         write_matrix(args.matrix_output, entries)
     return 0

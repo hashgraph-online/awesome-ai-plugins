@@ -100,22 +100,29 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
         return (
             "failure",
             "Contribution requirements failed",
-            "Required scanner CI is missing or could not be validated.\n\n" + details,
+            "Catalog validation failed.\n\n" + details,
         )
 
     if state == "scan":
         jobs = scanner_jobs.get(number, [])
-        if jobs and all(conclusion == "success" for conclusion in jobs):
+        if not jobs:
             return (
                 "success",
-                "Contribution scan passed",
-                f"All {len(jobs)} source-repository scanner job(s) passed the contribution gate.",
+                "scan unavailable",
+                "HOL centralized scan could not run. Catalog validation passed; scanner results are advisory.",
             )
-        job_details = ", ".join(jobs) if jobs else "no scanner job was recorded"
+        if all(conclusion == "success" for conclusion in jobs):
+            return (
+                "success",
+                "scan passed",
+                f"All {len(jobs)} source-repository scanner job(s) passed. Catalog validation passed.",
+            )
+        job_details = ", ".join(jobs)
         return (
-            "failure",
-            "Contribution scan failed",
-            f"One or more source-repository scanner jobs did not pass: {job_details}.",
+            "success",
+            "scan findings",
+            "HOL centralized scan reported findings or did not pass: "
+            f"{job_details}. This is advisory and does not block listing.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")
@@ -153,28 +160,29 @@ def remediation_comment(
     author_login = result.get("author_login")
     mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
     if conclusion == "success":
+        optional_guidance = ""
+        if "scan findings" in check_title:
+            optional_guidance = (
+                "\n\nHOL's centralized scan reported findings. This does not block listing. "
+                "Optional scanner CI in the source repository receives the full trust score; "
+                "projects without it remain eligible with a 10% trust-score reduction.\n"
+            )
+        elif "scan unavailable" in check_title:
+            optional_guidance = (
+                "\n\nHOL's centralized scan could not run. This does not block listing.\n"
+            )
         return (
             f"{COMMENT_MARKER}\n\n"
-            f"✅ **Contribution gate passed.** {mention}, no action is required.\n\n"
-            f"The previous contribution-gate failure is resolved. "
+            f"✅ **Contribution check passed.** {mention}, catalog validation succeeded.\n\n"
+            f"### {check_title}\n{summary}{optional_guidance}\n"
             f"[View the latest sweep]({run_url})."
         )
 
-    if result.get("state") == "failure":
-        guidance = (
-            "1. Add a workflow under `.github/workflows/` in the linked source repository.\n"
-            "2. Trigger it on both `push` and `pull_request`, and invoke "
-            "`hashgraph-online/ai-plugin-scanner-action`.\n"
-            "3. Configure `plugin_dir: \".\"`, `mode: scan`, `min_score: 80`, and "
-            "`fail_on_severity: high`."
-        )
-    else:
-        guidance = (
-            "1. Run `pipx run plugin-scanner lint .`.\n"
-            "2. Run `pipx run plugin-scanner verify . --format text`.\n"
-            "3. Fix all critical/high findings and reach a score of at least 80, "
-            "then push the fixes and rerun the workflow."
-        )
+    guidance = (
+        "1. Use the Community Plugins format: "
+        "`- [Name](https://github.com/owner/repo) - description`.\n"
+        "2. Add the entry to the correct section, alphabetically, without duplicates."
+    )
 
     return f"""{COMMENT_MARKER}
 
@@ -186,7 +194,7 @@ def remediation_comment(
 ### How to fix it
 {guidance}
 
-See the repository's [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) and [scanner guide](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md).
+See the repository's [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md).
 
 After pushing the changes, this check and comment will update automatically: {run_url}
 """

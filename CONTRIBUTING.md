@@ -50,24 +50,16 @@ The registry profile includes a standard **dofollow backlink** to the extension'
 Before submitting:
 
 ```bash
-# Run the HOL Plugin Scanner (required for all submissions)
+# Optional local preflight
 pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-**Scanner Requirements (Mandatory for This List):**
-
-All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scanner:
-
-| Requirement | Threshold |
-|-------------|-----------|
-| **Score** | ≥ 80 / 142 |
-| **Severity** | No critical or high findings |
-| **CI** | Scanner must run in your repo's GitHub Actions |
+Scanner CI is optional. HOL scans listed projects independently. Projects that maintain the scanner in their own CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction for missing continuous security verification.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
-### Why scanner CI is required
+### Why scanner CI is still useful
 
 AI extensions can register hooks, execute commands, read environment variables, and influence an agent's behavior. A compromised extension can therefore affect users outside the original repository. Scanner CI gives every community listing the same reproducible baseline for identifying:
 
@@ -77,7 +69,7 @@ AI extensions can register hooks, execute commands, read environment variables, 
 - unpinned third-party actions and dependencies;
 - malformed or misleading extension metadata.
 
-A passing scan is not a guarantee that an extension is harmless. It is reviewable evidence that every listed project cleared the same minimum checks, which helps maintainers catch common supply-chain risks before users install the extension.
+A passing scan is not a guarantee that an extension is harmless. It is reviewable evidence that helps maintainers catch common supply-chain risks. HOL still scans listed projects independently.
 
 ### What the scanner workflow can access
 
@@ -94,17 +86,16 @@ The example in [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md) pins GitHub Actions to i
 
 Pull requests that add a Community Plugin entry, including the DeepSeek Harness
 Plugins subsection, are checked automatically by
-`.github/workflows/validate-contribution.yml`. The check confirms that the
-linked public repository runs `hashgraph-online/ai-plugin-scanner-action` from
-GitHub Actions, then scans the contributed repository with the same score and
-severity thresholds above.
+`.github/workflows/validate-contribution.yml`. Catalog format, section, and
+discovery checks are required. Scanner CI in the source repository is optional.
+HOL clones and scans each valid new source repository; those scan results are
+advisory and do not block a valid listing.
 
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
-PR's exact README base/head revisions without executing fork code, reports
-missing scanner CI, runs the scanner for entries that pass the CI check, and
-publishes the result on each PR head. Failed checks update one remediation
-comment on the PR, tag the contributor, and link the scanner setup guidance.
+PR's exact README base/head revisions without executing fork code, queues an
+advisory scan, and publishes the result on each PR head. Reruns update the
+existing bot comment and check in place.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
