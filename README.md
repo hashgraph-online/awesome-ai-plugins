@@ -358,7 +358,7 @@ plugin tutorial](https://github.com/deepseek-ai/deepseek-harness/blob/master/doc
 and the [`dsh-plugin` community topic](https://github.com/topics/dsh-plugin) before
 submitting a repository.
 
-- [dsh-deja](https://github.com/vshulcz/deja-vu/tree/main/extensions/dsh) - Brings the session history of nineteen other coding agents into DeepSeek Harness: recall, session digest and per-file history tools over a local index, plus optional automatic recall.
+- [dsh-deja](https://github.com/vshulcz/deja-vu) - Brings the session history of nineteen other coding agents into DeepSeek Harness: recall, session digest and per-file history tools over a local index, plus optional automatic recall.
 
 ## Formats & Development
 
