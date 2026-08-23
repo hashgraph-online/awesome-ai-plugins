@@ -129,6 +129,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "state": "scan",
             "title": "Add example plugin",
             "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
         }
         conclusion, title, summary = self.publisher.check_summary(result, {12: []})
         self.assertEqual(conclusion, "success")
@@ -142,6 +145,11 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://example.test/run",
         )
         self.assertIn("Contribution check passed", comment)
+        self.assertIn("Optional: add scanner CI", comment)
+        self.assertIn("can merge without it", comment)
+        self.assertIn("full trust score", comment)
+        self.assertIn("10% trust-score reduction", comment)
+        self.assertIn("`example/plugin`", comment)
         self.assertNotIn("needs updates before it can be merged", comment)
         self.assertNotIn("must invoke", comment)
 
@@ -216,6 +224,72 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             )
         self.assertEqual(calls, [("PATCH", "/issues/comments/44")])
         self.assertNotIn(("POST", "/issues/12/comments"), calls)
+
+    def test_comment_is_posted_when_scanner_ci_is_missing(self) -> None:
+        calls: list[tuple[str, str]] = []
+
+        def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
+            calls.append((str(kwargs.get("method", "GET")), path))
+            if path == "/issues/12/comments":
+                return {"id": 99}
+            return {}
+
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
+        }
+        with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
+            self.publisher,
+            "list_issue_comments",
+            return_value=[],
+        ):
+            self.publisher.upsert_remediation_comment(
+                "hashgraph-online/awesome-ai-plugins",
+                result,
+                "success",
+                "scan passed",
+                "Catalog validation passed.",
+                "https://example.test/run",
+                "token",
+            )
+        self.assertEqual(calls, [("POST", "/issues/12/comments")])
+
+    def test_success_without_missing_ci_does_not_post_a_new_comment(self) -> None:
+        calls: list[tuple[str, str]] = []
+
+        def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
+            calls.append((str(kwargs.get("method", "GET")), path))
+            return {}
+
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "maintained"},
+            ],
+        }
+        with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
+            self.publisher,
+            "list_issue_comments",
+            return_value=[],
+        ):
+            self.publisher.upsert_remediation_comment(
+                "hashgraph-online/awesome-ai-plugins",
+                result,
+                "success",
+                "scan passed",
+                "Catalog validation passed.",
+                "https://example.test/run",
+                "token",
+            )
+        self.assertEqual(calls, [])
 
 
 if __name__ == "__main__":

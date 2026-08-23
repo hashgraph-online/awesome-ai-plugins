@@ -94,8 +94,10 @@ advisory and do not block a valid listing.
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
 PR's exact README base/head revisions without executing fork code, queues an
-advisory scan, and publishes the result on each PR head. Reruns update the
-existing bot comment and check in place.
+advisory scan, and publishes the result on each PR head. When the source
+repository has no scanner CI, the bot still comments: listing can merge, adding
+the action is optional, and the comment explains the trust-score benefit.
+Reruns update the existing bot comment and check in place.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results

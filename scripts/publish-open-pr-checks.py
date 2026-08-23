@@ -148,6 +148,45 @@ def list_issue_comments(repository: str, number: int, token: str) -> list[dict[s
         page += 1
 
 
+def missing_scanner_ci_repos(result: dict[str, object]) -> list[str]:
+    """Return owner/repo pairs whose source repository has no scanner CI."""
+
+    contributions = result.get("contributions")
+    if not isinstance(contributions, list):
+        return []
+    missing: list[str] = []
+    for item in contributions:
+        if not isinstance(item, dict):
+            continue
+        if item.get("scanner_ci") != "not_detected":
+            continue
+        owner = item.get("owner")
+        repo = item.get("repo")
+        if isinstance(owner, str) and isinstance(repo, str) and owner and repo:
+            missing.append(f"{owner}/{repo}")
+    return missing
+
+
+def optional_scanner_ci_guidance(repos: list[str]) -> str:
+    """Explain that scanner CI is optional and why maintainers should still add it."""
+
+    listed = ", ".join(f"`{item}`" for item in repos)
+    subject = listed if listed else "the source repository"
+    return (
+        "\n\n### Optional: add scanner CI\n"
+        f"This listing can merge without it. HOL still scans {subject} independently.\n\n"
+        "We recommend adding `hashgraph-online/ai-plugin-scanner-action` under "
+        "`.github/workflows/` on `push` and `pull_request` so that:\n"
+        "- the listing keeps the **full trust score** (without maintainer CI it stays "
+        "eligible, with a 10% trust-score reduction);\n"
+        "- new commits stay continuously checked for secrets, dangerous hooks, and "
+        "supply-chain issues;\n"
+        "- findings can appear in GitHub code scanning.\n\n"
+        "See [CONTRIBUTING.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) "
+        "and [SCANNER_GUIDE.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md).\n"
+    )
+
+
 def remediation_comment(
     result: dict[str, object],
     conclusion: str,
@@ -161,15 +200,16 @@ def remediation_comment(
     mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
     if conclusion == "success":
         optional_guidance = ""
+        missing = missing_scanner_ci_repos(result)
+        if missing:
+            optional_guidance += optional_scanner_ci_guidance(missing)
         if "scan findings" in check_title:
-            optional_guidance = (
-                "\n\nHOL's centralized scan reported findings. This does not block listing. "
-                "Optional scanner CI in the source repository receives the full trust score; "
-                "projects without it remain eligible with a 10% trust-score reduction.\n"
+            optional_guidance += (
+                "\nHOL's centralized scan reported findings. This does not block listing.\n"
             )
         elif "scan unavailable" in check_title:
-            optional_guidance = (
-                "\n\nHOL's centralized scan could not run. This does not block listing.\n"
+            optional_guidance += (
+                "\nHOL's centralized scan could not run. This does not block listing.\n"
             )
         return (
             f"{COMMENT_MARKER}\n\n"
@@ -223,7 +263,11 @@ def upsert_remediation_comment(
         ),
         None,
     )
-    if conclusion == "success" and existing is None:
+    if (
+        conclusion == "success"
+        and existing is None
+        and not missing_scanner_ci_repos(result)
+    ):
         return
 
     body = remediation_comment(result, conclusion, check_title, summary, run_url)
