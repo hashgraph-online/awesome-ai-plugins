@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-23",
+  "last_updated": "2026-08-24",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3018,6 +3018,21 @@
       "repo": "logicprobe",
       "url": "https://github.com/AmethystLuna/logicprobe",
       "install_url": "https://raw.githubusercontent.com/AmethystLuna/logicprobe/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Salesforce Compound Engineering",
+      "displayName": "Salesforce Compound Engineering",
+      "description": "Salesforce-focused compound engineering plugin for Claude Code, Cursor, Codex, and other AI coding tools, with skills-first workflows, parallel persona dispatch, and Apex/LWC/Flow coverage",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "divingsbysangam",
+      "repo": "salesforce-compound-engineering-plugin",
+      "url": "https://github.com/divingsbysangam/salesforce-compound-engineering-plugin",
+      "install_url": "https://raw.githubusercontent.com/divingsbysangam/salesforce-compound-engineering-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "trigger-tree",
