@@ -1,0 +1,35 @@
+name: Sync from upstream registries
+
+on:
+  repository_dispatch:
+    types: [sync-to-ai-plugins]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from upstream plugin registries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout awesome-ai-plugins
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Regenerate combined JSON from all upstream sources
+        run: |
+          python3 scripts/generate_plugins_json.py || true
+
+      - name: Commit and push
+        run: |
+          if ! git diff --quiet -- plugins.json .agents/plugins/marketplace.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add plugins.json .agents/plugins/marketplace.json
+            git commit -m "chore: sync from upstream registries"
+            git push
+          else
+            echo "No changes to sync"
+          fi

@@ -1,0 +1,47 @@
+name: Sync Scanner Action
+
+on:
+  schedule:
+    # Match the HOL Guard scanner release cadence without polling excessively.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync scanner action commit pins
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Test scanner action sync
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python3 -m unittest tests/test-sync-scanner-action.py
+
+      - name: Sync scanner action
+        id: sync
+        run: |
+          python3 scripts/sync-scanner-action.py
+          if git diff --quiet -- CONTRIBUTING.md SCANNER_GUIDE.md .github/workflows/validate-contribution.yml .github/workflows/sweep-open-prs.yml; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Scanner action pins are already up to date"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- CONTRIBUTING.md SCANNER_GUIDE.md .github/workflows/validate-contribution.yml .github/workflows/sweep-open-prs.yml
+          fi
+
+      - name: Commit and push
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CONTRIBUTING.md SCANNER_GUIDE.md .github/workflows/validate-contribution.yml .github/workflows/sweep-open-prs.yml
+          git commit -m "chore: sync scanner action commit pin"
+          git push
