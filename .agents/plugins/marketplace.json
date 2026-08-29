@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-08-29",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3035,21 +3035,6 @@
       "install_url": "https://raw.githubusercontent.com/Dunphil692/antigravity-context-meter/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "claude-image-gen",
-      "displayName": "claude-image-gen",
-      "description": "AI-powered image generation using Google Gemini or OpenAI (gpt-image-2), integrated with Claude Code via Skills or Claude.ai via MCP",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "guinacio",
-      "repo": "claude-image-gen",
-      "url": "https://github.com/guinacio/claude-image-gen",
-      "install_url": "https://raw.githubusercontent.com/guinacio/claude-image-gen/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "Claude Watchdog",
       "displayName": "Claude Watchdog",
       "description": "Stop hook that runs a critical post-mortem on every Claude Code session, cross-checking what was asked against the actual git diff for missed goals, wasted detours, and unverified claims",
@@ -3063,6 +3048,21 @@
       "repo": "claude-watchdog",
       "url": "https://github.com/Temikus/claude-watchdog",
       "install_url": "https://raw.githubusercontent.com/Temikus/claude-watchdog/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "claude-image-gen",
+      "displayName": "claude-image-gen",
+      "description": "AI-powered image generation using Google Gemini or OpenAI (gpt-image-2), integrated with Claude Code via Skills or Claude.ai via MCP",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "guinacio",
+      "repo": "claude-image-gen",
+      "url": "https://github.com/guinacio/claude-image-gen",
+      "install_url": "https://raw.githubusercontent.com/guinacio/claude-image-gen/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex Full-Stack Workflow",
