@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-29",
+  "last_updated": "2026-08-30",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3200,6 +3200,21 @@
       "install_url": "https://raw.githubusercontent.com/labyrinth-analytics/loredocs/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "MCP Migration Check",
+      "displayName": "MCP Migration Check",
+      "description": "Deterministic MCP 2026-07-28 migration checker with an agent skill, CLI, GitHub Action, and hosted web probe powered by one rule engine",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AlpayC",
+      "repo": "mcp-migration-check",
+      "url": "https://github.com/AlpayC/mcp-migration-check",
+      "install_url": "https://raw.githubusercontent.com/AlpayC/mcp-migration-check/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "MegaLinter",
       "displayName": "MegaLinter",
       "description": "Set up, run and fix MegaLinter on any repository, covering 100+ linters and formatters for 69+ languages and 23+ formats, in CI or locally, with per-linter fix guides for the agent",
@@ -3634,6 +3649,34 @@
       "repo": "deja-vu",
       "url": "https://github.com/vshulcz/deja-vu",
       "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/kimi.plugin.json"
+    },
+    {
+      "name": "dsh-config-manager",
+      "displayName": "dsh-config-manager",
+      "description": "Backup, restore, export, import, migrate and sync your complete DeepSeek Harness (DSH) configuration \u2014 settings, model providers, plugins, MCP servers, skills, agent presets and workspaces \u2014 and restore your whole environment on a new machine with one click",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "xiajiajun516",
+      "repo": "dsh-config-manager",
+      "url": "https://github.com/xiajiajun516/dsh-config-manager"
+    },
+    {
+      "name": "Engramory",
+      "displayName": "Engramory",
+      "description": "Curated, file-based long-term memory for DSH agents \u2014 plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "tinqiao-oss",
+      "repo": "engramory",
+      "url": "https://github.com/tinqiao-oss/engramory"
     }
   ]
 }
