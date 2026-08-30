@@ -171,16 +171,31 @@ def current_readme_section(readme_lines: list[str], line_number: int) -> str:
     return heading
 
 
+def readme_urls_in_section(readme: str, section: str) -> set[str]:
+    """Return normalized repository URLs listed beneath one level-two heading."""
+
+    current_section = ""
+    urls: set[str] = set()
+    for line in readme.splitlines():
+        heading = re.match(r"^##\s+(.+?)\s*$", line)
+        if heading:
+            current_section = heading.group(1).strip()
+            continue
+        if current_section != section:
+            continue
+        match = README_ENTRY_RE.match(line.strip())
+        if match:
+            urls.add(normalize_url(match.group(2)))
+    return urls
+
+
 def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: str) -> list[Contribution]:
     """Find newly added Community Plugins entries in a README diff."""
 
     if not diff:
         return []
 
-    base_urls = {
-        normalize_url(match.group(2))
-        for match in README_ENTRY_RE.finditer(base_readme)
-    }
+    base_urls = readme_urls_in_section(base_readme, "Community Plugins")
     readme_lines = head_readme.splitlines()
 
     entries: list[Contribution] = []

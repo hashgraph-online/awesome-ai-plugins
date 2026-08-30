@@ -111,6 +111,32 @@ class ValidateContributionTests(unittest.TestCase):
         malformed = MODULE.malformed_community_plugin_lines(diff, head)
         self.assertEqual(len(malformed), 1)
 
+    def test_relocated_entry_is_detected_when_base_url_only_exists_in_contents(self) -> None:
+        base = (
+            "## Contents\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            "## Community Plugins\n"
+            "- [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+        head = (
+            "## Contents\n"
+            "## Community Plugins\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            "- [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+        diff = (
+            "@@ -1,4 +1,4 @@\n"
+            " ## Contents\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            " ## Community Plugins\n"
+            "+- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            " - [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual([entry.repo for entry in entries], ["moved-plugin"])
+
 
 class PublishOpenPrChecksTests(unittest.TestCase):
     def setUp(self) -> None:
