@@ -163,6 +163,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Cover My Repo](https://github.com/sjh9714/cover-my-repo) - Designs three checked GitHub social preview cards with Codex or Cursor, then renders them locally with Chrome.
 - [debt-ops](https://github.com/bcanfield/agentic-tech-debt) - Catches AI-introduced tech debt at write-time: hooks log every deferral to a registry in your repo and a review skill ranks paydown by file churn.
 - [Deps Doctor](./plugins/mturac/deps-doctor) - Multi-ecosystem dependency audit (npm, pip, cargo, go) in one report.
+- [Dely](https://github.com/hieuphung97/dely) - Multi-harness control protocol that turns requests into approved design contracts, orchestrating isolated worker sessions for sequential implementation and independent code reviews under Orca supervision for Claude Code, Codex, Cursor, Antigravity, and other AI coding agents.
 - [Designer Skill](https://github.com/Pythoughts-labs/designer-skill) - Plug-and-play MCP that gives your agent UI superpowers. One install: design skill + MCP server, zero config.
 - [Dev Skills](https://github.com/Jason-chen-coder/dev-skills) - Team workflow skills for specs, plans, TDD, debugging, verification, review, branch finishing, and design context.
 - [dev-harness-kit](https://github.com/sh-ai-x/dev-harness-kit) - Enforced development workflow skills for Codex and Claude Code covering planning, TDD, debugging, review, security, CI, and release.
