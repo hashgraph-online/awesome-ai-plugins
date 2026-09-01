@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1233,6 +1233,21 @@
       "repo": "personal-data-protection-skill",
       "url": "https://github.com/AltByteSG/personal-data-protection-skill",
       "install_url": "https://raw.githubusercontent.com/AltByteSG/personal-data-protection-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "PMC",
+      "displayName": "PMC",
+      "description": "Give Codex lasting project context in an Obsidian vault you control.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "DuncanMain",
+      "repo": "project-memory-core",
+      "url": "https://github.com/DuncanMain/project-memory-core",
+      "install_url": "https://raw.githubusercontent.com/DuncanMain/project-memory-core/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Praxis",
