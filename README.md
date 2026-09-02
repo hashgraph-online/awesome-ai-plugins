@@ -289,6 +289,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
+- [AgentCall](https://github.com/pattern-ai-labs/agentcall) - Lets Claude Code, Codex, Cursor, Gemini CLI, and 30+ other agents join Google Meet, Zoom, or Microsoft Teams as a speaking, listening, presenting participant with text-to-speech, live transcripts, screenshare, and an avatar camera feed.
 - [Agentgram](https://github.com/jerryfane/agentgram) - Send explicit Telegram messages from Codex and local AI agents through a Telegram bot token and chat id.
 - [AgentGuards](https://github.com/alelaguard/agentguards-plugins) - LLM security guardrails for Codex with enforcing hooks and MCP tools: jailbreak and prompt-injection detection, web-content scanning, data-exfiltration blocking, and destructive-command authorization.
 - [agentmailkit](https://github.com/ariaxhan/agentmailkit) - MCP server for scheduled LLM-written email digests from RSS, web and local sources: tools list_jobs/run_job/preview_job/list_plugins, local-first, run_job dry-run by default; `pip install "agentmailkit[mcp]"` then `agentmailkit mcp`.
