@@ -188,6 +188,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Espresso](https://github.com/mirkobozzetto/espresso) - Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.
 - [falsegreen-skill](https://github.com/vinicq/falsegreen-skill) - Finds tests that stay green when the code they cover is broken, applying six ordered judgments over Python, TypeScript, JavaScript, and Robot Framework suites in Codex CLI and Claude Code.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
+- [FinBridge](https://github.com/Jakechj/finbridge-mcp) - Remote MCP server for Korean and US market data with filings, screeners, insider activity, and portfolio backtests.
 - [FlexViz](https://github.com/flex-analytics/flexviz) - Interactive cross-filter dashboards for large datasets with a Claude Code skill for agent-driven data exploration.
 - [Frappe Agent](https://github.com/Dkm0315/frappe-agent) - Frappe and ERPNext coding, customization, bench, and review intelligence for Codex.
 - [GCF Proxy](https://github.com/blackwell-systems/gcf-codex-plugin) - Save 71% on MCP tool call tokens by wrapping any server with GCF encoding, with session stats hook and setup skill.
