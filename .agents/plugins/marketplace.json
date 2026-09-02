@@ -3890,6 +3890,21 @@
       "install_url": "https://raw.githubusercontent.com/dat999zx/knowl/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Knowledge Loom",
+      "displayName": "Knowledge Loom",
+      "description": "Agent-neutral skills for initializing, auditing, using, and maintaining governed local Markdown knowledge vaults across Agent Skills-compatible runtimes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "magickaichen",
+      "repo": "knowledge-loom",
+      "url": "https://github.com/magickaichen/knowledge-loom",
+      "install_url": "https://raw.githubusercontent.com/magickaichen/knowledge-loom/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Knowledge Manager",
       "displayName": "Knowledge Manager",
       "description": "Extracts and organizes content from web pages, files, Notion, and images into an Obsidian knowledge vault with GraphRAG-backed search, exporting to Notion, Markdown, and PDF",

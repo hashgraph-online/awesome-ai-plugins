@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-02",
-  "total": 324,
+  "total": 325,
   "platforms": [
     "codex",
     "grok",
@@ -3634,6 +3634,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/dat999zx/knowl/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Knowledge Loom",
+      "url": "https://github.com/magickaichen/knowledge-loom",
+      "owner": "magickaichen",
+      "repo": "knowledge-loom",
+      "description": "Agent-neutral skills for initializing, auditing, using, and maintaining governed local Markdown knowledge vaults across Agent Skills-compatible runtimes",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/magickaichen/knowledge-loom/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
