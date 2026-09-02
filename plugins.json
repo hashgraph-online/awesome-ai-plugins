@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-02",
-  "total": 322,
+  "total": 324,
   "platforms": [
     "codex",
     "grok",
@@ -3149,6 +3149,20 @@
       ]
     },
     {
+      "name": "BioNexus",
+      "url": "https://github.com/HERRY423/BioNexus",
+      "owner": "HERRY423",
+      "repo": "BioNexus",
+      "description": "Warrant-first scientific reliability layer for AI bioinformatics that audits analytical assumptions, calibrates evidence strength, caps unsupported claims, and verifies execution provenance",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/HERRY423/BioNexus/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Browser Harness",
       "url": "https://github.com/browser-use/browser-harness",
       "owner": "browser-use",
@@ -4250,6 +4264,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "BoondManager MCP Server",
+      "url": "https://github.com/fauguste/boondmanager-mcp-server",
+      "owner": "fauguste",
+      "repo": "boondmanager-mcp-server",
+      "description": "MCP server for the BoondManager staffing ERP/CRM exposing 182 tools, 12 prompts and 22 resources over candidates, resources, opportunities, projects, invoices and expense reports, with stdio and OAuth-protected HTTP transports",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fauguste/boondmanager-mcp-server/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

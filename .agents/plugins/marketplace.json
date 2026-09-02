@@ -3365,6 +3365,21 @@
       "install_url": "https://raw.githubusercontent.com/QoderAI/better-harness/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "BioNexus",
+      "displayName": "BioNexus",
+      "description": "Warrant-first scientific reliability layer for AI bioinformatics that audits analytical assumptions, calibrates evidence strength, caps unsupported claims, and verifies execution provenance",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "HERRY423",
+      "repo": "BioNexus",
+      "url": "https://github.com/HERRY423/BioNexus",
+      "install_url": "https://raw.githubusercontent.com/HERRY423/BioNexus/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Browser Harness",
       "displayName": "Browser Harness",
       "description": "MCP server and agent skill that connect an AI agent to a real browser through one editable CDP WebSocket",
@@ -4548,6 +4563,21 @@
       "repo": "cosmosdb-agent-kit",
       "url": "https://github.com/AzureCosmosDB/cosmosdb-agent-kit",
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "BoondManager MCP Server",
+      "displayName": "BoondManager MCP Server",
+      "description": "MCP server for the BoondManager staffing ERP/CRM exposing 182 tools, 12 prompts and 22 resources over candidates, resources, opportunities, projects, invoices and expense reports, with stdio and OAuth-protected HTTP transports",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "fauguste",
+      "repo": "boondmanager-mcp-server",
+      "url": "https://github.com/fauguste/boondmanager-mcp-server",
+      "install_url": "https://raw.githubusercontent.com/fauguste/boondmanager-mcp-server/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Cadence Code",
