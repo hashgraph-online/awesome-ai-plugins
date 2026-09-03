@@ -3875,6 +3875,21 @@
       "install_url": "https://raw.githubusercontent.com/intersystems-community/iris-agentic-dev/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Jump Skills",
+      "displayName": "Jump Skills",
+      "description": "Meta-skills that route requests to specialized skills across Claude Code, Codex, Cursor, OpenCode, and other agent hosts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "fabricioctelles",
+      "repo": "jump-skills",
+      "url": "https://github.com/fabricioctelles/jump-skills",
+      "install_url": "https://raw.githubusercontent.com/fabricioctelles/jump-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "kgai",
       "displayName": "kgai",
       "description": "Shared decision memory for AI dev teams, an immutable local log of the decisions behind your code, synced over an S3 bucket you own",
@@ -4533,6 +4548,21 @@
       "repo": "web-search-mcp",
       "url": "https://github.com/sydasif/web-search-mcp",
       "install_url": "https://raw.githubusercontent.com/sydasif/web-search-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Windrunner",
+      "displayName": "Windrunner",
+      "description": "Self-hosted project workspace with Spring AI, MCP, CLI, and multi-provider AI integrations",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "shzlw",
+      "repo": "windrunner",
+      "url": "https://github.com/shzlw/windrunner",
+      "install_url": "https://raw.githubusercontent.com/shzlw/windrunner/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "AgentCall",

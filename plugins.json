@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-03",
-  "total": 326,
+  "total": 328,
   "platforms": [
     "codex",
     "grok",
@@ -3625,6 +3625,20 @@
       ]
     },
     {
+      "name": "Jump Skills",
+      "url": "https://github.com/fabricioctelles/jump-skills",
+      "owner": "fabricioctelles",
+      "repo": "jump-skills",
+      "description": "Meta-skills that route requests to specialized skills across Claude Code, Codex, Cursor, OpenCode, and other agent hosts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fabricioctelles/jump-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "kgai",
       "url": "https://github.com/kgaidev/kgai",
       "owner": "kgaidev",
@@ -4236,6 +4250,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/sydasif/web-search-mcp/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Windrunner",
+      "url": "https://github.com/shzlw/windrunner",
+      "owner": "shzlw",
+      "repo": "windrunner",
+      "description": "Self-hosted project workspace with Spring AI, MCP, CLI, and multi-provider AI integrations",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/shzlw/windrunner/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
