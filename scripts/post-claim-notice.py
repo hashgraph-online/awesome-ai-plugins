@@ -63,7 +63,7 @@ def build_comment_body(author: str) -> str:
 
 ## Claim your plugin
 
-As the author, you can verify ownership of your plugin to unlock:
+If you maintain this plugin, you can verify ownership to unlock:
 
 - **Owner-verified badge** on your plugin's registry listing
 - **Trust score** visibility and analytics for your plugin
@@ -107,7 +107,12 @@ def api_request(url, headers=None, method="GET", data=None):
 
 def should_skip_title(title: str) -> bool:
     """Return True if the PR title matches a non-plugin pattern."""
+    # `docs: add <plugin>` is a common legitimate contribution title. Allow it
+    # through the title gate, while retaining specific docs-only exclusions below.
+    allow_docs_add = bool(re.match(r"^docs?:\s+add\b", title.strip(), re.IGNORECASE))
     for pattern in SKIP_PATTERNS:
+        if pattern == r"^docs?:" and allow_docs_add:
+            continue
         if re.search(pattern, title, re.IGNORECASE):
             return True
     return False
