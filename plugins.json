@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-03",
-  "total": 329,
+  "total": 330,
   "platforms": [
     "codex",
     "grok",
@@ -4432,6 +4432,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/hostinger/api-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "immich-photo-manager",
+      "url": "https://github.com/drolosoft/immich-photo-manager",
+      "owner": "drolosoft",
+      "repo": "immich-photo-manager",
+      "description": "MCP server and Claude Code plugin for self-hosted Immich photo libraries: CLIP and OCR search, geographic album curation, duplicate detection, people and faces, metadata repair, video frames and PDF photobooks, 94 tools and 13 skills tested live on Immich 2.x and 3.x, also via uvx or Docker",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/drolosoft/immich-photo-manager/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
