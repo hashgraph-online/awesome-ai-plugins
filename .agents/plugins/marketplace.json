@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-02",
+  "last_updated": "2026-09-03",
   "plugins": [
     {
       "name": "Registry Broker",
