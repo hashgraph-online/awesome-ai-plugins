@@ -59,11 +59,11 @@ SKIP_PATTERNS = [
 def build_comment_body(author: str) -> str:
     """Build the claim notice comment body, tagging the PR author."""
     return f"""<!-- hol-claim-notice -->
-🎉 Hey @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!
+🎉 Hey @{author}, this plugin submission has been merged into HOL's catalog source.
 
 ## Claim your plugin
 
-As the author, you can verify ownership of your plugin to unlock:
+Once the plugin appears in the [HOL Registry](https://hol.org/plugins), if you maintain it, you can verify ownership to unlock:
 
 - **Owner-verified badge** on your plugin's registry listing
 - **Trust score** visibility and analytics for your plugin
@@ -73,11 +73,11 @@ As the author, you can verify ownership of your plugin to unlock:
 ### How to claim
 
 1. Visit **[hol.org/guard/plugins](https://hol.org/guard/plugins)**
-2. Find your plugin and click **"Verify ownership"**
+2. Find the plugin after it appears in the registry and click **"Verify ownership"**
 3. Sign in with GitHub — we only request `read:user`, `user:email`, and `read:org` (no write access to your repos)
-4. We verify you own the repository, and your plugin gets the ✅ owner-verified badge
+4. We verify you own the repository, and the plugin gets the ✅ owner-verified badge
 
-The whole process takes under 30 seconds. No need to add any secrets or tokens to your repo — verification is done entirely through GitHub OAuth.
+No need to add any secrets or tokens to your repo — ownership verification is done entirely through GitHub OAuth.
 
 If you have any questions, feel free to ask here or reach out at [support@hol.org](mailto:support@hol.org)."""
 
@@ -107,7 +107,12 @@ def api_request(url, headers=None, method="GET", data=None):
 
 def should_skip_title(title: str) -> bool:
     """Return True if the PR title matches a non-plugin pattern."""
+    # `docs: add <plugin>` is a common legitimate contribution title. Allow it
+    # through the title gate, while retaining specific docs-only exclusions below.
+    allow_docs_add = bool(re.match(r"^docs?:\s+add\b", title.strip(), re.IGNORECASE))
     for pattern in SKIP_PATTERNS:
+        if pattern == r"^docs?:" and allow_docs_add:
+            continue
         if re.search(pattern, title, re.IGNORECASE):
             return True
     return False
