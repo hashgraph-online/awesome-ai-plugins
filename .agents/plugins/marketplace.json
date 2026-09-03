@@ -3740,6 +3740,21 @@
       "install_url": "https://raw.githubusercontent.com/jburgess/mcp-grafana/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Groundwork",
+      "displayName": "Groundwork",
+      "description": "Comprehensive skills library for Claude Code and Codex that structures discovery, planning, design, TDD, debugging, validation, collaboration, and shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "etr",
+      "repo": "groundwork",
+      "url": "https://github.com/etr/groundwork",
+      "install_url": "https://raw.githubusercontent.com/etr/groundwork/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "harness-eval",
       "displayName": "harness-eval",
       "description": "Linter tool (static analysis rules) and LLM reviewer for AI agent harness files that runs quality and security health checks, catching cross-component security chains, redundancy, and config drift, and vets individual skills before install, across Claude Code, Cursor, Codex, Copilot, Gemini, and OpenCode",
