@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-03",
-  "total": 328,
+  "total": 329,
   "platforms": [
     "codex",
     "grok",
@@ -3816,6 +3816,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Beledarian/mcp-local-memory/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "mcp-server-kubernetes",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes",
+      "owner": "Flux159",
+      "repo": "mcp-server-kubernetes",
+      "description": "MCP server for managing Kubernetes clusters via kubectl with tools for get, describe, apply, delete, logs, exec, port-forward, scaling, rollouts, Helm chart operations, and context switching",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Flux159/mcp-server-kubernetes/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
