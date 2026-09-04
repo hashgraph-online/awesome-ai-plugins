@@ -302,6 +302,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Test Gap](./plugins/mturac/test-gap) - Find lines in your diff lacking test coverage (Cobertura, lcov, coverage.json).
 - [TODO Harvest](./plugins/mturac/todo-harvest) - TODO/FIXME/HACK scan with `git blame` author + age.
 - [TermaGITchi](https://github.com/TevvvB/termagitchi) - Stable per-worktree identity for parallel Claude Code, Codex, and tmux sessions; mood reads repository hygiene, not what the agent is doing.
+- [ThumbGate](https://github.com/IgorGanapolsky/ThumbGate) - Pre-action infrastructure firewall for AI coding agents: feedback becomes lessons and prevention rules enforced by PreToolUse hooks across Claude Code, Codex, Gemini, and MCP.
 - [token-optimizer](https://github.com/ooples/token-optimizer-mcp) - Spend less context and keep the conclusions across 16 coding clients including Claude Code, Codex, Gemini CLI, Cursor, and Copilot — diff-only re-reads, paths-only search, out-of-context stashing, and a local ledger that measures each tool's actual return.
 - [Tool Advisor](https://github.com/dragon1086/claude-skills) - Read-only meta-skill that scans your MCP servers, skills, plugins, and CLI tools, then suggests up to three ranked approaches (Methodical / Fast / Deep) with a copy-paste Quick Action table.
 - [trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp) - Precomputed code-intelligence graph served over MCP — symbol search, call graphs, change impact, and test mapping as structured answers instead of whole-file reads.
