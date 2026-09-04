@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-04",
-  "total": 333,
+  "total": 334,
   "platforms": [
     "codex",
     "grok",
@@ -3130,6 +3130,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Noizefield/audio-plugin-coder/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "avoid-ai-writing",
+      "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+      "owner": "conorbronsdon",
+      "repo": "avoid-ai-writing",
+      "description": "Portable agent skill for auditing and rewriting AI-patterned prose, with an optional local MCP detector that calls no model and sends no text to a network service",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/avoid-ai-writing/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

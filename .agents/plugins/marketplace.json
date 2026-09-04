@@ -3350,6 +3350,21 @@
       "install_url": "https://raw.githubusercontent.com/Noizefield/audio-plugin-coder/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "avoid-ai-writing",
+      "displayName": "avoid-ai-writing",
+      "description": "Portable agent skill for auditing and rewriting AI-patterned prose, with an optional local MCP detector that calls no model and sends no text to a network service",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "avoid-ai-writing",
+      "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/avoid-ai-writing/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Better Harness",
       "displayName": "Better Harness",
       "description": "Evidence-backed workflow analysis for coding agents that turns project and session signals into prioritized, verifiable improvements across supported hosts",
