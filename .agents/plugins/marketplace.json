@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3965,6 +3965,21 @@
       "install_url": "https://raw.githubusercontent.com/luocfprime/labtasker/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "lattice",
+      "displayName": "lattice",
+      "description": "Composable AI skills framework that infuses clean code, clean architecture, domain-driven design, secure coding, and proper testing into the workflow by default, with scenario-driven guides for getting started, customization, and team use",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "techygarg",
+      "repo": "lattice",
+      "url": "https://github.com/techygarg/lattice",
+      "install_url": "https://raw.githubusercontent.com/techygarg/lattice/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "LinkedIn Animated Infographics",
       "displayName": "LinkedIn Animated Infographics",
       "description": "Evidence-safe animated infographic generator with multi-agent design pipeline for LinkedIn",
@@ -4503,6 +4518,21 @@
       "repo": "termagitchi",
       "url": "https://github.com/TevvvB/termagitchi",
       "install_url": "https://raw.githubusercontent.com/TevvvB/termagitchi/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ThumbGate",
+      "displayName": "ThumbGate",
+      "description": "Pre-action infrastructure firewall for AI coding agents: feedback becomes lessons and prevention rules enforced by PreToolUse hooks across Claude Code, Codex, Gemini, and MCP",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "IgorGanapolsky",
+      "repo": "ThumbGate",
+      "url": "https://github.com/IgorGanapolsky/ThumbGate",
+      "install_url": "https://raw.githubusercontent.com/IgorGanapolsky/ThumbGate/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "trace-mcp",

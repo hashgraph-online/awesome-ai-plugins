@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-03",
-  "total": 330,
+  "last_updated": "2026-09-04",
+  "total": 332,
   "platforms": [
     "codex",
     "grok",
@@ -3709,6 +3709,20 @@
       ]
     },
     {
+      "name": "lattice",
+      "url": "https://github.com/techygarg/lattice",
+      "owner": "techygarg",
+      "repo": "lattice",
+      "description": "Composable AI skills framework that infuses clean code, clean architecture, domain-driven design, secure coding, and proper testing into the workflow by default, with scenario-driven guides for getting started, customization, and team use",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/techygarg/lattice/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "LinkedIn Animated Infographics",
       "url": "https://github.com/imMamdouhaboammar/linkedin-animated-infographics",
       "owner": "imMamdouhaboammar",
@@ -4208,6 +4222,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/TevvvB/termagitchi/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "ThumbGate",
+      "url": "https://github.com/IgorGanapolsky/ThumbGate",
+      "owner": "IgorGanapolsky",
+      "repo": "ThumbGate",
+      "description": "Pre-action infrastructure firewall for AI coding agents: feedback becomes lessons and prevention rules enforced by PreToolUse hooks across Claude Code, Codex, Gemini, and MCP",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/IgorGanapolsky/ThumbGate/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
