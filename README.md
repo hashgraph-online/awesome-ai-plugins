@@ -381,6 +381,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Kreuzberg](https://github.com/kreuzberg-dev/plugins) - Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.
 - [Kreuzberg Cloud](https://github.com/kreuzberg-dev/plugins) - Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.
 - [Kreuzcrawl](https://github.com/kreuzberg-dev/plugins) - Web crawling and scraping for Codex with skills for single-page scraping, site crawls, URL mapping, and headless browser fallback.
+- [kunglao-agent](https://github.com/amd2g2zz/kunglao-agent) - Reverse-engineering expert agent for binaries, firmware, protocols, and web/JS: MCP servers registered by kunglao-init (ghidra, sequential-thinking, x64dbg, ...), see the MCP supply table under Internals.
 - [Lacuna Music](https://github.com/JOYLINK-LTD/lacuna-plugin) - Generate original instrumental music and vocal songs from Codex through the Lacuna MCP server.
 - [Langfuse Observability](https://github.com/avivsinai/langfuse-mcp) - Query traces, debug exceptions, analyze sessions, and manage prompts via MCP tools.
 - [Launch Fast](https://github.com/BlockchainHB/launchfast_codex_plugin) - Official Launch Fast plugin adapter for rapid SaaS deployment.
