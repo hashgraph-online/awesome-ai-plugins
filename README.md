@@ -407,6 +407,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Remotion Plugin](https://github.com/tim-osterhus/codex-remotion-plugin) - Build parameterized Remotion videos in Codex with the official Remotion docs MCP, composition scaffolding, and a data-driven launch-video workflow.
 - [ru-text](https://github.com/talkstream/ru-text) - Russian text quality — ~1,044 rules for typography, info-style, editorial, UX writing, and business correspondence.
 - [Rust Reverse Engineering](https://github.com/jingjing2222/rust-reverse-engineering-skill) - Reverse engineer Rust binaries and libraries: triage targets, demangle symbols, recover crate namespaces, and map panic, unwind, async, and FFI paths.
+- [Scholar Feed](https://github.com/YGao2005/scholar-feed-mcp) - MCP server over 600k+ CS/AI/ML papers: rank by citations or forecast rising impact, trace 23.2M citation edges, and pull full text and BibTeX; `npx -y scholar-feed-mcp`.
 - [ScrapeGraph AI](https://github.com/ScrapeGraphAI/just-scrape) - AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
 - [Shots](https://github.com/hitSlop/shots) - Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.
