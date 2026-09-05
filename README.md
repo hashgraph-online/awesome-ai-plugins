@@ -317,6 +317,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [VASTlint](https://github.com/aleksUIX/vastlint) - Validate VAST, VMAP, and DAAST ad tags against IAB Tech Lab specs via Gemini CLI, Claude Code, and a hosted MCP server.
 - [Velith](https://github.com/epicsagas/Velith) - AI-native publishing system with a 6-phase pipeline from ideation to EPUB/PDF across 8 genres.
 - [Vibe Prospecting](https://github.com/explorium-ai/vibeprospecting-plugin) - Live B2B company and contact intelligence for building lead lists, researching prospects, enriching contacts, and personalizing outreach.
+- [vibekit](https://github.com/rizukirr/vibekit) - Guardrail skills that gate coding work through brainstorm, spec, plan, one fresh agent per task, and an evidence-based verify step before a change counts as done, across Claude Code, Codex, opencode, Antigravity, and pi.
 - [VibePortrait](https://github.com/dadwadw233/VibePortrait) - Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI "think like you".
 - [VillageSQL Skills](https://github.com/villagesql/villagesql-skills) - Skills for VillageSQL including building extensions from scratch and porting PostgreSQL extensions to VillageSQL.
 - [Waggle](https://github.com/Abhigyan-Shekhar/Waggle-mcp) - Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions.
