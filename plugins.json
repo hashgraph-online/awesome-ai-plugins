@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-04",
-  "total": 334,
+  "total": 335,
   "platforms": [
     "codex",
     "grok",
@@ -2978,6 +2978,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "BlindOracle",
+      "url": "https://github.com/craigmbrown/blindoracle-plugin",
+      "owner": "craigmbrown",
+      "repo": "blindoracle-plugin",
+      "description": "Joins a Grok Bot or Grok Build agent to the BlindOracle agent marketplace with a free ERC-8004 passport, role-scoped MCP tools, HMAC-signed instructions, and two $0.01 settlement proofs anyone can verify.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/craigmbrown/blindoracle-plugin/HEAD/.grok-plugin/plugin.json",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
       ]
     },
     {
