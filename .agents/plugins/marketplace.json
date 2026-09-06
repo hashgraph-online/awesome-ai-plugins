@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-04",
+  "last_updated": "2026-09-05",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -4713,6 +4713,21 @@
       "repo": "cadence-code",
       "url": "https://github.com/michael-L-i/cadence-code",
       "install_url": "https://raw.githubusercontent.com/michael-L-i/cadence-code/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "career-ops",
+      "displayName": "career-ops",
+      "description": "Open-source AI job search that runs locally inside any AI coding CLI (Claude Code, Codex, OpenCode and others): evaluates offers against your CV, tailors ATS-ready PDFs, tracks every application, and leaves every decision to you",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "career-ops-hq",
+      "repo": "career-ops",
+      "url": "https://github.com/career-ops-hq/career-ops",
+      "install_url": "https://raw.githubusercontent.com/career-ops-hq/career-ops/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Cargo Skills",

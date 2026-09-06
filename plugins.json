@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-04",
-  "total": 334,
+  "last_updated": "2026-09-05",
+  "total": 335,
   "platforms": [
     "codex",
     "grok",
@@ -4404,6 +4404,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/michael-L-i/cadence-code/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "career-ops",
+      "url": "https://github.com/career-ops-hq/career-ops",
+      "owner": "career-ops-hq",
+      "repo": "career-ops",
+      "description": "Open-source AI job search that runs locally inside any AI coding CLI (Claude Code, Codex, OpenCode and others): evaluates offers against your CV, tailors ATS-ready PDFs, tracks every application, and leaves every decision to you",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/career-ops-hq/career-ops/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

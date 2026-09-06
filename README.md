@@ -347,6 +347,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Cadence Code](https://github.com/michael-L-i/cadence-code) - Fully local voice conversations for Claude Code, Codex, Cursor, and Antigravity on Apple Silicon, with selectable MLX speech and transcription models.
 - [Call-E](https://github.com/CALLE-AI/call-e-integrations) - Plan, run, and inspect Call-E phone call workflows from Codex through the calle CLI.
 - [Canvas Apps Plugin Codex](https://github.com/Ratnam-Mishra/canvas-apps-plugin-codex) - Build and edit Microsoft Power Apps Canvas Apps using natural language and Canvas Authoring MCP server.
+- [career-ops](https://github.com/career-ops-hq/career-ops) - Open-source AI job search that runs locally inside any AI coding CLI (Claude Code, Codex, OpenCode and others): evaluates offers against your CV, tailors ATS-ready PDFs, tracks every application, and leaves every decision to you.
 - [Cargo Skills](https://github.com/getcargohq/cargo-skills) - GTM engineering for coding agents — 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code.
 - [CarsXE](https://github.com/carsxe/carsxe-codex-plugin) - Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
