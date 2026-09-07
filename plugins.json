@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-07",
-  "total": 345,
+  "total": 347,
   "platforms": [
     "codex",
     "grok",
@@ -3430,6 +3430,20 @@
       ]
     },
     {
+      "name": "Craft",
+      "url": "https://github.com/drobins25/craft",
+      "owner": "drobins25",
+      "repo": "craft",
+      "description": "A Claude Code plugin that acts as an intelligent harness for your development workflow: your codebase is read-only by default, every change passes through a Write Gate as planned and approved work, and craft tracks your project's history, design tokens, and decisions locally so Claude learns your taste and architectural preferences over time",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/drobins25/craft/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Dely",
       "url": "https://github.com/hieuphung97/dely",
       "owner": "hieuphung97",
@@ -4181,6 +4195,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Kyne0328/rel-ai-mcp/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Repo Audit",
+      "url": "https://github.com/conorbronsdon/repo-audit",
+      "owner": "conorbronsdon",
+      "repo": "repo-audit",
+      "description": "Agent Skill that checks whether a repository's README matches its code and whether stated rules are actually enforced, with an opt-in open-source launch workflow",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/repo-audit/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
