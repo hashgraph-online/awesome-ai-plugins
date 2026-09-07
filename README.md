@@ -474,7 +474,7 @@ submitting a repository.
 - [dsh-config-manager](https://github.com/xiajiajun516/dsh-config-manager) - Backup, restore, export, import, migrate and sync your complete DeepSeek Harness (DSH) configuration — settings, model providers, plugins, MCP servers, skills, agent presets and workspaces — and restore your whole environment on a new machine with one click.
 - [dsh-deja](https://github.com/vshulcz/deja-vu) - Brings the session history of nineteen other coding agents into DeepSeek Harness: recall, session digest and per-file history tools over a local index, plus optional automatic recall.
 - [Engramory](https://github.com/tinqiao-oss/engramory) - Curated, file-based long-term memory for DSH agents — plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`.
-- [humanizer-ru](https://github.com/ilyautov/humanizer-ru) - Text-only `dsh.bundle` that mounts the humanizer-ru Agent Skill into DeepSeek Harness: rewrites Russian text to remove 64 markers of AI generation, with a corpus-calibrated scanner and audit mode; install with `dsh plugin --profile web add github:ilyautov/humanizer-ru`.
+- [humanizer-ru](https://github.com/ilyautov/humanizer-ru) - Text-only `dsh.bundle` that mounts the humanizer-ru Agent Skill into DeepSeek Harness: rewrites Russian text to remove 64 markers of AI generation, with a corpus-calibrated scanner and audit mode; install with `dsh plugin --profile web add humanizer-ru` (npm) or `github:ilyautov/humanizer-ru`.
 
 ### ZCode Plugins & Localization
 
