@@ -15,6 +15,7 @@ import sys
 import subprocess
 import urllib.request
 import urllib.error
+from urllib.parse import urlencode
 
 # --- Config ---
 REGISTRY_API = os.environ.get("REGISTRY_API", "https://hol.org/registry/api/v1")
@@ -56,8 +57,12 @@ SKIP_PATTERNS = [
     r"Add HOL Guard scanner",
 ]
 
-def build_comment_body(author: str) -> str:
+def build_comment_body(author: str, repositories=()) -> str:
     """Build the claim notice comment body, tagging the PR author."""
+    claim_links = "\n".join(
+        f"- [Verify ownership of `{repo}`](https://hol.org/guard/plugins?{urlencode({'claim': repo, 'utm_source': 'github', 'utm_medium': 'pr_comment', 'utm_campaign': 'plugin_claim', 'utm_content': 'merge_notice'})})"
+        for repo in sorted(set(repositories))
+    ) or "- [Open the plugin dashboard](https://hol.org/guard/plugins)"
     return f"""<!-- hol-claim-notice -->
 🎉 Hey @{author}, this plugin submission has been merged into HOL's catalog source.
 
@@ -72,10 +77,13 @@ Once the plugin appears in the [HOL Registry](https://hol.org/plugins), if you m
 
 ### How to claim
 
-1. Visit **[hol.org/guard/plugins](https://hol.org/guard/plugins)**
-2. Find the plugin after it appears in the registry and click **"Verify ownership"**
-3. Sign in with GitHub — we only request `read:user`, `user:email`, and `read:org` (no write access to your repos)
-4. We verify you own the repository, and the plugin gets the ✅ owner-verified badge
+{claim_links}
+
+1. Open your plugin's link above, then choose **"Continue with GitHub"**. Your plugin stays selected through sign-in.
+2. Use the GitHub account that maintains the repository. We request only `read:user` and `user:email`, with no repository write access.
+3. Complete ownership verification to receive the owner-verified badge. Inconclusive repository permissions may require review.
+
+If the listing is still syncing, try again later. You can also search the dashboard by plugin name or GitHub owner/repository.
 
 No need to add any secrets or tokens to your repo — ownership verification is done entirely through GitHub OAuth.
 
@@ -210,11 +218,11 @@ def has_existing_claim_comment():
     return False
 
 
-def post_comment(author: str):
+def post_comment(author: str, repositories=()):
     """Post the claim notice comment on the PR, tagging the author."""
     url = f"https://api.github.com/repos/{REPO_FULL}/issues/{PR_NUMBER}/comments"
     headers = {"Authorization": f"token {GH_TOKEN}"}
-    body = build_comment_body(author)
+    body = build_comment_body(author, repositories)
     result = api_request(url, headers=headers, method="POST", data={"body": body})
     return result is not None
 
@@ -271,23 +279,20 @@ def main():
 
     # 5. Check which PR repos are in the registry
     matched = pr_repos & registry_repos
-    if not matched:
+    if matched != pr_repos:
         # Fallback: check local README.md — the plugin may have just been merged
         # and the registry sync hasn't completed yet
-        print("  Not in registry yet, checking local README.md...")
+        print("  Some repos are not in the registry yet, checking local README.md...")
         readme_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "README.md")
         if os.path.exists(readme_path):
             readme_content = open(readme_path, encoding="utf-8").read().lower()
-            readme_matched = {r for r in pr_repos if r.lower() in readme_content}
+            readme_matched = {r for r in pr_repos - matched if r.lower() in readme_content}
             if readme_matched:
                 print(f"  Found in README (pending registry sync): {', '.join(readme_matched)}")
-                matched = readme_matched
-            else:
-                print("  Skipping: none of the PR repos are in the registry or README")
-                return 0
-        else:
-            print("  Skipping: README.md not found and repos not in registry")
-            return 0
+                matched |= readme_matched
+    if not matched:
+        print("  Skipping: none of the PR repos are in the registry or README")
+        return 0
 
     print(f"  Matched in registry: {', '.join(matched)}")
 
@@ -304,7 +309,7 @@ def main():
 
     # 7. Post the comment
     print("  Posting claim notice comment...")
-    if post_comment(PR_AUTHOR):
+    if post_comment(PR_AUTHOR, matched - already_verified):
         print("  ✅ Comment posted successfully")
         return 0
     else:
