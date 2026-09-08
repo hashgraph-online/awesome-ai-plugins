@@ -3307,6 +3307,21 @@
       "install_url": "https://raw.githubusercontent.com/2718labs/2718lab-devkit/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Agent Context OS",
+      "displayName": "Agent Context OS",
+      "description": "Portable Git-backed context and session workflow layer with first-class Claude Code, Codex, and OpenClaw support plus experimental adapters for Hermes, Cursor, and Devin",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "agent-context-os",
+      "url": "https://github.com/conorbronsdon/agent-context-os",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/agent-context-os/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Agent Guild",
       "displayName": "Agent Guild",
       "description": "Vet autonomous agents before delegating work or money, verify portable passports, use escrow, and record signed outcomes across Claude Code, Codex, MCP, A2A, and OpenClaw",

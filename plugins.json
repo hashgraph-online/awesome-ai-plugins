@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-08",
-  "total": 349,
+  "total": 350,
   "platforms": [
     "codex",
     "grok",
@@ -3089,6 +3089,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/2718labs/2718lab-devkit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Agent Context OS",
+      "url": "https://github.com/conorbronsdon/agent-context-os",
+      "owner": "conorbronsdon",
+      "repo": "agent-context-os",
+      "description": "Portable Git-backed context and session workflow layer with first-class Claude Code, Codex, and OpenClaw support plus experimental adapters for Hermes, Cursor, and Devin",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/agent-context-os/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
