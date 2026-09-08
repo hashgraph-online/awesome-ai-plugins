@@ -5185,7 +5185,7 @@
     {
       "name": "Substack MCP",
       "displayName": "Substack MCP",
-      "description": "Safe Substack creator operations across publications: rich drafts, Notes, analytics, and consented subscribers; long-form posts stay draft-only, while Notes publish immediately.",
+      "description": "Safe Substack creator operations across publications: rich drafts, Notes, analytics, and consented subscribers; long-form posts stay draft-only, while Notes publish immediately",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
