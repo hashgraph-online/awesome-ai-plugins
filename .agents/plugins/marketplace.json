@@ -5183,6 +5183,21 @@
       "install_url": "https://raw.githubusercontent.com/danielLublinsky/Skill-Atlas/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Substack MCP",
+      "displayName": "Substack MCP",
+      "description": "Safe Substack creator operations across publications: rich drafts, Notes, analytics, and consented subscribers; long-form posts stay draft-only, while Notes publish immediately.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "substack-mcp",
+      "url": "https://github.com/conorbronsdon/substack-mcp",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/substack-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Telnyx",
       "displayName": "Telnyx",
       "description": "Telnyx toolkit for AI agents bundling Claude Code, Cursor, Gemini CLI, and OpenCode plugins, an agent toolkit for OpenAI/LangChain/CrewAI/Vercel AI SDK, a hosted MCP server, and a one-command CLI for messaging, voice, numbers, and account management",
