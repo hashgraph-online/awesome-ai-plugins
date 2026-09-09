@@ -4057,6 +4057,21 @@
       "install_url": "https://raw.githubusercontent.com/fabricioctelles/jump-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "keep-the-why",
+      "displayName": "keep-the-why",
+      "description": "Preserves the reasoning behind a codebase as project memory \u2014 decisions, rejected alternatives, workarounds, incident learnings, constraints",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "oliver-zehentleitner",
+      "repo": "keep-the-why",
+      "url": "https://github.com/oliver-zehentleitner/keep-the-why",
+      "install_url": "https://raw.githubusercontent.com/oliver-zehentleitner/keep-the-why/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "kgai",
       "displayName": "kgai",
       "description": "Shared decision memory for AI dev teams, an immutable local log of the decisions behind your code, synced over an S3 bucket you own",

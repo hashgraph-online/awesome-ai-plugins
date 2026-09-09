@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-09",
-  "total": 356,
+  "total": 357,
   "platforms": [
     "codex",
     "grok",
@@ -3789,6 +3789,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/fabricioctelles/jump-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "keep-the-why",
+      "url": "https://github.com/oliver-zehentleitner/keep-the-why",
+      "owner": "oliver-zehentleitner",
+      "repo": "keep-the-why",
+      "description": "Preserves the reasoning behind a codebase as project memory \u2014 decisions, rejected alternatives, workarounds, incident learnings, constraints",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/oliver-zehentleitner/keep-the-why/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
