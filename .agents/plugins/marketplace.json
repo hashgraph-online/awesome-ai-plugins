@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-08",
+  "last_updated": "2026-09-09",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -5030,6 +5030,23 @@
       "repo": "api-mcp-server",
       "url": "https://github.com/hostinger/api-mcp-server",
       "install_url": "https://raw.githubusercontent.com/hostinger/api-mcp-server/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "HTML/CSS to Image API",
+      "displayName": "HTML/CSS to Image API",
+      "description": "Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "grok",
+        "kimi"
+      ],
+      "owner": "htmlcsstoimage",
+      "repo": "agent-plugins",
+      "url": "https://github.com/htmlcsstoimage/agent-plugins",
+      "install_url": "https://raw.githubusercontent.com/htmlcsstoimage/agent-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "humanizer-ru",
