@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-09",
-  "total": 357,
+  "total": 358,
   "platforms": [
     "codex",
     "grok",
@@ -4531,6 +4531,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/aleksUIX/vastlint/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "vibekit",
+      "url": "https://github.com/rizukirr/vibekit",
+      "owner": "rizukirr",
+      "repo": "vibekit",
+      "description": "Evidence-based guardrail pipeline for vibe coding: brainstorm, plan, one fresh agent per task, verify, across Claude Code, Codex, opencode, and Antigravity",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rizukirr/vibekit/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

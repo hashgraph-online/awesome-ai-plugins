@@ -4852,6 +4852,21 @@
       "install_url": "https://raw.githubusercontent.com/aleksUIX/vastlint/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "vibekit",
+      "displayName": "vibekit",
+      "description": "Evidence-based guardrail pipeline for vibe coding: brainstorm, plan, one fresh agent per task, verify, across Claude Code, Codex, opencode, and Antigravity",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "rizukirr",
+      "repo": "vibekit",
+      "url": "https://github.com/rizukirr/vibekit",
+      "install_url": "https://raw.githubusercontent.com/rizukirr/vibekit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Web Search MCP",
       "displayName": "Web Search MCP",
       "description": "Comprehensive FastMCP server giving LLMs real-time web access across search engines (DuckDuckGo, Exa), social platforms (Reddit, Hacker News, GitHub, X, LinkedIn), and academic tools (arXiv, Wikipedia), with SSRF-protected URL fetching",
