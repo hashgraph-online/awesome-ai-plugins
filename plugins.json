@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-09",
-  "total": 353,
+  "total": 354,
   "platforms": [
     "codex",
     "grok",
@@ -4732,6 +4732,20 @@
       "ecosystems": [
         "codex",
         "deepseek-harness"
+      ]
+    },
+    {
+      "name": "im-ai-copyeditor",
+      "url": "https://github.com/Turtle-Hwan/im-ai-copyeditor",
+      "owner": "Turtle-Hwan",
+      "repo": "im-ai-copyeditor",
+      "description": "Korean copyediting skill for coding agents that fixes spelling, translation-style phrasing, AI tone, and style sentence by sentence",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Turtle-Hwan/im-ai-copyeditor/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
