@@ -5275,6 +5275,21 @@
       "install_url": "https://raw.githubusercontent.com/ThoughtProof/thoughtproof-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "TikTok Skills",
+      "displayName": "TikTok Skills",
+      "description": "Codex-ready TikTok marketing bundle with a native .codex-plugin manifest and 8 skills: 3-second hook scripting (spoken line plus on-screen text), caption and hashtag writing under the 2,200-char API limit, trend mapping, profile optimization, AI-tell humanizer, and comment drafting; publishes through Publora with approval before anything goes live; also works in Claude Code",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "tiktok-skills",
+      "url": "https://github.com/sergebulaev/tiktok-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/tiktok-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Zero Slop",
       "displayName": "Zero Slop",
       "description": "Say no to AI slop: a human-in-the-loop learning agentic workflow skill that scores text 0-100 for AI slop and rewrites it tastefully, with a standard-library Python scorer that has zero dependencies and runs offline",
