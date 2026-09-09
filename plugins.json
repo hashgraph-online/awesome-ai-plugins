@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-09",
-  "total": 354,
+  "total": 355,
   "platforms": [
     "codex",
     "grok",
@@ -4419,6 +4419,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/datit309/supergraph/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "TaskDock",
+      "url": "https://github.com/m1nga/taskdock",
+      "owner": "m1nga",
+      "repo": "taskdock",
+      "description": "Agent skill for portable task folders with UUID lookup, explicit next actions, and duplicate detection",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/m1nga/taskdock/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
