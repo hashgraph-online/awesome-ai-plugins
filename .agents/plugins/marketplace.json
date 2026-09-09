@@ -950,6 +950,21 @@
       "install_url": "https://raw.githubusercontent.com/SamurAIGPT/Generative-Media-Skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Goal Progress",
+      "displayName": "Goal Progress",
+      "description": "A native progress bar for Codex Goals with checklist-based progress and token usage on Apple Silicon Macs.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ezra-y",
+      "repo": "codex-goal-progress",
+      "url": "https://github.com/ezra-y/codex-goal-progress",
+      "install_url": "https://raw.githubusercontent.com/ezra-y/codex-goal-progress/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "GrayMatter",
       "displayName": "GrayMatter",
       "description": "Durable memory and shared graph state for Codex and OpenClaw agents, with live ValkyrAI schema awareness.",
@@ -3065,21 +3080,6 @@
       "repo": "mechanical-engineering-research-skill",
       "url": "https://github.com/hanhuark/mechanical-engineering-research-skill",
       "install_url": "https://raw.githubusercontent.com/hanhuark/mechanical-engineering-research-skill/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Token Harbor",
-      "displayName": "Token Harbor",
-      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "NickHOI",
-      "repo": "Token-Harbor",
-      "url": "https://github.com/NickHOI/Token-Harbor",
-      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "TokRepo Search",
@@ -5318,6 +5318,21 @@
       "repo": "tiktok-skills",
       "url": "https://github.com/sergebulaev/tiktok-skills",
       "install_url": "https://raw.githubusercontent.com/sergebulaev/tiktok-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Token Harbor",
+      "displayName": "Token Harbor",
+      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "NickHOI",
+      "repo": "Token-Harbor",
+      "url": "https://github.com/NickHOI/Token-Harbor",
+      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Zero Slop",
