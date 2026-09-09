@@ -1010,6 +1010,21 @@
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/plugins/hera-unity/.codex-plugin/plugin.json"
     },
     {
+      "name": "Herdr Codex Subagents",
+      "displayName": "Herdr Codex Subagents",
+      "description": "Opens a read-only Herdr pane for every Codex subagent and closes it when the work is done.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "arvkonstantin",
+      "repo": "herdr-codex-subagents",
+      "url": "https://github.com/arvkonstantin/herdr-codex-subagents",
+      "install_url": "https://raw.githubusercontent.com/arvkonstantin/herdr-codex-subagents/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "HOL Guard Plugin",
       "displayName": "HOL Guard Plugin",
       "description": "AI antivirus workflow for Codex, Claude Code, Cursor, Gemini, OpenCode, MCP servers, skills, and plugin release checks with local approvals and receipts.",
@@ -3845,6 +3860,21 @@
       "repo": "flexviz",
       "url": "https://github.com/flex-analytics/flexviz",
       "install_url": "https://raw.githubusercontent.com/flex-analytics/flexviz/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "gemini-for-kubernetes-development",
+      "displayName": "gemini-for-kubernetes-development",
+      "description": "Gemini CLI extension that automates Kubernetes development tasks: declarative validation authoring, PR review, and SIG API Machinery issue triage",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "gke-labs",
+      "repo": "gemini-for-kubernetes-development",
+      "url": "https://github.com/gke-labs/gemini-for-kubernetes-development",
+      "install_url": "https://raw.githubusercontent.com/gke-labs/gemini-for-kubernetes-development/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Globalping",
