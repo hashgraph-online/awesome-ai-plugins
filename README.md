@@ -126,6 +126,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [AgentPack](https://github.com/vishal2612200/agentpack) - Ranks repo context for Codex with likely files, skill recommendations, agent rules, commands, warnings, and compact task-focused packs before editing.
 - [Agentry Observability](https://github.com/fr33dr4g0n/agentry-public) - Agent-native product analytics, error logging, and deploy attribution for coding agents through one HTTP API.
 - [AgiFlow](https://github.com/AgiFlow/ai-plugin) - Project management workflows for AI coding agents with planning, grooming, task execution, review, and AgiFlow MCP integration.
+- [AI DevKit](https://github.com/codeaholicguy/ai-devkit) - Local-first control plane for Codex, Claude, Gemini, Grok, and Pi agents with session control, durable memory, reusable skills, and Telegram and Slack channel bridges.
 - [AI Video Transcriber](https://github.com/wendy7756/AI-Video-Transcriber) - Transcribe and summarize videos, podcasts, and local media via a Codex plugin, Claude Code skill, and MCP server.
 - [AI-Native SDLC](https://github.com/bashebr/ai-native-sdlc) - Reusable skill and plugin bundle implementing the AI-native SDLC workflow: plan, design, build, test, deploy, and maintain with human approval gates.
 - [AIBoarding](https://github.com/gustavo-meilus/aiboarding) - Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.
