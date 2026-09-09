@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-08",
-  "total": 352,
+  "total": 353,
   "platforms": [
     "codex",
     "grok",
@@ -4701,6 +4701,22 @@
       "install_url": "https://raw.githubusercontent.com/hostinger/api-mcp-server/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "HTML/CSS to Image API",
+      "url": "https://github.com/htmlcsstoimage/agent-plugins",
+      "owner": "htmlcsstoimage",
+      "repo": "agent-plugins",
+      "description": "Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/htmlcsstoimage/agent-plugins/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex",
+        "grok",
+        "kimi"
       ]
     },
     {
