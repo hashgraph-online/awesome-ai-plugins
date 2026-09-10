@@ -2,12 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-04",
-  "total": 334,
+  "last_updated": "2026-09-10",
+  "total": 361,
   "platforms": [
     "codex",
     "grok",
-    "kimi",
     "deepseek-harness"
   ],
   "plugins": [
@@ -87,7 +86,7 @@
       "url": "https://github.com/JeongJaeSoon/agent-guard",
       "owner": "JeongJaeSoon",
       "repo": "agent-guard",
-      "description": "Real-time secret-leak guardrails for AI coding agents (Claude Code, Codex), Git hooks, and CI.",
+      "description": "Local-by-default, no-telemetry hooks block or mask secret leaks in Claude Code and Codex, with opt-in PII filtering and Git/CI backstops.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/JeongJaeSoon/agent-guard/HEAD/plugins/agent-guard/.codex-plugin/plugin.json",
@@ -629,6 +628,20 @@
       ]
     },
     {
+      "name": "Codex Tasklist",
+      "url": "https://github.com/martinille/codex-tasklist",
+      "owner": "martinille",
+      "repo": "codex-tasklist",
+      "description": "A persistent per-session task list for Codex CLI with a live, scrollable panel across terminals through native integrations or a launcher with tmux fallback.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/martinille/codex-tasklist/HEAD/plugins/codex-tasklist/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Codex TUI Proof",
       "url": "https://github.com/bnc4vk/codex-tui-proof",
       "owner": "bnc4vk",
@@ -881,6 +894,20 @@
       ]
     },
     {
+      "name": "Goal Progress",
+      "url": "https://github.com/ezra-y/codex-goal-progress",
+      "owner": "ezra-y",
+      "repo": "codex-goal-progress",
+      "description": "A native progress bar for Codex Goals with checklist-based progress and token usage on Apple Silicon Macs.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ezra-y/codex-goal-progress/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "GrayMatter",
       "url": "https://github.com/ValkyrLabs/GrayMatter",
       "owner": "ValkyrLabs",
@@ -917,6 +944,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/plugins/hera-unity/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Herdr Codex Subagents",
+      "url": "https://github.com/arvkonstantin/herdr-codex-subagents",
+      "owner": "arvkonstantin",
+      "repo": "herdr-codex-subagents",
+      "description": "Opens a read-only Herdr pane for every Codex subagent and closes it when the work is done.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/arvkonstantin/herdr-codex-subagents/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1333,7 +1374,7 @@
       "url": "https://github.com/Maksim-Burtsev/simple-man",
       "owner": "Maksim-Burtsev",
       "repo": "simple-man",
-      "description": "High-compression communication mode for Codex agents that removes filler while preserving search, validation, and implementation effort.",
+      "description": "Strips praise, recaps and filler from agent answers while keeping every fact you act on \u2014 findings carry location and one-line fix, refusals carry the safe procedure, tutorials stay long-form \u2014 benchmarked on 2,479 preregistered live calls, 266 of them real Claude Code sessions, with all raw records committed.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Maksim-Burtsev/simple-man/HEAD/plugins/simple-man/.codex-plugin/plugin.json",
@@ -1375,7 +1416,7 @@
       "url": "https://github.com/MageByte-Zero/spec-superflow",
       "owner": "MageByte-Zero",
       "repo": "spec-superflow",
-      "description": "Spec-first workflow with nine skills, lightweight Quick / Hotfix / Tweak / Full paths, bounded three-attempt repair loops, auditable recovery commands, hardened delta-spec sync, and guarded review gates.",
+      "description": "Spec-first workflow with nine skills, lightweight Quick / Hotfix / Tweak / Full paths, bounded three-attempt repair loops with auditable adjudication recovery, hardened delta-spec sync, and guarded review gates.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/MageByte-Zero/spec-superflow/HEAD/.codex-plugin/plugin.json",
@@ -1512,13 +1553,13 @@
     },
     {
       "name": "TMCRA Local Memory",
-      "url": "https://github.com/reshuibuduo/TMCRA-Codex-Memory",
+      "url": "https://github.com/reshuibuduo/tmcra-plugin-codex",
       "owner": "reshuibuduo",
-      "repo": "TMCRA-Codex-Memory",
+      "repo": "tmcra-plugin-codex",
       "description": "Owner-local memory for Codex that recalls user and project evidence before each answer and carries source-attributed project context across sessions and supported agent tools.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/reshuibuduo/TMCRA-Codex-Memory/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/reshuibuduo/tmcra-plugin-codex/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -1903,6 +1944,34 @@
       ]
     },
     {
+      "name": "Build Remote Agent",
+      "url": "https://github.com/LinespottingOrg/GrokBuildRemote-Agents",
+      "owner": "LinespottingOrg",
+      "repo": "GrokBuildRemote-Agents",
+      "description": "Pair a phone as spectator to a local Codex session via gbr-agent (QR / 8-char) and attach at 127.0.0.1:8788 or gbr-mcp.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/LinespottingOrg/GrokBuildRemote-Agents/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "BurpSuite MCP Bridge",
+      "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
+      "owner": "6jeffr3y",
+      "repo": "burpsuite-mcp-bridge",
+      "description": "Bridge Burp Suite traffic, replay, rewrite rules, and evidence export into Codex through MCP for WSL, Windows, and macOS workflows.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/6jeffr3y/burpsuite-mcp-bridge/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Call-E",
       "url": "https://github.com/CALLE-AI/call-e-integrations",
       "owner": "CALLE-AI",
@@ -1939,6 +2008,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/carsxe/carsxe-codex-plugin/HEAD/plugins/carsxe/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "CentricMem",
+      "url": "https://github.com/zeyu-j/centricmem-skill",
+      "owner": "zeyu-j",
+      "repo": "centricmem-skill",
+      "description": "Hosted librarian for agent Markdown memory via host MCP.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/zeyu-j/centricmem-skill/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2110,6 +2193,22 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "deja",
+      "url": "https://github.com/vshulcz/deja-vu",
+      "owner": "vshulcz",
+      "repo": "deja-vu",
+      "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and nineteen more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/codex-plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "kimi",
+        "deepseek-harness"
       ]
     },
     {
@@ -2537,7 +2636,7 @@
       "url": "https://github.com/plori-ai/codex-plugin",
       "owner": "plori-ai",
       "repo": "codex-plugin",
-      "description": "Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery.",
+      "description": "Create and drive plori AI agents in persistent cloud environments over remote MCP, with OAuth auto-discovery and a bundled Agent Skill.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json",
@@ -2799,14 +2898,14 @@
       ]
     },
     {
-      "name": "Token Harbor",
-      "url": "https://github.com/NickHOI/Token-Harbor",
-      "owner": "NickHOI",
-      "repo": "Token-Harbor",
-      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game.",
+      "name": "TokenChronicle",
+      "url": "https://github.com/HuaHuiJian/tokenchronicle-marketplace",
+      "owner": "HuaHuiJian",
+      "repo": "tokenchronicle-marketplace",
+      "description": "Local-first Codex work journal that automatically archives sessions for private search, audit, usage analytics, and long-term memory continuity without recurring model-token cost.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/HuaHuiJian/tokenchronicle-marketplace/HEAD/plugins/tokenchronicle/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2911,6 +3010,20 @@
       ]
     },
     {
+      "name": "WaveSpeed",
+      "url": "https://github.com/WaveSpeedAI/codex-plugin-wavespeed-cli",
+      "owner": "WaveSpeedAI",
+      "repo": "codex-plugin-wavespeed-cli",
+      "description": "Generate and edit AI images, video, audio, and 3D on the WaveSpeed platform with a bundled MCP server and CLI skill, including live catalog search, local-file upload, and price quotes before running.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/WaveSpeedAI/codex-plugin-wavespeed-cli/HEAD/plugins/wavespeed-cli/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "X (Twitter) Skills",
       "url": "https://github.com/sergebulaev/x-skills",
       "owner": "sergebulaev",
@@ -3004,6 +3117,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/2718labs/2718lab-devkit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Agent Context OS",
+      "url": "https://github.com/conorbronsdon/agent-context-os",
+      "owner": "conorbronsdon",
+      "repo": "agent-context-os",
+      "description": "Portable Git-backed context and session workflow layer with first-class Claude Code, Codex, and OpenClaw support plus experimental adapters for Hermes, Cursor, and Devin",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/agent-context-os/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -3359,6 +3486,20 @@
       ]
     },
     {
+      "name": "Craft",
+      "url": "https://github.com/drobins25/craft",
+      "owner": "drobins25",
+      "repo": "craft",
+      "description": "A Claude Code plugin that acts as an intelligent harness for your development workflow: your codebase is read-only by default, every change passes through a Write Gate as planned and approved work, and craft tracks your project's history, design tokens, and decisions locally so Claude learns your taste and architectural preferences over time",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/drobins25/craft/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Dely",
       "url": "https://github.com/hieuphung97/dely",
       "owner": "hieuphung97",
@@ -3368,6 +3509,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/hieuphung97/dely/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Demo GIF",
+      "url": "https://github.com/conorbronsdon/demo-gif-skill",
+      "owner": "conorbronsdon",
+      "repo": "demo-gif-skill",
+      "description": "Agent Skill that scripts, renders, optimizes, and embeds reproducible demo GIFs for CLI, TUI, web, and library projects using VHS or Playwright plus ffmpeg",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/demo-gif-skill/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -3527,6 +3682,20 @@
       ]
     },
     {
+      "name": "harmonyos-skills",
+      "url": "https://github.com/liasica/harmonyos-skills",
+      "owner": "liasica",
+      "repo": "harmonyos-skills",
+      "description": "Offline mirror of 16,800+ HarmonyOS NEXT official docs packaged as a Codex / Claude Code skill and MCP server, so AI coding assistants answer ArkTS / ArkUI / API questions with cited sources",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/liasica/harmonyos-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "harness-eval",
       "url": "https://github.com/redhat-community-ai-tools/harness-eval",
       "owner": "redhat-community-ai-tools",
@@ -3653,6 +3822,20 @@
       ]
     },
     {
+      "name": "keep-the-why",
+      "url": "https://github.com/oliver-zehentleitner/keep-the-why",
+      "owner": "oliver-zehentleitner",
+      "repo": "keep-the-why",
+      "description": "Preserves the reasoning behind a codebase as project memory \u2014 decisions, rejected alternatives, workarounds, incident learnings, constraints",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/oliver-zehentleitner/keep-the-why/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "kgai",
       "url": "https://github.com/kgaidev/kgai",
       "owner": "kgaidev",
@@ -3755,7 +3938,7 @@
       "url": "https://github.com/AmethystLuna/logicprobe",
       "owner": "AmethystLuna",
       "repo": "logicprobe",
-      "description": "Design-document & plan claim verification \u2014 checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification (7 structural checks + 7 adversarial probes), and compares before/after models for refactoring regression detection",
+      "description": "Design-document & plan claim verification \u2014 checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
@@ -3961,6 +4144,20 @@
       ]
     },
     {
+      "name": "mstar-harness",
+      "url": "https://github.com/btspoony/mstar-harness",
+      "owner": "btspoony",
+      "repo": "mstar-harness",
+      "description": "Multi-agent code harness plugin that routes work through PM, dev, QC, and QA roles with deterministic workflow gates enforced by a TypeScript engine, installable across dsh, omp, OpenCode, Cursor, Kimi Code, ZCode, and Codex",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/btspoony/mstar-harness/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Mycelium",
       "url": "https://github.com/arjunrajlaboratory/mycelium",
       "owner": "arjunrajlaboratory",
@@ -4101,6 +4298,20 @@
       ]
     },
     {
+      "name": "Repo Audit",
+      "url": "https://github.com/conorbronsdon/repo-audit",
+      "owner": "conorbronsdon",
+      "repo": "repo-audit",
+      "description": "Agent Skill that checks whether a repository's README matches its code and whether stated rules are actually enforced, with an opt-in open-source launch workflow",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/repo-audit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Rootly MCP Server",
       "url": "https://github.com/rootlyhq/rootly-mcp-server",
       "owner": "rootlyhq",
@@ -4110,6 +4321,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/rootlyhq/rootly-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "sci-brain",
+      "url": "https://github.com/QuantumBFS/sci-brain",
+      "owner": "QuantumBFS",
+      "repo": "sci-brain",
+      "description": "Research skills plugin for Claude Code, Codex, OpenCode, and pi that surveys literature into a citable knowledge base, brainstorms research ideas, and drafts papers and slides",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/QuantumBFS/sci-brain/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4185,6 +4410,20 @@
       ]
     },
     {
+      "name": "ssot-check",
+      "url": "https://github.com/conorbronsdon/ssot-check",
+      "owner": "conorbronsdon",
+      "repo": "ssot-check",
+      "description": "Agent Skill and dependency-free Python CLI that discovers repeated facts in documentation and checks declared copies against canonical values",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/ssot-check/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Suede Creator Skills",
       "url": "https://github.com/JasonColapietro/suede-creator-skills",
       "owner": "JasonColapietro",
@@ -4199,6 +4438,20 @@
       ]
     },
     {
+      "name": "super-token-saver",
+      "url": "https://github.com/ww-w-ai/super-token-saver",
+      "owner": "ww-w-ai",
+      "repo": "super-token-saver",
+      "description": "Cuts Claude Code and Codex token spend with prompt-cache expiry warnings, zero-cost session restore after compaction, and per-model usage and cost reports",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ww-w-ai/super-token-saver/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Supergraph",
       "url": "https://github.com/datit309/supergraph",
       "owner": "datit309",
@@ -4208,6 +4461,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/datit309/supergraph/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "TaskDock",
+      "url": "https://github.com/m1nga/taskdock",
+      "owner": "m1nga",
+      "repo": "taskdock",
+      "description": "Agent skill for portable task folders with UUID lookup, explicit next actions, and duplicate detection",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/m1nga/taskdock/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4297,6 +4564,20 @@
       ]
     },
     {
+      "name": "vibekit",
+      "url": "https://github.com/rizukirr/vibekit",
+      "owner": "rizukirr",
+      "repo": "vibekit",
+      "description": "Evidence-based guardrail pipeline for vibe coding: brainstorm, plan, one fresh agent per task, verify, across Claude Code, Codex, opencode, and Antigravity",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rizukirr/vibekit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Web Search MCP",
       "url": "https://github.com/sydasif/web-search-mcp",
       "owner": "sydasif",
@@ -4376,6 +4657,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Backlot",
+      "url": "https://github.com/brekkylab/backlot",
+      "owner": "brekkylab",
+      "repo": "backlot",
+      "description": "Local emulator for Slack, Gmail, Google Drive, GitHub, Jira, Notion, S3 and other enterprise SaaS APIs, reproducing their response shapes, pagination, auth and per-document ACLs over a corpus you supply, so agents and RAG pipelines can be tested with no vendor account; `backlot mcp` serves every source as MCP tools",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/brekkylab/backlot/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4474,6 +4769,51 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/hostinger/api-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "HTML/CSS to Image API",
+      "url": "https://github.com/htmlcsstoimage/agent-plugins",
+      "owner": "htmlcsstoimage",
+      "repo": "agent-plugins",
+      "description": "Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/htmlcsstoimage/agent-plugins/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex",
+        "grok",
+        "kimi"
+      ]
+    },
+    {
+      "name": "humanizer-ru",
+      "url": "https://github.com/ilyautov/humanizer-ru",
+      "owner": "ilyautov",
+      "repo": "humanizer-ru",
+      "description": "Agent skill for Claude Code, Codex, Cursor and Gemini that rewrites Russian text to remove 64 AI-generation markers (bureaucratese, calques, ChatGPT fingerprints), with a corpus-calibrated scanner, audit mode and author-voice calibration",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ilyautov/humanizer-ru/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex",
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "im-ai-copyeditor",
+      "url": "https://github.com/Turtle-Hwan/im-ai-copyeditor",
+      "owner": "Turtle-Hwan",
+      "repo": "im-ai-copyeditor",
+      "description": "Korean copyediting skill for coding agents that fixes spelling, translation-style phrasing, AI tone, and style sentence by sentence",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Turtle-Hwan/im-ai-copyeditor/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4605,6 +4945,20 @@
       ]
     },
     {
+      "name": "Substack MCP",
+      "url": "https://github.com/conorbronsdon/substack-mcp",
+      "owner": "conorbronsdon",
+      "repo": "substack-mcp",
+      "description": "Safe Substack creator operations across publications: rich drafts, Notes, analytics, and consented subscribers; long-form posts stay draft-only, while Notes publish immediately",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/conorbronsdon/substack-mcp/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Telnyx",
       "url": "https://github.com/team-telnyx/ai",
       "owner": "team-telnyx",
@@ -4614,6 +4968,48 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/team-telnyx/ai/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "ThoughtProof MCP",
+      "url": "https://github.com/ThoughtProof/thoughtproof-mcp",
+      "owner": "ThoughtProof",
+      "repo": "thoughtproof-mcp",
+      "description": "Local MCP pre-action verification for agents: mandate + proposed action \u2192 ALLOW/BLOCK/UNCERTAIN; execute only on ALLOW",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ThoughtProof/thoughtproof-mcp/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "TikTok Skills",
+      "url": "https://github.com/sergebulaev/tiktok-skills",
+      "owner": "sergebulaev",
+      "repo": "tiktok-skills",
+      "description": "Codex-ready TikTok marketing bundle with a native .codex-plugin manifest and 8 skills: 3-second hook scripting (spoken line plus on-screen text), caption and hashtag writing under the 2,200-char API limit, trend mapping, profile optimization, AI-tell humanizer, and comment drafting; publishes through Publora with approval before anything goes live; also works in Claude Code",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/tiktok-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Token Harbor",
+      "url": "https://github.com/NickHOI/Token-Harbor",
+      "owner": "NickHOI",
+      "repo": "Token-Harbor",
+      "description": "Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/NickHOI/Token-Harbor/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4644,21 +5040,6 @@
       "install_url": "https://raw.githubusercontent.com/FineComputer14451/Grok-Imagine-Cinematic-Studio/HEAD/.grok-plugin/plugin.json",
       "ecosystems": [
         "grok"
-      ]
-    },
-    {
-      "name": "deja",
-      "url": "https://github.com/vshulcz/deja-vu",
-      "owner": "vshulcz",
-      "repo": "deja-vu",
-      "description": "Recalls the sessions the other coding agents on the machine already wrote to disk, including work from before it was installed, through MCP tools, a `/deja:recall` command and recall on every prompt",
-      "category": "Kimi Plugins",
-      "platform": "kimi",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/kimi.plugin.json",
-      "ecosystems": [
-        "kimi",
-        "deepseek-harness"
       ]
     },
     {
