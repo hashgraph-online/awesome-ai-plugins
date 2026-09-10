@@ -428,6 +428,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [ScrapeGraph AI](https://github.com/ScrapeGraphAI/just-scrape) - AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
 - [Shots](https://github.com/hitSlop/shots) - Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.
+- [SimplePost](https://github.com/simple-post/core) - Validate, schedule, and publish social posts across multiple platforms through an MCP server, CLI, and open-source TypeScript SDK.
 - [site-spec](https://github.com/ariaxhan/site-spec) - MCP server for website audit and auto-fix: 40 checks across SEO, accessibility, privacy, structured data and AI searchability, tools audit_site/fix_issue/compile_spec/list_checks; `npx -y site-spec-mcp`.
 - [sitemd](https://github.com/sitemd-cc/sitemd) - Build websites from Markdown via MCP — 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages.
 - [Skill-Atlas](https://github.com/danielLublinsky/Skill-Atlas) - A third tier for Claude Code skills — dormant, zero tokens, still findable. Search a graph of your collection instead of preloading it.
