@@ -3097,6 +3097,21 @@
       "install_url": "https://raw.githubusercontent.com/hanhuark/mechanical-engineering-research-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "TokenChronicle",
+      "displayName": "TokenChronicle",
+      "description": "Local-first Codex work journal that automatically archives sessions for private search, audit, usage analytics, and long-term memory continuity without recurring model-token cost.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "HuaHuiJian",
+      "repo": "tokenchronicle-marketplace",
+      "url": "https://github.com/HuaHuiJian/tokenchronicle-marketplace",
+      "install_url": "https://raw.githubusercontent.com/HuaHuiJian/tokenchronicle-marketplace/HEAD/plugins/tokenchronicle/.codex-plugin/plugin.json"
+    },
+    {
       "name": "TokRepo Search",
       "displayName": "TokRepo Search",
       "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.",
