@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1008,6 +1008,21 @@
       "repo": "hera-agent-unity",
       "url": "https://github.com/NotNull92/hera-agent-unity",
       "install_url": "https://raw.githubusercontent.com/NotNull92/hera-agent-unity/HEAD/plugins/hera-unity/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Herdr Codex Subagents",
+      "displayName": "Herdr Codex Subagents",
+      "description": "Opens a read-only Herdr pane for every Codex subagent and closes it when the work is done.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "arvkonstantin",
+      "repo": "herdr-codex-subagents",
+      "url": "https://github.com/arvkonstantin/herdr-codex-subagents",
+      "install_url": "https://raw.githubusercontent.com/arvkonstantin/herdr-codex-subagents/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "HOL Guard Plugin",
