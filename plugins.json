@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-11",
-  "total": 364,
+  "total": 365,
   "platforms": [
     "codex",
     "grok",
@@ -4884,6 +4884,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "LetsFG",
+      "url": "https://github.com/LetsFG/LetsFG",
+      "owner": "LetsFG",
+      "repo": "LetsFG",
+      "description": "Flight and hotel search and booking for AI agents across hundreds of airlines and the major booking sites, via a remote MCP server (Claude, ChatGPT, Cursor, Windsurf), CLI, Python/JS SDKs, and an Agent Skill, with free search after a one-time card connection and real airline PNRs on flight bookings",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/LetsFG/LetsFG/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

@@ -5230,6 +5230,21 @@
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "LetsFG",
+      "displayName": "LetsFG",
+      "description": "Flight and hotel search and booking for AI agents across hundreds of airlines and the major booking sites, via a remote MCP server (Claude, ChatGPT, Cursor, Windsurf), CLI, Python/JS SDKs, and an Agent Skill, with free search after a one-time card connection and real airline PNRs on flight bookings",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "LetsFG",
+      "repo": "LetsFG",
+      "url": "https://github.com/LetsFG/LetsFG",
+      "install_url": "https://raw.githubusercontent.com/LetsFG/LetsFG/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Miro",
       "displayName": "Miro",
       "description": "Official Miro MCP server and agent integrations for Claude Code, Codex, Gemini CLI, Cursor, and other AI tools \u2014 read and write Miro boards, create diagrams, extract context from boards, and generate code from designs",
