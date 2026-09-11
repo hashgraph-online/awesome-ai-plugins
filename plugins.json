@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-11",
-  "total": 368,
+  "total": 370,
   "platforms": [
     "codex",
     "grok",
@@ -1468,6 +1468,20 @@
       ]
     },
     {
+      "name": "Stop That Shit",
+      "url": "https://github.com/lennney/stop-that-shit",
+      "owner": "lennney",
+      "repo": "stop-that-shit",
+      "description": "Local-first scope guard for Codex with explicit task modes, before-action checks, and bounded dependency, hash, and subagent decisions.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/lennney/stop-that-shit/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Superloopy",
       "url": "https://github.com/beefiker/superloopy",
       "owner": "beefiker",
@@ -2276,6 +2290,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-exa/HEAD/plugins/exa/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Fantasy Football Manager",
+      "url": "https://github.com/krmisystems/fantasy-football-manager",
+      "owner": "krmisystems",
+      "repo": "fantasy-football-manager",
+      "description": "Manage ESPN fantasy drafts and season transactions with configurable approval limits and a multi-team portfolio dashboard.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/krmisystems/fantasy-football-manager/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
