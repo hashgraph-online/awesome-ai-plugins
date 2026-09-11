@@ -4927,6 +4927,21 @@
       "install_url": "https://raw.githubusercontent.com/Hedde/trigger_tree/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Vanguard Frontier Agentic",
+      "displayName": "Vanguard Frontier Agentic",
+      "description": "Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "VincentChuWaiChow",
+      "repo": "vanguard-frontier-agentic",
+      "url": "https://github.com/VincentChuWaiChow/vanguard-frontier-agentic",
+      "install_url": "https://raw.githubusercontent.com/VincentChuWaiChow/vanguard-frontier-agentic/HEAD/plugins/vanguard-frontier-agentic/.codex-plugin/plugin.json"
+    },
+    {
       "name": "VASTlint",
       "displayName": "VASTlint",
       "description": "Validate VAST, VMAP, and DAAST ad tags against IAB Tech Lab specs via Gemini CLI, Claude Code, and a hosted MCP server",
