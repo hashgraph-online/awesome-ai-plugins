@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-11",
-  "total": 365,
+  "total": 367,
   "platforms": [
     "codex",
     "grok",
@@ -2688,6 +2688,20 @@
       ]
     },
     {
+      "name": "QRStuff",
+      "url": "https://github.com/qrstuff/codex-plugins",
+      "owner": "qrstuff",
+      "repo": "codex-plugins",
+      "description": "Connects OpenAI Codex to the QRStuff platform to generate, customize, and manage 25+ dynamic and static QR code types and scan analytics.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/qrstuff/codex-plugins/HEAD/plugins/qrstuff-mcp-server/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Read Image",
       "url": "https://github.com/ZXY1240/read-image",
       "owner": "ZXY1240",
@@ -4926,6 +4940,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Nimbleway/agent-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "OpenAI-Compatible Images",
+      "url": "https://github.com/Syh1906/openai-compatible-imagegen",
+      "owner": "Syh1906",
+      "repo": "openai-compatible-imagegen",
+      "description": "Generate, edit, and batch-process images through OpenAI-compatible APIs using a standalone skill or a Codex App plugin with a canvas for annotating edit requests",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

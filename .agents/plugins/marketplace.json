@@ -2872,6 +2872,21 @@
       "install_url": "https://raw.githubusercontent.com/TODAQmicro/qatom-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "QRStuff",
+      "displayName": "QRStuff",
+      "description": "Connects OpenAI Codex to the QRStuff platform to generate, customize, and manage 25+ dynamic and static QR code types and scan analytics.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "qrstuff",
+      "repo": "codex-plugins",
+      "url": "https://github.com/qrstuff/codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/qrstuff/codex-plugins/HEAD/plugins/qrstuff-mcp-server/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Read Image",
       "displayName": "Read Image",
       "description": "Read local images, videos, web pages, and Windows screenshots through Doubao, GLM, or Qwen-compatible vision APIs.",
@@ -5273,6 +5288,21 @@
       "repo": "agent-skills",
       "url": "https://github.com/Nimbleway/agent-skills",
       "install_url": "https://raw.githubusercontent.com/Nimbleway/agent-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "OpenAI-Compatible Images",
+      "displayName": "OpenAI-Compatible Images",
+      "description": "Generate, edit, and batch-process images through OpenAI-compatible APIs using a standalone skill or a Codex App plugin with a canvas for annotating edit requests",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Syh1906",
+      "repo": "openai-compatible-imagegen",
+      "url": "https://github.com/Syh1906/openai-compatible-imagegen",
+      "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "PDF Monster",
