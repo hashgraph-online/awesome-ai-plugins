@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-11",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3545,6 +3545,21 @@
       "repo": "browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "bury-bench",
+      "displayName": "bury-bench",
+      "description": "Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Onur45500",
+      "repo": "bury-bench",
+      "url": "https://github.com/Onur45500/bury-bench",
+      "install_url": "https://raw.githubusercontent.com/Onur45500/bury-bench/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Claude Watchdog",

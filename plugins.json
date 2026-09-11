@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-10",
-  "total": 361,
+  "last_updated": "2026-09-11",
+  "total": 362,
   "platforms": [
     "codex",
     "grok",
@@ -3313,6 +3313,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "bury-bench",
+      "url": "https://github.com/Onur45500/bury-bench",
+      "owner": "Onur45500",
+      "repo": "bury-bench",
+      "description": "Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Onur45500/bury-bench/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
