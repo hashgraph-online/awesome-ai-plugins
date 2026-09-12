@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-12",
-  "total": 373,
+  "total": 374,
   "platforms": [
     "codex",
     "grok",
@@ -5038,6 +5038,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "ParlayAPI",
+      "url": "https://github.com/JacobiusMakes/parlay-api-mcp",
+      "owner": "JacobiusMakes",
+      "repo": "parlay-api-mcp",
+      "description": "Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/JacobiusMakes/parlay-api-mcp/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

@@ -5395,6 +5395,21 @@
       "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "ParlayAPI",
+      "displayName": "ParlayAPI",
+      "description": "Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "JacobiusMakes",
+      "repo": "parlay-api-mcp",
+      "url": "https://github.com/JacobiusMakes/parlay-api-mcp",
+      "install_url": "https://raw.githubusercontent.com/JacobiusMakes/parlay-api-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "PDF Monster",
       "displayName": "PDF Monster",
       "description": "Analyzes PDFs as extracted text, OCR text, rendered page images, and embedded figures for coding agents",
