@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-11",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1565,6 +1565,21 @@
       "install_url": "https://raw.githubusercontent.com/f0d010c/stark/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Stop That Shit",
+      "displayName": "Stop That Shit",
+      "description": "Local-first scope guard for Codex with explicit task modes, before-action checks, and bounded dependency, hash, and subagent decisions.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "lennney",
+      "repo": "stop-that-shit",
+      "url": "https://github.com/lennney/stop-that-shit",
+      "install_url": "https://raw.githubusercontent.com/lennney/stop-that-shit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Superloopy",
       "displayName": "Superloopy",
       "description": "Evidence-gated Codex loop harness with specialist skills, including near-pixel authorized website cloning backed by screenshots, assets, build output, and visual QA.",
@@ -2437,6 +2452,21 @@
       "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-exa/HEAD/plugins/exa/.codex-plugin/plugin.json"
     },
     {
+      "name": "Fantasy Football Manager",
+      "displayName": "Fantasy Football Manager",
+      "description": "Manage ESPN fantasy drafts and season transactions with configurable approval limits and a multi-team portfolio dashboard.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "krmisystems",
+      "repo": "fantasy-football-manager",
+      "url": "https://github.com/krmisystems/fantasy-football-manager",
+      "install_url": "https://raw.githubusercontent.com/krmisystems/fantasy-football-manager/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Feishu to Codex",
       "displayName": "Feishu to Codex",
       "description": "Connect Codex to Feishu/Lark workflows for Docs, Messenger, Drive, Sheets, Base, Calendar, Tasks, Meetings, Mail, approvals, and more through the official Lark CLI.",
@@ -2870,6 +2900,21 @@
       "repo": "qatom-skill",
       "url": "https://github.com/TODAQmicro/qatom-skill",
       "install_url": "https://raw.githubusercontent.com/TODAQmicro/qatom-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "QRStuff",
+      "displayName": "QRStuff",
+      "description": "Connects OpenAI Codex to the QRStuff platform to generate, customize, and manage 25+ dynamic and static QR code types and scan analytics.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "qrstuff",
+      "repo": "codex-plugins",
+      "url": "https://github.com/qrstuff/codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/qrstuff/codex-plugins/HEAD/plugins/qrstuff-mcp-server/.codex-plugin/plugin.json"
     },
     {
       "name": "Read Image",
@@ -3322,6 +3367,21 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
+      "name": "geml",
+      "displayName": "geml",
+      "description": "An agent-native markup language featuring deterministic block-level editing and built-in validation to ensure documents never drift or break during AI operations",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "geml-spec",
+      "repo": "geml",
+      "url": "https://github.com/geml-spec/geml",
+      "install_url": "https://raw.githubusercontent.com/geml-spec/geml/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "2718lab DevKit",
       "displayName": "2718lab DevKit",
       "description": "Codex-first local MCP server and skill bundle for deterministic project intelligence, durable workflow orchestration, and reusable engineering tools",
@@ -3545,6 +3605,21 @@
       "repo": "browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "bury-bench",
+      "displayName": "bury-bench",
+      "description": "Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Onur45500",
+      "repo": "bury-bench",
+      "url": "https://github.com/Onur45500/bury-bench",
+      "install_url": "https://raw.githubusercontent.com/Onur45500/bury-bench/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Claude Watchdog",
@@ -4732,6 +4807,21 @@
       "install_url": "https://raw.githubusercontent.com/conorbronsdon/ssot-check/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Stvena",
+      "displayName": "Stvena",
+      "description": "Terminal workspace for running Codex or Claude Code beside live diffs, full-file review, checks, staging, and precise code feedback",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "nccapo",
+      "repo": "stvena",
+      "url": "https://github.com/nccapo/stvena",
+      "install_url": "https://raw.githubusercontent.com/nccapo/stvena/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Suede Creator Skills",
       "displayName": "Suede Creator Skills",
       "description": "An open-source Agent Skills pack for Claude Code and Codex covering multi-agent workflows, code review, design, copy, SEO, app shipping, creator-rights workflows, and local read-only MCP discovery",
@@ -4865,6 +4955,21 @@
       "repo": "trigger_tree",
       "url": "https://github.com/Hedde/trigger_tree",
       "install_url": "https://raw.githubusercontent.com/Hedde/trigger_tree/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Vanguard Frontier Agentic",
+      "displayName": "Vanguard Frontier Agentic",
+      "description": "Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "VincentChuWaiChow",
+      "repo": "vanguard-frontier-agentic",
+      "url": "https://github.com/VincentChuWaiChow/vanguard-frontier-agentic",
+      "install_url": "https://raw.githubusercontent.com/VincentChuWaiChow/vanguard-frontier-agentic/HEAD/plugins/vanguard-frontier-agentic/.codex-plugin/plugin.json"
     },
     {
       "name": "VASTlint",
@@ -5185,6 +5290,21 @@
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "LetsFG",
+      "displayName": "LetsFG",
+      "description": "Flight and hotel search and booking for AI agents across hundreds of airlines and the major booking sites, via a remote MCP server (Claude, ChatGPT, Cursor, Windsurf), CLI, Python/JS SDKs, and an Agent Skill, with free search after a one-time card connection and real airline PNRs on flight bookings",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "LetsFG",
+      "repo": "LetsFG",
+      "url": "https://github.com/LetsFG/LetsFG",
+      "install_url": "https://raw.githubusercontent.com/LetsFG/LetsFG/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Miro",
       "displayName": "Miro",
       "description": "Official Miro MCP server and agent integrations for Claude Code, Codex, Gemini CLI, Cursor, and other AI tools \u2014 read and write Miro boards, create diagrams, extract context from boards, and generate code from designs",
@@ -5213,6 +5333,21 @@
       "repo": "agent-skills",
       "url": "https://github.com/Nimbleway/agent-skills",
       "install_url": "https://raw.githubusercontent.com/Nimbleway/agent-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "OpenAI-Compatible Images",
+      "displayName": "OpenAI-Compatible Images",
+      "description": "Generate, edit, and batch-process images through OpenAI-compatible APIs using a standalone skill or a Codex App plugin with a canvas for annotating edit requests",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Syh1906",
+      "repo": "openai-compatible-imagegen",
+      "url": "https://github.com/Syh1906/openai-compatible-imagegen",
+      "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "PDF Monster",
