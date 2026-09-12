@@ -219,6 +219,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [HOL Guard Plugin](https://github.com/hashgraph-online/hol-guard-plugin) - AI antivirus workflow for Codex, Claude Code, Cursor, Gemini, OpenCode, MCP servers, skills, and plugin release checks with local approvals and receipts.
 - [Honcho](https://github.com/plastic-labs/codex-honcho) - Persistent cross-session memory for Codex powered by Honcho — lifecycle hooks capture each session and inject relevant context back at session start, so Codex remembers your preferences, projects, and decisions across restarts.
 - [HOTL Plugin](https://github.com/yimwoo/hotl-plugin) - Human-on-the-Loop AI coding workflow plugin for Codex, Claude Code, and Cline with structured planning, review, and verification guardrails.
+- [i-hate-editing](https://github.com/ranahaani/i-hate-editing) - Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels).
 - [ictcontact-mcp](https://github.com/ictinnovations/ictcontact-mcp) - MCP server for the ICTContact contact center. Monitor outbound campaigns, with opt-in tools to start and stop them.
 - [ictcrm-mcp](https://github.com/ictinnovations/ictcrm-mcp) - MCP server for the ICTCRM contact database. Read contact groups, with opt-in tools to create contacts and add them to campaigns.
 - [ictdialer-mcp](https://github.com/ictinnovations/ictdialer-mcp) - MCP server for the ICTDialer cloud auto-dialer. Monitor outbound campaigns, with opt-in start and stop controls.
