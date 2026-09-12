@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-12",
-  "total": 375,
+  "total": 376,
   "platforms": [
     "codex",
     "grok",
@@ -3803,6 +3803,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Vladimir-Human/humanizer-ru/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "i-hate-editing",
+      "url": "https://github.com/ranahaani/i-hate-editing",
+      "owner": "ranahaani",
+      "repo": "i-hate-editing",
+      "description": "Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels)",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ranahaani/i-hate-editing/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

@@ -4072,6 +4072,21 @@
       "install_url": "https://raw.githubusercontent.com/Vladimir-Human/humanizer-ru/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "i-hate-editing",
+      "displayName": "i-hate-editing",
+      "description": "Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels)",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ranahaani",
+      "repo": "i-hate-editing",
+      "url": "https://github.com/ranahaani/i-hate-editing",
+      "install_url": "https://raw.githubusercontent.com/ranahaani/i-hate-editing/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ictcontact-mcp",
       "displayName": "ictcontact-mcp",
       "description": "MCP server for the ICTContact contact center. Monitor outbound campaigns, with opt-in tools to start and stop them",
