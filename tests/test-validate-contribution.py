@@ -108,8 +108,119 @@ class ValidateContributionTests(unittest.TestCase):
             " ## Community Plugins\n"
             "+- [Broken Plugin](https://example.com/not-github) - not a github repo\n"
         )
-        malformed = MODULE.malformed_community_plugin_lines(diff, head)
+        malformed = MODULE.malformed_community_plugin_lines(diff, "", head)
         self.assertEqual(len(malformed), 1)
+
+    def test_reordered_existing_local_entry_is_not_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = (
+            "## Community Plugins\n"
+            f"{local_entry}\n"
+            "- [Alpha](https://github.com/example/alpha) - first\n"
+        )
+        head = (
+            "## Community Plugins\n"
+            "- [Alpha](https://github.com/example/alpha) - first\n"
+            f"{local_entry}\n"
+        )
+        diff = (
+            "@@ -1,3 +1,3 @@\n"
+            " ## Community Plugins\n"
+            f"-{local_entry}\n"
+            " - [Alpha](https://github.com/example/alpha) - first\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [])
+
+    def test_modified_local_entry_is_still_malformed(self) -> None:
+        base_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        changed_entry = "- [Local Plugin](./plugins/renamed) - bundled plugin"
+        base = f"## Community Plugins\n{base_entry}\n"
+        head = f"## Community Plugins\n{changed_entry}\n"
+        diff = (
+            "@@ -1,2 +1,2 @@\n"
+            " ## Community Plugins\n"
+            f"-{base_entry}\n"
+            f"+{changed_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [changed_entry])
+
+    def test_duplicate_existing_local_entry_is_still_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = f"## Community Plugins\n{local_entry}\n"
+        head = f"## Community Plugins\n{local_entry}\n{local_entry}\n"
+        diff = (
+            "@@ -1,2 +1,3 @@\n"
+            " ## Community Plugins\n"
+            f" {local_entry}\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
+
+    def test_new_local_entry_is_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = "## Community Plugins\n"
+        head = f"## Community Plugins\n{local_entry}\n"
+        diff = (
+            "@@ -1,1 +1,2 @@\n"
+            " ## Community Plugins\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
+
+    def test_local_entry_moved_from_another_section_is_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = f"## Contents\n{local_entry}\n## Community Plugins\n"
+        head = f"## Contents\n## Community Plugins\n{local_entry}\n"
+        diff = (
+            "@@ -1,3 +1,3 @@\n"
+            " ## Contents\n"
+            f"-{local_entry}\n"
+            " ## Community Plugins\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
+
+    def test_relocated_entry_is_detected_when_base_url_only_exists_in_contents(self) -> None:
+        base = (
+            "## Contents\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            "## Community Plugins\n"
+            "- [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+        head = (
+            "## Contents\n"
+            "## Community Plugins\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            "- [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+        diff = (
+            "@@ -1,4 +1,4 @@\n"
+            " ## Contents\n"
+            "- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            " ## Community Plugins\n"
+            "+- [Moved Plugin](https://github.com/example/moved-plugin) - moved later\n"
+            " - [Existing Plugin](https://github.com/example/existing-plugin) - already cataloged\n"
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual([entry.repo for entry in entries], ["moved-plugin"])
 
 
 class PublishOpenPrChecksTests(unittest.TestCase):
@@ -129,6 +240,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "state": "scan",
             "title": "Add example plugin",
             "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
         }
         conclusion, title, summary = self.publisher.check_summary(result, {12: []})
         self.assertEqual(conclusion, "success")
@@ -142,6 +256,15 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://example.test/run",
         )
         self.assertIn("Contribution check passed", comment)
+        self.assertIn("Recommended: add scanner CI for security", comment)
+        self.assertIn("can merge without it", comment)
+        self.assertIn("MCP servers", comment)
+        self.assertIn("skills", comment)
+        self.assertIn("plugins", comment)
+        self.assertIn("recommend including", comment)
+        self.assertIn("full trust score", comment)
+        self.assertIn("10% trust-score reduction", comment)
+        self.assertIn("`example/plugin`", comment)
         self.assertNotIn("needs updates before it can be merged", comment)
         self.assertNotIn("must invoke", comment)
 
@@ -216,6 +339,72 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             )
         self.assertEqual(calls, [("PATCH", "/issues/comments/44")])
         self.assertNotIn(("POST", "/issues/12/comments"), calls)
+
+    def test_comment_is_posted_when_scanner_ci_is_missing(self) -> None:
+        calls: list[tuple[str, str]] = []
+
+        def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
+            calls.append((str(kwargs.get("method", "GET")), path))
+            if path == "/issues/12/comments":
+                return {"id": 99}
+            return {}
+
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
+        }
+        with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
+            self.publisher,
+            "list_issue_comments",
+            return_value=[],
+        ):
+            self.publisher.upsert_remediation_comment(
+                "hashgraph-online/awesome-ai-plugins",
+                result,
+                "success",
+                "scan passed",
+                "Catalog validation passed.",
+                "https://example.test/run",
+                "token",
+            )
+        self.assertEqual(calls, [("POST", "/issues/12/comments")])
+
+    def test_success_without_missing_ci_does_not_post_a_new_comment(self) -> None:
+        calls: list[tuple[str, str]] = []
+
+        def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
+            calls.append((str(kwargs.get("method", "GET")), path))
+            return {}
+
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "maintained"},
+            ],
+        }
+        with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
+            self.publisher,
+            "list_issue_comments",
+            return_value=[],
+        ):
+            self.publisher.upsert_remediation_comment(
+                "hashgraph-online/awesome-ai-plugins",
+                result,
+                "success",
+                "scan passed",
+                "Catalog validation passed.",
+                "https://example.test/run",
+                "token",
+            )
+        self.assertEqual(calls, [])
 
 
 if __name__ == "__main__":

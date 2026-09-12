@@ -55,13 +55,15 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-Scanner CI is optional. HOL scans listed projects independently. Projects that maintain the scanner in their own CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction for missing continuous security verification.
+Scanner CI is optional for listing. HOL still scans listed projects independently. We recommend including it for security: continuous checks on MCP servers, skills, plugins, and other agent extensions keep this catalog safer for everyone who installs from it. Projects that maintain scanner CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
-### Why scanner CI is still useful
+### Why we recommend scanner CI
 
-AI extensions can register hooks, execute commands, read environment variables, and influence an agent's behavior. A compromised extension can therefore affect users outside the original repository. Scanner CI gives every community listing the same reproducible baseline for identifying:
+AI extensions — MCP servers, skills, plugins, and related agent tools — can register hooks, execute commands, read environment variables, and change an agent's behavior. A compromised extension can therefore affect users outside the original repository. Maintainer-owned scanner CI is the strongest way to keep those packages continuously checked, and we recommend adding it even though listing does not require it.
+
+Scanner CI gives every community listing the same reproducible baseline for identifying:
 
 - committed secrets and unsafe credential handling;
 - dangerous hooks or command execution;
@@ -94,8 +96,11 @@ advisory and do not block a valid listing.
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
 PR's exact README base/head revisions without executing fork code, queues an
-advisory scan, and publishes the result on each PR head. Reruns update the
-existing bot comment and check in place.
+advisory scan, and publishes the result on each PR head. When the source
+repository has no scanner CI, the bot still comments: listing can merge, adding
+the action is recommended for security of MCP servers, skills, and plugins, and
+the comment explains the trust-score benefit.
+Reruns update the existing bot comment and check in place.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
