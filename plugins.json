@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-12",
-  "total": 372,
+  "total": 373,
   "platforms": [
     "codex",
     "grok",
@@ -3789,6 +3789,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "humanizer-ru",
+      "url": "https://github.com/Vladimir-Human/humanizer-ru",
+      "owner": "Vladimir-Human",
+      "repo": "humanizer-ru",
+      "description": "Deterministic offline diagnostics and safe cleanup of chat-interface copy-paste artifacts in Russian text and Markdown, shipped as an Agent Skill, MCP server, CLI, GitHub Action, and browser demo, with no authorship verdicts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Vladimir-Human/humanizer-ru/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
