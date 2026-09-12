@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-12",
-  "total": 376,
+  "total": 377,
   "platforms": [
     "codex",
     "grok",
@@ -4447,6 +4447,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/rootlyhq/rootly-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Salesforce Compound Engineering",
+      "url": "https://github.com/divingsbysangam/salesforce-compound-engineering-plugin",
+      "owner": "divingsbysangam",
+      "repo": "salesforce-compound-engineering-plugin",
+      "description": "Salesforce-focused compound engineering plugin for Claude Code, Cursor, Codex, and other AI coding tools, with skills-first workflows, parallel persona dispatch, and Apex/LWC/Flow coverage",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/divingsbysangam/salesforce-compound-engineering-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
