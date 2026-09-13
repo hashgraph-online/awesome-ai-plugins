@@ -82,6 +82,7 @@ This repository is a discovery catalog, not a universal installer. Follow each l
 
 ## Official Plugins
 
+- [mblode/agent-skills](https://github.com/mblode/agent-skills) - Nobody ships AI slop on purpose. These skills make sure you don't. UI audits, typography, docs, PR review, and releases.
 <details>
 <summary>Curated by OpenAI — available in the built-in Codex Plugin Directory</summary>
 
