@@ -176,6 +176,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [codex-profiles](https://github.com/Ducksss/codex-profiles) - Switch Codex CLI and Desktop accounts with isolated `CODEX_HOME` profile directories instead of copying token files.
 - [coffee-paladin](https://github.com/pawelkwaczynski/coffee-paladin) - Thermal guard for Apple Silicon: pauses hot jobs before the Mac throttles and gates Claude Code, Codex and Gemini CLI before heavy commands.
 - [Commit Narrator](./plugins/mturac/commit-narrator) - Generate semantic commit message from staged diff, including the _why_.
+- [CommitLore](https://github.com/MongLong0214/commitlore) - Keeps constraints, rejected alternatives, and warnings in Git trailers and serves them back to the agent before it edits a file.
 - [Contexo](https://github.com/maheedhar132/Contexo) - Portable AI context and cost control across every AI coding harness.
 - [Context Guard](https://github.com/GreenLv/codex-context-guard) - Preserves authoritative requirements and verification evidence across long-running Codex tasks and context compaction.
 - [Contorium](https://github.com/ContoriumLabs/contorium) - Runtime continuity layer for AI coding agents, providing persistent workspace state, Git-aware sessions, and MCP-based context retrieval across tools and agent runs.
