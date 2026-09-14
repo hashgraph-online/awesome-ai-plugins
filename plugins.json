@@ -4008,11 +4008,11 @@
       "url": "https://github.com/kgaidev/kgai",
       "owner": "kgaidev",
       "repo": "kgai",
-      "description": "Shared decision memory for AI dev teams, an immutable local log of the decisions behind your code, synced over an S3 bucket you own",
+      "description": "Shared decision memory for AI dev teams \u2014 share the decisions and knowledge behind your code across Claude Code, Codex CLI and Gemini CLI as an immutable local log, synced over an S3 bucket you own",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/kgaidev/kgai/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/kgaidev/kgai/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
