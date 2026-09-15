@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-14",
-  "total": 383,
+  "last_updated": "2026-09-15",
+  "total": 385,
   "platforms": [
     "codex",
     "grok",
@@ -4008,7 +4008,7 @@
       "url": "https://github.com/kgaidev/kgai",
       "owner": "kgaidev",
       "repo": "kgai",
-      "description": "Shared decision memory for AI dev teams, an immutable local log of the decisions behind your code, synced over an S3 bucket you own",
+      "description": "Shared decision memory for AI dev teams \u2014 share the decisions and knowledge behind your code across Claude Code, Codex CLI and Gemini CLI as an immutable local log, synced over an S3 bucket you own",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
@@ -4405,6 +4405,34 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/waybarrios/opencode-power-pack/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-plugin-loop",
+      "url": "https://github.com/jkrandom-sudo/opencode-plugin-loop",
+      "owner": "jkrandom-sudo",
+      "repo": "opencode-plugin-loop",
+      "description": "OpenCode plugin adding a /loop command that runs prompts on fixed, adaptive, or one-shot schedules per session",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jkrandom-sudo/opencode-plugin-loop/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-see-image",
+      "url": "https://github.com/alfaoz/opencode-see-image",
+      "owner": "alfaoz",
+      "repo": "opencode-see-image",
+      "description": "OpenCode plugin that gives non-vision models image and screenshot understanding by routing attachments to a vision-capable model",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/alfaoz/opencode-see-image/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
