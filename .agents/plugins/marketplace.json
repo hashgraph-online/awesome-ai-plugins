@@ -1970,6 +1970,21 @@
       "install_url": "https://raw.githubusercontent.com/xxsang/writers-loop/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "YYLO",
+      "displayName": "YYLO",
+      "description": "Command-line orchestrator for coding agents that creates a dedicated branch/worktree per task, delegates to Pi and Codex subagents, and enforces typed task, validation, merge, and release-readiness boundaries with receipt-backed repository changes.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "yylo-dev",
+      "repo": "yylo",
+      "url": "https://github.com/yylo-dev/yylo",
+      "install_url": "https://raw.githubusercontent.com/yylo-dev/yylo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Zagrosi Forge",
       "displayName": "Zagrosi Forge",
       "description": "Decompose broad project briefs into researched plans and implement sectioned work with TDD, quality gates, and traceability.",
@@ -5302,21 +5317,6 @@
       "install_url": "https://raw.githubusercontent.com/shzlw/windrunner/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "YYLO",
-      "displayName": "YYLO",
-      "description": "Command-line orchestrator for coding agents that creates a dedicated branch/worktree per task, delegates to Pi and Codex subagents, and enforces typed task, validation, merge, and release-readiness boundaries with receipt-backed repository changes",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "yylo-dev",
-      "repo": "yylo",
-      "url": "https://github.com/yylo-dev/yylo",
-      "install_url": "https://raw.githubusercontent.com/yylo-dev/yylo/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "AgentCall",
       "displayName": "AgentCall",
       "description": "Lets Claude Code, Codex, Cursor, Gemini CLI, and 30+ other agents join Google Meet, Zoom, or Microsoft Teams as a speaking, listening, presenting participant with text-to-speech, live transcripts, screenshare, and an avatar camera feed",
@@ -5694,6 +5694,21 @@
       "repo": "qveris-agent-toolkit",
       "url": "https://github.com/QVerisAI/qveris-agent-toolkit",
       "install_url": "https://raw.githubusercontent.com/QVerisAI/qveris-agent-toolkit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Sando",
+      "displayName": "Sando",
+      "description": "Plugin for Claude Code and Codex that caps oversized tool output, salvages key lines, stores full artifacts, and redacts secrets",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "yuzushi-dev",
+      "repo": "Sando",
+      "url": "https://github.com/yuzushi-dev/Sando",
+      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/Sando/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Scholar Feed",
