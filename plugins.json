@@ -5325,14 +5325,14 @@
     },
     {
       "name": "Sando",
-      "url": "https://github.com/yuzushi-dev/Sando",
+      "url": "https://github.com/yuzushi-dev/sando",
       "owner": "yuzushi-dev",
-      "repo": "Sando",
+      "repo": "sando",
       "description": "Plugin for Claude Code and Codex that caps oversized tool output, salvages key lines, stores full artifacts, and redacts secrets",
       "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/Sando/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/sando/HEAD/plugins/sando/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
