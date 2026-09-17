@@ -280,6 +280,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [opencode-plugin-peers](https://github.com/jkrandom-sudo/opencode-plugin-peers) - OpenCode plugin for cross-session messaging: independent instances on the same machine discover each other and exchange plain-text messages.
 - [opencode-see-image](https://github.com/alfaoz/opencode-see-image) - OpenCode plugin that gives non-vision models image and screenshot understanding by routing attachments to a vision-capable model.
 - [opencode-skills-collection](https://github.com/FrancoStino/opencode-skills-collection) - OpenCode plugin that bundles 1595+ skills and auto-syncs them locally, loading each on demand via pointer files.
+- [opencode-nexus](https://github.com/mohammad154/opencode-nexus) - OpenCode plugin with a fixed three-agent execution workflow, conditional planning advice, fresh impact analysis, deterministic verification, and durable run state.
 - [pbx-mcp](https://github.com/ictinnovations/pbx-mcp) - MCP server for Asterisk (AMI) and FreeSWITCH (ESL). Inspect channels, SIP registrations, trunks, and dialplan on a live PBX.
 - [Personal Data Protection](https://github.com/AltByteSG/personal-data-protection-skill) - Engineer-facing personal-data-protection compliance reference — Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA — organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.
 - [Pixeltable](https://github.com/pixeltable/pixeltable-skill) - Declarative multimodal AI data engine for tables, computed columns, embedding search, agents, and FastAPI services.
@@ -359,7 +360,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Writer's Loop](https://github.com/xxsang/writers-loop) - Structured AI writing workflow for planning, critique, revision, translation, style distillation, and opt-in local preference learning.
 - [YYLO](https://github.com/yylo-dev/yylo) - Command-line orchestrator for coding agents that creates a dedicated branch/worktree per task, delegates to Pi and Codex subagents, and enforces typed task, validation, merge, and release-readiness boundaries with receipt-backed repository changes.
 - [Zagrosi Forge](https://github.com/zagrosi-code/zagrosi-forge) - Decompose broad project briefs into researched plans and implement sectioned work with TDD, quality gates, and traceability.
-- [opencode-nexus](https://github.com/mohammad154/opencode-nexus) - OpenCode plugin with a fixed three-agent execution workflow, conditional planning advice, fresh impact analysis, deterministic verification, and durable run state.
 
 ### Tools & Integrations
 
