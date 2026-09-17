@@ -5352,12 +5352,12 @@
       ]
     },
     {
-      "name": "Session Handoff",
+      "name": "session-handoff",
       "url": "https://github.com/yuzushi-dev/session-handoff",
       "owner": "yuzushi-dev",
       "repo": "session-handoff",
-      "description": "Create validated handoff documents and migrate active native sessions between Claude Code and Codex",
-      "category": "Tools & Integrations",
+      "description": "Create handoffs and migrate sessions between Claude Code and Codex",
+      "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/yuzushi-dev/session-handoff/HEAD/.codex-plugin/plugin.json",
