@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-12",
-  "total": 372,
+  "last_updated": "2026-09-16",
+  "total": 394,
   "platforms": [
     "codex",
     "grok",
@@ -684,6 +684,20 @@
       ]
     },
     {
+      "name": "Core Learning",
+      "url": "https://github.com/everclear077/codex-learning-plugin",
+      "owner": "everclear077",
+      "repo": "codex-learning-plugin",
+      "description": "Guided learning with Socratic practice, Feynman teach-back, spaced recall, evidence-based project assessment, and optional local Anki export.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/everclear077/codex-learning-plugin/HEAD/plugins/core-learning/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "debt-ops",
       "url": "https://github.com/bcanfield/agentic-tech-debt",
       "owner": "bcanfield",
@@ -1210,6 +1224,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AltByteSG/personal-data-protection-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Pixeltable",
+      "url": "https://github.com/pixeltable/pixeltable-skill",
+      "owner": "pixeltable",
+      "repo": "pixeltable-skill",
+      "description": "Declarative multimodal AI data engine for tables, computed columns, embedding search, agents, and FastAPI services.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/pixeltable/pixeltable-skill/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3416,6 +3444,20 @@
       ]
     },
     {
+      "name": "claude-council",
+      "url": "https://github.com/hex/claude-council",
+      "owner": "hex",
+      "repo": "claude-council",
+      "description": "Claude Code plugin that asks Gemini, OpenAI, Grok, Perplexity, Kimi, OpenRouter models, the Codex, Cursor, Grok and Kimi CLIs and a local ollama model the same question in parallel and lines the answers up with a synthesis of where they agree and differ",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hex/claude-council/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "claude-image-gen",
       "url": "https://github.com/guinacio/claude-image-gen",
       "owner": "guinacio",
@@ -3514,6 +3556,20 @@
       ]
     },
     {
+      "name": "CommitLore",
+      "url": "https://github.com/MongLong0214/commitlore",
+      "owner": "MongLong0214",
+      "repo": "commitlore",
+      "description": "Keeps constraints, rejected alternatives, and warnings in Git trailers and serves them back to the agent before it edits a file",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MongLong0214/commitlore/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Contexo",
       "url": "https://github.com/maheedhar132/Contexo",
       "owner": "maheedhar132",
@@ -3523,6 +3579,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/maheedhar132/Contexo/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Context Optimizer",
+      "url": "https://github.com/evermeer/context-optimizer",
+      "owner": "evermeer",
+      "repo": "context-optimizer",
+      "description": "Keep your coding agent's context small. When a session gets compacted, Context Optimizer reranks the relevant parts, drops duplicates, and compresses the rest with a local ML pipeline (LLMLingua-2 + Sentence Transformers)",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/evermeer/context-optimizer/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -3579,6 +3649,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/drobins25/craft/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "de-anthropocentric-research-engine",
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
+      "owner": "yogsoth-ai",
+      "repo": "de-anthropocentric-research-engine",
+      "description": "Collection of 900+ markdown research skills that let Claude Code autonomously survey literature, find gaps, form hypotheses, and design experiments",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yogsoth-ai/de-anthropocentric-research-engine/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -3794,6 +3878,34 @@
       ]
     },
     {
+      "name": "humanizer-ru",
+      "url": "https://github.com/Vladimir-Human/humanizer-ru",
+      "owner": "Vladimir-Human",
+      "repo": "humanizer-ru",
+      "description": "Deterministic offline diagnostics and safe cleanup of chat-interface copy-paste artifacts in Russian text and Markdown, shipped as an Agent Skill, MCP server, CLI, GitHub Action, and browser demo, with no authorship verdicts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Vladimir-Human/humanizer-ru/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "i-hate-editing",
+      "url": "https://github.com/ranahaani/i-hate-editing",
+      "owner": "ranahaani",
+      "repo": "i-hate-editing",
+      "description": "Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels)",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ranahaani/i-hate-editing/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "ictcontact-mcp",
       "url": "https://github.com/ictinnovations/ictcontact-mcp",
       "owner": "ictinnovations",
@@ -3924,7 +4036,7 @@
       "url": "https://github.com/kgaidev/kgai",
       "owner": "kgaidev",
       "repo": "kgai",
-      "description": "Shared decision memory for AI dev teams, an immutable local log of the decisions behind your code, synced over an S3 bucket you own",
+      "description": "Shared decision memory for AI dev teams \u2014 share the decisions and knowledge behind your code across Claude Code, Codex CLI and Gemini CLI as an immutable local log, synced over an S3 bucket you own",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
@@ -4312,6 +4424,20 @@
       ]
     },
     {
+      "name": "opencode-models-discovery",
+      "url": "https://github.com/yuhp/opencode-models-discovery",
+      "owner": "yuhp",
+      "repo": "opencode-models-discovery",
+      "description": "OpenCode plugin that dynamically discovers models from OpenAI-compatible providers and injects them into provider config with filtering and metadata enrichment",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yuhp/opencode-models-discovery/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "OpenCode Power Pack",
       "url": "https://github.com/waybarrios/opencode-power-pack",
       "owner": "waybarrios",
@@ -4321,6 +4447,62 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/waybarrios/opencode-power-pack/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-plugin-loop",
+      "url": "https://github.com/jkrandom-sudo/opencode-plugin-loop",
+      "owner": "jkrandom-sudo",
+      "repo": "opencode-plugin-loop",
+      "description": "OpenCode plugin adding a /loop command that runs prompts on fixed, adaptive, or one-shot schedules per session",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jkrandom-sudo/opencode-plugin-loop/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-plugin-peers",
+      "url": "https://github.com/jkrandom-sudo/opencode-plugin-peers",
+      "owner": "jkrandom-sudo",
+      "repo": "opencode-plugin-peers",
+      "description": "OpenCode plugin for cross-session messaging: independent instances on the same machine discover each other and exchange plain-text messages",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jkrandom-sudo/opencode-plugin-peers/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-see-image",
+      "url": "https://github.com/alfaoz/opencode-see-image",
+      "owner": "alfaoz",
+      "repo": "opencode-see-image",
+      "description": "OpenCode plugin that gives non-vision models image and screenshot understanding by routing attachments to a vision-capable model",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/alfaoz/opencode-see-image/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "opencode-skills-collection",
+      "url": "https://github.com/FrancoStino/opencode-skills-collection",
+      "owner": "FrancoStino",
+      "repo": "opencode-skills-collection",
+      "description": "OpenCode plugin that bundles 1595+ skills and auto-syncs them locally, loading each on demand via pointer files",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/FrancoStino/opencode-skills-collection/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4349,6 +4531,34 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/OthmanAdi/planning-with-files/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "pm-claude-skills",
+      "url": "https://github.com/mohitagw15856/pm-claude-skills",
+      "owner": "mohitagw15856",
+      "repo": "pm-claude-skills",
+      "description": "Open-source library of 1174 plain-markdown agent skills for Claude Code, Codex, Gemini, and Cursor, covering professional and life tasks with built-in quality checks and anti-patterns",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Professor",
+      "url": "https://github.com/rezzminator/professor",
+      "owner": "rezzminator",
+      "repo": "professor",
+      "description": "LLM-harness fleet framework for Claude Code, Codex, and OpenCode with a Go fleet CLI/TUI, cross-chat messaging, and a discipline layer of agents, commands, and hooks compiled across all three runtimes",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rezzminator/professor/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4405,6 +4615,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/rootlyhq/rootly-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Salesforce Compound Engineering",
+      "url": "https://github.com/divingsbysangam/salesforce-compound-engineering-plugin",
+      "owner": "divingsbysangam",
+      "repo": "salesforce-compound-engineering-plugin",
+      "description": "Salesforce-focused compound engineering plugin for Claude Code, Cursor, Codex, and other AI coding tools, with skills-first workflows, parallel persona dispatch, and Apex/LWC/Flow coverage",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/divingsbysangam/salesforce-compound-engineering-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4508,6 +4732,20 @@
       ]
     },
     {
+      "name": "StyleSeed",
+      "url": "https://github.com/bitjaru/styleseed",
+      "owner": "bitjaru",
+      "repo": "styleseed",
+      "description": "Compiles your project's design decisions into a lock file, then enforces them on Claude Code, Codex, and Cursor output with code and rendered-pixel gates so screens stay consistent across sessions",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bitjaru/styleseed/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Stvena",
       "url": "https://github.com/nccapo/stvena",
       "owner": "nccapo",
@@ -4568,7 +4806,7 @@
       "url": "https://github.com/m1nga/taskdock",
       "owner": "m1nga",
       "repo": "taskdock",
-      "description": "Agent skill for portable task folders with UUID lookup, explicit next actions, and duplicate detection",
+      "description": "Resume agent tasks from current deliverables and decisions, with portable folders, link repair, and reversible file organization",
       "category": "Development & Workflow",
       "platform": "codex",
       "source": "awesome-ai-plugins",
@@ -4718,6 +4956,20 @@
       ]
     },
     {
+      "name": "YYLO",
+      "url": "https://github.com/yylo-dev/yylo",
+      "owner": "yylo-dev",
+      "repo": "yylo",
+      "description": "Command-line orchestrator for coding agents that creates a dedicated branch/worktree per task, delegates to Pi and Codex subagents, and enforces typed task, validation, merge, and release-readiness boundaries with receipt-backed repository changes",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yylo-dev/yylo/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AgentCall",
       "url": "https://github.com/pattern-ai-labs/agentcall",
       "owner": "pattern-ai-labs",
@@ -4840,7 +5092,8 @@
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/TencentCloudBase/CloudBase-AI-Toolkit/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
-        "codex"
+        "codex",
+        "kimi"
       ]
     },
     {
@@ -5029,6 +5282,20 @@
       ]
     },
     {
+      "name": "ParlayAPI",
+      "url": "https://github.com/JacobiusMakes/parlay-api-mcp",
+      "owner": "JacobiusMakes",
+      "repo": "parlay-api-mcp",
+      "description": "Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/JacobiusMakes/parlay-api-mcp/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "PDF Monster",
       "url": "https://github.com/jbaehova/pdf-monster",
       "owner": "jbaehova",
@@ -5038,6 +5305,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "QVeris Agent Toolkit",
+      "url": "https://github.com/QVerisAI/qveris-agent-toolkit",
+      "owner": "QVerisAI",
+      "repo": "qveris-agent-toolkit",
+      "description": "Cross-client toolkit that brings professional data and tools to AI assistants, products, and workflows: find services, review supported scope, call them, and audit usage",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/QVerisAI/qveris-agent-toolkit/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -5169,6 +5450,20 @@
       ]
     },
     {
+      "name": "unic",
+      "url": "https://github.com/DevopsArtFactory/unic",
+      "owner": "DevopsArtFactory",
+      "repo": "unic",
+      "description": "Local MCP server exposing read-only AWS inspection tools to AI agents, including capability discovery, Backup vault listing, and context sync previews",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/DevopsArtFactory/unic/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Zero Slop",
       "url": "https://github.com/manavmishra/ZeroSlop",
       "owner": "manavmishra",
@@ -5194,6 +5489,19 @@
       "install_url": "https://raw.githubusercontent.com/FineComputer14451/Grok-Imagine-Cinematic-Studio/HEAD/.grok-plugin/plugin.json",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "dsh-api-balance",
+      "url": "https://github.com/Kihara777/dsh-api-balance",
+      "owner": "Kihara777",
+      "repo": "dsh-api-balance",
+      "description": "API usage-balance panel for DeepSeek Harness: adds a \u300cUsage / Balance\u300d tab to the webui usage ring showing the account balance and today / this-month / 30-day cost with charts, acquiring the platform token automatically from local browser sessions",
+      "category": "DeepSeek Harness Plugins",
+      "platform": "deepseek-harness",
+      "source": "awesome-ai-plugins",
+      "ecosystems": [
+        "deepseek-harness"
       ]
     },
     {
