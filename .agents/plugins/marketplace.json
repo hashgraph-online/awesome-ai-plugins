@@ -5726,10 +5726,10 @@
       "install_url": "https://raw.githubusercontent.com/YGao2005/scholar-feed-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Session Handoff",
-      "displayName": "Session Handoff",
-      "description": "Create validated handoff documents and migrate active native sessions between Claude Code and Codex",
-      "category": "Tools & Integrations",
+      "name": "session-handoff",
+      "displayName": "session-handoff",
+      "description": "Create handoffs and migrate sessions between Claude Code and Codex",
+      "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
