@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-15",
-  "total": 387,
+  "last_updated": "2026-09-17",
+  "total": 404,
   "platforms": [
     "codex",
     "grok",
@@ -1230,6 +1230,20 @@
       ]
     },
     {
+      "name": "Pixeltable",
+      "url": "https://github.com/pixeltable/pixeltable-skill",
+      "owner": "pixeltable",
+      "repo": "pixeltable-skill",
+      "description": "Declarative multimodal AI data engine for tables, computed columns, embedding search, agents, and FastAPI services.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/pixeltable/pixeltable-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "PMC",
       "url": "https://github.com/DuncanMain/project-memory-core",
       "owner": "DuncanMain",
@@ -1826,6 +1840,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/xxsang/writers-loop/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "YYLO",
+      "url": "https://github.com/yylo-dev/yylo",
+      "owner": "yylo-dev",
+      "repo": "yylo",
+      "description": "Command-line orchestrator for coding agents that creates a dedicated branch/worktree per task, delegates to Pi and Codex subagents, and enforces typed task, validation, merge, and release-readiness boundaries with receipt-backed repository changes.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yylo-dev/yylo/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3640,6 +3668,20 @@
       ]
     },
     {
+      "name": "de-anthropocentric-research-engine",
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
+      "owner": "yogsoth-ai",
+      "repo": "de-anthropocentric-research-engine",
+      "description": "Collection of 900+ markdown research skills that let Claude Code autonomously survey literature, find gaps, form hypotheses, and design experiments",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yogsoth-ai/de-anthropocentric-research-engine/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Dely",
       "url": "https://github.com/hieuphung97/dely",
       "owner": "hieuphung97",
@@ -3845,6 +3887,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "hiai-opencode",
+      "url": "https://github.com/HiAi-gg/hiai-opencode",
+      "owner": "HiAi-gg",
+      "repo": "hiai-opencode",
+      "description": "OpenCode plugin adding a multi-agent team with 10 specialist agents, execution gates, LSP tools, browser automation, and memory search",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/HiAi-gg/hiai-opencode/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4256,6 +4312,20 @@
       ]
     },
     {
+      "name": "mermaid-for-claude",
+      "url": "https://github.com/lucaswx2/mermaid-for-claude",
+      "owner": "lucaswx2",
+      "repo": "mermaid-for-claude",
+      "description": "Renders Mermaid blocks from Claude Code replies as ASCII/Unicode diagrams inside the terminal, fully local with no browser",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/lucaswx2/mermaid-for-claude/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Mermail Skills",
       "url": "https://github.com/Nudgen-Marketing/mermail-skills",
       "owner": "Nudgen-Marketing",
@@ -4410,6 +4480,20 @@
       ]
     },
     {
+      "name": "opencode-models-discovery",
+      "url": "https://github.com/yuhp/opencode-models-discovery",
+      "owner": "yuhp",
+      "repo": "opencode-models-discovery",
+      "description": "OpenCode plugin that dynamically discovers models from OpenAI-compatible providers and injects them into provider config with filtering and metadata enrichment",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yuhp/opencode-models-discovery/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "opencode-plugin-loop",
       "url": "https://github.com/jkrandom-sudo/opencode-plugin-loop",
       "owner": "jkrandom-sudo",
@@ -4466,6 +4550,20 @@
       ]
     },
     {
+      "name": "opencode-nexus",
+      "url": "https://github.com/mohammad154/opencode-nexus",
+      "owner": "mohammad154",
+      "repo": "opencode-nexus",
+      "description": "OpenCode plugin with a fixed three-agent execution workflow, conditional planning advice, fresh impact analysis, deterministic verification, and durable run state",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mohammad154/opencode-nexus/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "pbx-mcp",
       "url": "https://github.com/ictinnovations/pbx-mcp",
       "owner": "ictinnovations",
@@ -4489,6 +4587,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/OthmanAdi/planning-with-files/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "pm-claude-skills",
+      "url": "https://github.com/mohitagw15856/pm-claude-skills",
+      "owner": "mohitagw15856",
+      "repo": "pm-claude-skills",
+      "description": "Open-source library of 1174 plain-markdown agent skills for Claude Code, Codex, Gemini, and Cursor, covering professional and life tasks with built-in quality checks and anti-patterns",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4606,6 +4718,20 @@
       ]
     },
     {
+      "name": "session-handoff",
+      "url": "https://github.com/yuzushi-dev/session-handoff",
+      "owner": "yuzushi-dev",
+      "repo": "session-handoff",
+      "description": "Create handoffs and migrate sessions between Claude Code and Codex",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/session-handoff/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "silica",
       "url": "https://github.com/kiycoh/silica-harness",
       "owner": "kiycoh",
@@ -4685,6 +4811,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nccapo/stvena/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "StyleSeed",
+      "url": "https://github.com/bitjaru/styleseed",
+      "owner": "bitjaru",
+      "repo": "styleseed",
+      "description": "Compiles your project's design decisions into a lock file, then enforces them on Claude Code, Codex, and Cursor output with code and rendered-pixel gates so screens stay consistent across sessions",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bitjaru/styleseed/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4914,6 +5054,20 @@
       ]
     },
     {
+      "name": "aginxbrowser",
+      "url": "https://github.com/yinnho/aginxbrowser",
+      "owner": "yinnho",
+      "repo": "aginxbrowser",
+      "description": "Rust MCP server and HTTP service that lets agents fetch JS-rendered or protected pages as clean markdown, meta-search 14 engines, screenshot, and run persistent logged-in sessions \u2014 each session exposes a live view URL so a human can watch and take over with the mouse",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yinnho/aginxbrowser/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AnyCap",
       "url": "https://github.com/anycap-ai/anycap",
       "owner": "anycap-ai",
@@ -4998,6 +5152,20 @@
       ]
     },
     {
+      "name": "claude-music",
+      "url": "https://github.com/h-3303/claude-music",
+      "owner": "h-3303",
+      "repo": "claude-music",
+      "description": "Claude Code plugin that imports a streaming playlist export, matches it against the local library via MusicBrainz, fetches the missing tracks through the user's own Nicotine+ (Soulseek) client with approval, writes an M3U, then tidies the library",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/h-3303/claude-music/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "CloudBase AI Toolkit",
       "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
       "owner": "TencentCloudBase",
@@ -5050,6 +5218,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/citrolabs/ego-lite/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "GodotPrompter",
+      "url": "https://github.com/jame581/GodotPrompter",
+      "owner": "jame581",
+      "repo": "GodotPrompter",
+      "description": "Collection of 55 Godot 4.x domain skills and agents that AI coding agents load on demand for GDScript and C# development",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jame581/GodotPrompter/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -5240,6 +5422,34 @@
       ]
     },
     {
+      "name": "Reduck Agents",
+      "url": "https://github.com/reduck-ai/agents",
+      "owner": "reduck-ai",
+      "repo": "agents",
+      "description": "Claude Code plugin marketplace and agent skills that discover, run, and create browser automation scripts through the Reduck MCP in your own logged-in Chrome, with reference agents for GEO audits and SaaS invoice retrieval",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/reduck-ai/agents/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Sando",
+      "url": "https://github.com/yuzushi-dev/sando",
+      "owner": "yuzushi-dev",
+      "repo": "sando",
+      "description": "Plugin for Claude Code and Codex that caps oversized tool output, salvages key lines, stores full artifacts, and redacts secrets",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/sando/HEAD/plugins/sando/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Scholar Feed",
       "url": "https://github.com/YGao2005/scholar-feed-mcp",
       "owner": "YGao2005",
@@ -5380,6 +5590,20 @@
       ]
     },
     {
+      "name": "You.com Agent Skills",
+      "url": "https://github.com/youdotcom-oss/agent-skills",
+      "owner": "youdotcom-oss",
+      "repo": "agent-skills",
+      "description": "Cross-platform You.com skill and plugin bundle that gives coding agents current web search, URL content extraction, cited research, finance research, and integration discovery, plus MCP server configs",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/youdotcom-oss/agent-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Zero Slop",
       "url": "https://github.com/manavmishra/ZeroSlop",
       "owner": "manavmishra",
@@ -5405,6 +5629,19 @@
       "install_url": "https://raw.githubusercontent.com/FineComputer14451/Grok-Imagine-Cinematic-Studio/HEAD/.grok-plugin/plugin.json",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "dsh-api-balance",
+      "url": "https://github.com/Kihara777/dsh-api-balance",
+      "owner": "Kihara777",
+      "repo": "dsh-api-balance",
+      "description": "API usage-balance panel for DeepSeek Harness: adds a \u300cUsage / Balance\u300d tab to the webui usage ring showing the account balance and today / this-month / 30-day cost with charts, acquiring the platform token automatically from local browser sessions",
+      "category": "DeepSeek Harness Plugins",
+      "platform": "deepseek-harness",
+      "source": "awesome-ai-plugins",
+      "ecosystems": [
+        "deepseek-harness"
       ]
     },
     {
