@@ -234,6 +234,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [ictexam-mcp](https://github.com/ictinnovations/ictexam-mcp) - MCP server for reading exams, gradebooks, and item analysis, with opt-in tools for AI question-paper parsing and exam publishing.
 - [ictfax-mcp](https://github.com/ictinnovations/ictfax-mcp) - MCP server for ICTFax. List and track fax transmissions, with opt-in tools to upload documents and send faxes.
 - [ictpbx-mcp](https://github.com/ictinnovations/ictpbx-mcp) - Read-only MCP server for ICTPBX. Inspect extensions, DID numbers, SIP trunks, tenants, and live PBX statistics.
+- [idea-diamond](https://github.com/luckysharda/idea-diamond) - A Claude Code plugin for startup idea validation with predefined decision criteria, parallel research, skeptical review, and a human decision gate.
 - [iris-agentic-dev](https://github.com/intersystems-community/iris-agentic-dev) - MCP server giving AI assistants live access to InterSystems IRIS — execute ObjectScript, query globals, inspect productions, run tests, search code, and manage skills.
 - [Jump Skills](https://github.com/fabricioctelles/jump-skills) - Meta-skills that route requests to specialized skills across Claude Code, Codex, Cursor, OpenCode, and other agent hosts.
 - [keep-the-why](https://github.com/oliver-zehentleitner/keep-the-why) - Preserves the reasoning behind a codebase as project memory — decisions, rejected alternatives, workarounds, incident learnings, constraints.
