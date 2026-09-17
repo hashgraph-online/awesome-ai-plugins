@@ -5726,6 +5726,21 @@
       "install_url": "https://raw.githubusercontent.com/YGao2005/scholar-feed-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Session Handoff",
+      "displayName": "Session Handoff",
+      "description": "Create validated handoff documents and migrate active native sessions between Claude Code and Codex",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "yuzushi-dev",
+      "repo": "session-handoff",
+      "url": "https://github.com/yuzushi-dev/session-handoff",
+      "install_url": "https://raw.githubusercontent.com/yuzushi-dev/session-handoff/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "site-spec",
       "displayName": "site-spec",
       "description": "MCP server for website audit and auto-fix: 40 checks across SEO, accessibility, privacy, structured data and AI searchability, tools audit_site/fix_issue/compile_spec/list_checks; `npx -y site-spec-mcp`",
