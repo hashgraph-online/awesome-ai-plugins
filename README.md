@@ -399,7 +399,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [CarsXE](https://github.com/carsxe/carsxe-codex-plugin) - Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
 - [claude-math](https://github.com/vladimirrott/claude-math) - Emit mathematics as copy- and search-safe inline Unicode (∑, ≤, ℝ, x², matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code.
-- [claude-music](https://github.com/h-3303/claude-music) - Claude Code plugin that imports a streaming playlist export, matches it against the local library via MusicBrainz, fetches the missing tracks through the user's own Nicotine+ (Soulseek) client with approval, writes an M3U, then tidies the library.
 - [CloudBase AI Toolkit](https://github.com/TencentCloudBase/CloudBase-AI-Toolkit) - Backend for AI coding agents on Tencent CloudBase — database, auth, and functions via Plugin, Skills & MCP.
 - [Codex Be Serious](https://github.com/lulucatdev/codex-be-serious) - Enforce formal, textbook-grade written register across all agent output.
 - [Codex Mem](https://github.com/2kDarki/codex-mem) - Automatically capture, compress, and inject session context back into future Codex sessions.
@@ -420,6 +419,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [ego-browser](https://github.com/citrolabs/ego-lite) - Browser automation for AI agents through ego lite, a Chromium browser where agents navigate pages, fill forms, capture screenshots, and extract data in isolated task spaces that reuse the user's existing logins.
 - [Exa Web Search](https://github.com/zlsbksdxl/codex-exa) - Search and fetch current web sources in Codex through the official Exa MCP server with browser OAuth.
 - [Feishu to Codex](https://github.com/zlsbksdxl/codex-lark) - Connect Codex to Feishu/Lark workflows for Docs, Messenger, Drive, Sheets, Base, Calendar, Tasks, Meetings, Mail, approvals, and more through the official Lark CLI.
+- [flacli](https://github.com/h-3303/flacli) - CLI, MCP servers and Claude Code plugin that take named albums or a playlist (TIDAL, Deezer, YouTube Music, export files), match them against the local library via MusicBrainz, fetch the missing tracks through the user's own Nicotine+ (Soulseek) client, then file, tag and tidy the library; successor to claude-music.
 - [Flow Studio Power Automate](https://github.com/ninihen1/power-automate-mcp-skills) - Debug, build, and operate Power Automate flows via FlowStudio MCP with action-level inputs and outputs.
 - [GH Project](https://github.com/zfifteen/gh-project-plugin) - Create GitHub repositories from Codex with inferred defaults, native menus, explicit confirmation, and deterministic local cloning.
 - [GodotPrompter](https://github.com/jame581/GodotPrompter) - Collection of 55 Godot 4.x domain skills and agents that AI coding agents load on demand for GDScript and C# development.
