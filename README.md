@@ -467,6 +467,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Sando](https://github.com/yuzushi-dev/sando) - Plugin for Claude Code and Codex that caps oversized tool output, salvages key lines, stores full artifacts, and redacts secrets.
 - [Scholar Feed](https://github.com/YGao2005/scholar-feed-mcp) - MCP server over 600k+ CS/AI/ML papers: rank by citations or forecast rising impact, trace 23.2M citation edges, and pull full text and BibTeX; `npx -y scholar-feed-mcp`.
 - [ScrapeGraph AI](https://github.com/ScrapeGraphAI/just-scrape) - AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.
+- [SCVD General Store](https://github.com/seancrecord/scvd-general-store-repo) - Skills and hosted MCP for x402 endpoint preflight, signed receipt verification, and evidence-backed agentic commerce workflows.
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
 
 - [Shots](https://github.com/hitSlop/shots) - Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.
