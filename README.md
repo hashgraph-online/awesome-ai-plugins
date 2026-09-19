@@ -296,6 +296,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Pixeltable](https://github.com/pixeltable/pixeltable-skill) - Declarative multimodal AI data engine for tables, computed columns, embedding search, agents, and FastAPI services.
 - [Planning with Files](https://github.com/OthmanAdi/planning-with-files) - Persistent file-based planning for Claude Code, Codex, and other AI coding agents, preserving task plans, findings, and progress across context loss, crashes, and compaction.
 - [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) - Open-source library of 1174 plain-markdown agent skills for Claude Code, Codex, Gemini, and Cursor, covering professional and life tasks with built-in quality checks and anti-patterns.
+- [Ponytail](https://github.com/DietrichGebert/ponytail) - Guides coding agents toward minimal working solutions through YAGNI, existing code, standard libraries, and native platform features.
 - [PR Storyteller](./plugins/mturac/pr-storyteller) - PR title + body + test plan from commits and diff vs base branch.
 - [Praxis](https://github.com/ouonet/praxis) - Intent-driven workflow skills for coding agents: describe what done looks like, not the steps. Triage-first design keeps token costs low across design, TDD, debug, review, and release.
 - [Professor](https://github.com/rezzminator/professor) - LLM-harness fleet framework for Claude Code, Codex, and OpenCode with a Go fleet CLI/TUI, cross-chat messaging, and a discipline layer of agents, commands, and hooks compiled across all three runtimes.
