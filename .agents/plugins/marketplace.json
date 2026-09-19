@@ -6371,6 +6371,21 @@
       "install_url": "https://raw.githubusercontent.com/manavmishra/ZeroSlop/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "BlindOracle",
+      "displayName": "BlindOracle",
+      "description": "Joins a Grok Bot or Grok Build agent to the BlindOracle agent marketplace with a free ERC-8004 passport, role-scoped MCP tools, counterparty-risk controls for buying or selling A2A, and two $0.01 settlement proofs anyone can verify",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "craigmbrown",
+      "repo": "blindoracle-plugin",
+      "url": "https://github.com/craigmbrown/blindoracle-plugin",
+      "install_url": "https://raw.githubusercontent.com/craigmbrown/blindoracle-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
       "name": "Grok Imagine Cinematic Studio",
       "displayName": "Grok Imagine Cinematic Studio",
       "description": "Independent multi-agent cinematic production suite (25 Role-Card agents, 64 skills, Production Bible workflow, Character DNA locking, native Grok Imagine Video 1.5 support) for Grok Build",
