@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-19",
-  "total": 425,
+  "total": 436,
   "platforms": [
     "codex",
     "grok",
@@ -3305,6 +3305,20 @@
       ]
     },
     {
+      "name": "Agnostic-AI",
+      "url": "https://github.com/ucsandman/Agnostic-AI",
+      "owner": "ucsandman",
+      "repo": "Agnostic-AI",
+      "description": "Capture your Claude Code or Codex harness once (rules, hooks, skills, subagents, commands and MCP servers) and apply it identically to Gemini CLI, Cursor, Antigravity and 16 more clients",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ucsandman/Agnostic-AI/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AI Video Transcriber",
       "url": "https://github.com/wendy7756/AI-Video-Transcriber",
       "owner": "wendy7756",
@@ -3566,6 +3580,34 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/kevin592/codex-full-stack-workflow/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Codex Subagent Playbook",
+      "url": "https://github.com/shinpr/codex-subagent-playbook",
+      "owner": "shinpr",
+      "repo": "codex-subagent-playbook",
+      "description": "Routes subagent work using model and reasoning-effort defaults tuned through measured comparisons and daily Codex use: stronger models handle judgment-heavy research and review, lower-cost models execute well-specified plans, and Codex uses longer waits to avoid frequent polling, intervenes on stalls, and verifies results",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/shinpr/codex-subagent-playbook/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Codex Token Watch",
+      "url": "https://github.com/premk134/codex-token-watch",
+      "owner": "premk134",
+      "repo": "codex-token-watch",
+      "description": "Read-only macOS CLI that turns local Codex Desktop task logs into per-turn token, prompt-cache, cache-miss, duration, and API-cost analysis",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/premk134/codex-token-watch/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -3865,6 +3907,20 @@
       ]
     },
     {
+      "name": "FlowBoard",
+      "url": "https://github.com/rasimme/FlowBoard",
+      "owner": "rasimme",
+      "repo": "FlowBoard",
+      "description": "Local-first project workspace and task-coordination plugin for OpenClaw and external coding agents, with lazy-loaded context and a shared Kanban board",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rasimme/FlowBoard/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "GitCortex",
       "url": "https://github.com/bharath03-a/GitCortex",
       "owner": "bharath03-a",
@@ -3960,6 +4016,20 @@
       "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Hey Jarvis",
+      "url": "https://github.com/dijiclick/hey-jarvis",
+      "owner": "dijiclick",
+      "repo": "hey-jarvis",
+      "description": "macOS voice assistant with an on-device wake word that runs quick Mac actions instantly and hands real work (code, browser, apps, email) to Claude Code through the Agent SDK",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/dijiclick/hey-jarvis/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -4154,6 +4224,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AntonioCoppe/jev-harness/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Jevbridge",
+      "url": "https://github.com/tacticocc/Jevbridge",
+      "owner": "tacticocc",
+      "repo": "Jevbridge",
+      "description": "OSS ACP/MCP adapter that bridges TypeSafe Jev with any LLM, putting computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode without replacing those hosts",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/tacticocc/Jevbridge/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -4775,6 +4859,20 @@
       ]
     },
     {
+      "name": "Pika",
+      "url": "https://github.com/ayushjainr/pikamux",
+      "owner": "ayushjainr",
+      "repo": "pikamux",
+      "description": "Enables Codex, Claude Code, and OpenCode agents to discover peers with relevant experience and consult them through private side conversations while their original work continues",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ayushjainr/pikamux/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Planning with Files",
       "url": "https://github.com/OthmanAdi/planning-with-files",
       "owner": "OthmanAdi",
@@ -5279,6 +5377,20 @@
       ]
     },
     {
+      "name": "AI Command Center",
+      "url": "https://github.com/Hredo/ai-command-center",
+      "owner": "Hredo",
+      "repo": "ai-command-center",
+      "description": "Local-first Windows command center for Claude Code, Codex, OpenCode, Aider, Gemini CLI, Ollama and 8,000+ API models, with live cost and token analytics (even for Claude Code sessions in other terminals), a side-by-side Arena, real terminals and git per project",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Hredo/ai-command-center/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AnyCap",
       "url": "https://github.com/anycap-ai/anycap",
       "owner": "anycap-ai",
@@ -5448,6 +5560,20 @@
       ]
     },
     {
+      "name": "GPT-6 Astra Outbound System",
+      "url": "https://github.com/heypastel/pastel-outbound-system",
+      "owner": "heypastel",
+      "repo": "pastel-outbound-system",
+      "description": "Codex plugin with 20 outbound skills and 12 agents that catch LinkedIn buying signals, qualify and rank leads, write human-sounding messages and posts, run sequences, and handle replies through the Pastel MCP, with every send approved first",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/heypastel/pastel-outbound-system/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Hostinger API MCP",
       "url": "https://github.com/hostinger/api-mcp-server",
       "owner": "hostinger",
@@ -5518,6 +5644,20 @@
       "install_url": "https://raw.githubusercontent.com/drolosoft/immich-photo-manager/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Kesha Voice Kit",
+      "url": "https://github.com/drakulavich/kesha-voice-kit",
+      "owner": "drakulavich",
+      "repo": "kesha-voice-kit",
+      "description": "Local speech-to-text and text-to-speech CLI with an MCP server; it transcribes 25 languages and speaks 9, and every model runs on the machine itself rather than in a cloud service",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/drakulavich/kesha-voice-kit/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -5693,7 +5833,7 @@
       "url": "https://github.com/runapi-ai/mcp",
       "owner": "runapi-ai",
       "repo": "mcp",
-      "description": "Connect MCP-compatible coding tools to RunAPI for model discovery, pricing lookup, media task creation, and balance checks",
+      "description": "MCP server for AI image generation, AI video generation, AI music creation, text-to-speech, prompt search, and model discovery",
       "category": "Tools & Integrations",
       "platform": "codex",
       "source": "awesome-ai-plugins",
@@ -5945,6 +6085,19 @@
       "owner": "xiajiajun516",
       "repo": "dsh-config-manager",
       "description": "Backup, restore, export, import, migrate and sync your complete DeepSeek Harness (DSH) configuration \u2014 settings, model providers, plugins, MCP servers, skills, agent presets and workspaces \u2014 and restore your whole environment on a new machine with one click",
+      "category": "DeepSeek Harness Plugins",
+      "platform": "deepseek-harness",
+      "source": "awesome-ai-plugins",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-vision-router",
+      "url": "https://github.com/ysr666/dsh-vision-router",
+      "owner": "ysr666",
+      "repo": "dsh-vision-router",
+      "description": "Gives text-only DeepSeek Harness agents image understanding through a built-in no-key vision chain plus fourteen tools for Q&A, grounding, OCR, crop, screenshots and pixel diff",
       "category": "DeepSeek Harness Plugins",
       "platform": "deepseek-harness",
       "source": "awesome-ai-plugins",
