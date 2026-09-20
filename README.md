@@ -1,1 +1,1 @@
-@/workspace/hol-readme-clean-patched.md
+PLACEHOLDER_REPLACE_WITH_FILE
