@@ -257,6 +257,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [jev-preflight](https://github.com/muse0509/jev-preflight) - Claude Code plugin that uses TypeSafe's Jev to assess code-change risk and request at most one additional investigation before a turn completes.
 - [jev-use](https://github.com/shitianfang/jev-use) - Hands the agent steps that need no text output to Jev's judgment model across Claude Code, Codex, and Pi, returning everything it should not decide to the LLM under a typed escalation contract.
 - [Jevbridge](https://github.com/tacticocc/Jevbridge) - OSS ACP/MCP adapter that bridges TypeSafe Jev with any LLM, putting computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode without replacing those hosts.
+- [jevcheck](https://github.com/sathariels/jevcheck) - Model-upgrade contract CLI for TypeSafe Jev (fixture eval, record/compare, CI-friendly exits); `pip install jevcheck`.
 - [JevPromptCoach](https://github.com/CrowdLinker/JevPromptCoach) - Claude Code plugin that scores how well you prompt a coding agent and tracks whether your habits improve over time, running on TypeSafe's Jev model with no added latency on the prompt path.
 - [JevScout](https://github.com/hqman/JevScout) - Autonomous job hunt orchestrator powered by TypeSafe Jev and Chrome DevTools Protocol to discover and evaluate AI engineering roles.
 - [Jump Skills](https://github.com/fabricioctelles/jump-skills) - Meta-skills that route requests to specialized skills across Claude Code, Codex, Cursor, OpenCode, and other agent hosts.
