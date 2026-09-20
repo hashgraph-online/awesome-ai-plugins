@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Post a "claim your plugin" comment on merged PRs that add plugins present in the
-HOL registry but not yet owner-verified.
+Post a claim notice on merged PRs that add plugins to the HOL catalog source.
 
-Triggers via GitHub Actions on pull_request closed (merged).
-Checks the HOL registry catalog API for matching repos, then posts a comment
-with claim instructions if the plugin hasn't been claimed yet.
+Direct claim links are emitted only for repositories already present in the live
+HOL Registry. Repositories that are merged into README.md but still waiting for
+Registry ingestion are called out as syncing so creators are not sent into a
+claim flow that cannot resolve their plugin yet.
 """
 
 import json
@@ -24,6 +24,7 @@ PR_NUMBER = os.environ.get("PR_NUMBER", "")
 PR_TITLE = os.environ.get("PR_TITLE", "")
 PR_AUTHOR = os.environ.get("PR_AUTHOR", "")
 REPO_FULL = os.environ.get("GITHUB_REPOSITORY", "")
+MAX_CATALOG_PAGES = 10
 
 # Skip titles that aren't new plugin additions
 SKIP_PATTERNS = [
@@ -57,12 +58,49 @@ SKIP_PATTERNS = [
     r"Add HOL Guard scanner",
 ]
 
-def build_comment_body(author: str, repositories=()) -> str:
-    """Build the claim notice comment body, tagging the PR author."""
-    claim_links = "\n".join(
-        f"- [Verify ownership of `{repo}`](https://hol.org/guard/plugins?{urlencode({'claim': repo, 'utm_source': 'github', 'utm_medium': 'pr_comment', 'utm_campaign': 'plugin_claim', 'utm_content': 'merge_notice'})})"
-        for repo in sorted(set(repositories))
-    ) or "- [Open the plugin dashboard](https://hol.org/guard/plugins)"
+
+class RegistryCatalogFetchError(RuntimeError):
+    """Raised when Registry catalog evidence is unavailable or incomplete."""
+
+
+def build_comment_body(author: str, repositories=(), pending_repositories=()) -> str:
+    """Build the claim notice comment body, tagging the PR author.
+
+    `repositories` must contain only repos that are confirmed in the live HOL
+    Registry. `pending_repositories` may contain repos confirmed in the merged
+    catalog source but not yet present in the Registry.
+    """
+    claimable = sorted(set(repositories))
+    pending = sorted(set(pending_repositories) - set(claimable))
+
+    sections = []
+    if claimable:
+        claim_links = "\n".join(
+            f"- [Verify ownership of `{repo}`](https://hol.org/guard/plugins?{urlencode({'claim': repo, 'utm_source': 'github', 'utm_medium': 'pr_comment', 'utm_campaign': 'plugin_claim', 'utm_content': 'merge_notice'})})"
+            for repo in claimable
+        )
+        sections.append(f"""### How to claim
+
+{claim_links}
+
+1. Open your plugin's link above, then choose **\"Continue with GitHub\"**. Your plugin stays selected through sign-in.
+2. Use the GitHub account that maintains the repository. We request only `read:user` and `user:email`, with no repository write access.
+3. Complete ownership verification to receive the owner-verified badge. Inconclusive repository permissions may require review.""")
+
+    if pending:
+        pending_lines = "\n".join(f"- `{repo}`" for repo in pending)
+        sections.append(f"""### Still syncing
+
+These repositories are merged into HOL's catalog source but are not live in the HOL Registry yet:
+
+{pending_lines}
+
+No action is needed yet. The claim link will work after the listing appears in the Registry.""")
+
+    if not sections:
+        sections.append("[Open the plugin dashboard](https://hol.org/guard/plugins)")
+
+    action_sections = "\n\n".join(sections)
     return f"""<!-- hol-claim-notice -->
 🎉 Hey @{author}, this plugin submission has been merged into HOL's catalog source.
 
@@ -75,19 +113,12 @@ Once the plugin appears in the [HOL Registry](https://hol.org/plugins), if you m
 - **Direct claim link** to share with your community
 - **Dashboard access** at [hol.org/guard/plugins](https://hol.org/guard/plugins) to track installs, trust, and engagement
 
-### How to claim
+{action_sections}
 
-{claim_links}
-
-1. Open your plugin's link above, then choose **"Continue with GitHub"**. Your plugin stays selected through sign-in.
-2. Use the GitHub account that maintains the repository. We request only `read:user` and `user:email`, with no repository write access.
-3. Complete ownership verification to receive the owner-verified badge. Inconclusive repository permissions may require review.
-
-If the listing is still syncing, try again later. You can also search the dashboard by plugin name or GitHub owner/repository.
-
-No need to add any secrets or tokens to your repo — ownership verification is done entirely through GitHub OAuth.
+No need to add any secrets or tokens to your repo. Ownership verification is done entirely through GitHub OAuth.
 
 If you have any questions, feel free to ask here or reach out at [support@hol.org](mailto:support@hol.org)."""
+
 
 MARKER = "<!-- hol-claim-notice -->"
 
@@ -127,31 +158,43 @@ def should_skip_title(title: str) -> bool:
 
 
 def fetch_catalog_repos(owner_verified: bool = False):
-    """Fetch repos from the registry catalog, optionally filtered by owner verification.
+    """Fetch a complete Registry catalog repo set.
 
-    Returns a set of lowercase 'owner/repo' strings.
+    Missing/failed pages and pagination that exceeds the configured bound are
+    errors, not evidence that a repository is absent. This prevents transient
+    Registry failures from producing irreversible claim-notice markers.
     """
     repos = set()
     cursor = None
     base_url = f"{REGISTRY_API}/plugins/catalog?limit=50"
     if owner_verified:
         base_url += "&ownerVerified=true"
-    url = base_url
-    for _ in range(10):
-        if cursor:
-            url = f"{base_url}&cursor={cursor}"
+
+    for page_index in range(MAX_CATALOG_PAGES):
+        url = base_url if not cursor else f"{base_url}&cursor={cursor}"
         data = api_request(url)
-        if not data or "items" not in data:
-            break
+        if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+            raise RegistryCatalogFetchError(
+                f"registry catalog page {page_index + 1} unavailable"
+            )
+
         for plugin in data["items"]:
+            if not isinstance(plugin, dict):
+                continue
             repo = plugin.get("sourceRepo") or plugin.get("repository") or ""
+            if not isinstance(repo, str):
+                continue
             repo = repo.replace("https://github.com/", "").strip()
             if repo:
                 repos.add(repo.lower())
+
         cursor = data.get("nextCursor")
         if not cursor:
-            break
-    return repos
+            return repos
+
+    raise RegistryCatalogFetchError(
+        f"registry catalog exceeded {MAX_CATALOG_PAGES} pages"
+    )
 
 
 def normalize_repo_url(raw: str) -> str:
@@ -218,11 +261,11 @@ def has_existing_claim_comment():
     return False
 
 
-def post_comment(author: str, repositories=()):
+def post_comment(author: str, repositories=(), pending_repositories=()):
     """Post the claim notice comment on the PR, tagging the author."""
     url = f"https://api.github.com/repos/{REPO_FULL}/issues/{PR_NUMBER}/comments"
     headers = {"Authorization": f"token {GH_TOKEN}"}
-    body = build_comment_body(author, repositories)
+    body = build_comment_body(author, repositories, pending_repositories)
     result = api_request(url, headers=headers, method="POST", data={"body": body})
     return result is not None
 
@@ -272,49 +315,69 @@ def main():
 
     print(f"  Found repos in diff: {', '.join(pr_repos)}")
 
-    # 4. Fetch all registry plugins
+    # 4. Fetch a complete Registry snapshot. A failed/partial snapshot is not
+    # evidence that a repository is still syncing, so fail closed without
+    # posting a marker and allow a later workflow dispatch to recover.
     print("  Fetching registry catalog...")
-    registry_repos = fetch_catalog_repos(owner_verified=False)
+    try:
+        registry_repos = fetch_catalog_repos(owner_verified=False)
+    except RegistryCatalogFetchError as error:
+        print(f"  Skipping: Registry catalog unavailable ({error})", file=sys.stderr)
+        return 0
     print(f"  Registry has {len(registry_repos)} plugins")
 
-    # 5. Check which PR repos are in the registry
-    matched = pr_repos & registry_repos
-    if matched != pr_repos:
-        # Fallback: check local README.md — the plugin may have just been merged
-        # and the registry sync hasn't completed yet
+    # 5. Split live Registry repos from catalog-source repos that are still syncing.
+    live_repos = pr_repos & registry_repos
+    pending_repos = set()
+    missing_from_registry = pr_repos - live_repos
+    if missing_from_registry:
         print("  Some repos are not in the registry yet, checking local README.md...")
         readme_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "README.md")
         if os.path.exists(readme_path):
             readme_content = open(readme_path, encoding="utf-8").read().lower()
-            readme_matched = {r for r in pr_repos - matched if r.lower() in readme_content}
-            if readme_matched:
-                print(f"  Found in README (pending registry sync): {', '.join(readme_matched)}")
-                matched |= readme_matched
-    if not matched:
-        print("  Skipping: none of the PR repos are in the registry or README")
+            pending_repos = {
+                repo for repo in missing_from_registry if repo.lower() in readme_content
+            }
+            if pending_repos:
+                print(f"  Pending registry sync: {', '.join(sorted(pending_repos))}")
+
+    if not live_repos and not pending_repos:
+        print("  Skipping: none of the PR repos are in the registry or merged catalog source")
         return 0
 
-    print(f"  Matched in registry: {', '.join(matched)}")
+    if live_repos:
+        print(f"  Live in registry: {', '.join(sorted(live_repos))}")
 
-    # 6. Check if already owner-verified
-    print("  Checking owner verification status...")
-    verified_repos = fetch_catalog_repos(owner_verified=True)
-    already_verified = matched & verified_repos
-    if already_verified and len(already_verified) == len(matched):
-        print("  Skipping: all matched repos already owner-verified")
-        return 0
+    # 6. Check owner verification only for repos actually live in the Registry.
+    already_verified = set()
+    if live_repos:
+        print("  Checking owner verification status...")
+        try:
+            verified_repos = fetch_catalog_repos(owner_verified=True)
+        except RegistryCatalogFetchError as error:
+            print(
+                f"  Skipping: owner-verification catalog unavailable ({error})",
+                file=sys.stderr,
+            )
+            return 0
+        already_verified = live_repos & verified_repos
 
+    claimable_repos = live_repos - already_verified
     if already_verified:
-        print(f"  Some already verified: {', '.join(already_verified)}")
+        print(f"  Already verified: {', '.join(sorted(already_verified))}")
 
-    # 7. Post the comment
+    if not claimable_repos and not pending_repos:
+        print("  Skipping: all live matched repos are already owner-verified")
+        return 0
+
+    # 7. Post the comment. Pending repos never receive a direct claim URL.
     print("  Posting claim notice comment...")
-    if post_comment(PR_AUTHOR, matched - already_verified):
+    if post_comment(PR_AUTHOR, claimable_repos, pending_repos):
         print("  ✅ Comment posted successfully")
         return 0
-    else:
-        print("  ❌ Failed to post comment")
-        return 1
+
+    print("  ❌ Failed to post comment")
+    return 1
 
 
 if __name__ == "__main__":
