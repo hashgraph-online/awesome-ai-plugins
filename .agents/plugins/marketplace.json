@@ -4672,6 +4672,21 @@
       "install_url": "https://raw.githubusercontent.com/tacticocc/Jevbridge/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "jevcheck",
+      "displayName": "jevcheck",
+      "description": "Model-upgrade contract CLI for TypeSafe Jev (fixture eval, record/compare, CI-friendly exits); `pip install jevcheck`",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sathariels",
+      "repo": "jevcheck",
+      "url": "https://github.com/sathariels/jevcheck",
+      "install_url": "https://raw.githubusercontent.com/sathariels/jevcheck/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "JevPromptCoach",
       "displayName": "JevPromptCoach",
       "description": "Claude Code plugin that scores how well you prompt a coding agent and tracks whether your habits improve over time, running on TypeSafe's Jev model with no added latency on the prompt path",
@@ -5677,6 +5692,21 @@
       "install_url": "https://raw.githubusercontent.com/martinholovsky/SOTA-skills/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Spellbook",
+      "displayName": "Spellbook",
+      "description": "Cross-runtime library of 108 agent skills installable into Claude Code and Codex via one command",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "majiayu000",
+      "repo": "spellbook",
+      "url": "https://github.com/majiayu000/spellbook",
+      "install_url": "https://raw.githubusercontent.com/majiayu000/spellbook/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ssot-check",
       "displayName": "ssot-check",
       "description": "Agent Skill and dependency-free Python CLI that discovers repeated facts in documentation and checks declared copies against canonical values",
@@ -5962,6 +5992,21 @@
       "install_url": "https://raw.githubusercontent.com/pattern-ai-labs/agentcall/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "agentic-seo",
+      "displayName": "agentic-seo",
+      "description": "SEO skill collection for AI coding assistants with 16 sub-skills, 10 specialist agents, and 89 evidence-collection scripts",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dalroot",
+      "repo": "agentic-seo",
+      "url": "https://github.com/dalroot/agentic-seo",
+      "install_url": "https://raw.githubusercontent.com/dalroot/agentic-seo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "agentmailkit",
       "displayName": "agentmailkit",
       "description": "MCP server for scheduled LLM-written email digests from RSS, web and local sources: tools list_jobs/run_job/preview_job/list_plugins, local-first, run_job dry-run by default; `pip install \"agentmailkit[mcp]\"` then `agentmailkit mcp`",
@@ -6110,6 +6155,21 @@
       "repo": "claude-dev-suite",
       "url": "https://github.com/claude-dev-suite/claude-dev-suite",
       "install_url": "https://raw.githubusercontent.com/claude-dev-suite/claude-dev-suite/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "clawock",
+      "displayName": "clawock",
+      "description": "A reusable investment decision-workflow extension that adds evidence-gated, code-settled trading decisions to external agents like Claude Code and OpenClaw",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "KCNyu",
+      "repo": "clawock",
+      "url": "https://github.com/KCNyu/clawock",
+      "install_url": "https://raw.githubusercontent.com/KCNyu/clawock/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "CloudBase AI Toolkit",

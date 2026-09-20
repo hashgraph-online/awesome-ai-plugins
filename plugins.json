@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-20",
-  "total": 454,
+  "total": 458,
   "platforms": [
     "codex",
     "grok",
@@ -4369,6 +4369,20 @@
       ]
     },
     {
+      "name": "jevcheck",
+      "url": "https://github.com/sathariels/jevcheck",
+      "owner": "sathariels",
+      "repo": "jevcheck",
+      "description": "Model-upgrade contract CLI for TypeSafe Jev (fixture eval, record/compare, CI-friendly exits); `pip install jevcheck`",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sathariels/jevcheck/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "JevPromptCoach",
       "url": "https://github.com/CrowdLinker/JevPromptCoach",
       "owner": "CrowdLinker",
@@ -5307,6 +5321,20 @@
       ]
     },
     {
+      "name": "Spellbook",
+      "url": "https://github.com/majiayu000/spellbook",
+      "owner": "majiayu000",
+      "repo": "spellbook",
+      "description": "Cross-runtime library of 108 agent skills installable into Claude Code and Codex via one command",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/majiayu000/spellbook/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "ssot-check",
       "url": "https://github.com/conorbronsdon/ssot-check",
       "owner": "conorbronsdon",
@@ -5573,6 +5601,20 @@
       ]
     },
     {
+      "name": "agentic-seo",
+      "url": "https://github.com/dalroot/agentic-seo",
+      "owner": "dalroot",
+      "repo": "agentic-seo",
+      "description": "SEO skill collection for AI coding assistants with 16 sub-skills, 10 specialist agents, and 89 evidence-collection scripts",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/dalroot/agentic-seo/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "agentmailkit",
       "url": "https://github.com/ariaxhan/agentmailkit",
       "owner": "ariaxhan",
@@ -5708,6 +5750,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/claude-dev-suite/claude-dev-suite/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "clawock",
+      "url": "https://github.com/KCNyu/clawock",
+      "owner": "KCNyu",
+      "repo": "clawock",
+      "description": "A reusable investment decision-workflow extension that adds evidence-gated, code-settled trading decisions to external agents like Claude Code and OpenClaw",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/KCNyu/clawock/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
