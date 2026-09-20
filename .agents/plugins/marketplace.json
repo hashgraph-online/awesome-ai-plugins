@@ -3532,6 +3532,36 @@
       "install_url": "https://raw.githubusercontent.com/moasq/agentic-ship/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "AgentWiki",
+      "displayName": "AgentWiki",
+      "description": "Rust CLI that generates C4-style architecture docs for any repository using already-authenticated agent CLIs (Claude Code, Codex, Devin) as the LLM backend",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tidusvn05",
+      "repo": "agentwiki",
+      "url": "https://github.com/tidusvn05/agentwiki",
+      "install_url": "https://raw.githubusercontent.com/tidusvn05/agentwiki/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Agnostic-AI",
+      "displayName": "Agnostic-AI",
+      "description": "Capture your Claude Code or Codex harness once (rules, hooks, skills, subagents, commands and MCP servers) and apply it identically to Gemini CLI, Cursor, Antigravity and 16 more clients",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ucsandman",
+      "repo": "Agnostic-AI",
+      "url": "https://github.com/ucsandman/Agnostic-AI",
+      "install_url": "https://raw.githubusercontent.com/ucsandman/Agnostic-AI/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "AI Video Transcriber",
       "displayName": "AI Video Transcriber",
       "description": "Transcribe and summarize videos, podcasts, and local media via a Codex plugin, Claude Code skill, and MCP server",
@@ -3575,6 +3605,21 @@
       "repo": "aide",
       "url": "https://github.com/jmylchreest/aide",
       "install_url": "https://raw.githubusercontent.com/jmylchreest/aide/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Alloy",
+      "displayName": "Alloy",
+      "description": "Orchestrates Codex, Claude, Grok, and Antigravity CLIs using existing subscriptions, with Jev task routing, read-only review panels, and managed worktree execution with independent review",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tlangridge",
+      "repo": "Alloy",
+      "url": "https://github.com/tlangridge/Alloy",
+      "install_url": "https://raw.githubusercontent.com/tlangridge/Alloy/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Antigravity Context Meter",
@@ -4282,6 +4327,21 @@
       "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Hey Jarvis",
+      "displayName": "Hey Jarvis",
+      "description": "macOS voice assistant with an on-device wake word that runs quick Mac actions instantly and hands real work (code, browser, apps, email) to Claude Code through the Agent SDK",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dijiclick",
+      "repo": "hey-jarvis",
+      "url": "https://github.com/dijiclick/hey-jarvis",
+      "install_url": "https://raw.githubusercontent.com/dijiclick/hey-jarvis/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "hiai-opencode",
       "displayName": "hiai-opencode",
       "description": "OpenCode plugin adding a multi-agent team with 10 specialist agents, execution gates, LSP tools, browser automation, and memory search",
@@ -4490,6 +4550,36 @@
       "repo": "jev-harness",
       "url": "https://github.com/AntonioCoppe/jev-harness",
       "install_url": "https://raw.githubusercontent.com/AntonioCoppe/jev-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "jev-use",
+      "displayName": "jev-use",
+      "description": "Hands the agent steps that need no text output to Jev's judgment model across Claude Code, Codex, and Pi, returning everything it should not decide to the LLM under a typed escalation contract",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "shitianfang",
+      "repo": "jev-use",
+      "url": "https://github.com/shitianfang/jev-use",
+      "install_url": "https://raw.githubusercontent.com/shitianfang/jev-use/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Jevbridge",
+      "displayName": "Jevbridge",
+      "description": "OSS ACP/MCP adapter that bridges TypeSafe Jev with any LLM, putting computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode without replacing those hosts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tacticocc",
+      "repo": "Jevbridge",
+      "url": "https://github.com/tacticocc/Jevbridge",
+      "install_url": "https://raw.githubusercontent.com/tacticocc/Jevbridge/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "JevScout",
@@ -5585,6 +5675,21 @@
       "repo": "trigger_tree",
       "url": "https://github.com/Hedde/trigger_tree",
       "install_url": "https://raw.githubusercontent.com/Hedde/trigger_tree/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Usage Monitor",
+      "displayName": "Usage Monitor",
+      "description": "Floating desktop meter that shows remaining Grok, MiniMax, Codex, Claude, Cursor, Copilot, and Gemini usage and keeps each session on this computer",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Errr0rr404",
+      "repo": "usage-monitor",
+      "url": "https://github.com/Errr0rr404/usage-monitor",
+      "install_url": "https://raw.githubusercontent.com/Errr0rr404/usage-monitor/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Vanguard Frontier Agentic",
