@@ -472,6 +472,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Jenkins CLI](https://github.com/avivsinai/jenkins-cli) - GitHub CLI-style interface for Jenkins controllers with jobs, pipelines, runs, logs, artifacts, credentials, and nodes.
 - [Kachilu Browser](https://github.com/kachilu-inc/kachilu-browser) - Anti-bot-aware browser automation for AI agents with MCP tools, CAPTCHA-aware workflows, and WSL2 Windows browser support.
 - [Kesha Voice Kit](https://github.com/drakulavich/kesha-voice-kit) - Local speech-to-text and text-to-speech CLI with an MCP server; it transcribes 25 languages and speaks 9, and every model runs on the machine itself rather than in a cloud service.
+- [KGLite](https://github.com/kkollsga/kglite) - Turn datasets large and small into knowledge graphs for AI agent memory, knowledge retrieval, and connected-data analysis, with a high-performance local graph database and a ready-to-use MCP interface.
 - [KiCad Happy](https://github.com/aklofas/kicad-happy) - KiCad EDA skills for schematic analysis, PCB layout review, component sourcing, BOM management, and manufacturing preparation.
 - [Kindle Highlights](https://github.com/l3a0/claude-plugins) - Claude Code skill that exports a book's Kindle highlights to verbatim, location-cited Markdown, recovering the ones Amazon's export limit truncates or hides (macOS).
 - [Kreuzberg](https://github.com/kreuzberg-dev/plugins) - Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.
