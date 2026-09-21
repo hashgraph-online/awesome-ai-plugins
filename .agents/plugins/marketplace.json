@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-20",
+  "last_updated": "2026-09-21",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -4387,21 +4387,6 @@
       "install_url": "https://raw.githubusercontent.com/liasica/harmonyos-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "harness-eval",
-      "displayName": "harness-eval",
-      "description": "Linter tool (static analysis rules) and LLM reviewer for AI agent harness files that runs quality and security health checks, catching cross-component security chains, redundancy, and config drift, and vets individual skills before install, across Claude Code, Cursor, Codex, Copilot, Gemini, and OpenCode",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
-      "owner": "redhat-community-ai-tools",
-      "repo": "harness-eval",
-      "url": "https://github.com/redhat-community-ai-tools/harness-eval",
-      "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json"
-    },
-    {
       "name": "Harness Kit",
       "displayName": "Harness Kit",
       "description": "Agentic development harness for orchestrating specification, implementation, review, and telemetry across multiple AI coding assistants",
@@ -4415,6 +4400,21 @@
       "repo": "harness-kit",
       "url": "https://github.com/romabeckman/harness-kit",
       "install_url": "https://raw.githubusercontent.com/romabeckman/harness-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "harness-eval",
+      "displayName": "harness-eval",
+      "description": "Linter tool (static analysis rules) and LLM reviewer for AI agent harness files that runs quality and security health checks, catching cross-component security chains, redundancy, and config drift, and vets individual skills before install, across Claude Code, Cursor, Codex, Copilot, Gemini, and OpenCode",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "redhat-community-ai-tools",
+      "repo": "harness-eval",
+      "url": "https://github.com/redhat-community-ai-tools/harness-eval",
+      "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Hey Jarvis",

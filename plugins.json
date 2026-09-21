@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-09-20",
+  "last_updated": "2026-09-21",
   "total": 461,
   "platforms": [
     "codex",
@@ -4103,20 +4103,6 @@
       ]
     },
     {
-      "name": "harness-eval",
-      "url": "https://github.com/redhat-community-ai-tools/harness-eval",
-      "owner": "redhat-community-ai-tools",
-      "repo": "harness-eval",
-      "description": "Linter tool (static analysis rules) and LLM reviewer for AI agent harness files that runs quality and security health checks, catching cross-component security chains, redundancy, and config drift, and vets individual skills before install, across Claude Code, Cursor, Codex, Copilot, Gemini, and OpenCode",
-      "category": "Development & Workflow",
-      "platform": "claude-code",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json",
-      "ecosystems": [
-        "claude-code"
-      ]
-    },
-    {
       "name": "Harness Kit",
       "url": "https://github.com/romabeckman/harness-kit",
       "owner": "romabeckman",
@@ -4128,6 +4114,20 @@
       "install_url": "https://raw.githubusercontent.com/romabeckman/harness-kit/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "harness-eval",
+      "url": "https://github.com/redhat-community-ai-tools/harness-eval",
+      "owner": "redhat-community-ai-tools",
+      "repo": "harness-eval",
+      "description": "Linter tool (static analysis rules) and LLM reviewer for AI agent harness files that runs quality and security health checks, catching cross-component security chains, redundancy, and config drift, and vets individual skills before install, across Claude Code, Cursor, Codex, Copilot, Gemini, and OpenCode",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/redhat-community-ai-tools/harness-eval/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
