@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-21",
-  "total": 461,
+  "total": 463,
   "platforms": [
     "codex",
     "grok",
@@ -2473,6 +2473,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/avivsinai/jenkins-cli/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Jev Social",
+      "url": "https://github.com/socai-io/jev-social",
+      "owner": "socai-io",
+      "repo": "jev-social",
+      "description": "Read-only Instagram, TikTok, and LinkedIn research in the user's local browser, with Jev selecting bounded operations and the socai CLI returning source-linked evidence and reports.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/socai-io/jev-social/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5778,6 +5792,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/getcargohq/cargo-skills/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Chorale",
+      "url": "https://github.com/hxy9243/chorale",
+      "owner": "hxy9243",
+      "repo": "chorale",
+      "description": "An LLM-assisted music sheet analysis and composition local MCP server and a web UI for inspect, annotate, compose, and interactively editing ABC notations for music",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hxy9243/chorale/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
