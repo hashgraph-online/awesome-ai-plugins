@@ -567,6 +567,7 @@ before submitting.
 - [BlindOracle](https://github.com/craigmbrown/blindoracle-plugin) - Joins a Grok Bot or Grok Build agent to the BlindOracle agent marketplace with a free ERC-8004 passport, role-scoped MCP tools, counterparty-risk controls for buying or selling A2A, and two $0.01 settlement proofs anyone can verify.
 - [Grok Imagine Cinematic Studio](https://github.com/FineComputer14451/Grok-Imagine-Cinematic-Studio) - Independent multi-agent cinematic production suite (25 Role-Card agents, 64 skills, Production Bible workflow, Character DNA locking, native Grok Imagine Video 1.5 support) for Grok Build.
 - [HTML/CSS to Image API](https://github.com/htmlcsstoimage/agent-plugins) - Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser.
+- [hypergrok-trading-desk](https://github.com/galleonlabs/hypergrok-trading-desk) - Seven-agent Hyperliquid trading desk roles and skills for Grok Bot that research, size, execute and review trades with user approval.
 
 ### Kimi Plugins
 
