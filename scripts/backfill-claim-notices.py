@@ -37,6 +37,8 @@ def list_merged_prs(repository: str, token: str, since: str, max_prs: int):
         data = NOTICE.api_request(url, headers=headers)
         if not isinstance(data, dict) or not isinstance(data.get("items"), list):
             raise RuntimeError("GitHub could not list merged pull requests")
+        if data.get("incomplete_results") is True:
+            raise RuntimeError("GitHub returned incomplete merged pull request results")
         if page == 1 and data.get("total_count", 0) > max_prs:
             raise RuntimeError(
                 f"merged PR count exceeds BACKFILL_MAX_PRS ({max_prs})"

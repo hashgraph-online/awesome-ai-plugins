@@ -37,6 +37,19 @@ class BackfillClaimNoticeTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "exceeds BACKFILL_MAX_PRS"):
                 MODULE.list_merged_prs("owner/catalog", "fixture", "2026-09-18", 1)
 
+    def test_rejects_incomplete_github_search_results(self):
+        with patch.object(
+            MODULE.NOTICE,
+            "api_request",
+            return_value={
+                "total_count": 1,
+                "incomplete_results": True,
+                "items": [{"number": 1}],
+            },
+        ):
+            with self.assertRaisesRegex(RuntimeError, "incomplete merged"):
+                MODULE.list_merged_prs("owner/catalog", "fixture", "2026-09-18", 1000)
+
 
 if __name__ == "__main__":
     unittest.main()
