@@ -53,7 +53,7 @@ def list_merged_prs(repository: str, token: str, since: str, max_prs: int):
 def main():
     token = os.environ.get("GH_TOKEN", "")
     repository = os.environ.get("GITHUB_REPOSITORY", "")
-    since = os.environ.get("BACKFILL_SINCE", "2026-09-18")
+    since = os.environ.get("BACKFILL_SINCE", "2026-07-04")
     if not token or not repository:
         print("Error: GH_TOKEN and GITHUB_REPOSITORY are required", file=sys.stderr)
         return 1

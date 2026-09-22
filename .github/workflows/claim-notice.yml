@@ -24,7 +24,7 @@ on:
       backfill_since:
         description: "Earliest merged date to include in a backfill (YYYY-MM-DD)"
         required: false
-        default: "2026-09-18"
+        default: "2026-07-04"
         type: string
       backfill_max_prs:
         description: "Maximum merged PRs to process in one backfill"

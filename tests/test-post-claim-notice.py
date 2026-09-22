@@ -149,6 +149,19 @@ class ClaimNoticeTests(unittest.TestCase):
                 MODULE.fetch_merged_pr_metadata(), ("Add plugin", "author")
             )
 
+    def test_existing_claim_comment_is_found_on_a_later_page(self):
+        first_page = [{"body": "unrelated"} for _ in range(100)]
+        second_page = [{"body": f"before {MODULE.MARKER} after"}]
+        with patch.multiple(
+            MODULE,
+            GH_TOKEN="fixture",
+            PR_NUMBER="1",
+            REPO_FULL="owner/catalog",
+        ), patch.object(
+            MODULE, "api_request", side_effect=[first_page, second_page]
+        ):
+            self.assertTrue(MODULE.has_existing_claim_comment())
+
     def test_links_preserve_each_repository_and_attribution(self):
         body = MODULE.build_comment_body("author", ["owner/second", "owner/first"])
         links = re.findall(r"https://hol.org/guard/plugins\?[^)]+", body)

@@ -25,6 +25,7 @@ PR_TITLE = os.environ.get("PR_TITLE", "")
 PR_AUTHOR = os.environ.get("PR_AUTHOR", "")
 REPO_FULL = os.environ.get("GITHUB_REPOSITORY", "")
 MAX_CATALOG_PAGES = 100
+MAX_COMMENT_PAGES = 20
 CATALOG_REPO_CACHE = {}
 
 # Skip titles that aren't new plugin additions
@@ -62,6 +63,10 @@ SKIP_PATTERNS = [
 
 class RegistryCatalogFetchError(RuntimeError):
     """Raised when Registry catalog evidence is unavailable or incomplete."""
+
+
+class GitHubCommentsFetchError(RuntimeError):
+    """Raised when existing claim comments cannot be checked completely."""
 
 
 def build_comment_body(author: str, repositories=(), pending_repositories=()) -> str:
@@ -268,19 +273,32 @@ def parse_pr_diff_for_repos():
 
 def has_existing_claim_comment():
     """Check if the PR already has a claim-notice or manual claim comment."""
-    url = f"https://api.github.com/repos/{REPO_FULL}/issues/{PR_NUMBER}/comments"
     headers = {"Authorization": f"token {GH_TOKEN}"}
-    comments = api_request(url, headers=headers)
-    if not isinstance(comments, list):
-        return False
-    for comment in comments:
-        body = comment.get("body") or ""
-        if MARKER in body:
-            return True
-        # Also detect manual claim comments posted before automation
-        if "Claim your plugin" in body and "hol.org/guard/plugins" in body:
-            return True
-    return False
+    for page in range(1, MAX_COMMENT_PAGES + 1):
+        url = (
+            f"https://api.github.com/repos/{REPO_FULL}/issues/{PR_NUMBER}/comments"
+            f"?per_page=100&page={page}"
+        )
+        comments = api_request(url, headers=headers)
+        if not isinstance(comments, list):
+            raise GitHubCommentsFetchError(
+                f"comments page {page} is unavailable"
+            )
+        for comment in comments:
+            if not isinstance(comment, dict):
+                continue
+            body = comment.get("body") or ""
+            if MARKER in body:
+                return True
+            # Also detect manual claim comments posted before automation
+            if "Claim your plugin" in body and "hol.org/guard/plugins" in body:
+                return True
+        if len(comments) < 100:
+            return False
+
+    raise GitHubCommentsFetchError(
+        f"comments exceeded {MAX_COMMENT_PAGES} pages"
+    )
 
 
 def post_comment(author: str, repositories=(), pending_repositories=()):
@@ -325,10 +343,14 @@ def main():
         print("  Skipping: bot/owner PR")
         return 0
 
-    # 2. Check for existing claim comment
-    if has_existing_claim_comment():
-        print("  Skipping: claim notice already posted")
-        return 0
+    # 2. Check for existing claim comment.
+    try:
+        if has_existing_claim_comment():
+            print("  Skipping: claim notice already posted")
+            return 0
+    except GitHubCommentsFetchError as error:
+        print(f"  Existing claim comment check failed: {error}", file=sys.stderr)
+        return 1
 
     # 3. Parse PR diff for GitHub repo URLs
     try:
