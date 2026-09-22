@@ -67,7 +67,7 @@ class ClaimNoticeTests(unittest.TestCase):
             self.assertEqual(MODULE.main(), 0)
             post.assert_called_once_with("author", set(), {"owner/pending"})
 
-    def test_registry_fetch_failure_posts_no_marker_or_claim_notice(self):
+    def test_registry_fetch_failure_fails_without_posting_a_notice(self):
         with patch.multiple(
             MODULE,
             GH_TOKEN="fixture",
@@ -84,7 +84,7 @@ class ClaimNoticeTests(unittest.TestCase):
             "fetch_catalog_repos",
             side_effect=MODULE.RegistryCatalogFetchError("registry unavailable"),
         ), patch.object(MODULE, "post_comment", return_value=True) as post:
-            self.assertEqual(MODULE.main(), 0)
+            self.assertEqual(MODULE.main(), 1)
             post.assert_not_called()
 
     def test_partial_catalog_fetch_is_not_treated_as_authoritative_absence(self):
@@ -106,6 +106,48 @@ class ClaimNoticeTests(unittest.TestCase):
         ):
             with self.assertRaises(MODULE.RegistryCatalogFetchError):
                 MODULE.fetch_catalog_repos()
+
+    def test_repeated_catalog_cursor_is_not_treated_as_a_complete_catalog(self):
+        page = {"items": [], "nextCursor": "50"}
+        with patch.object(MODULE, "api_request", side_effect=[page, page]):
+            with self.assertRaises(MODULE.RegistryCatalogFetchError):
+                MODULE.fetch_catalog_repos()
+
+    def test_catalog_fetch_supports_more_than_ten_pages(self):
+        pages = [
+            {
+                "items": [{"sourceRepo": f"owner/plugin-{index}"}],
+                "nextCursor": str(index + 1),
+            }
+            for index in range(10)
+        ]
+        pages.append(
+            {"items": [{"sourceRepo": "owner/plugin-10"}], "nextCursor": None}
+        )
+        with patch.object(MODULE, "api_request", side_effect=pages):
+            repos = MODULE.fetch_catalog_repos()
+
+        self.assertEqual(len(repos), 11)
+        self.assertIn("owner/plugin-10", repos)
+
+    def test_manual_dispatch_loads_trusted_merged_pr_metadata(self):
+        with patch.multiple(
+            MODULE,
+            GH_TOKEN="fixture",
+            PR_NUMBER="1",
+            REPO_FULL="owner/catalog",
+        ), patch.object(
+            MODULE,
+            "api_request",
+            return_value={
+                "merged_at": "2026-09-22T00:00:00Z",
+                "title": "Add plugin",
+                "user": {"login": "author"},
+            },
+        ):
+            self.assertEqual(
+                MODULE.fetch_merged_pr_metadata(), ("Add plugin", "author")
+            )
 
     def test_links_preserve_each_repository_and_attribution(self):
         body = MODULE.build_comment_body("author", ["owner/second", "owner/first"])
