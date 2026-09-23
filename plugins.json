@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-09-23",
-  "total": 513,
+  "total": 514,
   "platforms": [
     "codex",
     "grok",
@@ -6383,6 +6383,20 @@
       "install_url": "https://raw.githubusercontent.com/cdeust/Cortex/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "DocsMint",
+      "url": "https://github.com/HiAi-gg/docsmint",
+      "owner": "HiAi-gg",
+      "repo": "docsmint",
+      "description": "Cloud or self-hosted knowledge workspace with MCP tools for hybrid search, GraphRAG, and document management",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/HiAi-gg/docsmint/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {

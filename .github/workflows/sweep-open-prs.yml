@@ -74,7 +74,6 @@ jobs:
     needs: discover
     if: needs.discover.outputs.matrix != '[]'
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
@@ -116,10 +115,10 @@ jobs:
             exit 1
           fi
           if [[ "$SCAN_RESULT" != "success" && "$SCAN_RESULT" != "skipped" ]]; then
-            echo "scan findings: one or more advisory source-repository scanner jobs did not pass."
-            exit 0
+            echo "One or more required source-repository scanner jobs did not pass."
+            exit 1
           fi
-          echo "Catalog validation passed. Centralized scanner results are advisory."
+          echo "Catalog validation and required source scans passed."
 
   publish:
     name: Publish per-PR contribution checks

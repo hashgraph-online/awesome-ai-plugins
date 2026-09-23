@@ -58,7 +58,6 @@ jobs:
     needs: validate
     if: needs.validate.outputs.matrix != '[]'
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
