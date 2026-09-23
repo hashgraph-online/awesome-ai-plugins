@@ -109,20 +109,20 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
             return (
                 "success",
                 "scan unavailable",
-                "HOL centralized scan could not run. Catalog validation passed; scanner results are advisory.",
+                "The centralized source scan was unavailable. Source scanning is advisory for this catalog, so this does not block the PR.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
                 "success",
                 "scan passed",
-                f"All {len(jobs)} source-repository scanner job(s) passed. Catalog validation passed.",
+                "The centralized source scan passed.",
             )
         job_details = ", ".join(jobs)
         return (
             "success",
             "scan findings",
-            "HOL centralized scan reported findings or did not pass: "
-            f"{job_details}. This is advisory and does not block listing.",
+            f"The centralized source scan returned: {job_details}. "
+            "Source scanning is advisory for this catalog, so this does not block the PR.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")
@@ -168,7 +168,7 @@ def missing_scanner_ci_repos(result: dict[str, object]) -> list[str]:
 
 
 def optional_scanner_ci_guidance(repos: list[str]) -> str:
-    """Explain that scanner CI is optional and why maintainers should still add it."""
+    """Recommend source-repository scanner CI without turning it into a listing gate."""
 
     listed = ", ".join(f"`{item}`" for item in repos)
     subject = listed if listed else "the source repository"
@@ -176,17 +176,17 @@ def optional_scanner_ci_guidance(repos: list[str]) -> str:
         "\n\n### Recommended: add scanner CI for security\n"
         f"This listing can merge without it. HOL still scans {subject} independently.\n\n"
         "We **recommend including** `hashgraph-online/ai-plugin-scanner-action` under "
-        "`.github/workflows/` on `push` and `pull_request`. Continuous scanning keeps "
-        "this catalog safer for MCP servers, skills, plugins, and other agent "
-        "extensions people install from HOL.\n\n"
+        "`.github/workflows/` on `push` and `pull_request`. It gives the project "
+        "continuous security checks and improves the HOL Registry trust score shown by "
+        "the trust badge.\n\n"
         "Adding it:\n"
-        "- protects the ecosystem by catching secrets, dangerous hooks, and "
-        "supply-chain issues before they ship;\n"
-        "- keeps the listing at the **full trust score** (without maintainer CI it stays "
-        "eligible, with a 10% trust-score reduction);\n"
+        "- catches secrets, dangerous hooks, supply-chain issues, and other risky changes "
+        "before they ship;\n"
+        "- removes the 10% trust-score reduction applied when maintainer scanner CI is "
+        "missing, so the Registry badge reflects the full trust score;\n"
         "- can surface findings in GitHub code scanning.\n\n"
-        "See [CONTRIBUTING.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) "
-        "and [SCANNER_GUIDE.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md).\n"
+        "See [SCANNER_GUIDE.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md) "
+        "for the recommended workflow."
     )
 
 
@@ -197,50 +197,40 @@ def remediation_comment(
     summary: str,
     run_url: str,
 ) -> str:
-    """Build an idempotent contributor-facing remediation comment."""
+    """Build an idempotent contributor-facing contribution-gate comment."""
 
     author_login = result.get("author_login")
     mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
+
     if conclusion == "success":
-        optional_guidance = ""
         missing = missing_scanner_ci_repos(result)
+        details = ""
+        if check_title in {"scan findings", "scan unavailable"}:
+            details = f"\n\n{summary}"
         if missing:
-            optional_guidance += optional_scanner_ci_guidance(missing)
-        if "scan findings" in check_title:
-            optional_guidance += (
-                "\nHOL's centralized scan reported findings. This does not block listing.\n"
-            )
-        elif "scan unavailable" in check_title:
-            optional_guidance += (
-                "\nHOL's centralized scan could not run. This does not block listing.\n"
-            )
+            details += optional_scanner_ci_guidance(missing)
         return (
             f"{COMMENT_MARKER}\n\n"
-            f"✅ **Contribution check passed.** {mention}, catalog validation succeeded.\n\n"
-            f"### {check_title}\n{summary}{optional_guidance}\n"
+            f"**Contribution check passed.** {mention}, the required catalog checks passed."
+            f"{details}\n\n"
             f"[View the latest sweep]({run_url})."
         )
 
     guidance = (
-        "1. Use the Community Plugins format: "
-        "`- [Name](https://github.com/owner/repo) - description`.\n"
-        "2. Add the entry to the correct section, alphabetically, without duplicates."
+        "Please use the Community Plugins format "
+        "`- [Name](https://github.com/owner/repo) - description`, put the entry in "
+        "the correct section, keep it alphabetical, and avoid duplicates."
     )
 
-    return f"""{COMMENT_MARKER}
-
-{mention} — this pull request needs updates before it can be merged.
-
-### {check_title}
-{summary}
-
-### How to fix it
-{guidance}
-
-See the repository's [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md).
-
-After pushing the changes, this check and comment will update automatically: {run_url}
-"""
+    return (
+        f"{COMMENT_MARKER}\n\n"
+        f"{mention}, the required catalog checks found a change that needs to be fixed before merge.\n\n"
+        f"{summary}\n\n"
+        f"{guidance}\n\n"
+        "Push the correction and this comment will update on the next check. "
+        "[Contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md). "
+        f"[Latest sweep]({run_url})."
+    )
 
 
 def upsert_remediation_comment(
