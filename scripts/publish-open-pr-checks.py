@@ -107,9 +107,9 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
         jobs = scanner_jobs.get(number, [])
         if not jobs:
             return (
-                "success",
-                "scan unavailable",
-                "The centralized source scan was unavailable. Source scanning is advisory for this catalog, so this does not block the PR.",
+                "failure",
+                "source scan unavailable",
+                "The required centralized source scan was unavailable. Rerun the scan before merge.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
@@ -119,10 +119,11 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
             )
         job_details = ", ".join(jobs)
         return (
-            "success",
-            "scan findings",
+            "failure",
+            "source scan failed",
             f"The centralized source scan returned: {job_details}. "
-            "Source scanning is advisory for this catalog, so this does not block the PR.",
+            "A passing scan (score at least 80 with no critical or high findings) is required before merge. "
+            "Review the rule-level findings and rerun the scan.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")
@@ -205,8 +206,6 @@ def remediation_comment(
     if conclusion == "success":
         missing = missing_scanner_ci_repos(result)
         details = ""
-        if check_title in {"scan findings", "scan unavailable"}:
-            details = f"\n\n{summary}"
         if missing:
             details += optional_scanner_ci_guidance(missing)
         return (
@@ -216,15 +215,23 @@ def remediation_comment(
             f"[View the latest sweep]({run_url})."
         )
 
-    guidance = (
-        "Please use the Community Plugins format "
-        "`- [Name](https://github.com/owner/repo) - description`, put the entry in "
-        "the correct section, keep it alphabetical, and avoid duplicates."
-    )
+    if check_title.startswith("source scan"):
+        status = "the required source scan must pass"
+        guidance = (
+            "Scanner CI in the source repository is optional. The centralized scan "
+            "must pass; review its findings and rerun the contribution check."
+        )
+    else:
+        status = "the required catalog checks found a change that needs to be fixed"
+        guidance = (
+            "Please use the Community Plugins format "
+            "`- [Name](https://github.com/owner/repo) - description`, put the entry in "
+            "the correct section, keep it alphabetical, and avoid duplicates."
+        )
 
     return (
         f"{COMMENT_MARKER}\n\n"
-        f"{mention}, the required catalog checks found a change that needs to be fixed before merge.\n\n"
+        f"{mention}, {status} before merge.\n\n"
         f"{summary}\n\n"
         f"{guidance}\n\n"
         "Push the correction and this comment will update on the next check. "
