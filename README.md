@@ -323,6 +323,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [opencode-plugin-peers](https://github.com/jkrandom-sudo/opencode-plugin-peers) - OpenCode plugin for cross-session messaging: independent instances on the same machine discover each other and exchange plain-text messages.
 - [opencode-see-image](https://github.com/alfaoz/opencode-see-image) - OpenCode plugin that gives non-vision models image and screenshot understanding by routing attachments to a vision-capable model.
 - [opencode-skills-collection](https://github.com/FrancoStino/opencode-skills-collection) - OpenCode plugin that bundles 1595+ skills and auto-syncs them locally, loading each on demand via pointer files.
+- [opencode-synced](https://github.com/iHildy/opencode-synced) - OpenCode plugin that syncs global configuration and skills across machines via Git, with optional sessions and secrets for private repositories.
 - [opencode-weave](https://github.com/weave-io/weave) - OpenCode plugin providing multi-agent orchestration with specialized agents, category task dispatch, and background sub-agent execution.
 - [OpenSea Skills](https://github.com/ProjectOpenSea/opensea-skill) - Five Agent Skills for OpenSea data, Seaport trading, ERC20 swaps, wallet signing, and ERC-8257 tool development.
 - [orchflows](https://github.com/DanMcInerney/orchflows) - Use 2 simple skills to build complex, composable workflows for task-specific jobs.
