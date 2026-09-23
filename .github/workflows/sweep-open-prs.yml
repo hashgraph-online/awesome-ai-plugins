@@ -74,7 +74,6 @@ jobs:
     needs: discover
     if: needs.discover.outputs.matrix != '[]'
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
@@ -85,7 +84,7 @@ jobs:
           CONTRIBUTION_URL: https://github.com/${{ matrix.contribution.owner }}/${{ matrix.contribution.repo }}.git
         run: git clone --depth 1 "$CONTRIBUTION_URL" "$RUNNER_TEMP/contributed"
       - name: Run HOL AI Plugin Scanner
-        uses: hashgraph-online/ai-plugin-scanner-action@55616c962cf86368423f7673b2ecdfdbe613d1af # v1.2.515
+        uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
         with:
           plugin_dir: ${{ runner.temp }}/contributed
           mode: scan
@@ -116,10 +115,10 @@ jobs:
             exit 1
           fi
           if [[ "$SCAN_RESULT" != "success" && "$SCAN_RESULT" != "skipped" ]]; then
-            echo "scan findings: one or more advisory source-repository scanner jobs did not pass."
-            exit 0
+            echo "One or more required source-repository scanner jobs did not pass."
+            exit 1
           fi
-          echo "Catalog validation passed. Centralized scanner results are advisory."
+          echo "Catalog validation and required source scans passed."
 
   publish:
     name: Publish per-PR contribution checks

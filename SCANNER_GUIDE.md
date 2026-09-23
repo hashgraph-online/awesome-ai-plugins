@@ -60,6 +60,8 @@ Codex manifest.
 
 **Passing criteria:** normalized score ≥ 80/100, with no critical or high severity findings.
 
+The centralized source scan uses this pass criterion for Awesome AI Plugins listings. A listing needs a passing centralized scan before merge. Scanner CI in the source repository is optional; adding it improves the Registry trust score and removes the 10% reduction applied when maintainer scanner CI is absent.
+
 ### Grok plugin checks
 
 Grok Build plugins should keep their native `.grok-plugin/plugin.json` manifest
@@ -99,7 +101,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - uses: hashgraph-online/ai-plugin-scanner-action@55616c962cf86368423f7673b2ecdfdbe613d1af # v1.2.515
+      - uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
         with:
           plugin_dir: "."
           min_score: 80
@@ -121,7 +123,7 @@ Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner
 
 ### Recommended for Awesome AI Plugins listing
 
-Scanner CI is optional for listing. HOL still scans listed projects independently. We recommend including it so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The required centralized source scan must pass before merge. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
 
 Add the scanner badge to your README:
 
