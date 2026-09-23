@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+from collections import Counter
 import difflib
 import json
 import os
@@ -396,12 +397,35 @@ def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
     )
 
 
-def malformed_community_plugin_lines(diff: str, head_readme: str) -> list[str]:
-    """Return added Community Plugins bullets that do not match the catalog format."""
+def malformed_community_plugin_lines(
+    diff: str,
+    base_readme: str,
+    head_readme: str,
+) -> list[str]:
+    """Return new Community Plugins bullets that do not match the catalog format.
+
+    Exact lines already present in the base Community Plugins section may appear
+    as additions when an existing entry is reordered. They are not new
+    submissions and should not be rejected for using a legacy or
+    repository-local URL format.
+    """
 
     if not diff:
         return []
+    base_lines = base_readme.splitlines()
+    base_community_lines = Counter(
+        line.strip()
+        for number, line in enumerate(base_lines, start=1)
+        if current_readme_section(base_lines, number) == "Community Plugins"
+        and line.strip().startswith("- [")
+    )
     readme_lines = head_readme.splitlines()
+    head_community_lines = Counter(
+        line.strip()
+        for number, line in enumerate(readme_lines, start=1)
+        if current_readme_section(readme_lines, number) == "Community Plugins"
+        and line.strip().startswith("- [")
+    )
     malformed: list[str] = []
     added_line_number = 0
     for line in diff.splitlines():
@@ -414,6 +438,7 @@ def malformed_community_plugin_lines(diff: str, head_readme: str) -> list[str]:
             if (
                 current_readme_section(readme_lines, added_line_number) == "Community Plugins"
                 and content.startswith("- [")
+                and head_community_lines[content] > base_community_lines[content]
                 and README_ENTRY_RE.match(content) is None
             ):
                 malformed.append(content)
@@ -507,7 +532,7 @@ def entries_for_open_pull_request(repository: str, pull_request: OpenPullRequest
             tofile="README.md",
         )
     )
-    malformed = malformed_community_plugin_lines(diff, head_readme)
+    malformed = malformed_community_plugin_lines(diff, base_readme, head_readme)
     if malformed:
         raise ValidationError(
             "Community Plugins entries must use `- [Name](https://github.com/owner/repo) - description`: "
@@ -743,8 +768,9 @@ def main() -> int:
         return 1
 
     diff = git("diff", args.base_ref, "--", "README.md")
+    base_readme = git("show", f"{args.base_ref}:README.md")
     head_readme = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
-    malformed = malformed_community_plugin_lines(diff, head_readme)
+    malformed = malformed_community_plugin_lines(diff, base_readme, head_readme)
     if malformed:
         print("ERROR: malformed Community Plugins entries:", file=sys.stderr)
         for line in malformed:

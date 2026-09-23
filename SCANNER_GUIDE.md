@@ -60,6 +60,8 @@ Codex manifest.
 
 **Passing criteria:** normalized score ≥ 80/100, with no critical or high severity findings.
 
+That 80/100 threshold is the scanner's security pass criterion, not an Awesome AI Plugins listing threshold. Catalog eligibility is separate: centralized scan results are advisory, while adding scanner CI improves the Registry trust score and removes the 10% reduction applied when maintainer scanner CI is absent.
+
 ### Grok plugin checks
 
 Grok Build plugins should keep their native `.grok-plugin/plugin.json` manifest
@@ -99,7 +101,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - uses: hashgraph-online/ai-plugin-scanner-action@55616c962cf86368423f7673b2ecdfdbe613d1af # v1.2.515
+      - uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
         with:
           plugin_dir: "."
           min_score: 80

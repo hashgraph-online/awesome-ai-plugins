@@ -108,8 +108,93 @@ class ValidateContributionTests(unittest.TestCase):
             " ## Community Plugins\n"
             "+- [Broken Plugin](https://example.com/not-github) - not a github repo\n"
         )
-        malformed = MODULE.malformed_community_plugin_lines(diff, head)
+        malformed = MODULE.malformed_community_plugin_lines(diff, "", head)
         self.assertEqual(len(malformed), 1)
+
+    def test_reordered_existing_local_entry_is_not_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = (
+            "## Community Plugins\n"
+            f"{local_entry}\n"
+            "- [Alpha](https://github.com/example/alpha) - first\n"
+        )
+        head = (
+            "## Community Plugins\n"
+            "- [Alpha](https://github.com/example/alpha) - first\n"
+            f"{local_entry}\n"
+        )
+        diff = (
+            "@@ -1,3 +1,3 @@\n"
+            " ## Community Plugins\n"
+            f"-{local_entry}\n"
+            " - [Alpha](https://github.com/example/alpha) - first\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [])
+
+    def test_modified_local_entry_is_still_malformed(self) -> None:
+        base_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        changed_entry = "- [Local Plugin](./plugins/renamed) - bundled plugin"
+        base = f"## Community Plugins\n{base_entry}\n"
+        head = f"## Community Plugins\n{changed_entry}\n"
+        diff = (
+            "@@ -1,2 +1,2 @@\n"
+            " ## Community Plugins\n"
+            f"-{base_entry}\n"
+            f"+{changed_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [changed_entry])
+
+    def test_duplicate_existing_local_entry_is_still_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = f"## Community Plugins\n{local_entry}\n"
+        head = f"## Community Plugins\n{local_entry}\n{local_entry}\n"
+        diff = (
+            "@@ -1,2 +1,3 @@\n"
+            " ## Community Plugins\n"
+            f" {local_entry}\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
+
+    def test_new_local_entry_is_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = "## Community Plugins\n"
+        head = f"## Community Plugins\n{local_entry}\n"
+        diff = (
+            "@@ -1,1 +1,2 @@\n"
+            " ## Community Plugins\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
+
+    def test_local_entry_moved_from_another_section_is_malformed(self) -> None:
+        local_entry = "- [Local Plugin](./plugins/local) - bundled plugin"
+        base = f"## Contents\n{local_entry}\n## Community Plugins\n"
+        head = f"## Contents\n## Community Plugins\n{local_entry}\n"
+        diff = (
+            "@@ -1,3 +1,3 @@\n"
+            " ## Contents\n"
+            f"-{local_entry}\n"
+            " ## Community Plugins\n"
+            f"+{local_entry}\n"
+        )
+
+        malformed = MODULE.malformed_community_plugin_lines(diff, base, head)
+
+        self.assertEqual(malformed, [local_entry])
 
     def test_relocated_entry_is_detected_when_base_url_only_exists_in_contents(self) -> None:
         base = (
