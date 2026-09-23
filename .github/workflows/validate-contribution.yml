@@ -7,6 +7,12 @@ on:
       - "CONTRIBUTING.md"
       - "SCANNER_GUIDE.md"
       - "scripts/validate-contribution.py"
+      - "scripts/backfill-claim-notices.py"
+      - "scripts/post-claim-notice.py"
+      - "scripts/publish-open-pr-checks.py"
+      - "tests/test-post-claim-notice.py"
+      - "tests/test-backfill-claim-notices.py"
+      - "tests/test-publish-open-pr-checks.py"
       - ".github/workflows/validate-contribution.yml"
   workflow_dispatch:
 
@@ -30,6 +36,8 @@ jobs:
           python-version: "3.12"
       - name: Install validator dependencies
         run: python3 -m pip install --disable-pip-version-check --no-input "PyYAML==6.0.2"
+      - name: Test contributor automation messaging
+        run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py
       - name: Validate changed catalog entries
         env:
           BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'origin/main' }}
