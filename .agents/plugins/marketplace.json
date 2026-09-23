@@ -6833,6 +6833,21 @@
       "install_url": "https://raw.githubusercontent.com/cdeust/Cortex/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "DocsMint",
+      "displayName": "DocsMint",
+      "description": "Cloud or self-hosted knowledge workspace with MCP tools for hybrid search, GraphRAG, and document management",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "HiAi-gg",
+      "repo": "docsmint",
+      "url": "https://github.com/HiAi-gg/docsmint",
+      "install_url": "https://raw.githubusercontent.com/HiAi-gg/docsmint/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "edgeone-makers-tools",
       "displayName": "edgeone-makers-tools",
       "description": "Agent skill for EdgeOne Makers, a one-stop deployment platform where developers rapidly deploy full-stack projects, cloud functions, and AI agents and instantly get a live URL, covering the full path from development to launch",
