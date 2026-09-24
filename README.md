@@ -441,7 +441,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 ### Tools & Integrations
 
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
-- [Agent QA](https://github.com/vostride/agent-qa) - Source-available MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile application tests with reusable execution memory.
+- [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
 - [Agent402](https://github.com/MikeyPetrillo/Agent402) - Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key.
 - [AgentCall](https://github.com/pattern-ai-labs/agentcall) - Lets Claude Code, Codex, Cursor, Gemini CLI, and 30+ other agents join Google Meet, Zoom, or Microsoft Teams as a speaking, listening, presenting participant with text-to-speech, live transcripts, screenshare, and an avatar camera feed.
