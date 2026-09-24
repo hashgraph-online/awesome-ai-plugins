@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-09-23",
+  "last_updated": "2026-09-24",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -5945,6 +5945,21 @@
       "repo": "rootly-mcp-server",
       "url": "https://github.com/rootlyhq/rootly-mcp-server",
       "install_url": "https://raw.githubusercontent.com/rootlyhq/rootly-mcp-server/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "RowTrail",
+      "displayName": "RowTrail",
+      "description": "Local CLI and MCP server for agents to explore CSV/Parquet with bounded responses, versioned results, and reusable analysis handoffs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "adam2go",
+      "repo": "rowtrail",
+      "url": "https://github.com/adam2go/rowtrail",
+      "install_url": "https://raw.githubusercontent.com/adam2go/rowtrail/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Salesforce Compound Engineering",
