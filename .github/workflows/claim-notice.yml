@@ -1,0 +1,77 @@
+name: Plugin Claim Notice
+
+on:
+  pull_request_target:
+    types:
+      - closed
+    paths:
+      - "README.md"
+      - "plugins/**"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run one notice or backfill missed notices"
+        required: true
+        default: single
+        type: choice
+        options:
+          - single
+          - backfill
+      pr_number:
+        description: "PR number to post claim notice on"
+        required: false
+        type: string
+      backfill_since:
+        description: "Earliest merged date to include in a backfill (YYYY-MM-DD)"
+        required: false
+        default: "2026-07-04"
+        type: string
+      backfill_max_prs:
+        description: "Maximum merged PRs to process in one backfill"
+        required: false
+        default: "1000"
+        type: string
+
+permissions:
+  pull-requests: write
+  contents: read
+  issues: read
+
+jobs:
+  post-claim-notice:
+    if: >-
+      (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true) ||
+      (github.event_name == 'workflow_dispatch' && inputs.mode == 'single')
+    name: Post claim instructions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Post claim notice
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          VERIFY_MERGED_PR: ${{ github.event_name == 'workflow_dispatch' }}
+          REGISTRY_API: https://hol.org/registry/api/v1
+        run: python3 scripts/post-claim-notice.py
+
+  backfill-claim-notices:
+    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'backfill'
+    name: Backfill claim instructions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Backfill claim notices
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BACKFILL_SINCE: ${{ inputs.backfill_since }}
+          BACKFILL_MAX_PRS: ${{ inputs.backfill_max_prs }}
+          REGISTRY_API: https://hol.org/registry/api/v1
+        run: python3 scripts/backfill-claim-notices.py
