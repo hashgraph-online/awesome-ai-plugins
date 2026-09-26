@@ -270,6 +270,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Jev Studio](https://github.com/utk2103/jev-studio) - One-stop kit for playing with TypeSafe's Jev: MCP tools for Choice/Noul/Score, ready-made prompt libraries, and slash commands for every cookbook.
 - [jev-harness](https://github.com/AntonioCoppe/jev-harness) - Decision harness for TypeSafe Jev (confidence gates, shadow mode, recipes, eval CLI)
 - [jev-preflight](https://github.com/muse0509/jev-preflight) - Claude Code plugin that uses TypeSafe's Jev to assess code-change risk and request at most one additional investigation before a turn completes.
+- [jev-superpowers](https://github.com/AkashPriyadarshii/jev-superpowers) - Cross-platform skills collection that gates brainstorming, planning, execution, debugging, and completion workflows with typed decision checks.
 - [jev-use](https://github.com/shitianfang/jev-use) - Hands the agent steps that need no text output to Jev's judgment model across Claude Code, Codex, and Pi, returning everything it should not decide to the LLM under a typed escalation contract.
 - [Jevbridge](https://github.com/tacticocc/Jevbridge) - OSS ACP/MCP adapter that bridges TypeSafe Jev with any LLM, putting computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode without replacing those hosts.
 - [jevcheck](https://github.com/sathariels/jevcheck) - Model-upgrade contract CLI for TypeSafe Jev (fixture eval, record/compare, CI-friendly exits); `pip install jevcheck`.
