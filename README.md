@@ -815,6 +815,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Related Projects
 
+- [AI Plugins Directory](https://github.com/devilking7x/ai-plugins-directory) - Community-curated directory of AI plugins, agent skills, and MCP servers with live GitHub stats, trending sort, category filters, and side-by-side compare mode.
 - [Awesome DeepSeek Harness Plugins](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) - Community-maintained DSH plugin list and discovery reference.
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
