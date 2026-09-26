@@ -256,6 +256,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [HOTL Plugin](https://github.com/yimwoo/hotl-plugin) - Human-on-the-Loop AI coding workflow plugin for Codex, Claude Code, and Cline with structured planning, review, and verification guardrails.
 - [humanizer-ru](https://github.com/Vladimir-Human/humanizer-ru) - Deterministic offline diagnostics and safe cleanup of chat-interface copy-paste artifacts in Russian text and Markdown, shipped as an Agent Skill, MCP server, CLI, GitHub Action, and browser demo, with no authorship verdicts.
 - [i-hate-editing](https://github.com/ranahaani/i-hate-editing) - Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels).
+- [i-have-adhd](https://github.com/ayghri/i-have-adhd) - Agent skill that reshapes coding assistant output to be ADHD-friendly: action first, numbered steps, suppressed tangents, and one concrete next step.
 - [ictcontact-mcp](https://github.com/ictinnovations/ictcontact-mcp) - MCP server for the ICTContact contact center. Monitor outbound campaigns, with opt-in tools to start and stop them.
 - [ictcrm-mcp](https://github.com/ictinnovations/ictcrm-mcp) - MCP server for the ICTCRM contact database. Read contact groups, with opt-in tools to create contacts and add them to campaigns.
 - [ictdialer-mcp](https://github.com/ictinnovations/ictdialer-mcp) - MCP server for the ICTDialer cloud auto-dialer. Monitor outbound campaigns, with opt-in start and stop controls.
