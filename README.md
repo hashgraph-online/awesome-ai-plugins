@@ -196,6 +196,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [coffee-paladin](https://github.com/pawelkwaczynski/coffee-paladin) - Thermal guard for Apple Silicon: pauses hot jobs before the Mac throttles and gates Claude Code, Codex and Gemini CLI before heavy commands.
 - [Commit Narrator](./plugins/mturac/commit-narrator) - Generate semantic commit message from staged diff, including the _why_.
 - [CommitLore](https://github.com/MongLong0214/commitlore) - Keeps constraints, rejected alternatives, and warnings in Git trailers and serves them back to the agent before it edits a file.
+- [Compact Jev](https://github.com/edoproch/compact-jev) - Claude Code command that uses Jev to remove stale tool calls and results from long conversations while keeping user and assistant text verbatim.
 - [Consensus](https://github.com/seanheiney/consensus) - Sends a hard question to a panel of frontier models (Claude, GPT, Gemini, Grok) that answer independently, critique each other adversarially, and return one answer the panel signed off on with its confidence and unresolved disagreements, via a CLI, MCP server, or skill pack that runs on your existing subscriptions with every panelist in a no-tools clean room.
 - [Contexo](https://github.com/maheedhar132/Contexo) - Portable AI context and cost control across every AI coding harness.
 - [Context Guard](https://github.com/GreenLv/codex-context-guard) - Preserves authoritative requirements and verification evidence across long-running Codex tasks and context compaction.
