@@ -28,11 +28,14 @@ PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 # Candidate manifest paths inside a plugin repo, in priority order. The first
 # template that resolves to an HTTP 200 wins. Some upstream entries (e.g.
 # apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
-# `plugins/<name>/.codex-plugin/` rather than the repo root.
+# `plugins/<name>/.codex-plugin/` rather than the repo root. The Claude Code
+# manifest is probed last on purpose: many repos ship both, and a repo that
+# already resolves a Codex layout must keep its existing classification.
 INSTALL_PATH_CANDIDATES = (
     ".codex-plugin/plugin.json",
     "plugins/{repo}/.codex-plugin/plugin.json",
     ".codex/plugin.json",
+    ".claude-plugin/plugin.json",
 )
 KIMI_MANIFEST_PATH_CANDIDATES = (
     "kimi.plugin.json",
@@ -44,6 +47,13 @@ INSTALL_URL_PROBE_TIMEOUT = 6.0
 DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
 GROK_PLATFORM = "grok"
 KIMI_PLATFORM = "kimi"
+
+# `## Community Plugins` subsections such as `Development & Workflow` mix
+# platforms, so the heading cannot classify their entries. Derive the platform
+# from whichever manifest the probe actually resolved instead.
+MANIFEST_PLATFORMS = {
+    ".claude-plugin/plugin.json": "claude-code",
+}
 
 # Native runtime manifests should not inherit the Codex manifest fallback.
 PLATFORM_MANIFEST_PATHS = {
@@ -387,6 +397,11 @@ def merge_readme_additions(
         probed = probe_install_url(plugin["owner"], plugin["repo"])
         if probed:
             plugin["install_url"] = probed
+            for manifest_path, platform in MANIFEST_PLATFORMS.items():
+                if probed.endswith(manifest_path):
+                    plugin["platform"] = platform
+                    plugin["ecosystems"] = [platform]
+                    break
         else:
             # Probe returned None (no candidate matched, or network down).
             # Keep the default install_url; flag for the operator so a broken

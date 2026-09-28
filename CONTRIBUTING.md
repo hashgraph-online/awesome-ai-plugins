@@ -50,26 +50,20 @@ The registry profile includes a standard **dofollow backlink** to the extension'
 Before submitting:
 
 ```bash
-# Run the HOL Plugin Scanner (required for all submissions)
+# Optional local preflight
 pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-**Scanner Requirements (Mandatory for This List):**
-
-All plugins submitted to **Awesome AI Plugins** must pass the HOL AI Plugin Scanner:
-
-| Requirement | Threshold |
-|-------------|-----------|
-| **Score** | ≥ 80 / 142 |
-| **Severity** | No critical or high findings |
-| **CI** | Scanner must run in your repo's GitHub Actions |
+Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must score at least 80 with no critical or high findings before merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
-### Why scanner CI is required
+### Why we recommend scanner CI
 
-AI extensions can register hooks, execute commands, read environment variables, and influence an agent's behavior. A compromised extension can therefore affect users outside the original repository. Scanner CI gives every community listing the same reproducible baseline for identifying:
+AI extensions — MCP servers, skills, plugins, and related agent tools — can register hooks, execute commands, read environment variables, and change an agent's behavior. A compromised extension can therefore affect users outside the original repository. Maintainer-owned scanner CI is the strongest way to keep those packages continuously checked, and we recommend adding it even though listing does not require it.
+
+Scanner CI gives every community listing the same reproducible baseline for identifying:
 
 - committed secrets and unsafe credential handling;
 - dangerous hooks or command execution;
@@ -77,7 +71,7 @@ AI extensions can register hooks, execute commands, read environment variables, 
 - unpinned third-party actions and dependencies;
 - malformed or misleading extension metadata.
 
-A passing scan is not a guarantee that an extension is harmless. It is reviewable evidence that every listed project cleared the same minimum checks, which helps maintainers catch common supply-chain risks before users install the extension.
+A passing scan is not a guarantee that an extension is harmless. It is reviewable evidence that helps maintainers catch common supply-chain risks. HOL still scans listed projects independently.
 
 ### What the scanner workflow can access
 
@@ -94,17 +88,20 @@ The example in [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md) pins GitHub Actions to i
 
 Pull requests that add a Community Plugin entry, including the DeepSeek Harness
 Plugins subsection, are checked automatically by
-`.github/workflows/validate-contribution.yml`. The check confirms that the
-linked public repository runs `hashgraph-online/ai-plugin-scanner-action` from
-GitHub Actions, then scans the contributed repository with the same score and
-severity thresholds above.
+`.github/workflows/validate-contribution.yml`. Catalog format, section, and
+discovery checks are required. Scanner CI in the source repository is optional.
+HOL clones and scans each valid new source repository. The centralized scan
+must pass before the listing can merge; the source repository does not need
+its own scanner workflow.
 
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
-PR's exact README base/head revisions without executing fork code, reports
-missing scanner CI, runs the scanner for entries that pass the CI check, and
-publishes the result on each PR head. Failed checks update one remediation
-comment on the PR, tag the contributor, and link the scanner setup guidance.
+PR's exact README base/head revisions without executing fork code, queues an
+required source scan, and publishes the result on each PR head. When the source
+repository has no scanner CI, the bot recommends the action and explains the
+trust-score benefit. Missing scanner CI does not replace or waive the required
+centralized scan.
+Reruns update the existing bot comment and check in place.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
