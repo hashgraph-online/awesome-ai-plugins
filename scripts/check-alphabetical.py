@@ -15,7 +15,7 @@ def extract_sections(filepath: str) -> list[tuple[str, str, list[str]]]:
 
     Returns list of (section_heading, context, items) where items are the display text.
     """
-    content = Path(filepath).read_text()
+    content = Path(filepath).read_text(encoding="utf-8")
     lines = content.split("\n")
 
     sections = []

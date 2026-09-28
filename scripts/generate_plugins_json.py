@@ -28,16 +28,54 @@ PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 # Candidate manifest paths inside a plugin repo, in priority order. The first
 # template that resolves to an HTTP 200 wins. Some upstream entries (e.g.
 # apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
-# `plugins/<name>/.codex-plugin/` rather than the repo root.
+# `plugins/<name>/.codex-plugin/` rather than the repo root. The Claude Code
+# manifest is probed last on purpose: many repos ship both, and a repo that
+# already resolves a Codex layout must keep its existing classification.
 INSTALL_PATH_CANDIDATES = (
     ".codex-plugin/plugin.json",
     "plugins/{repo}/.codex-plugin/plugin.json",
     ".codex/plugin.json",
+    ".claude-plugin/plugin.json",
 )
+KIMI_MANIFEST_PATH_CANDIDATES = (
+    "kimi.plugin.json",
+    ".kimi-plugin/plugin.json",
+    "plugin.json",
+)
+GROK_MANIFEST_PATH_CANDIDATES = (".grok-plugin/plugin.json",)
 INSTALL_URL_PROBE_TIMEOUT = 6.0
+DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
+GROK_PLATFORM = "grok"
+KIMI_PLATFORM = "kimi"
+
+# `## Community Plugins` subsections such as `Development & Workflow` mix
+# platforms, so the heading cannot classify their entries. Derive the platform
+# from whichever manifest the probe actually resolved instead.
+MANIFEST_PLATFORMS = {
+    ".claude-plugin/plugin.json": "claude-code",
+}
+
+# Native runtime manifests should not inherit the Codex manifest fallback.
+PLATFORM_MANIFEST_PATHS = {
+    GROK_PLATFORM: ".grok-plugin/plugin.json",
+    KIMI_PLATFORM: "kimi.plugin.json",
+}
+
+# Community entries live under one README section. Keep the platform attached
+# to each subsection so native Grok, Kimi, and DeepSeek Harness entries are not
+# misclassified as Codex plugins merely because catalogs share one section.
+COMMUNITY_CATEGORY_PLATFORMS = {
+    "Grok Plugins": GROK_PLATFORM,
+    "Kimi Plugins": KIMI_PLATFORM,
+    "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
+}
 
 
-def probe_install_url(owner: str, repo: str) -> str | None:
+def probe_install_url(
+    owner: str,
+    repo: str,
+    candidates: tuple[str, ...] = INSTALL_PATH_CANDIDATES,
+) -> str | None:
     """Return the first GitHub raw URL that resolves for a plugin manifest.
 
     Used for README-only additions so non-root manifest layouts don't end up
@@ -45,7 +83,7 @@ def probe_install_url(owner: str, repo: str) -> str | None:
     on network errors or when no candidate exists; the caller decides whether
     to fall back to a default path or omit the field.
     """
-    for template in INSTALL_PATH_CANDIDATES:
+    for template in candidates:
         path = template.format(repo=repo)
         url = (
             f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}"
@@ -99,7 +137,7 @@ def normalize_plugin(plugin: dict) -> dict:
     # Determine platform from upstream source field or fall back to codex
     upstream_source = str(plugin.get("source", "")).strip()
     if upstream_source == "awesome-grok-plugins":
-        entry.setdefault("platform", "grok")
+        entry.setdefault("platform", GROK_PLATFORM)
     else:
         entry.setdefault("platform", "codex")
 
@@ -192,6 +230,9 @@ PLATFORM_SECTIONS = {
     "OpenCode Plugins": "opencode",
     "Google Gemini CLI Plugins": "gemini-cli",
     "MCP Servers (Cross-Platform)": "mcp",
+    "Grok Plugins": GROK_PLATFORM,
+    "Kimi Plugins": KIMI_PLATFORM,
+    "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
     # Current README structure: a single `## Community Plugins` section with
     # `###` subcategories. Treat its entries as codex marketplace plugins.
     "Community Plugins": "codex",
@@ -210,6 +251,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
     plugins: list[dict] = []
     current_platform: str | None = None
+    current_section = ""
     current_category = ""
 
     h2_re = re.compile(r"^##\s+(.+?)\s*$")
@@ -219,13 +261,19 @@ def parse_plugins(readme_path: Path) -> list[dict]:
     for line in content.split("\n"):
         h2 = h2_re.match(line)
         if h2:
-            current_platform = PLATFORM_SECTIONS.get(h2.group(1).strip())
+            current_section = h2.group(1).strip()
+            current_platform = PLATFORM_SECTIONS.get(current_section)
             current_category = ""
             continue
 
         h3 = h3_re.match(line.strip())
         if h3:
-            current_category = h3.group(1)
+            current_category = h3.group(1).strip()
+            if current_section == "Community Plugins":
+                current_platform = COMMUNITY_CATEGORY_PLATFORMS.get(
+                    current_category,
+                    PLATFORM_SECTIONS["Community Plugins"],
+                )
             continue
 
         item = item_re.match(line.strip())
@@ -246,7 +294,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         owner = owner_match.group(1)
         repo = owner_match.group(2).removesuffix(".git")
 
-        plugins.append({
+        plugin = {
             "name": name,
             "url": url,
             "owner": owner,
@@ -255,11 +303,19 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             "category": current_category,
             "platform": current_platform,
             "source": "awesome-ai-plugins",
-            "install_url": (
+        }
+        manifest_path = PLATFORM_MANIFEST_PATHS.get(current_platform)
+        if manifest_path:
+            plugin["install_url"] = (
+                "https://raw.githubusercontent.com/"
+                f"{owner}/{repo}/HEAD/{manifest_path}"
+            )
+        elif current_platform != DEEPSEEK_HARNESS_PLATFORM:
+            plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
-            ),
-        })
+            )
+        plugins.append(plugin)
 
     return sort_plugins(plugins)
 
@@ -280,13 +336,72 @@ def merge_readme_additions(
     additions: list[dict] = []
     for plugin in parse_plugins(readme_path):
         key = normalize_repo_key(plugin)
-        if not key or key in seen:
+        if not key:
             continue
+
+        if key in seen:
+            # A repository can support multiple runtimes. Preserve a native
+            # runtime contribution when the same repository already exists in
+            # an upstream or earlier README catalog entry.
+            if plugin.get("platform") in {
+                DEEPSEEK_HARNESS_PLATFORM,
+                GROK_PLATFORM,
+                KIMI_PLATFORM,
+            }:
+                platform = plugin["platform"]
+                for existing in (*upstream, *additions):
+                    if normalize_repo_key(existing) != key:
+                        continue
+                    ecosystems = existing.get("ecosystems")
+                    if not isinstance(ecosystems, list) or not ecosystems:
+                        ecosystems = [existing.get("platform", "codex")]
+                        existing["ecosystems"] = ecosystems
+                    if platform not in ecosystems:
+                        ecosystems.append(platform)
+                    break
+            continue
+
         seen.add(key)
+
+        if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+            # Native runtimes resolve repository sources through their own
+            # installers/manifests; never probe or substitute a Codex path.
+            plugin.pop("install_url", None)
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") == KIMI_PLATFORM:
+            probed = probe_install_url(
+                plugin["owner"],
+                plugin["repo"],
+                KIMI_MANIFEST_PATH_CANDIDATES,
+            )
+            if probed:
+                plugin["install_url"] = probed
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") == GROK_PLATFORM:
+            probed = probe_install_url(
+                plugin["owner"],
+                plugin["repo"],
+                GROK_MANIFEST_PATH_CANDIDATES,
+            )
+            if probed:
+                plugin["install_url"] = probed
+            else:
+                plugin.pop("install_url", None)
+            additions.append(normalize_plugin(plugin))
+            continue
 
         probed = probe_install_url(plugin["owner"], plugin["repo"])
         if probed:
             plugin["install_url"] = probed
+            for manifest_path, platform in MANIFEST_PLATFORMS.items():
+                if probed.endswith(manifest_path):
+                    plugin["platform"] = platform
+                    plugin["ecosystems"] = [platform]
+                    break
         else:
             # Probe returned None (no candidate matched, or network down).
             # Keep the default install_url; flag for the operator so a broken
@@ -326,7 +441,10 @@ def generate_marketplace_json(plugins: list[dict]) -> dict:
     return {
         "schema_version": "1.0",
         "source": "awesome-ai-plugins",
-        "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        # Keep regeneration deterministic within a day. A wall-clock
+        # timestamp would make the sync workflow commit on every run and
+        # retrigger itself indefinitely.
+        "last_updated": datetime.date.today().isoformat(),
         "plugins": plugins,
     }
 
@@ -354,8 +472,8 @@ def main():
                 for existing in plugins:
                     if normalize_repo_key(existing) == key:
                         ecos = existing.get("ecosystems", [])
-                        if "grok" not in ecos:
-                            ecos.append("grok")
+                        if GROK_PLATFORM not in ecos:
+                            ecos.append(GROK_PLATFORM)
                             existing["ecosystems"] = ecos
                         break
             else:
