@@ -6037,6 +6037,21 @@
       "install_url": "https://raw.githubusercontent.com/using-system/otelyssey/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "OutcomeLoop",
+      "displayName": "OutcomeLoop",
+      "description": "Outcome-verified Codex runner and plugin that resumes one GPT-5.6 session until an external verifier passes, then seals the evidence in an Ed25519-signed receipt",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tinyopsstudio",
+      "repo": "outcomeloop-build-week",
+      "url": "https://github.com/tinyopsstudio/outcomeloop-build-week",
+      "install_url": "https://raw.githubusercontent.com/tinyopsstudio/outcomeloop-build-week/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "PageSpeed Optimizer",
       "displayName": "PageSpeed Optimizer",
       "description": "Optimizes web applications for 100/100 PageSpeed Insights, Core Web Vitals, and Generative Engine Optimization (GEO)",
