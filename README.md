@@ -457,6 +457,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 
 ### Tools & Integrations
 
+- [affine-mcp-server](https://github.com/DAWNCR0W/affine-mcp-server) - MCP server exposing AFFiNE workspaces, documents, and databases to AI clients over stdio or HTTP.
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
