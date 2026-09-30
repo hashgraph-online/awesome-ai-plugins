@@ -689,6 +689,7 @@ submitting a repository.
 - [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) - Gives text-only DeepSeek Harness agents image understanding through a built-in no-key vision chain plus fourteen tools for Q&A, grounding, OCR, crop, screenshots and pixel diff.
 - [Engramory](https://github.com/tinqiao-oss/engramory) - Curated, file-based long-term memory for DSH agents — plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`.
 - [humanizer-ru](https://github.com/ilyautov/humanizer-ru) - Text-only `dsh.bundle` that mounts the humanizer-ru Agent Skill into DeepSeek Harness: rewrites Russian text to remove 64 markers of AI generation, with a corpus-calibrated scanner and audit mode; install with `dsh plugin --profile web add humanizer-ru` (npm) or `github:ilyautov/humanizer-ru`.
+- [Vibe-Mathematics](https://github.com/ChongCyrus/Vibe-Mathematics) - Plugin bundle installing four multi-agent math problem-solving and cross-verification agent presets into DeepSeek Harness.
 
 ### ZCode Plugins & Localization
 
