@@ -401,6 +401,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Simple Man](https://github.com/Maksim-Burtsev/simple-man) - High-compression communication mode for Codex agents that removes filler while preserving search, validation, and implementation effort.
 - [site-risk-check](https://github.com/kobimantzur/agent-skills) - Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters — trackers firing before consent, missing policies, and machine-checkable WCAG gaps — mapped to the jurisdictions the site actually sells to.
 - [skill-sync-publisher](https://github.com/liuyewang/skill-sync-publisher) - Safely synchronize this Codex skill across public agent-skill registries.
+- [skilled-agent-harness_spec-driven-loops](https://github.com/MichelKerkmeester/skilled-agent-harness_spec-driven-loops) - Skill framework that adds spec-driven documentation folders, session continuity, and routed agents and skills to AI coding assistants.
 - [skillsaw](https://github.com/stbenjam/skillsaw) - A configurable linter for agent skills, plugins, and AI coding assistant context.
 - [Skillstore](https://github.com/aiskillstore/marketplace) - Security-audited Agent Skills marketplace with one-command installation for Claude Code and Codex via the skillstore CLI.
 - [SlopBar](https://github.com/thelioo/slopbar) - Windows taskbar widget that shows Claude Code and Codex plan usage, limit resets and alerts, and switches accounts before one runs out.
