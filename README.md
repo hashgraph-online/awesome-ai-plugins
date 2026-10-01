@@ -160,6 +160,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Bring Your AI Migration Auditor](https://github.com/unitedideas/bringyour-mcp) - Read-only Codex plugin for auditing Claude Code to Codex migrations before Codex edits code. Checks AGENTS.md/CLAUDE.md scope, hooks, MCP config, skills, secret references, and validation notes.
 - [Brooks Lint](https://github.com/hyhmrright/brooks-lint) - AI code reviews grounded in six classic engineering books — decay risk diagnostics with book citations, severity labels, and four analysis modes (PR review, architecture audit, tech debt, test quality).
 - [Browser Harness](https://github.com/browser-use/browser-harness) - MCP server and agent skill that connect an AI agent to a real browser through one editable CDP WebSocket.
+- [browser-mcp](https://github.com/Agent360dk/browser-mcp) - MCP server and Chrome extension that gives any MCP client 40 tools in the user's own signed-in Chrome, and pauses to ask the user for passwords and 2FA codes instead of guessing.
 - [bury-bench](https://github.com/Onur45500/bury-bench) - Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard.
 - [Casefile](https://github.com/x4cc3/casefile) - Persistent security case tracking for bug bounties, CTFs, and security audits.
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
