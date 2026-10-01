@@ -123,6 +123,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [agent-kit](https://github.com/agent-kit-startup/agent-kit) - Extension pack of slash commands, skills, rules, and hooks adding plan-driven, confirmation-gated coding and staging-to-prod git workflows to Cursor and Claude Code.
 - [agent-talk](https://github.com/xhluca/agent-talk) - Skills-based plugin built on the retalk CLI that gives coding agents end-to-end encrypted messaging with other agents, including agents run by other people, across Claude Code, Codex, Antigravity, pi, opencode, and GitHub Copilot CLI.
 - [AgentBridge](https://github.com/raysonmeng/agent-bridge) - Local bidirectional bridge that keeps Claude Code and Codex live as peers in one session, with mid-turn injection and quota-window handoff.
+- [agentic-readiness-assessment](https://github.com/exadel-inc/agentic-readiness-assessment) - Agent skill that audits a repository for AI coding agent readiness and produces an evidence-based scorecard with prioritized fixes.
 - [Agentic Ship](https://github.com/moasq/agentic-ship) - Cross-host product-development toolkit for Claude Code, Codex, Cursor, Hermes, and OpenClaw with shared rules, specialist roles, service connections, and machine-checked UI, backend, security, and launch gates.
 - [Agentizer](https://github.com/Humiris/wwa-transform) - Turn any website into an AI-powered agentfront with split-pane
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory that compounds between sessions.
