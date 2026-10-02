@@ -41,7 +41,7 @@ class ClaimNoticeTests(unittest.TestCase):
         body = MODULE.build_comment_body(
             "author", repositories=(), pending_repositories={"owner/pending"}
         )
-        self.assertIn("ready to claim", body)
+        self.assertIn("Claim your plugin", body)
         self.assertIn("claim=owner%2Fpending", body)
         self.assertIn("Verify ownership of `owner/pending`", body)
         self.assertNotIn("Still syncing", body)
@@ -173,13 +173,14 @@ class ClaimNoticeTests(unittest.TestCase):
         self.assertTrue(all(q["utm_campaign"] == ["plugin_claim"] for q in queries))
         self.assertIn("Continue with GitHub", body)
         self.assertNotIn("read:org", body)
-        self.assertNotIn("30 seconds", body)
+        self.assertIn("30 seconds", body)
+        self.assertIn("🎉", body)
 
     def test_empty_repository_set_retains_a_usable_dashboard_link(self):
         body = MODULE.build_comment_body("author")
-        self.assertIn("[Open the plugin dashboard]", body)
+        self.assertIn("[Open your plugin dashboard]", body)
         self.assertIn("already verified", body)
-        self.assertNotIn("ready to claim", body)
+        self.assertNotIn("Claim your plugin", body)
         self.assertNotIn("?claim=", body)
 
 
