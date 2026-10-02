@@ -102,26 +102,36 @@ def build_comment_body(author: str, repositories=(), pending_repositories=()) ->
     claimable = sorted(set(repositories) | set(pending_repositories))
     if not claimable:
         return f"""<!-- hol-claim-notice -->
-Hey @{author}, ownership of this contribution is already verified.
+🎉 Congrats @{author}, your plugin is live in the [HOL Registry](https://hol.org/registry/plugins) — and ownership is already verified!
 
-[Open the plugin dashboard](https://hol.org/guard/plugins)
+[Open your plugin dashboard](https://hol.org/guard/plugins)
 
-The listing shows its owner-verified badge, trust score, installs, and engagement."""
+The listing shows its ✅ owner-verified badge, trust score, installs, and engagement."""
 
     claim_links = "\n".join(
         f"- [Verify ownership of `{repo}`]({claim_link(repo)})" for repo in claimable
     )
 
     return f"""<!-- hol-claim-notice -->
-Hey @{author}, your plugin is merged into the HOL catalog and ready to claim.
+🎉 Congrats @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!
 
 ## Claim your plugin
 
+As the author, you can verify ownership to unlock:
+
+- **Owner-verified badge** on your plugin's registry listing
+- **Trust score** visibility and install analytics for your plugin
+- **Dashboard access** at [hol.org/guard/plugins](https://hol.org/guard/plugins) to track installs, trust, and engagement
+
+### How to claim
+
 {claim_links}
 
-Open the link and choose **"Continue with GitHub"**. Use the GitHub account that maintains the repository. HOL requests only `read:user` and `user:email`. It does not request write access to the repository.
+Open your link and choose **"Continue with GitHub"**, using the GitHub account that maintains the repository. HOL requests only `read:user` and `user:email` — it does not request write access to your repositories.
 
-After verification, the listing gets an owner-verified badge, and the plugin dashboard shows its trust score, installs, and engagement."""
+The whole process takes under 30 seconds, and your listing gets the ✅ owner-verified badge.
+
+If you have any questions, feel free to ask here or reach out at [support@hol.org](mailto:support@hol.org)."""
 
 
 MARKER = "<!-- hol-claim-notice -->"
