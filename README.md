@@ -597,6 +597,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [opencode-cmd-provider](https://github.com/rashidrazak/opencode-cmd-provider) - OpenCode plugin that registers Command Code as a provider so you can run its models and plans inside OpenCode, with a sidebar showing tier, allowances, and deal rates.
 - [opencode-stay-awake](https://github.com/AuroraAeon/opencode-stay-awake) - OpenCode plugin that holds a system sleep inhibitor while a session is running, using caffeinate on macOS and systemd-inhibit on Linux, and releases it as soon as the work finishes.
 - [opencode-visual-cache](https://github.com/Hotakus/opencode-visual-cache) - OpenCode TUI plugin that displays real-time token cache hit rate, token usage, cost savings, and provider balance in a sidebar.
+- [opencode-visualiser](https://github.com/psinetron/opencode-visualiser) - OpenCode plugin that renders live agent sessions as an animated pixel-art office with per-agent characters.
 - [OpenProject Codex](https://github.com/varaprasadreddy9676/openproject-codex-plugin) - OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.
 - [Ophis](https://github.com/ophis-fi/skills) - Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
