@@ -217,6 +217,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Demo GIF](https://github.com/conorbronsdon/demo-gif-skill) - Agent Skill that scripts, renders, optimizes, and embeds reproducible demo GIFs for CLI, TUI, web, and library projects using VHS or Playwright plus ffmpeg.
 - [Deps Doctor](./plugins/mturac/deps-doctor) - Multi-ecosystem dependency audit (npm, pip, cargo, go) in one report.
 - [Designer Skill](https://github.com/PyModel/designer-skill) - Plug-and-play MCP that gives your coding agent UI superpowers: design references, intent routing and a static anti-slop gate, no API key.
+- [Deskbar](https://github.com/0NE-C0DEMAN/deskbar) - Claude Code mod that adds a row of widgets above the prompt: context usage, Gmail, calendar, tasks across sessions, notes with reminders, a music deck, and a billable-hours timer.
 - [Dev Skills](https://github.com/Jason-chen-coder/dev-skills) - Team workflow skills for specs, plans, TDD, debugging, verification, review, branch finishing, and design context.
 - [dev-harness-kit](https://github.com/sh-ai-x/dev-harness-kit) - Enforced development workflow skills for Codex and Claude Code covering planning, TDD, debugging, review, security, CI, and release.
 - [Development Skills](https://github.com/reidemeister94/development-skills) - Three-tier triage (PASS_THROUGH / LIGHT / FULL 4-phase) development workflow for Codex and Claude Code with language auto-detection (Python, Java, TypeScript, Swift, frontend) and a staff-reviewer subagent for fresh-eyes review on every change.
