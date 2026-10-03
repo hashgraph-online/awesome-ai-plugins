@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-02",
+  "last_updated": "2026-10-03",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -393,6 +393,21 @@
       "repo": "casefile",
       "url": "https://github.com/x4cc3/casefile",
       "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ChatGPT Agent",
+      "displayName": "ChatGPT Agent",
+      "description": "Use ChatGPT as a reviewer, advisor, editor, or implementer in Codex, with ZIP packets by default and an opt-in MCP bridge.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TohmaN233",
+      "repo": "chatgpt-review-agent-skill",
+      "url": "https://github.com/TohmaN233/chatgpt-review-agent-skill",
+      "install_url": "https://raw.githubusercontent.com/TohmaN233/chatgpt-review-agent-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Claude Code Codex Plugin",
@@ -1595,6 +1610,21 @@
       "install_url": "https://raw.githubusercontent.com/DitriXNew/rekall/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "RepoPilot",
+      "displayName": "RepoPilot",
+      "description": "Snapshots each Codex session and stops the agent when it weakened tests, suppressions, or CI gates, once per signal; local and deterministic.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MykytaStel",
+      "repo": "repopilot",
+      "url": "https://github.com/MykytaStel/repopilot",
+      "install_url": "https://raw.githubusercontent.com/MykytaStel/repopilot/HEAD/integrations/claude-code/repopilot/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Reviewable HTML Workbench",
       "displayName": "Reviewable HTML Workbench",
       "description": "Generate reviewable HTML documents, serve previews, collect inline review comments, and feed review outcomes back into agent workflows.",
@@ -2300,6 +2330,21 @@
       "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Anime Reaction GIF",
+      "displayName": "Anime Reaction GIF",
+      "description": "Create original anime reaction stickers with image-generated pose sheets, expressive timing, and looping GIF and MP4 exports.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "LIghtJUNction",
+      "repo": "anime-reaction-gif",
+      "url": "https://github.com/LIghtJUNction/anime-reaction-gif",
+      "install_url": "https://raw.githubusercontent.com/LIghtJUNction/anime-reaction-gif/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Antigravity 2.0",
       "displayName": "Antigravity 2.0",
       "description": "Local Codex bridge for Antigravity desktop with setup checks, model limit summaries, DevTools UI automation, and safe project/chat handoff.",
@@ -2508,6 +2553,21 @@
       "repo": "codex-be-serious",
       "url": "https://github.com/lulucatdev/codex-be-serious",
       "install_url": "https://raw.githubusercontent.com/lulucatdev/codex-be-serious/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Discord Bridge",
+      "displayName": "Codex Discord Bridge",
+      "description": "Control Codex CLI from Discord with a Rust serenity bridge that streams agent output live and turns approval requests into buttons.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "yaffalhakim1",
+      "repo": "codex-discord-bridge",
+      "url": "https://github.com/yaffalhakim1/codex-discord-bridge",
+      "install_url": "https://raw.githubusercontent.com/yaffalhakim1/codex-discord-bridge/HEAD/codex-packages/codex-discord-bridge/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex Mem",
@@ -3067,6 +3127,21 @@
       "install_url": "https://raw.githubusercontent.com/mbanderas/costguard/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Magic Hour",
+      "displayName": "Magic Hour",
+      "description": "Create and finish AI images and videos through Magic Hour's MCP or API with reusable media workflows, output review, and account-credit requirements.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "magichourhq",
+      "repo": "skills",
+      "url": "https://github.com/magichourhq/skills",
+      "install_url": "https://raw.githubusercontent.com/magichourhq/skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "MATLAB Simulink Tools",
       "displayName": "MATLAB Simulink Tools",
       "description": "Connects Codex to MATLAB and Simulink through a local MCP server for model inspection, script execution, and engineering workflow automation.",
@@ -3217,6 +3292,21 @@
       "install_url": "https://raw.githubusercontent.com/papersflow-ai/papersflow-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "PlaceCall",
+      "displayName": "PlaceCall",
+      "description": "Places real outbound phone calls to US businesses (bookings, inquiries, quotes) through the PlaceCall API and returns the outcome and transcript.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "voygr-tech",
+      "repo": "placecall",
+      "url": "https://github.com/voygr-tech/placecall",
+      "install_url": "https://raw.githubusercontent.com/voygr-tech/placecall/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "plori",
       "displayName": "plori",
       "description": "Create and drive plori AI agents in persistent cloud environments over remote MCP, with OAuth auto-discovery and a bundled Agent Skill.",
@@ -3230,6 +3320,21 @@
       "repo": "codex-plugin",
       "url": "https://github.com/plori-ai/codex-plugin",
       "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "PriceWin",
+      "displayName": "PriceWin",
+      "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, in USD, through the hosted PriceWin MCP server with a search skill.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "PriceDotWin",
+      "repo": "pricewin-agent-plugin",
+      "url": "https://github.com/PriceDotWin/pricewin-agent-plugin",
+      "install_url": "https://raw.githubusercontent.com/PriceDotWin/pricewin-agent-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "prompt-to-asset",
@@ -3320,6 +3425,21 @@
       "repo": "codex-remotion-plugin",
       "url": "https://github.com/tim-osterhus/codex-remotion-plugin",
       "install_url": "https://raw.githubusercontent.com/tim-osterhus/codex-remotion-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Resume Tailor",
+      "displayName": "Resume Tailor",
+      "description": "Tailor resumes and application text to job descriptions, or create candidate profiles from supplied career evidence.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "olegvg",
+      "repo": "resume-tailor-plugin",
+      "url": "https://github.com/olegvg/resume-tailor-plugin",
+      "install_url": "https://raw.githubusercontent.com/olegvg/resume-tailor-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "ru-text",
@@ -4237,6 +4357,21 @@
       "install_url": "https://raw.githubusercontent.com/Onur45500/bury-bench/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Camouflage",
+      "displayName": "Camouflage",
+      "description": "Terminal UI for coding-agent harnesses that turns NDJSON events (Node SDK included) into a Claude Code-style inline transcript with pickers, forms, and permission prompts, using no CPU while idle",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sinameraji",
+      "repo": "camouflage",
+      "url": "https://github.com/sinameraji/camouflage",
+      "install_url": "https://raw.githubusercontent.com/sinameraji/camouflage/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "chat-history",
       "displayName": "chat-history",
       "description": "Claude Code/Codex/Cursor history search + export",
@@ -4597,6 +4732,21 @@
       "install_url": "https://raw.githubusercontent.com/drobins25/craft/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "crews",
+      "displayName": "crews",
+      "description": "Claude Code plugin that plans subagents before they run: each role gets a fixed model and effort, roles run in waves with blind checks, and a hook blocks subagents that were not planned",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "mdalexandre",
+      "repo": "crews",
+      "url": "https://github.com/mdalexandre/crews",
+      "install_url": "https://raw.githubusercontent.com/mdalexandre/crews/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "DataMagic",
       "displayName": "DataMagic",
       "description": "A skill that teaches coding agents to plan and render narrated animated data videos from tabular data using DVSpec",
@@ -4835,6 +4985,21 @@
       "repo": "ga4-gsc-clarity-mcp-server",
       "url": "https://github.com/rakoo04/ga4-gsc-clarity-mcp-server",
       "install_url": "https://raw.githubusercontent.com/rakoo04/ga4-gsc-clarity-mcp-server/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Game Development Studio",
+      "displayName": "Game Development Studio",
+      "description": "CLI, skills, and MCP server for game asset production, vendoring, visual debugging, and performance analysis",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "theisegoria",
+      "repo": "game-development-studio",
+      "url": "https://github.com/theisegoria/game-development-studio",
+      "install_url": "https://raw.githubusercontent.com/theisegoria/game-development-studio/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Gangsta Agents",
@@ -6712,6 +6877,21 @@
       "install_url": "https://raw.githubusercontent.com/kobimantzur/agent-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "skills",
+      "displayName": "skills",
+      "description": "Agent skills against the debt coding agents leave behind: unsettled plans, untested code, and claims nobody checked",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "pwguler",
+      "repo": "skills",
+      "url": "https://github.com/pwguler/skills",
+      "install_url": "https://raw.githubusercontent.com/pwguler/skills/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "skillsaw",
       "displayName": "skillsaw",
       "description": "A configurable linter for agent skills, plugins, and AI coding assistant context",
@@ -7838,6 +8018,21 @@
       "install_url": "https://raw.githubusercontent.com/citrolabs/ego-lite/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Ethora",
+      "displayName": "Ethora",
+      "description": "MCP server for the Ethora chat and messaging platform: create and manage apps, chat rooms and users, broadcast messages, and deploy AI agents and RAG chatbots",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dappros",
+      "repo": "ethora-mcp-server",
+      "url": "https://github.com/dappros/ethora-mcp-server",
+      "install_url": "https://raw.githubusercontent.com/dappros/ethora-mcp-server/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "flacli",
       "displayName": "flacli",
       "description": "CLI, MCP servers and Claude Code plugin that take named albums or a playlist (TIDAL, Deezer, YouTube Music, export files), match them against the local library via MusicBrainz, fetch the missing tracks through the user's own Nicotine+ (Soulseek) client, then file, tag and tidy the library; successor to claude-music",
@@ -7926,6 +8121,21 @@
       "repo": "grabbit-mcp",
       "url": "https://github.com/BrainGridAI/grabbit-mcp",
       "install_url": "https://raw.githubusercontent.com/BrainGridAI/grabbit-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GSC Quick Wins",
+      "displayName": "GSC Quick Wins",
+      "description": "Agent Skill that reads a Google Search Console export, finds keywords stuck in positions 4\u201320, and writes the exact title, meta, H2, FAQ and internal-link fixes, with a zero-dependency Python scorer",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "iniyan",
+      "repo": "gsc-quick-wins",
+      "url": "https://github.com/iniyan/gsc-quick-wins",
+      "install_url": "https://raw.githubusercontent.com/iniyan/gsc-quick-wins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Hostinger API MCP",
@@ -8379,6 +8589,21 @@
       "repo": "pdf-monster",
       "url": "https://github.com/jbaehova/pdf-monster",
       "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "phone-sms",
+      "displayName": "phone-sms",
+      "description": "MCP server and Claude Code plugin that reads and sends SMS through the user's own Android phone over KDE Connect on the local network, with no cloud relay, sending only after the user approves recipient and text",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "h-3303",
+      "repo": "phone-sms",
+      "url": "https://github.com/h-3303/phone-sms",
+      "install_url": "https://raw.githubusercontent.com/h-3303/phone-sms/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "pi-recall",
