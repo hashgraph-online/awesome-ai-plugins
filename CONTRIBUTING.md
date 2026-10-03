@@ -55,7 +55,7 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must score at least 80 with no critical or high findings before merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must complete successfully and score at least 80 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. Failed or unavailable scans still block merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 

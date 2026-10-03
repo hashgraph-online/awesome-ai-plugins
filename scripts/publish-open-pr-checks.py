@@ -122,8 +122,9 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
             "failure",
             "source scan failed",
             f"The centralized source scan returned: {job_details}. "
-            "A passing scan (score at least 80 with no critical or high findings) is required before merge. "
-            "Review the rule-level findings and rerun the scan.",
+            "A completed, passing scan with a score of at least 80 is required before merge. "
+            "Finding severities are advisory for listing eligibility. "
+            "Review the scan logs and rule-level findings, resolve any scan errors, and rerun the scan.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")

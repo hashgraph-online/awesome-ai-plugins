@@ -19,8 +19,37 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertEqual(conclusion, "failure")
         self.assertEqual(title, "source scan failed")
-        self.assertIn("score at least 80", summary)
-        self.assertIn("no critical or high findings", summary)
+        self.assertIn("score of at least 80", summary)
+        self.assertIn("Finding severities are advisory", summary)
+        self.assertIn("resolve any scan errors", summary)
+
+    def test_successful_source_scans_pass(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "scan"}, {411: ["success", "success"]}
+        )
+
+        self.assertEqual(conclusion, "success")
+        self.assertEqual(title, "scan passed")
+
+    def test_nonpassing_source_job_blocks_even_with_another_success(self):
+        for status in ("failure", "cancelled", "timed_out", "action_required", "skipped", "neutral"):
+            with self.subTest(status=status):
+                conclusion, title, summary = MODULE.check_summary(
+                    {"pr_number": 411, "state": "scan"}, {411: ["success", status]}
+                )
+
+                self.assertEqual(conclusion, "failure")
+                self.assertIn(status, summary)
+
+    def test_catalog_validation_failure_blocks_even_with_successful_scan(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "failure", "failure_reasons": ["Duplicate entry"]},
+            {411: ["success"]},
+        )
+
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Contribution requirements failed")
+        self.assertIn("Duplicate entry", summary)
 
     def test_unavailable_source_scan_blocks_merge(self):
         conclusion, title, summary = MODULE.check_summary(
