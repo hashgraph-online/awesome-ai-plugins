@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-01",
-  "total": 598,
+  "last_updated": "2026-10-03",
+  "total": 602,
   "platforms": [
     "codex",
     "grok",
@@ -3026,6 +3026,20 @@
       ]
     },
     {
+      "name": "PriceWin",
+      "url": "https://github.com/PriceDotWin/pricewin-agent-plugin",
+      "owner": "PriceDotWin",
+      "repo": "pricewin-agent-plugin",
+      "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, in USD, through the hosted PriceWin MCP server with a search skill.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/PriceDotWin/pricewin-agent-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "prompt-to-asset",
       "url": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
       "owner": "MohamedAbdallah-14",
@@ -3642,20 +3656,6 @@
       ]
     },
     {
-      "name": "agentic-readiness-assessment",
-      "url": "https://github.com/exadel-inc/agentic-readiness-assessment",
-      "owner": "exadel-inc",
-      "repo": "agentic-readiness-assessment",
-      "description": "Agent skill that audits a repository for AI coding agent readiness and produces an evidence-based scorecard with prioritized fixes",
-      "category": "Development & Workflow",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/exadel-inc/agentic-readiness-assessment/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Agentic Ship",
       "url": "https://github.com/moasq/agentic-ship",
       "owner": "moasq",
@@ -3665,6 +3665,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/moasq/agentic-ship/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "agentic-readiness-assessment",
+      "url": "https://github.com/exadel-inc/agentic-readiness-assessment",
+      "owner": "exadel-inc",
+      "repo": "agentic-readiness-assessment",
+      "description": "Agent skill that audits a repository for AI coding agent readiness and produces an evidence-based scorecard with prioritized fixes",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/exadel-inc/agentic-readiness-assessment/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -5658,6 +5672,20 @@
       ]
     },
     {
+      "name": "opencode-9router",
+      "url": "https://github.com/vheins/opencode-9router",
+      "owner": "vheins",
+      "repo": "opencode-9router",
+      "description": "OpenCode plugin that registers 9Router as a provider with automatic model discovery and caching",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/vheins/opencode-9router/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "opencode-litellm",
       "url": "https://github.com/yuseferi/opencode-litellm",
       "owner": "yuseferi",
@@ -7395,6 +7423,20 @@
       ]
     },
     {
+      "name": "GSC Quick Wins",
+      "url": "https://github.com/iniyan/gsc-quick-wins",
+      "owner": "iniyan",
+      "repo": "gsc-quick-wins",
+      "description": "Agent Skill that reads a Google Search Console export, finds keywords stuck in positions 4\u201320, and writes the exact title, meta, H2, FAQ and internal-link fixes, with a zero-dependency Python scorer",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/iniyan/gsc-quick-wins/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Hostinger API MCP",
       "url": "https://github.com/hostinger/api-mcp-server",
       "owner": "hostinger",
@@ -7628,11 +7670,11 @@
       "repo": "claude-plugin",
       "description": "Claude Code plugin for hosted AI agent memory over MCP that learns from outcomes: tell it a recalled memory helped or misled and it re-ranks what comes back next, with shared rooms for multi-agent work and browser OAuth sign-in instead of an API key",
       "category": "Tools & Integrations",
-      "platform": "claude-code",
+      "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/mnemoverse/claude-plugin/HEAD/.claude-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/mnemoverse/claude-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
-        "claude-code"
+        "codex"
       ]
     },
     {
@@ -7813,6 +7855,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/jbaehova/pdf-monster/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "phone-sms",
+      "url": "https://github.com/h-3303/phone-sms",
+      "owner": "h-3303",
+      "repo": "phone-sms",
+      "description": "MCP server and Claude Code plugin that reads and sends SMS through the user's own Android phone over KDE Connect on the local network, with no cloud relay, sending only after the user approves recipient and text",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/h-3303/phone-sms/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
