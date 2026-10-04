@@ -129,6 +129,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [AgentOps](https://github.com/boshu2/agentops) - DevOps layer for coding agents with flow, feedback, and memory that compounds between sessions.
 - [AgentPack](https://github.com/vishal2612200/agentpack) - Ranks repo context for Codex with likely files, skill recommendations, agent rules, commands, warnings, and compact task-focused packs before editing.
 - [Agentry Observability](https://github.com/fr33dr4g0n/agentry-public) - Agent-native product analytics, error logging, and deploy attribution for coding agents through one HTTP API.
+- [agents](https://github.com/wshobson/agents) - Plugin marketplace with agents, skills, and commands for Claude Code, OpenAI Codex CLI, Cursor, OpenCode, Google Antigravity CLI, GitHub Copilot, and Pi.
 - [AgentWiki](https://github.com/tidusvn05/agentwiki) - Rust CLI that generates C4-style architecture docs for any repository using already-authenticated agent CLIs (Claude Code, Codex, Devin) as the LLM backend.
 - [AgiFlow](https://github.com/AgiFlow/ai-plugin) - Project management workflows for AI coding agents with planning, grooming, task execution, review, and AgiFlow MCP integration.
 - [agmsg](https://github.com/fujibee/agmsg) - Cross-vendor messaging for CLI coding agents (Claude Code, Codex, Gemini CLI, Grok): sessions join a team by name and hand work to each other through a shared local SQLite file, with durable history and ext-tool members that let a program such as Slack or Jev join like any agent.
