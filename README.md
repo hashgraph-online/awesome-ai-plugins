@@ -108,7 +108,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 ### Development & Workflow
 
 <!-- pinned -->
-- [geml](https://github.com/geml-spec/geml) - An agent-native markup language featuring deterministic block-level editing and built-in validation to ensure documents never drift or break during AI operations.
 - [2718lab DevKit](https://github.com/2718labs/2718lab-devkit) - Codex-first local MCP server and skill bundle for deterministic project intelligence, durable workflow orchestration, and reusable engineering tools.
 - [A Team](https://github.com/RBraga01/a-team) - Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.
 - [ab-method](https://github.com/ayoubben18/ab-method) - A skill and workflow plugin for Claude Code and Codex that grills problems into plans and drives test-driven missions with critic reviews.
@@ -256,6 +255,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Gangsta Agents](https://github.com/kucherenko/gangsta) - Agent skills providing a spec-driven development pipeline with reconnaissance, adversarial debate, TDD execution, and verification phases for Claude Code, Codex, Cursor, OpenCode, and Gemini CLI.
 - [GCF Proxy](https://github.com/blackwell-systems/gcf-codex-plugin) - Save 71% on MCP tool call tokens by wrapping any server with GCF encoding, with session stats hook and setup skill.
 - [gemini-for-kubernetes-development](https://github.com/gke-labs/gemini-for-kubernetes-development) - Gemini CLI extension that automates Kubernetes development tasks: declarative validation authoring, PR review, and SIG API Machinery issue triage.
+- [geml](https://github.com/geml-spec/geml) - An agent-native markup language featuring deterministic block-level editing and built-in validation to ensure documents never drift or break during AI operations.
 - [Generative Media Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) - 13 skills for image, video, and audio generation using 100+ models - FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, and HunyuanVideo via muapi.ai.
 - [genie](https://github.com/automagik-dev/genie) - Agent skills and CLI that interview a wish into a plan, dispatch parallel subagents, and review results against acceptance criteria.
 - [GitCortex](https://github.com/bharath03-a/GitCortex) - Branch-aware knowledge graph of a Git repo that incrementally re-indexes via tree-sitter and exposes it to AI coding assistants over MCP.
@@ -681,7 +681,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
 - [Serply Agent Skills](https://github.com/serply-inc/skills) - Agent Skill and Claude Code plugin that teaches coding agents to pull live Google Search, Scholar, News, Maps, Jobs, Bing, Amazon and Reddit results and scrape URLs to markdown through the Serply API or its hosted MCP server.
 - [Sessionbus](https://github.com/antst/sessionbus-peers) - Connects independently started Claude Code, Codex, Grok, Qwen, OpenCode and Kilo sessions and custom tools through an open bus protocol for live messaging and optional managed sessions across products and hosts, while keeping native harnesses.
-
 - [Shots](https://github.com/hitSlop/shots) - Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.
 - [site-spec](https://github.com/ariaxhan/site-spec) - MCP server for website audit and auto-fix: 40 checks across SEO, accessibility, privacy, structured data and AI searchability, tools audit_site/fix_issue/compile_spec/list_checks; `npx -y site-spec-mcp`.
 - [sitemd](https://github.com/sitemd-cc/sitemd) - Build websites from Markdown via MCP — 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages.
@@ -725,6 +724,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [YYLO Skills](https://github.com/yylo-dev/yylo-skills) - Reusable agent skills maintained by YYLO: the canonical, independently versioned source for the ledger-tasks, wiki, workflow, artifact, benchmark, understand-project, plan-ledger-tasks and ralph-loop skills used by YYLO CLI and YYLO Ledger.
 - [Zero Slop](https://github.com/manavmishra/ZeroSlop) - Say no to AI slop: a human-in-the-loop learning agentic workflow skill that scores text 0-100 for AI slop and rewrites it tastefully, with a standard-library Python scorer that has zero dependencies and runs offline.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
+
 
 ### Grok Plugins
 
