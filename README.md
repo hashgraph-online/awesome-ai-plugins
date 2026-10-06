@@ -294,6 +294,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [jev-harness](https://github.com/AntonioCoppe/jev-harness) - Decision harness for TypeSafe Jev (confidence gates, shadow mode, recipes, eval CLI)
 - [jev-preflight](https://github.com/muse0509/jev-preflight) - Claude Code plugin that uses TypeSafe's Jev to assess code-change risk and request at most one additional investigation before a turn completes.
 - [jev-use](https://github.com/shitianfang/jev-use) - Hands the agent steps that need no text output to Jev's judgment model across Claude Code, Codex, and Pi, returning everything it should not decide to the LLM under a typed escalation contract.
+- [jevalyzer](https://github.com/killerz3/jevalyzer) - CLI that grades Claude Code, Codex, OpenCode, Gemini CLI, and Antigravity session logs already on disk with TypeSafe's Jev model instead of spinning up a full LLM judge.
 - [Jevbridge](https://github.com/tacticocc/Jevbridge) - OSS ACP/MCP adapter that bridges TypeSafe Jev with any LLM, putting computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode without replacing those hosts.
 - [jevcheck](https://github.com/sathariels/jevcheck) - Model-upgrade contract CLI for TypeSafe Jev (fixture eval, record/compare, CI-friendly exits); `pip install jevcheck`.
 - [jevmem](https://github.com/Avinash-jetwani/jevmem) - Plugin and MCP server that automatically saves project decisions, rules and dead ends to a JEVMEM.md file and recalls them in later sessions.
