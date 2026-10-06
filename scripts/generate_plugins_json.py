@@ -29,13 +29,15 @@ PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 # template that resolves to an HTTP 200 wins. Some upstream entries (e.g.
 # apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
 # `plugins/<name>/.codex-plugin/` rather than the repo root. The Claude Code
-# manifest is probed last on purpose: many repos ship both, and a repo that
-# already resolves a Codex layout must keep its existing classification.
+# manifests are probed last on purpose: many repos ship both, and a repo that
+# already resolves a Codex layout must keep its existing classification. Try
+# the root Claude layout before the common plugin/ subdirectory layout.
 INSTALL_PATH_CANDIDATES = (
     ".codex-plugin/plugin.json",
     "plugins/{repo}/.codex-plugin/plugin.json",
     ".codex/plugin.json",
     ".claude-plugin/plugin.json",
+    "plugin/.claude-plugin/plugin.json",
 )
 KIMI_MANIFEST_PATH_CANDIDATES = (
     "kimi.plugin.json",

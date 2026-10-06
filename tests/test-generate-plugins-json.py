@@ -185,6 +185,54 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             "/HEAD/.codex-plugin/plugin.json",
         )
 
+    def test_detects_nested_claude_manifest_in_tools_section(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### Tools & Integrations\n\n"
+                "- [Claude Demo](https://github.com/example/claude-demo)"
+                " - Claude Code plugin.\n"
+            )
+
+            with patch(
+                "urllib.request.urlopen",
+                only_path_resolves("plugin/.claude-plugin/plugin.json"),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        expected_url = (
+            "https://raw.githubusercontent.com/example/claude-demo"
+            "/HEAD/plugin/.claude-plugin/plugin.json"
+        )
+        self.assertEqual(added, 1)
+        self.assertEqual(plugins[0]["platform"], "claude-code")
+        self.assertEqual(plugins[0]["ecosystems"], ["claude-code"])
+        self.assertEqual(plugins[0]["install_url"], expected_url)
+        marketplace = MODULE.marketplace_entry(plugins[0])
+        self.assertEqual(marketplace["platform"], "claude-code")
+        self.assertEqual(marketplace["install_url"], expected_url)
+
+    def test_root_claude_manifest_keeps_priority_over_nested_manifest(self) -> None:
+        root_url = (
+            "https://raw.githubusercontent.com/example/claude-demo"
+            "/HEAD/.claude-plugin/plugin.json"
+        )
+        nested_url = (
+            "https://raw.githubusercontent.com/example/claude-demo"
+            "/HEAD/plugin/.claude-plugin/plugin.json"
+        )
+
+        def both_manifests_resolve(request, *_args, **_kwargs):
+            if request.full_url in (root_url, nested_url):
+                return FakeResponse(200)
+            raise urllib.error.HTTPError(request.full_url, 404, "Not Found", {}, None)
+
+        with patch("urllib.request.urlopen", both_manifests_resolve):
+            install_url = MODULE.probe_install_url("example", "claude-demo")
+
+        self.assertEqual(install_url, root_url)
+
 
 if __name__ == "__main__":
     unittest.main()
