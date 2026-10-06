@@ -535,6 +535,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Canvas Apps Plugin Codex](https://github.com/Ratnam-Mishra/canvas-apps-plugin-codex) - Build and edit Microsoft Power Apps Canvas Apps using natural language and Canvas Authoring MCP server.
 - [Cargo Skills](https://github.com/getcargohq/cargo-skills) - GTM engineering for coding agents — 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code.
 - [CarsXE](https://github.com/carsxe/carsxe-codex-plugin) - Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.
+- [cc-dash-kit](https://github.com/coolthor/cc-dash-kit) - Sidebar dashboard for Claude Code showing 5-hour/weekly usage limits and session cards, installable with one prompt and extensible with custom cards (e.g., GPU or local services).
 - [cguard](https://github.com/simon-init/cguard) - A Claude Code plugin hook that keeps secrets, stray docs and destructive commands out of agent sessions.
 - [Chorale](https://github.com/hxy9243/chorale) - An LLM-assisted music sheet analysis and composition local MCP server and a web UI for inspect, annotate, compose, and interactively editing ABC notations for music.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
