@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-07",
-  "total": 704,
+  "total": 705,
   "platforms": [
     "codex",
     "grok",
@@ -7725,6 +7725,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/DAWNCR0W/affine-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Agent Face",
+      "url": "https://github.com/ericphamhoangdev/agent-face-skills",
+      "owner": "ericphamhoangdev",
+      "repo": "agent-face-skills",
+      "description": "Agent skills that give a coding agent a small always-on-top desktop face showing its state (working, thinking, happy, stuck) with captions and lip-synced voice clips",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ericphamhoangdev/agent-face-skills/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]

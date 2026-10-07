@@ -8272,6 +8272,21 @@
       "install_url": "https://raw.githubusercontent.com/DAWNCR0W/affine-mcp-server/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Agent Face",
+      "displayName": "Agent Face",
+      "description": "Agent skills that give a coding agent a small always-on-top desktop face showing its state (working, thinking, happy, stuck) with captions and lip-synced voice clips",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ericphamhoangdev",
+      "repo": "agent-face-skills",
+      "url": "https://github.com/ericphamhoangdev/agent-face-skills",
+      "install_url": "https://raw.githubusercontent.com/ericphamhoangdev/agent-face-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Agent QA",
       "displayName": "Agent QA",
       "description": "MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory",
