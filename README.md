@@ -728,6 +728,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [tlgr](https://github.com/tlgrcli/tlgr) - Claude Code plugin and Agent Skill for operating a personal Telegram account through the tlgr CLI over MTProto, with JSON output and webhook event push.
 - [Token Harbor](https://github.com/NickHOI/Token-Harbor) - Turn Codex token usage into Sail Power for a local-first fishing, fleet, and harbor-building companion game.
 - [TokRepo Search](https://github.com/henu-wang/tokrepo-codex-plugin) - Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.
+- [ultramotion](https://github.com/sunsiyuan/ultramotion) - Motion-template skills for Claude Code and Codex that turn one prompt into a finished vertical video with music: Liquid Glass, Kinetic Type, Hand-drawn Explainer and Variety Captions.
 - [unic](https://github.com/DevopsArtFactory/unic) - Local MCP server exposing read-only AWS inspection tools to AI agents, including capability discovery, Backup vault listing, and context sync previews.
 - [Unified AI System](https://github.com/happy520ai/unified-ai-system) - Self-hosted AI gateway for Codex with provider-free prompt enhancement, governed MCP tools, and a credential-free Docker path.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text output — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.
