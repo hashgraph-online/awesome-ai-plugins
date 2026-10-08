@@ -805,6 +805,7 @@ submitting a repository.
 - [Engramory](https://github.com/tinqiao-oss/engramory) - Curated, file-based long-term memory for DSH agents — plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`.
 - [humanizer-ru](https://github.com/ilyautov/humanizer-ru) - Text-only `dsh.bundle` that mounts the humanizer-ru Agent Skill into DeepSeek Harness: rewrites Russian text to remove 64 markers of AI generation, with a corpus-calibrated scanner and audit mode; install with `dsh plugin --profile web add humanizer-ru` (npm) or `github:ilyautov/humanizer-ru`.
 - [LocalForge](https://github.com/orfeomorello/dsh-localforge) - LM Studio, Ollama, and vLLM adapter for DeepSeek Harness with live model discovery, auto-load, per-model concurrency limits, fallback chains, and Prometheus metrics.
+- [memory-eternal](https://github.com/EternalNight996/memory-eternal) - Memory plugin and MCP server for DeepSeek Harness that distills finished conversations into audited knowledge cards in a searchable local Markdown vault, with knowledge graph and review center.
 - [Vibe-Mathematics](https://github.com/ChongCyrus/Vibe-Mathematics) - Plugin bundle installing four multi-agent math problem-solving and cross-verification agent presets into DeepSeek Harness.
 
 ### ZCode Plugins & Localization
