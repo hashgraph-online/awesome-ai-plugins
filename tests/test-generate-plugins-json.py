@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import tempfile
 import unittest
 import urllib.error
@@ -39,6 +40,109 @@ def only_path_resolves(path: str):
 
 
 class GeneratePluginsJsonTests(unittest.TestCase):
+    def test_native_mcp_entry_has_documentation_in_both_feeds(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### Development & Workflow\n\n"
+                "- [Native Demo](https://github.com/example/native-demo)"
+                " - MCP server: A local stdio tool.\n"
+            )
+            with patch.object(MODULE, "probe_install_url") as probe:
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+            probe.assert_not_called()
+
+        self.assertEqual(added, 1)
+        compatibility = MODULE.generate_plugins_json(plugins)["plugins"][0]
+        marketplace = MODULE.generate_marketplace_json(
+            [MODULE.marketplace_entry(plugin) for plugin in plugins]
+        )["plugins"][0]
+        for entry in (compatibility, marketplace):
+            self.assertEqual(entry["platform"], "mcp")
+            self.assertEqual(entry["ecosystems"], ["mcp"])
+            self.assertEqual(entry["category"], "Development & Workflow")
+            self.assertEqual(
+                entry["installation_url"],
+                "https://github.com/example/native-demo#readme",
+            )
+            self.assertNotIn("install_url", entry)
+
+    def test_native_mcp_fallback_generates_no_invented_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            readme = root / "README.md"
+            output = root / "plugins.json"
+            marketplace = root / "marketplace.json"
+            readme.write_text(
+                "## MCP Servers (Cross-Platform)\n\n"
+                "- [Native Demo](https://github.com/example/native-demo)"
+                " - A local stdio tool.\n"
+            )
+            with (
+                patch.object(MODULE, "README", readme),
+                patch.object(MODULE, "OUTPUT", output),
+                patch.object(MODULE, "MARKETPLACE_OUTPUT", marketplace),
+                patch.object(MODULE, "load_codex_plugins", side_effect=OSError("offline")),
+                patch.object(MODULE, "load_grok_plugins", return_value=[]),
+                patch.object(MODULE, "probe_install_url") as probe,
+            ):
+                MODULE.main()
+
+            probe.assert_not_called()
+            for path in (output, marketplace):
+                entry = json.loads(path.read_text())["plugins"][0]
+                self.assertEqual(entry["platform"], "mcp")
+                self.assertIn("installation_url", entry)
+                self.assertNotIn("install_url", entry)
+
+    def test_mcp_support_preserves_existing_codex_install(self) -> None:
+        install_url = "https://raw.githubusercontent.com/example/shared/HEAD/.codex-plugin/plugin.json"
+        upstream = [{
+            "name": "Shared",
+            "owner": "example",
+            "repo": "shared",
+            "platform": "codex",
+            "ecosystems": ["codex"],
+            "install_url": install_url,
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n### Development & Workflow\n\n"
+                "- [Shared](https://github.com/example/shared)"
+                " - MCP server: Also provides native stdio tools.\n"
+            )
+            plugins, added = MODULE.merge_readme_additions(upstream, readme)
+
+        self.assertEqual(added, 0)
+        self.assertEqual(len(plugins), 1)
+        self.assertEqual(plugins[0]["platform"], "codex")
+        self.assertEqual(plugins[0]["install_url"], install_url)
+        self.assertEqual(plugins[0]["ecosystems"], ["codex", "mcp"])
+        self.assertEqual(
+            plugins[0]["installation_url"], "https://github.com/example/shared#readme"
+        )
+
+    def test_mcp_words_alone_do_not_override_client_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n### Development & Workflow\n\n"
+                "- [Wrapper](https://github.com/example/wrapper)"
+                " - MCP server for a client plugin.\n"
+            )
+            with patch(
+                "urllib.request.urlopen", only_path_resolves(".codex-plugin/plugin.json")
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual(plugins[0]["platform"], "codex")
+        self.assertIn("install_url", plugins[0])
+        self.assertNotIn("installation_url", plugins[0])
+
     def test_marketplace_timestamp_is_stable_for_the_day(self) -> None:
         marketplace = MODULE.generate_marketplace_json([])
 
