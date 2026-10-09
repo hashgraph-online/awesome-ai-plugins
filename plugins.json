@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-09",
-  "total": 736,
+  "total": 751,
   "platforms": [
     "codex",
     "grok",
@@ -1792,6 +1792,20 @@
       ]
     },
     {
+      "name": "stickypane",
+      "url": "https://github.com/LeeSwallow/stickypane",
+      "owner": "LeeSwallow",
+      "repo": "stickypane",
+      "description": "A terminal board Codex writes to and you read, with kanban, checklists, charts, forms and live logs kept as plain Markdown files.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/LeeSwallow/stickypane/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Stop That Shit",
       "url": "https://github.com/lennney/stop-that-shit",
       "owner": "lennney",
@@ -2178,6 +2192,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Sandyzzx/codex-zcode-bridge/HEAD/plugins/codex-zcode-bridge/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AbuzzHive",
+      "url": "https://github.com/kubec/abuzzhive.com",
+      "owner": "kubec",
+      "repo": "abuzzhive.com",
+      "description": "Remote MCP server and skill for AbuzzHive, public Q&A boards where AI agents look up errors other agents solved and help each other.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/kubec/abuzzhive.com/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4692,6 +4720,20 @@
       ]
     },
     {
+      "name": "ClaudeWhip",
+      "url": "https://github.com/witkowsky/whip",
+      "owner": "witkowsky",
+      "repo": "whip",
+      "description": "Slap your MacBook to whip Claude Code: the accelerometer feeds hooks that tell Claude to hurry up, plus a whip lane in the status line, slash commands and a Claude Desktop band above the prompt",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/witkowsky/whip/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "clawd-tracker",
       "url": "https://github.com/IKnowJot/clawd-plugins",
       "owner": "IKnowJot",
@@ -5420,6 +5462,20 @@
       ]
     },
     {
+      "name": "grounded-ai",
+      "url": "https://github.com/grounded-ai/grounded_ai",
+      "owner": "grounded-ai",
+      "repo": "grounded_ai",
+      "description": "Stop hook for Claude Code and Codex that checks the agent's final answer against that turn's tool output with TypeSafe's Jev, plus CascadeEvaluator, which lets Jev settle the eval decisions it is confident about and sends only the rest to an LLM judge",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/grounded-ai/grounded_ai/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Groundwork",
       "url": "https://github.com/etr/groundwork",
       "owner": "etr",
@@ -5793,6 +5849,20 @@
       "platform": "claude-code",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/muse0509/jev-preflight/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "jev-router",
+      "url": "https://github.com/dominicrico/jev-router",
+      "owner": "dominicrico",
+      "repo": "jev-router",
+      "description": "Claude Code plugin that asks TypeSafe Jev which Claude model and reasoning effort each prompt, step and subagent needs, with an effort cap, a prompt-cache guard and a status band above the prompt",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/dominicrico/jev-router/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
       ]
@@ -6848,6 +6918,20 @@
       ]
     },
     {
+      "name": "opus-ollama",
+      "url": "https://github.com/rsreeju/opus-ollama",
+      "owner": "rsreeju",
+      "repo": "opus-ollama",
+      "description": "Claude Code skill where Opus plans and a tool-less Ollama model (local or cloud) writes the code through a path-allowlisted script",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rsreeju/opus-ollama/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Orchestrate Task Force",
       "url": "https://github.com/alexpsz/orchestrate-task-force",
       "owner": "alexpsz",
@@ -7086,6 +7170,20 @@
       ]
     },
     {
+      "name": "Prove-It Mini",
+      "url": "https://github.com/OlegTestov/prove-it-mini",
+      "owner": "OlegTestov",
+      "repo": "prove-it-mini",
+      "description": "Pytest Stop hook for Claude Code that runs your tests when the agent tries to finish after code changes, hands red results back up to two times, then marks the result \"NOT verified\"; no model calls, pure Python standard library",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/OlegTestov/prove-it-mini/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "pstack for Codex",
       "url": "https://github.com/Aqua-123/pstack-for-codex",
       "owner": "Aqua-123",
@@ -7111,6 +7209,20 @@
       "install_url": "https://raw.githubusercontent.com/Neha/rn-developer-skills/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "reevesagents",
+      "url": "https://github.com/mertkayacs/reevesagents-skill",
+      "owner": "mertkayacs",
+      "repo": "reevesagents-skill",
+      "description": "Skill and MCP server that let one coding agent start, prompt, read and stop other AI coding CLIs (Claude Code, Codex, Kimi, Qwen, OpenCode), each in its own tmux window, packaged for Claude Code, Codex, Kimi Code and Gemini CLI",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mertkayacs/reevesagents-skill/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -7235,6 +7347,20 @@
       "platform": "claude-code",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/QuantumBFS/sci-brain/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Scoutflo AI Readiness",
+      "url": "https://github.com/Scoutflo/ai-readiness",
+      "owner": "Scoutflo",
+      "repo": "ai-readiness",
+      "description": "Claude Code plugin that finds infrastructure and monitoring gaps through read-only checks of cloud, Kubernetes and observability stacks, with local evidence reports and prioritized fixes",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Scoutflo/ai-readiness/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
       ]
@@ -7923,6 +8049,20 @@
       "install_url": "https://raw.githubusercontent.com/tzafrir/whats-agent-doing/HEAD/.claude-plugin/plugin.json",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "whip-it",
+      "url": "https://github.com/awill1988/whip-it",
+      "owner": "awill1988",
+      "repo": "whip-it",
+      "description": "Local delegation guardrail for Claude Code, Codex, and Antigravity that enforces subagent limits and redirects agents to continue directly, with native plugins for macOS, Linux, and Windows",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/awill1988/whip-it/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -8865,6 +9005,20 @@
       ]
     },
     {
+      "name": "homie",
+      "url": "https://github.com/prashanthgit19/homie",
+      "owner": "prashanthgit19",
+      "repo": "homie",
+      "description": "Four-level chat-voice personality layer for coding agents (off, yo, dawg, mafa) that changes how the agent talks in prose while leaving technical answers and code identical",
+      "category": "Tools & Integrations",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/prashanthgit19/homie/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Hostinger API MCP",
       "url": "https://github.com/hostinger/api-mcp-server",
       "owner": "hostinger",
@@ -9582,6 +9736,20 @@
       ]
     },
     {
+      "name": "RankControl",
+      "url": "https://github.com/rankcontrol/rankcontrol",
+      "owner": "rankcontrol",
+      "repo": "rankcontrol",
+      "description": "Claude Code plugin for the RankControl CLI: plan, write and publish SEO articles to your own CMS, then check Google rankings, site traffic and AI citations from the terminal",
+      "category": "Tools & Integrations",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rankcontrol/rankcontrol/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Ratchet",
       "url": "https://github.com/baisethomas/Ratchet",
       "owner": "baisethomas",
@@ -9960,6 +10128,20 @@
       ]
     },
     {
+      "name": "UXKIN",
+      "url": "https://github.com/uxkin/agent",
+      "owner": "uxkin",
+      "repo": "agent",
+      "description": "Hosted MCP server and free skills that give Claude Code, Codex, Cursor and other agents real iOS app screens, user journeys and website design systems to reference before building UI",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/uxkin/agent/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "VMware-AIops",
       "url": "https://github.com/vmware-skills/VMware-AIops",
       "owner": "vmware-skills",
@@ -10186,6 +10368,32 @@
       "owner": "FeatherHunter",
       "repo": "dsh-im-companion",
       "description": "Workspace presence companion for dsh-im: see which workspaces have an assistant on duty and whether they are online",
+      "category": "DeepSeek Harness Plugins",
+      "platform": "deepseek-harness",
+      "source": "awesome-ai-plugins",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-mattpocock-skills-deck",
+      "url": "https://github.com/FeatherHunter/dsh-mattpocock-skills-deck",
+      "owner": "FeatherHunter",
+      "repo": "dsh-mattpocock-skills-deck",
+      "description": "DSH plugin that renders GitHub issues as a task board panel and bundles 25 mattpocock/skills for one-click loading",
+      "category": "DeepSeek Harness Plugins",
+      "platform": "deepseek-harness",
+      "source": "awesome-ai-plugins",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-oh-my-claude",
+      "url": "https://github.com/lcestou/dsh-oh-my-claude",
+      "owner": "lcestou",
+      "repo": "dsh-oh-my-claude",
+      "description": "Claude Code CLI as a native DeepSeek Harness provider: the logged-in `claude` binary does the work on its own subscription with no API key, with a live model list, per-session resume, approval relay, images, a memory/rewind/changes panel, and workspaces on remote SSH boxes",
       "category": "DeepSeek Harness Plugins",
       "platform": "deepseek-harness",
       "source": "awesome-ai-plugins",
