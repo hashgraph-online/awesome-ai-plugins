@@ -175,6 +175,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Brooks Lint](https://github.com/hyhmrright/brooks-lint) - AI code reviews grounded in six classic engineering books — decay risk diagnostics with book citations, severity labels, and four analysis modes (PR review, architecture audit, tech debt, test quality).
 - [Browser Harness](https://github.com/browser-use/browser-harness) - MCP server and agent skill that connect an AI agent to a real browser through one editable CDP WebSocket.
 - [bury-bench](https://github.com/Onur45500/bury-bench) - Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard.
+- [cache-warmer](https://github.com/paulbkim-dev/claude-code-cache-warmer) - Claude Code plugin that keeps the prompt cache warm through idle gaps by sending one small refresh shortly before the 5-minute or 1-hour cache expires.
 - [Camouflage](https://github.com/sinameraji/camouflage) - Terminal UI for coding-agent harnesses that turns NDJSON events (Node SDK included) into a Claude Code-style inline transcript with pickers, forms, and permission prompts, using no CPU while idle.
 - [Casefile](https://github.com/x4cc3/casefile) - Persistent security case tracking for bug bounties, CTFs, and security audits.
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
