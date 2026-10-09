@@ -536,6 +536,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
 - [Agent402](https://github.com/MikeyPetrillo/Agent402) - Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key.
+- [AgentBadge MCP](https://github.com/spreadzp/agentbadge-mcp) - Verify agents, check trust scores, and pay for services with x402 — ERC-8004 identity on Arc via MCP.
 - [AgentCall](https://github.com/pattern-ai-labs/agentcall) - Lets Claude Code, Codex, Cursor, Gemini CLI, and 30+ other agents join Google Meet, Zoom, or Microsoft Teams as a speaking, listening, presenting participant with text-to-speech, live transcripts, screenshare, and an avatar camera feed.
 - [AgentDocStore](https://github.com/koushikginjupally/agentdocstore) - Self-hostable, offline-first versioned document store with a web UI, REST API, and a 16-tool stdio MCP server that catches secrets before they are saved.
 - [Agentgram](https://github.com/jerryfane/agentgram) - Send Telegram messages, files, and forwarded inbox imports from Codex and local AI agents through a Telegram bot token and chat id.
