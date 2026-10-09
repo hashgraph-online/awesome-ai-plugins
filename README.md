@@ -701,6 +701,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [opencode-visual-cache](https://github.com/Hotakus/opencode-visual-cache) - OpenCode TUI plugin that displays real-time token cache hit rate, token usage, cost savings, and provider balance in a sidebar.
 - [opencode-visualiser](https://github.com/psinetron/opencode-visualiser) - OpenCode plugin that renders live agent sessions as an animated pixel-art office with per-agent characters.
 - [OpenProject Codex](https://github.com/varaprasadreddy9676/openproject-codex-plugin) - OpenProject integration for Codex with project, team, work package, bulk workflow, boards, wiki, meeting, attachment, and reporting support.
+- [OpenZine](https://github.com/JosssphZhou/openzine) - Agent skill for Claude Code and Codex that turns a PDF or a folder of page images into a page-turning 3D booklet, saved as one offline HTML file.
 - [Ophis](https://github.com/ophis-fi/skills) - Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
 - [Overleaf LaTeX](https://github.com/MarcoDotIO/overleaf-latex) - Local MCP/Codex plugin for creating and editing Overleaf projects.
