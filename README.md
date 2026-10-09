@@ -384,6 +384,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [OpenCode Orchestrator](https://github.com/agnusdei1207/opencode-orchestrator) - Multi-agent mission control for OpenCode with Commander, Planner, Worker, and Reviewer workflows.
 - [OpenCode Power Pack](https://github.com/waybarrios/opencode-power-pack) - Fifty-four portable development and security workflows for Codex, Claude Code, OpenCode, and Pi, with opt-in native sandbox profiles for safer command execution.
 - [opencode-9router](https://github.com/vheins/opencode-9router) - OpenCode plugin that registers 9Router as a provider with automatic model discovery and caching.
+- [opencode-chromium](https://github.com/Quindart-com/opencode-chromium) - Chromium browser automation extension collection providing an MCP server, OpenCode plugin, browser skill, and SDK with four browser tools.
 - [opencode-litellm](https://github.com/yuseferi/opencode-litellm) - OpenCode plugin that auto-detects a LiteLLM proxy and dynamically registers its models in the OpenCode picker.
 - [opencode-mempalace-persistence](https://github.com/geco/opencode-mempalace-persistence) - OpenCode plugin that archives conversations to local MemPalace memory and recalls past decisions verbatim in later sessions.
 - [opencode-models-discovery](https://github.com/yuhp/opencode-models-discovery) - OpenCode plugin that dynamically discovers models from OpenAI-compatible providers and injects them into provider config with filtering and metadata enrichment.
