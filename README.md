@@ -397,7 +397,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [opencode-toolrouter](https://github.com/Nsilswal/opencode-toolrouter) - OpenCode plugin that uses TypeSafe's Jev to send the model only the MCP tools each request needs, cutting tool-schema tokens per model call by about 92% in a 296-tool benchmark.
 - [opencode-weave](https://github.com/weave-io/weave) - OpenCode plugin providing multi-agent orchestration with specialized agents, category task dispatch, and background sub-agent execution.
 - [OpenSea Skills](https://github.com/ProjectOpenSea/opensea-skill) - Five Agent Skills for OpenSea data, Seaport trading, ERC20 swaps, wallet signing, and ERC-8257 tool development.
-- [opus-ollama](https://github.com/rsreeju/opus-ollama) - Claude Code skill where Opus plans and a tool-less Ollama model (local or cloud) writes the code, with measured cost results.
+- [opus-ollama](https://github.com/rsreeju/opus-ollama) - Claude Code skill where Opus plans and a tool-less Ollama model (local or cloud) writes the code through a path-allowlisted script.
 - [Orchestrate Task Force](https://github.com/alexpsz/orchestrate-task-force) - Task orchestration skill for Codex Desktop, Claude Code, and Google Antigravity, with visible task ownership, scoped parallel work, and integrated review.
 - [orchflows](https://github.com/DanMcInerney/orchflows) - Use 2 simple skills to build complex, composable workflows for task-specific jobs.
 - [Orka](https://github.com/ugorur/orka) - Orchestrates headless coding-agent CLIs (Codex, Grok, Claude Code, Cursor, Gemini, OpenCode, Copilot) as a team in isolated git worktrees, with cross-model review, QA and a scored run ledger.
