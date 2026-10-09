@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-09",
-  "total": 750,
+  "total": 751,
   "platforms": [
     "codex",
     "grok",
@@ -5462,6 +5462,20 @@
       ]
     },
     {
+      "name": "grounded-ai",
+      "url": "https://github.com/grounded-ai/grounded_ai",
+      "owner": "grounded-ai",
+      "repo": "grounded_ai",
+      "description": "Stop hook for Claude Code and Codex that checks the agent's final answer against that turn's tool output with TypeSafe's Jev, plus CascadeEvaluator, which lets Jev settle the eval decisions it is confident about and sends only the rest to an LLM judge",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/grounded-ai/grounded_ai/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Groundwork",
       "url": "https://github.com/etr/groundwork",
       "owner": "etr",
@@ -6901,6 +6915,20 @@
       "install_url": "https://raw.githubusercontent.com/ProjectOpenSea/opensea-skill/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "opus-ollama",
+      "url": "https://github.com/rsreeju/opus-ollama",
+      "owner": "rsreeju",
+      "repo": "opus-ollama",
+      "description": "Claude Code skill where Opus plans and a tool-less Ollama model (local or cloud) writes the code through a path-allowlisted script",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rsreeju/opus-ollama/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -10488,20 +10516,6 @@
       "source": "awesome-ai-plugins",
       "ecosystems": [
         "deepseek-harness"
-      ]
-    },
-    {
-      "name": "grounded-ai",
-      "url": "https://github.com/grounded-ai/grounded_ai",
-      "owner": "grounded-ai",
-      "repo": "grounded_ai",
-      "description": "Stop hook for Claude Code and Codex that checks the agent's final answer against that turn's tool output with TypeSafe's Jev, plus CascadeEvaluator, which lets Jev settle the eval decisions it is confident about and sends only the rest to an LLM judge",
-      "category": "Development & Workflow",
-      "platform": "claude-code",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/grounded-ai/grounded_ai/HEAD/.claude-plugin/plugin.json",
-      "ecosystems": [
-        "claude-code"
       ]
     }
   ]
