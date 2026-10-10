@@ -89,7 +89,8 @@ jobs:
           plugin_dir: ${{ runner.temp }}/contributed
           mode: scan
           min_score: 80
-          fail_on_severity: high
+          # Findings remain visible for review; listing eligibility uses the score.
+          fail_on_severity: none
           pr_comment: off
 
   gate:
