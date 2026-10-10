@@ -2960,6 +2960,21 @@
       "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Datacircle",
+      "displayName": "Datacircle",
+      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "waynehamadi",
+      "repo": "datacircle-plugin",
+      "url": "https://github.com/waynehamadi/datacircle-plugin",
+      "install_url": "https://raw.githubusercontent.com/waynehamadi/datacircle-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "deja",
       "displayName": "deja",
       "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and nineteen more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
@@ -5032,6 +5047,21 @@
       "install_url": "https://raw.githubusercontent.com/cr1707/claude-chrome-speed/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "claude-code-mods",
+      "displayName": "claude-code-mods",
+      "description": "Five Claude Code mods for running many sessions at once, installable from one plugin marketplace: a live session board with a worktree guard, a PR-to-production tracker, rule tripwires with a handoff card, a ledger of outward actions, and a context gauge",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "bennewton999",
+      "repo": "claude-code-mods",
+      "url": "https://github.com/bennewton999/claude-code-mods",
+      "install_url": "https://raw.githubusercontent.com/bennewton999/claude-code-mods/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "claude-council",
       "displayName": "claude-council",
       "description": "Claude Code plugin that asks Gemini, OpenAI, Grok, Perplexity, Kimi, OpenRouter models, the Codex, Cursor, Grok and Kimi CLIs and a local ollama model the same question in parallel and lines the answers up with a synthesis of where they agree and differ",
@@ -5615,6 +5645,21 @@
       "repo": "Easy-MCP",
       "url": "https://github.com/Mark007-R/Easy-MCP",
       "install_url": "https://raw.githubusercontent.com/Mark007-R/Easy-MCP/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "effect-actions",
+      "displayName": "effect-actions",
+      "description": "Agent skill and Effect library for defining a typed action once and serving it over HTTP, as MCP tools, as an AI Toolkit, and from a CLI",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "gjermundgaraba",
+      "repo": "effect-actions",
+      "url": "https://github.com/gjermundgaraba/effect-actions",
+      "install_url": "https://raw.githubusercontent.com/gjermundgaraba/effect-actions/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Embedded Workbench",
@@ -9471,21 +9516,6 @@
       "repo": "creo",
       "url": "https://github.com/RaazKetan/creo",
       "install_url": "https://raw.githubusercontent.com/RaazKetan/creo/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Datacircle",
-      "displayName": "Datacircle",
-      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "waynehamadi",
-      "repo": "datacircle-plugin",
-      "url": "https://github.com/waynehamadi/datacircle-plugin",
-      "install_url": "https://raw.githubusercontent.com/waynehamadi/datacircle-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "DataForge",

@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-10",
-  "total": 765,
+  "total": 767,
   "platforms": [
     "codex",
     "grok",
@@ -2772,6 +2772,20 @@
       ]
     },
     {
+      "name": "Datacircle",
+      "url": "https://github.com/waynehamadi/datacircle-plugin",
+      "owner": "waynehamadi",
+      "repo": "datacircle-plugin",
+      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/waynehamadi/datacircle-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "deja",
       "url": "https://github.com/vshulcz/deja-vu",
       "owner": "vshulcz",
@@ -4706,6 +4720,20 @@
       ]
     },
     {
+      "name": "claude-code-mods",
+      "url": "https://github.com/bennewton999/claude-code-mods",
+      "owner": "bennewton999",
+      "repo": "claude-code-mods",
+      "description": "Five Claude Code mods for running many sessions at once, installable from one plugin marketplace: a live session board with a worktree guard, a PR-to-production tracker, rule tripwires with a handoff card, a ledger of outward actions, and a context gauge",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bennewton999/claude-code-mods/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "claude-council",
       "url": "https://github.com/hex/claude-council",
       "owner": "hex",
@@ -5249,6 +5277,20 @@
       "install_url": "https://raw.githubusercontent.com/Mark007-R/Easy-MCP/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "effect-actions",
+      "url": "https://github.com/gjermundgaraba/effect-actions",
+      "owner": "gjermundgaraba",
+      "repo": "effect-actions",
+      "description": "Agent skill and Effect library for defining a typed action once and serving it over HTTP, as MCP tools, as an AI Toolkit, and from a CLI",
+      "category": "Development & Workflow",
+      "platform": "claude-code",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gjermundgaraba/effect-actions/HEAD/.claude-plugin/plugin.json",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -8846,20 +8888,6 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/RaazKetan/creo/HEAD/.codex-plugin/plugin.json",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Datacircle",
-      "url": "https://github.com/waynehamadi/datacircle-plugin",
-      "owner": "waynehamadi",
-      "repo": "datacircle-plugin",
-      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup",
-      "category": "Tools & Integrations",
-      "platform": "codex",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/waynehamadi/datacircle-plugin/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
