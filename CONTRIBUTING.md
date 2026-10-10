@@ -12,6 +12,16 @@ Thank you for considering a contribution!
    ```
 4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
 
+### Native MCP servers
+
+Keep native MCP servers in the relevant topical category and begin their
+description with `MCP server: `. The generator then emits `platform: mcp` and an
+`installation_url` pointing to the source project's README. Both registry feeds
+retain this documentation link without generating a client-specific
+`install_url`. The project's README must document the tested installation and
+MCP configuration; this catalog does not execute those instructions or promise
+automatic installation.
+
 ### Grok submissions
 
 Grok Build plugins can package skills, commands, agents, hooks, MCP servers, or
