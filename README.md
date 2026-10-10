@@ -574,6 +574,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Busabase](https://github.com/busabase/busabase) - Open-source database and workspace for AI agents to manage typed tables, fields, views, records, docs, files, and search with a Streamable HTTP MCP server and human-in-the-loop ChangeRequests.
 - [Cadence Code](https://github.com/michael-L-i/cadence-code) - Fully local voice conversations for Claude Code, Codex, Cursor, and Antigravity on Apple Silicon, with selectable MLX speech and transcription models.
 - [Call-E](https://github.com/CALLE-AI/call-e-integrations) - Plan, run, and inspect Call-E phone call workflows from Codex through the calle CLI.
+- [call4me](https://github.com/skeptrunedev/call4me) - Remote MCP server that lets Claude Code, Codex, and other agents place real phone calls to businesses (bookings, appointments, cancellations) and get back the transcript and outcome.
 - [Canvas Apps Plugin Codex](https://github.com/Ratnam-Mishra/canvas-apps-plugin-codex) - Build and edit Microsoft Power Apps Canvas Apps using natural language and Canvas Authoring MCP server.
 - [Cargo Skills](https://github.com/getcargohq/cargo-skills) - GTM engineering for coding agents — 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code.
 - [CarsXE](https://github.com/carsxe/carsxe-codex-plugin) - Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.
