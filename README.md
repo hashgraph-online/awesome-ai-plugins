@@ -768,6 +768,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [unic](https://github.com/DevopsArtFactory/unic) - Local MCP server exposing read-only AWS inspection tools to AI agents, including capability discovery, Backup vault listing, and context sync previews.
 - [Unified AI System](https://github.com/happy520ai/unified-ai-system) - Self-hosted AI gateway for Codex with provider-free prompt enhancement, governed MCP tools, and a credential-free Docker path.
 - [unslop](https://github.com/MohamedAbdallah-14/unslop) - Strip AI writing patterns from text output — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.
+- [uploads](https://github.com/buildinternet/uploads) - Agent skills, MCP server, and CLI that host screenshots, files, and other artifacts at stable public URLs for embedding in GitHub PRs and issues ([uploads.sh](https://uploads.sh)).
 - [Upwork Autopilot](https://github.com/klajdikkolaj/upwork-autopilot) - Controlled Upwork job search, qualification, and proposal submission sessions through a dedicated Chrome profile.
 - [UXKIN](https://github.com/uxkin/agent) - Hosted MCP server and free skills that give Claude Code, Codex, Cursor and other agents real iOS app screens, user journeys and website design systems to reference before building UI.
 - [Val Town](https://github.com/val-town/plugins) - Build and deploy serverless TypeScript on Val Town from Codex — hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI.
