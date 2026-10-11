@@ -269,6 +269,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Festival](https://github.com/Obedience-Corp/festival) - Planning and persistent context tools that let coding agents execute multi-phase goals across sessions using files and Git.
 - [FinBridge](https://github.com/Jakechj/finbridge-mcp) - Remote MCP server for Korean and US market data with filings, screeners, insider activity, and portfolio backtests.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
+- [Fleetglass](https://github.com/thejoyfulist/fleetglass) - Self-hosted, read-only cockpit that ties every Claude Code and Codex session to the machine it runs on, with CPU, memory, tokens per second, cost per model, and quotas with pace. <!-- platform: standalone -->
 - [FlexViz](https://github.com/flex-analytics/flexviz) - Interactive cross-filter dashboards for large datasets with a Claude Code skill for agent-driven data exploration.
 - [FlowBoard](https://github.com/rasimme/FlowBoard) - Local-first project workspace and task-coordination plugin for OpenClaw and external coding agents, with lazy-loaded context and a shared Kanban board.
 - [Foreman](https://github.com/thruwire/foreman) - Jev-powered agent supervisor for Codex and OpenCode workers, with Pi and Pi Durable hooks for tool activity, project responsibilities, and completion checks.
