@@ -182,6 +182,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
 - [chat-history](https://github.com/ay-bh/chat-history) - Claude Code/Codex/Cursor history search + export.
 - [Check and Fix Accessibility](https://github.com/Neha/check-fix-accessibility) - Agent skill that audits and fixes front-end accessibility to WCAG 2.2 A/AA, covering semantics, keyboard navigation, ARIA, forms, contrast, and screen readers for web and native mobile across Cursor, Claude Code, Codex, Kiro, and Antigravity.
+- [Claude Book Reader](https://github.com/Nomad06/claude-book-reader) - Claude Code mod to read a PDF book in a pane or browser window while the agent works, with pictures shown in kitty and Ghostty.
 - [Claude Code Arcade](https://github.com/witkowsky/claude-code-arcade) - Claude Code mod with five games to play in a pane while the agent works: Flappy Claude, the Chrome dino runner, Snake, Pong and Space Invaders, all starring Clawd in Claude's colours.
 - [Claude Code Codex Plugin](https://github.com/davidq888/claude-code-codex-plugin) - Security-focused Codex plugin that connects to the local Claude Code CLI through MCP with login, status checks, safe-mode prompts, and no credential storage.
 - [Claude Code for Codex](https://github.com/sendbird/cc-plugin-codex) - Reverse of OpenAI's official Claude-hosted plugin: use Claude Code from Codex for reviews, rescue tasks, tracked background jobs, and hook-powered review gates.
