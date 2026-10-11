@@ -39,6 +39,26 @@ def only_path_resolves(path: str):
 
 
 class GeneratePluginsJsonTests(unittest.TestCase):
+    def test_standalone_tool_omits_plugin_install_target(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n### Tools & Integrations\n\n"
+                "- [Demo](https://github.com/example/demo) - Native app."
+                " <!-- platform: standalone -->\n"
+            )
+            with patch.object(MODULE, "probe_install_url") as probe:
+                plugins, added = MODULE.merge_readme_additions([], readme)
+            probe.assert_not_called()
+
+        self.assertEqual(added, 1)
+        self.assertEqual(plugins[0]["platform"], "standalone")
+        self.assertEqual(plugins[0]["description"], "Native app")
+        self.assertNotIn("install_url", plugins[0])
+        entry = MODULE.marketplace_entry(plugins[0])
+        self.assertEqual(entry["url"], "https://github.com/example/demo")
+        self.assertNotIn("install_url", entry)
+
     def test_marketplace_timestamp_is_stable_for_the_day(self) -> None:
         marketplace = MODULE.generate_marketplace_json([])
 

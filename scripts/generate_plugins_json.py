@@ -282,7 +282,12 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
         name = item.group(1)
         url = item.group(2).strip()
-        desc = item.group(3).rstrip(".")
+        desc = item.group(3)
+        standalone = desc.endswith(" <!-- platform: standalone -->")
+        if standalone:
+            desc = desc.removesuffix(" <!-- platform: standalone -->")
+        desc = desc.rstrip(".")
+        entry_platform = "standalone" if standalone else current_platform
 
         # github.com URLs only; relative paths (./plugins/...) are skipped.
         owner_match = re.match(
@@ -301,16 +306,16 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             "repo": repo,
             "description": desc,
             "category": current_category,
-            "platform": current_platform,
+            "platform": entry_platform,
             "source": "awesome-ai-plugins",
         }
-        manifest_path = PLATFORM_MANIFEST_PATHS.get(current_platform)
+        manifest_path = PLATFORM_MANIFEST_PATHS.get(entry_platform)
         if manifest_path:
             plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/{manifest_path}"
             )
-        elif current_platform != DEEPSEEK_HARNESS_PLATFORM:
+        elif entry_platform not in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
             plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
@@ -363,7 +368,7 @@ def merge_readme_additions(
 
         seen.add(key)
 
-        if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
             # Native runtimes resolve repository sources through their own
             # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)

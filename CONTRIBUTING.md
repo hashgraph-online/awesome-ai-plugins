@@ -12,6 +12,14 @@ Thank you for considering a contribution!
    ```
 4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
 
+### Standalone tools
+
+For native applications and standalone CLIs in Tools & Integrations, append
+`<!-- platform: standalone -->` to the listing line. The catalog records the
+`standalone` platform and repository URL, omits the plugin `install_url`, and
+leaves installation instructions in the source repository. Do not add a plugin
+manifest unless the project actually supports that plugin runtime.
+
 ### Grok submissions
 
 Grok Build plugins can package skills, commands, agents, hooks, MCP servers, or
