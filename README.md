@@ -114,6 +114,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [ab-method](https://github.com/ayoubben18/ab-method) - A skill and workflow plugin for Claude Code and Codex that grills problems into plans and drives test-driven missions with critic reviews.
 - [adr-kit](https://github.com/rvdbreemen/adr-kit) - Architecture Decision Record toolkit for Claude Code, Codex, GitHub Copilot CLI, and OpenCode that injects the governing decisions before each edit, guides ADR authoring, and enforces decisions in deterministic pre-commit and CI gates.
 - [Aegis](https://github.com/GanyuanRan/Aegis) - An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.
+- [aegotrax](https://github.com/aegotrax-dev/aegotrax) - Runtime tool-call gate for agents: session intent, approval queue, and audit stream.
 - [Agency Continuity Audit](https://github.com/revertcreations/agency-continuity-audit) - Read-only audit that distinguishes durable agent goals, state, corrections, restart evidence, authority boundaries, scheduler claims, and commercial proof from self-reported health.
 - [Agent Context OS](https://github.com/conorbronsdon/agent-context-os) - Portable Git-backed context and session workflow layer with first-class Claude Code, Codex, and OpenClaw support plus experimental adapters for Hermes, Cursor, and Devin.
 - [Agent Deck](https://github.com/not-so-fat/agent-deck) - One MCP for context management: bind self-improving playbooks, MCP tools, and API keys to the session.
