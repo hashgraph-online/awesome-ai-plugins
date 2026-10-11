@@ -569,6 +569,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Aient](https://github.com/aient-ai/aient-codex-plugin) - AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.
 - [Antigravity 2.0](https://github.com/comprono/antigravity-2-codex-plugin) - Local Codex bridge for Antigravity desktop with setup checks, model limit summaries, DevTools UI automation, and safe project/chat handoff.
 - [AnyCap](https://github.com/anycap-ai/anycap) - Multimodal media generation, analysis, live web research, file sharing, and page publishing through one CLI, Agent Skill, and local MCP server.
+- [anymd](https://github.com/SylphxAI/anymd) - Local MCP server and CLI that converts PDF, Office, EPUB, HTML, image, audio and video files into clean Markdown for agents.
 - [Anywhere](https://github.com/raph559/anywhere) - Self-hosted web app to start, open and stop Claude Code Remote Control sessions on your own Linux, WSL and Windows machines from your phone: pick a device, pick a folder, tap Start.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders tooling for macOS with Codex plugin adapters.
 - [Arize Skills](https://github.com/Arize-ai/arize-skills) - A collection of agent skills for adding Arize observability and managing tracing, datasets, experiments, and prompt workflows via the Arize ax CLI.
