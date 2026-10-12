@@ -469,6 +469,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Shadowclone](https://github.com/theonly1me/shadowclone) - Turns the engineering preferences you keep repeating into reusable skills and instructions for Claude Code, Codex, Cursor, and Antigravity.
 - [silica](https://github.com/kiycoh/silica-harness) - Serves an Obsidian vault as the agent's memory over MCP: semantic and literal recall, gated note writing, and hooks that open each session already knowing its vault.
 - [Simple Man](https://github.com/Maksim-Burtsev/simple-man) - High-compression communication mode for Codex agents that removes filler while preserving search, validation, and implementation effort.
+- [simpleviz](https://github.com/sstoehrm/simpleviz) - Skill teaching agents the simpleviz EDN graph format and CLI so they can author, serve, and compare diagram files.
 - [site-risk-check](https://github.com/kobimantzur/agent-skills) - Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters — trackers firing before consent, missing policies, and machine-checkable WCAG gaps — mapped to the jurisdictions the site actually sells to.
 - [skill-sync-publisher](https://github.com/liuyewang/skill-sync-publisher) - Safely synchronize this Codex skill across public agent-skill registries.
 - [skills](https://github.com/pwguler/skills) - Agent skills against the debt coding agents leave behind: unsettled plans, untested code, and claims nobody checked.
