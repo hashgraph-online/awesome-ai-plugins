@@ -101,6 +101,66 @@ def probe_install_url(
     return None
 
 
+CLAUDE_MARKETPLACE_PATH = ".claude-plugin/marketplace.json"
+CLAUDE_MANIFEST_PATH = ".claude-plugin/plugin.json"
+CLAUDE_MARKETPLACE_MAX_BYTES = 1024 * 1024
+
+
+def probe_claude_marketplace(owner: str, repo: str, name: str) -> str | None:
+    """Resolve a Claude Code plugin listed in the repo's root marketplace.
+
+    A Claude Code marketplace repo keeps `.claude-plugin/marketplace.json` at
+    the root and each plugin's manifest under the plugin's own directory, so
+    the root manifest probe finds nothing. Read the marketplace, pick the
+    plugin named like the README entry (or its only plugin), and return the
+    raw URL of that plugin's manifest when its `source` is a path inside the
+    repo and the manifest exists. Returns None otherwise.
+    """
+    base = f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD"
+    try:
+        with urllib.request.urlopen(
+            f"{base}/{CLAUDE_MARKETPLACE_PATH}", timeout=INSTALL_URL_PROBE_TIMEOUT
+        ) as resp:
+            payload = resp.read(CLAUDE_MARKETPLACE_MAX_BYTES + 1)
+        if len(payload) > CLAUDE_MARKETPLACE_MAX_BYTES:
+            return None
+        marketplace = json.loads(payload.decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        return None
+
+    entries = marketplace.get("plugins") if isinstance(marketplace, dict) else None
+    if not isinstance(entries, list):
+        return None
+    entries = [e for e in entries if isinstance(e, dict)]
+    named = [e for e in entries if str(e.get("name", "")).lower() == name.lower()]
+    if len(named) == 1:
+        entry = named[0]
+    elif len(entries) == 1:
+        entry = entries[0]
+    else:
+        return None
+
+    # Only a directory inside this repo; remote sources (objects, URLs) have
+    # their own manifests elsewhere.
+    source = entry.get("source")
+    if not isinstance(source, str) or "://" in source:
+        return None
+    parts = [part for part in source.split("/") if part not in {"", "."}]
+    if any(part == ".." for part in parts):
+        return None
+
+    manifest_path = "/".join([*parts, CLAUDE_MANIFEST_PATH])
+    url = f"{base}/{manifest_path}"
+    req = urllib.request.Request(url, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=INSTALL_URL_PROBE_TIMEOUT) as resp:
+            if 200 <= resp.status < 300:
+                return url
+    except (urllib.error.URLError, TimeoutError, OSError):
+        return None
+    return None
+
+
 def normalize_repo_key(plugin: dict) -> str:
     owner = str(plugin.get("owner", "")).strip().rstrip("/").lower()
     repo = str(plugin.get("repo", "")).strip().rstrip("/").removesuffix(".git").lower()
@@ -400,6 +460,10 @@ def merge_readme_additions(
             continue
 
         probed = probe_install_url(plugin["owner"], plugin["repo"])
+        if not probed:
+            probed = probe_claude_marketplace(
+                plugin["owner"], plugin["repo"], plugin["name"]
+            )
         if probed:
             plugin["install_url"] = probed
             for manifest_path, platform in MANIFEST_PLATFORMS.items():
