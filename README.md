@@ -270,6 +270,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Espresso](https://github.com/mirkobozzetto/espresso) - Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.
 - [falsegreen-skill](https://github.com/vinicq/falsegreen-skill) - Finds tests that stay green when the code they cover is broken, applying six ordered judgments over Python, TypeScript, JavaScript, and Robot Framework suites in Codex CLI and Claude Code.
 - [Festival](https://github.com/Obedience-Corp/festival) - Planning and persistent context tools that let coding agents execute multi-phase goals across sessions using files and Git.
+- [Filesystem MCP](https://github.com/j0hanz/filesystem-mcp) - MCP server: read, write, search, diff and patch files in allowed folders, with secret files blocked and confirmation before risky changes.
 - [FinBridge](https://github.com/Jakechj/finbridge-mcp) - Remote MCP server for Korean and US market data with filings, screeners, insider activity, and portfolio backtests.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
 - [Fleetglass](https://github.com/thejoyfulist/fleetglass) - Self-hosted, read-only cockpit that ties every Claude Code and Codex session to the machine it runs on, with CPU, memory, tokens per second, cost per model, and quotas with pace. <!-- platform: standalone -->
