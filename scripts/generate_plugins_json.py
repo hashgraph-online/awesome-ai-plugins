@@ -283,7 +283,12 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
         name = item.group(1)
         url = item.group(2).strip()
-        desc = item.group(3).rstrip(".")
+        desc = item.group(3)
+        standalone = desc.endswith(" <!-- platform: standalone -->")
+        if standalone:
+            desc = desc.removesuffix(" <!-- platform: standalone -->")
+        desc = desc.rstrip(".")
+        entry_platform = "standalone" if standalone else current_platform
 
         # github.com URLs only; relative paths (./plugins/...) are skipped.
         owner_match = re.match(
@@ -297,7 +302,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
         # An explicit description prefix keeps native MCP servers in topical
         # categories without claiming they are client-specific plugin bundles.
-        platform = MCP_PLATFORM if desc.startswith("MCP server: ") else current_platform
+        platform = MCP_PLATFORM if desc.startswith("MCP server: ") else entry_platform
 
         plugin = {
             "name": name,
@@ -319,7 +324,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/{manifest_path}"
             )
-        elif platform != DEEPSEEK_HARNESS_PLATFORM:
+        elif platform not in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
             plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
@@ -379,7 +384,7 @@ def merge_readme_additions(
             additions.append(normalize_plugin(plugin))
             continue
 
-        if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
             # Native runtimes resolve repository sources through their own
             # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)

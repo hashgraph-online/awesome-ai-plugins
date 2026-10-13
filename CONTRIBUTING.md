@@ -22,6 +22,14 @@ retain this documentation link without generating a client-specific
 MCP configuration; this catalog does not execute those instructions or promise
 automatic installation.
 
+### Standalone tools
+
+For native applications and standalone CLIs in Tools & Integrations, append
+`<!-- platform: standalone -->` to the listing line. The catalog records the
+`standalone` platform and repository URL, omits the plugin `install_url`, and
+leaves installation instructions in the source repository. Do not add a plugin
+manifest unless the project actually supports that plugin runtime.
+
 ### Grok submissions
 
 Grok Build plugins can package skills, commands, agents, hooks, MCP servers, or
