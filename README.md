@@ -111,6 +111,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
 
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
+- [nuthinking/skills](https://github.com/nuthinking/skills) - Agent skills for Claude Code, Codex and Cursor, including site-edit, where editors pin notes on a live site and Claude Code turns them into pull requests, and product-map, which keeps a feature map and product flows in the repo.
 
 ### Development & Workflow
 
