@@ -36,6 +36,7 @@
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
+  - [Agent Skills](#agent-skills)
   - [Grok Plugins](#grok-plugins)
   - [Kimi Plugins](#kimi-plugins)
   - [DeepSeek Harness Plugins](#deepseek-harness-plugins)
@@ -103,7 +104,13 @@ This repository is a discovery catalog, not a universal installer. Follow each l
 
 ## Community Plugins
 
-Third-party plugins built by the community. [PRs welcome](#contributing)!
+Community-built plugins, native skills, MCP servers, and related agent extensions. [PRs welcome](#contributing)!
+
+### Agent Skills
+
+Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
+
+- [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
 
 ### Development & Workflow
 
@@ -141,6 +148,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Agnostic-AI](https://github.com/ucsandman/Agnostic-AI) - Capture your Claude Code or Codex harness once (rules, hooks, skills, subagents, commands and MCP servers) and apply it identically to Gemini CLI, Cursor, Antigravity and 16 more clients.
 - [AI Quota HUD](https://github.com/Pakapong26/ai-quota-hud) - Windows desktop HUD showing % left and reset countdown for every Codex/ChatGPT and Claude Code account (local + VPS over SSH) plus xKiro credit, flagging early/bonus resets while reading only local logs so it uses zero quota.
 - [AI Video Transcriber](https://github.com/wendy7756/AI-Video-Transcriber) - Transcribe and summarize videos, podcasts, and local media via a Codex plugin, Claude Code skill, and MCP server.
+- [ai-companion-time-anchor](https://github.com/See-Sol-Lab/ai-companion-time-anchor) - Cross-client skill and hook collection for per-conversation elapsed-time awareness, ambient time cues, active clock checks, and temporal-context updates across Codex, Claude Code, and web/chat environments.
 - [AI-Native SDLC](https://github.com/bashebr/ai-native-sdlc) - Reusable skill and plugin bundle implementing the AI-native SDLC workflow: plan, design, build, test, deploy, and maintain with human approval gates.
 - [AIBoarding](https://github.com/gustavo-meilus/aiboarding) - Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.
 - [aide](https://github.com/jmylchreest/aide) - Persistent memory, code intelligence, and multi-agent orchestration for Claude Code, OpenCode, and Codex CLI via skills, hooks, and an MCP server.
@@ -158,7 +166,6 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Audio Plugin Coder](https://github.com/Noizefield/audio-plugin-coder) - Agent-agnostic JUCE workflow for building VST3/AU plugins from idea through design, implementation, test, and installer packaging.
 - [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) - Portable agent skill for auditing and rewriting AI-patterned prose, with an optional local MCP detector that calls no model and sends no text to a network service.
 - [Awesome-Journal-Skills](https://github.com/brycewang-stanford/Awesome-Journal-Skills) - Claude Code plugin marketplace (also usable as Codex skills) of 300 journal- and conference-specific packs covering topic fit, house style, submission rules, and reviewer response for 744 venues across economics, social science, natural science, medicine, and computer science.
-- [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
 - [Azzle](https://github.com/azzle-lab/azzle) - Base-native task coordination and settlement for AI agents, exposed through a hosted MCP server and TypeScript agent SDK.
 - [BABOK Analyst](https://github.com/GSkuza/BABOK_ANALYST) - BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates.
 - [BanyanCode](https://github.com/EkagraAgarwal/BanyanCode) - Terminal coding agent with parallel subagents, cross-session memory, Tree-sitter code graph, and free web research.
@@ -349,6 +356,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Labtasker](https://github.com/luocfprime/labtasker) - Queue and run independent ML inference, evaluation, and experiment tasks across long-lived Python or command workers with a Claude Code plugin and cross-agent skill.
 - [LaTeX Inline](https://github.com/dazebug/latex-inline) - Typesets the LaTeX math in Claude Code replies inline with the text, as pictures in Ghostty, cmux and kitty and as Unicode text in other terminals.
 - [lattice](https://github.com/techygarg/lattice) - Composable AI skills framework that infuses clean code, clean architecture, domain-driven design, secure coding, and proper testing into the workflow by default, with scenario-driven guides for getting started, customization, and team use.
+- [Limitless Library](https://github.com/Univeracity/limitlesslibrary) - MCP server: Python CLI and stdio server for reusing source-free methods and explicitly shared code with receiver-controlled verification.
 - [limitwise](https://github.com/aarsht7/limitwise) - Schedule and automate Codex work while respecting rolling and weekly usage limits in percentage or in tokens. Let your PC work while you sleep.
 - [LinkedIn Animated Infographics](https://github.com/imMamdouhaboammar/linkedin-animated-infographics) - Evidence-safe animated infographic generator with multi-agent design pipeline for LinkedIn.
 - [LLM Transpile](https://github.com/epicsagas/llm-transpile) - Auto-compress .md, .html, and .txt files via PostToolUse hook, cutting context usage by up to 40% with zero workflow change.
@@ -445,6 +453,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Quanta Costa](https://github.com/wukonigcom/quanta-costa) - Claude Code plugin that shows your usage limits with a pace forecast, billing period, session cost in tokens and $/€, and whether your plan pays off, right above the prompt.
 - [RAG Reviewer](https://github.com/mimfort/rag_for_git) - Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.
 - [RagLeap](https://github.com/antonyrag/ragleap-core) - Self-hosted AI employee platform with 46 agents, Graph RAG on Neo4j, BYOK across providers, MIT.
+- [RAPR AI](https://github.com/rawalrahul/raprai) - Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp.
 - [React Native Developer Skills](https://github.com/Neha/rn-developer-skills) - Vendor-neutral React Native skill collection covering spec authoring, architecture, performance, security, testing, and code review for Codex, Claude, and Cursor.
 - [Redfox Agent Plugins](https://github.com/redfox-data/redfox-agent-plugins) - Ten cross-platform agent skills (video download, transcripts, image gen, trend search) installable on Claude Code, Codex, Cursor, and Gemini CLI from a single repo.
 - [reevesagents](https://github.com/mertkayacs/reevesagents-skill) - Skill and MCP server that let one coding agent start, prompt, read and stop other AI coding CLIs (Claude Code, Codex, Kimi, Qwen, OpenCode), each in its own tmux window, packaged for Claude Code, Codex, Kimi Code and Gemini CLI.
@@ -468,6 +477,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Screenpipe MCP](https://github.com/screenpipe/screenpipe) - Gives agents searchable screen-text and audio history through MCP and a local API; source-available under the Screenpipe Commercial License, with configured cloud features able to send context off-device.
 - [Sealos](https://github.com/labring/sealos-skills) - Deploy apps to Sealos Cloud from Codex with readiness checks, Dockerfile generation, Compose conversion, image builds, and rollout updates.
 - [SearchLink Lite](https://github.com/GlobalMatchHub/searchlink-lite) - Local read-only MCP server for Google Search Console: site performance and query breakdowns, low-CTR and rank 8-20 opportunities, URL inspection, sitemaps, on-page checks and Google ranking update history.
+- [Second Claude Code](https://github.com/unclejobs-ai/second-claude-code) - Knowledge-work plugin for Claude Code, Codex, and Grok with research, writing, review, and refinement skills and a gated gather, draft, check, and cut workflow.
 - [Secret Guard](./plugins/mturac/secret-guard) - Pre-commit secret scanner using pattern and entropy detection.
 - [SEO Skills AI](https://github.com/seoskillsai/seo-skills-ai) - Universal SEO skill suite and technical audit engine for Claude Code, Cursor, Codex, and other agents, with first-party Python adapters and HOL plugin-scanner CI.
 - [Session Orchestrator](https://github.com/Kanevry/session-orchestrator) - Session orchestration for Claude Code, Codex, and Cursor IDE — structured planning, wave-based execution, VCS integration (GitLab + GitHub), quality gates, and clean session close-out with issue tracking.

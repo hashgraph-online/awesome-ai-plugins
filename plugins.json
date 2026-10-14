@@ -3,12 +3,13 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-13",
-  "total": 796,
+  "total": 800,
   "platforms": [
     "codex",
     "grok",
     "claude-code",
     "standalone",
+    "mcp",
     "kimi",
     "deepseek-harness"
   ],
@@ -4427,6 +4428,20 @@
       ]
     },
     {
+      "name": "ai-companion-time-anchor",
+      "url": "https://github.com/See-Sol-Lab/ai-companion-time-anchor",
+      "owner": "See-Sol-Lab",
+      "repo": "ai-companion-time-anchor",
+      "description": "Cross-client skill and hook collection for per-conversation elapsed-time awareness, ambient time cues, active clock checks, and temporal-context updates across Codex, Claude Code, and web/chat environments",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/See-Sol-Lab/ai-companion-time-anchor/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "AI-Native SDLC",
       "url": "https://github.com/bashebr/ai-native-sdlc",
       "owner": "bashebr",
@@ -6456,6 +6471,20 @@
       ]
     },
     {
+      "name": "Limitless Library",
+      "url": "https://github.com/Univeracity/limitlesslibrary",
+      "owner": "Univeracity",
+      "repo": "limitlesslibrary",
+      "description": "MCP server: Python CLI and stdio server for reusing source-free methods and explicitly shared code with receiver-controlled verification",
+      "category": "Development & Workflow",
+      "platform": "mcp",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Univeracity/limitlesslibrary#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "limitwise",
       "url": "https://github.com/aarsht7/limitwise",
       "owner": "aarsht7",
@@ -7576,6 +7605,20 @@
       ]
     },
     {
+      "name": "RAPR AI",
+      "url": "https://github.com/rawalrahul/raprai",
+      "owner": "rawalrahul",
+      "repo": "raprai",
+      "description": "Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rawalrahul/raprai/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "React Native Developer Skills",
       "url": "https://github.com/Neha/rn-developer-skills",
       "owner": "Neha",
@@ -7795,6 +7838,20 @@
       "platform": "codex",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/GlobalMatchHub/searchlink-lite/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Second Claude Code",
+      "url": "https://github.com/unclejobs-ai/second-claude-code",
+      "owner": "unclejobs-ai",
+      "repo": "second-claude-code",
+      "description": "Knowledge-work plugin for Claude Code, Codex, and Grok with research, writing, review, and refinement skills and a gated gather, draft, check, and cut workflow",
+      "category": "Development & Workflow",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/unclejobs-ai/second-claude-code/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
         "codex"
       ]
@@ -9500,11 +9557,11 @@
       "repo": "homie",
       "description": "Four-level chat-voice personality layer for coding agents (off, yo, dawg, mafa) that changes how the agent talks in prose while leaving technical answers and code identical",
       "category": "Tools & Integrations",
-      "platform": "claude-code",
+      "platform": "codex",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/prashanthgit19/homie/HEAD/.claude-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/prashanthgit19/homie/HEAD/.codex-plugin/plugin.json",
       "ecosystems": [
-        "claude-code"
+        "codex"
       ]
     },
     {

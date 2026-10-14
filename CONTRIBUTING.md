@@ -10,7 +10,21 @@ Thank you for considering a contribution!
    ```
    - [Extension Name](https://github.com/owner/repo) - Description (max 1 sentence).
    ```
-4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+4. **Add to the appropriate section** - Agent Skills, Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+
+### Native Agent Skills
+
+Use an `Agent Skills` subsection under Community Plugins for repositories that publish independently installable `SKILL.md` folders rather than a client-specific plugin bundle. The generator records `platform: agent-skills`, links `installation_url` to the source README, and omits a client-specific `install_url`. The source README must document tested installation instructions and supported clients.
+
+### Native MCP servers
+
+Keep native MCP servers in the relevant topical category and begin their
+description with `MCP server: `. The generator then emits `platform: mcp` and an
+`installation_url` pointing to the source project's README. Both registry feeds
+retain this documentation link without generating a client-specific
+`install_url`. The project's README must document the tested installation and
+MCP configuration; this catalog does not execute those instructions or promise
+automatic installation.
 
 ### Standalone tools
 
