@@ -310,6 +310,10 @@ def publish_check(
         raise RuntimeError("validator returned an invalid PR identity")
 
     conclusion, check_title, summary = check_summary(result, scanner_jobs)
+    if check_title.startswith("source scan"):
+        summary += (f"\n\n[Open the source scan job summaries and download sanitized JSON/SARIF findings]({run_url}). "
+                    f"Look for the `scan-findings-pr-{number}-` artifact. Reports include rule IDs and file locations, "
+                    "but omit source snippets and credential values. A missing report indicates a scanner execution problem, not a passing scan.")
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     payload = {
         "name": CHECK_NAME,
