@@ -274,8 +274,9 @@ class GeneratePluginsJsonTests(unittest.TestCase):
                 "plugins/bar/.claude-plugin/plugin.json": None,
             }),
         ):
-            url = MODULE.probe_claude_marketplace("example", "mods", "Bar Plugin")
+            found, url = MODULE.probe_claude_marketplace("example", "mods", "Bar Plugin")
 
+        self.assertTrue(found)
         self.assertEqual(
             url,
             "https://raw.githubusercontent.com/example/mods"
@@ -292,7 +293,7 @@ class GeneratePluginsJsonTests(unittest.TestCase):
                     "elsewhere/.claude-plugin/plugin.json": None,
                 }),
             ):
-                self.assertIsNone(MODULE.probe_claude_marketplace("example", "mods", "x"))
+                self.assertEqual(MODULE.probe_claude_marketplace("example", "mods", "x"), (True, None))
 
     def test_ignores_marketplace_whose_plugin_manifest_is_missing(self) -> None:
         marketplace = b'{"plugins": [{"name": "x", "source": "./x"}]}'
@@ -300,9 +301,13 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             "urllib.request.urlopen",
             serves({".claude-plugin/marketplace.json": marketplace}),
         ):
-            self.assertIsNone(MODULE.probe_claude_marketplace("example", "mods", "x"))
+            self.assertEqual(MODULE.probe_claude_marketplace("example", "mods", "x"), (True, None))
 
-    def test_ambiguous_marketplace_keeps_default_install_url(self) -> None:
+    def test_no_marketplace_is_not_found(self) -> None:
+        with patch("urllib.request.urlopen", serves({})):
+            self.assertEqual(MODULE.probe_claude_marketplace("example", "mods", "x"), (False, None))
+
+    def test_unresolved_marketplace_has_no_install_target(self) -> None:
         marketplace = (
             b'{"plugins": [{"name": "a", "source": "./a"}, {"name": "b", "source": "./b"}]}'
         )
@@ -317,8 +322,22 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             ):
                 plugins, _ = MODULE.merge_readme_additions([], readme)
 
-        self.assertTrue(plugins[0]["install_url"].endswith("/HEAD/.codex-plugin/plugin.json"))
-        self.assertNotEqual(plugins[0]["platform"], "claude-code")
+        # The root manifests are missing, so a default path would 404 or name another bundle.
+        self.assertNotIn("install_url", plugins[0])
+        self.assertEqual(plugins[0]["platform"], "claude-code")
+        self.assertNotIn("install_url", MODULE.marketplace_entry(plugins[0]))
+
+    def test_unreadable_marketplace_has_no_install_target(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = claude_marketplace_readme(directory, "token-bar")
+            with patch(
+                "urllib.request.urlopen",
+                serves({".claude-plugin/marketplace.json": b"not json"}),
+            ):
+                plugins, _ = MODULE.merge_readme_additions([], readme)
+
+        self.assertNotIn("install_url", plugins[0])
+        self.assertEqual(plugins[0]["platform"], "claude-code")
 
 
 if __name__ == "__main__":
