@@ -110,6 +110,21 @@
       "install_url": "https://raw.githubusercontent.com/yfge/agent-harness-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Agent Retro",
+      "displayName": "Agent Retro",
+      "description": "Weekly retro of how you use Codex and Claude Code: 12 animated slides of usage stats with four evidence-backed coaching tips, built locally from your own logs.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "summationai",
+      "repo": "agent-retro",
+      "url": "https://github.com/summationai/agent-retro",
+      "install_url": "https://raw.githubusercontent.com/summationai/agent-retro/HEAD/plugins/agent-retro/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Agent Workflow System",
       "displayName": "Agent Workflow System",
       "description": "\u4e00\u5957\u4e2d\u6587AI\u5de5\u4f5c\u6d41\u7cfb\u7edf\uff1a7\u4e2a\u534f\u4f5c\u6280\u80fd + \u884c\u4e3a\u89c4\u8303\u5baa\u6cd5 + \u4f1a\u8bdd\u6062\u590d\u673a\u5236\uff0c\u6a21\u7cca\u76ee\u6807\u2192\u53ef\u6267\u884c\u4efb\u52a1\uff0c\u5168\u751f\u547d\u5468\u671f\u5f15\u5bfc\u3002Codex & Claude Code \u53cc\u5e73\u53f0\uff0c\u65b0\u624b\u53cb\u597d\u3002",
@@ -2538,6 +2553,21 @@
       "repo": "apple-productivity-mcp",
       "url": "https://github.com/matk0shub/apple-productivity-mcp",
       "install_url": "https://raw.githubusercontent.com/matk0shub/apple-productivity-mcp/HEAD/plugins/apple-calendar/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Arcmira: YouTube Transcript Search",
+      "displayName": "Arcmira: YouTube Transcript Search",
+      "description": "Search YouTube transcripts for timestamped quotes, speaker appearances, sponsors and recommendations.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "arcmira",
+      "repo": "mcp",
+      "url": "https://github.com/arcmira/mcp",
+      "install_url": "https://raw.githubusercontent.com/arcmira/mcp/HEAD/plugins/arcmira/.codex-plugin/plugin.json"
     },
     {
       "name": "AutoCAD Tianzheng Tools",
