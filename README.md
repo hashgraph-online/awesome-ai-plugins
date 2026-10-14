@@ -36,6 +36,7 @@
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
+  - [Agent Skills](#agent-skills)
   - [Grok Plugins](#grok-plugins)
   - [Kimi Plugins](#kimi-plugins)
   - [DeepSeek Harness Plugins](#deepseek-harness-plugins)
@@ -103,7 +104,13 @@ This repository is a discovery catalog, not a universal installer. Follow each l
 
 ## Community Plugins
 
-Third-party plugins built by the community. [PRs welcome](#contributing)!
+Community-built plugins, native skills, MCP servers, and related agent extensions. [PRs welcome](#contributing)!
+
+### Agent Skills
+
+Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
+
+- [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
 
 ### Development & Workflow
 
@@ -141,6 +148,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Agnostic-AI](https://github.com/ucsandman/Agnostic-AI) - Capture your Claude Code or Codex harness once (rules, hooks, skills, subagents, commands and MCP servers) and apply it identically to Gemini CLI, Cursor, Antigravity and 16 more clients.
 - [AI Quota HUD](https://github.com/Pakapong26/ai-quota-hud) - Windows desktop HUD showing % left and reset countdown for every Codex/ChatGPT and Claude Code account (local + VPS over SSH) plus xKiro credit, flagging early/bonus resets while reading only local logs so it uses zero quota.
 - [AI Video Transcriber](https://github.com/wendy7756/AI-Video-Transcriber) - Transcribe and summarize videos, podcasts, and local media via a Codex plugin, Claude Code skill, and MCP server.
+- [ai-companion-time-anchor](https://github.com/See-Sol-Lab/ai-companion-time-anchor) - Cross-client skill and hook collection for per-conversation elapsed-time awareness, ambient time cues, active clock checks, and temporal-context updates across Codex, Claude Code, and web/chat environments.
 - [AI-Native SDLC](https://github.com/bashebr/ai-native-sdlc) - Reusable skill and plugin bundle implementing the AI-native SDLC workflow: plan, design, build, test, deploy, and maintain with human approval gates.
 - [AIBoarding](https://github.com/gustavo-meilus/aiboarding) - Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.
 - [aide](https://github.com/jmylchreest/aide) - Persistent memory, code intelligence, and multi-agent orchestration for Claude Code, OpenCode, and Codex CLI via skills, hooks, and an MCP server.
@@ -194,8 +202,10 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [claude-code-mods](https://github.com/bennewton999/claude-code-mods) - Five Claude Code mods for running many sessions at once, installable from one plugin marketplace: a live session board with a worktree guard, a PR-to-production tracker, rule tripwires with a handoff card, a ledger of outward actions, and a context gauge.
 - [claude-council](https://github.com/hex/claude-council) - Claude Code plugin that asks Gemini, OpenAI, Grok, Perplexity, Kimi, OpenRouter models, the Codex, Cursor, Grok and Kimi CLIs and a local ollama model the same question in parallel and lines the answers up with a synthesis of where they agree and differ.
 - [claude-dnd-skill](https://github.com/neuralinitiative/claude-dnd-skill) - Unofficial D&D 5e Dungeon Master for Claude Code with persistent campaigns, full 5e rules mechanics, and an optional cinematic display companion for a TV.
+- [claude-harness-bootstrap](https://github.com/sagaga144/claude-harness-bootstrap) - Generates a project-specific Claude Code harness (CLAUDE.md, hooks, subagents, commands) from one paragraph, with an eval suite showing where it changes the outcome.
 - [claude-image-gen](https://github.com/guinacio/claude-image-gen) - AI-powered image generation using Google Gemini or OpenAI (gpt-image-2), integrated with Claude Code via Skills or Claude.ai via MCP.
 - [claude-jit-context](https://github.com/Digital-Process-Tools/claude-jit-context) - Project knowledge that loads only when it is needed, matched against the prompt, the file being touched, or the tool being run instead of sitting in context all session.
+- [claude-project-map](https://github.com/bokiko/claude-project-map) - /project-map renders one status page: done / next / one decision box; scripts gather facts, the model judges.
 - [claude-remember](https://github.com/Digital-Process-Tools/claude-remember) - Persistent memory for Claude Code with identity, context, and continuity carried across sessions.
 - [claude-supertool](https://github.com/Digital-Process-Tools/claude-supertool) - Batches file, git and tracker operations into one round-trip, collapsing many reads, greps and globs into a single call for fewer output tokens and less wall time.
 - [ClaudeWhip](https://github.com/witkowsky/whip) - Slap your MacBook to whip Claude Code: the accelerometer feeds hooks that tell Claude to hurry up, plus a whip lane in the status line, slash commands and a Claude Desktop band above the prompt.
@@ -269,6 +279,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Festival](https://github.com/Obedience-Corp/festival) - Planning and persistent context tools that let coding agents execute multi-phase goals across sessions using files and Git.
 - [FinBridge](https://github.com/Jakechj/finbridge-mcp) - Remote MCP server for Korean and US market data with filings, screeners, insider activity, and portfolio backtests.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
+- [Fleetglass](https://github.com/thejoyfulist/fleetglass) - Self-hosted, read-only cockpit that ties every Claude Code and Codex session to the machine it runs on, with CPU, memory, tokens per second, cost per model, and quotas with pace. <!-- platform: standalone -->
 - [FlexViz](https://github.com/flex-analytics/flexviz) - Interactive cross-filter dashboards for large datasets with a Claude Code skill for agent-driven data exploration.
 - [FlowBoard](https://github.com/rasimme/FlowBoard) - Local-first project workspace and task-coordination plugin for OpenClaw and external coding agents, with lazy-loaded context and a shared Kanban board.
 - [Foreman](https://github.com/thruwire/foreman) - Jev-powered agent supervisor for Codex and OpenCode workers, with Pi and Pi Durable hooks for tool activity, project responsibilities, and completion checks.
@@ -300,6 +311,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Hera Agent Unity](https://github.com/NotNull92/hera-agent-unity) - Controls and verifies a live Unity Editor through a low-token CLI, with scene, asset, Inspector, Play Mode, test, screenshot, and runtime C# workflows for Codex and other coding agents.
 - [Hey Jarvis](https://github.com/dijiclick/hey-jarvis) - macOS voice assistant with an on-device wake word that runs quick Mac actions instantly and hands real work (code, browser, apps, email) to Claude Code through the Agent SDK.
 - [hiai-opencode](https://github.com/HiAi-gg/hiai-opencode) - OpenCode plugin adding a multi-agent team with 10 specialist agents, execution gates, LSP tools, browser automation, and memory search.
+- [Hindsight](https://github.com/emoubarak/hindsight) - Claude Code plugin that searches your past sessions by meaning and turns the corrections you keep repeating into rules it follows.
 - [HOL Guard Plugin](https://github.com/hashgraph-online/hol-guard-plugin) - AI antivirus workflow for Codex, Claude Code, Cursor, Gemini, OpenCode, MCP servers, skills, and plugin release checks with local approvals and receipts.
 - [Honcho](https://github.com/plastic-labs/codex-honcho) - Persistent cross-session memory for Codex powered by Honcho — lifecycle hooks capture each session and inject relevant context back at session start, so Codex remembers your preferences, projects, and decisions across restarts.
 - [honeycomb](https://github.com/sediment-ai/honeycomb) - Buzz agent fleet as code, with each agent defined in YAML, deployed to Kubernetes, and routed to models through a LiteLLM gateway.
@@ -344,6 +356,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Labtasker](https://github.com/luocfprime/labtasker) - Queue and run independent ML inference, evaluation, and experiment tasks across long-lived Python or command workers with a Claude Code plugin and cross-agent skill.
 - [LaTeX Inline](https://github.com/dazebug/latex-inline) - Typesets the LaTeX math in Claude Code replies inline with the text, as pictures in Ghostty, cmux and kitty and as Unicode text in other terminals.
 - [lattice](https://github.com/techygarg/lattice) - Composable AI skills framework that infuses clean code, clean architecture, domain-driven design, secure coding, and proper testing into the workflow by default, with scenario-driven guides for getting started, customization, and team use.
+- [Limitless Library](https://github.com/Univeracity/limitlesslibrary) - MCP server: Python CLI and stdio server for reusing source-free methods and explicitly shared code with receiver-controlled verification.
 - [limitwise](https://github.com/aarsht7/limitwise) - Schedule and automate Codex work while respecting rolling and weekly usage limits in percentage or in tokens. Let your PC work while you sleep.
 - [LinkedIn Animated Infographics](https://github.com/imMamdouhaboammar/linkedin-animated-infographics) - Evidence-safe animated infographic generator with multi-agent design pipeline for LinkedIn.
 - [LLM Transpile](https://github.com/epicsagas/llm-transpile) - Auto-compress .md, .html, and .txt files via PostToolUse hook, cutting context usage by up to 40% with zero workflow change.
@@ -378,6 +391,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [miru-code](https://github.com/takara-ai/miru-code) - MCP server and multi-IDE plugin giving coding agents semantic and hybrid code search tools.
 - [MisakaNet](https://github.com/Ikalus1988/MisakaNet) - Git-backed failure-memory for AI coding agents with 290 indexed lessons, MCP server with 5 tools (search, get_lesson, submit_usage, submit_intake, usage_status), and DeepSeekHarness adapter.
 - [model-orchestration](https://github.com/divyamrastogi/model-orchestration) - Manager/worker orchestration for Claude Code: keep your smartest model as the manager and delegate implementation and token-hungry work to isolated headless workers backed by any Anthropic-compatible API (z.ai GLM, Kimi, DeepSeek, LiteLLM proxies).
+- [mstack](https://github.com/IMisbahk/mstack) - 61 skills, 19 agents and 33 prompts for Claude Code, Cursor, Codex and 16 more coding agents via npx @imisbahk/mstack.
 - [mstar-harness](https://github.com/btspoony/mstar-harness) - Multi-agent code harness plugin that routes work through PM, dev, QC, and QA roles with deterministic workflow gates enforced by a TypeScript engine, installable across dsh, omp, OpenCode, Cursor, Kimi Code, ZCode, and Codex.
 - [Munim](https://github.com/vishalsg42/munim) - Multi-account MCP server that holds a separate OAuth session per client across 11 providers, forwards each provider's own tools with that client's credentials, and refuses any call that would send one client's credential to another host.
 - [mutagate](https://github.com/keyboardsamurai/mutagate) - Mutation-testing hook for Claude Code, Codex, OpenCode, and Pi that mutates the code under each agent-written test and blocks completion until the tests kill at least 80% of the mutants.
@@ -439,6 +453,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Quanta Costa](https://github.com/wukonigcom/quanta-costa) - Claude Code plugin that shows your usage limits with a pace forecast, billing period, session cost in tokens and $/€, and whether your plan pays off, right above the prompt.
 - [RAG Reviewer](https://github.com/mimfort/rag_for_git) - Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.
 - [RagLeap](https://github.com/antonyrag/ragleap-core) - Self-hosted AI employee platform with 46 agents, Graph RAG on Neo4j, BYOK across providers, MIT.
+- [RAPR AI](https://github.com/rawalrahul/raprai) - Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp.
 - [React Native Developer Skills](https://github.com/Neha/rn-developer-skills) - Vendor-neutral React Native skill collection covering spec authoring, architecture, performance, security, testing, and code review for Codex, Claude, and Cursor.
 - [Redfox Agent Plugins](https://github.com/redfox-data/redfox-agent-plugins) - Ten cross-platform agent skills (video download, transcripts, image gen, trend search) installable on Claude Code, Codex, Cursor, and Gemini CLI from a single repo.
 - [reevesagents](https://github.com/mertkayacs/reevesagents-skill) - Skill and MCP server that let one coding agent start, prompt, read and stop other AI coding CLIs (Claude Code, Codex, Kimi, Qwen, OpenCode), each in its own tmux window, packaged for Claude Code, Codex, Kimi Code and Gemini CLI.
@@ -462,6 +477,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Screenpipe MCP](https://github.com/screenpipe/screenpipe) - Gives agents searchable screen-text and audio history through MCP and a local API; source-available under the Screenpipe Commercial License, with configured cloud features able to send context off-device.
 - [Sealos](https://github.com/labring/sealos-skills) - Deploy apps to Sealos Cloud from Codex with readiness checks, Dockerfile generation, Compose conversion, image builds, and rollout updates.
 - [SearchLink Lite](https://github.com/GlobalMatchHub/searchlink-lite) - Local read-only MCP server for Google Search Console: site performance and query breakdowns, low-CTR and rank 8-20 opportunities, URL inspection, sitemaps, on-page checks and Google ranking update history.
+- [Second Claude Code](https://github.com/unclejobs-ai/second-claude-code) - Knowledge-work plugin for Claude Code, Codex, and Grok with research, writing, review, and refinement skills and a gated gather, draft, check, and cut workflow.
 - [Secret Guard](./plugins/mturac/secret-guard) - Pre-commit secret scanner using pattern and entropy detection.
 - [SEO Skills AI](https://github.com/seoskillsai/seo-skills-ai) - Universal SEO skill suite and technical audit engine for Claude Code, Cursor, Codex, and other agents, with first-party Python adapters and HOL plugin-scanner CI.
 - [Session Orchestrator](https://github.com/Kanevry/session-orchestrator) - Session orchestration for Claude Code, Codex, and Cursor IDE — structured planning, wave-based execution, VCS integration (GitLab + GitHub), quality gates, and clean session close-out with issue tracking.
@@ -469,6 +485,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Shadowclone](https://github.com/theonly1me/shadowclone) - Turns the engineering preferences you keep repeating into reusable skills and instructions for Claude Code, Codex, Cursor, and Antigravity.
 - [silica](https://github.com/kiycoh/silica-harness) - Serves an Obsidian vault as the agent's memory over MCP: semantic and literal recall, gated note writing, and hooks that open each session already knowing its vault.
 - [Simple Man](https://github.com/Maksim-Burtsev/simple-man) - High-compression communication mode for Codex agents that removes filler while preserving search, validation, and implementation effort.
+- [simpleviz](https://github.com/sstoehrm/simpleviz) - Skill teaching agents the simpleviz EDN graph format and CLI so they can author, serve, and compare diagram files.
 - [site-risk-check](https://github.com/kobimantzur/agent-skills) - Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters — trackers firing before consent, missing policies, and machine-checkable WCAG gaps — mapped to the jurisdictions the site actually sells to.
 - [skill-sync-publisher](https://github.com/liuyewang/skill-sync-publisher) - Safely synchronize this Codex skill across public agent-skill registries.
 - [skills](https://github.com/pwguler/skills) - Agent skills against the debt coding agents leave behind: unsettled plans, untested code, and claims nobody checked.
@@ -492,6 +509,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [STE-Pro Max](https://github.com/shyamsridhar123/STE-Pro-Max) - Simplified Technical English-inspired writing, interactive visual explanations, and evidence-linked storytelling for Claude Code, Codex, and GitHub Copilot CLI.
 - [Stvena](https://github.com/nccapo/stvena) - Terminal workspace for running Codex or Claude Code beside live diffs, full-file review, checks, staging, and precise code feedback.
 - [StyleSeed](https://github.com/bitjaru/styleseed) - Compiles your project's design decisions into a lock file, then enforces them on Claude Code, Codex, and Cursor output with code and rendered-pixel gates so screens stay consistent across sessions.
+- [subagent-tuner](https://github.com/Kruhlikau/subagent-tuner) - Claude Code mod that sets the model and reasoning effort of every subagent, with a Manual/Auto band, a pick pane and a saved default that overrides the model the agent asked for.
 - [Suede Creator Skills](https://github.com/JasonColapietro/suede-creator-skills) - An open-source Agent Skills pack for Claude Code and Codex covering multi-agent workflows, code review, design, copy, SEO, app shipping, creator-rights workflows, and local read-only MCP discovery.
 - [Super Jev](https://github.com/Kevthetech143/super-jev) - One judge between your agent and your data: finds the right skill and file, checks claims, gates actions, and remembers only the answers you approve.
 - [super-pm](https://github.com/konglong87/superPM) - Product management skill pack with 50 core skills and 6 workflows covering demand research, PRD writing, growth analysis, product strategy, and launch planning.
@@ -665,6 +683,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [HTML/CSS to Image API](https://github.com/htmlcsstoimage/agent-plugins) - Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser.
 - [humanizer-ru](https://github.com/ilyautov/humanizer-ru) - Agent skill for Claude Code, Codex, Cursor and Gemini that rewrites Russian text to remove 64 AI-generation markers (bureaucratese, calques, ChatGPT fingerprints), with a corpus-calibrated scanner, audit mode and author-voice calibration.
 - [Hyreflow](https://github.com/automindz-solutions/hyreflow-plugins) - Recruitment automation plugin for Codex, Claude Code, Cowork and Cursor with Agent Skills and a remote OAuth MCP server: source, enrich, qualify and sequence candidates, then push them to your ATS on metered credits.
+- [iki](https://github.com/zeikar/iki) - Claude Code and Codex plugin that draws character parts with an image model and auto-rigs them into an animated .iki puppet over an MCP server.
 - [im-ai-copyeditor](https://github.com/Turtle-Hwan/im-ai-copyeditor) - Korean copyediting skill for coding agents that fixes spelling, translation-style phrasing, AI tone, and style sentence by sentence.
 - [immich-photo-manager](https://github.com/drolosoft/immich-photo-manager) - MCP server and Claude Code plugin for self-hosted Immich photo libraries: CLIP and OCR search, geographic album curation, duplicate detection, people and faces, metadata repair, video frames and PDF photobooks, 94 tools and 13 skills tested live on Immich 2.x and 3.x, also via uvx or Docker.
 - [Infrawise](https://github.com/Sidd27/infrawise) - MCP server and CLI that gives AI coding assistants live AWS, database, and Kafka infrastructure context (table schemas, Lambda trigger event shapes, queue and IaC config) and flags costly misconfigurations before they ship.
@@ -696,6 +715,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [mcp-dialect-fix](https://github.com/Salman-Labs/mcp-dialect-fix) - npx stdio proxy that rewrites MCP tool schemas from JSON Schema draft-07 to 2020-12 for Claude Desktop and Cowork, plus an SDK transport wrapper and a CI check.
 - [mcp-for-Azgaar](https://github.com/aznan-triks/mcp-for-Azgaar) - MCP server connecting AI assistants to Azgaar's Fantasy Map Generator to inspect geography, manage realms, and edit maps locally.
 - [mcp-gatehouse](https://github.com/nickgeorgeseo/mcp-gatehouse) - Python library that adds permission tiers, fail-closed approval gates, and append-only JSONL audit logging with secret redaction inside MCP servers built on the official Python SDK, with no proxy or external policy service (`pip install mcp-gatehouse`).
+- [mcp-infer](https://github.com/Emilthelucky/mcp-infer) - Infers MCP tool definitions from TypeScript types and JSDoc for the official MCP TypeScript SDK. <!-- platform: standalone -->
 - [mcp-music-studio](https://github.com/linxule/mcp-music-studio) - MCP server for AI music creation: scored ABC notation composition and Strudel live coding, with sheet music rendering, harmony analysis, and MIDI/WAV export.
 - [mcp-pin](https://github.com/GautamTalksDev/mcp-pin) - Pins the MCP tool descriptions and schemas your client approved and stops the session when a server changes them, with a signed public log of 400+ servers.
 - [mcpsnoop](https://github.com/kerlenton/mcpsnoop) - Wireshark for MCP, a transparent proxy that shows the real traffic between your AI client and MCP servers, fails CI on it and exports it as OpenTelemetry spans.
@@ -758,9 +778,11 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [ScrapeGraph AI](https://github.com/ScrapeGraphAI/just-scrape) - AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.
 - [SCVD General Store](https://github.com/seancrecord/scvd-general-store-repo) - Skills and hosted MCP for x402 endpoint preflight, signed receipt verification, and evidence-backed agentic commerce workflows.
 - [search1api-mcp](https://github.com/superagents-lab/search1api-mcp) - MCP server providing web search, news, page crawling, sitemaps, and trending topics via Search1API.
+- [sectionsight](https://github.com/Majny/sectionsight) - Claude Code skill that sets up cookieless, privacy-first website analytics (time per page section, consent banner, Slack or e-mail reports, health alerts) and proves the privacy claims with a headless-browser check.
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
 - [Serply Agent Skills](https://github.com/serply-inc/skills) - Agent Skill and Claude Code plugin that teaches coding agents to pull live Google Search, Scholar, News, Maps, Jobs, Bing, Amazon and Reddit results and scrape URLs to markdown through the Serply API or its hosted MCP server.
 - [Sessionbus](https://github.com/antst/sessionbus-peers) - Connects independently started Claude Code, Codex, Grok, Qwen, OpenCode and Kilo sessions and custom tools through an open bus protocol for live messaging and optional managed sessions across products and hosts, while keeping native harnesses.
+- [SessionCost](https://github.com/kish21/sessioncost) - Shows how many tokens each turn and call of a Claude Code, Codex, Cursor or Antigravity session sent, what it cost, and measured fixes to send fewer.
 
 - [Shipvela](https://github.com/stefanautomateed/shipvela-codex) - MIT client bundle for owner-confirmed static website and GitHub publishing through a proprietary, account-based hosting service with OAuth MCP, exact deployment tracking, and plan limits.
 - [Shotbase](https://github.com/route1-ai/shotbase) - Self-hostable screenshot API and MCP server returning page screenshots plus structured data, with AI extraction running on your own model including a local Ollama so page content never leaves your network.
@@ -778,6 +800,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [Taisly Agent Kit](https://github.com/taisly/agent) - Publish short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook from Codex with the Taisly MCP server and bundled social media posting skill.
 - [Talivia Agent Kit](https://github.com/talivia-group/agent) - Install and verify revenue-first website analytics from Codex, connect payment attribution, and identify which traffic sources and customer journeys become revenue.
 - [Tanod](https://github.com/tanod-labs/tanod-mcp) - Remote MCP server with 140+ pay-per-call tools for PDF, OCR, images, web pages and chain reads; free daily allowance, then x402 USDC on Base or Polygon.
+- [Tapetide](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - Indian stock market MCP server: research, screen and track about 8,200 NSE and BSE stocks from Claude, ChatGPT, Cursor or any MCP client.
 - [Task Scheduler](https://github.com/6Delta9/task-scheduler-codex-plugin) - OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output.
 - [Telnyx](https://github.com/team-telnyx/ai) - Telnyx toolkit for AI agents bundling Claude Code, Cursor, Gemini CLI, and OpenCode plugins, an agent toolkit for OpenAI/LangChain/CrewAI/Vercel AI SDK, a hosted MCP server, and a one-command CLI for messaging, voice, numbers, and account management.
 - [Terraform Boundary](https://github.com/somesh-ghaturle/agentic-boundary-terraform-skills) - Claude Code, Codex, Cursor, and Windsurf skill that deploys AI agents on AWS, Azure, GCP, or Snowflake with Terraform while keeping a human in the loop: a hook blocks agent-run apply and destroy, only a human at a terminal can apply after typing the plan's fingerprint, and each change gets an evidence record for regulated-environment reviews.
@@ -799,6 +822,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [VidSeeds.ai](https://github.com/CarrotGamesStudios/vidseeds-mcp) - Hosted MCP connector for pre-upload video SEO, metadata optimization, AI thumbnails, and multi-platform publishing with workflow skills for Codex agents.
 - [VMware-AIops](https://github.com/vmware-skills/VMware-AIops) - Skill and MCP server with 60 tools for VMware vCenter and ESXi VM lifecycle, OVA/template deployment, snapshots, guest operations and cluster management, where every destructive tool previews what it would change and acts only on an explicit confirm.
 - [VoiceMoat Skills](https://github.com/prateeks367/voicemoat-skills) - 26 Agent Skills for LinkedIn and Twitter/X posts that draft in your own voice, audit a post before you publish, fix weak openings, draft comments and replies, read your numbers and plan the week, for Claude Code, Codex and any client that reads SKILL.md.
+- [vox](https://github.com/h1rdr3v2/vox-cli) - Local Whisper transcription and Kokoro text-to-speech for Apple Silicon Macs and Linux, served as an OpenAI-compatible audio API that every coding agent on the machine can share. <!-- platform: standalone -->
 - [WakeWire](https://github.com/glenncalleja/wakewire) - Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns — event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue.
 - [Watermelon UI](https://github.com/WatermelonCorp/watermelon-platform) - MCP server exposing 850+ source-backed React components, blocks, dashboards, and templates through search, retrieval, category, and page-composition tools.
 - [whatsapp-claude-plugin](https://github.com/Rich627/whatsapp-claude-plugin) - Claude Code channel plugin and stdio MCP server that connects WhatsApp as a linked device for messaging, voice transcription, and remote tool approval.
