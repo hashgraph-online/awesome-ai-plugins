@@ -7496,6 +7496,17 @@
       "install_url": "https://raw.githubusercontent.com/Quindart-com/opencode-chromium/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "opencode-failover",
+      "displayName": "opencode-failover",
+      "description": "OpenCode plugin for automatic API-key failover and rotation across multiple provider keys",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "bulutmuf",
+      "repo": "opencode-failover",
+      "url": "https://github.com/bulutmuf/opencode-failover",
+      "installation_url": "https://github.com/bulutmuf/opencode-failover#readme"
+    },
+    {
       "name": "opencode-litellm",
       "displayName": "opencode-litellm",
       "description": "OpenCode plugin that auto-detects a LiteLLM proxy and dynamically registers its models in the OpenCode picker",

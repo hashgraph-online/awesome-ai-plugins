@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-14",
-  "total": 825,
+  "total": 826,
   "platforms": [
     "codex",
     "grok",
@@ -6988,6 +6988,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "opencode-failover",
+      "url": "https://github.com/bulutmuf/opencode-failover",
+      "owner": "bulutmuf",
+      "repo": "opencode-failover",
+      "description": "OpenCode plugin for automatic API-key failover and rotation across multiple provider keys",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/bulutmuf/opencode-failover#readme"
     },
     {
       "name": "opencode-litellm",
