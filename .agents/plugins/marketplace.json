@@ -7971,17 +7971,6 @@
       "install_url": "https://raw.githubusercontent.com/antonyrag/ragleap-core/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "RAPR AI",
-      "displayName": "RAPR AI",
-      "description": "Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "rawalrahul",
-      "repo": "raprai",
-      "url": "https://github.com/rawalrahul/raprai",
-      "installation_url": "https://github.com/rawalrahul/raprai#readme"
-    },
-    {
       "name": "ratchet",
       "displayName": "ratchet",
       "description": "A code-size budget for your repo that only goes down, so coding agents can't grow the code without a human-approved grant",
@@ -10815,6 +10804,20 @@
       "repo": "rankcontrol",
       "url": "https://github.com/rankcontrol/rankcontrol",
       "install_url": "https://raw.githubusercontent.com/rankcontrol/rankcontrol/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "RAPR AI",
+      "displayName": "RAPR AI",
+      "description": "Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "rawalrahul",
+      "repo": "raprai",
+      "url": "https://github.com/rawalrahul/raprai"
     },
     {
       "name": "Ratchet",

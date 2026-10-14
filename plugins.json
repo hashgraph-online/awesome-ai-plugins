@@ -7428,16 +7428,6 @@
       ]
     },
     {
-      "name": "RAPR AI",
-      "url": "https://github.com/rawalrahul/raprai",
-      "owner": "rawalrahul",
-      "repo": "raprai",
-      "description": "Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/rawalrahul/raprai#readme"
-    },
-    {
       "name": "ratchet",
       "url": "https://github.com/krishansubudhi/ratchet",
       "owner": "krishansubudhi",
@@ -10063,6 +10053,19 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "RAPR AI",
+      "url": "https://github.com/rawalrahul/raprai",
+      "owner": "rawalrahul",
+      "repo": "raprai",
+      "description": "Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
       ]
     },
     {
