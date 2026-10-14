@@ -481,7 +481,6 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Rootly MCP Server](https://github.com/rootlyhq/rootly-mcp-server) - Manage and resolve production incidents from MCP-compatible AI assistants through dynamically generated, access-controlled Rootly API tools.
 - [RowTrail](https://github.com/adam2go/rowtrail) - Local CLI and MCP server for agents to explore CSV/Parquet with bounded responses, versioned results, and reusable analysis handoffs.
 - [RTL Terminal](https://github.com/MohammedSaud404/rtl-terminal) - Claude Code mod that lays out Arabic, Hebrew, Persian, Urdu and other right-to-left text properly in Windows Terminal, the Windows console and VS Code's integrated terminal, with right-aligned paragraphs, bullets on the right, correct brackets and a live preview of RTL input.
-- [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
 - [Runtype Skills](https://github.com/runtypelabs/skills) - Supercharge your coding agent for AI product development — build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime.
 - [Salesforce Compound Engineering](https://github.com/divingsbysangam/salesforce-compound-engineering-plugin) - Salesforce-focused compound engineering plugin for Claude Code, Cursor, Codex, and other AI coding tools, with skills-first workflows, parallel persona dispatch, and Apex/LWC/Flow coverage.
 - [sci-brain](https://github.com/QuantumBFS/sci-brain) - Research skills plugin for Claude Code, Codex, OpenCode, and pi that surveys literature into a citable knowledge base, brainstorms research ideas, and drafts papers and slides.
@@ -914,6 +913,12 @@ submitting a repository.
 - [LocalForge](https://github.com/orfeomorello/dsh-localforge) - LM Studio, Ollama, and vLLM adapter for DeepSeek Harness with live model discovery, auto-load, per-model concurrency limits, fallback chains, and Prometheus metrics.
 - [memory-eternal](https://github.com/EternalNight996/memory-eternal) - Memory plugin and MCP server for DeepSeek Harness that distills finished conversations into audited knowledge cards in a searchable local Markdown vault, with knowledge graph and review center.
 - [Vibe-Mathematics](https://github.com/ChongCyrus/Vibe-Mathematics) - Plugin bundle installing four multi-agent math problem-solving and cross-verification agent presets into DeepSeek Harness.
+
+### OpenCode Plugins
+
+OpenCode plugins are npm packages or local directories registered in `opencode.json(c)` (`plugins`) and installed with `opencode plugin add`. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform and repository URL and omits the plugin `install_url`: OpenCode resolves packages through its own installer, so no manifest-URL install target applies.
+
+- [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
 
 ### ZCode Plugins & Localization
 
