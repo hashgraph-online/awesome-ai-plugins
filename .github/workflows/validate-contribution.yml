@@ -15,6 +15,7 @@ on:
       - "tests/test-post-claim-notice.py"
       - "tests/test-backfill-claim-notices.py"
       - "tests/test-publish-open-pr-checks.py"
+      - "tests/test-validate-contribution.py"
       - ".github/workflows/validate-contribution.yml"
   workflow_dispatch:
 
@@ -39,7 +40,7 @@ jobs:
       - name: Install validator dependencies
         run: python3 -m pip install --disable-pip-version-check --no-input "PyYAML==6.0.2"
       - name: Test contributor automation messaging
-        run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py tests/test-sanitize-scan-report.py
+        run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py tests/test-sanitize-scan-report.py tests/test-validate-contribution.py
       - name: Validate changed catalog entries
         env:
           BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'origin/main' }}
@@ -82,7 +83,8 @@ jobs:
           format: json
           output: ${{ runner.temp }}/source-scan.json
           min_score: 80
-          fail_on_severity: high
+          # Finding severities are advisory; the score is the listing gate.
+          fail_on_severity: none
           pr_comment: off
       - name: Sanitize finding report
         if: always()

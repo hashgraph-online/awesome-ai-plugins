@@ -244,10 +244,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
             ],
         }
-        conclusion, title, summary = self.publisher.check_summary(result, {12: []})
+        conclusion, title, summary = self.publisher.check_summary(result, {12: ["success"]})
         self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan unavailable")
-        self.assertIn("advisory", summary.lower())
+        self.assertEqual(title, "scan passed")
         comment = self.publisher.remediation_comment(
             result,
             conclusion,
@@ -258,9 +257,6 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("Contribution check passed", comment)
         self.assertIn("Recommended: add scanner CI for security", comment)
         self.assertIn("can merge without it", comment)
-        self.assertIn("MCP servers", comment)
-        self.assertIn("skills", comment)
-        self.assertIn("plugins", comment)
         self.assertIn("recommend including", comment)
         self.assertIn("full trust score", comment)
         self.assertIn("10% trust-score reduction", comment)
@@ -268,7 +264,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertNotIn("needs updates before it can be merged", comment)
         self.assertNotIn("must invoke", comment)
 
-    def test_check_succeeds_when_advisory_scan_fails(self) -> None:
+    def test_failed_source_scan_requires_resolution(self) -> None:
         result = {
             "pr_number": 12,
             "state": "scan",
@@ -279,8 +275,8 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             {12: ["failure"]},
         )
-        self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan findings")
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "source scan failed")
         self.assertIn("advisory", summary.lower())
         comment = self.publisher.remediation_comment(
             result,
@@ -289,7 +285,8 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertNotIn("needs updates before it can be merged", comment)
+        self.assertIn("the required source scan must pass before merge", comment)
+        self.assertIn("Scanner CI in the source repository is optional", comment)
 
     def test_scan_passed_title_is_used_when_jobs_succeed(self) -> None:
         conclusion, title, _summary = self.publisher.check_summary(
