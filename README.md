@@ -447,6 +447,7 @@ Third-party plugins built by the community. [PRs welcome](#contributing)!
 - [RAG Reviewer](https://github.com/mimfort/rag_for_git) - Agentic PR review: hybrid RAG + code graph via MCP, review skills for Codex.
 - [RagLeap](https://github.com/antonyrag/ragleap-core) - Self-hosted AI employee platform with 46 agents, Graph RAG on Neo4j, BYOK across providers, MIT.
 - [RAPR AI](https://github.com/rawalrahul/raprai) - Run Claude Code, Codex, Ollama and other agents side by side on your own machine, with group chats and control from the browser, Telegram or WhatsApp.
+- [ratchet](https://github.com/krishansubudhi/ratchet) - A code-size budget for your repo that only goes down, so coding agents can't grow the code without a human-approved grant.
 - [React Native Developer Skills](https://github.com/Neha/rn-developer-skills) - Vendor-neutral React Native skill collection covering spec authoring, architecture, performance, security, testing, and code review for Codex, Claude, and Cursor.
 - [Redfox Agent Plugins](https://github.com/redfox-data/redfox-agent-plugins) - Ten cross-platform agent skills (video download, transcripts, image gen, trend search) installable on Claude Code, Codex, Cursor, and Gemini CLI from a single repo.
 - [reevesagents](https://github.com/mertkayacs/reevesagents-skill) - Skill and MCP server that let one coding agent start, prompt, read and stop other AI coding CLIs (Claude Code, Codex, Kimi, Qwen, OpenCode), each in its own tmux window, packaged for Claude Code, Codex, Kimi Code and Gemini CLI.
