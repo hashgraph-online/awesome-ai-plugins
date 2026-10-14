@@ -74,6 +74,76 @@ def claude_marketplace_readme(directory: str, name: str) -> Path:
 
 
 class GeneratePluginsJsonTests(unittest.TestCase):
+    def test_general_community_entries_do_not_assume_codex(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### Development & Workflow\n\n"
+                "- [Neutral Demo](https://github.com/example/neutral-demo)"
+                " - A cross-client workflow tool.\n"
+            )
+            with patch.object(MODULE, "probe_install_url", return_value=None) as probe:
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 1)
+        probe.assert_called_once()
+        compatibility = MODULE.generate_plugins_json(plugins)
+        marketplace = MODULE.generate_marketplace_json(
+            [MODULE.marketplace_entry(plugin) for plugin in plugins]
+        )
+        for entry in (compatibility["plugins"][0], marketplace["plugins"][0]):
+            self.assertNotIn("platform", entry)
+            self.assertNotIn("ecosystems", entry)
+            self.assertNotIn("install_url", entry)
+            self.assertEqual(
+                entry["installation_url"],
+                "https://github.com/example/neutral-demo#readme",
+            )
+        self.assertNotIn("codex", compatibility["platforms"])
+        self.assertNotIn("unknown", compatibility["platforms"])
+
+    def test_codex_source_catalog_keeps_its_explicit_ecosystem(self) -> None:
+        payload = {
+            "plugins": [
+                {
+                    "name": "Codex Demo",
+                    "owner": "example",
+                    "repo": "codex-demo",
+                    "url": "https://github.com/example/codex-demo",
+                }
+            ]
+        }
+        with patch.object(
+            MODULE.urllib.request,
+            "urlopen",
+            return_value=FakeBody(json.dumps(payload).encode("utf-8")),
+        ):
+            plugins = MODULE.load_codex_plugins()
+
+        self.assertEqual(plugins[0]["platform"], "codex")
+        self.assertEqual(plugins[0]["ecosystems"], ["codex"])
+
+    def test_native_subsection_does_not_add_codex_to_neutral_duplicate(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### Tools & Integrations\n\n"
+                "- [Dual Listing](https://github.com/example/dual-listing)"
+                " - A shared agent utility.\n\n"
+                "### Grok Plugins\n\n"
+                "- [Dual Listing](https://github.com/example/dual-listing)"
+                " - A Grok extension.\n"
+            )
+            with patch.object(MODULE, "probe_install_url", return_value=None):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual(plugins[0]["platform"], "grok")
+        self.assertEqual(plugins[0]["ecosystems"], ["grok"])
+        self.assertNotIn("codex", plugins[0]["ecosystems"])
+
     def test_native_mcp_entry_has_documentation_in_both_feeds(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             readme = Path(directory) / "README.md"
@@ -370,7 +440,7 @@ class GeneratePluginsJsonTests(unittest.TestCase):
         )
         self.assertNotIn("install_url", plugins[0])
 
-    def test_opencode_entry_omits_codex_install_target(self) -> None:
+    def test_opencode_entry_links_docs_without_manifest_target(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             readme = Path(directory) / "README.md"
             readme.write_text(
@@ -393,6 +463,10 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             self.assertEqual(entry["ecosystems"], ["opencode"])
             self.assertEqual(entry["category"], "OpenCode Plugins")
             self.assertEqual(entry["url"], "https://github.com/example/rtl-demo")
+            self.assertEqual(
+                entry["installation_url"],
+                "https://github.com/example/rtl-demo#readme",
+            )
             self.assertNotIn("install_url", entry)
 
     def test_detects_claude_code_manifest_in_mixed_community_section(self) -> None:

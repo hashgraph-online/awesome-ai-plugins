@@ -916,7 +916,7 @@ submitting a repository.
 
 ### OpenCode Plugins
 
-OpenCode plugins are npm packages or local directories registered in `opencode.json(c)` (`plugins`) and installed with `opencode plugin add`. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform and repository URL and omits the plugin `install_url`: OpenCode resolves packages through its own installer, so no manifest-URL install target applies.
+OpenCode plugins are npm packages or local directories registered in `opencode.json(c)` (`plugins`) and installed with `opencode plugin add`. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform with repository and documentation links and omits any manifest-URL `install_url`: OpenCode resolves packages through its own installer, so no client-specific install target applies.
 
 - [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
 

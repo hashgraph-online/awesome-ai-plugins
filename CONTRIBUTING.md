@@ -10,7 +10,12 @@ Thank you for considering a contribution!
    ```
    - [Extension Name](https://github.com/owner/repo) - Description (max 1 sentence).
    ```
-4. **Add to the appropriate section** - Agent Skills, Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+4. **Add to the appropriate section** - Agent Skills, a platform-specific plugin subsection, or the shared Development & Workflow / Tools & Integrations categories
+
+Entries in the shared Community Plugins categories are ecosystem-neutral by
+default. A Codex `.codex-plugin/plugin.json` manifest is not required; the
+generated catalogs only advertise a client-specific install target when the
+listing identifies that platform or a supported manifest is actually present.
 
 ### Native Agent Skills
 
