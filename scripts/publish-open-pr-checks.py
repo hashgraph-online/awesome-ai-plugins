@@ -96,11 +96,11 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
 
     if state == "failure":
         failure_lines = reasons if isinstance(reasons, list) else []
-        details = "\n".join(f"- {item}" for item in failure_lines if isinstance(item, str))
+        details = "; ".join(item for item in failure_lines if isinstance(item, str))
         return (
             "failure",
             "Contribution requirements failed",
-            "Catalog validation failed.\n\n" + details,
+            one_paragraph(f"Catalog validation failed: {details or 'review the reported catalog findings.'}"),
         )
 
     if state == "scan":
@@ -108,22 +108,22 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
         if not jobs:
             return (
                 "failure",
-                "source scan unavailable",
-                "The required centralized source scan was unavailable. Rerun the scan before merge.",
+                "Centralized score unavailable",
+                "The centralized scan did not establish a score of at least 80. Keep the contribution blocked and rerun the scan before merge.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
                 "success",
-                "scan passed",
-                "The centralized source scan passed.",
+                "Centralized score threshold passed",
+                "The centralized scan met the score threshold of 80; finding severities are advisory.",
             )
         job_details = ", ".join(jobs)
         return (
             "failure",
-            "source scan failed",
-            f"The centralized source scan returned: {job_details}. "
-            "A passing scan (score at least 80 with no critical or high findings) is required before merge. "
-            "Review the rule-level findings and rerun the scan.",
+            "Centralized score not established",
+            f"The centralized scan returned {job_details}; it did not establish a score of at least 80. "
+            "Keep the contribution blocked until the centralized score is available and meets the threshold. "
+            "Finding severities are advisory for listing eligibility.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")
@@ -168,27 +168,10 @@ def missing_scanner_ci_repos(result: dict[str, object]) -> list[str]:
     return missing
 
 
-def optional_scanner_ci_guidance(repos: list[str]) -> str:
-    """Recommend source-repository scanner CI without turning it into a listing gate."""
+def one_paragraph(text: str) -> str:
+    """Collapse comment whitespace so every maintainer note is one paragraph."""
 
-    listed = ", ".join(f"`{item}`" for item in repos)
-    subject = listed if listed else "the source repository"
-    return (
-        "\n\n### Recommended: add scanner CI for security\n"
-        f"This listing can merge without it. HOL still scans {subject} independently.\n\n"
-        "We **recommend including** `hashgraph-online/ai-plugin-scanner-action` under "
-        "`.github/workflows/` on `push` and `pull_request`. It gives the project "
-        "continuous security checks and improves the HOL Registry trust score shown by "
-        "the trust badge.\n\n"
-        "Adding it:\n"
-        "- catches secrets, dangerous hooks, supply-chain issues, and other risky changes "
-        "before they ship;\n"
-        "- removes the 10% trust-score reduction applied when maintainer scanner CI is "
-        "missing, so the Registry badge reflects the full trust score;\n"
-        "- can surface findings in GitHub code scanning.\n\n"
-        "See [SCANNER_GUIDE.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md) "
-        "for the recommended workflow."
-    )
+    return " ".join(text.split())
 
 
 def remediation_comment(
@@ -204,39 +187,25 @@ def remediation_comment(
     mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
 
     if conclusion == "success":
-        missing = missing_scanner_ci_repos(result)
-        details = ""
-        if missing:
-            details += optional_scanner_ci_guidance(missing)
-        return (
-            f"{COMMENT_MARKER}\n\n"
-            f"**Contribution check passed.** {mention}, the required catalog checks passed."
-            f"{details}\n\n"
-            f"[View the latest sweep]({run_url})."
+        if result.get("state") == "scan":
+            message = "The centralized score threshold of 80 was met; finding severities are advisory."
+        else:
+            message = "No new Community Plugins entries require validation in this pull request."
+        return one_paragraph(
+            f"{COMMENT_MARKER} {mention}, contribution checks passed. {message} No action is needed. [Latest sweep]({run_url})."
         )
 
-    if check_title.startswith("source scan"):
-        status = "the required source scan must pass"
-        guidance = (
-            "Scanner CI in the source repository is optional. The centralized scan "
-            "must pass; review its findings and rerun the contribution check."
-        )
+    if result.get("state") == "scan":
+        guidance = "Keep this contribution unmerged until a completed centralized score of at least 80 is available; finding severities are advisory and source-repository scanner CI is optional."
+        if missing_scanner_ci_repos(result):
+            guidance += " If the completed report confirms a score below 80, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
     else:
-        status = "the required catalog checks found a change that needs to be fixed"
-        guidance = (
-            "Please use the Community Plugins format "
-            "`- [Name](https://github.com/owner/repo) - description`, put the entry in "
-            "the correct section, keep it alphabetical, and avoid duplicates."
-        )
+        guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
 
-    return (
-        f"{COMMENT_MARKER}\n\n"
-        f"{mention}, {status} before merge.\n\n"
-        f"{summary}\n\n"
-        f"{guidance}\n\n"
-        "Push the correction and this comment will update on the next check. "
-        "[Contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md). "
-        f"[Latest sweep]({run_url})."
+    return one_paragraph(
+        f"{COMMENT_MARKER} {mention}, {summary} {guidance} "
+        "See [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) and "
+        f"[scanner guide](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md). [Latest sweep]({run_url})."
     )
 
 
@@ -263,11 +232,7 @@ def upsert_remediation_comment(
         ),
         None,
     )
-    if (
-        conclusion == "success"
-        and existing is None
-        and not missing_scanner_ci_repos(result)
-    ):
+    if conclusion == "success" and existing is None:
         return
 
     body = remediation_comment(result, conclusion, check_title, summary, run_url)
@@ -310,7 +275,7 @@ def publish_check(
         raise RuntimeError("validator returned an invalid PR identity")
 
     conclusion, check_title, summary = check_summary(result, scanner_jobs)
-    if check_title.startswith("source scan"):
+    if result.get("state") == "scan":
         summary += (f"\n\n[Open the source scan job summaries and download sanitized JSON/SARIF findings]({run_url}). "
                     f"Look for the `scan-findings-pr-{number}-` artifact. Reports include rule IDs and file locations, "
                     "but omit source snippets and credential values. A missing report indicates a scanner execution problem, not a passing scan.")

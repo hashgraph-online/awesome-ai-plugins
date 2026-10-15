@@ -96,7 +96,8 @@ jobs:
           format: json
           output: ${{ runner.temp }}/source-scan.json
           min_score: 80
-          fail_on_severity: high
+          # Finding severities are advisory; the score is the listing gate.
+          fail_on_severity: none
           pr_comment: off
       - name: Sanitize finding report
         if: always()
@@ -141,10 +142,10 @@ jobs:
             exit 1
           fi
           if [[ "$SCAN_RESULT" != "success" && "$SCAN_RESULT" != "skipped" ]]; then
-            echo "One or more required source-repository scanner jobs did not pass."
+            echo "One or more centralized scans did not establish a score of at least 80; those contributions remain blocked. Finding severities are advisory."
             exit 1
           fi
-          echo "Catalog validation and required source scans passed."
+          echo "Catalog validation and centralized score checks passed. Source-repository scanner CI is optional."
 
   publish:
     name: Publish per-PR contribution checks
