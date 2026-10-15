@@ -196,6 +196,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [cache-warmer](https://github.com/paulbkim-dev/claude-code-cache-warmer) - Claude Code plugin that keeps the prompt cache warm through idle gaps by sending one small refresh shortly before the 5-minute or 1-hour cache expires.
 - [Camouflage](https://github.com/sinameraji/camouflage) - Terminal UI for coding-agent harnesses that turns NDJSON events (Node SDK included) into a Claude Code-style inline transcript with pickers, forms, and permission prompts, using no CPU while idle.
 - [Casefile](https://github.com/x4cc3/casefile) - Persistent security case tracking for bug bounties, CTFs, and security audits.
+- [cc-tree](https://github.com/skymanbp/cc-tree) - Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node.
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
 - [chat-history](https://github.com/ay-bh/chat-history) - Claude Code/Codex/Cursor history search + export.
 - [Check and Fix Accessibility](https://github.com/Neha/check-fix-accessibility) - Agent skill that audits and fixes front-end accessibility to WCAG 2.2 A/AA, covering semantics, keyboard navigation, ARIA, forms, contrast, and screen readers for web and native mobile across Cursor, Claude Code, Codex, Kiro, and Antigravity.
