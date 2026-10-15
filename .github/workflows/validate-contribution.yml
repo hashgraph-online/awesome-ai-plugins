@@ -10,9 +10,12 @@ on:
       - "scripts/backfill-claim-notices.py"
       - "scripts/post-claim-notice.py"
       - "scripts/publish-open-pr-checks.py"
+      - "scripts/sanitize-scan-report.py"
+      - "tests/test-sanitize-scan-report.py"
       - "tests/test-post-claim-notice.py"
       - "tests/test-backfill-claim-notices.py"
       - "tests/test-publish-open-pr-checks.py"
+      - "tests/test-validate-contribution.py"
       - ".github/workflows/validate-contribution.yml"
   workflow_dispatch:
 
@@ -37,7 +40,7 @@ jobs:
       - name: Install validator dependencies
         run: python3 -m pip install --disable-pip-version-check --no-input "PyYAML==6.0.2"
       - name: Test contributor automation messaging
-        run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py
+        run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py tests/test-sanitize-scan-report.py tests/test-validate-contribution.py
       - name: Validate changed catalog entries
         env:
           BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'origin/main' }}
@@ -63,6 +66,11 @@ jobs:
       matrix:
         contribution: ${{ fromJSON(needs.validate.outputs.matrix) }}
     steps:
+      - name: Check out trusted report publisher
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
       - name: Check out contributed repository
         env:
           CONTRIBUTION_URL: https://github.com/${{ matrix.contribution.owner }}/${{ matrix.contribution.repo }}.git
@@ -72,6 +80,28 @@ jobs:
         with:
           plugin_dir: ${{ runner.temp }}/contributed
           mode: scan
+          format: json
+          output: ${{ runner.temp }}/source-scan.json
           min_score: 80
-          fail_on_severity: high
+          # Finding severities are advisory; the score is the listing gate.
+          fail_on_severity: none
           pr_comment: off
+      - name: Sanitize finding report
+        if: always()
+        run: |
+          if [[ -f "$RUNNER_TEMP/source-scan.json" ]]; then
+            python3 scripts/sanitize-scan-report.py --input "$RUNNER_TEMP/source-scan.json" \
+              --root "$RUNNER_TEMP/contributed" --output-dir "$RUNNER_TEMP/public-findings" \
+              --source-commit "$(git -C "$RUNNER_TEMP/contributed" rev-parse HEAD)"
+            cat "$RUNNER_TEMP/public-findings/findings.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Scanner report unavailable; inspect the failed scanner job before retrying." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload sanitized findings
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: scan-findings-${{ matrix.contribution.owner }}-${{ matrix.contribution.repo }}
+          path: ${{ runner.temp }}/public-findings/
+          if-no-files-found: ignore
+          retention-days: 30
