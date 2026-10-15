@@ -7086,6 +7086,21 @@
       "install_url": "https://raw.githubusercontent.com/imMamdouhaboammar/linkedin-animated-infographics/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "LittleJS AI",
+      "displayName": "LittleJS AI",
+      "description": "Claude Code plugin for making HTML5 games with the LittleJS engine, with skills for engine conventions, API lookup, scaffolding new playable games, and atlas-based shape art",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "KilledByAPixel",
+      "repo": "LittleJS-AI",
+      "url": "https://github.com/KilledByAPixel/LittleJS-AI",
+      "install_url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS-AI/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "local-memory-mcp",
       "displayName": "local-memory-mcp",
       "description": "A lightweight MCP server that gives AI agents persistent memory with semantic search, backed by SQLite",
