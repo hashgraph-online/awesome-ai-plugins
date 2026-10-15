@@ -19,8 +19,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertEqual(conclusion, "failure")
         self.assertEqual(title, "source scan failed")
-        self.assertIn("score at least 80", summary)
-        self.assertIn("no critical or high findings", summary)
+        self.assertIn("score of at least 80", summary)
+        self.assertIn("Finding severities are advisory", summary)
+        self.assertIn("resolve any scan errors", summary)
 
     def test_unavailable_source_scan_blocks_merge(self):
         conclusion, title, summary = MODULE.check_summary(

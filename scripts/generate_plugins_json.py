@@ -49,6 +49,7 @@ GROK_PLATFORM = "grok"
 KIMI_PLATFORM = "kimi"
 MCP_PLATFORM = "mcp"
 AGENT_SKILLS_PLATFORM = "agent-skills"
+OPENCODE_PLATFORM = "opencode"
 
 # `## Community Plugins` subsections such as `Development & Workflow` mix
 # platforms, so the heading cannot classify their entries. Derive the platform
@@ -80,6 +81,7 @@ COMMUNITY_CATEGORY_PLATFORMS = {
     "Grok Plugins": GROK_PLATFORM,
     "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
+    "OpenCode Plugins": OPENCODE_PLATFORM,
 }
 
 
@@ -408,9 +410,9 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         if platform:
             plugin["platform"] = platform
         manifest_path = PLATFORM_MANIFEST_PATHS.get(platform)
-        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
-            # Native MCP and Agent Skills entries use their source instructions,
-            # not a client-specific plugin manifest.
+        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM, OPENCODE_PLATFORM}:
+            # Native MCP, Agent Skills, and OpenCode entries link to their
+            # source instructions, not a client-specific plugin manifest.
             plugin["installation_url"] = f"https://github.com/{owner}/{repo}#readme"
         elif manifest_path:
             plugin["install_url"] = (
@@ -455,6 +457,7 @@ def merge_readme_additions(
                 KIMI_PLATFORM,
                 MCP_PLATFORM,
                 AGENT_SKILLS_PLATFORM,
+                OPENCODE_PLATFORM,
             }:
                 platform = plugin["platform"]
                 for existing in (*upstream, *additions):
@@ -480,7 +483,7 @@ def merge_readme_additions(
             additions.append(normalize_plugin(plugin))
             continue
 
-        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
+        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone", OPENCODE_PLATFORM}:
             # Native runtimes resolve repository sources through their own
             # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)

@@ -423,6 +423,52 @@ class GeneratePluginsJsonTests(unittest.TestCase):
         self.assertNotIn("install_url", plugins[0])
 
 
+    def test_parses_native_opencode_section(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### OpenCode Plugins\n\n"
+                "- [RTL Demo](https://github.com/example/rtl-demo) - OpenCode plugin.\n"
+            )
+
+            plugins = MODULE.parse_plugins(readme)
+
+        self.assertEqual(
+            [(plugin["name"], plugin["platform"]) for plugin in plugins],
+            [("RTL Demo", "opencode")],
+        )
+        self.assertNotIn("install_url", plugins[0])
+
+    def test_opencode_entry_links_docs_without_manifest_target(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### OpenCode Plugins\n\n"
+                "- [RTL Demo](https://github.com/example/rtl-demo) - OpenCode plugin.\n"
+            )
+            with patch.object(MODULE, "probe_install_url") as probe:
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+            probe.assert_not_called()
+
+        self.assertEqual(added, 1)
+        compatibility = MODULE.generate_plugins_json(plugins)["plugins"][0]
+        marketplace = MODULE.generate_marketplace_json(
+            [MODULE.marketplace_entry(plugin) for plugin in plugins]
+        )["plugins"][0]
+        for entry in (compatibility, marketplace):
+            self.assertEqual(entry["platform"], "opencode")
+            self.assertEqual(entry["ecosystems"], ["opencode"])
+            self.assertEqual(entry["category"], "OpenCode Plugins")
+            self.assertEqual(entry["url"], "https://github.com/example/rtl-demo")
+            self.assertEqual(
+                entry["installation_url"],
+                "https://github.com/example/rtl-demo#readme",
+            )
+            self.assertNotIn("install_url", entry)
+
     def test_detects_claude_code_manifest_in_mixed_community_section(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             readme = Path(directory) / "README.md"
