@@ -624,7 +624,7 @@ def scan_open_pull_requests(
                 }
             )
             report_lines.append(
-                f"  - `{contribution}`: scanner CI {inspection.status}; queued for advisory scan"
+                f"  - `{contribution}`: scanner CI {inspection.status}; queued for required source scan"
             )
 
         if catalog_failures:
@@ -664,7 +664,7 @@ def scan_open_pull_requests(
         report_lines.extend(
             [
                 "",
-                "Catalog validation passed. Centralized scanner results are advisory.",
+                "Catalog validation passed. Centralized source scans must pass before merge.",
             ]
         )
 
@@ -796,7 +796,7 @@ def main() -> int:
             print(f"  FAIL: {error}", file=sys.stderr)
             continue
         inspection = inspect_scanner_ci(entry)
-        print(f"  scanner CI {inspection.status}; queued for advisory centralized scan")
+        print(f"  scanner CI {inspection.status}; queued for required centralized scan")
 
     if catalog_failures:
         print(

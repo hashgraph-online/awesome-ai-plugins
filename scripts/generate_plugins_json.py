@@ -30,7 +30,7 @@ PINNED_PLUGIN_REPO = "hashgraph-online/registry-broker-codex-plugin"
 # apple-productivity-mcp, yandex-direct-for-all) keep their manifest under
 # `plugins/<name>/.codex-plugin/` rather than the repo root. The Claude Code
 # manifest is probed last on purpose: many repos ship both, and a repo that
-# already resolves a Codex layout must keep its existing classification.
+# already resolves a Codex layout keeps that detected compatibility label.
 INSTALL_PATH_CANDIDATES = (
     ".codex-plugin/plugin.json",
     "plugins/{repo}/.codex-plugin/plugin.json",
@@ -47,27 +47,41 @@ INSTALL_URL_PROBE_TIMEOUT = 6.0
 DEEPSEEK_HARNESS_PLATFORM = "deepseek-harness"
 GROK_PLATFORM = "grok"
 KIMI_PLATFORM = "kimi"
+MCP_PLATFORM = "mcp"
+AGENT_SKILLS_PLATFORM = "agent-skills"
+OPENCODE_PLATFORM = "opencode"
 
 # `## Community Plugins` subsections such as `Development & Workflow` mix
 # platforms, so the heading cannot classify their entries. Derive the platform
 # from whichever manifest the probe actually resolved instead.
 MANIFEST_PLATFORMS = {
+    ".codex-plugin/plugin.json": "codex",
+    ".codex/plugin.json": "codex",
     ".claude-plugin/plugin.json": "claude-code",
 }
 
-# Native runtime manifests should not inherit the Codex manifest fallback.
+# Explicit platform sections use their own manifest paths. General community
+# entries have no client-specific install target unless a supported manifest
+# is actually found in the source repository.
 PLATFORM_MANIFEST_PATHS = {
+    "codex": ".codex-plugin/plugin.json",
+    "claude-code": ".claude-plugin/plugin.json",
     GROK_PLATFORM: ".grok-plugin/plugin.json",
     KIMI_PLATFORM: "kimi.plugin.json",
 }
 
 # Community entries live under one README section. Keep the platform attached
-# to each subsection so native Grok, Kimi, and DeepSeek Harness entries are not
-# misclassified as Codex plugins merely because catalogs share one section.
+# to each subsection so native Agent Skills, Grok, Kimi, and DeepSeek Harness
+# entries are not misclassified as Codex plugins merely because catalogs share
+# one section.
 COMMUNITY_CATEGORY_PLATFORMS = {
+    "Codex Plugins": "codex",
+    "OpenAI Codex Plugins": "codex",
+    "Agent Skills": AGENT_SKILLS_PLATFORM,
     "Grok Plugins": GROK_PLATFORM,
     "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
+    "OpenCode Plugins": OPENCODE_PLATFORM,
 }
 
 
@@ -80,8 +94,8 @@ def probe_install_url(
 
     Used for README-only additions so non-root manifest layouts don't end up
     with broken `install_url` values in the generated artifacts. Returns None
-    on network errors or when no candidate exists; the caller decides whether
-    to fall back to a default path or omit the field.
+    on network errors or when no candidate exists; callers must not invent a
+    client-specific install target when the manifest cannot be verified.
     """
     for template in candidates:
         path = template.format(repo=repo)
@@ -96,9 +110,78 @@ def probe_install_url(
         except urllib.error.HTTPError:
             continue
         except (urllib.error.URLError, TimeoutError, OSError):
-            # Network unavailable — caller will keep its default.
+            # Network unavailable — callers may retain a documentation link,
+            # but must not claim an unverified client-specific manifest.
             return None
     return None
+
+
+CLAUDE_MARKETPLACE_PATH = ".claude-plugin/marketplace.json"
+CLAUDE_MANIFEST_PATH = ".claude-plugin/plugin.json"
+CLAUDE_MARKETPLACE_MAX_BYTES = 1024 * 1024
+
+
+def probe_claude_marketplace(owner: str, repo: str, name: str) -> tuple[bool, str | None]:
+    """Resolve a Claude Code plugin listed in the repo's root marketplace.
+
+    A Claude Code marketplace repo keeps `.claude-plugin/marketplace.json` at
+    the root and each plugin's manifest under the plugin's own directory, so
+    the root manifest probe finds nothing. Read the marketplace, pick the
+    plugin named like the README entry (or its only plugin), and resolve that
+    plugin's manifest when its `source` is a path inside the repo and the
+    manifest exists.
+
+    Returns `(found, url)`: whether the repo has a root marketplace, and the
+    raw URL of the plugin's manifest when it resolves. A marketplace that is
+    found but does not resolve to exactly one manifest gives `(True, None)`;
+    its repo has no root plugin manifest, so there is no install target.
+    """
+    base = f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD"
+    try:
+        with urllib.request.urlopen(
+            f"{base}/{CLAUDE_MARKETPLACE_PATH}", timeout=INSTALL_URL_PROBE_TIMEOUT
+        ) as resp:
+            payload = resp.read(CLAUDE_MARKETPLACE_MAX_BYTES + 1)
+    except (urllib.error.URLError, TimeoutError, OSError):
+        return False, None
+    try:
+        if len(payload) > CLAUDE_MARKETPLACE_MAX_BYTES:
+            return True, None
+        marketplace = json.loads(payload.decode("utf-8"))
+    except ValueError:
+        return True, None
+
+    entries = marketplace.get("plugins") if isinstance(marketplace, dict) else None
+    if not isinstance(entries, list):
+        return True, None
+    entries = [e for e in entries if isinstance(e, dict)]
+    named = [e for e in entries if str(e.get("name", "")).lower() == name.lower()]
+    if len(named) == 1:
+        entry = named[0]
+    elif len(entries) == 1:
+        entry = entries[0]
+    else:
+        return True, None
+
+    # Only a directory inside this repo; remote sources (objects, URLs) have
+    # their own manifests elsewhere.
+    source = entry.get("source")
+    if not isinstance(source, str) or "://" in source:
+        return True, None
+    parts = [part for part in source.split("/") if part not in {"", "."}]
+    if any(part == ".." for part in parts):
+        return True, None
+
+    manifest_path = "/".join([*parts, CLAUDE_MANIFEST_PATH])
+    url = f"{base}/{manifest_path}"
+    req = urllib.request.Request(url, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=INSTALL_URL_PROBE_TIMEOUT) as resp:
+            if 200 <= resp.status < 300:
+                return True, url
+    except (urllib.error.URLError, TimeoutError, OSError):
+        pass
+    return True, None
 
 
 def normalize_repo_key(plugin: dict) -> str:
@@ -134,16 +217,21 @@ def normalize_plugin(plugin: dict) -> dict:
     entry = dict(plugin)
     entry["source"] = "awesome-ai-plugins"
 
-    # Determine platform from upstream source field or fall back to codex
+    # Preserve source-catalog identity where it is explicit. An AI community
+    # listing does not imply that the project targets Codex.
     upstream_source = str(plugin.get("source", "")).strip()
-    if upstream_source == "awesome-grok-plugins":
-        entry.setdefault("platform", GROK_PLATFORM)
-    else:
-        entry.setdefault("platform", "codex")
+    if not entry.get("platform"):
+        if upstream_source == "awesome-grok-plugins":
+            entry["platform"] = GROK_PLATFORM
+        elif upstream_source == "awesome-codex-plugins":
+            entry["platform"] = "codex"
 
     ecosystems = entry.get("ecosystems")
     if not isinstance(ecosystems, list) or not ecosystems:
-        entry["ecosystems"] = [entry["platform"]]
+        if entry.get("platform"):
+            entry["ecosystems"] = [entry["platform"]]
+        else:
+            entry.pop("ecosystems", None)
 
     if normalize_repo_key(entry) == PINNED_PLUGIN_REPO:
         entry["featured"] = True
@@ -165,11 +253,13 @@ def load_codex_plugins() -> list[dict]:
     if not isinstance(plugins, list):
         return []
 
-    normalized = [
-        normalize_plugin(plugin)
-        for plugin in plugins
-        if isinstance(plugin, dict)
-    ]
+    normalized = []
+    for plugin in plugins:
+        if not isinstance(plugin, dict):
+            continue
+        entry = dict(plugin)
+        entry.setdefault("platform", "codex")
+        normalized.append(normalize_plugin(entry))
 
     return sort_plugins(normalized)
 
@@ -209,11 +299,18 @@ def marketplace_entry(plugin: dict) -> dict:
         "description": plugin.get("description", ""),
         "category": plugin.get("category", ""),
         "source": "awesome-ai-plugins",
-        "platform": plugin.get("platform", "codex"),
-        "ecosystems": plugin.get("ecosystems", [plugin.get("platform", "codex")]),
     }
 
-    for key in ("owner", "repo", "url", "install_url"):
+    platform = str(plugin.get("platform", "")).strip()
+    if platform:
+        entry["platform"] = platform
+    ecosystems = plugin.get("ecosystems")
+    if isinstance(ecosystems, list) and ecosystems:
+        entry["ecosystems"] = ecosystems
+    elif platform:
+        entry["ecosystems"] = [platform]
+
+    for key in ("owner", "repo", "url", "install_url", "installation_url"):
         value = str(plugin.get(key, "")).strip()
         if value:
             entry[key] = value
@@ -233,9 +330,10 @@ PLATFORM_SECTIONS = {
     "Grok Plugins": GROK_PLATFORM,
     "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
-    # Current README structure: a single `## Community Plugins` section with
-    # `###` subcategories. Treat its entries as codex marketplace plugins.
-    "Community Plugins": "codex",
+    # Community Plugins contains both platform-specific and ecosystem-neutral
+    # entries. Its subsection, an actual manifest, or explicit metadata must
+    # identify a client platform; the shared heading does not imply Codex.
+    "Community Plugins": None,
 }
 
 
@@ -270,19 +368,21 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         if h3:
             current_category = h3.group(1).strip()
             if current_section == "Community Plugins":
-                current_platform = COMMUNITY_CATEGORY_PLATFORMS.get(
-                    current_category,
-                    PLATFORM_SECTIONS["Community Plugins"],
-                )
+                current_platform = COMMUNITY_CATEGORY_PLATFORMS.get(current_category)
             continue
 
         item = item_re.match(line.strip())
-        if not (item and current_platform):
+        if not item or (not current_platform and current_section != "Community Plugins"):
             continue
 
         name = item.group(1)
         url = item.group(2).strip()
-        desc = item.group(3).rstrip(".")
+        desc = item.group(3)
+        standalone = desc.endswith(" <!-- platform: standalone -->")
+        if standalone:
+            desc = desc.removesuffix(" <!-- platform: standalone -->")
+        desc = desc.rstrip(".")
+        entry_platform = "standalone" if standalone else current_platform
 
         # github.com URLs only; relative paths (./plugins/...) are skipped.
         owner_match = re.match(
@@ -294,6 +394,10 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         owner = owner_match.group(1)
         repo = owner_match.group(2).removesuffix(".git")
 
+        # An explicit description prefix keeps native MCP servers in topical
+        # categories without claiming they are client-specific plugin bundles.
+        platform = MCP_PLATFORM if desc.startswith("MCP server: ") else entry_platform
+
         plugin = {
             "name": name,
             "url": url,
@@ -301,20 +405,24 @@ def parse_plugins(readme_path: Path) -> list[dict]:
             "repo": repo,
             "description": desc,
             "category": current_category,
-            "platform": current_platform,
             "source": "awesome-ai-plugins",
         }
-        manifest_path = PLATFORM_MANIFEST_PATHS.get(current_platform)
-        if manifest_path:
+        if platform:
+            plugin["platform"] = platform
+        manifest_path = PLATFORM_MANIFEST_PATHS.get(platform)
+        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM, OPENCODE_PLATFORM}:
+            # Native MCP, Agent Skills, and OpenCode entries link to their
+            # source instructions, not a client-specific plugin manifest.
+            plugin["installation_url"] = f"https://github.com/{owner}/{repo}#readme"
+        elif manifest_path:
             plugin["install_url"] = (
                 "https://raw.githubusercontent.com/"
                 f"{owner}/{repo}/HEAD/{manifest_path}"
             )
-        elif current_platform != DEEPSEEK_HARNESS_PLATFORM:
-            plugin["install_url"] = (
-                "https://raw.githubusercontent.com/"
-                f"{owner}/{repo}/HEAD/.codex-plugin/plugin.json"
-            )
+        elif platform in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
+            pass
+        else:
+            plugin["installation_url"] = f"https://github.com/{owner}/{repo}#readme"
         plugins.append(plugin)
 
     return sort_plugins(plugins)
@@ -347,6 +455,9 @@ def merge_readme_additions(
                 DEEPSEEK_HARNESS_PLATFORM,
                 GROK_PLATFORM,
                 KIMI_PLATFORM,
+                MCP_PLATFORM,
+                AGENT_SKILLS_PLATFORM,
+                OPENCODE_PLATFORM,
             }:
                 platform = plugin["platform"]
                 for existing in (*upstream, *additions):
@@ -354,16 +465,25 @@ def merge_readme_additions(
                         continue
                     ecosystems = existing.get("ecosystems")
                     if not isinstance(ecosystems, list) or not ecosystems:
-                        ecosystems = [existing.get("platform", "codex")]
+                        existing_platform = existing.get("platform")
+                        ecosystems = [existing_platform] if existing_platform else []
                         existing["ecosystems"] = ecosystems
+                    if not existing.get("platform"):
+                        existing["platform"] = platform
                     if platform not in ecosystems:
                         ecosystems.append(platform)
+                    if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
+                        existing["installation_url"] = plugin["installation_url"]
                     break
             continue
 
         seen.add(key)
 
-        if plugin.get("platform") == DEEPSEEK_HARNESS_PLATFORM:
+        if plugin.get("platform") in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone", OPENCODE_PLATFORM}:
             # Native runtimes resolve repository sources through their own
             # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)
@@ -395,22 +515,28 @@ def merge_readme_additions(
             continue
 
         probed = probe_install_url(plugin["owner"], plugin["repo"])
+        if not probed:
+            marketplace_found, probed = probe_claude_marketplace(
+                plugin["owner"], plugin["repo"], plugin["name"]
+            )
+            if marketplace_found and not probed:
+                # A Claude Code marketplace whose plugin can't be resolved:
+                # any default manifest path would 404 or name another bundle.
+                plugin.pop("install_url", None)
+                plugin["platform"] = "claude-code"
+                plugin["ecosystems"] = ["claude-code"]
+                additions.append(normalize_plugin(plugin))
+                continue
         if probed:
             plugin["install_url"] = probed
+            plugin.pop("installation_url", None)
             for manifest_path, platform in MANIFEST_PLATFORMS.items():
                 if probed.endswith(manifest_path):
                     plugin["platform"] = platform
                     plugin["ecosystems"] = [platform]
                     break
-        else:
-            # Probe returned None (no candidate matched, or network down).
-            # Keep the default install_url; flag for the operator so a broken
-            # path can be hand-corrected upstream if needed.
-            print(
-                f"WARN: could not verify manifest for {plugin['name']} "
-                f"({plugin['owner']}/{plugin['repo']}); "
-                f"keeping default install_url"
-            )
+        # If no supported manifest resolves, the general listing remains
+        # ecosystem-neutral and keeps its source README link only.
 
         additions.append(normalize_plugin(plugin))
     return upstream + additions, len(additions)
@@ -420,7 +546,9 @@ def generate_plugins_json(plugins: list[dict]) -> dict:
     """Generate plugins.json compatibility output."""
     platforms = {}
     for p in plugins:
-        plat = p.get("platform", "unknown")
+        plat = p.get("platform")
+        if not plat:
+            continue
         if plat not in platforms:
             platforms[plat] = []
         platforms[plat].append(p)
