@@ -8243,6 +8243,21 @@
       "install_url": "https://raw.githubusercontent.com/MohammedSaud404/rtl-terminal/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Rudi-Sim",
+      "displayName": "Rudi-Sim",
+      "description": "Preview websites in WebKit at Apple device sizes, compare layouts side by side, and record walkthroughs with Claude Code and ChatGPT",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "f-loor",
+      "repo": "rudi-sim",
+      "url": "https://github.com/f-loor/rudi-sim",
+      "install_url": "https://raw.githubusercontent.com/f-loor/rudi-sim/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Salesforce Compound Engineering",
       "displayName": "Salesforce Compound Engineering",
       "description": "Salesforce-focused compound engineering plugin for Claude Code, Cursor, Codex, and other AI coding tools, with skills-first workflows, parallel persona dispatch, and Apex/LWC/Flow coverage",
