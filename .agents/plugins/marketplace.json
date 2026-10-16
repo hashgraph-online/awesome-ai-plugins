@@ -5317,6 +5317,21 @@
       "installation_url": "https://github.com/sinameraji/camouflage#readme"
     },
     {
+      "name": "cc-tree",
+      "displayName": "cc-tree",
+      "description": "Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skymanbp",
+      "repo": "cc-tree",
+      "url": "https://github.com/skymanbp/cc-tree",
+      "install_url": "https://raw.githubusercontent.com/skymanbp/cc-tree/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "chat-history",
       "displayName": "chat-history",
       "description": "Claude Code/Codex/Cursor history search + export",
@@ -8468,6 +8483,21 @@
       "install_url": "https://raw.githubusercontent.com/QuantumBFS/sci-brain/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "sci-paper",
+      "displayName": "sci-paper",
+      "description": "Claude Code plugin for scientific paper writing, source-traced review and de-AI rewriting: 12 skills and 35 tools under one typed standard with non-waivable integrity blockers and explicit measurement states, calibrated on ApJ, MNRAS, PRD and JCAP manuscripts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skymanbp",
+      "repo": "sci-paper",
+      "url": "https://github.com/skymanbp/sci-paper",
+      "install_url": "https://raw.githubusercontent.com/skymanbp/sci-paper/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Scoutflo AI Readiness",
       "displayName": "Scoutflo AI Readiness",
       "description": "Claude Code plugin that finds infrastructure and monitoring gaps through read-only checks of cloud, Kubernetes and observability stacks, with local evidence reports and prioritized fixes",
@@ -9551,6 +9581,20 @@
       "installation_url": "https://github.com/yinnho/aginxbrowser#readme"
     },
     {
+      "name": "agy-powerline",
+      "displayName": "agy-powerline",
+      "description": "Fast, configurable statusline for Google Antigravity CLI (agy) with live Gemini 5h/7d quota meters, pace markers, context usage, and interactive TUI configurator",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "wassim-azi",
+      "repo": "agy-powerline",
+      "url": "https://github.com/wassim-azi/agy-powerline"
+    },
+    {
       "name": "AI Command Center",
       "displayName": "AI Command Center",
       "description": "Local-first Windows, macOS and Linux command center for Claude Code, Codex, OpenCode, Aider, Gemini CLI, Ollama and 8,000+ API models, with live cost and token analytics (even for Claude Code sessions in other terminals), a side-by-side Arena, real terminals and git per project",
@@ -10292,6 +10336,21 @@
       "repo": "GodotPrompter",
       "url": "https://github.com/jame581/GodotPrompter",
       "install_url": "https://raw.githubusercontent.com/jame581/GodotPrompter/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Google Hotels MCP",
+      "displayName": "Google Hotels MCP",
+      "description": "MCP server: search Google Hotels and Vacation Rentals, get OTA rates, nightly price calendars and reviews for Claude Desktop, Cursor and other MCP clients",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "huynhtanan",
+      "repo": "google-hotels-mcp",
+      "url": "https://github.com/huynhtanan/google-hotels-mcp",
+      "installation_url": "https://github.com/huynhtanan/google-hotels-mcp#readme"
     },
     {
       "name": "GPT-6 Astra Outbound System",

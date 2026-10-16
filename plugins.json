@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-16",
-  "total": 858,
+  "total": 862,
   "platforms": [
     "codex",
     "grok",
@@ -4972,6 +4972,20 @@
       "installation_url": "https://github.com/sinameraji/camouflage#readme"
     },
     {
+      "name": "cc-tree",
+      "url": "https://github.com/skymanbp/cc-tree",
+      "owner": "skymanbp",
+      "repo": "cc-tree",
+      "description": "Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skymanbp/cc-tree/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "chat-history",
       "url": "https://github.com/ay-bh/chat-history",
       "owner": "ay-bh",
@@ -7891,6 +7905,20 @@
       ]
     },
     {
+      "name": "sci-paper",
+      "url": "https://github.com/skymanbp/sci-paper",
+      "owner": "skymanbp",
+      "repo": "sci-paper",
+      "description": "Claude Code plugin for scientific paper writing, source-traced review and de-AI rewriting: 12 skills and 35 tools under one typed standard with non-waivable integrity blockers and explicit measurement states, calibrated on ApJ, MNRAS, PRD and JCAP manuscripts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skymanbp/sci-paper/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Scoutflo AI Readiness",
       "url": "https://github.com/Scoutflo/ai-readiness",
       "owner": "Scoutflo",
@@ -8897,6 +8925,19 @@
       "installation_url": "https://github.com/yinnho/aginxbrowser#readme"
     },
     {
+      "name": "agy-powerline",
+      "url": "https://github.com/wassim-azi/agy-powerline",
+      "owner": "wassim-azi",
+      "repo": "agy-powerline",
+      "description": "Fast, configurable statusline for Google Antigravity CLI (agy) with live Gemini 5h/7d quota meters, pace markers, context usage, and interactive TUI configurator",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "AI Command Center",
       "url": "https://github.com/Hredo/ai-command-center",
       "owner": "Hredo",
@@ -9583,6 +9624,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Google Hotels MCP",
+      "url": "https://github.com/huynhtanan/google-hotels-mcp",
+      "owner": "huynhtanan",
+      "repo": "google-hotels-mcp",
+      "description": "MCP server: search Google Hotels and Vacation Rentals, get OTA rates, nightly price calendars and reviews for Claude Desktop, Cursor and other MCP clients",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/huynhtanan/google-hotels-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
