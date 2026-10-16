@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-15",
-  "total": 855,
+  "last_updated": "2026-10-16",
+  "total": 858,
   "platforms": [
     "codex",
     "grok",
@@ -3366,6 +3366,20 @@
       ]
     },
     {
+      "name": "MoltNode by Chord",
+      "url": "https://github.com/tuantqse90/moltnode-mcp",
+      "owner": "tuantqse90",
+      "repo": "moltnode-mcp",
+      "description": "Read 31 blockchains over JSON-RPC and get best-route DEX swap quotes with unsigned transactions via Chord, through two hosted no-key MCP servers and three skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/tuantqse90/moltnode-mcp/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "MorningAI",
       "url": "https://github.com/octo-patch/MorningAI",
       "owner": "octo-patch",
@@ -3710,6 +3724,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Majny/sectionsight/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Self-Starter",
+      "url": "https://github.com/hyprh/self-starter",
+      "owner": "hyprh",
+      "repo": "self-starter",
+      "description": "Define custom events in plain language, check them with lightweight probes, and resume your Codex conversation when they fire.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/plugin/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5182,6 +5210,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/IKnowJot/clawd-plugins/HEAD/plugins/clawd-tracker/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Cloakroom",
+      "url": "https://github.com/shanjeevrajendran/cloakroom-plugin",
+      "owner": "shanjeevrajendran",
+      "repo": "cloakroom-plugin",
+      "description": "Claude Code plugin that masks secrets and personal data on your machine before the model sees them, and puts the real values back in the files Claude writes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/shanjeevrajendran/cloakroom-plugin/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -9409,7 +9451,7 @@
       "description": "Browser automation for AI agents through ego lite, a Chromium browser where agents navigate pages, fill forms, capture screenshots, and extract data in isolated task spaces that reuse the user's existing logins",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/citrolabs/ego-lite#readme",
+      "install_url": "https://raw.githubusercontent.com/citrolabs/ego-lite/HEAD/plugins/ego/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -10689,7 +10731,11 @@
       "description": "Remote MCP server with 140+ pay-per-call tools for PDF, OCR, images, web pages and chain reads; free daily allowance, then x402 USDC on Base or Polygon",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/tanod-labs/tanod-mcp#readme"
+      "install_url": "https://raw.githubusercontent.com/tanod-labs/tanod-mcp/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "Tapetide",
