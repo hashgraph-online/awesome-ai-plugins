@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-16",
-  "total": 864,
+  "total": 874,
   "platforms": [
     "codex",
     "grok",
@@ -4276,6 +4276,20 @@
       ]
     },
     {
+      "name": "kstack",
+      "url": "https://github.com/dwk601/kstack",
+      "owner": "dwk601",
+      "repo": "kstack",
+      "description": "Eleven agent skills for Herdr that plan with two models checking each other, build with parallel reviewed workers, run a verification swarm, then push a PR and fix it until checks are green",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/dwk601/kstack#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "nuthinking/skills",
       "url": "https://github.com/nuthinking/skills",
       "owner": "nuthinking",
@@ -4679,7 +4693,11 @@
       "description": "Agent Skills for any skills-compatible coding agent (Claude Code, Codex, Gemini in Android Studio, and more) that teach how to structure, write, and test Android apps with Kotlin and Jetpack Compose",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/lennonpetrick/android-engineering-skills#readme"
+      "install_url": "https://raw.githubusercontent.com/lennonpetrick/android-engineering-skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "angles-video-skill",
@@ -5300,6 +5318,20 @@
       ]
     },
     {
+      "name": "CodeEraser",
+      "url": "https://github.com/skymanbp/CodeEraser",
+      "owner": "skymanbp",
+      "repo": "CodeEraser",
+      "description": "Claude Code plugin whose hooks intercept a duplicate write before it lands, audit the net lines and the touched duplicates at Stop and walk the findings to safe deletions through an erase skill, backed by a clone index in a per-project daemon; the same index serves a CLI and an MCP server for scan, dedup, dead code and churn",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skymanbp/CodeEraser/HEAD/plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Codex Full-Stack Workflow",
       "url": "https://github.com/kevin592/codex-full-stack-workflow",
       "owner": "kevin592",
@@ -5760,6 +5792,20 @@
       ]
     },
     {
+      "name": "Extensive Prompt Architect",
+      "url": "https://github.com/Ext7/extensive-prompt-architect",
+      "owner": "Ext7",
+      "repo": "extensive-prompt-architect",
+      "description": "Turns rough ideas, briefs, and drafts into detailed, ready-to-use AI prompts for Claude Code and Codex",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Ext7/extensive-prompt-architect/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Festival",
       "url": "https://github.com/Obedience-Corp/festival",
       "owner": "Obedience-Corp",
@@ -6053,6 +6099,16 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/pratham-jain33/hackerearth-mcp#readme"
+    },
+    {
+      "name": "Halfcycle",
+      "url": "https://github.com/Halfcycle-AI/halfcycle-cli",
+      "owner": "Halfcycle-AI",
+      "repo": "halfcycle-cli",
+      "description": "Runs inside Claude Code to ask the open product and architecture decisions one at a time before any code, record them for every agent, send the plan to a reviewer that has never seen it, and size the process to the change",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Halfcycle-AI/halfcycle-cli#readme"
     },
     {
       "name": "harmonyos-skills",
@@ -7219,6 +7275,16 @@
       ]
     },
     {
+      "name": "omp-sidelight",
+      "url": "https://github.com/Mannan-Goyal/omp-sidelight",
+      "owner": "Mannan-Goyal",
+      "repo": "omp-sidelight",
+      "description": "Oh My Pi (omp) plugin that turns long agent answers into full-screen documents where you can select any passage and ask about it in a side thread that never enters the conversation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Mannan-Goyal/omp-sidelight#readme"
+    },
+    {
       "name": "Open PR",
       "url": "https://github.com/TOMOSIA-VIETNAM/open-pr",
       "owner": "TOMOSIA-VIETNAM",
@@ -8331,6 +8397,20 @@
       ]
     },
     {
+      "name": "supabase-stripe-checks",
+      "url": "https://github.com/edtrackai/supabase-stripe-checks",
+      "owner": "edtrackai",
+      "repo": "supabase-stripe-checks",
+      "description": "Read-only Claude Code plugin that checks Next.js apps for Supabase row-level security gaps in migrations and Stripe webhook handlers that skip signature verification",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/edtrackai/supabase-stripe-checks/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Super Jev",
       "url": "https://github.com/Kevthetech143/super-jev",
       "owner": "Kevthetech143",
@@ -9417,6 +9497,20 @@
       "installation_url": "https://github.com/RaazKetan/creo#readme"
     },
     {
+      "name": "CurlShot MCP",
+      "url": "https://github.com/SergiuPogor/curlshot-mcp",
+      "owner": "SergiuPogor",
+      "repo": "curlshot-mcp",
+      "description": "MCP server: hosted streamable-HTTP server whose `take_screenshot` tool renders a public web page in a real browser and returns PNG, JPEG, WebP, PDF or a scrolling video; needs a CurlShot API key (free plan available)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/SergiuPogor/curlshot-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "DataForge",
       "url": "https://github.com/ianktoo/data-forge",
       "owner": "ianktoo",
@@ -9721,6 +9815,19 @@
       ]
     },
     {
+      "name": "heldkeys",
+      "url": "https://github.com/hugomn/heldkeys",
+      "owner": "hugomn",
+      "repo": "heldkeys",
+      "description": "Lists the credentials an AI coding agent can reach on a laptop, in a sandbox or in CI, and flags agent steps in GitHub workflows that hold secrets while reading untrusted input",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "herdr-acp",
       "url": "https://github.com/frankjoshua/herdr-acp",
       "owner": "frankjoshua",
@@ -9917,6 +10024,20 @@
       ]
     },
     {
+      "name": "JVM Pulse",
+      "url": "https://github.com/brunoborges/jvm-pulse",
+      "owner": "brunoborges",
+      "repo": "jvm-pulse",
+      "description": "Claude Code plugin and GitHub Copilot canvas extension for profiling Java garbage collection and JFR telemetry, with a portable CLI and shareable HTML reports",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/brunoborges/jvm-pulse/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Kesha Voice Kit",
       "url": "https://github.com/drakulavich/kesha-voice-kit",
       "owner": "drakulavich",
@@ -9935,6 +10056,19 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/kkollsga/kglite#readme"
+    },
+    {
+      "name": "kibi",
+      "url": "https://github.com/Looted/kibi",
+      "owner": "Looted",
+      "repo": "kibi",
+      "description": "MCP server and per-agent plugins that compile product intent into structured requirements and check that code and tests stay consistent with them",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
     },
     {
       "name": "Kindle Highlights",
@@ -10412,7 +10546,7 @@
       "description": "Read-only MCP server that lets AI assistants diagnose PostgreSQL performance: slow queries, EXPLAIN plans, index advice, locks, and the queries inside database functions",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/gouranshul/pg-perf-mcp/HEAD/.claude-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/gouranshul/pg-perf-mcp/HEAD/plugins/pg-perf/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
