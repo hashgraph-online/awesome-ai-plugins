@@ -291,6 +291,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Env Lint](./plugins/mturac/env-lint) - `.env` vs `.env.example` key parity — never prints values.
 - [Epic Harness](https://github.com/epicsagas/epic-harness) - Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.
 - [Espresso](https://github.com/mirkobozzetto/espresso) - Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.
+- [Extensive Prompt Architect](https://github.com/Ext7/extensive-prompt-architect) - Turns rough ideas, briefs, and drafts into detailed, ready-to-use AI prompts for Claude Code and Codex.
 - [falsegreen-skill](https://github.com/vinicq/falsegreen-skill) - Finds tests that stay green when the code they cover is broken, applying six ordered judgments over Python, TypeScript, JavaScript, and Robot Framework suites in Codex CLI and Claude Code.
 - [Festival](https://github.com/Obedience-Corp/festival) - Planning and persistent context tools that let coding agents execute multi-phase goals across sessions using files and Git.
 - [Filesystem MCP](https://github.com/j0hanz/filesystem-mcp) - MCP server: read, write, search, diff and patch files in allowed folders, with secret files blocked and confirmation before risky changes.
