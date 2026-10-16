@@ -114,6 +114,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [claude-skills](https://github.com/Jeffallan/claude-skills) - 67 Agent Skills for full-stack development across languages, frameworks, infrastructure, testing, security, and data/ML, with 371 reference files that load only when a task needs them and 9 project workflow commands.
 - [kstack](https://github.com/dwk601/kstack) - Eleven agent skills for Herdr that plan with two models checking each other, build with parallel reviewed workers, run a verification swarm, then push a PR and fix it until checks are green.
 - [nuthinking/skills](https://github.com/nuthinking/skills) - Agent skills for Claude Code, Codex and Cursor, including site-edit, where editors pin notes on a live site and Claude Code turns them into pull requests, and product-map, which keeps a feature map and product flows in the repo.
+- [vibes-plug](https://github.com/roedyrustam/vibes-plug) - Cross-IDE AI skill collection that orchestrates 147 specialized subagents for full-stack development workflows.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
 
 ### Development & Workflow
