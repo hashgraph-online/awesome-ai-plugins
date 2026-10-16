@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-15",
+  "last_updated": "2026-10-16",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3592,6 +3592,21 @@
       "install_url": "https://raw.githubusercontent.com/mobazha/mobazha-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "MoltNode by Chord",
+      "displayName": "MoltNode by Chord",
+      "description": "Read 31 blockchains over JSON-RPC and get best-route DEX swap quotes with unsigned transactions via Chord, through two hosted no-key MCP servers and three skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tuantqse90",
+      "repo": "moltnode-mcp",
+      "url": "https://github.com/tuantqse90/moltnode-mcp",
+      "install_url": "https://raw.githubusercontent.com/tuantqse90/moltnode-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "MorningAI",
       "displayName": "MorningAI",
       "description": "AI news tracking skill that monitors 80+ entities across 6 sources (Reddit, HN, GitHub, Hugging Face, arXiv, X) and generates scored daily reports with infographics and message digests.",
@@ -3965,6 +3980,21 @@
       "repo": "sectionsight",
       "url": "https://github.com/Majny/sectionsight",
       "install_url": "https://raw.githubusercontent.com/Majny/sectionsight/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Self-Starter",
+      "displayName": "Self-Starter",
+      "description": "Define custom events in plain language, check them with lightweight probes, and resume your Codex conversation when they fire.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hyprh",
+      "repo": "self-starter",
+      "url": "https://github.com/hyprh/self-starter",
+      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "SEO Dungeon",
@@ -5547,6 +5577,21 @@
       "repo": "clawd-plugins",
       "url": "https://github.com/IKnowJot/clawd-plugins",
       "install_url": "https://raw.githubusercontent.com/IKnowJot/clawd-plugins/HEAD/plugins/clawd-tracker/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Cloakroom",
+      "displayName": "Cloakroom",
+      "description": "Claude Code plugin that masks secrets and personal data on your machine before the model sees them, and puts the real values back in the files Claude writes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "shanjeevrajendran",
+      "repo": "cloakroom-plugin",
+      "url": "https://github.com/shanjeevrajendran/cloakroom-plugin",
+      "install_url": "https://raw.githubusercontent.com/shanjeevrajendran/cloakroom-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Cloudish",
@@ -10108,7 +10153,7 @@
       "owner": "citrolabs",
       "repo": "ego-lite",
       "url": "https://github.com/citrolabs/ego-lite",
-      "installation_url": "https://github.com/citrolabs/ego-lite#readme"
+      "install_url": "https://raw.githubusercontent.com/citrolabs/ego-lite/HEAD/plugins/ego/.claude-plugin/plugin.json"
     },
     {
       "name": "EndNote for Word",
@@ -11484,10 +11529,14 @@
       "description": "Remote MCP server with 140+ pay-per-call tools for PDF, OCR, images, web pages and chain reads; free daily allowance, then x402 USDC on Base or Polygon",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
       "owner": "tanod-labs",
       "repo": "tanod-mcp",
       "url": "https://github.com/tanod-labs/tanod-mcp",
-      "installation_url": "https://github.com/tanod-labs/tanod-mcp#readme"
+      "install_url": "https://raw.githubusercontent.com/tanod-labs/tanod-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Tapetide",
