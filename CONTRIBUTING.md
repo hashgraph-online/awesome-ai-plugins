@@ -150,3 +150,21 @@ Open a PR with:
 - Keep descriptions concise (one sentence)
 - Use alphabetical order within sections
 - Community plugins should have some activity (recent commits or releases)
+
+# Local development
+
+Use Python 3.12.10 (`.python-version`) and install the pinned development dependency:
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m unittest tests/test-generate-plugins-json.py
+python3 scripts/check-alphabetical.py README.md
+```
+
+These unit and ordering checks are offline. Contribution validation and source scanning contact GitHub and the repositories being listed. Feed generation can also read upstream catalogs and probe plugin repositories. To exercise the generator without network access or touching tracked output files, run:
+
+```bash
+python3 scripts/generate_plugins_json.py --offline --output-dir /tmp/awesome-ai-plugins-preview
+```
+
+Review generated files before copying them into the repository. CI validates changes and never commits or pushes generated artifacts.

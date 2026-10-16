@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import contextlib
+import io
 import tempfile
 import unittest
 import urllib.error
@@ -26,6 +28,29 @@ class FakeResponse:
 
     def __exit__(self, *_exc: object) -> None:
         return None
+
+
+class GeneratorOutputSafetyTests(unittest.TestCase):
+    def test_offline_generation_writes_only_to_requested_directory(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            before = {path: path.read_bytes() for path in (MODULE.OUTPUT, MODULE.MARKETPLACE_OUTPUT) if path.exists()}
+            with contextlib.redirect_stdout(io.StringIO()), patch(
+                "urllib.request.urlopen", side_effect=AssertionError("offline mode attempted network access")
+            ):
+                MODULE.main(["--offline", "--output-dir", str(output)])
+            self.assertTrue((output / "plugins.json").is_file())
+            self.assertTrue((output / ".agents/plugins/marketplace.json").is_file())
+            for path, content in before.items():
+                self.assertEqual(path.read_bytes(), content)
+
+    def test_check_mode_does_not_create_missing_output_files(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+                MODULE.main(["--offline", "--check", "--output-dir", str(output)])
+            self.assertFalse((output / "plugins.json").exists())
+            self.assertFalse((output / ".agents/plugins/marketplace.json").exists())
 
 
 def only_path_resolves(path: str):
