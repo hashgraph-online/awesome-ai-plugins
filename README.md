@@ -169,6 +169,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [antidote](https://github.com/Avtr99/antidote) - An antidote to AI patchwork: stops agents from hiding bugs behind guards and makes them remove the cause.
 - [Antigravity Context Meter](https://github.com/Dunphil692/antigravity-context-meter) - Real-time 1:1 Cursor-style context meter & zero-loss session migration for Google Antigravity (Desktop HUD & IDE Extension).
 - [Antigravity Workspace Template](https://github.com/study8677/antigravity-workspace-template) - Multi-agent codebase knowledge graph generator with context-aware planning and automatic scope management — turns codebases into coherent agent workspaces.
+- [ARC](https://github.com/avandall/ARC) - Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents
 - [Archcore](https://github.com/archcore-ai/archcore) - Spec-driven development and context engineering for Claude Code, Cursor, Codex, and GitHub Copilot — backed by project context in Git.
 - [AREX-Skill](https://github.com/VectorSpaceLab/AREX-Skill) - A library of 5,000+ verified, executable skills distilled from ML repositories for coding and research agents.
 - [ArmorCodex](https://github.com/armoriq/armorCodex) - Intent-based security for Codex with MCP plan registration, policy gating, CSRG cryptographic proofs, and audit logging on `bash` and `apply_patch`.
