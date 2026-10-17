@@ -5105,6 +5105,17 @@
       "installation_url": "https://github.com/Dunphil692/antigravity-context-meter#readme"
     },
     {
+      "name": "ARC",
+      "displayName": "ARC",
+      "description": "Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "avandall",
+      "repo": "ARC",
+      "url": "https://github.com/avandall/ARC",
+      "installation_url": "https://github.com/avandall/ARC#readme"
+    },
+    {
       "name": "AREX-Skill",
       "displayName": "AREX-Skill",
       "description": "A library of 5,000+ verified, executable skills distilled from ML repositories for coding and research agents",
@@ -9755,7 +9766,7 @@
       "owner": "alelaguard",
       "repo": "agentguards-plugins",
       "url": "https://github.com/alelaguard/agentguards-plugins",
-      "installation_url": "https://github.com/alelaguard/agentguards-plugins#readme"
+      "install_url": "https://raw.githubusercontent.com/alelaguard/agentguards-plugins/HEAD/claude-directory/.claude-plugin/plugin.json"
     },
     {
       "name": "agentic-finance-graph-mcp",
@@ -11886,6 +11897,17 @@
       "repo": "springbrand-agent-setup",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
       "install_url": "https://raw.githubusercontent.com/springbrand-lab/springbrand-agent-setup/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Statsnet MCP",
+      "displayName": "Statsnet MCP",
+      "description": "Background check any company in the world: registration, executives, courts and finances. Remote MCP endpoint https://statsnet.co/mcp; registry id `io.github.usenetstate/statsnet`",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "usenetstate",
+      "repo": "statsnet-mcp",
+      "url": "https://github.com/usenetstate/statsnet-mcp",
+      "installation_url": "https://github.com/usenetstate/statsnet-mcp#readme"
     },
     {
       "name": "Substack MCP",

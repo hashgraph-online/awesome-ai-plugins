@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-17",
-  "total": 884,
+  "total": 886,
   "platforms": [
     "codex",
     "grok",
@@ -4776,6 +4776,16 @@
       "installation_url": "https://github.com/Dunphil692/antigravity-context-meter#readme"
     },
     {
+      "name": "ARC",
+      "url": "https://github.com/avandall/ARC",
+      "owner": "avandall",
+      "repo": "ARC",
+      "description": "Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/avandall/ARC#readme"
+    },
+    {
       "name": "AREX-Skill",
       "url": "https://github.com/VectorSpaceLab/AREX-Skill",
       "owner": "VectorSpaceLab",
@@ -9084,7 +9094,7 @@
       "description": "LLM security guardrails for Codex with enforcing hooks and MCP tools: jailbreak and prompt-injection detection, web-content scanning, data-exfiltration blocking, and destructive-command authorization",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/alelaguard/agentguards-plugins#readme",
+      "install_url": "https://raw.githubusercontent.com/alelaguard/agentguards-plugins/HEAD/claude-directory/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -11061,6 +11071,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Statsnet MCP",
+      "url": "https://github.com/usenetstate/statsnet-mcp",
+      "owner": "usenetstate",
+      "repo": "statsnet-mcp",
+      "description": "Background check any company in the world: registration, executives, courts and finances. Remote MCP endpoint https://statsnet.co/mcp; registry id `io.github.usenetstate/statsnet`",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/usenetstate/statsnet-mcp#readme"
     },
     {
       "name": "Substack MCP",
