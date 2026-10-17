@@ -69,46 +69,69 @@ class GitHubCommentsFetchError(RuntimeError):
     """Raised when existing claim comments cannot be checked completely."""
 
 
-def build_comment_body(author: str, repositories=(), pending_repositories=()) -> str:
-    """Build a concise post-merge ownership-verification notice."""
+DEFERRED_NOTICE_MARKERS = (
+    "Still syncing",
+    "Registry sync in progress",
+    "not live in the HOL Registry",
+    "No action is needed yet",
+)
 
-    claimable = sorted(set(repositories))
-    pending = sorted(set(pending_repositories) - set(claimable))
 
-    sections = []
-    if claimable:
-        claim_links = "\n".join(
-            f"- [Verify ownership of `{repo}`](https://hol.org/guard/plugins?{urlencode({'claim': repo, 'utm_source': 'github', 'utm_medium': 'pr_comment', 'utm_campaign': 'plugin_claim', 'utm_content': 'merge_notice'})})"
-            for repo in claimable
+def claim_link(repo: str) -> str:
+    return (
+        "https://hol.org/guard/plugins?"
+        + urlencode(
+            {
+                "claim": repo,
+                "utm_source": "github",
+                "utm_medium": "pr_comment",
+                "utm_campaign": "plugin_claim",
+                "utm_content": "merge_notice",
+            }
         )
-        sections.append(f"""### Verify ownership
+    )
 
-{claim_links}
 
-Open the link for your plugin and choose **"Continue with GitHub"**. Use the GitHub account that maintains the repository. HOL requests only `read:user` and `user:email`; it does not request repository write access.
+def build_comment_body(author: str, repositories=(), pending_repositories=()) -> str:
+    """Invite the author to verify ownership as soon as the catalog PR merges.
 
-After verification, the listing gets an owner-verified badge and the plugin dashboard shows its trust score, installs, and engagement. If GitHub permissions are inconclusive, the claim may require review.""")
+    Registry indexing is not a gate. A repository merged into the catalog
+    source can be claimed before its public listing finishes syncing.
+    """
 
-    if pending:
-        pending_lines = "\n".join(f"- `{repo}`" for repo in pending)
-        sections.append(f"""### Still syncing
+    claimable = sorted(set(repositories) | set(pending_repositories))
+    if not claimable:
+        return f"""<!-- hol-claim-notice -->
+🎉 Congrats @{author}, your plugin is live in the [HOL Registry](https://hol.org/registry/plugins) — and ownership is already verified!
 
-These repositories are merged into HOL's catalog but are not live in the HOL Registry yet:
+[Open your plugin dashboard](https://hol.org/guard/plugins)
 
-{pending_lines}
+The listing shows its ✅ owner-verified badge, trust score, installs, and engagement."""
 
-No action is needed yet. Once the listing appears in the Registry, ownership verification will be available from the [plugin dashboard](https://hol.org/guard/plugins).""")
+    claim_links = "\n".join(
+        f"- [Verify ownership of `{repo}`]({claim_link(repo)})" for repo in claimable
+    )
 
-    if not sections:
-        sections.append("[Open the plugin dashboard](https://hol.org/guard/plugins)")
-
-    action_sections = "\n\n".join(sections)
     return f"""<!-- hol-claim-notice -->
-@{author}, this contribution is merged into HOL's catalog.
+🎉 Congrats @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!
 
 ## Claim your plugin
 
-{action_sections}"""
+As the author, you can verify ownership to unlock:
+
+- **Owner-verified badge** on your plugin's registry listing
+- **Trust score** visibility and install analytics for your plugin
+- **Dashboard access** at [hol.org/guard/plugins](https://hol.org/guard/plugins) to track installs, trust, and engagement
+
+### How to claim
+
+{claim_links}
+
+Open your link and choose **"Continue with GitHub"**, using the GitHub account that maintains the repository. HOL requests only `read:user` and `user:email` — it does not request write access to your repositories.
+
+The whole process takes under 30 seconds, and your listing gets the ✅ owner-verified badge.
+
+If you have any questions, feel free to ask here or reach out at [support@hol.org](mailto:support@hol.org)."""
 
 
 MARKER = "<!-- hol-claim-notice -->"
@@ -230,8 +253,7 @@ def normalize_repo_url(raw: str) -> str:
     Strips trailing slashes, .git suffix, and extra path segments.
     """
     s = raw.strip().rstrip("/")
-    if s.endswith(".git"):
-        s = s[:-4]
+    s = re.sub(r"\.git$", "", s, flags=re.IGNORECASE)
     # If it's a full URL, extract owner/repo
     match = re.match(r"https?://github\.com/([^/]+/[^/]+)", s, re.IGNORECASE)
     if match:
@@ -256,19 +278,56 @@ def parse_pr_diff_for_repos():
     )
     diff = result.stdout
 
-    repos = set()
-    # Match https://github.com/owner/repo in added lines (starting with +)
-    for line in diff.split("\n"):
-        if not line.startswith("+"):
-            continue
-        matches = re.findall(r"https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", line)
-        for match in matches:
-            normalized = normalize_repo_url(match)
-            # Skip hashgraph-online repos (our own)
-            if not normalized.startswith("hashgraph-online/"):
-                repos.add(normalized)
+    added_line_repos = {}
+    removed_line_repos = {}
+    # Match https://github.com/owner/repo on diff lines. A re-sorted README
+    # line appears on both a `-` and a `+` side with the same content, so it
+    # must not count as the PR adding that repository. Bodies are compared
+    # case- and punctuation-insensitively so a moved line that is re-indented
+    # or re-punctuated still nets, while a real addition survives an unrelated
+    # removal of the same URL. Netting is keyed per repository: the removed
+    # line must mention the same repo, so distinct repos whose listing text
+    # differs only in punctuation (acme/foo-bar vs acme/foobar) never alias.
+    repo_url_re = re.compile(
+        r"https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", re.IGNORECASE
+    )
 
-    return repos
+    def normalize_body(text):
+        # Canonicalize repo URLs inside the body so .git suffixes, trailing
+        # slashes, and host casing do not defeat the move comparison.
+        text = repo_url_re.sub(lambda m: " repo/" + normalize_repo_url(m.group(1)), text)
+        return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+    current_file = None
+    for line in diff.split("\n"):
+        if line.startswith("+++ "):
+            path = line[4:].strip()
+            current_file = path[2:] if path.startswith("b/") else path
+            continue
+        if line.startswith("--- "):
+            continue
+        is_added = line.startswith("+")
+        is_removed = line.startswith("-")
+        if not is_added and not is_removed:
+            continue
+        body = normalize_body(line[1:])
+        repos = {normalize_repo_url(m) for m in repo_url_re.findall(line)}
+        # Skip hashgraph-online repos (our own)
+        repos = {repo for repo in repos if not repo.startswith("hashgraph-online/")}
+        # Netting is scoped per file: a removal in a vendored or unrelated
+        # file must not suppress a genuine catalog README addition.
+        if is_removed:
+            for repo in repos:
+                removed_line_repos.setdefault((repo, current_file), set()).add(body)
+            continue
+        for repo in repos:
+            added_line_repos.setdefault((repo, current_file), set()).add(body)
+
+    return {
+        repo
+        for (repo, filename), bodies in added_line_repos.items()
+        if bodies - removed_line_repos.get((repo, filename), set())
+    }
 
 
 def has_existing_claim_comment():
@@ -289,6 +348,8 @@ def has_existing_claim_comment():
                 continue
             body = comment.get("body") or ""
             if MARKER in body:
+                if any(marker in body for marker in DEFERRED_NOTICE_MARKERS):
+                    return {"id": comment.get("id"), "deferred": True}
                 return True
             # Also detect manual claim comments posted before automation
             if "Claim your plugin" in body and "hol.org/guard/plugins" in body:
@@ -307,6 +368,17 @@ def post_comment(author: str, repositories=(), pending_repositories=()):
     headers = {"Authorization": f"token {GH_TOKEN}"}
     body = build_comment_body(author, repositories, pending_repositories)
     result = api_request(url, headers=headers, method="POST", data={"body": body})
+    return result is not None
+
+
+def update_comment(comment_id, author: str, repositories=()) -> bool:
+    """Replace a deferred sync notice with a claim link."""
+    if not isinstance(comment_id, int):
+        return False
+    url = f"https://api.github.com/repos/{REPO_FULL}/issues/comments/{comment_id}"
+    headers = {"Authorization": f"token {GH_TOKEN}"}
+    body = build_comment_body(author, repositories)
+    result = api_request(url, headers=headers, method="PATCH", data={"body": body})
     return result is not None
 
 
@@ -343,9 +415,12 @@ def main():
         print("  Skipping: bot/owner PR")
         return 0
 
-    # 2. Check for existing claim comment.
+    # 2. Check for existing claim comment. A deferred "still syncing"
+    # notice is replaced once we know which repositories to claim.
+    existing_notice = False
     try:
-        if has_existing_claim_comment():
+        existing_notice = has_existing_claim_comment()
+        if existing_notice is True:
             print("  Skipping: claim notice already posted")
             return 0
     except GitHubCommentsFetchError as error:
@@ -389,7 +464,14 @@ def main():
         if os.path.exists(readme_path):
             readme_content = open(readme_path, encoding="utf-8").read().lower()
             pending_repos = {
-                repo for repo in missing_from_registry if repo.lower() in readme_content
+                repo
+                for repo in missing_from_registry
+                if re.search(
+                    r"(?<![A-Za-z0-9_.-])"
+                    + re.escape(repo.lower())
+                    + r"(?![A-Za-z0-9_.-])",
+                    readme_content,
+                )
             }
             if pending_repos:
                 print(f"  Pending registry sync: {', '.join(sorted(pending_repos))}")
@@ -415,17 +497,33 @@ def main():
             return 1
         already_verified = live_repos & verified_repos
 
-    claimable_repos = live_repos - already_verified
+    claimable_repos = (live_repos | pending_repos) - already_verified
     if already_verified:
         print(f"  Already verified: {', '.join(sorted(already_verified))}")
 
-    if not claimable_repos and not pending_repos:
-        print("  Skipping: all live matched repos are already owner-verified")
+    if not claimable_repos:
+        if isinstance(existing_notice, dict) and existing_notice.get("deferred"):
+            print("  Clearing deferred notice; repositories are already verified")
+            if update_comment(existing_notice.get("id"), PR_AUTHOR, set()):
+                print("  ✅ Deferred notice cleared")
+                return 0
+            print("  ❌ Failed to clear deferred notice")
+            return 1
+        print("  Skipping: all matched repos are already owner-verified")
         return 0
 
-    # 7. Post the comment. Pending repos never receive a direct claim URL.
+    # 7. Post or replace the comment. Catalog-source repos are claimable
+    # before the public Registry listing finishes indexing.
+    if isinstance(existing_notice, dict) and existing_notice.get("deferred"):
+        print("  Replacing deferred claim notice...")
+        if update_comment(existing_notice.get("id"), PR_AUTHOR, claimable_repos):
+            print("  ✅ Comment updated successfully")
+            return 0
+        print("  ❌ Failed to update comment")
+        return 1
+
     print("  Posting claim notice comment...")
-    if post_comment(PR_AUTHOR, claimable_repos, pending_repos):
+    if post_comment(PR_AUTHOR, claimable_repos):
         print("  ✅ Comment posted successfully")
         return 0
 

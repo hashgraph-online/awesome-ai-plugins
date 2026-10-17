@@ -10,7 +10,34 @@ Thank you for considering a contribution!
    ```
    - [Extension Name](https://github.com/owner/repo) - Description (max 1 sentence).
    ```
-4. **Add to appropriate section** - Codex plugins, Claude Code skills, Gemini extensions, Grok plugins, Kimi plugins, DeepSeek Harness plugins, MCP servers, or Cross-AI tools
+4. **Add to the appropriate section** - Agent Skills, a platform-specific plugin subsection, or the shared Development & Workflow / Tools & Integrations categories
+
+Entries in the shared Community Plugins categories are ecosystem-neutral by
+default. A Codex `.codex-plugin/plugin.json` manifest is not required; the
+generated catalogs only advertise a client-specific install target when the
+listing identifies that platform or a supported manifest is actually present.
+
+### Native Agent Skills
+
+Use an `Agent Skills` subsection under Community Plugins for repositories that publish independently installable `SKILL.md` folders rather than a client-specific plugin bundle. The generator records `platform: agent-skills`, links `installation_url` to the source README, and omits a client-specific `install_url`. The source README must document tested installation instructions and supported clients.
+
+### Native MCP servers
+
+Keep native MCP servers in the relevant topical category and begin their
+description with `MCP server: `. The generator then emits `platform: mcp` and an
+`installation_url` pointing to the source project's README. Both registry feeds
+retain this documentation link without generating a client-specific
+`install_url`. The project's README must document the tested installation and
+MCP configuration; this catalog does not execute those instructions or promise
+automatic installation.
+
+### Standalone tools
+
+For native applications and standalone CLIs in Tools & Integrations, append
+`<!-- platform: standalone -->` to the listing line. The catalog records the
+`standalone` platform and repository URL, omits the plugin `install_url`, and
+leaves installation instructions in the source repository. Do not add a plugin
+manifest unless the project actually supports that plugin runtime.
 
 ### Grok submissions
 
@@ -55,7 +82,7 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-Scanner CI is optional for listing. HOL still scans listed projects independently. We recommend including it for security: continuous checks on MCP servers, skills, plugins, and other agent extensions keep this catalog safer for everyone who installs from it. Projects that maintain scanner CI receive the full trust score; projects without it remain eligible and receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must complete successfully and score at least 80 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. Failed or unavailable scans still block merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
@@ -90,16 +117,17 @@ Pull requests that add a Community Plugin entry, including the DeepSeek Harness
 Plugins subsection, are checked automatically by
 `.github/workflows/validate-contribution.yml`. Catalog format, section, and
 discovery checks are required. Scanner CI in the source repository is optional.
-HOL clones and scans each valid new source repository; those scan results are
-advisory and do not block a valid listing.
+HOL clones and scans each valid new source repository. The centralized scan
+must pass before the listing can merge; the source repository does not need
+its own scanner workflow.
 
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
 PR's exact README base/head revisions without executing fork code, queues an
-advisory scan, and publishes the result on each PR head. When the source
-repository has no scanner CI, the bot still comments: listing can merge, adding
-the action is recommended for security of MCP servers, skills, and plugins, and
-the comment explains the trust-score benefit.
+required source scan, and publishes the result on each PR head. When the source
+repository has no scanner CI, the bot recommends the action and explains the
+trust-score benefit. Missing scanner CI does not replace or waive the required
+centralized scan.
 Reruns update the existing bot comment and check in place.
 
 Use scanner outputs as evidence for maintainers/reviewers:
