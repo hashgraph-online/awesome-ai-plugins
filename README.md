@@ -812,6 +812,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Ophis](https://github.com/ophis-fi/skills) - Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
 - [Overleaf LaTeX](https://github.com/MarcoDotIO/overleaf-latex) - Local MCP/Codex plugin for creating and editing Overleaf projects.
+- [Oya Browser](https://github.com/OyadotAI/oya-browser) - MCP server, agent skill and desktop browser that give agents real signed-in browsers: start_browser, analyze_page, click and type, several agents each in their own tab beside the person, and model-free replay of recorded workflows.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
 - [ParlayAPI](https://github.com/JacobiusMakes/parlay-api-mcp) - Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances.
