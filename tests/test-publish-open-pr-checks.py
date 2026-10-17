@@ -24,6 +24,34 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("Finding severities are advisory", summary)
         self.assertIn("Keep the contribution blocked", summary)
 
+    def test_successful_source_scans_pass(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "scan"}, {411: ["success", "success"]}
+        )
+
+        self.assertEqual(conclusion, "success")
+        self.assertEqual(title, "Centralized score threshold passed")
+
+    def test_nonpassing_source_job_blocks_even_with_another_success(self):
+        for status in ("failure", "cancelled", "timed_out", "action_required", "skipped", "neutral"):
+            with self.subTest(status=status):
+                conclusion, title, summary = MODULE.check_summary(
+                    {"pr_number": 411, "state": "scan"}, {411: ["success", status]}
+                )
+
+                self.assertEqual(conclusion, "failure")
+                self.assertIn(status, summary)
+
+    def test_catalog_validation_failure_blocks_even_with_successful_scan(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "failure", "failure_reasons": ["Duplicate entry"]},
+            {411: ["success"]},
+        )
+
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Contribution requirements failed")
+        self.assertIn("Duplicate entry", summary)
+
     def test_unavailable_source_scan_blocks_merge(self):
         conclusion, title, summary = MODULE.check_summary(
             {"pr_number": 411, "state": "scan", "failure_reasons": []}, {}
