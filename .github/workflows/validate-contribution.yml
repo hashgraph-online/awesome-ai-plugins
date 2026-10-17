@@ -36,9 +36,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
-          python-version: "3.12"
+          python-version-file: .python-version
       - name: Install validator dependencies
-        run: python3 -m pip install --disable-pip-version-check --no-input "PyYAML==6.0.2"
+        run: python3 -m pip install --disable-pip-version-check --no-input -r requirements-dev.txt
       - name: Test contributor automation messaging
         run: python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-publish-open-pr-checks.py tests/test-sanitize-scan-report.py tests/test-validate-contribution.py
       - name: Validate changed catalog entries
