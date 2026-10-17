@@ -542,6 +542,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Spellbook](https://github.com/majiayu000/spellbook) - Cross-runtime library of 108 agent skills installable into Claude Code and Codex via one command.
 - [Spellbook Skills](https://github.com/yyykf/spellbook-skills) - Practical Claude Code and Codex skills for worktrees, PR/MR automation, review cleanup, YApi lookup, and Java DDD guidance.
 - [squidward](https://github.com/keshavbiswa/squidward) - Claude Code plugin that does the work correctly but delivers every sentence sarcastically, with mild, rowdy, and savage levels and a one-line roast code review.
+- [Sqwakie](https://github.com/alexcarney460-hue/walkie) - MCP server: lets a team's Claude Code and Codex agents message each other peer-to-peer (`walkie_post`, `walkie_ask`, `walkie_inbox` and more), work shared kanban boards, and show up on a live Mission Control dashboard; source-available under FSL-1.1-ALv2.
 - [ssot-check](https://github.com/conorbronsdon/ssot-check) - Agent Skill and dependency-free Python CLI that discovers repeated facts in documentation and checks declared copies against canonical values.
 - [Staff Engineer Mode](https://github.com/sirmarkz/staff-engineer-mode) - Routes engineering design, delivery, reliability, security, operations, and maintenance prompts to focused staff-level specialist guidance for AI coding agents.
 - [Standup Generator](./plugins/mturac/standup-gen) - Daily standup notes from git activity across repos.
