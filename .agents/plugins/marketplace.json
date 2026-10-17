@@ -5941,6 +5941,17 @@
       "installation_url": "https://github.com/EfficientContext/ContextPilot#readme"
     },
     {
+      "name": "ContextStream",
+      "displayName": "ContextStream",
+      "description": "Persistent memory, semantic search, and shared project context for AI agents with traceable sources and scoped access",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "contextstream",
+      "repo": "mcp-server",
+      "url": "https://github.com/contextstream/mcp-server",
+      "installation_url": "https://github.com/contextstream/mcp-server#readme"
+    },
+    {
       "name": "Contorium",
       "displayName": "Contorium",
       "description": "Runtime continuity layer for AI coding agents, providing persistent workspace state, Git-aware sessions, and MCP-based context retrieval across tools and agent runs",

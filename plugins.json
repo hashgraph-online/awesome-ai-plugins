@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-17",
-  "total": 886,
+  "total": 887,
   "platforms": [
     "codex",
     "grok",
@@ -5550,6 +5550,16 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/EfficientContext/ContextPilot#readme"
+    },
+    {
+      "name": "ContextStream",
+      "url": "https://github.com/contextstream/mcp-server",
+      "owner": "contextstream",
+      "repo": "mcp-server",
+      "description": "Persistent memory, semantic search, and shared project context for AI agents with traceable sources and scoped access",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/contextstream/mcp-server#readme"
     },
     {
       "name": "Contorium",
