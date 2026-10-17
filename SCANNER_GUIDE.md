@@ -126,7 +126,7 @@ Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner
 
 ### Recommended for Awesome AI Plugins listing
 
-Scanner CI in the source repository is optional for listing. The required centralized source scan must pass before merge. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The required centralized source scan must complete successfully with a score of at least 80 before merge. Finding severities are advisory for listing eligibility and remain available for maintainer review. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
 
 Add the scanner badge to your README:
 
