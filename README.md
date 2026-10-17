@@ -749,6 +749,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [KGLite](https://github.com/kkollsga/kglite) - Turn datasets large and small into knowledge graphs for AI agent memory, knowledge retrieval, and connected-data analysis, with a high-performance local graph database and a ready-to-use MCP interface.
 - [kibi](https://github.com/Looted/kibi) - MCP server and per-agent plugins that compile product intent into structured requirements and check that code and tests stay consistent with them. <!-- platform: standalone -->
 - [KiCad Happy](https://github.com/aklofas/kicad-happy) - KiCad EDA skills for schematic analysis, PCB layout review, component sourcing, BOM management, and manufacturing preparation.
+- [Kiln](https://github.com/instruktlabs/kiln) - 3D asset engine and toolchain for coding agents, with MCP, CLI and skills for generating, reviewing, revising and exporting assets through JavaScript.
 - [Kindle Highlights](https://github.com/l3a0/claude-plugins) - Claude Code skill that exports a book's Kindle highlights to verbatim, location-cited Markdown, recovering the ones Amazon's export limit truncates or hides (macOS).
 - [Kreuzberg](https://github.com/kreuzberg-dev/plugins) - Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.
 - [Kreuzberg Cloud](https://github.com/kreuzberg-dev/plugins) - Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.
