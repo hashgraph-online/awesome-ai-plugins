@@ -90,6 +90,7 @@ jobs:
         run: git clone --depth 1 "$CONTRIBUTION_URL" "$RUNNER_TEMP/contributed"
       - name: Run HOL AI Plugin Scanner
         id: central_scan
+        # Advisory action failures are judged by the exported score below.
         continue-on-error: true
         uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
         with:
