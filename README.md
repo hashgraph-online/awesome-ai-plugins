@@ -213,6 +213,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [cc-tree](https://github.com/skymanbp/cc-tree) - Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node.
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
 - [chat-history](https://github.com/ay-bh/chat-history) - Claude Code/Codex/Cursor history search + export.
+- [ChatVault](https://github.com/ssanaullahrais/Chat-Vault) - Windows app that reads, searches, backs up and continues your Claude Code, Codex, Cursor, Gemini CLI, OpenCode and Cline chats across accounts. <!-- platform: standalone -->
 - [Check and Fix Accessibility](https://github.com/Neha/check-fix-accessibility) - Agent skill that audits and fixes front-end accessibility to WCAG 2.2 A/AA, covering semantics, keyboard navigation, ARIA, forms, contrast, and screen readers for web and native mobile across Cursor, Claude Code, Codex, Kiro, and Antigravity.
 - [Claude Book Reader](https://github.com/Nomad06/claude-book-reader) - Claude Code mod to read a PDF book in a pane or browser window while the agent works, with pictures shown in kitty and Ghostty.
 - [Claude Code Arcade](https://github.com/witkowsky/claude-code-arcade) - Claude Code mod with five games to play in a pane while the agent works: Flappy Claude, the Chrome dino runner, Snake, Pong and Space Invaders, all starring Clawd in Claude's colours.
