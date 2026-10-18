@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-17",
-  "total": 884,
+  "last_updated": "2026-10-18",
+  "total": 891,
   "platforms": [
     "codex",
     "grok",
@@ -1957,7 +1957,7 @@
       "description": "Agent skills for git workflows, GitHub automation, security audits, code refactoring, and project tooling.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/quality/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/design/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2496,6 +2496,20 @@
       ]
     },
     {
+      "name": "BulkTranscripts: YouTube Transcripts",
+      "url": "https://github.com/pratie/bulktranscripts-mcp",
+      "owner": "pratie",
+      "repo": "bulktranscripts-mcp",
+      "description": "Remote MCP server and skill for YouTube transcripts of one video, a whole channel or a playlist, plus YouTube search and new-upload tracking.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/pratie/bulktranscripts-mcp/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "BurpSuite MCP Bridge",
       "url": "https://github.com/6jeffr3y/burpsuite-mcp-bridge",
       "owner": "6jeffr3y",
@@ -2588,6 +2602,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/vladimirrott/claude-math/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Clera",
+      "url": "https://github.com/getclera/mcp",
+      "owner": "getclera",
+      "repo": "mcp",
+      "description": "Search 210,000+ vetted startup candidates, review Clera's picks for your open roles, and request intros through Clera's hosted MCP.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/getclera/mcp/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2960,6 +2988,20 @@
       ]
     },
     {
+      "name": "Eigenheim Berlin Market Data",
+      "url": "https://github.com/magicSEO/eigenheim-mcp",
+      "owner": "magicSEO",
+      "repo": "eigenheim-mcp",
+      "description": "Read-only remote MCP server and skill for daily Berlin real estate data: price per m\u00b2 by locality, rental yields, land values and active listings.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/magicSEO/eigenheim-mcp/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Equibles",
       "url": "https://github.com/daniel3303/stock-market-mcp-server",
       "owner": "daniel3303",
@@ -3196,6 +3238,22 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Kuudo Skills",
+      "url": "https://github.com/KuudoAI/skills",
+      "owner": "KuudoAI",
+      "repo": "skills",
+      "description": "Agent Skills for Amazon sellers and advertisers \u2014 Ads audits, search-term mining, budget pacing, DSP and AMC, listings, images, repricing, FBA inbound, and profitability, through Kuudo's Amazon Ads and SP-API MCP servers.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/KuudoAI/skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/KuudoAI/skills#readme"
     },
     {
       "name": "Lacuna Music",
@@ -4776,6 +4834,16 @@
       "installation_url": "https://github.com/Dunphil692/antigravity-context-meter#readme"
     },
     {
+      "name": "ARC",
+      "url": "https://github.com/avandall/ARC",
+      "owner": "avandall",
+      "repo": "ARC",
+      "description": "Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/avandall/ARC#readme"
+    },
+    {
       "name": "AREX-Skill",
       "url": "https://github.com/VectorSpaceLab/AREX-Skill",
       "owner": "VectorSpaceLab",
@@ -5540,6 +5608,16 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/EfficientContext/ContextPilot#readme"
+    },
+    {
+      "name": "ContextStream",
+      "url": "https://github.com/contextstream/mcp-server",
+      "owner": "contextstream",
+      "repo": "mcp-server",
+      "description": "Persistent memory, semantic search, and shared project context for AI agents with traceable sources and scoped access",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/contextstream/mcp-server#readme"
     },
     {
       "name": "Contorium",
@@ -9084,7 +9162,7 @@
       "description": "LLM security guardrails for Codex with enforcing hooks and MCP tools: jailbreak and prompt-injection detection, web-content scanning, data-exfiltration blocking, and destructive-command authorization",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/alelaguard/agentguards-plugins#readme",
+      "install_url": "https://raw.githubusercontent.com/alelaguard/agentguards-plugins/HEAD/claude-directory/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -9498,20 +9576,6 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/sezginkipel/clayform#readme"
-    },
-    {
-      "name": "Clera",
-      "url": "https://github.com/getclera/mcp",
-      "owner": "getclera",
-      "repo": "mcp",
-      "description": "Hosted hiring MCP server plus Claude Code, Cursor and Gemini CLI plugins: search 210,000+ vetted startup candidates, review Clera's picks and request intros over OAuth",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/getclera/mcp/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
     },
     {
       "name": "CloudBase AI Toolkit",
@@ -10864,6 +10928,20 @@
       ]
     },
     {
+      "name": "RestoSignals",
+      "url": "https://github.com/paperandbeyond23-gif/restosignals-mcp",
+      "owner": "paperandbeyond23-gif",
+      "repo": "restosignals-mcp",
+      "description": "Claude Code plugin and Agent Skill for the hosted RestoSignals MCP server: find US restaurants and bars 1-6 months before they open, scored from public liquor-license, food-permit and business filings, with owner contact (free API key)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/paperandbeyond23-gif/restosignals-mcp/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Review Analyzer Skill",
       "url": "https://github.com/buluslan/review-analyzer-skill",
       "owner": "buluslan",
@@ -11061,6 +11139,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Statsnet MCP",
+      "url": "https://github.com/usenetstate/statsnet-mcp",
+      "owner": "usenetstate",
+      "repo": "statsnet-mcp",
+      "description": "Background check any company in the world: registration, executives, courts and finances. Remote MCP endpoint https://statsnet.co/mcp; registry id `io.github.usenetstate/statsnet`",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/usenetstate/statsnet-mcp#readme"
     },
     {
       "name": "Substack MCP",
