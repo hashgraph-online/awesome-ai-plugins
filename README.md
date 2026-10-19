@@ -589,6 +589,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [TermaGITchi](https://github.com/TevvvB/termagitchi) - Stable per-worktree identity for parallel Claude Code, Codex, and tmux sessions; mood reads repository hygiene, not what the agent is doing.
 - [Test Gap](./plugins/mturac/test-gap) - Find lines in your diff lacking test coverage (Cobertura, lcov, coverage.json).
 - [ThumbGate](https://github.com/IgorGanapolsky/ThumbGate) - Pre-action infrastructure firewall for AI coding agents: feedback becomes lessons and prevention rules enforced by PreToolUse hooks across Claude Code, Codex, Gemini, and MCP.
+- [time-blame](https://github.com/karanb192/time-blame) - Claude Code mod that splits each turn's time into Claude, the tools it ran (named by command, such as npm test) and the user waiting on a permission dialog, on one line under the answer, with a /blame panel for the session.
 - [tmux-agentic-plugin](https://github.com/Abstrucked/tmux-agentic-plugin) - tmux status-bar strip and picker showing which Claude Code, Codex and OpenCode agents are working, blocked or ready, including on other machines over ssh and Tailscale, with desktop notifications.
 - [TODO Harvest](./plugins/mturac/todo-harvest) - TODO/FIXME/HACK scan with `git blame` author + age.
 - [token-bar](https://github.com/santosli/claude-mods) - Claude Code mod that shows context use, session and weekly quota with reset countdowns, and today's token spend in a band above the prompt, in the terminal and the desktop app.
