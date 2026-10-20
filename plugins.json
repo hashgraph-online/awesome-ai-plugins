@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 927,
+  "total": 928,
   "platforms": [
     "codex",
     "grok",
@@ -3649,6 +3649,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "orionbelt-analytics",
+      "url": "https://github.com/ralforion/orionbelt-analytics",
+      "owner": "ralforion",
+      "repo": "orionbelt-analytics",
+      "description": "MCP server: analyzes database schemas, generates RDF/OWL ontologies with SQL mappings, and validates Text-to-SQL with fan-trap detection",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ralforion/orionbelt-analytics#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
