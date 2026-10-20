@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-19",
+  "last_updated": "2026-10-20",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -22,7 +22,7 @@
     {
       "name": "A Team",
       "displayName": "A Team",
-      "description": "Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.",
+      "description": "A complete engineering team in one folder with 26 specialist agents, 20 workflow skills, an orchestrator, and quality gates; integration and hook support vary by coding platform.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -228,6 +228,21 @@
       "repo": "ai-plugin",
       "url": "https://github.com/AgiFlow/ai-plugin",
       "install_url": "https://raw.githubusercontent.com/AgiFlow/ai-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AI-Native SDLC Loop",
+      "displayName": "AI-Native SDLC Loop",
+      "description": "Six-stage SDLC in committed Markdown where hooks enforce the loop at the tool-call level: an artifact gate refuses source writes no approved plan covers and keeps a change declared low-risk away from sensitive paths, with 8 skills and 2 read-only subagents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ghiaog123",
+      "repo": "ai-native-sdlc",
+      "url": "https://github.com/ghiaog123/ai-native-sdlc",
+      "install_url": "https://raw.githubusercontent.com/ghiaog123/ai-native-sdlc/HEAD/plugins/ai-sdlc/.codex-plugin/plugin.json"
     },
     {
       "name": "AIBoarding",
@@ -1340,6 +1355,21 @@
       "install_url": "https://raw.githubusercontent.com/yimwoo/hotl-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Image & Media Skills",
+      "displayName": "Image & Media Skills",
+      "description": "Eight skills that audit and fix image and video delivery for Core Web Vitals, plus Sirv image CDN, 360 spin, and AI Studio workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "IgorVaryvoda",
+      "repo": "image-optimization-skill",
+      "url": "https://github.com/IgorVaryvoda/image-optimization-skill",
+      "install_url": "https://raw.githubusercontent.com/IgorVaryvoda/image-optimization-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "jev-use",
       "displayName": "jev-use",
       "description": "Hands the steps of a Codex session that produce no text \u2014 is the build done, which of these elements do I click, is this shell command safe \u2014 to Jev, TypeSafe AI's judgment model, with a PreToolUse command gate and typed escalation back to the model for anything it cannot decide.",
@@ -1535,6 +1565,21 @@
       "install_url": "https://raw.githubusercontent.com/orwa-mahmoud/nightshift/HEAD/plugins/nightshift/.codex-plugin/plugin.json"
     },
     {
+      "name": "Off the Wall",
+      "displayName": "Off the Wall",
+      "description": "Quotes your own past corrections back to Codex, word for word, before each answer; `otw report` shows what you correct most from your local history, and subagent routing names a cheaper model per subagent. No API key.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "toranalytics",
+      "repo": "off-the-wall",
+      "url": "https://github.com/toranalytics/off-the-wall",
+      "install_url": "https://raw.githubusercontent.com/toranalytics/off-the-wall/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Oh My Cassette",
       "displayName": "Oh My Cassette",
       "description": "Turn raw local clips into a finished cut by chatting: beat-synced edits, auto-matched music, subtitles, and transitions through a local stdio MCP server, with a timeline delta and contact-sheet preview every turn before anything renders.",
@@ -1698,6 +1743,21 @@
       "repo": "rag_for_git",
       "url": "https://github.com/mimfort/rag_for_git",
       "install_url": "https://raw.githubusercontent.com/mimfort/rag_for_git/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Receipts by Nueton",
+      "displayName": "Receipts by Nueton",
+      "description": "Checks every \"done\" claim in local Codex and Claude Code session logs against the same session's commands and prints the counts plus a shareable card, read-only and offline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Kloudedge-apex",
+      "repo": "receipts-collector",
+      "url": "https://github.com/Kloudedge-apex/receipts-collector",
+      "install_url": "https://raw.githubusercontent.com/Kloudedge-apex/receipts-collector/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Red-Green Proof",
@@ -2720,6 +2780,21 @@
       "install_url": "https://raw.githubusercontent.com/Ratnam-Mishra/canvas-apps-plugin-codex/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Car Rental Business Skills",
+      "displayName": "Car Rental Business Skills",
+      "description": "Codex-ready bundle for exotic, luxury and Turo car rental operators with a native .codex-plugin manifest and 8 skills that price a car against live published daily rates from a free read-only market data MCP server, scan competitors, plan a rental business, and draft rental agreements, damage inspections, listings, social posts and review replies; also works in Claude Code.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "car-rental-skills",
+      "url": "https://github.com/sergebulaev/car-rental-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/car-rental-skills/HEAD/.codex-marketplace/car-rental-skills/.codex-plugin/plugin.json"
+    },
+    {
       "name": "CarsXE",
       "displayName": "CarsXE",
       "description": "Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.",
@@ -3307,6 +3382,21 @@
       "repo": "power-automate-mcp-skills",
       "url": "https://github.com/ninihen1/power-automate-mcp-skills",
       "install_url": "https://raw.githubusercontent.com/ninihen1/power-automate-mcp-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Foundry",
+      "displayName": "Foundry",
+      "description": "Growth ops for ad agencies: audit accounts, write English and Arabic client reports and run ROAS maths, with live Google and Meta changes locked behind a human at a terminal.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mohamedOmar11111",
+      "repo": "growth-architect-foundry",
+      "url": "https://github.com/mohamedOmar11111/growth-architect-foundry",
+      "install_url": "https://raw.githubusercontent.com/mohamedOmar11111/growth-architect-foundry/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "FXMacroData",
@@ -4135,7 +4225,7 @@
       "owner": "hyprh",
       "repo": "self-starter",
       "url": "https://github.com/hyprh/self-starter",
-      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/codex-plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "SEO Dungeon",
@@ -4708,6 +4798,36 @@
       "installation_url": "https://github.com/Jeffallan/claude-skills#readme"
     },
     {
+      "name": "conventional-commits-framework",
+      "displayName": "conventional-commits-framework",
+      "description": "Agent skill for complete, atomic Conventional Commits with every field filled, breaking changes declared explicitly, and one consistent AI co-author trailer, plus commitlint, git hook, and release tooling setup",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "YourAKShaw",
+      "repo": "conventional-commits-framework",
+      "url": "https://github.com/YourAKShaw/conventional-commits-framework",
+      "installation_url": "https://github.com/YourAKShaw/conventional-commits-framework#readme"
+    },
+    {
+      "name": "deed.page",
+      "displayName": "deed.page",
+      "description": "Agent skill that publishes an HTML file or static folder to a permanent public deed.page URL with one curl request and no account",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "f-o-x11",
+      "repo": "deed-page-skill",
+      "url": "https://github.com/f-o-x11/deed-page-skill",
+      "installation_url": "https://github.com/f-o-x11/deed-page-skill#readme"
+    },
+    {
       "name": "image-use",
       "displayName": "image-use",
       "description": "Agent skill and zero-dependency CLI for generating and editing images with existing ChatGPT or Gemini accounts, with reference images, reusable styles and looping animations without an API key",
@@ -4736,6 +4856,21 @@
       "repo": "kstack",
       "url": "https://github.com/dwk601/kstack",
       "installation_url": "https://github.com/dwk601/kstack#readme"
+    },
+    {
+      "name": "MARS",
+      "displayName": "MARS",
+      "description": "Agent Skills for the MARS-Curiosity Delphi REST library that help AI coding agents scaffold MARS servers, develop REST APIs and MCP servers, and implement servers from OpenAPI documents with MARSgen",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "andrea-magni",
+      "repo": "MARS",
+      "url": "https://github.com/andrea-magni/MARS",
+      "installation_url": "https://github.com/andrea-magni/MARS#readme"
     },
     {
       "name": "memory-use",
@@ -4768,6 +4903,21 @@
       "installation_url": "https://github.com/nuthinking/skills#readme"
     },
     {
+      "name": "Pixi\u2019VN",
+      "displayName": "Pixi\u2019VN",
+      "description": "Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi\u2019VN engine",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "DRincs-Productions",
+      "repo": "pixi-vn",
+      "url": "https://github.com/DRincs-Productions/pixi-vn",
+      "installation_url": "https://github.com/DRincs-Productions/pixi-vn#readme"
+    },
+    {
       "name": "profile-use",
       "displayName": "profile-use",
       "description": "Agent skill that reuses one private personal profile across browser, iPhone and desktop forms, with masked reads, sensitive-field confirmation and approval before submission",
@@ -4781,6 +4931,51 @@
       "repo": "profile-use",
       "url": "https://github.com/leeguooooo/profile-use",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme"
+    },
+    {
+      "name": "research-agent-skills",
+      "displayName": "research-agent-skills",
+      "description": "280+ Agent Skills that turn Claude Code, Codex, Cursor, Gemini CLI and other agents into a research co-scientist for literature reviews, hypotheses, experimental design, data analysis in biology, chemistry, medicine, physics and ML, paper writing, citation verification against Crossref, OpenAlex and arXiv, and peer review",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "KalarisLabs",
+      "repo": "research-agent-skills",
+      "url": "https://github.com/KalarisLabs/research-agent-skills",
+      "installation_url": "https://github.com/KalarisLabs/research-agent-skills#readme"
+    },
+    {
+      "name": "ScoreStarling",
+      "displayName": "ScoreStarling",
+      "description": "Agent skills and hosted MCP server that transcribe, read, convert and edit sheet music, turning recordings, videos, sheet-music photos and PDFs, MIDI, MusicXML and ABC into one editable, playable score in a ScoreStarling account, with PDF, MusicXML, MIDI and audio exports",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "HaiyiMei",
+      "repo": "scorestarling-plugins",
+      "url": "https://github.com/HaiyiMei/scorestarling-plugins",
+      "installation_url": "https://github.com/HaiyiMei/scorestarling-plugins#readme"
+    },
+    {
+      "name": "ui-craft",
+      "displayName": "ui-craft",
+      "description": "Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "educlopez",
+      "repo": "ui-craft",
+      "url": "https://github.com/educlopez/ui-craft",
+      "installation_url": "https://github.com/educlopez/ui-craft#readme"
     },
     {
       "name": "vibes-plug",
@@ -5198,21 +5393,6 @@
       "install_url": "https://raw.githubusercontent.com/bashebr/ai-native-sdlc/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "AI-Native SDLC Loop",
-      "displayName": "AI-Native SDLC Loop",
-      "description": "Six-stage SDLC where hooks enforce the loop at the tool-call level: an artifact gate refuses source writes no approved plan covers, and 8 skills with 2 read-only subagents drive intent through control bands",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
-      "owner": "ghiaog123",
-      "repo": "ai-native-sdlc",
-      "url": "https://github.com/ghiaog123/ai-native-sdlc",
-      "install_url": "https://raw.githubusercontent.com/ghiaog123/ai-native-sdlc/HEAD/plugins/ai-sdlc/.claude-plugin/plugin.json"
-    },
-    {
       "name": "aide",
       "displayName": "aide",
       "description": "Persistent memory, code intelligence, and multi-agent orchestration for Claude Code, OpenCode, and Codex CLI via skills, hooks, and an MCP server",
@@ -5252,6 +5432,21 @@
       "repo": "Alloy",
       "url": "https://github.com/tlangridge/Alloy",
       "installation_url": "https://github.com/tlangridge/Alloy#readme"
+    },
+    {
+      "name": "Ambiflex",
+      "displayName": "Ambiflex",
+      "description": "Claude Code plugin that runs the plan as a live, steerable reasoning tree: a task is \"done\" only with a named proof, parallel subagents compete on one benchmark, and auto mode runs the plan with ETA and cost (`/plugin install ambiflex --marketplace ImadeBenToumAI/ambiflex`)",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ImadeBenToumAI",
+      "repo": "ambiflex",
+      "url": "https://github.com/ImadeBenToumAI/ambiflex",
+      "install_url": "https://raw.githubusercontent.com/ImadeBenToumAI/ambiflex/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Android Engineering Skills",
@@ -6744,6 +6939,21 @@
       "installation_url": "https://github.com/jsdelivr/globalping-mcp-server#readme"
     },
     {
+      "name": "gm-aiagent-plugins",
+      "displayName": "gm-aiagent-plugins",
+      "description": "Claude Code and Codex plugins that enforce Clean Architecture for Flutter (UFIL) and Rails 8 (Rubyku), with architect, implementer and reviewer agents driven by the same spec plus Dart MCP and Serena LSP integration",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ghozimahdi",
+      "repo": "gm-aiagent-plugins",
+      "url": "https://github.com/ghozimahdi/gm-aiagent-plugins",
+      "installation_url": "https://github.com/ghozimahdi/gm-aiagent-plugins#readme"
+    },
+    {
       "name": "go-ultimate",
       "displayName": "go-ultimate",
       "description": "Opinionated Go skill that routes any Go task (CLI, library, backend service, MCP server, AI agent) to the right architecture, conventions, and review checklist across Claude Code, Codex, Cursor, Grok Build, Copilot CLI, and OpenCode",
@@ -6955,6 +7165,21 @@
       "repo": "herdr-toolkit",
       "url": "https://github.com/shimo4228/herdr-toolkit",
       "install_url": "https://raw.githubusercontent.com/shimo4228/herdr-toolkit/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "herdrpowers",
+      "displayName": "herdrpowers",
+      "description": "Skill and command pack that runs a multi-phase TDD development cycle, delegating implementation, testing, and review to sibling agent panes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "transparent-pegasus",
+      "repo": "herdrpowers",
+      "url": "https://github.com/transparent-pegasus/herdrpowers",
+      "install_url": "https://raw.githubusercontent.com/transparent-pegasus/herdrpowers/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Hey Jarvis",
@@ -7604,6 +7829,21 @@
       "installation_url": "https://github.com/vheins/local-memory-mcp#readme"
     },
     {
+      "name": "local-shell-mcp",
+      "displayName": "local-shell-mcp",
+      "description": "MCP server: gives AI agents controlled shell execution, filesystem operations, browser automation, persistent sessions, and remote machine management",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "fwerkor",
+      "repo": "local-shell-mcp",
+      "url": "https://github.com/fwerkor/local-shell-mcp",
+      "installation_url": "https://github.com/fwerkor/local-shell-mcp#readme"
+    },
+    {
       "name": "Logic Probe",
       "displayName": "Logic Probe",
       "description": "Design-document & plan claim verification \u2014 checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims",
@@ -7963,6 +8203,21 @@
       "install_url": "https://raw.githubusercontent.com/divyamrastogi/model-orchestration/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "modhub",
+      "displayName": "modhub",
+      "description": "26 small mods for Claude Code: guards like fence, tripwire and pkg-guard, tool-row helpers, and eight zero-token games that play in a pane beside the conversation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "MDmubarak786",
+      "repo": "claude-mods",
+      "url": "https://github.com/MDmubarak786/claude-mods",
+      "installation_url": "https://github.com/MDmubarak786/claude-mods#readme"
+    },
+    {
       "name": "ModStage",
       "displayName": "ModStage",
       "description": "Claude Code plugin that runs Codex, Grok, Muse, Antigravity, Kimi, Qwen Code and OpenCode as watched subagents in your session, with a shared per-folder board of file leases whose fence numbers are checked at the write for Codex and ACP agents",
@@ -8181,6 +8436,17 @@
       "repo": "open-pr",
       "url": "https://github.com/TOMOSIA-VIETNAM/open-pr",
       "install_url": "https://raw.githubusercontent.com/TOMOSIA-VIETNAM/open-pr/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "openclaw-otel-observability",
+      "displayName": "openclaw-otel-observability",
+      "description": "OpenTelemetry observability plugin for OpenClaw AI agents that emits traces, metrics, and logs via OpenLLMetry",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "henrikrexed",
+      "repo": "openclaw-observability-plugin",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "installation_url": "https://github.com/henrikrexed/openclaw-observability-plugin#readme"
     },
     {
       "name": "OpenCode Orchestrator",
@@ -8517,14 +8783,10 @@
       "description": "Deterministic hooks for Claude Code, Codex, and Antigravity that gate destructive commands, credential access, outbound messages, and repeated tool calls using Python's standard library",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
       "owner": "ulukaya",
       "repo": "pawl",
       "url": "https://github.com/ulukaya/pawl",
-      "install_url": "https://raw.githubusercontent.com/ulukaya/pawl/HEAD/.codex-plugin/plugin.json"
+      "installation_url": "https://github.com/ulukaya/pawl#readme"
     },
     {
       "name": "pbx-mcp",
@@ -8536,6 +8798,21 @@
       "repo": "pbx-mcp",
       "url": "https://github.com/ictinnovations/pbx-mcp",
       "installation_url": "https://github.com/ictinnovations/pbx-mcp#readme"
+    },
+    {
+      "name": "phaseproof",
+      "displayName": "phaseproof",
+      "description": "Claude Code plugin that runs work in reviewed phases: a hook keeps code locked until the owner approves a phase, Opus reviewer agents check the docs, screens and diff, and a gate script re-runs the project's checks before the phase closes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "speedsharmaai",
+      "repo": "phaseproof",
+      "url": "https://github.com/speedsharmaai/phaseproof",
+      "install_url": "https://raw.githubusercontent.com/speedsharmaai/phaseproof/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Phone a Friend",
@@ -8562,6 +8839,21 @@
       "repo": "pi-codex-web-search",
       "url": "https://github.com/devinat1/pi-codex-web-search",
       "installation_url": "https://github.com/devinat1/pi-codex-web-search#readme"
+    },
+    {
+      "name": "piia-engram",
+      "displayName": "piia-engram",
+      "description": "Local-first personal AI identity and memory layer that shares user-owned preferences, lessons, decisions, playbooks, and project context across MCP-compatible coding tools",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "Patdolitse",
+      "repo": "piia-engram",
+      "url": "https://github.com/Patdolitse/piia-engram",
+      "install_url": "https://raw.githubusercontent.com/Patdolitse/piia-engram/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Pika",
@@ -9283,6 +9575,21 @@
       "installation_url": "https://github.com/majiayu000/spellbook#readme"
     },
     {
+      "name": "sqlite-graph-memory",
+      "displayName": "sqlite-graph-memory",
+      "description": "MCP server: persistent memory for Claude Code, Codex and Cursor over your own markdown notes, with vector retrieval, a hand-curated wikilink graph and cross-encoder rerank in one SQLite file",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "tonydzi",
+      "repo": "sqlite-graph-memory",
+      "url": "https://github.com/tonydzi/sqlite-graph-memory",
+      "installation_url": "https://github.com/tonydzi/sqlite-graph-memory#readme"
+    },
+    {
       "name": "Squadra",
       "displayName": "Squadra",
       "description": "Skill and CLI that coordinate Claude Code, Codex and Cursor windows as one team, with a shared task registry, proofs bound to the delivered code, review by a window that did not write it, and a live dashboard",
@@ -9987,6 +10294,36 @@
       "install_url": "https://raw.githubusercontent.com/easysoft/zui/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "10ML Perfume Finder",
+      "displayName": "10ML Perfume Finder",
+      "description": "MCP server: the 10ML Fragrance Index for AI assistants, with perfume notes, accords, families, similar scents and expert guides; free, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "10ml-com",
+      "repo": "perfume-finder-mcp",
+      "url": "https://github.com/10ml-com/perfume-finder-mcp",
+      "installation_url": "https://github.com/10ml-com/perfume-finder-mcp#readme"
+    },
+    {
+      "name": "actual-budget-mcp",
+      "displayName": "actual-budget-mcp",
+      "description": "MCP server: ask your Actual Budget where the money went, and record transactions, transfers and budget moves from any MCP client, with duplicate checks before anything is written",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "henfrydls",
+      "repo": "actual-budget-mcp",
+      "url": "https://github.com/henfrydls/actual-budget-mcp",
+      "installation_url": "https://github.com/henfrydls/actual-budget-mcp#readme"
+    },
+    {
       "name": "affine-mcp-server",
       "displayName": "affine-mcp-server",
       "description": "MCP server exposing AFFiNE workspaces, documents, and databases to AI clients over stdio or HTTP",
@@ -10181,6 +10518,21 @@
       "repo": "ai-memory-skill",
       "url": "https://github.com/syedair/ai-memory-skill",
       "installation_url": "https://github.com/syedair/ai-memory-skill#readme"
+    },
+    {
+      "name": "Anode",
+      "displayName": "Anode",
+      "description": "Claude Code plugin for a hidden background Windows desktop for agents: GUI automation, UI Automation, screenshots and app testing without taking over your mouse",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "Anode",
+      "url": "https://github.com/skulitom/Anode",
+      "install_url": "https://raw.githubusercontent.com/skulitom/Anode/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "AnyCap",
@@ -10601,6 +10953,21 @@
       "install_url": "https://raw.githubusercontent.com/apiotrowski-afk/commercial-legal-pl/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "ConnectMachine",
+      "displayName": "ConnectMachine",
+      "description": "Claude Code and Cowork plugin plus remote MCP server for your contacts and digital business cards: find people by how you remember them, save contacts from a conversation, and draft follow-ups",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "connectmachine",
+      "repo": "claude-plugin",
+      "url": "https://github.com/connectmachine/claude-plugin",
+      "install_url": "https://raw.githubusercontent.com/connectmachine/claude-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Cordon",
       "displayName": "Cordon",
       "description": "Deterministic trust boundary between untrusted content and agent actions for Claude Code, Gemini CLI, MCP hosts and LangChain that strips the hidden layer, keeps provenance of every piece of data, issues an intent certificate and gates calls against it with no model call anywhere on the hot path, covered by 998 tests over 18 pinned attack vectors",
@@ -10681,6 +11048,21 @@
       "repo": "curlshot-mcp",
       "url": "https://github.com/SergiuPogor/curlshot-mcp",
       "installation_url": "https://github.com/SergiuPogor/curlshot-mcp#readme"
+    },
+    {
+      "name": "Cutbolt",
+      "displayName": "Cutbolt",
+      "description": "Claude Code plugin for Cutbolt, a local video editing engine, with its MCP tools and six skills for captions, talking-head recuts, multi-camera interviews, screen tutorials and delivery, saved as reversible edits (needs the cutbolt engine and FFmpeg)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "cutbolt-plugin",
+      "url": "https://github.com/skulitom/cutbolt-plugin",
+      "install_url": "https://raw.githubusercontent.com/skulitom/cutbolt-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Datacircle",
@@ -11191,6 +11573,21 @@
       "install_url": "https://raw.githubusercontent.com/ilyautov/humanizer-ru/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "hypruse",
+      "displayName": "hypruse",
+      "description": "MCP server: computer use on Hyprland, with workspaces, windows, mouse, keyboard and screenshots on the Wayland desktop, plus a background mode that works in other windows while your cursor and focus stay put",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "IlyasKhallouki",
+      "repo": "hypruse",
+      "url": "https://github.com/IlyasKhallouki/hypruse",
+      "installation_url": "https://github.com/IlyasKhallouki/hypruse#readme"
+    },
+    {
       "name": "Hyreflow",
       "displayName": "Hyreflow",
       "description": "Recruitment automation plugin for Codex, Claude Code, Cowork and Cursor with Agent Skills and a remote OAuth MCP server: source, enrich, qualify and sequence candidates, then push them to your ATS on metered credits",
@@ -11307,6 +11704,21 @@
       "install_url": "https://raw.githubusercontent.com/brunoborges/jvm-pulse/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Karma.Domains MCP",
+      "displayName": "Karma.Domains MCP",
+      "description": "MCP server: hosted Streamable HTTP server (OAuth or Pro API key) that searches 13M+ expired, auction, backorder and buy-now domains from 40 sources with Wayback Machine history, Karma Score and Ahrefs/Moz/Majestic metrics, plus live WHOIS, DNS, domain age and spam-score checks (closed source; paid Pro plan)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "karma-domains",
+      "repo": "expired-domains-mcp",
+      "url": "https://github.com/karma-domains/expired-domains-mcp",
+      "installation_url": "https://github.com/karma-domains/expired-domains-mcp#readme"
+    },
+    {
       "name": "Kesha Voice Kit",
       "displayName": "Kesha Voice Kit",
       "description": "Local speech-to-text and text-to-speech CLI with an MCP server; it transcribes 25 languages and speaks 9, and every model runs on the machine itself rather than in a cloud service",
@@ -11386,6 +11798,36 @@
       "repo": "kunglao-agent",
       "url": "https://github.com/amd2g2zz/kunglao-agent",
       "install_url": "https://raw.githubusercontent.com/amd2g2zz/kunglao-agent/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "last30days-skill-cn",
+      "displayName": "last30days-skill-cn",
+      "description": "Agent skill that searches eight Chinese platforms for the last 30 days and produces sourced research reports and hot-topic boards",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "Jesseovo",
+      "repo": "last30days-skill-cn",
+      "url": "https://github.com/Jesseovo/last30days-skill-cn",
+      "install_url": "https://raw.githubusercontent.com/Jesseovo/last30days-skill-cn/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "LawBox",
+      "displayName": "LawBox",
+      "description": "A collection of 58 Chinese legal workflow skills with unified task routing, source verification, and adversarial review protocols",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Samwang-afk",
+      "repo": "LawBox",
+      "url": "https://github.com/Samwang-afk/LawBox",
+      "install_url": "https://raw.githubusercontent.com/Samwang-afk/LawBox/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "lemo-mod",
@@ -11628,6 +12070,21 @@
       "install_url": "https://raw.githubusercontent.com/Kimeur/motion-launch-videos/HEAD/plugins/motion-launch-videos/.claude-plugin/plugin.json"
     },
     {
+      "name": "Nestbolt",
+      "displayName": "Nestbolt",
+      "description": "Claude Code plugin for Nestbolt, free local sheet nesting that fits SVG or DXF parts onto fixed sheets for laser, CNC, plasma, waterjet, fabric and leather cutting, checks every layout and saves per-sheet SVG/DXF cut files",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "nestbolt-plugin",
+      "url": "https://github.com/skulitom/nestbolt-plugin",
+      "install_url": "https://raw.githubusercontent.com/skulitom/nestbolt-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Network-AI",
       "displayName": "Network-AI",
       "description": "TypeScript multi-agent orchestrator shipped as a Claude Code plugin, Gemini CLI extension, and MCP server that adds an atomic shared blackboard, per-agent token budgets, permission gating, and audit trails across 32 agent frameworks",
@@ -11641,6 +12098,21 @@
       "repo": "Network-AI",
       "url": "https://github.com/Jovancoding/Network-AI",
       "install_url": "https://raw.githubusercontent.com/Jovancoding/Network-AI/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "NeverApply",
+      "displayName": "NeverApply",
+      "description": "MCP server: hosted remote server (Streamable HTTP, OAuth 2.1) that lets Claude, Cursor, and other MCP clients search and match jobs, tailor resumes, answer screening questions, and apply to jobs only with the user's approval",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "kasovy",
+      "repo": "neverapply-mcp",
+      "url": "https://github.com/kasovy/neverapply-mcp",
+      "installation_url": "https://github.com/kasovy/neverapply-mcp#readme"
     },
     {
       "name": "Nimble",
@@ -11689,6 +12161,21 @@
       "repo": "okaypic-video-skill",
       "url": "https://github.com/okaypic/okaypic-video-skill",
       "installation_url": "https://github.com/okaypic/okaypic-video-skill#readme"
+    },
+    {
+      "name": "One",
+      "displayName": "One",
+      "description": "MCP server: connects agents to 1000+ apps such as Gmail, Slack, Stripe and HubSpot to find, document and execute authenticated API actions, hosted at https://mcp.withone.ai/mcp over OAuth or run locally over stdio with `npx @withone/mcp`",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "withoneai",
+      "repo": "mcp",
+      "url": "https://github.com/withoneai/mcp",
+      "installation_url": "https://github.com/withoneai/mcp#readme"
     },
     {
       "name": "open-cross-session",
@@ -11812,6 +12299,21 @@
       "install_url": "https://raw.githubusercontent.com/JosssphZhou/openzine/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "orionbelt-analytics",
+      "displayName": "orionbelt-analytics",
+      "description": "MCP server: analyzes database schemas, generates RDF/OWL ontologies with SQL mappings, and validates Text-to-SQL with fan-trap detection",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ralforion",
+      "repo": "orionbelt-analytics",
+      "url": "https://github.com/ralforion/orionbelt-analytics",
+      "installation_url": "https://github.com/ralforion/orionbelt-analytics#readme"
+    },
+    {
       "name": "Overleaf LaTeX",
       "displayName": "Overleaf LaTeX",
       "description": "Local MCP/Codex plugin for creating and editing Overleaf projects",
@@ -11931,6 +12433,21 @@
       "installation_url": "https://github.com/laveesingh/awesome-pi-extensions#readme"
     },
     {
+      "name": "Pixelbolt",
+      "displayName": "Pixelbolt",
+      "description": "Claude Code plugin for pixel art and sprite animation from editable JSON recipes, with particle and fluid effects, exported as PNG sprite sheets, GIF, APNG or video frames, locally with only Node.js 20+",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "pixelbolt-plugin",
+      "url": "https://github.com/skulitom/pixelbolt-plugin",
+      "install_url": "https://raw.githubusercontent.com/skulitom/pixelbolt-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "PixelLab Pip",
       "displayName": "PixelLab Pip",
       "description": "An unofficial, agent-agnostic Agent Skill for creating, editing, and animating pixel-art assets from plain-language requests, routing each task to PixelLab MCP tools, API endpoints, or editor workflows",
@@ -12015,9 +12532,13 @@
     {
       "name": "QVeris Agent Toolkit",
       "displayName": "QVeris Agent Toolkit",
-      "description": "Cross-client toolkit that brings professional data and tools to AI assistants, products, and workflows: find services, review supported scope, call them, and audit usage",
+      "description": "MCP server: connects AI assistants to [QVeris](https://qveris.ai/) professional data and tools through hosted Streamable HTTP or local stdio, with discovery, inspection, parameter validation, execution, and usage audits",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
       "owner": "QVerisAI",
       "repo": "qveris-agent-toolkit",
       "url": "https://github.com/QVerisAI/qveris-agent-toolkit",
@@ -12296,6 +12817,21 @@
       "repo": "skyaccess-mcp",
       "url": "https://github.com/sky-access/skyaccess-mcp",
       "install_url": "https://raw.githubusercontent.com/sky-access/skyaccess-mcp/HEAD/plugins/skyaccess/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Slashbooks",
+      "displayName": "Slashbooks",
+      "description": "Local-first AI bookkeeping plugin for Claude Cowork, Claude Code, and Codex that imports bank activity, closes the month, answers questions, and exports accountant-ready files for cash-basis businesses",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "giltotherescue",
+      "repo": "slashbooks",
+      "url": "https://github.com/giltotherescue/slashbooks",
+      "install_url": "https://raw.githubusercontent.com/giltotherescue/slashbooks/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "SpringBrand",
@@ -12627,6 +13163,36 @@
       "repo": "wolfpack",
       "url": "https://github.com/almogdepaz/wolfpack",
       "installation_url": "https://github.com/almogdepaz/wolfpack#readme"
+    },
+    {
+      "name": "XposedOrNot",
+      "displayName": "XposedOrNot",
+      "description": "MCP server: XposedOrNot data breach lookups for emails and domains, with breach history, a breach catalog and domain exposure counts; remote, read-only, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "XposedOrNot",
+      "repo": "XposedOrNot-API",
+      "url": "https://github.com/XposedOrNot/XposedOrNot-API",
+      "installation_url": "https://github.com/XposedOrNot/XposedOrNot-API#readme"
+    },
+    {
+      "name": "Yap MCP",
+      "displayName": "Yap MCP",
+      "description": "MCP server: transcribes local audio and video files on your own computer for Claude Code, Cursor and other MCP clients, with on-device speech recognition, no upload and no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "founden-bot",
+      "repo": "yap-mcp",
+      "url": "https://github.com/founden-bot/yap-mcp",
+      "installation_url": "https://github.com/founden-bot/yap-mcp#readme"
     },
     {
       "name": "yomiyasu",
@@ -12986,6 +13552,21 @@
       "repo": "opencode-cursor",
       "url": "https://github.com/Nomadcxx/opencode-cursor",
       "installation_url": "https://github.com/Nomadcxx/opencode-cursor#readme"
+    },
+    {
+      "name": "opencode-goal-plugin",
+      "displayName": "opencode-goal-plugin",
+      "description": "OpenCode plugin for persistent goals, completion evidence, and idle auto-continuation",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "prevalentWare",
+      "repo": "opencode-goal-plugin",
+      "url": "https://github.com/prevalentWare/opencode-goal-plugin",
+      "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme"
     },
     {
       "name": "RTL_OpenCode",
