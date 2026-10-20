@@ -3242,6 +3242,20 @@
       ]
     },
     {
+      "name": "Karma.Domains MCP",
+      "url": "https://github.com/karma-domains/expired-domains-mcp",
+      "owner": "karma-domains",
+      "repo": "expired-domains-mcp",
+      "description": "MCP server: hosted Streamable HTTP server (OAuth or Pro API key) that searches 13M+ expired, auction, backorder and buy-now domains from 40 sources with Wayback Machine history, Karma Score and Ahrefs/Moz/Majestic metrics, plus live WHOIS, DNS, domain age and spam-score checks (closed source; paid Pro plan)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/karma-domains/expired-domains-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "KiCad Happy",
       "url": "https://github.com/aklofas/kicad-happy",
       "owner": "aklofas",
