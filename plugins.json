@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-19",
-  "total": 916,
+  "last_updated": "2026-10-20",
+  "total": 927,
   "platforms": [
     "codex",
     "grok",
@@ -1264,6 +1264,20 @@
       ]
     },
     {
+      "name": "Image & Media Skills",
+      "url": "https://github.com/IgorVaryvoda/image-optimization-skill",
+      "owner": "IgorVaryvoda",
+      "repo": "image-optimization-skill",
+      "description": "Eight skills that audit and fix image and video delivery for Core Web Vitals, plus Sirv image CDN, 360 spin, and AI Studio workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/IgorVaryvoda/image-optimization-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "jev-use",
       "url": "https://github.com/shitianfang/jev-use",
       "owner": "shitianfang",
@@ -1446,6 +1460,20 @@
       ]
     },
     {
+      "name": "Off the Wall",
+      "url": "https://github.com/toranalytics/off-the-wall",
+      "owner": "toranalytics",
+      "repo": "off-the-wall",
+      "description": "Quotes your own past corrections back to Codex, word for word, before each answer; `otw report` shows what you correct most from your local history, and subagent routing names a cheaper model per subagent. No API key.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/toranalytics/off-the-wall/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Oh My Cassette",
       "url": "https://github.com/Cassette-Editor/oh-my-cassette",
       "owner": "Cassette-Editor",
@@ -1594,6 +1622,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/mimfort/rag_for_git/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Receipts by Nueton",
+      "url": "https://github.com/Kloudedge-apex/receipts-collector",
+      "owner": "Kloudedge-apex",
+      "repo": "receipts-collector",
+      "description": "Checks every \"done\" claim in local Codex and Claude Code session logs against the same session's commands and prints the counts plus a shareable card, read-only and offline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Kloudedge-apex/receipts-collector/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3330,6 +3372,20 @@
       ]
     },
     {
+      "name": "LawBox",
+      "url": "https://github.com/Samwang-afk/LawBox",
+      "owner": "Samwang-afk",
+      "repo": "LawBox",
+      "description": "A collection of 58 Chinese legal workflow skills with unified task routing, source verification, and adversarial review protocols",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Samwang-afk/LawBox/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "LienDeadline",
       "url": "https://github.com/LienDeadline/skills",
       "owner": "LienDeadline",
@@ -4473,6 +4529,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "ui-craft",
+      "url": "https://github.com/educlopez/ui-craft",
+      "owner": "educlopez",
+      "repo": "ui-craft",
+      "description": "Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/educlopez/ui-craft#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -7632,6 +7702,16 @@
       ]
     },
     {
+      "name": "openclaw-otel-observability",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "owner": "henrikrexed",
+      "repo": "openclaw-observability-plugin",
+      "description": "OpenTelemetry observability plugin for OpenClaw AI agents that emits traces, metrics, and logs via OpenLLMetry",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/henrikrexed/openclaw-observability-plugin#readme"
+    },
+    {
       "name": "OpenCode Orchestrator",
       "url": "https://github.com/agnusdei1207/opencode-orchestrator",
       "owner": "agnusdei1207",
@@ -7941,11 +8021,7 @@
       "description": "Deterministic hooks for Claude Code, Codex, and Antigravity that gate destructive commands, credential access, outbound messages, and repeated tool calls using Python's standard library",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/ulukaya/pawl/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
+      "installation_url": "https://github.com/ulukaya/pawl#readme"
     },
     {
       "name": "pbx-mcp",
@@ -9950,6 +10026,20 @@
       ]
     },
     {
+      "name": "Cutbolt",
+      "url": "https://github.com/skulitom/cutbolt-plugin",
+      "owner": "skulitom",
+      "repo": "cutbolt-plugin",
+      "description": "Claude Code plugin for Cutbolt, a local video editing engine, with its MCP tools and six skills for captions, talking-head recuts, multi-camera interviews, screen tutorials and delivery, saved as reversible edits (needs the cutbolt engine and FFmpeg)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/cutbolt-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Datacircle",
       "url": "https://github.com/waynehamadi/datacircle-plugin",
       "owner": "waynehamadi",
@@ -10826,6 +10916,20 @@
       ]
     },
     {
+      "name": "Nestbolt",
+      "url": "https://github.com/skulitom/nestbolt-plugin",
+      "owner": "skulitom",
+      "repo": "nestbolt-plugin",
+      "description": "Claude Code plugin for Nestbolt, free local sheet nesting that fits SVG or DXF parts onto fixed sheets for laser, CNC, plasma, waterjet, fabric and leather cutting, checks every layout and saves per-sheet SVG/DXF cut files",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/nestbolt-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Network-AI",
       "url": "https://github.com/Jovancoding/Network-AI",
       "owner": "Jovancoding",
@@ -11103,6 +11207,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/laveesingh/awesome-pi-extensions#readme"
+    },
+    {
+      "name": "Pixelbolt",
+      "url": "https://github.com/skulitom/pixelbolt-plugin",
+      "owner": "skulitom",
+      "repo": "pixelbolt-plugin",
+      "description": "Claude Code plugin for pixel art and sprite animation from editable JSON recipes, with particle and fluid effects, exported as PNG sprite sheets, GIF, APNG or video frames, locally with only Node.js 20+",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/pixelbolt-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "PixelLab Pip",
@@ -11445,6 +11563,20 @@
       ]
     },
     {
+      "name": "Slashbooks",
+      "url": "https://github.com/giltotherescue/slashbooks",
+      "owner": "giltotherescue",
+      "repo": "slashbooks",
+      "description": "Local-first AI bookkeeping plugin for Claude Cowork, Claude Code, and Codex that imports bank activity, closes the month, answers questions, and exports accountant-ready files for cash-basis businesses",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/giltotherescue/slashbooks/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "SpringBrand",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
       "owner": "springbrand-lab",
@@ -11763,6 +11895,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Yap MCP",
+      "url": "https://github.com/founden-bot/yap-mcp",
+      "owner": "founden-bot",
+      "repo": "yap-mcp",
+      "description": "MCP server: transcribes local audio and video files on your own computer for Claude Code, Cursor and other MCP clients, with on-device speech recognition, no upload and no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/founden-bot/yap-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
