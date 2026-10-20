@@ -2,6 +2,10 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import contextlib
+import io
+import subprocess
+import sys
 import tempfile
 import unittest
 import urllib.error
@@ -26,6 +30,49 @@ class FakeResponse:
 
     def __exit__(self, *_exc: object) -> None:
         return None
+
+
+class GeneratorOutputSafetyTests(unittest.TestCase):
+    def test_offline_generation_writes_only_to_requested_directory(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            before = {path: path.read_bytes() for path in (MODULE.OUTPUT, MODULE.MARKETPLACE_OUTPUT) if path.exists()}
+            with contextlib.redirect_stdout(io.StringIO()), patch(
+                "urllib.request.urlopen", side_effect=AssertionError("offline mode attempted network access")
+            ):
+                MODULE.main(["--offline", "--output-dir", str(output)])
+            self.assertTrue((output / "plugins.json").is_file())
+            self.assertTrue((output / ".agents/plugins/marketplace.json").is_file())
+            for path, content in before.items():
+                self.assertEqual(path.read_bytes(), content)
+
+    def test_check_mode_does_not_create_missing_output_files(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+                MODULE.main(["--offline", "--check", "--output-dir", str(output)])
+            self.assertFalse((output / "plugins.json").exists())
+            self.assertFalse((output / ".agents/plugins/marketplace.json").exists())
+
+    def test_cli_subprocess_passes_command_line_arguments(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPT_PATH),
+                    "--offline",
+                    "--output-dir",
+                    folder,
+                ],
+                cwd=SCRIPT_PATH.parents[1],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertTrue((Path(folder) / "plugins.json").is_file())
+            self.assertTrue((Path(folder) / ".agents/plugins/marketplace.json").is_file())
 
 
 def only_path_resolves(path: str):
@@ -422,6 +469,52 @@ class GeneratePluginsJsonTests(unittest.TestCase):
         self.assertEqual(added, 1)
         self.assertNotIn("install_url", plugins[0])
 
+
+    def test_parses_native_opencode_section(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### OpenCode Plugins\n\n"
+                "- [RTL Demo](https://github.com/example/rtl-demo) - OpenCode plugin.\n"
+            )
+
+            plugins = MODULE.parse_plugins(readme)
+
+        self.assertEqual(
+            [(plugin["name"], plugin["platform"]) for plugin in plugins],
+            [("RTL Demo", "opencode")],
+        )
+        self.assertNotIn("install_url", plugins[0])
+
+    def test_opencode_entry_links_docs_without_manifest_target(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n\n"
+                "### OpenCode Plugins\n\n"
+                "- [RTL Demo](https://github.com/example/rtl-demo) - OpenCode plugin.\n"
+            )
+            with patch.object(MODULE, "probe_install_url") as probe:
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+            probe.assert_not_called()
+
+        self.assertEqual(added, 1)
+        compatibility = MODULE.generate_plugins_json(plugins)["plugins"][0]
+        marketplace = MODULE.generate_marketplace_json(
+            [MODULE.marketplace_entry(plugin) for plugin in plugins]
+        )["plugins"][0]
+        for entry in (compatibility, marketplace):
+            self.assertEqual(entry["platform"], "opencode")
+            self.assertEqual(entry["ecosystems"], ["opencode"])
+            self.assertEqual(entry["category"], "OpenCode Plugins")
+            self.assertEqual(entry["url"], "https://github.com/example/rtl-demo")
+            self.assertEqual(
+                entry["installation_url"],
+                "https://github.com/example/rtl-demo#readme",
+            )
+            self.assertNotIn("install_url", entry)
 
     def test_detects_claude_code_manifest_in_mixed_community_section(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

@@ -12,8 +12,10 @@ This script keeps artifacts aligned:
 from __future__ import annotations
 
 import datetime
+import argparse
 import json
 import re
+import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -49,6 +51,7 @@ GROK_PLATFORM = "grok"
 KIMI_PLATFORM = "kimi"
 MCP_PLATFORM = "mcp"
 AGENT_SKILLS_PLATFORM = "agent-skills"
+OPENCODE_PLATFORM = "opencode"
 
 # `## Community Plugins` subsections such as `Development & Workflow` mix
 # platforms, so the heading cannot classify their entries. Derive the platform
@@ -80,6 +83,7 @@ COMMUNITY_CATEGORY_PLATFORMS = {
     "Grok Plugins": GROK_PLATFORM,
     "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
+    "OpenCode Plugins": OPENCODE_PLATFORM,
 }
 
 
@@ -408,9 +412,9 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         if platform:
             plugin["platform"] = platform
         manifest_path = PLATFORM_MANIFEST_PATHS.get(platform)
-        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
-            # Native MCP and Agent Skills entries use their source instructions,
-            # not a client-specific plugin manifest.
+        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM, OPENCODE_PLATFORM}:
+            # Native MCP, Agent Skills, and OpenCode entries link to their
+            # source instructions, not a client-specific plugin manifest.
             plugin["installation_url"] = f"https://github.com/{owner}/{repo}#readme"
         elif manifest_path:
             plugin["install_url"] = (
@@ -427,7 +431,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
 
 
 def merge_readme_additions(
-    upstream: list[dict], readme_path: Path
+    upstream: list[dict], readme_path: Path, *, resolve_install_urls: bool = True
 ) -> tuple[list[dict], int]:
     """Append README plugin entries not already present in `upstream`.
 
@@ -455,6 +459,7 @@ def merge_readme_additions(
                 KIMI_PLATFORM,
                 MCP_PLATFORM,
                 AGENT_SKILLS_PLATFORM,
+                OPENCODE_PLATFORM,
             }:
                 platform = plugin["platform"]
                 for existing in (*upstream, *additions):
@@ -480,7 +485,11 @@ def merge_readme_additions(
             additions.append(normalize_plugin(plugin))
             continue
 
-        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone"}:
+        if not resolve_install_urls:
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") in {DEEPSEEK_HARNESS_PLATFORM, "standalone", OPENCODE_PLATFORM}:
             # Native runtimes resolve repository sources through their own
             # installers/manifests; never probe or substitute a Codex path.
             plugin.pop("install_url", None)
@@ -574,17 +583,27 @@ def generate_marketplace_json(plugins: list[dict]) -> dict:
     }
 
 
-def main():
-    print(f"Reading upstream: {CODEX_PLUGINS_JSON_URL}")
-    try:
-        plugins = load_codex_plugins()
-    except Exception as exc:
-        print(f"Upstream feed unavailable, falling back to README: {exc}")
+def main(argv: list[str] | None = None):
+    parser = argparse.ArgumentParser(description="Generate plugin registry feeds from the README and upstream catalogs.")
+    parser.add_argument("--output-dir", type=Path, help="write both feeds beneath this directory")
+    parser.add_argument("--offline", action="store_true", help="use only README entries; make no network requests")
+    parser.add_argument("--check", action="store_true", help="compare generated feeds with files and do not write")
+    # A library caller should not inherit the host process's arguments.
+    # The executable entry point passes its CLI arguments explicitly.
+    args = parser.parse_args([] if argv is None else argv)
+    if args.offline:
         plugins = parse_plugins(README)
-    print(f"Found {len(plugins)} plugins from upstream catalog")
+    else:
+        print(f"Reading upstream: {CODEX_PLUGINS_JSON_URL}")
+        try:
+            plugins = load_codex_plugins()
+        except Exception as exc:
+            print(f"Upstream feed unavailable, falling back to README: {exc}")
+            plugins = parse_plugins(README)
+    print(f"Found {len(plugins)} plugins from {'README' if args.offline else 'upstream catalog'}")
 
     # Merge Grok plugins from awesome-grok-plugins upstream
-    grok_plugins = load_grok_plugins()
+    grok_plugins = [] if args.offline else load_grok_plugins()
     if grok_plugins:
         print(f"Found {len(grok_plugins)} plugins from grok upstream catalog")
         # Deduplicate by owner/repo: grok plugins that also exist in codex
@@ -604,10 +623,12 @@ def main():
             else:
                 plugins.append(gp)
         print(f"Total after grok merge: {len(plugins)}")
+    elif args.offline:
+        print("Offline mode skips the Grok upstream catalog")
     else:
         print("No grok plugins found upstream (repo may be empty or unavailable)")
 
-    plugins, added = merge_readme_additions(plugins, README)
+    plugins, added = merge_readme_additions(plugins, README, resolve_install_urls=not args.offline)
     if added:
         print(f"Merged {added} README-only addition(s) from {README.name}")
     print(f"Total plugins after merge: {len(plugins)}")
@@ -615,21 +636,36 @@ def main():
     if not plugins:
         raise SystemExit("No plugins found; refusing to write empty registry feeds")
     
-    # Generate plugins.json
+    # Build both outputs before writing so an empty or invalid feed never
+    # truncates either destination.
     plugins_json = generate_plugins_json(plugins)
-    OUTPUT.write_text(json.dumps(plugins_json, indent=2) + "\n")
-    print(f"Wrote: {OUTPUT}")
-    
-    # Generate marketplace.json
     marketplace = generate_marketplace_json(
         [marketplace_entry(plugin) for plugin in plugins]
     )
-    MARKETPLACE_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    MARKETPLACE_OUTPUT.write_text(json.dumps(marketplace, indent=2) + "\n")
-    print(f"Wrote: {MARKETPLACE_OUTPUT}")
-    
+    destinations = (
+        (args.output_dir / "plugins.json", args.output_dir / ".agents/plugins/marketplace.json")
+        if args.output_dir
+        else (OUTPUT, MARKETPLACE_OUTPUT)
+    )
+    outputs = {
+        destinations[0]: json.dumps(plugins_json, indent=2) + "\n",
+        destinations[1]: json.dumps(marketplace, indent=2) + "\n",
+    }
+    if args.check:
+        mismatches = []
+        for destination, content in outputs.items():
+            if not destination.is_file() or destination.read_text() != content:
+                mismatches.append(str(destination))
+        if mismatches:
+            raise SystemExit("Generated feeds differ or are missing: " + ", ".join(mismatches))
+        print("Generated feeds match; no files written.")
+        return
+    for destination, content in outputs.items():
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(content)
+        print(f"Wrote: {destination}")
     print("Done!")
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
