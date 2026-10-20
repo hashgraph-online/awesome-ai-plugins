@@ -8130,6 +8130,21 @@
       "install_url": "https://raw.githubusercontent.com/divyamrastogi/model-orchestration/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "modhub",
+      "displayName": "modhub",
+      "description": "26 small mods for Claude Code: guards like fence, tripwire and pkg-guard, tool-row helpers, and eight zero-token games that play in a pane beside the conversation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "installation_url": "https://github.com/MDmubarak786/claude-mods#readme",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "MDmubarak786",
+      "repo": "claude-mods",
+      "url": "https://github.com/MDmubarak786/claude-mods"
+    },
+    {
       "name": "ModStage",
       "displayName": "ModStage",
       "description": "Claude Code plugin that runs Codex, Grok, Muse, Antigravity, Kimi, Qwen Code and OpenCode as watched subagents in your session, with a shared per-folder board of file leases whose fence numbers are checked at the write for Codex and ACP agents",

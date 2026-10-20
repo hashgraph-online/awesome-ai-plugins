@@ -7584,6 +7584,20 @@
       ]
     },
     {
+      "name": "modhub",
+      "url": "https://github.com/MDmubarak786/claude-mods",
+      "owner": "MDmubarak786",
+      "repo": "claude-mods",
+      "description": "26 small mods for Claude Code: guards like fence, tripwire and pkg-guard, tool-row helpers, and eight zero-token games that play in a pane beside the conversation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "installation_url": "https://github.com/MDmubarak786/claude-mods#readme",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "ModStage",
       "url": "https://github.com/qualixar/modstage",
       "owner": "qualixar",
