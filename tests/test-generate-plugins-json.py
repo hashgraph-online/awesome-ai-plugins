@@ -4,6 +4,8 @@ import importlib.util
 import json
 import contextlib
 import io
+import subprocess
+import sys
 import tempfile
 import unittest
 import urllib.error
@@ -51,6 +53,26 @@ class GeneratorOutputSafetyTests(unittest.TestCase):
                 MODULE.main(["--offline", "--check", "--output-dir", str(output)])
             self.assertFalse((output / "plugins.json").exists())
             self.assertFalse((output / ".agents/plugins/marketplace.json").exists())
+
+    def test_cli_subprocess_passes_command_line_arguments(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPT_PATH),
+                    "--offline",
+                    "--output-dir",
+                    folder,
+                ],
+                cwd=SCRIPT_PATH.parents[1],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertTrue((Path(folder) / "plugins.json").is_file())
+            self.assertTrue((Path(folder) / ".agents/plugins/marketplace.json").is_file())
 
 
 def only_path_resolves(path: str):

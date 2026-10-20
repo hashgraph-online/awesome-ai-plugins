@@ -588,6 +588,8 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--output-dir", type=Path, help="write both feeds beneath this directory")
     parser.add_argument("--offline", action="store_true", help="use only README entries; make no network requests")
     parser.add_argument("--check", action="store_true", help="compare generated feeds with files and do not write")
+    # A library caller should not inherit the host process's arguments.
+    # The executable entry point passes its CLI arguments explicitly.
     args = parser.parse_args([] if argv is None else argv)
     if args.offline:
         plugins = parse_plugins(README)
