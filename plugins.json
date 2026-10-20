@@ -3666,6 +3666,20 @@
       ]
     },
     {
+      "name": "orionbelt-analytics",
+      "url": "https://github.com/ralforion/orionbelt-analytics",
+      "owner": "ralforion",
+      "repo": "orionbelt-analytics",
+      "description": "MCP server: analyzes database schemas, generates RDF/OWL ontologies with SQL mappings, and validates Text-to-SQL with fan-trap detection",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ralforion/orionbelt-analytics#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "PANews Agent Toolkit",
       "url": "https://github.com/panewslab/skills",
       "owner": "panewslab",

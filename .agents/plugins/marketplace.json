@@ -3913,6 +3913,21 @@
       "install_url": "https://raw.githubusercontent.com/useorgx/orgx-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "orionbelt-analytics",
+      "displayName": "orionbelt-analytics",
+      "description": "MCP server: analyzes database schemas, generates RDF/OWL ontologies with SQL mappings, and validates Text-to-SQL with fan-trap detection",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ralforion",
+      "repo": "orionbelt-analytics",
+      "url": "https://github.com/ralforion/orionbelt-analytics",
+      "installation_url": "https://github.com/ralforion/orionbelt-analytics#readme"
+    },
+    {
       "name": "PANews Agent Toolkit",
       "displayName": "PANews Agent Toolkit",
       "description": "Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.",
