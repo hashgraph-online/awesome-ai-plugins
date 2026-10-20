@@ -1730,6 +1730,21 @@
       "install_url": "https://raw.githubusercontent.com/mimfort/rag_for_git/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Receipts by Nueton",
+      "displayName": "Receipts by Nueton",
+      "description": "Checks every \"done\" claim in local Codex and Claude Code session logs against the same session's commands and prints the counts plus a shareable card, read-only and offline.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Kloudedge-apex",
+      "repo": "receipts-collector",
+      "url": "https://github.com/Kloudedge-apex/receipts-collector",
+      "install_url": "https://raw.githubusercontent.com/Kloudedge-apex/receipts-collector/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Red-Green Proof",
       "displayName": "Red-Green Proof",
       "description": "Prove suspected bugs with a red-green-red test loop: verify the cause, watch the test fail, apply the fix, and confirm the test fails again when the fix is reverted.",
@@ -12322,6 +12337,21 @@
       "repo": "skyaccess-mcp",
       "url": "https://github.com/sky-access/skyaccess-mcp",
       "install_url": "https://raw.githubusercontent.com/sky-access/skyaccess-mcp/HEAD/plugins/skyaccess/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Slashbooks",
+      "displayName": "Slashbooks",
+      "description": "Local-first AI bookkeeping plugin for Claude Cowork, Claude Code, and Codex that imports bank activity, closes the month, answers questions, and exports accountant-ready files for cash-basis businesses",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "giltotherescue",
+      "repo": "slashbooks",
+      "url": "https://github.com/giltotherescue/slashbooks",
+      "install_url": "https://raw.githubusercontent.com/giltotherescue/slashbooks/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "SpringBrand",
