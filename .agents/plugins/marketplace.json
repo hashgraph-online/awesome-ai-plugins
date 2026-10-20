@@ -12730,6 +12730,21 @@
       "install_url": "https://raw.githubusercontent.com/nanaism/yomiyasu/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Yap MCP",
+      "displayName": "Yap MCP",
+      "description": "MCP server: transcribes local audio and video files on your own computer for Claude Code, Cursor and other MCP clients, with on-device speech recognition, no upload and no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "founden-bot",
+      "repo": "yap-mcp",
+      "url": "https://github.com/founden-bot/yap-mcp",
+      "installation_url": "https://github.com/founden-bot/yap-mcp#readme"
+    },
+    {
       "name": "You.com Agent Skills",
       "displayName": "You.com Agent Skills",
       "description": "Cross-platform You.com skill and plugin bundle that gives coding agents current web search, URL content extraction, cited research, finance research, and integration discovery, plus MCP server configs",

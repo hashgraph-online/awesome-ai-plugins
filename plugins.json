@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 922,
+  "total": 923,
   "platforms": [
     "codex",
     "grok",
@@ -11843,6 +11843,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Yap MCP",
+      "url": "https://github.com/founden-bot/yap-mcp",
+      "owner": "founden-bot",
+      "repo": "yap-mcp",
+      "description": "MCP server: transcribes local audio and video files on your own computer for Claude Code, Cursor and other MCP clients, with on-device speech recognition, no upload and no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/founden-bot/yap-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
