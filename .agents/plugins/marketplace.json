@@ -12028,6 +12028,21 @@
       "installation_url": "https://github.com/laveesingh/awesome-pi-extensions#readme"
     },
     {
+      "name": "Pixelbolt",
+      "displayName": "Pixelbolt",
+      "description": "Claude Code plugin for pixel art and sprite animation from editable JSON recipes, with particle and fluid effects, exported as PNG sprite sheets, GIF, APNG or video frames, locally with only Node.js 20+",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "pixelbolt-plugin",
+      "url": "https://github.com/skulitom/pixelbolt-plugin",
+      "install_url": "https://raw.githubusercontent.com/skulitom/pixelbolt-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "PixelLab Pip",
       "displayName": "PixelLab Pip",
       "description": "An unofficial, agent-agnostic Agent Skill for creating, editing, and animating pixel-art assets from plain-language requests, routing each task to PixelLab MCP tools, API endpoints, or editor workflows",
