@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 920,
+  "total": 921,
   "platforms": [
     "codex",
     "grok",
@@ -10858,6 +10858,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Kimeur/motion-launch-videos/HEAD/plugins/motion-launch-videos/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Nestbolt",
+      "url": "https://github.com/skulitom/nestbolt-plugin",
+      "owner": "skulitom",
+      "repo": "nestbolt-plugin",
+      "description": "Claude Code plugin for Nestbolt, free local sheet nesting that fits SVG or DXF parts onto fixed sheets for laser, CNC, plasma, waterjet, fabric and leather cutting, checks every layout and saves per-sheet SVG/DXF cut files",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/nestbolt-plugin/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
