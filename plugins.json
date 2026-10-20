@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 924,
+  "total": 925,
   "platforms": [
     "codex",
     "grok",
@@ -10009,6 +10009,20 @@
       "installation_url": "https://github.com/SergiuPogor/curlshot-mcp#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "Cutbolt",
+      "url": "https://github.com/skulitom/cutbolt-plugin",
+      "owner": "skulitom",
+      "repo": "cutbolt-plugin",
+      "description": "Claude Code plugin for Cutbolt, a local video editing engine, with its MCP tools and six skills for captions, talking-head recuts, multi-camera interviews, screen tutorials and delivery, saved as reversible edits (needs the cutbolt engine and FFmpeg)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/cutbolt-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
