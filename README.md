@@ -836,6 +836,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [OpenZine](https://github.com/JosssphZhou/openzine) - Agent skill for Claude Code and Codex that turns a PDF or a folder of page images into a page-turning 3D booklet, saved as one offline HTML file.
 - [Ophis](https://github.com/ophis-fi/skills) - Onchain token swaps for Codex via the hosted Ophis MCP server, MEV-protected and gasless, built on CoW Protocol.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
+- [OrkasVideoStudio](https://github.com/Orkas-AI/Orkas-VideoStudio) - Local-first TypeScript CLI, MCP server, and skill pack for coding agents to compose, edit, generate, and assemble video from editable `plan.json` timelines.
 - [Overleaf LaTeX](https://github.com/MarcoDotIO/overleaf-latex) - Local MCP/Codex plugin for creating and editing Overleaf projects.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
