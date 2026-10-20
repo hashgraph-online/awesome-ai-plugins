@@ -11380,6 +11380,21 @@
       "install_url": "https://raw.githubusercontent.com/ilyautov/humanizer-ru/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "hypruse",
+      "displayName": "hypruse",
+      "description": "MCP server: computer use on Hyprland, with workspaces, windows, mouse, keyboard and screenshots on the Wayland desktop, plus a background mode that works in other windows while your cursor and focus stay put",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "IlyasKhallouki",
+      "repo": "hypruse",
+      "url": "https://github.com/IlyasKhallouki/hypruse",
+      "installation_url": "https://github.com/IlyasKhallouki/hypruse#readme"
+    },
+    {
       "name": "Hyreflow",
       "displayName": "Hyreflow",
       "description": "Recruitment automation plugin for Codex, Claude Code, Cowork and Cursor with Agent Skills and a remote OAuth MCP server: source, enrich, qualify and sequence candidates, then push them to your ATS on metered credits",
