@@ -3035,6 +3035,22 @@
       "install_url": "https://raw.githubusercontent.com/liuyewang/computer-usage-summary-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "ConnectMachine",
+      "displayName": "ConnectMachine",
+      "description": "Claude Code and Cowork plugin plus remote MCP server for your contacts and digital business cards: find people by how you remember them, save contacts from a conversation, and draft follow-ups",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/connectmachine/claude-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code",
+        "mcp"
+      ],
+      "owner": "connectmachine",
+      "repo": "claude-plugin",
+      "url": "https://github.com/connectmachine/claude-plugin"
+    },
+    {
       "name": "CONTAM Tools",
       "displayName": "CONTAM Tools",
       "description": "Runs and inspects CONTAM airflow projects through a local MCP server with project guards, diagnostics, simulation helpers, and bridge workflows.",
