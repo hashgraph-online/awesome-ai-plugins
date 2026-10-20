@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 916,
+  "total": 918,
   "platforms": [
     "codex",
     "grok",
@@ -1264,6 +1264,20 @@
       ]
     },
     {
+      "name": "Image & Media Skills",
+      "url": "https://github.com/IgorVaryvoda/image-optimization-skill",
+      "owner": "IgorVaryvoda",
+      "repo": "image-optimization-skill",
+      "description": "Eight skills that audit and fix image and video delivery for Core Web Vitals, plus Sirv image CDN, 360 spin, and AI Studio workflows.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/IgorVaryvoda/image-optimization-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "jev-use",
       "url": "https://github.com/shitianfang/jev-use",
       "owner": "shitianfang",
@@ -1440,6 +1454,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/orwa-mahmoud/nightshift/HEAD/plugins/nightshift/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Off the Wall",
+      "url": "https://github.com/toranalytics/off-the-wall",
+      "owner": "toranalytics",
+      "repo": "off-the-wall",
+      "description": "Quotes your own past corrections back to Codex, word for word, before each answer; `otw report` shows what you correct most from your local history, and subagent routing names a cheaper model per subagent. No API key.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/toranalytics/off-the-wall/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
