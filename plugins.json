@@ -11592,6 +11592,20 @@
       "installation_url": "https://github.com/sitemd-cc/sitemd#readme"
     },
     {
+      "name": "sqlite-graph-memory",
+      "url": "https://github.com/tonydzi/sqlite-graph-memory",
+      "owner": "tonydzi",
+      "repo": "sqlite-graph-memory",
+      "description": "MCP server: persistent memory for Claude Code, Codex and Cursor over your own markdown notes, with vector retrieval, a hand-curated wikilink graph and cross-encoder rerank in one SQLite file",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/tonydzi/sqlite-graph-memory#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Skill-Atlas",
       "url": "https://github.com/danielLublinsky/Skill-Atlas",
       "owner": "danielLublinsky",
