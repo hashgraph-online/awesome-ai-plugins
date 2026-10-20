@@ -6396,6 +6396,21 @@
       "installation_url": "https://github.com/jsdelivr/globalping-mcp-server#readme"
     },
     {
+      "name": "gm-aiagent-plugins",
+      "url": "https://github.com/ghozimahdi/gm-aiagent-plugins",
+      "owner": "ghozimahdi",
+      "repo": "gm-aiagent-plugins",
+      "description": "Claude Code and Codex plugins that enforce Clean Architecture for Flutter (UFIL) and Rails 8 (Rubyku), with architect, implementer and reviewer agents driven by the same spec plus Dart MCP and Serena LSP integration",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "claude-code"
+      ],
+      "installation_url": "https://github.com/ghozimahdi/gm-aiagent-plugins#readme"
+    },
+    {
       "name": "go-ultimate",
       "url": "https://github.com/Djarvur/go-ultimate",
       "owner": "Djarvur",
