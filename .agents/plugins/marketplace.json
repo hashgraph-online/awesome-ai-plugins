@@ -2780,6 +2780,21 @@
       "install_url": "https://raw.githubusercontent.com/Ratnam-Mishra/canvas-apps-plugin-codex/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Car Rental Business Skills",
+      "displayName": "Car Rental Business Skills",
+      "description": "Codex-ready bundle for exotic, luxury and Turo car rental operators with a native .codex-plugin manifest and 8 skills that price a car against live published daily rates from a free read-only market data MCP server, scan competitors, plan a rental business, and draft rental agreements, damage inspections, listings, social posts and review replies; also works in Claude Code.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "car-rental-skills",
+      "url": "https://github.com/sergebulaev/car-rental-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/car-rental-skills/HEAD/.codex-marketplace/car-rental-skills/.codex-plugin/plugin.json"
+    },
+    {
       "name": "CarsXE",
       "displayName": "CarsXE",
       "description": "Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.",
@@ -3367,6 +3382,21 @@
       "repo": "power-automate-mcp-skills",
       "url": "https://github.com/ninihen1/power-automate-mcp-skills",
       "install_url": "https://raw.githubusercontent.com/ninihen1/power-automate-mcp-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Foundry",
+      "displayName": "Foundry",
+      "description": "Growth ops for ad agencies: audit accounts, write English and Arabic client reports and run ROAS maths, with live Google and Meta changes locked behind a human at a terminal.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mohamedOmar11111",
+      "repo": "growth-architect-foundry",
+      "url": "https://github.com/mohamedOmar11111/growth-architect-foundry",
+      "install_url": "https://raw.githubusercontent.com/mohamedOmar11111/growth-architect-foundry/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "FXMacroData",
@@ -4195,7 +4225,7 @@
       "owner": "hyprh",
       "repo": "self-starter",
       "url": "https://github.com/hyprh/self-starter",
-      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/hyprh/self-starter/HEAD/codex-plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "SEO Dungeon",
@@ -4768,6 +4798,21 @@
       "installation_url": "https://github.com/Jeffallan/claude-skills#readme"
     },
     {
+      "name": "conventional-commits-framework",
+      "displayName": "conventional-commits-framework",
+      "description": "Agent skill for complete, atomic Conventional Commits with every field filled, breaking changes declared explicitly, and one consistent AI co-author trailer, plus commitlint, git hook, and release tooling setup",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "YourAKShaw",
+      "repo": "conventional-commits-framework",
+      "url": "https://github.com/YourAKShaw/conventional-commits-framework",
+      "installation_url": "https://github.com/YourAKShaw/conventional-commits-framework#readme"
+    },
+    {
       "name": "image-use",
       "displayName": "image-use",
       "description": "Agent skill and zero-dependency CLI for generating and editing images with existing ChatGPT or Gemini accounts, with reference images, reusable styles and looping animations without an API key",
@@ -5327,6 +5372,21 @@
       "repo": "Alloy",
       "url": "https://github.com/tlangridge/Alloy",
       "installation_url": "https://github.com/tlangridge/Alloy#readme"
+    },
+    {
+      "name": "Ambiflex",
+      "displayName": "Ambiflex",
+      "description": "Claude Code plugin that runs the plan as a live, steerable reasoning tree: a task is \"done\" only with a named proof, parallel subagents compete on one benchmark, and auto mode runs the plan with ETA and cost (`/plugin install ambiflex --marketplace ImadeBenToumAI/ambiflex`)",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ImadeBenToumAI",
+      "repo": "ambiflex",
+      "url": "https://github.com/ImadeBenToumAI/ambiflex",
+      "install_url": "https://raw.githubusercontent.com/ImadeBenToumAI/ambiflex/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Android Engineering Skills",
@@ -8665,6 +8725,21 @@
       "installation_url": "https://github.com/ictinnovations/pbx-mcp#readme"
     },
     {
+      "name": "phaseproof",
+      "displayName": "phaseproof",
+      "description": "Claude Code plugin that runs work in reviewed phases: a hook keeps code locked until the owner approves a phase, Opus reviewer agents check the docs, screens and diff, and a gate script re-runs the project's checks before the phase closes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "speedsharmaai",
+      "repo": "phaseproof",
+      "url": "https://github.com/speedsharmaai/phaseproof",
+      "install_url": "https://raw.githubusercontent.com/speedsharmaai/phaseproof/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Phone a Friend",
       "displayName": "Phone a Friend",
       "description": "CLI with Claude Code, Codex, OpenCode, and pi plugins that sends prompts and diff-scoped code reviews to Claude, Codex, Gemini, Antigravity, OpenCode, pi, or Ollama for second opinions, with structured review verdicts, resumable sessions, and multi-model team workflows",
@@ -10127,6 +10202,21 @@
       "repo": "zui",
       "url": "https://github.com/easysoft/zui",
       "install_url": "https://raw.githubusercontent.com/easysoft/zui/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "10ML Perfume Finder",
+      "displayName": "10ML Perfume Finder",
+      "description": "MCP server: the 10ML Fragrance Index for AI assistants, with perfume notes, accords, families, similar scents and expert guides; free, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "10ml-com",
+      "repo": "perfume-finder-mcp",
+      "url": "https://github.com/10ml-com/perfume-finder-mcp",
+      "installation_url": "https://github.com/10ml-com/perfume-finder-mcp#readme"
     },
     {
       "name": "affine-mcp-server",
@@ -11890,6 +11980,21 @@
       "install_url": "https://raw.githubusercontent.com/Jovancoding/Network-AI/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "NeverApply",
+      "displayName": "NeverApply",
+      "description": "MCP server: hosted remote server (Streamable HTTP, OAuth 2.1) that lets Claude, Cursor, and other MCP clients search and match jobs, tailor resumes, answer screening questions, and apply to jobs only with the user's approval",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "kasovy",
+      "repo": "neverapply-mcp",
+      "url": "https://github.com/kasovy/neverapply-mcp",
+      "installation_url": "https://github.com/kasovy/neverapply-mcp#readme"
+    },
+    {
       "name": "Nimble",
       "displayName": "Nimble",
       "description": "Web Search Agents that search, browse, extract, and reason across live pages and return cited, schema-enforced results, with self-learning retrieval that improves accuracy and lowers cost per task on repeat work, plus Search and Extract skills for fast raw web data in Claude Code, Codex, Cursor, and Grok Build",
@@ -11936,6 +12041,21 @@
       "repo": "okaypic-video-skill",
       "url": "https://github.com/okaypic/okaypic-video-skill",
       "installation_url": "https://github.com/okaypic/okaypic-video-skill#readme"
+    },
+    {
+      "name": "One",
+      "displayName": "One",
+      "description": "MCP server: connects agents to 1000+ apps such as Gmail, Slack, Stripe and HubSpot to find, document and execute authenticated API actions, hosted at https://mcp.withone.ai/mcp over OAuth or run locally over stdio with `npx @withone/mcp`",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "withoneai",
+      "repo": "mcp",
+      "url": "https://github.com/withoneai/mcp",
+      "installation_url": "https://github.com/withoneai/mcp#readme"
     },
     {
       "name": "open-cross-session",
