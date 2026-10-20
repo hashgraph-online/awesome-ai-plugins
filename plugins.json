@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 923,
+  "total": 924,
   "platforms": [
     "codex",
     "grok",
@@ -7686,6 +7686,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "openclaw-otel-observability",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "owner": "henrikrexed",
+      "repo": "openclaw-observability-plugin",
+      "description": "OpenTelemetry observability plugin for OpenClaw AI agents that emits traces, metrics, and logs via OpenLLMetry",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/henrikrexed/openclaw-observability-plugin#readme"
     },
     {
       "name": "OpenCode Orchestrator",

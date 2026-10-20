@@ -8243,6 +8243,17 @@
       "install_url": "https://raw.githubusercontent.com/TOMOSIA-VIETNAM/open-pr/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "openclaw-otel-observability",
+      "displayName": "openclaw-otel-observability",
+      "description": "OpenTelemetry observability plugin for OpenClaw AI agents that emits traces, metrics, and logs via OpenLLMetry",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "henrikrexed",
+      "repo": "openclaw-observability-plugin",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "installation_url": "https://github.com/henrikrexed/openclaw-observability-plugin#readme"
+    },
+    {
       "name": "OpenCode Orchestrator",
       "displayName": "OpenCode Orchestrator",
       "description": "Multi-agent mission control for OpenCode with Commander, Planner, Worker, and Reviewer workflows",
