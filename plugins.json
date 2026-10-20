@@ -4577,6 +4577,20 @@
       ]
     },
     {
+      "name": "Pixi’VN",
+      "url": "https://github.com/DRincs-Productions/pixi-vn",
+      "owner": "DRincs-Productions",
+      "repo": "pixi-vn",
+      "description": "Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/DRincs-Productions/pixi-vn#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "profile-use",
       "url": "https://github.com/leeguooooo/profile-use",
       "owner": "leeguooooo",
