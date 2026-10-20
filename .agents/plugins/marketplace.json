@@ -7709,6 +7709,21 @@
       "installation_url": "https://github.com/vheins/local-memory-mcp#readme"
     },
     {
+      "name": "local-shell-mcp",
+      "displayName": "local-shell-mcp",
+      "description": "MCP server: gives AI agents controlled shell execution, filesystem operations, browser automation, persistent sessions, and remote machine management",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "fwerkor",
+      "repo": "local-shell-mcp",
+      "url": "https://github.com/fwerkor/local-shell-mcp",
+      "installation_url": "https://github.com/fwerkor/local-shell-mcp#readme"
+    },
+    {
       "name": "Logic Probe",
       "displayName": "Logic Probe",
       "description": "Design-document & plan claim verification \u2014 checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims",

@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 939,
+  "total": 940,
   "platforms": [
     "codex",
     "grok",
@@ -7190,6 +7190,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/vheins/local-memory-mcp#readme"
+    },
+    {
+      "name": "local-shell-mcp",
+      "url": "https://github.com/fwerkor/local-shell-mcp",
+      "owner": "fwerkor",
+      "repo": "local-shell-mcp",
+      "description": "MCP server: gives AI agents controlled shell execution, filesystem operations, browser automation, persistent sessions, and remote machine management",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/fwerkor/local-shell-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "Logic Probe",
