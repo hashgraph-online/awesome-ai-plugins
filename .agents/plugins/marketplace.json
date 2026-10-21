@@ -13690,6 +13690,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "authority.md",
+      "displayName": "authority.md",
+      "description": "MCP server and Agent Skills: search 640+ thinking frameworks drawn from notable thinkers' documented work, plus task Tools and Playbooks, from any MCP client, with a framework-finder skill and a free Sherlock Holmes deduction skill",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "gareth-hoyle",
+      "repo": "authority-md-plugin",
+      "url": "https://github.com/gareth-hoyle/authority-md-plugin",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "install_url": "https://raw.githubusercontent.com/gareth-hoyle/authority-md-plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }

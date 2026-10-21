@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-21",
-  "total": 962,
+  "total": 963,
   "platforms": [
     "codex",
     "grok",
@@ -12741,6 +12741,20 @@
       "ecosystems": [
         "opencode"
       ]
+    },
+    {
+      "name": "authority.md",
+      "url": "https://github.com/gareth-hoyle/authority-md-plugin",
+      "owner": "gareth-hoyle",
+      "repo": "authority-md-plugin",
+      "description": "MCP server and Agent Skills: search 640+ thinking frameworks drawn from notable thinkers' documented work, plus task Tools and Playbooks, from any MCP client, with a framework-finder skill and a free Sherlock Holmes deduction skill",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "install_url": "https://raw.githubusercontent.com/gareth-hoyle/authority-md-plugin/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
