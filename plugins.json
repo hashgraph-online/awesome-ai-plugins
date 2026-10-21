@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-21",
-  "total": 962,
+  "total": 963,
   "platforms": [
     "codex",
     "grok",
@@ -12741,6 +12741,20 @@
       "ecosystems": [
         "opencode"
       ]
+    },
+    {
+      "name": "VibeRaven",
+      "url": "https://github.com/ohad6k/VibeRaven",
+      "owner": "ohad6k",
+      "repo": "VibeRaven",
+      "description": "Skill pack and plugin that give coding agents architecture, provider and release context, with repository check-and-fix workflows for Vercel and Supabase apps",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json"
     }
   ]
 }
