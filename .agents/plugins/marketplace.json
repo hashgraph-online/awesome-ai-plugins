@@ -13692,6 +13692,36 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
     },
     {
+      "name": "ppl",
+      "displayName": "ppl",
+      "description": "Connects Grok to ppl, a personal CRM for humans with AI agents, through its hosted MCP server at https://withppl.com/mcp (OAuth) for contacts, notes, reminders and relationship memory; free beta at https://withppl.com/register",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "ppl-crm",
+      "repo": "ppl-grok-plugin",
+      "url": "https://github.com/ppl-crm/ppl-grok-plugin",
+      "install_url": "https://raw.githubusercontent.com/ppl-crm/ppl-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "LLMSlim",
+      "displayName": "LLMSlim",
+      "description": "MCP server: long-term memory for Claude Code, Codex and other MCP clients with no LLM in the loop, storing messages word for word in local SQLite and recalling the ones that answer a question within a token budget; also packaged as a Claude Code plugin and a Codex plugin",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Thanatos9404",
+      "repo": "llmslim",
+      "url": "https://github.com/Thanatos9404/llmslim",
+      "install_url": "https://raw.githubusercontent.com/Thanatos9404/llmslim/HEAD/plugins/llmslim/.codex-plugin/plugin.json"
+    },
+    {
       "name": "max-skills",
       "displayName": "max-skills",
       "description": "Agent skills for Claude Code and Codex that run your app locally to screenshot every screen a pull request changes as before/after pairs with the changes boxed, record a demo video of the PR's flow, and write a short Slack-ready summary, posting the media into the PR description with gh",

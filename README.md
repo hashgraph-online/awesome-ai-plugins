@@ -419,6 +419,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [LinkedIn Animated Infographics](https://github.com/imMamdouhaboammar/linkedin-animated-infographics) - Evidence-safe animated infographic generator with multi-agent design pipeline for LinkedIn.
 - [LittleJS AI](https://github.com/KilledByAPixel/LittleJS-AI) - Claude Code plugin for making HTML5 games with the LittleJS engine, with skills for engine conventions, API lookup, scaffolding new playable games, and atlas-based shape art.
 - [LLM Transpile](https://github.com/epicsagas/llm-transpile) - Auto-compress .md, .html, and .txt files via PostToolUse hook, cutting context usage by up to 40% with zero workflow change.
+- [LLMSlim](https://github.com/Thanatos9404/llmslim) - MCP server: long-term memory for Claude Code, Codex and other MCP clients with no LLM in the loop, storing messages word for word in local SQLite and recalling the ones that answer a question within a token budget; also packaged as a Claude Code plugin and a Codex plugin.
 - [local-memory-mcp](https://github.com/vheins/local-memory-mcp) - A lightweight MCP server that gives AI agents persistent memory with semantic search, backed by SQLite.
 - [local-shell-mcp](https://github.com/fwerkor/local-shell-mcp) - MCP server: gives AI agents controlled shell execution, filesystem operations, browser automation, persistent sessions, and remote machine management.
 - [Logic Probe](https://github.com/AmethystLuna/logicprobe) - Design-document & plan claim verification — checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims.
@@ -993,6 +994,7 @@ before submitting.
 - [Grok Imagine Cinematic Studio](https://github.com/FineComputer14451/Grok-Imagine-Cinematic-Studio) - Independent multi-agent cinematic production suite (25 Role-Card agents, 64 skills, Production Bible workflow, Character DNA locking, native Grok Imagine Video 1.5 support) for Grok Build.
 - [HTML/CSS to Image API](https://github.com/htmlcsstoimage/agent-plugins) - Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser.
 - [hypergrok-trading-desk](https://github.com/galleonlabs/hypergrok-trading-desk) - Seven-agent Hyperliquid trading desk roles and skills for Grok Bot that research, size, execute and review trades with user approval.
+- [ppl](https://github.com/ppl-crm/ppl-grok-plugin) - Connects Grok to ppl, a personal CRM for humans with AI agents, through its hosted MCP server at https://withppl.com/mcp (OAuth) for contacts, notes, reminders and relationship memory; free beta at https://withppl.com/register.
 
 ### Kimi Plugins
 
