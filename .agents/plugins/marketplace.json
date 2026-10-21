@@ -6542,17 +6542,6 @@
       "install_url": "https://raw.githubusercontent.com/HKUSTDial/DataMagic/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "de-anthropocentric-research-engine",
-      "displayName": "de-anthropocentric-research-engine",
-      "description": "Collection of 900+ markdown research skills that let Claude Code autonomously survey literature, find gaps, form hypotheses, and design experiments",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "yogsoth-ai",
-      "repo": "de-anthropocentric-research-engine",
-      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
-      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme"
-    },
-    {
       "name": "Dely",
       "displayName": "Dely",
       "description": "Multi-harness control protocol that turns requests into approved design contracts, orchestrating isolated worker sessions for sequential implementation and independent code reviews under Orca supervision for Claude Code, Codex, Cursor, Antigravity, and other AI coding agents",
@@ -13690,6 +13679,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "de-anthropocentric-research-engine",
+      "displayName": "de-anthropocentric-research-engine",
+      "description": "271 research skills that take a research direction from first question to tested hypothesis: 51 tactics drive 216 atomic steps across literature synthesis, gap validation, hypothesis formation, experiment design and result interpretation, backing out when the evidence is too thin instead of marching a fixed pipeline - the plan is approved before anything runs, checkpoints resume after an interruption, and one command installs it into any agent with no runtime and no API key",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "yogsoth-ai",
+      "repo": "de-anthropocentric-research-engine",
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
+      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme"
     }
   ]
 }
