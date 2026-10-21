@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-21",
-  "total": 962,
+  "total": 963,
   "platforms": [
     "codex",
     "grok",
@@ -12740,6 +12740,20 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
       "ecosystems": [
         "opencode"
+      ]
+    },
+    {
+      "name": "max-skills",
+      "url": "https://github.com/vasinl124/max-skills",
+      "owner": "vasinl124",
+      "repo": "max-skills",
+      "description": "Agent skills for Claude Code and Codex that run your app locally to screenshot every screen a pull request changes as before/after pairs with the changes boxed, record a demo video of the PR's flow, and write a short Slack-ready summary, posting the media into the PR description with gh",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/vasinl124/max-skills#readme",
+      "ecosystems": [
+        "agent-skills"
       ]
     }
   ]

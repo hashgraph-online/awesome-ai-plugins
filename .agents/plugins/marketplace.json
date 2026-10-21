@@ -13690,6 +13690,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "max-skills",
+      "displayName": "max-skills",
+      "description": "Agent skills for Claude Code and Codex that run your app locally to screenshot every screen a pull request changes as before/after pairs with the changes boxed, record a demo video of the PR's flow, and write a short Slack-ready summary, posting the media into the PR description with gh",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "vasinl124",
+      "repo": "max-skills",
+      "url": "https://github.com/vasinl124/max-skills",
+      "installation_url": "https://github.com/vasinl124/max-skills#readme"
     }
   ]
 }
