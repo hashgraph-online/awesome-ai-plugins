@@ -11065,17 +11065,6 @@
       "install_url": "https://raw.githubusercontent.com/skulitom/cutbolt-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
-      "name": "Datacircle",
-      "displayName": "Datacircle",
-      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "owner": "waynehamadi",
-      "repo": "datacircle-plugin",
-      "url": "https://github.com/waynehamadi/datacircle-plugin",
-      "installation_url": "https://github.com/waynehamadi/datacircle-plugin#readme"
-    },
-    {
       "name": "DataForge",
       "displayName": "DataForge",
       "description": "Turns any website into a quality-scored LLM fine-tuning dataset in JSONL, Parquet or on the Hugging Face Hub, with a CLI and a `dataforge mcp` server exposing tools to scrape, explore, validate, run and inspect a dataset build",

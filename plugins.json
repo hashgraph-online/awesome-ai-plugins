@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-20",
-  "total": 955,
+  "total": 954,
   "platforms": [
     "codex",
     "grok",
@@ -10304,16 +10304,6 @@
       "ecosystems": [
         "claude-code"
       ]
-    },
-    {
-      "name": "Datacircle",
-      "url": "https://github.com/waynehamadi/datacircle-plugin",
-      "owner": "waynehamadi",
-      "repo": "datacircle-plugin",
-      "description": "Query your favorite B2B data APIs through us. Same request, same price, no markup",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/waynehamadi/datacircle-plugin#readme"
     },
     {
       "name": "DataForge",
