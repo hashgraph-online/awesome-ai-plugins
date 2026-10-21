@@ -127,7 +127,7 @@
     {
       "name": "Agent Workflow System",
       "displayName": "Agent Workflow System",
-      "description": "\u4e00\u5957\u4e2d\u6587AI\u5de5\u4f5c\u6d41\u7cfb\u7edf\uff1a7\u4e2a\u534f\u4f5c\u6280\u80fd + \u884c\u4e3a\u89c4\u8303\u5baa\u6cd5 + \u4f1a\u8bdd\u6062\u590d\u673a\u5236\uff0c\u6a21\u7cca\u76ee\u6807\u2192\u53ef\u6267\u884c\u4efb\u52a1\uff0c\u5168\u751f\u547d\u5468\u671f\u5f15\u5bfc\u3002Codex & Claude Code \u53cc\u5e73\u53f0\uff0c\u65b0\u624b\u53cb\u597d\u3002",
+      "description": "一套中文AI工作流系统：7个协作技能 + 行为规范宪法 + 会话恢复机制，模糊目标→可执行任务，全生命周期引导。Codex & Claude Code 双平台，新手友好。",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -292,7 +292,7 @@
     {
       "name": "Antigravity Workspace Template",
       "displayName": "Antigravity Workspace Template",
-      "description": "Multi-agent codebase knowledge graph generator with context-aware planning and automatic scope management \u2014 turns codebases into coherent agent workspaces.",
+      "description": "Multi-agent codebase knowledge graph generator with context-aware planning and automatic scope management — turns codebases into coherent agent workspaces.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -307,7 +307,7 @@
     {
       "name": "Archcore",
       "displayName": "Archcore",
-      "description": "Spec-driven development and context engineering for Claude Code, Cursor, Codex, and GitHub Copilot \u2014 backed by project context in Git.",
+      "description": "Spec-driven development and context engineering for Claude Code, Cursor, Codex, and GitHub Copilot — backed by project context in Git.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -442,7 +442,7 @@
     {
       "name": "Brooks Lint",
       "displayName": "Brooks Lint",
-      "description": "AI code reviews grounded in six classic engineering books \u2014 decay risk diagnostics with book citations, severity labels, and four analysis modes (PR review, architecture audit, tech debt, test quality).",
+      "description": "AI code reviews grounded in six classic engineering books — decay risk diagnostics with book citations, severity labels, and four analysis modes (PR review, architecture audit, tech debt, test quality).",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -532,7 +532,7 @@
     {
       "name": "Claude Code Skills",
       "displayName": "Claude Code Skills",
-      "description": "223 production-ready skills, 23 agents, and 298 Python tools across 9 domains \u2014 engineering, marketing, product, compliance, and more.",
+      "description": "223 production-ready skills, 23 agents, and 298 Python tools across 9 domains — engineering, marketing, product, compliance, and more.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -592,7 +592,7 @@
     {
       "name": "Click",
       "displayName": "Click",
-      "description": "Turn software intent into one approved contract, then let AI build and verify in one shot\u2014with traceable evidence for each requirement.",
+      "description": "Turn software intent into one approved contract, then let AI build and verify in one shot—with traceable evidence for each requirement.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -622,7 +622,7 @@
     {
       "name": "Codebase Recon",
       "displayName": "Codebase Recon",
-      "description": "Analyze git history to understand a codebase before reading any code \u2014 auto-scales by repo size and cross-references hotspots with bug magnets to surface high-risk files, bus factor, and team momentum.",
+      "description": "Analyze git history to understand a codebase before reading any code — auto-scales by repo size and cross-references hotspots with bug magnets to surface high-risk files, bus factor, and team momentum.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1117,7 +1117,7 @@
     {
       "name": "Epic Harness",
       "displayName": "Epic Harness",
-      "description": "Auto-trigger quality skills + self-evolving agent harness \u2014 orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.",
+      "description": "Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1252,7 +1252,7 @@
     {
       "name": "Hera Agent Godot",
       "displayName": "Hera Agent Godot",
-      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI \u2014 scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store.",
+      "description": "Drives a live Godot 4.x editor through the low-token Hera CLI — scene, node, and signal edits, play control, and runtime QA with verifiable compact JSON output, with the companion addon published on the official Godot Asset Store.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1327,7 +1327,7 @@
     {
       "name": "Honcho",
       "displayName": "Honcho",
-      "description": "Persistent cross-session memory for Codex powered by Honcho \u2014 lifecycle hooks capture each session and inject relevant context back at session start, so Codex remembers your preferences, projects, and decisions across restarts.",
+      "description": "Persistent cross-session memory for Codex powered by Honcho — lifecycle hooks capture each session and inject relevant context back at session start, so Codex remembers your preferences, projects, and decisions across restarts.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1372,7 +1372,7 @@
     {
       "name": "jev-use",
       "displayName": "jev-use",
-      "description": "Hands the steps of a Codex session that produce no text \u2014 is the build done, which of these elements do I click, is this shell command safe \u2014 to Jev, TypeSafe AI's judgment model, with a PreToolUse command gate and typed escalation back to the model for anything it cannot decide.",
+      "description": "Hands the steps of a Codex session that produce no text — is the build done, which of these elements do I click, is this shell command safe — to Jev, TypeSafe AI's judgment model, with a PreToolUse command gate and typed escalation back to the model for anything it cannot decide.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1477,7 +1477,7 @@
     {
       "name": "MailAgent",
       "displayName": "MailAgent",
-      "description": "Temporary inboxes for Codex \u2014 OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
+      "description": "Temporary inboxes for Codex — OTP, magic links, signup QA, simulate-first autotests (23 MCP tools).",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1537,7 +1537,7 @@
     {
       "name": "ML Pipeline",
       "displayName": "ML Pipeline",
-      "description": "Enforces a strict 16-step data-first ML workflow \u2014 data inspection, EDA, and problem definition before any model training \u2014 with explicit user-permission gates, marimo notebooks, and matplotlib figures at every step; also works in Claude Code and Kimi.",
+      "description": "Enforces a strict 16-step data-first ML workflow — data inspection, EDA, and problem definition before any model training — with explicit user-permission gates, marimo notebooks, and matplotlib figures at every step; also works in Claude Code and Kimi.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1627,7 +1627,7 @@
     {
       "name": "Personal Data Protection",
       "displayName": "Personal Data Protection",
-      "description": "Engineer-facing personal-data-protection compliance reference \u2014 Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA \u2014 organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.",
+      "description": "Engineer-facing personal-data-protection compliance reference — Singapore PDPA, Thailand PDPA, Indonesia UU PDP, Malaysia PDPA (Act 709 + 2024 Amendments), Philippines DPA — organised by where in the stack each obligation lands, with checklists, breach-response runbook, and a developer-view divergence table across all five.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1867,7 +1867,7 @@
     {
       "name": "Runtype Skills",
       "displayName": "Runtype Skills",
-      "description": "Supercharge your coding agent for AI product development \u2014 build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime.",
+      "description": "Supercharge your coding agent for AI product development — build, deploy, and operate agents, flows, tools, and surfaces on Runtype's managed edge runtime.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1897,7 +1897,7 @@
     {
       "name": "Session Orchestrator",
       "displayName": "Session Orchestrator",
-      "description": "Session orchestration for Claude Code, Codex, and Cursor IDE \u2014 structured planning, wave-based execution, VCS integration (GitLab + GitHub), quality gates, and clean session close-out with issue tracking.",
+      "description": "Session orchestration for Claude Code, Codex, and Cursor IDE — structured planning, wave-based execution, VCS integration (GitLab + GitHub), quality gates, and clean session close-out with issue tracking.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1912,7 +1912,7 @@
     {
       "name": "Simple Man",
       "displayName": "Simple Man",
-      "description": "Strips praise, recaps and filler from agent answers while keeping every fact you act on \u2014 findings carry location and one-line fix, refusals carry the safe procedure, tutorials stay long-form \u2014 benchmarked on 2,479 preregistered live calls, 266 of them real Claude Code sessions, with all raw records committed.",
+      "description": "Strips praise, recaps and filler from agent answers while keeping every fact you act on — findings carry location and one-line fix, refusals carry the safe procedure, tutorials stay long-form — benchmarked on 2,479 preregistered live calls, 266 of them real Claude Code sessions, with all raw records committed.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -1957,7 +1957,7 @@
     {
       "name": "Spec-Driven Development",
       "displayName": "Spec-Driven Development",
-      "description": "Three-phase Requirements \u2192 Design \u2192 Tasks workflow for Claude Code and Codex \u2014 EARS notation acceptance criteria, autonomous execution loop, cross-spec dependencies, and post-implementation acceptance testing.",
+      "description": "Three-phase Requirements → Design → Tasks workflow for Claude Code and Codex — EARS notation acceptance criteria, autonomous execution loop, cross-spec dependencies, and post-implementation acceptance testing.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2152,7 +2152,7 @@
     {
       "name": "Team Skills Platform",
       "displayName": "Team Skills Platform",
-      "description": "Role-based team delivery framework \u2014 Tech Lead-orchestrated 8-role system with 195+ skills, 27 specialist agents, 80+ commands, hooks, and ECC harness for Claude Code, Codex, and OpenCode.",
+      "description": "Role-based team delivery framework — Tech Lead-orchestrated 8-role system with 195+ skills, 27 specialist agents, 80+ commands, hooks, and ECC harness for Claude Code, Codex, and OpenCode.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2197,7 +2197,7 @@
     {
       "name": "token-optimizer",
       "displayName": "token-optimizer",
-      "description": "Cut token usage 60-90% with caching, compression, and smart file tools \u2014 diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code.",
+      "description": "Cut token usage 60-90% with caching, compression, and smart file tools — diff-only re-reads, paths-only search, out-of-context stashing, and a per-tool savings report for Codex and Claude Code.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2332,7 +2332,7 @@
     {
       "name": "VibePortrait",
       "displayName": "VibePortrait",
-      "description": "Developer personality portrait generator \u2014 analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\".",
+      "description": "Developer personality portrait generator — analyzes AI conversation history to produce MBTI type (16 color themes), capability radar, developer rating, 3-dimension famous match, and a persona skill that lets any AI \"think like you\".",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2407,7 +2407,7 @@
     {
       "name": "Workflow Kit",
       "displayName": "Workflow Kit",
-      "description": "Full product lifecycle plugin for Claude Code, Codex CLI, and OpenCode: define Vision/Mission/Core \u2192 generate workplan \u2192 execute with mandatory cross-provider reviewer agents \u2192 synthesize deliverables \u2192 maintain, with parallel task execution, crash recovery, and AgentOps metrics.",
+      "description": "Full product lifecycle plugin for Claude Code, Codex CLI, and OpenCode: define Vision/Mission/Core → generate workplan → execute with mandatory cross-provider reviewer agents → synthesize deliverables → maintain, with parallel task execution, crash recovery, and AgentOps metrics.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2842,7 +2842,7 @@
     {
       "name": "claude-math",
       "displayName": "claude-math",
-      "description": "Emit mathematics as copy- and search-safe inline Unicode (\u2211, \u2264, \u211d, x\u00b2, matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code.",
+      "description": "Emit mathematics as copy- and search-safe inline Unicode (∑, ≤, ℝ, x², matrices, set-builder) instead of LaTeX so equations stay legible in the Codex TUI, terminals, and Claude Code.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -3172,7 +3172,7 @@
     {
       "name": "deja",
       "displayName": "deja",
-      "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and nineteen more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
+      "description": "Search the coding sessions already on your disk — Codex, Claude Code, Cursor, opencode and nineteen more — including work from before it was installed, indexed locally with no model in the loop.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -3206,7 +3206,7 @@
     {
       "name": "Digital Marketing Pro",
       "displayName": "Digital Marketing Pro",
-      "description": "Open-source AI marketing plugin for agencies \u2014 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance.",
+      "description": "Open-source AI marketing plugin for agencies — 154 skills, 25 specialist agents, 12-Part Strategy Flow, AEO/GEO, GSC AI Performance Report, Google Ads API v24, EU AI Act Article 50 / C2PA compliance.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -3281,7 +3281,7 @@
     {
       "name": "Eigenheim Berlin Market Data",
       "displayName": "Eigenheim Berlin Market Data",
-      "description": "Read-only remote MCP server and skill for daily Berlin real estate data: price per m\u00b2 by locality, rental yields, land values and active listings.",
+      "description": "Read-only remote MCP server and skill for daily Berlin real estate data: price per m² by locality, rental yields, land values and active listings.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -3474,8 +3474,8 @@
       "install_url": "https://raw.githubusercontent.com/socai-io/jev-social/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "Jimeng Storyboard (\u5373\u68a6\u5206\u955c\u5e08)",
-      "displayName": "Jimeng Storyboard (\u5373\u68a6\u5206\u955c\u5e08)",
+      "name": "Jimeng Storyboard (即梦分镜师)",
+      "displayName": "Jimeng Storyboard (即梦分镜师)",
       "description": "Full short-drama storyboard production workflow for Codex: six role subagents (script intake, dialogue, director, art, storyboard, review) with per-episode checks and derived outputs.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
@@ -3583,7 +3583,7 @@
     {
       "name": "Kuudo Skills",
       "displayName": "Kuudo Skills",
-      "description": "Agent Skills for Amazon sellers and advertisers \u2014 Ads audits, search-term mining, budget pacing, DSP and AMC, listings, images, repricing, FBA inbound, and profitability, through Kuudo's Amazon Ads and SP-API MCP servers.",
+      "description": "Agent Skills for Amazon sellers and advertisers — Ads audits, search-term mining, budget pacing, DSP and AMC, listings, images, repricing, FBA inbound, and profitability, through Kuudo's Amazon Ads and SP-API MCP servers.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -3795,7 +3795,7 @@
     {
       "name": "Mobazha",
       "displayName": "Mobazha",
-      "description": "Decentralized e-commerce skills \u2014 deploy self-hosted stores, import products from Shopify/Amazon, configure custom domains and Telegram bots, set up Tor privacy, and manage your store via MCP.",
+      "description": "Decentralized e-commerce skills — deploy self-hosted stores, import products from Shopify/Amazon, configure custom domains and Telegram bots, set up Tor privacy, and manage your store via MCP.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -4155,7 +4155,7 @@
     {
       "name": "ru-text",
       "displayName": "ru-text",
-      "description": "Russian text quality for AI agents \u2014 2,000+ linguistic atoms for typography, information style, editorial standards, UX writing, business correspondence and AI-text cleanup, with a 0\u201310 text score.",
+      "description": "Russian text quality for AI agents — 2,000+ linguistic atoms for typography, information style, editorial standards, UX writing, business correspondence and AI-text cleanup, with a 0–10 text score.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -4575,7 +4575,7 @@
     {
       "name": "unslop",
       "displayName": "unslop",
-      "description": "Strip AI writing patterns from text output \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.",
+      "description": "Strip AI writing patterns from text output — removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -4605,7 +4605,7 @@
     {
       "name": "Val Town",
       "displayName": "Val Town",
-      "description": "Build and deploy serverless TypeScript on Val Town from Codex \u2014 hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI.",
+      "description": "Build and deploy serverless TypeScript on Val Town from Codex — hosted MCP server plus skills for HTTP vals, cron, SQLite, email, OAuth, and React UI.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -4650,7 +4650,7 @@
     {
       "name": "WakeWire",
       "displayName": "WakeWire",
-      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns \u2014 event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue.",
+      "description": "Push events from GitHub, Gmail, Slack, and any signed webhook (Linear, Sentry, ClickUp) straight into your Codex threads as new turns — event-driven triggers instead of polling, with HMAC verification, deduplication, and a durable delivery queue.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -4933,9 +4933,9 @@
       "installation_url": "https://github.com/nuthinking/skills#readme"
     },
     {
-      "name": "Pixi\u2019VN",
-      "displayName": "Pixi\u2019VN",
-      "description": "Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi\u2019VN engine",
+      "name": "Pixi’VN",
+      "displayName": "Pixi’VN",
+      "description": "Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine",
       "category": "Agent Skills",
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
@@ -6281,8 +6281,8 @@
       "installation_url": "https://github.com/premk134/codex-token-watch#readme"
     },
     {
-      "name": "Codex \u00d7 Grok Bot Task Bridge",
-      "displayName": "Codex \u00d7 Grok Bot Task Bridge",
+      "name": "Codex × Grok Bot Task Bridge",
+      "displayName": "Codex × Grok Bot Task Bridge",
       "description": "MCP task bridge for queued, read-only research between Codex and Grok Bot, with fenced leases, idempotency, scoped OAuth, evidence-based results, and optional Codex-side continuation",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
@@ -6723,7 +6723,7 @@
     {
       "name": "Embedded Workbench",
       "displayName": "Embedded Workbench",
-      "description": "Embedded C/C++ firmware development toolbox \u2014 7 skills (FreeRTOS, Keil MDK, ARMCLANG, HardFault triage, state machines, LVGL) plus workflow gates and 4 agents for Claude Code, Codex, Cursor, Kimi, OpenCode, and ZCode",
+      "description": "Embedded C/C++ firmware development toolbox — 7 skills (FreeRTOS, Keil MDK, ARMCLANG, HardFault triage, state machines, LVGL) plus workflow gates and 4 agents for Claude Code, Codex, Cursor, Kimi, OpenCode, and ZCode",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -7429,7 +7429,7 @@
     {
       "name": "iris-agentic-dev",
       "displayName": "iris-agentic-dev",
-      "description": "MCP server giving AI assistants live access to InterSystems IRIS \u2014 execute ObjectScript, query globals, inspect productions, run tests, search code, and manage skills",
+      "description": "MCP server giving AI assistants live access to InterSystems IRIS — execute ObjectScript, query globals, inspect productions, run tests, search code, and manage skills",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -7618,7 +7618,7 @@
     {
       "name": "jevyoumean",
       "displayName": "jevyoumean",
-      "description": "CLI wrapper that uses TypeSafe's Jev to give semantic \"Did you mean?\" suggestions for mistyped subcommands, matching by intent rather than edit distance (e.g. `git record` \u2192 `git commit`)",
+      "description": "CLI wrapper that uses TypeSafe's Jev to give semantic \"Did you mean?\" suggestions for mistyped subcommands, matching by intent rather than edit distance (e.g. `git record` → `git commit`)",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "owner": "syumai",
@@ -7640,7 +7640,7 @@
     {
       "name": "keep-the-why",
       "displayName": "keep-the-why",
-      "description": "Preserves the reasoning behind a codebase as project memory \u2014 decisions, rejected alternatives, workarounds, incident learnings, constraints",
+      "description": "Preserves the reasoning behind a codebase as project memory — decisions, rejected alternatives, workarounds, incident learnings, constraints",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -7670,7 +7670,7 @@
     {
       "name": "kgai",
       "displayName": "kgai",
-      "description": "Shared decision memory for AI dev teams \u2014 share the decisions and knowledge behind your code across Claude Code, Codex CLI and Gemini CLI as an immutable local log, synced over an S3 bucket you own",
+      "description": "Shared decision memory for AI dev teams — share the decisions and knowledge behind your code across Claude Code, Codex CLI and Gemini CLI as an immutable local log, synced over an S3 bucket you own",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -7906,7 +7906,7 @@
     {
       "name": "Logic Probe",
       "displayName": "Logic Probe",
-      "description": "Design-document & plan claim verification \u2014 checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims",
+      "description": "Design-document & plan claim verification — checks every verifiable claim against the codebase, escalates behavioral claims to executable-model verification, compares before/after models for regression detection, and mines concurrency risk claims",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -7951,7 +7951,7 @@
     {
       "name": "LoreConvo",
       "displayName": "LoreConvo",
-      "description": "Persistent session memory MCP server for Claude \u2014 auto-saves and recalls conversation context, decisions, and artifacts across Claude Code, chat, and other surfaces with full-text search",
+      "description": "Persistent session memory MCP server for Claude — auto-saves and recalls conversation context, decisions, and artifacts across Claude Code, chat, and other surfaces with full-text search",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -7966,7 +7966,7 @@
     {
       "name": "LoreDocs",
       "displayName": "LoreDocs",
-      "description": "Knowledge vault MCP server for Claude \u2014 organizes durable project docs, specs, and guides with FTS5 search, tagging, and cross-project context loading",
+      "description": "Knowledge vault MCP server for Claude — organizes durable project docs, specs, and guides with FTS5 search, tagging, and cross-project context loading",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -8134,7 +8134,7 @@
     {
       "name": "Mental CLI",
       "displayName": "Mental CLI",
-      "description": "Local-first CLI that keeps where you left off and what\u2019s still open across agent sessions so you can pick up without reconstructing from memory",
+      "description": "Local-first CLI that keeps where you left off and what’s still open across agent sessions so you can pick up without reconstructing from memory",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -9056,7 +9056,7 @@
     {
       "name": "Quanta Costa",
       "displayName": "Quanta Costa",
-      "description": "Claude Code plugin that shows your usage limits with a pace forecast, billing period, session cost in tokens and $/\u20ac, and whether your plan pays off, right above the prompt",
+      "description": "Claude Code plugin that shows your usage limits with a pace forecast, billing period, session cost in tokens and $/€, and whether your plan pays off, right above the prompt",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -9506,7 +9506,7 @@
     {
       "name": "site-risk-check",
       "displayName": "site-risk-check",
-      "description": "Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters \u2014 trackers firing before consent, missing policies, and machine-checkable WCAG gaps \u2014 mapped to the jurisdictions the site actually sells to",
+      "description": "Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters — trackers firing before consent, missing policies, and machine-checkable WCAG gaps — mapped to the jurisdictions the site actually sells to",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -9958,7 +9958,7 @@
     {
       "name": "taskflow",
       "displayName": "taskflow",
-      "description": "Declarative, verifiable DAG orchestration for Grok Build subagents \u2014 fan-out, gates, loops, tournaments, approvals, and resumable runs via MCP tools, with intermediate transcripts kept out of context",
+      "description": "Declarative, verifiable DAG orchestration for Grok Build subagents — fan-out, gates, loops, tournaments, approvals, and resumable runs via MCP tools, with intermediate transcripts kept out of context",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -10063,7 +10063,7 @@
     {
       "name": "trace-mcp",
       "displayName": "trace-mcp",
-      "description": "Precomputed code-intelligence graph served over MCP \u2014 symbol search, call graphs, change impact, and test mapping as structured answers instead of whole-file reads",
+      "description": "Precomputed code-intelligence graph served over MCP — symbol search, call graphs, change impact, and test mapping as structured answers instead of whole-file reads",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -10250,6 +10250,21 @@
       "repo": "vibekit",
       "url": "https://github.com/rizukirr/vibekit",
       "install_url": "https://raw.githubusercontent.com/rizukirr/vibekit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "VibeRaven",
+      "displayName": "VibeRaven",
+      "description": "Skill pack and plugin that give coding agents architecture, provider and release context, with repository check-and-fix workflows for Vercel and Supabase apps",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "ohad6k",
+      "repo": "VibeRaven",
+      "url": "https://github.com/ohad6k/VibeRaven",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Web Search MCP",
@@ -10467,7 +10482,7 @@
     {
       "name": "AgentBadge MCP",
       "displayName": "AgentBadge MCP",
-      "description": "Verify agents, check trust scores, and pay for services with x402 \u2014 ERC-8004 identity on Arc via MCP",
+      "description": "Verify agents, check trust scores, and pay for services with x402 — ERC-8004 identity on Arc via MCP",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -10560,7 +10575,7 @@
     {
       "name": "aginxbrowser",
       "displayName": "aginxbrowser",
-      "description": "Rust MCP server and HTTP service that lets agents fetch JS-rendered or protected pages as clean markdown, meta-search 14 engines, screenshot, and run persistent logged-in sessions \u2014 each session exposes a live view URL so a human can watch and take over with the mouse",
+      "description": "Rust MCP server and HTTP service that lets agents fetch JS-rendered or protected pages as clean markdown, meta-search 14 engines, screenshot, and run persistent logged-in sessions — each session exposes a live view URL so a human can watch and take over with the mouse",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "owner": "yinnho",
@@ -10864,7 +10879,7 @@
     {
       "name": "Cargo Skills",
       "displayName": "Cargo Skills",
-      "description": "GTM engineering for coding agents \u2014 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code",
+      "description": "GTM engineering for coding agents — 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -11013,7 +11028,7 @@
     {
       "name": "CloudBase AI Toolkit",
       "displayName": "CloudBase AI Toolkit",
-      "description": "Backend for AI coding agents on Tencent CloudBase \u2014 database, auth, and functions via Plugin, Skills & MCP",
+      "description": "Backend for AI coding agents on Tencent CloudBase — database, auth, and functions via Plugin, Skills & MCP",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -11029,7 +11044,7 @@
     {
       "name": "Commercial Legal PL",
       "displayName": "Commercial Legal PL",
-      "description": "Drafts and reviews contracts under Polish law (B2B IT, IP, settlements) with a clause library, doctrinal knowledge base, and \u00a7 / ust. / pkt cross-reference consistency checks",
+      "description": "Drafts and reviews contracts under Polish law (B2B IT, IP, settlements) with a clause library, doctrinal knowledge base, and § / ust. / pkt cross-reference consistency checks",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -11089,7 +11104,7 @@
     {
       "name": "Cortex",
       "displayName": "Cortex",
-      "description": "Persistent thermodynamic memory and cognitive-profiling MCP server for Claude Code, Codex, and Gemini CLI \u2014 heat/decay dynamics, predictive-coding write gates, knowledge graph, and intent-aware recall across sessions",
+      "description": "Persistent thermodynamic memory and cognitive-profiling MCP server for Claude Code, Codex, and Gemini CLI — heat/decay dynamics, predictive-coding write gates, knowledge graph, and intent-aware recall across sessions",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -11376,7 +11391,7 @@
     {
       "name": "Game Boy MCP Player",
       "displayName": "Game Boy MCP Player",
-      "description": "MCP server that lets AI agents play any Game Boy game through PyBoy, with a Pok\u00e9mon Red/Blue/Yellow profile that reads game state from memory and built-in benchmark metrics",
+      "description": "MCP server that lets AI agents play any Game Boy game through PyBoy, with a Pokémon Red/Blue/Yellow profile that reads game state from memory and built-in benchmark metrics",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "owner": "Dst0rtr",
@@ -11484,7 +11499,7 @@
     {
       "name": "GSC Quick Wins",
       "displayName": "GSC Quick Wins",
-      "description": "Agent Skill that reads a Google Search Console export, finds keywords stuck in positions 4\u201320, and writes the exact title, meta, H2, FAQ and internal-link fixes, with a zero-dependency Python scorer",
+      "description": "Agent Skill that reads a Google Search Console export, finds keywords stuck in positions 4–20, and writes the exact title, meta, H2, FAQ and internal-link fixes, with a zero-dependency Python scorer",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -12094,7 +12109,7 @@
     {
       "name": "memory-mcp",
       "displayName": "memory-mcp",
-      "description": "MCP server: persistent agent memory with semantic recall served as a remote streamable-HTTP endpoint \u2014 your wallet address is your private namespace, no accounts or API keys, paid per call in USDC on Base via x402, with a free wallet-signed tier",
+      "description": "MCP server: persistent agent memory with semantic recall served as a remote streamable-HTTP endpoint — your wallet address is your private namespace, no accounts or API keys, paid per call in USDC on Base via x402, with a free wallet-signed tier",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -12124,7 +12139,7 @@
     {
       "name": "Miro",
       "displayName": "Miro",
-      "description": "Official Miro MCP server and agent integrations for Claude Code, Codex, Gemini CLI, Cursor, and other AI tools \u2014 read and write Miro boards, create diagrams, extract context from boards, and generate code from designs",
+      "description": "Official Miro MCP server and agent integrations for Claude Code, Codex, Gemini CLI, Cursor, and other AI tools — read and write Miro boards, create diagrams, extract context from boards, and generate code from designs",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -12796,7 +12811,7 @@
     {
       "name": "Session Panel for Claude Code",
       "displayName": "Session Panel for Claude Code",
-      "description": "MIT VS Code extension that lists your Claude Code terminal sessions in a sidebar panel with live status (working, idle, needs you), subagents and context usage, opens them in named, coloured terminals with Cmd+1\u20139 switching, and reopens them after a restart",
+      "description": "MIT VS Code extension that lists your Claude Code terminal sessions in a sidebar panel with live status (working, idle, needs you), subagents and context usage, opens them in named, coloured terminals with Cmd+1–9 switching, and reopens them after a restart",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "standalone",
@@ -12888,7 +12903,7 @@
     {
       "name": "sitemd",
       "displayName": "sitemd",
-      "description": "Build websites from Markdown via MCP \u2014 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
+      "description": "Build websites from Markdown via MCP — 22 tools for creating pages, generating content, validating, running SEO audits, configuring settings, and deploying static sites to Cloudflare Pages",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "owner": "sitemd-cc",
@@ -12899,7 +12914,7 @@
     {
       "name": "Skill-Atlas",
       "displayName": "Skill-Atlas",
-      "description": "A third tier for Claude Code skills \u2014 dormant, zero tokens, still findable. Search a graph of your collection instead of preloading it",
+      "description": "A third tier for Claude Code skills — dormant, zero tokens, still findable. Search a graph of your collection instead of preloading it",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
@@ -13045,7 +13060,7 @@
     {
       "name": "ThoughtProof MCP",
       "displayName": "ThoughtProof MCP",
-      "description": "Local MCP pre-action verification for agents: mandate + proposed action \u2192 ALLOW/BLOCK/UNCERTAIN; execute only on ALLOW",
+      "description": "Local MCP pre-action verification for agents: mandate + proposed action → ALLOW/BLOCK/UNCERTAIN; execute only on ALLOW",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -13439,7 +13454,7 @@
     {
       "name": "dsh-api-balance",
       "displayName": "dsh-api-balance",
-      "description": "API usage-balance panel for DeepSeek Harness: adds a \u300cUsage / Balance\u300d tab to the webui usage ring showing the account balance and today / this-month / 30-day cost with charts, acquiring the platform token automatically from local browser sessions",
+      "description": "API usage-balance panel for DeepSeek Harness: adds a 「Usage / Balance」 tab to the webui usage ring showing the account balance and today / this-month / 30-day cost with charts, acquiring the platform token automatically from local browser sessions",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
@@ -13467,7 +13482,7 @@
     {
       "name": "dsh-config-manager",
       "displayName": "dsh-config-manager",
-      "description": "Backup, restore, export, import, migrate and sync your complete DeepSeek Harness (DSH) configuration \u2014 settings, model providers, plugins, MCP servers, skills, agent presets and workspaces \u2014 and restore your whole environment on a new machine with one click",
+      "description": "Backup, restore, export, import, migrate and sync your complete DeepSeek Harness (DSH) configuration — settings, model providers, plugins, MCP servers, skills, agent presets and workspaces — and restore your whole environment on a new machine with one click",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
@@ -13593,7 +13608,7 @@
     {
       "name": "Engramory",
       "displayName": "Engramory",
-      "description": "Curated, file-based long-term memory for DSH agents \u2014 plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`",
+      "description": "Curated, file-based long-term memory for DSH agents — plain markdown notes in one store shared across hosts, with the index size cap enforced as a monotonic `ctx.tools.guard()` refusal rather than a reminder. Install: `dsh plugin --profile <name> add dsh-engramory`",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
@@ -13692,19 +13707,64 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
     },
     {
-      "name": "VibeRaven",
-      "displayName": "VibeRaven",
-      "description": "Skill pack and plugin that give coding agents architecture, provider and release context, with repository check-and-fix workflows for Vercel and Supabase apps",
+      "name": "ppl",
+      "displayName": "ppl",
+      "description": "Connects Grok to ppl, a personal CRM for humans with AI agents, through its hosted MCP server at https://withppl.com/mcp (OAuth) for contacts, notes, reminders and relationship memory; free beta at https://withppl.com/register",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "ppl-crm",
+      "repo": "ppl-grok-plugin",
+      "url": "https://github.com/ppl-crm/ppl-grok-plugin",
+      "install_url": "https://raw.githubusercontent.com/ppl-crm/ppl-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "LLMSlim",
+      "displayName": "LLMSlim",
+      "description": "MCP server: long-term memory for Claude Code, Codex and other MCP clients with no LLM in the loop, storing messages word for word in local SQLite and recalling the ones that answer a question within a token budget; also packaged as a Claude Code plugin and a Codex plugin",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "owner": "ohad6k",
-      "repo": "VibeRaven",
-      "url": "https://github.com/ohad6k/VibeRaven",
       "platform": "codex",
       "ecosystems": [
         "codex"
       ],
-      "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json"
+      "owner": "Thanatos9404",
+      "repo": "llmslim",
+      "url": "https://github.com/Thanatos9404/llmslim",
+      "install_url": "https://raw.githubusercontent.com/Thanatos9404/llmslim/HEAD/plugins/llmslim/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "max-skills",
+      "displayName": "max-skills",
+      "description": "Agent skills for Claude Code and Codex that run your app locally to screenshot every screen a pull request changes as before/after pairs with the changes boxed, record a demo video of the PR's flow, and write a short Slack-ready summary, posting the media into the PR description with gh",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "vasinl124",
+      "repo": "max-skills",
+      "url": "https://github.com/vasinl124/max-skills",
+      "installation_url": "https://github.com/vasinl124/max-skills#readme"
+    },
+    {
+      "name": "Global Engineering Standards",
+      "displayName": "Global Engineering Standards",
+      "description": "Twelve engineering standards and six Claude Code and Codex skills for security, privacy, cost and architecture, installable with `npm install -g @enki-dev-expert/global-engineering-standards`",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Enki-DEV-expert",
+      "repo": "engineering-standards",
+      "url": "https://github.com/Enki-DEV-expert/engineering-standards",
+      "installation_url": "https://github.com/Enki-DEV-expert/engineering-standards#readme"
     }
   ]
 }
