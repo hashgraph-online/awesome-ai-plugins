@@ -3690,7 +3690,7 @@
     {
       "name": "LMCP",
       "displayName": "LMCP",
-      "description": "Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.",
+      "description": "Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
