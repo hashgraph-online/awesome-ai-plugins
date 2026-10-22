@@ -480,6 +480,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [OpenCode Orchestrator](https://github.com/agnusdei1207/opencode-orchestrator) - Multi-agent mission control for OpenCode with Commander, Planner, Worker, and Reviewer workflows.
 - [OpenCode Power Pack](https://github.com/waybarrios/opencode-power-pack) - Fifty-four portable development and security workflows for Codex, Claude Code, OpenCode, and Pi, with opt-in native sandbox profiles for safer command execution.
 - [opencode-9router](https://github.com/vheins/opencode-9router) - OpenCode plugin that registers 9Router as a provider with automatic model discovery and caching.
+- [opencode-decision-mode](https://github.com/Hacklone/opencode-decision-mode) - Delegates judgment calls (booleans, choices, scores) from your coding agent to a decision runtime (Jev, gpt-6-luna), so bulk data never scrolls through the controller's context.
 - [opencode-chromium](https://github.com/Quindart-com/opencode-chromium) - Chromium browser automation extension collection providing an MCP server, OpenCode plugin, browser skill, and SDK with four browser tools.
 - [opencode-failover](https://github.com/bulutmuf/opencode-failover) - OpenCode plugin for automatic API-key failover and rotation across multiple provider keys.
 - [opencode-litellm](https://github.com/yuseferi/opencode-litellm) - OpenCode plugin that auto-detects a LiteLLM proxy and dynamically registers its models in the OpenCode picker.
