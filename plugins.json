@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-22",
-  "total": 975,
+  "total": 976,
   "platforms": [
     "codex",
     "grok",
@@ -9427,6 +9427,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "termkit",
+      "url": "https://github.com/tirupathipodugu/termkit",
+      "owner": "tirupathipodugu",
+      "repo": "termkit",
+      "description": "Claude Code plugin marketplace of terminal tools, including a Sessions pane that shows every open Claude Code window as needs-you, working or done from Claude Code hooks, switches to its Windows Terminal tab on click, and finds closed sessions by meaning to resume them in a new tab",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/tirupathipodugu/termkit#readme"
     },
     {
       "name": "ThumbGate",
