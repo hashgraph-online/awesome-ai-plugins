@@ -110,6 +110,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
 
+- [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
 - [claude-skills](https://github.com/Jeffallan/claude-skills) - 67 Agent Skills for full-stack development across languages, frameworks, infrastructure, testing, security, and data/ML, with 371 reference files that load only when a task needs them and 9 project workflow commands.
 - [conventional-commits-framework](https://github.com/YourAKShaw/conventional-commits-framework) - Agent skill for complete, atomic Conventional Commits with every field filled, breaking changes declared explicitly, and one consistent AI co-author trailer, plus commitlint, git hook, and release tooling setup.
@@ -700,7 +701,6 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Anywhere](https://github.com/raph559/anywhere) - Self-hosted web app to start, open and stop Claude Code Remote Control sessions on your own Linux, WSL and Windows machines from your phone: pick a device, pick a folder, tap Start.
 - [Apple Productivity](https://github.com/matk0shub/apple-productivity-mcp) - Local Apple Calendar and Reminders tooling for macOS with Codex plugin adapters.
 - [Arize Skills](https://github.com/Arize-ai/arize-skills) - A collection of agent skills for adding Arize observability and managing tracing, datasets, experiments, and prompt workflows via the Arize ax CLI.
-- [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Auten](https://github.com/auten-ai/auten-mcp) - MCP server: gives Claude Code, Codex, Cursor or any MCP client hands on a real screen, your computer (Mac, Windows, Linux) and your Android phone (beta), clicking, typing and reading even in apps with no API, and replays learned tasks without a model call.
 - [authority.md](https://github.com/gareth-hoyle/authority-md-plugin) - MCP server and Agent Skills: search 640+ thinking frameworks drawn from notable thinkers' documented work, plus task Tools and Playbooks, from any MCP client, with a framework-finder skill and a free Sherlock Holmes deduction skill.
 - [AutoCAD Tianzheng Tools](https://github.com/summer521521/AutoCAD_Tianzheng_plugin) - Connects Codex to AutoCAD and Tianzheng HVAC through a local MCP server for DWG-aware HVAC drawing inspection and workflow automation.
