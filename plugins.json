@@ -8544,11 +8544,7 @@
       "description": "Open-source library of 1174 plain-markdown agent skills for Claude Code, Codex, Gemini, and Cursor, covering professional and life tasks with built-in quality checks and anti-patterns",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/mohitagw15856/pm-claude-skills#readme",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
+      "installation_url": "https://github.com/mohitagw15856/pm-claude-skills#readme"
     },
     {
       "name": "Ponytail",
