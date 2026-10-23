@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-22",
+  "last_updated": "2026-10-23",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3200,6 +3200,23 @@
       "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "deed.page",
+      "displayName": "deed.page",
+      "description": "Publish an HTML file or static folder from Codex to a permanent `https://{slug}.deed.page/` URL through the bundled deed.page skill and remote MCP server, with no account.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "f-o-x11",
+      "repo": "deed-page-skill",
+      "url": "https://github.com/f-o-x11/deed-page-skill",
+      "install_url": "https://raw.githubusercontent.com/f-o-x11/deed-page-skill/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/f-o-x11/deed-page-skill#readme"
+    },
+    {
       "name": "deja",
       "displayName": "deja",
       "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and nineteen more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
@@ -3352,6 +3369,21 @@
       "repo": "codex-exa",
       "url": "https://github.com/zlsbksdxl/codex-exa",
       "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-exa/HEAD/plugins/exa/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Exotic Car Rental Skills",
+      "displayName": "Exotic Car Rental Skills",
+      "description": "Codex-ready bundle for people renting exotic and luxury cars in the US with a native .codex-plugin manifest and 6 skills that find who rents a given Lamborghini, Ferrari, Rolls-Royce or G-Wagon in a city at published daily rates from a free read-only market data MCP server, work out the real rental cost, compare cars, pick event cars, plan a weekend and check a rental company; also works in Claude Code.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sergebulaev",
+      "repo": "exotic-car-rental-skills",
+      "url": "https://github.com/sergebulaev/exotic-car-rental-skills",
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/exotic-car-rental-skills/HEAD/.codex-marketplace/exotic-car-rental-skills/.codex-plugin/plugin.json"
     },
     {
       "name": "Fantasy Football Manager",
@@ -4185,6 +4217,21 @@
       "install_url": "https://raw.githubusercontent.com/olegvg/resume-tailor-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Revid",
+      "displayName": "Revid",
+      "description": "Research what goes viral, make finished short-form videos (voice, captions, music, AI footage) and post them to TikTok, YouTube, Instagram and X through Revid's hosted MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tmakersas",
+      "repo": "revid-skills",
+      "url": "https://github.com/tmakersas/revid-skills",
+      "install_url": "https://raw.githubusercontent.com/tmakersas/revid-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Roomcomm",
       "displayName": "Roomcomm",
       "description": "Shared rooms where Codex talks with other people's AI agents (Claude Code, DeepSeek Harness, OpenClaw) through the hosted Roomcomm MCP server, with a signed message history and no key needed to start.",
@@ -4860,19 +4907,34 @@
       "installation_url": "https://github.com/YourAKShaw/conventional-commits-framework#readme"
     },
     {
-      "name": "deed.page",
-      "displayName": "deed.page",
-      "description": "Agent skill that publishes an HTML file or static folder to a permanent public deed.page URL with one curl request and no account",
+      "name": "Deacon Skills",
+      "displayName": "Deacon Skills",
+      "description": "Two agent skills that install the Deacon AI support widget on a site or app, tell it who is signed in, and send it goals such as sign ups, also packaged as a Claude Code plugin marketplace",
       "category": "Agent Skills",
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "ecosystems": [
         "agent-skills"
       ],
-      "owner": "f-o-x11",
-      "repo": "deed-page-skill",
-      "url": "https://github.com/f-o-x11/deed-page-skill",
-      "installation_url": "https://github.com/f-o-x11/deed-page-skill#readme"
+      "owner": "heydeacon",
+      "repo": "skills",
+      "url": "https://github.com/heydeacon/skills",
+      "installation_url": "https://github.com/heydeacon/skills#readme"
+    },
+    {
+      "name": "ego-decision-layer",
+      "displayName": "ego-decision-layer",
+      "description": "Agent skill for ego lite browser automation with a swappable per-step decision model, guarded execution, and schema-validated extraction",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "jiangkoumo",
+      "repo": "ego-decision-layer",
+      "url": "https://github.com/jiangkoumo/ego-decision-layer",
+      "installation_url": "https://github.com/jiangkoumo/ego-decision-layer#readme"
     },
     {
       "name": "FMXER",
@@ -5023,6 +5085,21 @@
       "repo": "pixi-vn",
       "url": "https://github.com/DRincs-Productions/pixi-vn",
       "installation_url": "https://github.com/DRincs-Productions/pixi-vn#readme"
+    },
+    {
+      "name": "PlayCanvas Skills",
+      "displayName": "PlayCanvas Skills",
+      "description": "16 portable Agent Skills that teach AI coding agents to build, inspect, and verify PlayCanvas Engine, React, and Web Components applications, also packaged as Claude Code, Codex, and Cursor plugins",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "playcanvas",
+      "repo": "skills",
+      "url": "https://github.com/playcanvas/skills",
+      "installation_url": "https://github.com/playcanvas/skills#readme"
     },
     {
       "name": "profile-use",
@@ -8190,6 +8267,17 @@
       "installation_url": "https://github.com/imatza-rh/mcp-zuul#readme"
     },
     {
+      "name": "mcplytics",
+      "displayName": "mcplytics",
+      "description": "Usage, health and security signals for remote MCP servers from one zero-dependency wrapper that never stores call arguments, plus a check command that audits your own server and says what to fix",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "dave8172",
+      "repo": "mcplytics",
+      "url": "https://github.com/dave8172/mcplytics",
+      "installation_url": "https://github.com/dave8172/mcplytics#readme"
+    },
+    {
       "name": "md-prompt",
       "displayName": "md-prompt",
       "description": "Claude Code plugin that paints Markdown onto the prompt box as you type, turning fenced code into syntax-highlighted cards without changing the text you send",
@@ -9076,10 +9164,6 @@
       "description": "Open-source library of 1174 plain-markdown agent skills for Claude Code, Codex, Gemini, and Cursor, covering professional and life tasks with built-in quality checks and anti-patterns",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
       "owner": "mohitagw15856",
       "repo": "pm-claude-skills",
       "url": "https://github.com/mohitagw15856/pm-claude-skills",
@@ -10117,6 +10201,21 @@
       "repo": "termagitchi",
       "url": "https://github.com/TevvvB/termagitchi",
       "install_url": "https://raw.githubusercontent.com/TevvvB/termagitchi/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "termkit",
+      "displayName": "termkit",
+      "description": "Claude Code plugin marketplace of terminal tools, including a Sessions pane that shows every open Claude Code window as needs-you, working or done from Claude Code hooks, switches to its Windows Terminal tab on click, and finds closed sessions by meaning to resume them in a new tab",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "tirupathipodugu",
+      "repo": "termkit",
+      "url": "https://github.com/tirupathipodugu/termkit",
+      "install_url": "https://raw.githubusercontent.com/tirupathipodugu/termkit/HEAD/plugins/termkit/.claude-plugin/plugin.json"
     },
     {
       "name": "ThumbGate",
@@ -11311,6 +11410,21 @@
       "repo": "data-forge",
       "url": "https://github.com/ianktoo/data-forge",
       "installation_url": "https://github.com/ianktoo/data-forge#readme"
+    },
+    {
+      "name": "datawebot",
+      "displayName": "datawebot",
+      "description": "MCP server: hosted, closed-source ecommerce product data server at `https://mcp.datawebot.com/mcp` that searches products across online shops, lists each seller's price for one product with direct shop links, and runs extraction jobs on Amazon, Walmart US and other store pages, with a Claude Code plugin, Gemini CLI extension and agent skill in the repository",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "datawebot",
+      "repo": "datawebot-mcp",
+      "url": "https://github.com/datawebot/datawebot-mcp",
+      "installation_url": "https://github.com/datawebot/datawebot-mcp#readme"
     },
     {
       "name": "DC Hub",
