@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-23",
-  "total": 983,
+  "total": 984,
   "platforms": [
     "codex",
     "grok",
@@ -5734,6 +5734,19 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/witkowsky/claude-code-arcade/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Claude Sessions",
+      "url": "https://github.com/alexandrstudio/claude-sessions",
+      "owner": "alexandrstudio",
+      "repo": "claude-sessions",
+      "description": "Claude Code mod: /sessions lists every session across all projects, with resume commands and an optional archive",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
