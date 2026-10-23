@@ -89,6 +89,9 @@ jobs:
           CONTRIBUTION_URL: https://github.com/${{ matrix.contribution.owner }}/${{ matrix.contribution.repo }}.git
         run: git clone --depth 1 "$CONTRIBUTION_URL" "$RUNNER_TEMP/contributed"
       - name: Run HOL AI Plugin Scanner
+        id: central_scan
+        # Advisory action failures are judged by the exported score below.
+        continue-on-error: true
         uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
         with:
           plugin_dir: ${{ runner.temp }}/contributed
@@ -99,6 +102,11 @@ jobs:
           # Finding severities are advisory; the score is the listing gate.
           fail_on_severity: none
           pr_comment: off
+      - name: Enforce centralized score threshold
+        if: always()
+        env:
+          SCANNER_SCORE: ${{ steps.central_scan.outputs.score }}
+        run: python3 scripts/enforce-scan-score.py
       - name: Sanitize finding report
         if: always()
         run: |
