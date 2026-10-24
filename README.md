@@ -519,6 +519,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [pi-codex-web-search](https://github.com/devinat1/pi-codex-web-search) - A Pi extension that searches the web through the authenticated Codex CLI.
 - [piia-engram](https://github.com/Patdolitse/piia-engram) - Local-first personal AI identity and memory layer that shares user-owned preferences, lessons, decisions, playbooks, and project context across MCP-compatible coding tools.
 - [Pika](https://github.com/ayushjainr/pikamux) - Enables Codex, Claude Code, and OpenCode agents to discover peers with relevant experience and consult them through private side conversations while their original work continues.
+- [Pipecrew](https://github.com/pipecrew-ai/pipecrew) - A multi-repo agent crew plugin that delivers features end-to-end across repos with 20 skills and a 35-agent crew.
 - [Pixel](https://github.com/Pixel-CLI/pixel) - Local, deterministic code index that Claude Code, Codex, Pi, OpenCode and other coding agents query for signatures, callers, impact and Git history instead of reading whole files.
 - [Pixeltable](https://github.com/pixeltable/pixeltable-skill) - Declarative multimodal AI data engine for tables, computed columns, embedding search, agents, and FastAPI services.
 - [Planning with Files](https://github.com/OthmanAdi/planning-with-files) - Persistent file-based planning for Claude Code, Codex, and other AI coding agents, preserving task plans, findings, and progress across context loss, crashes, and compaction.
