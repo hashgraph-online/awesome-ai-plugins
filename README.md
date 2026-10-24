@@ -680,6 +680,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 
 ### Tools & Integrations
 
+- [AI-FluxMux](https://github.com/ArchPrime/AI-FluxMux) - desktop router for local and cloud models with per-turn, per-profile and port-rule control over model behavior, YaRN context extension, benchmarking, model profile variant creation, graphical telemetry etc, for OpenAI-compatible clients. 
 - [10ML Perfume Finder](https://github.com/10ml-com/perfume-finder-mcp) - MCP server: the 10ML Fragrance Index for AI assistants, with perfume notes, accords, families, similar scents and expert guides; free, no API key.
 - [actual-budget-mcp](https://github.com/henfrydls/actual-budget-mcp) - MCP server: ask your Actual Budget where the money went, and record transactions, transfers and budget moves from any MCP client, with duplicate checks before anything is written.
 - [affine-mcp-server](https://github.com/DAWNCR0W/affine-mcp-server) - MCP server exposing AFFiNE workspaces, documents, and databases to AI clients over stdio or HTTP.
