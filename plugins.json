@@ -6352,16 +6352,6 @@
       ]
     },
     {
-      "name": "de-anthropocentric-research-engine",
-      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
-      "owner": "yogsoth-ai",
-      "repo": "de-anthropocentric-research-engine",
-      "description": "Collection of 900+ markdown research skills that let Claude Code autonomously survey literature, find gaps, form hypotheses, and design experiments",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme"
-    },
-    {
       "name": "Dely",
       "url": "https://github.com/hieuphung97/dely",
       "owner": "hieuphung97",
@@ -13146,6 +13136,20 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
       "ecosystems": [
         "opencode"
+      ]
+    },
+    {
+      "name": "de-anthropocentric-research-engine",
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
+      "owner": "yogsoth-ai",
+      "repo": "de-anthropocentric-research-engine",
+      "description": "271 research skills that take a research direction from first question to tested hypothesis: 51 tactics drive 216 atomic steps across literature synthesis, gap validation, hypothesis formation, experiment design and result interpretation, backing out when the evidence is too thin instead of marching a fixed pipeline - the plan is approved before anything runs, checkpoints resume after an interruption, and one command installs it into any agent with no runtime and no API key",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme",
+      "ecosystems": [
+        "agent-skills"
       ]
     }
   ]
