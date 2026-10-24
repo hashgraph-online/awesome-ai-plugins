@@ -1071,6 +1071,7 @@ OpenCode plugins are npm packages or local directories registered in `opencode.j
 - [Azure DevOps PR Review](https://github.com/WTLAIB/opencode-azure-devops-pr-review-v2) - OpenCode V2 plugin that reviews Azure DevOps Services pull requests from a URL without a local checkout, with separate verification in review/deep modes and comment previews.
 - [opencode-cursor](https://github.com/Nomadcxx/opencode-cursor) - OpenCode plugin for Cursor subscription models with streaming, thinking, tool calls, MCP support, and browser login through Cursor CLI or API-key authentication through the SDK.
 - [opencode-goal-plugin](https://github.com/prevalentWare/opencode-goal-plugin) - OpenCode plugin for persistent goals, completion evidence, and idle auto-continuation.
+- [opencode-parser](https://github.com/TejasS1233/opencode-parser) - OpenCode plugin that parses PDF, DOCX, XLSX, PPTX, images, EPUB, HTML, notebooks, and archives into structured markdown for the LLM.
 - [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
 
 ### ZCode Plugins & Localization
