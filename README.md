@@ -109,7 +109,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 ### Agent Skills
 
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
-
+-
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
@@ -148,6 +148,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 ### Development & Workflow
 
 <!-- pinned -->
+-[Laravel Guild](https://github.com/HamzaAlayed/laravel-claude-agents) - A collection of 18 Laravel-specialized Claude Code subagents with workflow commands, skills, and guardrail hooks.
 - [geml](https://github.com/geml-spec/geml) - An agent-native markup language featuring deterministic block-level editing and built-in validation to ensure documents never drift or break during AI operations.
 - [2718lab DevKit](https://github.com/2718labs/2718lab-devkit) - Codex-first local MCP server and skill bundle for deterministic project intelligence, durable workflow orchestration, and reusable engineering tools.
 - [A Team](https://github.com/RBraga01/a-team) - Universal multi-agent infrastructure with 25 specialist agents, 16 enforced workflow skills, and a lead orchestrator for Claude Code, Codex CLI, Cursor, and OpenCode.
