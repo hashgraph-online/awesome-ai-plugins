@@ -200,6 +200,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [ARC](https://github.com/avandall/ARC) - Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents
 - [Archcore](https://github.com/archcore-ai/archcore) - Spec-driven development and context engineering for Claude Code, Cursor, Codex, and GitHub Copilot — backed by project context in Git.
 - [AREX-Skill](https://github.com/VectorSpaceLab/AREX-Skill) - A library of 5,000+ verified, executable skills distilled from ML repositories for coding and research agents.
+- [Aria-Icons](https://github.com/LeulAria/Aria-Icons) - MCP server and CLI for searching SVG icon collections and writing selected icons into projects as source components.
 - [ArmorCodex](https://github.com/armoriq/armorCodex) - Intent-based security for Codex with MCP plan registration, policy gating, CSRG cryptographic proofs, and audit logging on `bash` and `apply_patch`.
 - [assay](https://github.com/awss1i/assay) - Deterministic QA skill and plugin that drives a generated web page in a real browser and reports what broke, across fifteen coding harnesses.
 - [Atelier](https://github.com/pdcgomes/atelier) - Claude Code plugin and local daemon for live canvases: Claude writes a template or custom React canvas into .atelier/, Atelier checks it and shows it in your browser in a sandboxed frame, and what you tick, approve or answer reaches the session beside your next prompt, at the end of its turn or through canvas_wait.
