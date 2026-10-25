@@ -149,6 +149,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [UI Verify](https://github.com/uiverify/uiverify) - Agent skills for visual testing: set up screenshot tests on your existing Storybook, Playwright or Vitest suite, check a UI change before pushing, and triage each build's diffs through the UI Verify MCP server.
 - [ui-craft](https://github.com/educlopez/ui-craft) - Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates.
 - [vibes-plug](https://github.com/roedyrustam/vibes-plug) - Cross-IDE AI skill collection that orchestrates 147 specialized subagents for full-stack development workflows.
+- [video-to-blender](https://github.com/gokayfem/video-to-blender) - Coding-agent skill that builds procedural Blender Geometry, Shader and compositor node graphs from Python with a tested node-group library and validation tools.
 - [vietnamese-language-skill](https://github.com/trussary/vietnamese-language-skill) - Collection of agent skills that fix Vietnamese register, terminology, and locale formatting across landing pages, docs, marketing, finance, and education, with a standalone validator.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
 
