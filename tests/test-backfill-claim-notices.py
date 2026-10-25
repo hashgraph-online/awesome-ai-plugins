@@ -1,4 +1,5 @@
 import importlib.util
+import os
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -12,6 +13,17 @@ SPEC.loader.exec_module(MODULE)
 
 
 class BackfillClaimNoticeTests(unittest.TestCase):
+    def test_registry_outage_stops_backfill_gracefully_before_remaining_prs(self):
+        pull_requests = [
+            {"number": number, "title": "Add plugin", "user": {"login": "author"}}
+            for number in (1, 2)
+        ]
+        with patch.dict(os.environ, {"GH_TOKEN": "fixture", "GITHUB_REPOSITORY": "owner/catalog"}), patch.object(
+            MODULE, "list_merged_prs", return_value=pull_requests
+        ), patch.object(MODULE.NOTICE, "main", return_value=MODULE.NOTICE.NOTICE_DEFERRED) as notice:
+            self.assertEqual(MODULE.main(), 0)
+            notice.assert_called_once()
+
     def test_lists_all_pages_in_the_requested_merged_pr_window(self):
         first_page = {
             "total_count": 101,

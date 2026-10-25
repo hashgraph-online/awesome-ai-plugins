@@ -1700,6 +1700,23 @@
       "install_url": "https://raw.githubusercontent.com/ouonet/praxis/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Pro Launch",
+      "displayName": "Pro Launch",
+      "description": "Takes an app or product from idea to launch with phase gates for naming and domain checks, references, style frames, UI loop, GTM and shipping.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "jack-reson8",
+      "repo": "pro-launch",
+      "url": "https://github.com/jack-reson8/pro-launch",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/pro-launch/HEAD/plugins/pro-launch/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/jack-reson8/pro-launch#readme"
+    },
+    {
       "name": "Project Autopilot",
       "displayName": "Project Autopilot",
       "description": "Turn an idea into a structured project workflow with planning, execution, verification, and handoff.",
@@ -1955,6 +1972,23 @@
       "install_url": "https://raw.githubusercontent.com/MohammadHijjawi97/since-cutoff/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Skill Skill",
+      "displayName": "Skill Skill",
+      "description": "Writes agent skills that change the output and lints SKILL.md against the Agent Skills spec with a 0-100 health score.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "jack-reson8",
+      "repo": "skill-skill",
+      "url": "https://github.com/jack-reson8/skill-skill",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/skill-skill/HEAD/plugins/skill-skill/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
+    },
+    {
       "name": "skill-sync-publisher",
       "displayName": "skill-sync-publisher",
       "description": "Safely synchronize this Codex skill across public agent-skill registries.",
@@ -1968,6 +2002,21 @@
       "repo": "skill-sync-publisher",
       "url": "https://github.com/liuyewang/skill-sync-publisher",
       "install_url": "https://raw.githubusercontent.com/liuyewang/skill-sync-publisher/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Sno Station Skills",
+      "displayName": "Sno Station Skills",
+      "description": "Peer review, delegation, handoff and self-improvement skills that give Codex and Claude Code the working habits of a real team.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sno-ai",
+      "repo": "sno-station-skills",
+      "url": "https://github.com/sno-ai/sno-station-skills",
+      "install_url": "https://raw.githubusercontent.com/sno-ai/sno-station-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Spec-Driven Development",
@@ -2613,6 +2662,21 @@
       "repo": "agentgram",
       "url": "https://github.com/jerryfane/agentgram",
       "install_url": "https://raw.githubusercontent.com/jerryfane/agentgram/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AgentMart",
+      "displayName": "AgentMart",
+      "description": "Hosted webhook inbox, memory locker, wake-up calls, uptime and heartbeat watch and ask-my-human utilities for agents over remote MCP with OAuth sign-in, paid from a prepaid balance the human tops up.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mustafaakmese",
+      "repo": "agentmart-plugins",
+      "url": "https://github.com/mustafaakmese/agentmart-plugins",
+      "install_url": "https://raw.githubusercontent.com/mustafaakmese/agentmart-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Aident Loadout",
@@ -4097,6 +4161,23 @@
       "install_url": "https://raw.githubusercontent.com/plori-ai/codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Post",
+      "displayName": "Post",
+      "description": "Makes Xiaohongshu and X share-image sets that look native, with App Store poster layouts, real screenshots and app-UI mocks.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "jack-reson8",
+      "repo": "post-skill",
+      "url": "https://github.com/jack-reson8/post-skill",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/post-skill/HEAD/plugins/post/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/jack-reson8/post-skill#readme"
+    },
+    {
       "name": "PostEverywhere",
       "displayName": "PostEverywhere",
       "description": "Social media scheduler plugin: write, schedule and publish posts to Instagram, TikTok, YouTube, LinkedIn, X, Threads, Pinterest, Bluesky and more, plan a content calendar and see analytics, through a hosted MCP server and 15 skills ([posteverywhere.ai](https://posteverywhere.ai)).",
@@ -4125,6 +4206,23 @@
       "repo": "pricewin-agent-plugin",
       "url": "https://github.com/PriceDotWin/pricewin-agent-plugin",
       "install_url": "https://raw.githubusercontent.com/PriceDotWin/pricewin-agent-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Pro Motion",
+      "displayName": "Pro Motion",
+      "description": "Plans a launch film audio first, then renders motion graphics in code from an HTML canvas to MP4, cut to the beat.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "jack-reson8",
+      "repo": "pro-motion",
+      "url": "https://github.com/jack-reson8/pro-motion",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/pro-motion/HEAD/plugins/pro-motion/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/jack-reson8/pro-motion#readme"
     },
     {
       "name": "prompt-to-asset",
@@ -4230,6 +4328,23 @@
       "repo": "remove-ai-watermarks",
       "url": "https://github.com/wiltodelta/remove-ai-watermarks",
       "install_url": "https://raw.githubusercontent.com/wiltodelta/remove-ai-watermarks/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Renhua",
+      "displayName": "Renhua",
+      "description": "Writes Chinese posts and product copy in a real person's voice, removing AI tells and adding humor.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "jack-reson8",
+      "repo": "renhua",
+      "url": "https://github.com/jack-reson8/renhua",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/renhua/HEAD/plugins/renhua/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/jack-reson8/renhua#readme"
     },
     {
       "name": "Resume Tailor",
@@ -4802,6 +4917,21 @@
       "install_url": "https://raw.githubusercontent.com/WaveSpeedAI/codex-plugin-wavespeed-cli/HEAD/plugins/wavespeed-cli/.codex-plugin/plugin.json"
     },
     {
+      "name": "Webly",
+      "displayName": "Webly",
+      "description": "Publish a website or share files and folders from Codex at a live URL in seconds with no account, through the bundled Webly skill and remote MCP server, then let the person claim it, edit it over MCP, and publish drafts they approve.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Webly-AI",
+      "repo": "webly-plugin",
+      "url": "https://github.com/Webly-AI/webly-plugin",
+      "install_url": "https://raw.githubusercontent.com/Webly-AI/webly-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "X (Twitter) Skills",
       "displayName": "X (Twitter) Skills",
       "description": "Codex-ready X (Twitter) marketing bundle with a native .codex-plugin manifest: tweet and thread writing with corpus-validated hook formulas (validated against ~450 top tweets), AI-tell humanizer, hook extraction, reply drafting, content planning, and audience insights; also works in Claude Code.",
@@ -5100,6 +5230,21 @@
       "repo": "MARS",
       "url": "https://github.com/andrea-magni/MARS",
       "installation_url": "https://github.com/andrea-magni/MARS#readme"
+    },
+    {
+      "name": "Master Skills",
+      "displayName": "Master Skills",
+      "description": "A unified collection of 2,660+ AI agent skills across 15 domains, with installation support for Claude Code, Codex, Cursor, Gemini CLI, Antigravity and other compatible assistants",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "sinhoneyy",
+      "repo": "master-skills",
+      "url": "https://github.com/sinhoneyy/master-skills",
+      "installation_url": "https://github.com/sinhoneyy/master-skills#readme"
     },
     {
       "name": "max-skills",
@@ -9705,6 +9850,21 @@
       "repo": "screenpipe",
       "url": "https://github.com/screenpipe/screenpipe",
       "installation_url": "https://github.com/screenpipe/screenpipe#readme"
+    },
+    {
+      "name": "sdd-kit",
+      "displayName": "sdd-kit",
+      "description": "Claude Code plugin for spec-driven development that grills decisions into specs, plans work in vertical slices, builds each task test-first with agents, and gates ADRs, specs, plans and merges on the owner",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "timpinard",
+      "repo": "sdd-kit",
+      "url": "https://github.com/timpinard/sdd-kit",
+      "install_url": "https://raw.githubusercontent.com/timpinard/sdd-kit/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "SearchLink Lite",

@@ -13,8 +13,12 @@ import os
 import re
 import sys
 import subprocess
+import random
+import time
 import urllib.request
 import urllib.error
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from urllib.parse import urlencode
 
 # --- Config ---
@@ -27,6 +31,10 @@ REPO_FULL = os.environ.get("GITHUB_REPOSITORY", "")
 MAX_CATALOG_PAGES = 100
 MAX_COMMENT_PAGES = 20
 CATALOG_REPO_CACHE = {}
+REGISTRY_MAX_ATTEMPTS = 4
+REGISTRY_MAX_RETRY_DELAY = 60
+REGISTRY_RETRY_STATUSES = {429, 500, 502, 503, 504}
+NOTICE_DEFERRED = 75
 
 # Skip titles that aren't new plugin additions
 SKIP_PATTERNS = [
@@ -63,6 +71,10 @@ SKIP_PATTERNS = [
 
 class RegistryCatalogFetchError(RuntimeError):
     """Raised when Registry catalog evidence is unavailable or incomplete."""
+
+
+class RegistryTemporarilyUnavailable(RegistryCatalogFetchError):
+    """Raised after bounded retries of a temporary Registry failure."""
 
 
 class GitHubCommentsFetchError(RuntimeError):
@@ -137,7 +149,23 @@ If you have any questions, feel free to ask here or reach out at [support@hol.or
 MARKER = "<!-- hol-claim-notice -->"
 
 
-def api_request(url, headers=None, method="GET", data=None):
+def registry_retry_delay(attempt, retry_after=None):
+    """Use exponential backoff with jitter and respect Retry-After when valid."""
+    delay = 2 ** (attempt + 1) + random.uniform(0, 1)
+    if retry_after is not None:
+        try:
+            seconds = int(retry_after)
+        except (TypeError, ValueError):
+            try:
+                retry_at = parsedate_to_datetime(retry_after)
+                seconds = (retry_at - datetime.now(timezone.utc)).total_seconds()
+            except (TypeError, ValueError, OverflowError):
+                seconds = 0
+        delay = max(delay, seconds)
+    return delay
+
+
+def api_request(url, headers=None, method="GET", data=None, retry_registry=False):
     """Make an HTTP request and return parsed JSON."""
     req_headers = {"Accept": "application/json", "User-Agent": "hol-claim-notice/1.0"}
     if headers:
@@ -146,16 +174,33 @@ def api_request(url, headers=None, method="GET", data=None):
         data = json.dumps(data).encode("utf-8")
         req_headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, headers=req_headers, method=method, data=data)
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
-        print(f"  HTTP {e.code} from {url}: {body[:200]}", file=sys.stderr)
-        return None
-    except Exception as e:
-        print(f"  Error fetching {url}: {e}", file=sys.stderr)
-        return None
+    attempts = REGISTRY_MAX_ATTEMPTS if retry_registry and method == "GET" else 1
+    for attempt in range(attempts):
+        retry_after = None
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as error:
+            print(f"  HTTP {error.code} from {url}", file=sys.stderr)
+            retry_after = error.headers.get("Retry-After") if error.headers else None
+            error.close()
+            if attempts == 1 or error.code not in REGISTRY_RETRY_STATUSES:
+                return None
+        except (urllib.error.URLError, TimeoutError) as error:
+            print(f"  Error fetching {url}: {error}", file=sys.stderr)
+            if attempts == 1:
+                return None
+        except Exception as error:
+            print(f"  Error fetching {url}: {error}", file=sys.stderr)
+            return None
+
+        if attempt + 1 == attempts:
+            raise RegistryTemporarilyUnavailable("Registry retries exhausted")
+        delay = registry_retry_delay(attempt, retry_after)
+        if delay > REGISTRY_MAX_RETRY_DELAY:
+            raise RegistryTemporarilyUnavailable("Registry Retry-After exceeds retry budget")
+        print(f"  Retrying Registry request in {delay:.1f}s ({attempt + 2}/{attempts})", file=sys.stderr)
+        time.sleep(delay)
 
 
 def fetch_merged_pr_metadata():
@@ -210,7 +255,7 @@ def fetch_catalog_repos(owner_verified: bool = False):
 
     for page_index in range(MAX_CATALOG_PAGES):
         url = base_url if not cursor else f"{base_url}&cursor={cursor}"
-        data = api_request(url)
+        data = api_request(url, retry_registry=True)
         if not isinstance(data, dict) or not isinstance(data.get("items"), list):
             raise RegistryCatalogFetchError(
                 f"registry catalog page {page_index + 1} unavailable"
@@ -444,11 +489,14 @@ def main():
     print(f"  Found repos in diff: {', '.join(pr_repos)}")
 
     # 4. Fetch a complete Registry snapshot. A failed/partial snapshot is not
-    # evidence that a repository is still syncing, so fail closed without
-    # posting a marker and allow a later workflow dispatch to recover.
+    # evidence that a repository is still syncing. Defer temporary failures
+    # without posting a marker so a later workflow dispatch can recover.
     print("  Fetching registry catalog...")
     try:
         registry_repos = fetch_catalog_repos(owner_verified=False)
+    except RegistryTemporarilyUnavailable as error:
+        print(f"::warning::Claim notice deferred: {error}. Re-run via workflow dispatch.")
+        return NOTICE_DEFERRED
     except RegistryCatalogFetchError as error:
         print(f"  Registry catalog fetch failed: {error}", file=sys.stderr)
         return 1
@@ -489,6 +537,9 @@ def main():
         print("  Checking owner verification status...")
         try:
             verified_repos = fetch_catalog_repos(owner_verified=True)
+        except RegistryTemporarilyUnavailable as error:
+            print(f"::warning::Claim notice deferred: {error}. Re-run via workflow dispatch.")
+            return NOTICE_DEFERRED
         except RegistryCatalogFetchError as error:
             print(
                 f"  Owner-verification catalog fetch failed: {error}",
@@ -532,4 +583,5 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    result = main()
+    sys.exit(0 if result == NOTICE_DEFERRED else result)

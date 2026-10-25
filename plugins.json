@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-24",
-  "total": 997,
+  "total": 1007,
   "platforms": [
     "codex",
     "grok",
@@ -1600,6 +1600,22 @@
       ]
     },
     {
+      "name": "Pro Launch",
+      "url": "https://github.com/jack-reson8/pro-launch",
+      "owner": "jack-reson8",
+      "repo": "pro-launch",
+      "description": "Takes an app or product from idea to launch with phase gates for naming and domain checks, references, style frames, UI loop, GTM and shipping.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/pro-launch/HEAD/plugins/pro-launch/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/jack-reson8/pro-launch#readme"
+    },
+    {
       "name": "Project Autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "owner": "AlexMi64",
@@ -1838,6 +1854,22 @@
       ]
     },
     {
+      "name": "Skill Skill",
+      "url": "https://github.com/jack-reson8/skill-skill",
+      "owner": "jack-reson8",
+      "repo": "skill-skill",
+      "description": "Writes agent skills that change the output and lints SKILL.md against the Agent Skills spec with a 0-100 health score.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/skill-skill/HEAD/plugins/skill-skill/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
+    },
+    {
       "name": "skill-sync-publisher",
       "url": "https://github.com/liuyewang/skill-sync-publisher",
       "owner": "liuyewang",
@@ -1846,6 +1878,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/liuyewang/skill-sync-publisher/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Sno Station Skills",
+      "url": "https://github.com/sno-ai/sno-station-skills",
+      "owner": "sno-ai",
+      "repo": "sno-station-skills",
+      "description": "Peer review, delegation, handoff and self-improvement skills that give Codex and Claude Code the working habits of a real team.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sno-ai/sno-station-skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2449,6 +2495,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/jerryfane/agentgram/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AgentMart",
+      "url": "https://github.com/mustafaakmese/agentmart-plugins",
+      "owner": "mustafaakmese",
+      "repo": "agentmart-plugins",
+      "description": "Hosted webhook inbox, memory locker, wake-up calls, uptime and heartbeat watch and ask-my-human utilities for agents over remote MCP with OAuth sign-in, paid from a prepaid balance the human tops up.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mustafaakmese/agentmart-plugins/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3839,6 +3899,22 @@
       ]
     },
     {
+      "name": "Post",
+      "url": "https://github.com/jack-reson8/post-skill",
+      "owner": "jack-reson8",
+      "repo": "post-skill",
+      "description": "Makes Xiaohongshu and X share-image sets that look native, with App Store poster layouts, real screenshots and app-UI mocks.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/post-skill/HEAD/plugins/post/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/jack-reson8/post-skill#readme"
+    },
+    {
       "name": "PostEverywhere",
       "url": "https://github.com/posteverywhere/codex-plugin",
       "owner": "posteverywhere",
@@ -3865,6 +3941,22 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Pro Motion",
+      "url": "https://github.com/jack-reson8/pro-motion",
+      "owner": "jack-reson8",
+      "repo": "pro-motion",
+      "description": "Plans a launch film audio first, then renders motion graphics in code from an HTML canvas to MP4, cut to the beat.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/pro-motion/HEAD/plugins/pro-motion/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/jack-reson8/pro-motion#readme"
     },
     {
       "name": "prompt-to-asset",
@@ -3963,6 +4055,22 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Renhua",
+      "url": "https://github.com/jack-reson8/renhua",
+      "owner": "jack-reson8",
+      "repo": "renhua",
+      "description": "Writes Chinese posts and product copy in a real person's voice, removing AI tells and adding humor.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jack-reson8/renhua/HEAD/plugins/renhua/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/jack-reson8/renhua#readme"
     },
     {
       "name": "Resume Tailor",
@@ -4497,6 +4605,20 @@
       ]
     },
     {
+      "name": "Webly",
+      "url": "https://github.com/Webly-AI/webly-plugin",
+      "owner": "Webly-AI",
+      "repo": "webly-plugin",
+      "description": "Publish a website or share files and folders from Codex at a live URL in seconds with no account, through the bundled Webly skill and remote MCP server, then let the person claim it, edit it over MCP, and publish drafts they approve.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Webly-AI/webly-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "X (Twitter) Skills",
       "url": "https://github.com/sergebulaev/x-skills",
       "owner": "sergebulaev",
@@ -4772,6 +4894,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/andrea-magni/MARS#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Master Skills",
+      "url": "https://github.com/sinhoneyy/master-skills",
+      "owner": "sinhoneyy",
+      "repo": "master-skills",
+      "description": "A unified collection of 2,660+ AI agent skills across 15 domains, with installation support for Claude Code, Codex, Cursor, Gemini CLI, Antigravity and other compatible assistants",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/sinhoneyy/master-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -9044,6 +9180,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/screenpipe/screenpipe#readme"
+    },
+    {
+      "name": "sdd-kit",
+      "url": "https://github.com/timpinard/sdd-kit",
+      "owner": "timpinard",
+      "repo": "sdd-kit",
+      "description": "Claude Code plugin for spec-driven development that grills decisions into specs, plans work in vertical slices, builds each task test-first with agents, and gates ADRs, specs, plans and merges on the owner",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/timpinard/sdd-kit/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "SearchLink Lite",

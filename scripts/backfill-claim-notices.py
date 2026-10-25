@@ -83,7 +83,11 @@ def main():
         NOTICE.PR_NUMBER = str(number)
         NOTICE.PR_TITLE = title
         NOTICE.PR_AUTHOR = author
-        if NOTICE.main() != 0:
+        result = NOTICE.main()
+        if result == NOTICE.NOTICE_DEFERRED:
+            print(f"::warning::Claim notice backfill deferred at PR #{number}; re-run this backfill later.")
+            return 0
+        if result != 0:
             print(f"Error: claim notice backfill stopped at PR #{number}", file=sys.stderr)
             return 1
 
