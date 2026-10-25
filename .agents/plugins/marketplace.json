@@ -12656,6 +12656,21 @@
       "installation_url": "https://github.com/loootai/looot-skills#readme"
     },
     {
+      "name": "Maskbolt",
+      "displayName": "Maskbolt",
+      "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "Maskbolt",
+      "url": "https://github.com/skulitom/Maskbolt",
+      "install_url": "https://raw.githubusercontent.com/skulitom/Maskbolt/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "mathtype-for-word",
       "displayName": "mathtype-for-word",
       "description": "Codex and Claude Code plugin with a local MCP server and Agent Skill that creates editable MathType 7 equations in Word and PowerPoint on Windows, with MathType-native equation numbering and cross-references in Word",
