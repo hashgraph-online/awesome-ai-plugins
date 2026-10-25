@@ -33,6 +33,8 @@
 
 ## Contents
 
+- [BountyGuard](https://github.com/doomsday-network/bounty-guard) - Autonomous pre-flight GitHub bounty auditor and on-chain Proof-of-Escrow verification MCP server, GitHub Action, and CLI skill for AI coding agents.
+- [DoomPay](https://github.com/doomsday-network/doom-pay) - Zero-dependency 3-line Stripe-style non-custodial crypto checkout SDK (`DoomPay.checkout()`), REST verify endpoint, and MCP skill for DOOM L1 and wDOOM on Base Mainnet (8453).
 - [Start Here](#start-here)
 - [Official Plugins](#official-plugins)
 - [Community Plugins](#community-plugins)
