@@ -150,6 +150,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [ui-craft](https://github.com/educlopez/ui-craft) - Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates.
 - [vibes-plug](https://github.com/roedyrustam/vibes-plug) - Cross-IDE AI skill collection that orchestrates 147 specialized subagents for full-stack development workflows.
 - [vietnamese-language-skill](https://github.com/trussary/vietnamese-language-skill) - Collection of agent skills that fix Vietnamese register, terminology, and locale formatting across landing pages, docs, marketing, finance, and education, with a standalone validator.
+- [Webly](https://github.com/Webly-AI/webly-plugin) - Agent skill and hosted MCP server that publish a website or share files and folders at a live URL in seconds with no account, then let the person claim it, edit it over MCP, and publish drafts they approve, also packaged as Claude Code, Codex, Cursor, and Gemini CLI plugins.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
 
 ### Development & Workflow
