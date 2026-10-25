@@ -1014,6 +1014,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [YYLO Skills](https://github.com/yylo-dev/yylo-skills) - Reusable agent skills maintained by YYLO: the canonical, independently versioned source for the ledger-tasks, wiki, workflow, artifact, benchmark, understand-project, plan-ledger-tasks and ralph-loop skills used by YYLO CLI and YYLO Ledger.
 - [Zero Slop](https://github.com/manavmishra/ZeroSlop) - Say no to AI slop: a human-in-the-loop learning agentic workflow skill that scores text 0-100 for AI slop and rewrites it tastefully, with a standard-library Python scorer that has zero dependencies and runs offline.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
+- [Mode VC Radar MCP](https://modevc.com/api/mcp) - Read-only venture capital & AI market research MCP server (39 empirical AI charts, 3,650 VC firms, SEC Form D filings, and 18 founder financial calculators; free Streamable HTTP at https://modevc.com/api/mcp).
 
 ### Grok Plugins
 
