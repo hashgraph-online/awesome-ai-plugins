@@ -588,9 +588,15 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--output-dir", type=Path, help="write both feeds beneath this directory")
     parser.add_argument("--offline", action="store_true", help="use only README entries; make no network requests")
     parser.add_argument("--check", action="store_true", help="compare generated feeds with files and do not write")
+    parser.add_argument(
+        "--require-upstreams", action="store_true",
+        help="fail closed if the Codex or Grok registry cannot supply a nonempty feed",
+    )
     # A library caller should not inherit the host process's arguments.
     # The executable entry point passes its CLI arguments explicitly.
     args = parser.parse_args([] if argv is None else argv)
+    if args.offline and args.require_upstreams:
+        parser.error("--require-upstreams cannot be combined with --offline")
     if args.offline:
         plugins = parse_plugins(README)
     else:
@@ -598,12 +604,18 @@ def main(argv: list[str] | None = None):
         try:
             plugins = load_codex_plugins()
         except Exception as exc:
+            if args.require_upstreams:
+                raise RuntimeError(f"Codex upstream feed unavailable: {exc}") from exc
             print(f"Upstream feed unavailable, falling back to README: {exc}")
             plugins = parse_plugins(README)
+    if args.require_upstreams and not plugins:
+        raise RuntimeError("Codex upstream feed is empty; refusing to rewrite published catalogs")
     print(f"Found {len(plugins)} plugins from {'README' if args.offline else 'upstream catalog'}")
 
     # Merge Grok plugins from awesome-grok-plugins upstream
     grok_plugins = [] if args.offline else load_grok_plugins()
+    if args.require_upstreams and not grok_plugins:
+        raise RuntimeError("Grok upstream feed is unavailable or empty; refusing to rewrite published catalogs")
     if grok_plugins:
         print(f"Found {len(grok_plugins)} plugins from grok upstream catalog")
         # Deduplicate by owner/repo: grok plugins that also exist in codex
