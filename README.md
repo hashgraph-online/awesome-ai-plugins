@@ -1090,6 +1090,8 @@ submitting a repository.
 OpenCode plugins are npm packages or local directories registered in `opencode.json(c)` (`plugins`) and installed with `opencode plugin add`. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform with repository and documentation links and omits any manifest-URL `install_url`: OpenCode resolves packages through its own installer, so no client-specific install target applies.
 
 - [Azure DevOps PR Review](https://github.com/WTLAIB/opencode-azure-devops-pr-review-v2) - OpenCode V2 plugin that reviews Azure DevOps Services pull requests from a URL without a local checkout, with separate verification in review/deep modes and comment previews.
+- [cursor-opencode-provider](https://github.com/oakimov/cursor-opencode-provider) - OpenCode plugin and AI SDK provider for Cursor subscription models over Cursor's Connect-RPC agent protocol.
+- [devin-opencode-provider](https://github.com/oakimov/devin-opencode-provider) - OpenCode plugin and AI SDK provider for Devin subscription models over Devin's Connect-RPC Cascade protocol.
 - [LitOpenCode](https://github.com/wjgoarxiv/litopencode) - OpenCode plans, builds, checks and records each lit task, so the next session picks up from a written handoff.
 - [OpenCode Attention Inbox](https://github.com/YidiDev/opencode-attention-inbox) - Independent OpenCode V2 TUI sidebar inbox for pending permissions, questions, and successful unread completions, with navigation-only session switching.
 - [opencode-cursor](https://github.com/Nomadcxx/opencode-cursor) - OpenCode plugin for Cursor subscription models with streaming, thinking, tool calls, MCP support, and browser login through Cursor CLI or API-key authentication through the SDK.
