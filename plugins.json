@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-25",
-  "total": 1018,
+  "last_updated": "2026-10-26",
+  "total": 1020,
   "platforms": [
     "codex",
     "grok",
@@ -3425,6 +3425,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/avivsinai/jenkins-cli/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Jetformat",
+      "url": "https://github.com/jetformat/jetformat-agent",
+      "owner": "jetformat",
+      "repo": "jetformat-agent",
+      "description": "Converts Word, Excel, and PowerPoint to PDF, PDF to Word, extracts text, and merges, extracts, or renders PDFs through the locally installed Jetformat CLI.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jetformat/jetformat-agent/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -11787,20 +11801,6 @@
       "installation_url": "https://github.com/loootai/looot-skills#readme"
     },
     {
-      "name": "Maskbolt",
-      "url": "https://github.com/skulitom/Maskbolt",
-      "owner": "skulitom",
-      "repo": "Maskbolt",
-      "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/skulitom/Maskbolt/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
-    },
-    {
       "name": "mathtype-for-word",
       "url": "https://github.com/felimet/mathtype-for-word",
       "owner": "felimet",
@@ -12411,6 +12411,19 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "QAmcp",
+      "url": "https://github.com/QAmcp/qamcp-cli",
+      "owner": "QAmcp",
+      "repo": "qamcp-cli",
+      "description": "Command-line tester for MCP servers: checks the connection, tool descriptions, safety labels, hidden instructions, bad inputs, leaked secrets and responses, with a GitHub Action for CI",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
       ]
     },
     {
@@ -13513,6 +13526,20 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
       "ecosystems": [
         "opencode"
+      ]
+    },
+    {
+      "name": "Maskbolt",
+      "url": "https://github.com/skulitom/Maskbolt",
+      "owner": "skulitom",
+      "repo": "Maskbolt",
+      "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/skulitom/Maskbolt/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     }
   ]

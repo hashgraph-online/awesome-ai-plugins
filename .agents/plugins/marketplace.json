@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-10-26",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3658,6 +3658,21 @@
       "repo": "jenkins-cli",
       "url": "https://github.com/avivsinai/jenkins-cli",
       "install_url": "https://raw.githubusercontent.com/avivsinai/jenkins-cli/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Jetformat",
+      "displayName": "Jetformat",
+      "description": "Converts Word, Excel, and PowerPoint to PDF, PDF to Word, extracts text, and merges, extracts, or renders PDFs through the locally installed Jetformat CLI.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jetformat",
+      "repo": "jetformat-agent",
+      "url": "https://github.com/jetformat/jetformat-agent",
+      "install_url": "https://raw.githubusercontent.com/jetformat/jetformat-agent/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Jev Social",
@@ -12656,21 +12671,6 @@
       "installation_url": "https://github.com/loootai/looot-skills#readme"
     },
     {
-      "name": "Maskbolt",
-      "displayName": "Maskbolt",
-      "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
-      "owner": "skulitom",
-      "repo": "Maskbolt",
-      "url": "https://github.com/skulitom/Maskbolt",
-      "install_url": "https://raw.githubusercontent.com/skulitom/Maskbolt/HEAD/.claude-plugin/plugin.json"
-    },
-    {
       "name": "mathtype-for-word",
       "displayName": "mathtype-for-word",
       "description": "Codex and Claude Code plugin with a local MCP server and Agent Skill that creates editable MathType 7 equations in Word and PowerPoint on Windows, with MathType-native equation numbering and cross-references in Word",
@@ -13332,6 +13332,20 @@
       "repo": "Pulse",
       "url": "https://github.com/fatwang2/Pulse",
       "install_url": "https://raw.githubusercontent.com/fatwang2/Pulse/HEAD/plugins/claude-code/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "QAmcp",
+      "displayName": "QAmcp",
+      "description": "Command-line tester for MCP servers: checks the connection, tool descriptions, safety labels, hidden instructions, bad inputs, leaked secrets and responses, with a GitHub Action for CI",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "QAmcp",
+      "repo": "qamcp-cli",
+      "url": "https://github.com/QAmcp/qamcp-cli"
     },
     {
       "name": "QVeris Agent Toolkit",
@@ -14518,6 +14532,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "Maskbolt",
+      "displayName": "Maskbolt",
+      "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "skulitom",
+      "repo": "Maskbolt",
+      "url": "https://github.com/skulitom/Maskbolt",
+      "install_url": "https://raw.githubusercontent.com/skulitom/Maskbolt/HEAD/.claude-plugin/plugin.json"
     }
   ]
 }
