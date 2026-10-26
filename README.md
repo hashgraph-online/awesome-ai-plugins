@@ -512,6 +512,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [opencode-models-discovery](https://github.com/yuhp/opencode-models-discovery) - OpenCode plugin that dynamically discovers models from OpenAI-compatible providers and injects them into provider config with filtering and metadata enrichment.
 - [opencode-nexus](https://github.com/mohammad154/opencode-nexus) - OpenCode plugin with a fixed three-agent execution workflow, conditional planning advice, fresh impact analysis, deterministic verification, and durable run state.
 - [opencode-openai-compact](https://github.com/partment/opencode-openai-compact) - OpenCode plugin that uses OpenAI Responses API native compaction v2 and stores checkpoints in SQLite.
+- [opencode-plugin-compat](https://github.com/oakimov/opencode-plugin-compat) - Compatibility bridge that runs unmodified OpenCode plugins on MiMo, Kilo, pi, oh-my-pi, and DeepSeek Harness hosts.
 - [opencode-plugin-loop](https://github.com/jkrandom-sudo/opencode-plugin-loop) - OpenCode plugin adding a /loop command that runs prompts on fixed, adaptive, or one-shot schedules per session.
 - [opencode-plugin-peers](https://github.com/jkrandom-sudo/opencode-plugin-peers) - OpenCode plugin for cross-session messaging: independent instances on the same machine discover each other and exchange plain-text messages.
 - [opencode-see-image](https://github.com/alfaoz/opencode-see-image) - OpenCode plugin that gives non-vision models image and screenshot understanding by routing attachments to a vision-capable model.
