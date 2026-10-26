@@ -12560,6 +12560,21 @@
       "installation_url": "https://github.com/leeguooooo/iphone-use#readme"
     },
     {
+      "name": "ismail",
+      "displayName": "ismail",
+      "description": "MCP server, CLI and Claude Code plugin that let an agent write music as notes, instruments and code, render it, and read the audio back as text to judge the mix",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "newsbubbles",
+      "repo": "ismail",
+      "url": "https://github.com/newsbubbles/ismail",
+      "install_url": "https://raw.githubusercontent.com/newsbubbles/ismail/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "JVM Pulse",
       "displayName": "JVM Pulse",
       "description": "Claude Code plugin and GitHub Copilot canvas extension for profiling Java garbage collection and JFR telemetry, with a portable CLI and shareable HTML reports",

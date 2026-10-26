@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-26",
-  "total": 1034,
+  "total": 1035,
   "platforms": [
     "codex",
     "grok",
@@ -11695,6 +11695,20 @@
       "installation_url": "https://github.com/leeguooooo/iphone-use#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "ismail",
+      "url": "https://github.com/newsbubbles/ismail",
+      "owner": "newsbubbles",
+      "repo": "ismail",
+      "description": "MCP server, CLI and Claude Code plugin that let an agent write music as notes, instruments and code, render it, and read the audio back as text to judge the mix",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/newsbubbles/ismail/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
