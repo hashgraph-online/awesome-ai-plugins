@@ -3927,7 +3927,7 @@
     {
       "name": "LMCP",
       "displayName": "LMCP",
-      "description": "Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.",
+      "description": "Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Microsoft 365 mail and calendar, and Office files on Mac and Windows.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -7294,6 +7294,21 @@
       "repo": "Easy-MCP",
       "url": "https://github.com/Mark007-R/Easy-MCP",
       "installation_url": "https://github.com/Mark007-R/Easy-MCP#readme"
+    },
+    {
+      "name": "EditLens",
+      "displayName": "EditLens",
+      "description": "EditLens highlights each Claude edit on the page you're building, with its file and line, and shows Claude's chat and code beside it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "mymotomaker-ai",
+      "repo": "EditLens",
+      "url": "https://github.com/mymotomaker-ai/EditLens",
+      "install_url": "https://raw.githubusercontent.com/mymotomaker-ai/EditLens/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "effect-actions",
