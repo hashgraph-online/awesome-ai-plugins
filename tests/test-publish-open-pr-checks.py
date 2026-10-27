@@ -19,10 +19,22 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         )
 
         self.assertEqual(conclusion, "failure")
-        self.assertEqual(title, "Centralized score not established")
+        self.assertEqual(title, "Centralized scan did not pass")
         self.assertIn("score of at least 80", summary)
+        self.assertIn("job conclusion alone cannot distinguish", summary)
+        self.assertIn("original scan job log and sanitized findings", summary)
         self.assertIn("Finding severities are advisory", summary)
         self.assertIn("Keep the contribution blocked", summary)
+
+    def test_cancelled_source_scan_does_not_claim_no_numeric_score(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "scan", "failure_reasons": []},
+            {411: ["cancelled"]},
+        )
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Centralized scan did not pass")
+        self.assertIn("ended with cancelled", summary)
+        self.assertIn("cannot distinguish", summary)
 
     def test_unavailable_source_scan_blocks_merge(self):
         conclusion, title, summary = MODULE.check_summary(
