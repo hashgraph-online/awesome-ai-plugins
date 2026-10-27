@@ -1612,7 +1612,7 @@
     {
       "name": "Off the Wall",
       "displayName": "Off the Wall",
-      "description": "Quotes your own past corrections back to Codex, word for word, before each answer; `otw report` shows what you correct most from your local history, and subagent routing names a cheaper model per subagent. No API key.",
+      "description": "Quotes your own past corrections back to Codex, word for word, before each answer; `otw report` shows what you correct most from your local history, and a routing rule asks the orchestrator to name a model for each subagent. No API key.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -2098,7 +2098,7 @@
     {
       "name": "spec-superflow",
       "displayName": "spec-superflow",
-      "description": "Lean spec workflow with direct or planned execution, optional specifications, one final review by default, recoverable state, and a bundled same-version CLI runtime.",
+      "description": "Lean spec workflow with direct or planned execution, optional specifications, one final review, recoverable state, a bundled same-version CLI, Windows-compatible Qoder/WorkBuddy installers, and a CatPaw (\u5999\u624b) import-package preview.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -5208,6 +5208,21 @@
       "installation_url": "https://github.com/cooper-email/cooper-email#readme"
     },
     {
+      "name": "de-anthropocentric-research-engine",
+      "displayName": "de-anthropocentric-research-engine",
+      "description": "271 research skills that take a research direction from first question to tested hypothesis: 51 tactics drive 216 atomic steps across literature synthesis, gap validation, hypothesis formation, experiment design and result interpretation, backing out when the evidence is too thin instead of marching a fixed pipeline - the plan is approved before anything runs, checkpoints resume after an interruption, and one command installs it into any agent with no runtime and no API key",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "yogsoth-ai",
+      "repo": "de-anthropocentric-research-engine",
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
+      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme"
+    },
+    {
       "name": "Deacon Skills",
       "displayName": "Deacon Skills",
       "description": "Two agent skills that install the Deacon AI support widget on a site or app, tell it who is signed in, and send it goals such as sign ups, also packaged as a Claude Code plugin marketplace",
@@ -5281,6 +5296,21 @@
       "repo": "engineering-standards",
       "url": "https://github.com/Enki-DEV-expert/engineering-standards",
       "installation_url": "https://github.com/Enki-DEV-expert/engineering-standards#readme"
+    },
+    {
+      "name": "grcskills",
+      "displayName": "grcskills",
+      "description": "64 open GRC skills that draft risk registers, statements of applicability, audit prep and NIST RMF documents, leaving every sign-off to the practitioner, with an optional framework lookup MCP server",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "better-isms",
+      "repo": "grcskills",
+      "url": "https://github.com/better-isms/grcskills",
+      "installation_url": "https://github.com/better-isms/grcskills#readme"
     },
     {
       "name": "image-use",
@@ -7111,17 +7141,6 @@
       "repo": "DataMagic",
       "url": "https://github.com/HKUSTDial/DataMagic",
       "install_url": "https://raw.githubusercontent.com/HKUSTDial/DataMagic/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "de-anthropocentric-research-engine",
-      "displayName": "de-anthropocentric-research-engine",
-      "description": "Collection of 900+ markdown research skills that let Claude Code autonomously survey literature, find gaps, form hypotheses, and design experiments",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "yogsoth-ai",
-      "repo": "de-anthropocentric-research-engine",
-      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine",
-      "installation_url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine#readme"
     },
     {
       "name": "Dely",

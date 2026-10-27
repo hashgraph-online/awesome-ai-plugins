@@ -120,9 +120,11 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
         job_details = ", ".join(jobs)
         return (
             "failure",
-            "Centralized score not established",
-            f"The centralized scan returned {job_details}; it did not establish a score of at least 80. "
-            "Keep the contribution blocked until the centralized score is available and meets the threshold. "
+            "Centralized scan did not pass",
+            f"The centralized scan jobs ended with {job_details}. A non-successful job may still report a numeric score; "
+            "the job conclusion alone cannot distinguish a below-80 score from a scanner execution failure. "
+            "Check the original scan job log and sanitized findings for the measured score or execution error. "
+            "Keep the contribution blocked until a completed catalog-owned scan verifies a score of at least 80. "
             "Finding severities are advisory for listing eligibility.",
         )
 
