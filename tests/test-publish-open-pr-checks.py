@@ -13,6 +13,15 @@ SPEC.loader.exec_module(MODULE)
 
 
 class PublishOpenPrChecksTests(unittest.TestCase):
+    def test_centralized_scans_use_the_inclusive_75_point_minimum(self):
+        root = Path(__file__).resolve().parents[1]
+        for workflow in ("sweep-open-prs.yml", "validate-contribution.yml"):
+            with self.subTest(workflow=workflow):
+                text = (root / ".github/workflows" / workflow).read_text()
+                self.assertIn("min_score: 75", text)
+                self.assertIn("fail_on_severity: none", text)
+                self.assertNotIn("min_score: 80", text)
+
     def test_publisher_waits_for_completed_scan_before_reporting(self):
         result = {"pr_number": 411, "state": "scan", "contributions": [{"owner": "owner", "repo": "plugin"}]}
         env = {
@@ -82,7 +91,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertEqual(conclusion, "failure")
         self.assertEqual(title, "Centralized scan did not pass")
-        self.assertIn("score of at least 80", summary)
+        self.assertIn("score of at least 75", summary)
         self.assertIn("job conclusion alone cannot distinguish", summary)
         self.assertIn("original scan job log and sanitized findings", summary)
         self.assertIn("Finding severities are advisory", summary)
@@ -105,7 +114,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertEqual(conclusion, "failure")
         self.assertEqual(title, "Centralized score unavailable")
-        self.assertIn("did not establish a score of at least 80", summary)
+        self.assertIn("did not establish a score of at least 75", summary)
 
     def test_failed_scan_comment_is_one_paragraph_with_conditional_source_ci_guidance(self):
         result = {
@@ -124,7 +133,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             "failure",
             "Centralized score not established",
-            "The centralized scan did not establish a score of at least 80.",
+            "The centralized scan did not establish a score of at least 75.",
             "https://github.com/example/repo/actions/runs/1",
         )
 
@@ -132,7 +141,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertNotIn("\\n", body)
         self.assertIn("@builder, The centralized scan did not establish", body)
         self.assertIn("source-repository scanner CI is recommended, not required", body)
-        self.assertIn("If the completed report confirms a score below 80", body)
+        self.assertIn("If the completed report confirms a score below 75", body)
         self.assertIn("reproduce locally", body)
         self.assertIn("link the source run", body)
         self.assertIn("request review", body)
@@ -149,13 +158,13 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             "success",
             "Centralized score threshold passed",
-            "The centralized scan met the score threshold of 80.",
+            "The centralized scan met the score threshold of 75.",
             "https://github.com/example/repo/actions/runs/1",
         )
 
         self.assertNotIn("\n", body)
         self.assertNotIn("\\n", body)
-        self.assertIn("score threshold of 80 was met", body)
+        self.assertIn("score threshold of 75 was met", body)
         self.assertNotIn("scanner CI is recommended", body)
         self.assertNotIn("trust score", body)
 

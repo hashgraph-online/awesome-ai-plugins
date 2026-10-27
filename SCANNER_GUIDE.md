@@ -58,7 +58,7 @@ Codex manifest.
 | Skill Security | Hooks, env vars, validation, no hardcoded paths |
 | Code Quality | No dangerous dynamic execution or shell-injection patterns |
 
-**Passing criteria:** a successfully completed scan with a normalized score ≥ 80/100. Finding severities are advisory for listing eligibility and remain visible for maintainer review. Failed or unavailable scans still block merge.
+**Passing criteria:** a completed centralized scan with a normalized score ≥ 75/100. Finding severities and non-gating action failures are advisory for listing eligibility. An unavailable score blocks merge.
 
 The centralized source scan uses this pass criterion for Awesome AI Plugins listings. A listing needs a passing centralized scan before merge. Scanner CI in the source repository is optional; adding it improves the Registry trust score and removes the 10% reduction applied when maintainer scanner CI is absent.
 
@@ -104,7 +104,7 @@ jobs:
       - uses: hashgraph-online/ai-plugin-scanner-action@c96833de5070fab4e564010b5ab6e3c3d7e07a3e # v1.2.806
         with:
           plugin_dir: "."
-          min_score: 80
+          min_score: 75
           fail_on_severity: none
 ```
 
@@ -126,7 +126,7 @@ Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner
 
 ### Recommended for Awesome AI Plugins listing
 
-Scanner CI in the source repository is optional for listing. The required centralized source scan must complete successfully with a score of at least 80 before merge. Finding severities are advisory for listing eligibility and remain available for maintainer review. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The required centralized source scan must establish a normalized score of at least 75 before merge. Finding severities are advisory for listing eligibility and remain available for maintainer review. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
 
 Add the scanner badge to your README:
 

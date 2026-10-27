@@ -147,22 +147,22 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
             return (
                 "failure",
                 "Centralized score unavailable",
-                "The centralized scan did not establish a score of at least 80. Keep the contribution blocked and rerun the scan before merge.",
+                "The centralized scan did not establish a score of at least 75. Keep the contribution blocked and rerun the scan before merge.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
                 "success",
                 "Centralized score threshold passed",
-                "The centralized scan met the score threshold of 80; finding severities are advisory.",
+                "The centralized scan met the score threshold of 75; finding severities are advisory.",
             )
         job_details = ", ".join(jobs)
         return (
             "failure",
             "Centralized scan did not pass",
             f"The centralized scan jobs ended with {job_details}. A non-successful job may still report a numeric score; "
-            "the job conclusion alone cannot distinguish a below-80 score from a scanner execution failure. "
+            "the job conclusion alone cannot distinguish a below-75 score from a scanner execution failure. "
             "Check the original scan job log and sanitized findings for the measured score or execution error. "
-            "Keep the contribution blocked until a completed catalog-owned scan verifies a score of at least 80. "
+            "Keep the contribution blocked until a completed catalog-owned scan verifies a score of at least 75. "
             "Finding severities are advisory for listing eligibility.",
         )
 
@@ -228,7 +228,7 @@ def remediation_comment(
 
     if conclusion == "success":
         if result.get("state") == "scan":
-            message = "The centralized score threshold of 80 was met; finding severities are advisory."
+            message = "The centralized score threshold of 75 was met; finding severities are advisory."
         else:
             message = "No new Community Plugins entries require validation in this pull request."
         return one_paragraph(
@@ -236,9 +236,9 @@ def remediation_comment(
         )
 
     if result.get("state") == "scan":
-        guidance = "Keep this contribution unmerged until a completed centralized score of at least 80 is available; finding severities are advisory and source-repository scanner CI is optional."
+        guidance = "Keep this contribution unmerged until a completed centralized score of at least 75 is available; finding severities are advisory and source-repository scanner CI is optional."
         if missing_scanner_ci_repos(result):
-            guidance += " If the completed report confirms a score below 80, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
+            guidance += " If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
     else:
         guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
 

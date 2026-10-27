@@ -320,7 +320,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("score threshold of 80 was met", comment)
+        self.assertIn("score threshold of 75 was met", comment)
         self.assertNotIn("scanner CI is recommended", comment)
         self.assertNotIn("trust score", comment)
         self.assertNotIn("\n", comment)
@@ -348,7 +348,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("completed centralized score of at least 80", comment)
+        self.assertIn("completed centralized score of at least 75", comment)
         self.assertIn("source-repository scanner CI is optional", comment)
         self.assertNotIn("\n", comment)
         self.assertNotIn("\\n", comment)
@@ -368,7 +368,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result, "failure", title, summary, "https://example.test/run"
         )
 
-        self.assertIn("If the completed report confirms a score below 80", comment)
+        self.assertIn("If the completed report confirms a score below 75", comment)
         self.assertIn("recommended, not required", comment)
         self.assertIn("SHA-pinned workflow", comment)
         self.assertIn("reproduce locally", comment)

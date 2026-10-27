@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-27",
-  "total": 1042,
+  "total": 1043,
   "platforms": [
     "codex",
     "grok",
@@ -13594,6 +13594,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-opencode-palette",
       "description": "Multi-theme engine for DSH Web with full support for all 38 opencode themes",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-plugin-gating-hub",
+      "url": "https://github.com/Noob-stupid/dsh-plugin-gating-hub",
+      "owner": "Noob-stupid",
+      "repo": "dsh-plugin-gating-hub",
+      "description": "DSH plugin adding framework-upgrade safety checks, rollback, plugin gating, and a multi-source plugin and skill marketplace",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",

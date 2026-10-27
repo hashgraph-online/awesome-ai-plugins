@@ -14611,6 +14611,20 @@
       "url": "https://github.com/FeatherHunter/dsh-opencode-palette"
     },
     {
+      "name": "dsh-plugin-gating-hub",
+      "displayName": "dsh-plugin-gating-hub",
+      "description": "DSH plugin adding framework-upgrade safety checks, rollback, plugin gating, and a multi-source plugin and skill marketplace",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "Noob-stupid",
+      "repo": "dsh-plugin-gating-hub",
+      "url": "https://github.com/Noob-stupid/dsh-plugin-gating-hub"
+    },
+    {
       "name": "dsh-plugin-hub",
       "displayName": "dsh-plugin-hub",
       "description": "Plugin collection for the DeepSeek Harness web GUI: task notifications, provider usage tracking, MCP management, and LAN access",
