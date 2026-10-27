@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -12,6 +13,67 @@ SPEC.loader.exec_module(MODULE)
 
 
 class PublishOpenPrChecksTests(unittest.TestCase):
+    def test_publisher_waits_for_completed_scan_before_reporting(self):
+        result = {"pr_number": 411, "state": "scan", "contributions": [{"owner": "owner", "repo": "plugin"}]}
+        env = {
+            "GITHUB_REPOSITORY": "example/repo",
+            "GITHUB_TOKEN": "test-token",
+            "GITHUB_RUN_ID": "1",
+            "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+            "OPEN_PR_RESULTS": json.dumps([result]),
+        }
+        responses = [
+            {"jobs": []},
+            {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+        ]
+        with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, patch("time.sleep"):
+            self.assertEqual(MODULE.main(), 0)
+        self.assertEqual(publish.call_args.args[2], {411: ["success"]})
+
+    def test_waits_for_scanner_job_to_appear(self):
+        responses = [
+            {"jobs": []},
+            {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+        ]
+        with patch.object(MODULE, "github_api", side_effect=responses) as api, patch.object(MODULE.time, "sleep") as sleep:
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+        self.assertEqual(api.call_count, 2)
+        self.assertIn("filter=all", api.call_args_list[0].args[1])
+        sleep.assert_called_once()
+
+    def test_latest_scanner_attempt_replaces_previous_failure(self):
+        jobs = [
+            {"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "failure"},
+            {"id": 2, "run_attempt": 2, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"},
+        ]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+
+    def test_partial_or_pending_matrix_never_passes(self):
+        jobs = [
+            {"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, first)", "conclusion": "success"},
+            {"id": 2, "run_attempt": 1, "name": "Scan PR (411, owner, second)", "conclusion": "success"},
+            {"id": 3, "run_attempt": 2, "name": "Scan PR (411, owner, second)", "conclusion": None},
+        ]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 2})
+        self.assertNotIn(411, result)
+        self.assertEqual(MODULE.check_summary({"pr_number": 411, "state": "scan"}, result)[0], "failure")
+
+    def test_missing_matrix_job_never_passes(self):
+        jobs = [{"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, first)", "conclusion": "success"}]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 2})
+        self.assertNotIn(411, result)
+
+    def test_previous_attempt_cannot_clear_a_new_attempt(self):
+        jobs = [{"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
+        self.assertNotIn(411, result)
+
     def test_failed_source_scan_blocks_merge(self):
         result = {"pr_number": 411, "state": "scan", "failure_reasons": []}
         conclusion, title, summary = MODULE.check_summary(
