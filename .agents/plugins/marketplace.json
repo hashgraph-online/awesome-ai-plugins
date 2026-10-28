@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-10-28",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -7662,6 +7662,21 @@
       "repo": "gm-aiagent-plugins",
       "url": "https://github.com/ghozimahdi/gm-aiagent-plugins",
       "installation_url": "https://github.com/ghozimahdi/gm-aiagent-plugins#readme"
+    },
+    {
+      "name": "Gnos",
+      "displayName": "Gnos",
+      "description": "Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "madhvantyagi",
+      "repo": "Gnos",
+      "url": "https://github.com/madhvantyagi/Gnos",
+      "install_url": "https://raw.githubusercontent.com/madhvantyagi/Gnos/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "go-ultimate",
