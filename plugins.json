@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-27",
-  "total": 1047,
+  "last_updated": "2026-10-28",
+  "total": 1048,
   "platforms": [
     "codex",
     "grok",
@@ -7157,6 +7157,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Gnos",
+      "url": "https://github.com/madhvantyagi/Gnos",
+      "owner": "madhvantyagi",
+      "repo": "Gnos",
+      "description": "Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/madhvantyagi/Gnos/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
