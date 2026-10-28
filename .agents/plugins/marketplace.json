@@ -380,6 +380,21 @@
       "install_url": "https://raw.githubusercontent.com/minsu0707/auto-pilot/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "AW-1 Circuit Breaker",
+      "displayName": "AW-1 Circuit Breaker",
+      "description": "Application-layer AST and argument policy gate for agent tool calls that checks configured rules before Python execution; complements, but does not replace, operating-system sandbox isolation.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MvikManners",
+      "repo": "aw1-circuit-breaker",
+      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
+      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "BABOK Analyst",
       "displayName": "BABOK Analyst",
       "description": "BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates.",
@@ -11098,6 +11113,21 @@
       "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "virtual-team",
+      "displayName": "virtual-team",
+      "description": "Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ovargas",
+      "repo": "virtual-team",
+      "url": "https://github.com/ovargas/virtual-team",
+      "install_url": "https://raw.githubusercontent.com/ovargas/virtual-team/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Web Search MCP",
       "displayName": "Web Search MCP",
       "description": "Comprehensive FastMCP server giving LLMs real-time web access across search engines (DuckDuckGo, Exa), social platforms (Reddit, Hacker News, GitHub, X, LinkedIn), and academic tools (arXiv, Wikipedia), with SSRF-protected URL fetching",
@@ -11554,21 +11584,6 @@
       "repo": "authority-md-plugin",
       "url": "https://github.com/gareth-hoyle/authority-md-plugin",
       "installation_url": "https://github.com/gareth-hoyle/authority-md-plugin#readme"
-    },
-    {
-      "name": "aw1-breaker",
-      "displayName": "aw1-breaker",
-      "description": "Deterministic out-of-band execution circuit breaker and AST safety proxy for autonomous AI agent tool calls",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "MvikManners",
-      "repo": "aw1-circuit-breaker",
-      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
-      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Azure Cosmos DB Agent Kit",
@@ -14709,6 +14724,20 @@
       "owner": "ysr666",
       "repo": "dsh-vision-router",
       "url": "https://github.com/ysr666/dsh-vision-router"
+    },
+    {
+      "name": "dsh-voice-mode",
+      "displayName": "dsh-voice-mode",
+      "description": "Full-duplex voice plugin for DeepSeek Harness: local streaming speech-to-text into drafts, sentence-by-sentence read-aloud with live captions, and barge-in",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "qishuilalala",
+      "repo": "dsh-voice-mode",
+      "url": "https://github.com/qishuilalala/dsh-voice-mode"
     },
     {
       "name": "dsh-whale-girl-pet",

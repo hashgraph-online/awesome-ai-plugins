@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-28",
-  "total": 1048,
+  "total": 1050,
   "platforms": [
     "codex",
     "grok",
@@ -362,6 +362,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/minsu0707/auto-pilot/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AW-1 Circuit Breaker",
+      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
+      "owner": "MvikManners",
+      "repo": "aw1-circuit-breaker",
+      "description": "Application-layer AST and argument policy gate for agent tool calls that checks configured rules before Python execution; complements, but does not replace, operating-system sandbox isolation.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -10343,6 +10357,20 @@
       ]
     },
     {
+      "name": "virtual-team",
+      "url": "https://github.com/ovargas/virtual-team",
+      "owner": "ovargas",
+      "repo": "virtual-team",
+      "description": "Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ovargas/virtual-team/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Web Search MCP",
       "url": "https://github.com/sydasif/web-search-mcp",
       "owner": "sydasif",
@@ -10765,20 +10793,6 @@
       "installation_url": "https://github.com/gareth-hoyle/authority-md-plugin#readme",
       "ecosystems": [
         "mcp"
-      ]
-    },
-    {
-      "name": "aw1-breaker",
-      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
-      "owner": "MvikManners",
-      "repo": "aw1-circuit-breaker",
-      "description": "Deterministic out-of-band execution circuit breaker and AST safety proxy for autonomous AI agent tool calls",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
@@ -13687,6 +13701,19 @@
       "owner": "ysr666",
       "repo": "dsh-vision-router",
       "description": "Gives text-only DeepSeek Harness agents image understanding through a built-in no-key vision chain plus fourteen tools for Q&A, grounding, OCR, crop, screenshots and pixel diff",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-voice-mode",
+      "url": "https://github.com/qishuilalala/dsh-voice-mode",
+      "owner": "qishuilalala",
+      "repo": "dsh-voice-mode",
+      "description": "Full-duplex voice plugin for DeepSeek Harness: local streaming speech-to-text into drafts, sentence-by-sentence read-aloud with live captions, and barge-in",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
