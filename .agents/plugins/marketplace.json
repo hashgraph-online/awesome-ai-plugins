@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-10-28",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -7664,6 +7664,21 @@
       "installation_url": "https://github.com/ghozimahdi/gm-aiagent-plugins#readme"
     },
     {
+      "name": "Gnos",
+      "displayName": "Gnos",
+      "description": "Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "madhvantyagi",
+      "repo": "Gnos",
+      "url": "https://github.com/madhvantyagi/Gnos",
+      "install_url": "https://raw.githubusercontent.com/madhvantyagi/Gnos/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "go-ultimate",
       "displayName": "go-ultimate",
       "description": "Opinionated Go skill that routes any Go task (CLI, library, backend service, MCP server, AI agent) to the right architecture, conventions, and review checklist across Claude Code, Codex, Cursor, Grok Build, Copilot CLI, and OpenCode",
@@ -11081,6 +11096,21 @@
       "repo": "VibeRaven",
       "url": "https://github.com/ohad6k/VibeRaven",
       "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "virtual-team",
+      "displayName": "virtual-team",
+      "description": "Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ovargas",
+      "repo": "virtual-team",
+      "url": "https://github.com/ovargas/virtual-team",
+      "install_url": "https://raw.githubusercontent.com/ovargas/virtual-team/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Web Search MCP",

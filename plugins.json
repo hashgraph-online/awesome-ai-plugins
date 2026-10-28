@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-27",
-  "total": 1047,
+  "last_updated": "2026-10-28",
+  "total": 1049,
   "platforms": [
     "codex",
     "grok",
@@ -7160,6 +7160,20 @@
       ]
     },
     {
+      "name": "Gnos",
+      "url": "https://github.com/madhvantyagi/Gnos",
+      "owner": "madhvantyagi",
+      "repo": "Gnos",
+      "description": "Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/madhvantyagi/Gnos/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "go-ultimate",
       "url": "https://github.com/Djarvur/go-ultimate",
       "owner": "Djarvur",
@@ -10323,6 +10337,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/ohad6k/VibeRaven/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "virtual-team",
+      "url": "https://github.com/ovargas/virtual-team",
+      "owner": "ovargas",
+      "repo": "virtual-team",
+      "description": "Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ovargas/virtual-team/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
