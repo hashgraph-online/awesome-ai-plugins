@@ -82,7 +82,7 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must complete successfully and score at least 80 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. Failed or unavailable scans still block merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must establish a normalized score of at least 75 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. An unavailable score blocks merge; non-gating action failures are advisory. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
@@ -142,6 +142,30 @@ Open a PR with:
 - Link to the repository
 - Category section where it should be added
 - Brief verification that it works
+
+## Optional: contribute a Guard profile
+
+If your project exposes CLI commands or MCP tools, you may also contribute an
+opt-in profile to [HOL Guard](https://github.com/hashgraph-online/hol-guard).
+A profile can request human approval before a specific consequential action
+when a user runs your tool through an AI agent. Local protection is free and
+does not require an account. Community profiles remain off until locally enabled.
+
+The [Extension Builder](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/extension-builder/README.md)
+generates contribution files from saved CLI metadata or an exported MCP tool
+list. You review the policy and behavior cases, then submit your own PR to HOL
+Guard. Your source repository needs no code or scanner-CI changes for this
+separate contribution.
+
+To request a guide for your project, check the optional guide request in this
+repository's PR template. You can also begin with the
+[MCP contribution guide](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/mcp-server-contributions.md)
+or the [command contribution guide](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/extensions/contributing.md).
+The guide request does not guarantee that a useful profile can be established.
+
+This is separate from listing acceptance, required central scans, Registry
+trust scoring, and the listing's backlink. You do not need to contribute a Guard
+profile or request a guide to receive any listing benefit.
 
 ## Guidelines
 

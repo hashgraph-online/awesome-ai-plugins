@@ -8,6 +8,11 @@ on:
       - .agents/plugins/marketplace.json
       - scripts/generate_plugins_json.py
       - tests/test-generate-plugins-json.py
+      - scripts/post-claim-notice.py
+      - scripts/backfill-claim-notices.py
+      - tests/test-post-claim-notice.py
+      - tests/test-claim-notice-api-key.py
+      - tests/test-backfill-claim-notices.py
       - requirements-dev.txt
       - .python-version
   push:
@@ -18,6 +23,11 @@ on:
       - .agents/plugins/marketplace.json
       - scripts/generate_plugins_json.py
       - tests/test-generate-plugins-json.py
+      - scripts/post-claim-notice.py
+      - scripts/backfill-claim-notices.py
+      - tests/test-post-claim-notice.py
+      - tests/test-claim-notice-api-key.py
+      - tests/test-backfill-claim-notices.py
       - requirements-dev.txt
       - .python-version
 
@@ -39,6 +49,7 @@ jobs:
           GENERATED_DIR: ${{ runner.temp }}/generated-feeds
         run: |
           python3 -m unittest tests/test-generate-plugins-json.py
+          python3 -m unittest tests/test-post-claim-notice.py tests/test-backfill-claim-notices.py tests/test-claim-notice-api-key.py
           python3 scripts/check-alphabetical.py README.md
           python3 scripts/generate_plugins_json.py --offline --output-dir "$GENERATED_DIR"
           python3 -c 'import json, os; from pathlib import Path; root=Path(os.environ["GENERATED_DIR"]); assert json.loads((root / "plugins.json").read_text())["total"] > 0; assert json.loads((root / ".agents/plugins/marketplace.json").read_text())["plugins"]'

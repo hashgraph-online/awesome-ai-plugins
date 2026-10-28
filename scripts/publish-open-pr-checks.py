@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
@@ -17,6 +18,8 @@ CHECK_NAME = "Open Plugin Contribution Gate"
 COMMENT_MARKER = "<!-- awesome-ai-plugins-contribution-gate -->"
 USER_AGENT = "awesome-ai-plugins-open-pr-sweep"
 REQUEST_TIMEOUT_SECONDS = 30
+SCAN_LOOKUP_ATTEMPTS = 6
+SCAN_LOOKUP_RETRY_SECONDS = 5
 SCAN_JOB_RE = re.compile(r"Scan PR (?:#(\d+) source|\((\d+),)")
 GITHUB_LOGIN_RE = re.compile(r"^[A-Za-z0-9-]{1,39}$")
 
@@ -50,32 +53,67 @@ def github_api(repository: str, path: str, token: str, *, method: str = "GET", p
         raise RuntimeError(f"GitHub API {method} {path} failed: {error}") from error
 
 
-def scan_conclusions(repository: str, run_id: str, token: str) -> dict[int, list[str]]:
-    """Return scanner job conclusions grouped by pull request number."""
+def scan_conclusions(
+    repository: str,
+    run_id: str,
+    token: str,
+    expected: dict[int, int] | None = None,
+    run_attempt: int = 1,
+) -> dict[int, list[str]]:
+    """Read the latest scanner attempts, waiting briefly for job data to appear."""
 
-    conclusions: dict[int, list[str]] = {}
-    page = 1
-    while True:
-        payload = github_api(repository, f"/actions/runs/{run_id}/jobs?per_page=100&page={page}", token)
-        if not isinstance(payload, dict):
-            raise RuntimeError("GitHub returned an invalid jobs response")
-        jobs = payload.get("jobs")
-        if not isinstance(jobs, list):
-            raise RuntimeError("GitHub returned no jobs list")
-        for job in jobs:
-            if not isinstance(job, dict):
-                continue
-            name = job.get("name")
-            conclusion = job.get("conclusion")
-            if not isinstance(name, str) or not isinstance(conclusion, str):
-                continue
-            match = SCAN_JOB_RE.search(name)
-            if match:
-                number = match.group(1) or match.group(2)
-                conclusions.setdefault(int(number), []).append(conclusion)
-        if len(jobs) < 100:
+    expected = expected or {}
+    for attempt in range(SCAN_LOOKUP_ATTEMPTS):
+        latest: dict[str, tuple[tuple[int, int], int, str | None]] = {}
+        page = 1
+        while True:
+            payload = github_api(
+                repository, f"/actions/runs/{run_id}/jobs?per_page=100&filter=all&page={page}", token
+            )
+            if not isinstance(payload, dict) or not isinstance(payload.get("jobs"), list):
+                raise RuntimeError("GitHub returned an invalid jobs response")
+            jobs = payload["jobs"]
+            for job in jobs:
+                if not isinstance(job, dict) or not isinstance(job.get("name"), str):
+                    continue
+                name = job["name"]
+                match = SCAN_JOB_RE.search(name)
+                if not match:
+                    continue
+                number = int(match.group(1) or match.group(2))
+                job_attempt = job.get("run_attempt")
+                job_id = job.get("id")
+                order = (
+                    job_attempt if isinstance(job_attempt, int) else 1,
+                    job_id if isinstance(job_id, int) else 0,
+                )
+                conclusion = job.get("conclusion")
+                if name not in latest or order > latest[name][0]:
+                    latest[name] = (order, number, conclusion if isinstance(conclusion, str) else None)
+            if len(jobs) < 100:
+                break
+            page += 1
+
+        conclusions: dict[int, list[str]] = {}
+        pending: set[int] = set()
+        for order, number, conclusion in latest.values():
+            if conclusion is None or order[0] < run_attempt:
+                pending.add(number)
+            else:
+                conclusions.setdefault(number, []).append(conclusion)
+        incomplete = {
+            number for number, count in expected.items()
+            if len(conclusions.get(number, [])) < count or number in pending
+        }
+        if not incomplete:
             return conclusions
-        page += 1
+        if attempt + 1 < SCAN_LOOKUP_ATTEMPTS:
+            time.sleep(SCAN_LOOKUP_RETRY_SECONDS)
+
+    # A partial matrix must never be reported as passing.
+    for number in incomplete:
+        conclusions.pop(number, None)
+    return conclusions
 
 
 def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]]) -> tuple[str, str, str]:
@@ -109,20 +147,22 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
             return (
                 "failure",
                 "Centralized score unavailable",
-                "The centralized scan did not establish a score of at least 80. Keep the contribution blocked and rerun the scan before merge.",
+                "The centralized scan did not establish a score of at least 75. Keep the contribution blocked and rerun the scan before merge.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
                 "success",
                 "Centralized score threshold passed",
-                "The centralized scan met the score threshold of 80; finding severities are advisory.",
+                "The centralized scan met the score threshold of 75; finding severities are advisory.",
             )
         job_details = ", ".join(jobs)
         return (
             "failure",
-            "Centralized score not established",
-            f"The centralized scan returned {job_details}; it did not establish a score of at least 80. "
-            "Keep the contribution blocked until the centralized score is available and meets the threshold. "
+            "Centralized scan did not pass",
+            f"The centralized scan jobs ended with {job_details}. A non-successful job may still report a numeric score; "
+            "the job conclusion alone cannot distinguish a below-75 score from a scanner execution failure. "
+            "Check the original scan job log and sanitized findings for the measured score or execution error. "
+            "Keep the contribution blocked until a completed catalog-owned scan verifies a score of at least 75. "
             "Finding severities are advisory for listing eligibility.",
         )
 
@@ -188,7 +228,7 @@ def remediation_comment(
 
     if conclusion == "success":
         if result.get("state") == "scan":
-            message = "The centralized score threshold of 80 was met; finding severities are advisory."
+            message = "The centralized score threshold of 75 was met; finding severities are advisory."
         else:
             message = "No new Community Plugins entries require validation in this pull request."
         return one_paragraph(
@@ -196,9 +236,9 @@ def remediation_comment(
         )
 
     if result.get("state") == "scan":
-        guidance = "Keep this contribution unmerged until a completed centralized score of at least 80 is available; finding severities are advisory and source-repository scanner CI is optional."
+        guidance = "Keep this contribution unmerged until a completed centralized score of at least 75 is available; finding severities are advisory and source-repository scanner CI is optional."
         if missing_scanner_ci_repos(result):
-            guidance += " If the completed report confirms a score below 80, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
+            guidance += " If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
     else:
         guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
 
@@ -322,6 +362,7 @@ def main() -> int:
     repository = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "").strip()
     run_id = os.environ.get("GITHUB_RUN_ID", "").strip()
+    attempt_text = os.environ.get("GITHUB_RUN_ATTEMPT", "1").strip()
     run_url = os.environ.get("SWEEP_RUN_URL", "").strip()
     results_json = os.environ.get("OPEN_PR_RESULTS", "[]")
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
@@ -330,11 +371,23 @@ def main() -> int:
     if not token or not run_id or not run_url:
         print("ERROR: GITHUB_TOKEN, GITHUB_RUN_ID, and SWEEP_RUN_URL are required", file=sys.stderr)
         return 1
+    if not attempt_text.isdigit() or int(attempt_text) < 1:
+        print("ERROR: GITHUB_RUN_ATTEMPT must be a positive integer", file=sys.stderr)
+        return 1
     try:
         results = json.loads(results_json)
         if not isinstance(results, list):
             raise RuntimeError("OPEN_PR_RESULTS must be a JSON array")
-        scanner_jobs = scan_conclusions(repository, run_id, token)
+        expected: dict[int, int] = {}
+        for result in results:
+            if not isinstance(result, dict):
+                raise RuntimeError("validator returned a non-object PR result")
+            if result.get("state") == "scan":
+                number, contributions = result.get("pr_number"), result.get("contributions")
+                if not isinstance(number, int) or not isinstance(contributions, list) or not contributions:
+                    raise RuntimeError("scanner result is missing its PR number or contributions")
+                expected[number] = len(contributions)
+        scanner_jobs = scan_conclusions(repository, run_id, token, expected, int(attempt_text))
         for result in results:
             if not isinstance(result, dict):
                 raise RuntimeError("validator returned a non-object PR result")

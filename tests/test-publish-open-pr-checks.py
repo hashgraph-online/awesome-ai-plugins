@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -12,6 +13,76 @@ SPEC.loader.exec_module(MODULE)
 
 
 class PublishOpenPrChecksTests(unittest.TestCase):
+    def test_centralized_scans_use_the_inclusive_75_point_minimum(self):
+        root = Path(__file__).resolve().parents[1]
+        for workflow in ("sweep-open-prs.yml", "validate-contribution.yml"):
+            with self.subTest(workflow=workflow):
+                text = (root / ".github/workflows" / workflow).read_text()
+                self.assertIn("min_score: 75", text)
+                self.assertIn("fail_on_severity: none", text)
+                self.assertNotIn("min_score: 80", text)
+
+    def test_publisher_waits_for_completed_scan_before_reporting(self):
+        result = {"pr_number": 411, "state": "scan", "contributions": [{"owner": "owner", "repo": "plugin"}]}
+        env = {
+            "GITHUB_REPOSITORY": "example/repo",
+            "GITHUB_TOKEN": "test-token",
+            "GITHUB_RUN_ID": "1",
+            "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+            "OPEN_PR_RESULTS": json.dumps([result]),
+        }
+        responses = [
+            {"jobs": []},
+            {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+        ]
+        with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, patch("time.sleep"):
+            self.assertEqual(MODULE.main(), 0)
+        self.assertEqual(publish.call_args.args[2], {411: ["success"]})
+
+    def test_waits_for_scanner_job_to_appear(self):
+        responses = [
+            {"jobs": []},
+            {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+        ]
+        with patch.object(MODULE, "github_api", side_effect=responses) as api, patch.object(MODULE.time, "sleep") as sleep:
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+        self.assertEqual(api.call_count, 2)
+        self.assertIn("filter=all", api.call_args_list[0].args[1])
+        sleep.assert_called_once()
+
+    def test_latest_scanner_attempt_replaces_previous_failure(self):
+        jobs = [
+            {"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "failure"},
+            {"id": 2, "run_attempt": 2, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"},
+        ]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+
+    def test_partial_or_pending_matrix_never_passes(self):
+        jobs = [
+            {"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, first)", "conclusion": "success"},
+            {"id": 2, "run_attempt": 1, "name": "Scan PR (411, owner, second)", "conclusion": "success"},
+            {"id": 3, "run_attempt": 2, "name": "Scan PR (411, owner, second)", "conclusion": None},
+        ]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 2})
+        self.assertNotIn(411, result)
+        self.assertEqual(MODULE.check_summary({"pr_number": 411, "state": "scan"}, result)[0], "failure")
+
+    def test_missing_matrix_job_never_passes(self):
+        jobs = [{"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, first)", "conclusion": "success"}]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 2})
+        self.assertNotIn(411, result)
+
+    def test_previous_attempt_cannot_clear_a_new_attempt(self):
+        jobs = [{"id": 1, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]
+        with patch.object(MODULE, "github_api", return_value={"jobs": jobs}), patch.object(MODULE.time, "sleep"), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 2):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
+        self.assertNotIn(411, result)
+
     def test_failed_source_scan_blocks_merge(self):
         result = {"pr_number": 411, "state": "scan", "failure_reasons": []}
         conclusion, title, summary = MODULE.check_summary(
@@ -19,10 +90,22 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         )
 
         self.assertEqual(conclusion, "failure")
-        self.assertEqual(title, "Centralized score not established")
-        self.assertIn("score of at least 80", summary)
+        self.assertEqual(title, "Centralized scan did not pass")
+        self.assertIn("score of at least 75", summary)
+        self.assertIn("job conclusion alone cannot distinguish", summary)
+        self.assertIn("original scan job log and sanitized findings", summary)
         self.assertIn("Finding severities are advisory", summary)
         self.assertIn("Keep the contribution blocked", summary)
+
+    def test_cancelled_source_scan_does_not_claim_no_numeric_score(self):
+        conclusion, title, summary = MODULE.check_summary(
+            {"pr_number": 411, "state": "scan", "failure_reasons": []},
+            {411: ["cancelled"]},
+        )
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Centralized scan did not pass")
+        self.assertIn("ended with cancelled", summary)
+        self.assertIn("cannot distinguish", summary)
 
     def test_unavailable_source_scan_blocks_merge(self):
         conclusion, title, summary = MODULE.check_summary(
@@ -31,7 +114,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertEqual(conclusion, "failure")
         self.assertEqual(title, "Centralized score unavailable")
-        self.assertIn("did not establish a score of at least 80", summary)
+        self.assertIn("did not establish a score of at least 75", summary)
 
     def test_failed_scan_comment_is_one_paragraph_with_conditional_source_ci_guidance(self):
         result = {
@@ -50,7 +133,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             "failure",
             "Centralized score not established",
-            "The centralized scan did not establish a score of at least 80.",
+            "The centralized scan did not establish a score of at least 75.",
             "https://github.com/example/repo/actions/runs/1",
         )
 
@@ -58,7 +141,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertNotIn("\\n", body)
         self.assertIn("@builder, The centralized scan did not establish", body)
         self.assertIn("source-repository scanner CI is recommended, not required", body)
-        self.assertIn("If the completed report confirms a score below 80", body)
+        self.assertIn("If the completed report confirms a score below 75", body)
         self.assertIn("reproduce locally", body)
         self.assertIn("link the source run", body)
         self.assertIn("request review", body)
@@ -75,13 +158,13 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             "success",
             "Centralized score threshold passed",
-            "The centralized scan met the score threshold of 80.",
+            "The centralized scan met the score threshold of 75.",
             "https://github.com/example/repo/actions/runs/1",
         )
 
         self.assertNotIn("\n", body)
         self.assertNotIn("\\n", body)
-        self.assertIn("score threshold of 80 was met", body)
+        self.assertIn("score threshold of 75 was met", body)
         self.assertNotIn("scanner CI is recommended", body)
         self.assertNotIn("trust score", body)
 
