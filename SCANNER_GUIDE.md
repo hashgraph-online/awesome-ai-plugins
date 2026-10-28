@@ -62,6 +62,24 @@ Codex manifest.
 
 The centralized source scan uses this pass criterion for Awesome AI Plugins listings. A listing needs a passing centralized scan before merge. Scanner CI in the source repository is optional; adding it improves the Registry trust score and removes the 10% reduction applied when maintainer scanner CI is absent.
 
+### Reading catalog PR checks
+
+For a first-time fork, GitHub may show `action_required` on a proposed PR
+workflow. An authorized repository maintainer must decide whether that
+workflow can run; until then it has **not executed** and cannot be treated
+as a pass or as a measured scanner failure. The contributor must not try
+to approve their own fork workflow through another account.
+
+The catalog's trusted centralized sweep is a separate check. Read its
+**original scan job log and sanitized findings artifact** to distinguish a
+completed numeric score below the configured minimum from a scanner execution error. A generic
+failed conclusion, absent artifact, or stale bot comment alone is not
+evidence of a measured score. Only a completed passing source scan for the
+current source revision, required catalog checks and independent review
+can advance a listing. Do not bypass a pending first-time workflow approval
+or interpret a status from an outdated bot comment alone.
+
+
 ### Grok plugin checks
 
 Grok Build plugins should keep their native `.grok-plugin/plugin.json` manifest

@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-27",
-  "total": 1047,
+  "last_updated": "2026-10-28",
+  "total": 1050,
   "platforms": [
     "codex",
     "grok",
@@ -362,6 +362,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/minsu0707/auto-pilot/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AW-1 Circuit Breaker",
+      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
+      "owner": "MvikManners",
+      "repo": "aw1-circuit-breaker",
+      "description": "Application-layer AST and argument policy gate for agent tool calls that checks configured rules before Python execution; complements, but does not replace, operating-system sandbox isolation.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4934,6 +4948,20 @@
       ]
     },
     {
+      "name": "docx-cli",
+      "url": "https://github.com/kklimuk/docx-cli",
+      "owner": "kklimuk",
+      "repo": "docx-cli",
+      "description": "Agent skill/CLI for AI agents to work with Word documents without breaking their formatting: fill in forms, update tables, add images, restyle, write reports, and redline with tracked changes and comments",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/kklimuk/docx-cli#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "ego-decision-layer",
       "url": "https://github.com/jiangkoumo/ego-decision-layer",
       "owner": "jiangkoumo",
@@ -7157,6 +7185,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Gnos",
+      "url": "https://github.com/madhvantyagi/Gnos",
+      "owner": "madhvantyagi",
+      "repo": "Gnos",
+      "description": "Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/madhvantyagi/Gnos/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -10329,6 +10371,20 @@
       ]
     },
     {
+      "name": "virtual-team",
+      "url": "https://github.com/ovargas/virtual-team",
+      "owner": "ovargas",
+      "repo": "virtual-team",
+      "description": "Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ovargas/virtual-team/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Web Search MCP",
       "url": "https://github.com/sydasif/web-search-mcp",
       "owner": "sydasif",
@@ -10751,20 +10807,6 @@
       "installation_url": "https://github.com/gareth-hoyle/authority-md-plugin#readme",
       "ecosystems": [
         "mcp"
-      ]
-    },
-    {
-      "name": "aw1-breaker",
-      "url": "https://github.com/MvikManners/aw1-circuit-breaker",
-      "owner": "MvikManners",
-      "repo": "aw1-circuit-breaker",
-      "description": "Deterministic out-of-band execution circuit breaker and AST safety proxy for autonomous AI agent tool calls",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/MvikManners/aw1-circuit-breaker/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
