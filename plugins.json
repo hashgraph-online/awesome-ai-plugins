@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-28",
-  "total": 1049,
+  "total": 1050,
   "platforms": [
     "codex",
     "grok",
@@ -9431,6 +9431,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "ScientificFigureLibrary",
+      "url": "https://github.com/xuzhougeng/ScientificFigureLibrary",
+      "owner": "xuzhougeng",
+      "repo": "ScientificFigureLibrary",
+      "description": "MCP server: local-first server and skill for importing, reviewing, publishing, and reusing scientific figure templates across projects and hosts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/xuzhougeng/ScientificFigureLibrary#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

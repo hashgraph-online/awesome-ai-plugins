@@ -10120,6 +10120,21 @@
       "install_url": "https://raw.githubusercontent.com/skymanbp/sci-paper/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "ScientificFigureLibrary",
+      "displayName": "ScientificFigureLibrary",
+      "description": "MCP server: local-first server and skill for importing, reviewing, publishing, and reusing scientific figure templates across projects and hosts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "xuzhougeng",
+      "repo": "ScientificFigureLibrary",
+      "url": "https://github.com/xuzhougeng/ScientificFigureLibrary",
+      "installation_url": "https://github.com/xuzhougeng/ScientificFigureLibrary#readme"
+    },
+    {
       "name": "Scoutflo AI Readiness",
       "displayName": "Scoutflo AI Readiness",
       "description": "Claude Code plugin that finds infrastructure and monitoring gaps through read-only checks of cloud, Kubernetes and observability stacks, with local evidence reports and prioritized fixes",
