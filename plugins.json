@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-28",
-  "total": 1051,
+  "total": 1052,
   "platforms": [
     "codex",
     "grok",
@@ -13729,6 +13729,19 @@
       "owner": "ysr666",
       "repo": "dsh-vision-router",
       "description": "Gives text-only DeepSeek Harness agents image understanding through a built-in no-key vision chain plus fourteen tools for Q&A, grounding, OCR, crop, screenshots and pixel diff",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-voice-mode",
+      "url": "https://github.com/qishuilalala/dsh-voice-mode",
+      "owner": "qishuilalala",
+      "repo": "dsh-voice-mode",
+      "description": "Full-duplex voice plugin for DeepSeek Harness: local streaming speech-to-text into drafts, sentence-by-sentence read-aloud with live captions, and barge-in",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",

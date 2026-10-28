@@ -14756,6 +14756,20 @@
       "url": "https://github.com/ysr666/dsh-vision-router"
     },
     {
+      "name": "dsh-voice-mode",
+      "displayName": "dsh-voice-mode",
+      "description": "Full-duplex voice plugin for DeepSeek Harness: local streaming speech-to-text into drafts, sentence-by-sentence read-aloud with live captions, and barge-in",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "qishuilalala",
+      "repo": "dsh-voice-mode",
+      "url": "https://github.com/qishuilalala/dsh-voice-mode"
+    },
+    {
       "name": "dsh-whale-girl-pet",
       "displayName": "dsh-whale-girl-pet",
       "description": "Desktop pet plugin for the DeepSeek Harness web UI that reports task token usage, session and per-turn cost pills, and hourly spend dashboards",
