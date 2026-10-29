@@ -116,7 +116,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertEqual(title, "Centralized score unavailable")
         self.assertIn("did not establish a score of at least 75", summary)
 
-    def test_failed_scan_comment_is_one_paragraph_with_conditional_source_ci_guidance(self):
+    def test_failed_scan_comment_uses_sections_with_conditional_source_ci_guidance(self):
         result = {
             "pr_number": 411,
             "state": "scan",
@@ -137,14 +137,19 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://github.com/example/repo/actions/runs/1",
         )
 
-        self.assertNotIn("\n", body)
+        self.assertIn("\n", body)
         self.assertNotIn("\\n", body)
-        self.assertIn("@builder, The centralized scan did not establish", body)
+        self.assertIn("@builder, the centralized scan did not establish", body)
+        self.assertIn("### Merge status", body)
+        self.assertIn("### Findings", body)
+        self.assertIn("scan-findings-pr-411-", body)
+        self.assertIn("### References", body)
         self.assertIn("source-repository scanner CI is recommended, not required", body)
         self.assertIn("If the completed report confirms a score below 75", body)
-        self.assertIn("reproduce locally", body)
-        self.assertIn("link the source run", body)
+        self.assertIn("Reproduce locally", body)
+        self.assertIn("Link the source run", body)
         self.assertIn("request review", body)
+        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", body)
         self.assertNotIn("Community Plugins format", body)
 
     def test_passing_score_does_not_recommend_source_scanner_ci(self):

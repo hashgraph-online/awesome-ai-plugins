@@ -1276,6 +1276,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 
 ## Related Projects
 
+- [AIGrowthRank](https://aigrowthrank.com/en/skills/) - Catalog of agent skills, Claude and Codex plugins and MCP servers for marketing and sales, with dated passive code reviews where public source is available.
 - [Awesome DeepSeek Harness Plugins](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) - Community-maintained DSH plugin list and discovery reference.
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.

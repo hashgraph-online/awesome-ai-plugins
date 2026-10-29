@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-28",
-  "total": 1053,
+  "last_updated": "2026-10-29",
+  "total": 1056,
   "platforms": [
     "codex",
     "grok",
@@ -2076,7 +2076,7 @@
       "description": "A terminal board Codex writes to and you read, with kanban, checklists, charts, forms and live logs kept as plain Markdown files.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/LeeSwallow/stickypane/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/LeeSwallow/stickypane/HEAD/plugin/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3221,6 +3221,20 @@
         "codex",
         "kimi",
         "deepseek-harness"
+      ]
+    },
+    {
+      "name": "DESIGN:OS 3D Blender",
+      "url": "https://github.com/jangtrinh/design-os-3d-blender",
+      "owner": "jangtrinh",
+      "repo": "design-os-3d-blender",
+      "description": "Source-available skills and MCP server that let Codex model, render and verify mechanical parts natively in Blender 5.2 LTS, licensed under PolyForm Shield.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-3d-blender/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -4674,6 +4688,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "varg",
+      "url": "https://github.com/vargHQ/skills",
+      "owner": "vargHQ",
+      "repo": "skills",
+      "description": "How to make any AI video: find the skill, the options to show and the steps (no key needed), with the keyless varg how to MCP and the varg MCP for video, image, voice and music generation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/vargHQ/skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -10016,6 +10044,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "superlite",
+      "url": "https://github.com/iha2/superlite",
+      "owner": "iha2",
+      "repo": "superlite",
+      "description": "Claude Code plugin of build lifecycle skills that plan work, run parallel subagent waves, and drive TDD, debugging, and branch finishing",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/iha2/superlite/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {

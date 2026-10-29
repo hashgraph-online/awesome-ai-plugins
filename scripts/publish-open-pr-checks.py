@@ -16,7 +16,12 @@ from urllib.request import Request, urlopen
 API_ROOT = "https://api.github.com"
 CHECK_NAME = "Open Plugin Contribution Gate"
 COMMENT_MARKER = "<!-- awesome-ai-plugins-contribution-gate -->"
+CONTRIBUTING_URL = "https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md"
+SCANNER_GUIDE_URL = "https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md"
 USER_AGENT = "awesome-ai-plugins-open-pr-sweep"
+JOB_CONCLUSION_RE = re.compile(
+    r"\b(success|failure|neutral|cancelled|skipped|timed_out|action_required|startup_failure)\b"
+)
 REQUEST_TIMEOUT_SECONDS = 30
 SCAN_LOOKUP_ATTEMPTS = 6
 SCAN_LOOKUP_RETRY_SECONDS = 5
@@ -209,9 +214,121 @@ def missing_scanner_ci_repos(result: dict[str, object]) -> list[str]:
 
 
 def one_paragraph(text: str) -> str:
-    """Collapse comment whitespace so every maintainer note is one paragraph."""
+    """Collapse whitespace for a note that should stay a single paragraph."""
 
     return " ".join(text.split())
+
+
+def prose_sentences(text: str) -> list[str]:
+    """Split scan prose into sentences, including clauses joined by a semicolon."""
+
+    collapsed = " ".join(text.split())
+    sentences: list[str] = []
+    for item in re.split(r"(?<=[.])\s+", collapsed):
+        item = item.strip()
+        if not item:
+            continue
+        pieces = [part.strip() for part in item.split("; ") if part.strip()]
+        for index, piece in enumerate(pieces):
+            piece = piece.replace("a below-75 score", "a score below 75")
+            if index > 0 and piece[:1].islower():
+                piece = piece[0].upper() + piece[1:]
+            if piece[-1] not in ".!?":
+                piece += "."
+            sentences.append(piece)
+    return sentences
+
+
+def status_prose(summary: str) -> str:
+    """Return the score explanation without the findings link appended for the check run."""
+
+    head, _, _ = summary.partition("[Open the source scan job summaries")
+    return head.strip()
+
+
+def emphasize_job_conclusions(sentence: str) -> str:
+    """Mark GitHub job conclusions in the opening line so they read as status values."""
+
+    if "ended with " not in sentence:
+        return sentence
+    prefix, _, tail = sentence.partition("ended with ")
+    return f"{prefix}ended with {JOB_CONCLUSION_RE.sub(r'`\1`', tail)}"
+
+
+def findings_markdown(artifact_prefix: str, run_url: str) -> str:
+    """Return the sanitized-report instructions contributors use to inspect a scan."""
+
+    return "\n".join(
+        [
+            f"[Open the source scan job summaries and download sanitized JSON/SARIF findings]({run_url}).",
+            "",
+            f"Look for the `{artifact_prefix}` artifact.",
+            "",
+            "- Reports include rule IDs and file locations.",
+            "- Reports omit source snippets and credential values.",
+            "- A missing report indicates a scanner execution problem, not a passing scan.",
+        ]
+    )
+
+
+def reference_lines(run_url: str) -> list[str]:
+    """Return the standard links for a contribution-gate comment."""
+
+    return [
+        "### References",
+        "",
+        f"- [Contribution requirements]({CONTRIBUTING_URL})",
+        f"- [Scanner guide]({SCANNER_GUIDE_URL})",
+        f"- [Latest sweep]({run_url})",
+    ]
+
+
+def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
+    """Build a sectioned comment for a centralized scan that did not pass."""
+
+    sentences = prose_sentences(status_prose(summary))
+    if not sentences:
+        sentences = ["The centralized scan did not establish a score of at least 75."]
+    lead = emphasize_job_conclusions(sentences[0])
+    if lead[:1].isupper():
+        lead = lead[0].lower() + lead[1:]
+    number = result.get("pr_number")
+    artifact_prefix = f"scan-findings-pr-{number}-" if isinstance(number, int) else "scan-findings-pr-"
+    follow_on = sentences[1:]
+    gate = [
+        sentence
+        for sentence in follow_on
+        if sentence.startswith("Keep the contribution blocked")
+        or sentence.startswith("Finding severities are advisory")
+    ]
+    explanation = [sentence for sentence in follow_on if sentence not in gate]
+    lines = [f"{COMMENT_MARKER} {mention}, {lead}", ""]
+    if explanation:
+        lines.extend(["### Result", ""])
+        for sentence in explanation:
+            lines.extend([sentence, ""])
+    lines.extend(["### Merge status", ""])
+    for sentence in gate:
+        lines.extend([sentence, ""])
+    if "source-repository scanner CI is optional" not in summary:
+        lines.extend(["Source-repository scanner CI is optional.", ""])
+    lines.extend(["### Findings", "", findings_markdown(artifact_prefix, run_url), ""])
+    if missing_scanner_ci_repos(result):
+        lines.extend(
+            [
+                "### Source repository",
+                "",
+                "If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required.",
+                "",
+                f"1. Use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}).",
+                "2. Reproduce locally, then run the same pinned scanner on push and pull requests.",
+                "3. Fix or document rule-level findings.",
+                "4. Link the source run, rerun the catalog scan, and request review.",
+                "",
+            ]
+        )
+    lines.extend(reference_lines(run_url))
+    return "\n".join(lines)
 
 
 def remediation_comment(
@@ -236,16 +353,13 @@ def remediation_comment(
         )
 
     if result.get("state") == "scan":
-        guidance = "Keep this contribution unmerged until a completed centralized score of at least 75 is available; finding severities are advisory and source-repository scanner CI is optional."
-        if missing_scanner_ci_repos(result):
-            guidance += " If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in SCANNER_GUIDE.md, reproduce locally, run the same pinned scanner on push and pull requests, fix or document rule-level findings, link the source run, rerun the catalog scan, and request review."
-    else:
-        guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
+        return scan_block_comment(result, summary, run_url, mention)
 
+    guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
     return one_paragraph(
         f"{COMMENT_MARKER} {mention}, {summary} {guidance} "
-        "See [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) and "
-        f"[scanner guide](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md). [Latest sweep]({run_url})."
+        f"See [contribution requirements]({CONTRIBUTING_URL}) and "
+        f"[scanner guide]({SCANNER_GUIDE_URL}). [Latest sweep]({run_url})."
     )
 
 
@@ -315,10 +429,10 @@ def publish_check(
         raise RuntimeError("validator returned an invalid PR identity")
 
     conclusion, check_title, summary = check_summary(result, scanner_jobs)
+    rendered = summary
     if result.get("state") == "scan":
-        summary += (f"\n\n[Open the source scan job summaries and download sanitized JSON/SARIF findings]({run_url}). "
-                    f"Look for the `scan-findings-pr-{number}-` artifact. Reports include rule IDs and file locations, "
-                    "but omit source snippets and credential values. A missing report indicates a scanner execution problem, not a passing scan.")
+        rendered = "\n\n".join(prose_sentences(summary))
+        rendered += f"\n\n{findings_markdown(f'scan-findings-pr-{number}-', run_url)}"
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     payload = {
         "name": CHECK_NAME,
@@ -330,7 +444,7 @@ def publish_check(
         "details_url": run_url,
         "output": {
             "title": check_title,
-            "summary": f"PR #{number} — {title}\n\n{summary}",
+            "summary": f"PR #{number} — {title}\n\n{rendered}",
         },
     }
     update_payload = {key: value for key, value in payload.items() if key != "head_sha"}

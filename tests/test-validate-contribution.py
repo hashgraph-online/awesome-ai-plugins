@@ -348,10 +348,15 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("completed centralized score of at least 75", comment)
-        self.assertIn("source-repository scanner CI is optional", comment)
-        self.assertNotIn("\n", comment)
+        self.assertIn("catalog-owned scan verifies a score of at least 75", comment)
+        self.assertIn("cannot distinguish a score below 75 from a scanner execution failure", comment)
+        self.assertIn("Source-repository scanner CI is optional.", comment)
+        self.assertIn("### Result", comment)
+        self.assertIn("### Merge status", comment)
+        self.assertIn("### Findings", comment)
+        self.assertIn("scan-findings-pr-12-", comment)
         self.assertNotIn("\\n", comment)
+        self.assertNotIn("recommended, not required", comment)
 
     def test_low_score_with_missing_ci_gets_conditional_optional_guidance(self) -> None:
         result = {
@@ -371,11 +376,14 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("If the completed report confirms a score below 75", comment)
         self.assertIn("recommended, not required", comment)
         self.assertIn("SHA-pinned workflow", comment)
-        self.assertIn("reproduce locally", comment)
-        self.assertIn("fix or document rule-level findings", comment)
-        self.assertIn("link the source run", comment)
+        self.assertIn("Reproduce locally", comment)
+        self.assertIn("Fix or document rule-level findings.", comment)
+        self.assertIn("Link the source run", comment)
         self.assertIn("request review", comment)
-        self.assertNotIn("\n", comment)
+        self.assertIn("### Source repository", comment)
+        self.assertIn("### Findings", comment)
+        self.assertNotIn("\\n", comment)
+        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", comment)
 
     def test_scan_passed_title_is_used_when_jobs_succeed(self) -> None:
         conclusion, title, _summary = self.publisher.check_summary(

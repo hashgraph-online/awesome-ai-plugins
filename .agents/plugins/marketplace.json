@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-28",
+  "last_updated": "2026-10-29",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2213,7 +2213,7 @@
       "owner": "LeeSwallow",
       "repo": "stickypane",
       "url": "https://github.com/LeeSwallow/stickypane",
-      "install_url": "https://raw.githubusercontent.com/LeeSwallow/stickypane/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/LeeSwallow/stickypane/HEAD/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "Stop That Shit",
@@ -3435,6 +3435,21 @@
       "repo": "deja-vu",
       "url": "https://github.com/vshulcz/deja-vu",
       "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/codex-plugin/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "DESIGN:OS 3D Blender",
+      "displayName": "DESIGN:OS 3D Blender",
+      "description": "Source-available skills and MCP server that let Codex model, render and verify mechanical parts natively in Blender 5.2 LTS, licensed under PolyForm Shield.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jangtrinh",
+      "repo": "design-os-3d-blender",
+      "url": "https://github.com/jangtrinh/design-os-3d-blender",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-3d-blender/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "dex",
@@ -4994,6 +5009,21 @@
       "repo": "plugins",
       "url": "https://github.com/val-town/plugins",
       "install_url": "https://raw.githubusercontent.com/val-town/plugins/HEAD/plugin/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "varg",
+      "displayName": "varg",
+      "description": "How to make any AI video: find the skill, the options to show and the steps (no key needed), with the keyless varg how to MCP and the varg MCP for video, image, voice and music generation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "vargHQ",
+      "repo": "skills",
+      "url": "https://github.com/vargHQ/skills",
+      "install_url": "https://raw.githubusercontent.com/vargHQ/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "VidSeeds.ai",
@@ -10748,6 +10778,21 @@
       "repo": "superintelligent-ui",
       "url": "https://github.com/levfo/superintelligent-ui",
       "install_url": "https://raw.githubusercontent.com/levfo/superintelligent-ui/HEAD/plugins/superintelligent-ui/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "superlite",
+      "displayName": "superlite",
+      "description": "Claude Code plugin of build lifecycle skills that plan work, run parallel subagent waves, and drive TDD, debugging, and branch finishing",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "iha2",
+      "repo": "superlite",
+      "url": "https://github.com/iha2/superlite",
+      "install_url": "https://raw.githubusercontent.com/iha2/superlite/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Supermod ClaudeCode",
