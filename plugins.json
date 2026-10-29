@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-29",
-  "total": 1056,
+  "total": 1057,
   "platforms": [
     "codex",
     "grok",
@@ -5251,6 +5251,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/HaiyiMei/scorestarling-plugins#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "self-host",
+      "url": "https://github.com/ajnart/self-host",
+      "owner": "ajnart",
+      "repo": "self-host",
+      "description": "Agent skill and CLI that lets your agent install self-hosted apps on your own hardware and set them up (admin accounts, API keys, apps connected to each other), asking before each step",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/ajnart/self-host#readme",
       "ecosystems": [
         "agent-skills"
       ]

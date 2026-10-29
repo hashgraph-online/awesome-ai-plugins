@@ -5613,6 +5613,21 @@
       "installation_url": "https://github.com/HaiyiMei/scorestarling-plugins#readme"
     },
     {
+      "name": "self-host",
+      "displayName": "self-host",
+      "description": "Agent skill and CLI that lets your agent install self-hosted apps on your own hardware and set them up (admin accounts, API keys, apps connected to each other), asking before each step",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ajnart",
+      "repo": "self-host",
+      "url": "https://github.com/ajnart/self-host",
+      "installation_url": "https://github.com/ajnart/self-host#readme"
+    },
+    {
       "name": "Sketchbook Style",
       "displayName": "Sketchbook Style",
       "description": "Agent skill that draws any object as a black-ink industrial-design sketchbook page in four looks with open image models on ComfyUI or mflux, no API key; tested in Claude Code",
