@@ -6704,6 +6704,21 @@
       "install_url": "https://raw.githubusercontent.com/skymanbp/cc-memory/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "cc-stretch",
+      "displayName": "cc-stretch",
+      "description": "Claude Code plugin that has Claude write stretchtext: each reply reads complete at its shortest, and a phrase grows in place when you click it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "pro-vi",
+      "repo": "cc-stretch",
+      "url": "https://github.com/pro-vi/cc-stretch",
+      "install_url": "https://raw.githubusercontent.com/pro-vi/cc-stretch/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "cc-tree",
       "displayName": "cc-tree",
       "description": "Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node",
