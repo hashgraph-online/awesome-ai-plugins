@@ -110,6 +110,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
 
+- [97](https://github.com/oribarilan/97) - Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
@@ -381,6 +382,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Gnos](https://github.com/madhvantyagi/Gnos) - Teaching harness plugin that plans courses, diagnoses reasoning gaps, and generates lessons with diagrams, simulations, and PDFs.
 - [go-ultimate](https://github.com/Djarvur/go-ultimate) - Opinionated Go skill that routes any Go task (CLI, library, backend service, MCP server, AI agent) to the right architecture, conventions, and review checklist across Claude Code, Codex, Cursor, Grok Build, Copilot CLI, and OpenCode.
 - [Grafana Dashboards-as-Code](https://github.com/jburgess/mcp-grafana) - Typed Grafana dashboard and panel builders, structural linting, semantic dashboard diff, and scaffold/audit/review recipes exposed over MCP.
+- [GraphFlow](https://github.com/Roarpeng/GraphFlow) - MCP server and cross-agent installer providing surgical symbol read, edit, exec and macro tools for coding agents. <!-- platform: standalone -->
 - [GrayMatter](https://github.com/ValkyrLabs/GrayMatter) - Durable memory and shared graph state for Codex and OpenClaw agents, with live ValkyrAI schema awareness.
 - [Gremlyn](https://github.com/gremlyn-ai/gremlyn) - Security and chaos engineering for MCP agents: a Claude Code plugin that breaks your agent's MCP tools on purpose to test prompt-injection defenses and resilience.
 - [grip](https://github.com/guilyx/grip) - Git hook that quizzes you on your own diff before commit or push, with a Claude Code plugin plus Codex and Gemini CLI support.
@@ -731,6 +733,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [aginxbrowser](https://github.com/yinnho/aginxbrowser) - Rust MCP server and HTTP service that lets agents fetch JS-rendered or protected pages as clean markdown, meta-search 14 engines, screenshot, and run persistent logged-in sessions — each session exposes a live view URL so a human can watch and take over with the mouse.
 - [agy-powerline](https://github.com/wassim-azi/agy-powerline) - Fast, configurable statusline for Google Antigravity CLI (agy) with live Gemini 5h/7d quota meters, pace markers, context usage, and interactive TUI configurator. <!-- platform: standalone -->
 - [AI Command Center](https://github.com/Hredo/ai-command-center) - Local-first Windows, macOS and Linux command center for Claude Code, Codex, OpenCode, Aider, Gemini CLI, Ollama and 8,000+ API models, with live cost and token analytics (even for Claude Code sessions in other terminals), a side-by-side Arena, real terminals and git per project.
+- [AI-FluxMux](https://github.com/ArchPrime/AI-FluxMux) - Windows desktop router for OpenAI-compatible clients with local and cloud models, per-profile routing, model variants and usage telemetry; source is available under the PolyForm Noncommercial license. <!-- platform: standalone -->
 - [ai-memory-skill](https://github.com/syedair/ai-memory-skill) - Persistent memory skill for Claude Code and Kiro that auto-loads markdown context and runs a consolidation pass (`npx ai-memory-skill`).
 - [Aient](https://github.com/aient-ai/aient-codex-plugin) - AI operations plugin for Codex that connects production telemetry, problem lifecycle context, and remediation workflows through Aient's MCP server.
 - [Anode](https://github.com/skulitom/Anode) - Claude Code plugin for a hidden background Windows desktop for agents: GUI automation, UI Automation, screenshots and app testing without taking over your mouse.
