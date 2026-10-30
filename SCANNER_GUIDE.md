@@ -58,9 +58,27 @@ Codex manifest.
 | Skill Security | Hooks, env vars, validation, no hardcoded paths |
 | Code Quality | No dangerous dynamic execution or shell-injection patterns |
 
-**Passing criteria:** normalized score ≥ 80/100, with no critical or high severity findings.
+**Passing criteria:** a completed centralized scan with a normalized score ≥ 75/100. Finding severities and non-gating action failures are advisory for listing eligibility. An unavailable score blocks merge.
 
 The centralized source scan uses this pass criterion for Awesome AI Plugins listings. A listing needs a passing centralized scan before merge. Scanner CI in the source repository is optional; adding it improves the Registry trust score and removes the 10% reduction applied when maintainer scanner CI is absent.
+
+### Reading catalog PR checks
+
+For a first-time fork, GitHub may show `action_required` on a proposed PR
+workflow. An authorized repository maintainer must decide whether that
+workflow can run; until then it has **not executed** and cannot be treated
+as a pass or as a measured scanner failure. The contributor must not try
+to approve their own fork workflow through another account.
+
+The catalog's trusted centralized sweep is a separate check. Read its
+**original scan job log and sanitized findings artifact** to distinguish a
+completed numeric score below the configured minimum from a scanner execution error. A generic
+failed conclusion, absent artifact, or stale bot comment alone is not
+evidence of a measured score. Only a completed passing source scan for the
+current source revision, required catalog checks and independent review
+can advance a listing. Do not bypass a pending first-time workflow approval
+or interpret a status from an outdated bot comment alone.
+
 
 ### Grok plugin checks
 
@@ -101,12 +119,15 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
+      - uses: hashgraph-online/ai-plugin-scanner-action@c96833de5070fab4e564010b5ab6e3c3d7e07a3e # v1.2.806
         with:
           plugin_dir: "."
-          min_score: 80
-          fail_on_severity: high
+          min_score: 75
+          fail_on_severity: none
 ```
+
+This example matches the catalog's score threshold. Source repositories may choose
+a stricter severity gate, such as `fail_on_severity: high`, for their own CI.
 
 ### Supply-chain properties
 
@@ -123,7 +144,7 @@ Review the [action source](https://github.com/hashgraph-online/ai-plugin-scanner
 
 ### Recommended for Awesome AI Plugins listing
 
-Scanner CI in the source repository is optional for listing. The required centralized source scan must pass before merge. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The required centralized source scan must establish a normalized score of at least 75 before merge. Finding severities are advisory for listing eligibility and remain available for maintainer review. We recommend maintainer-owned CI so MCP servers, skills, plugins, and other agent extensions stay continuously checked. Projects that maintain scanner CI receive the full trust score; projects without it receive a 10% trust-score reduction.
 
 Add the scanner badge to your README:
 
