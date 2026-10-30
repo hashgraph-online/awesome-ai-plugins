@@ -9134,6 +9134,21 @@
       "install_url": "https://raw.githubusercontent.com/Ikalus1988/MisakaNet/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Mnemosyne OS",
+      "displayName": "Mnemosyne OS",
+      "description": "MCP server: MIT stdio server that gives an agent the vaults the user chooses in the Mnemosyne OS desktop app, where watched folders feed separate vaults on the user's machine searched by vector and local BM25; the memory tools need the free desktop app running, and its memory engine ships closed",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Mnemosyne-OS",
+      "repo": "Mnemosyne-Neural-OS",
+      "url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS",
+      "installation_url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS#readme"
+    },
+    {
       "name": "model-orchestration",
       "displayName": "model-orchestration",
       "description": "Manager/worker orchestration for Claude Code: keep your smartest model as the manager and delegate implementation and token-hungry work to isolated headless workers backed by any Anthropic-compatible API (z.ai GLM, Kimi, DeepSeek, LiteLLM proxies)",
