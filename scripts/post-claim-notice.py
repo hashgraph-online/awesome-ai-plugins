@@ -109,17 +109,45 @@ def build_comment_body(author: str, repositories=(), pending_repositories=()) ->
 
     Registry indexing is not a gate. A repository merged into the catalog
     source can be claimed before its public listing finishes syncing.
+
+    The marker must stay on its own line: a GitHub markdown HTML comment
+    consumes the whole line it appears on, so any content sharing that line
+    is emitted as raw text and its markdown (links, bold, code) never renders.
     """
 
     claimable = sorted(set(repositories) | set(pending_repositories))
     if not claimable:
-        return f"{MARKER} 🎉 Congrats @{author}, your plugin has been merged and ownership is already verified! [Open your plugin dashboard](https://hol.org/guard/plugins) to view its trust score, installs, and engagement."
+        return f"""<!-- hol-claim-notice -->
+🎉 Congrats @{author}, your plugin is live in the [HOL Registry](https://hol.org/registry/plugins) — and ownership is already verified!
 
-    claim_links = "; ".join(
-        f"[Claim your plugin `{repo}`]({claim_link(repo)})" for repo in claimable
+[Open your plugin dashboard](https://hol.org/guard/plugins)
+
+The listing shows its ✅ owner-verified badge, trust score, installs, and engagement."""
+
+    claim_links = "\n".join(
+        f"- [Verify ownership of `{repo}`]({claim_link(repo)})" for repo in claimable
     )
 
-    return f'{MARKER} 🎉 Congrats @{author}, your plugin has been merged into the catalog! {claim_links}. Choose **"Continue with GitHub"** using the account that maintains the repository to verify ownership, view its trust score, and track installs and engagement. If you have already claimed it, the same link opens your plugin dashboard.'
+    return f"""<!-- hol-claim-notice -->
+🎉 Congrats @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!
+
+## Claim your plugin
+
+As the author, you can verify ownership to unlock:
+
+- **Owner-verified badge** on your plugin's registry listing
+- **Trust score** visibility and install analytics for your plugin
+- **Dashboard access** at [hol.org/guard/plugins](https://hol.org/guard/plugins) to track installs, trust, and engagement
+
+### How to claim
+
+{claim_links}
+
+Open your link and choose **"Continue with GitHub"**, using the GitHub account that maintains the repository. HOL requests only `read:user` and `user:email` — it does not request write access to your repositories.
+
+The whole process takes under 30 seconds, and your listing gets the ✅ owner-verified badge.
+
+If you have any questions, feel free to ask here or reach out at [support@hol.org](mailto:support@hol.org)."""
 
 
 MARKER = "<!-- hol-claim-notice -->"

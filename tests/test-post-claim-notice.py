@@ -283,18 +283,20 @@ class NoticeEvidenceTests(unittest.TestCase):
             with self.assertRaises(MODULE.GitHubCommentsFetchError):
                 MODULE.has_existing_claim_comment()
 
-    def test_notice_is_one_paragraph_with_attributed_repository_links(self):
+    def test_notice_keeps_marker_on_own_line_with_attributed_repository_links(self):
         body = MODULE.build_comment_body("author", ["owner/second", "owner/first"])
-        self.assertNotIn("\n", body)
+        # A GitHub markdown HTML comment swallows the whole line it sits on, so
+        # the marker must be the only content on its line or nothing renders.
+        self.assertEqual(body.splitlines()[0], MODULE.MARKER)
         self.assertNotIn("\\n", body)
         self.assertIn("@author", body)
-        self.assertIn("Claim your plugin", body)
+        self.assertIn("## Claim your plugin", body)
         self.assertIn("Continue with GitHub", body)
+        self.assertIn("is now listed", body)
         links = re.findall(r"https://hol.org/guard/plugins\?[^)]+", body)
         queries = [parse_qs(urlparse(link).query) for link in links]
         self.assertEqual([q["claim"][0] for q in queries], ["owner/first", "owner/second"])
         self.assertTrue(all(q["utm_campaign"] == ["plugin_claim"] for q in queries))
-        self.assertNotIn("is now listed", body)
 
     def test_already_verified_notice_retains_dashboard_link(self):
         body = MODULE.build_comment_body("author")

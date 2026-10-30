@@ -228,7 +228,8 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://github.com/example/repo/actions/runs/1",
         )
 
-        self.assertNotIn("\n", body)
+        self.assertTrue(body.startswith(MODULE.COMMENT_MARKER + "\n\n"))
+        self.assertNotIn("\n", body[len(MODULE.COMMENT_MARKER) + 2:])
         self.assertNotIn("\\n", body)
         self.assertIn("@builder, the centralized scan did not establish", body)
         self.assertNotIn("###", body)
@@ -258,7 +259,8 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://github.com/example/repo/actions/runs/1",
         )
 
-        self.assertNotIn("\n", body)
+        self.assertTrue(body.startswith(MODULE.COMMENT_MARKER + "\n\n"))
+        self.assertNotIn("\n", body[len(MODULE.COMMENT_MARKER) + 2:])
         self.assertNotIn("\\n", body)
         self.assertIn("score threshold of 75 was met", body)
         self.assertNotIn("scanner CI is recommended", body)
@@ -279,7 +281,8 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://github.com/example/repo/actions/runs/1",
         )
 
-        self.assertNotIn("\n", body)
+        self.assertTrue(body.startswith(MODULE.COMMENT_MARKER + "\n\n"))
+        self.assertNotIn("\n", body[len(MODULE.COMMENT_MARKER) + 2:])
         self.assertIn("entry is not alphabetical", body)
         self.assertNotIn("scanner CI", body)
 

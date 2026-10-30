@@ -338,6 +338,17 @@ def reference_lines(run_url: str) -> list[str]:
     ]
 
 
+def with_marker(paragraph: str) -> str:
+    """Prefix a gate comment with its marker on a line of its own.
+
+    A GitHub markdown HTML comment consumes the entire line it appears on,
+    so any content sharing that line is emitted as raw text whose markdown
+    (links, bold, code) never renders.
+    """
+
+    return f"{COMMENT_MARKER}\n\n{paragraph}"
+
+
 def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
     """Keep scan remediation in one paragraph without treating job failure as a score."""
 
@@ -350,7 +361,7 @@ def scan_block_comment(result: dict[str, object], summary: str, run_url: str, me
     number = result.get("pr_number")
     artifact_prefix = f"scan-findings-pr-{number}-" if isinstance(number, int) else "scan-findings-pr-"
     parts = [
-        f"{COMMENT_MARKER} {mention}, {lead}",
+        f"{mention}, {lead}",
         f"Check the [sanitized findings]({run_url}) in `{artifact_prefix}` for the measured score and rule locations; a failed job alone does not establish a score below 75.",
         "Fix or document rule-level findings, rerun the catalog scan, and request review once a catalog-owned scan verifies a score of at least 75; finding severities are advisory.",
         "Source-repository scanner CI is optional.",
@@ -360,7 +371,7 @@ def scan_block_comment(result: dict[str, object], summary: str, run_url: str, me
             f"If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}). "
             "Reproduce locally with the appropriate ecosystem, run the same pinned scanner in CI, and link the source run for re-review."
         )
-    return one_paragraph(" ".join(parts))
+    return with_marker(one_paragraph(" ".join(parts)))
 
 
 def remediation_comment(
@@ -380,19 +391,19 @@ def remediation_comment(
             message = "The centralized score threshold of 75 was met; finding severities are advisory."
         else:
             message = "No new Community Plugins entries require validation in this pull request."
-        return one_paragraph(
-            f"{COMMENT_MARKER} {mention}, contribution checks passed. {message} No action is needed. [Latest sweep]({run_url})."
-        )
+        return with_marker(one_paragraph(
+            f"{mention}, contribution checks passed. {message} No action is needed. [Latest sweep]({run_url})."
+        ))
 
     if result.get("state") == "scan":
         return scan_block_comment(result, summary, run_url, mention)
 
     guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
-    return one_paragraph(
-        f"{COMMENT_MARKER} {mention}, {summary} {guidance} "
+    return with_marker(one_paragraph(
+        f"{mention}, {summary} {guidance} "
         f"See [contribution requirements]({CONTRIBUTING_URL}) and "
         f"[scanner guide]({SCANNER_GUIDE_URL}). [Latest sweep]({run_url})."
-    )
+    ))
 
 
 def upsert_remediation_comment(
