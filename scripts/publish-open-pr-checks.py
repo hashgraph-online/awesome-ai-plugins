@@ -7,7 +7,9 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -15,8 +17,15 @@ from urllib.request import Request, urlopen
 API_ROOT = "https://api.github.com"
 CHECK_NAME = "Open Plugin Contribution Gate"
 COMMENT_MARKER = "<!-- awesome-ai-plugins-contribution-gate -->"
+CONTRIBUTING_URL = "https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md"
+SCANNER_GUIDE_URL = "https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md"
 USER_AGENT = "awesome-ai-plugins-open-pr-sweep"
+JOB_CONCLUSION_RE = re.compile(
+    r"\b(success|failure|neutral|cancelled|skipped|timed_out|action_required|startup_failure)\b"
+)
 REQUEST_TIMEOUT_SECONDS = 30
+SCAN_LOOKUP_ATTEMPTS = 6
+SCAN_LOOKUP_RETRY_SECONDS = 5
 SCAN_JOB_RE = re.compile(r"Scan PR (?:#(\d+) source|\((\d+),)")
 GITHUB_LOGIN_RE = re.compile(r"^[A-Za-z0-9-]{1,39}$")
 
@@ -50,32 +59,121 @@ def github_api(repository: str, path: str, token: str, *, method: str = "GET", p
         raise RuntimeError(f"GitHub API {method} {path} failed: {error}") from error
 
 
-def scan_conclusions(repository: str, run_id: str, token: str) -> dict[int, list[str]]:
-    """Return scanner job conclusions grouped by pull request number."""
+def scan_conclusions(
+    repository: str,
+    run_id: str,
+    token: str,
+    expected: dict[int, int] | None = None,
+    run_attempt: int = 1,
+) -> dict[int, list[str]]:
+    """Read the latest scanner attempts, waiting briefly for job data to appear."""
 
-    conclusions: dict[int, list[str]] = {}
-    page = 1
-    while True:
-        payload = github_api(repository, f"/actions/runs/{run_id}/jobs?per_page=100&page={page}", token)
-        if not isinstance(payload, dict):
-            raise RuntimeError("GitHub returned an invalid jobs response")
-        jobs = payload.get("jobs")
-        if not isinstance(jobs, list):
-            raise RuntimeError("GitHub returned no jobs list")
-        for job in jobs:
-            if not isinstance(job, dict):
-                continue
-            name = job.get("name")
-            conclusion = job.get("conclusion")
-            if not isinstance(name, str) or not isinstance(conclusion, str):
-                continue
-            match = SCAN_JOB_RE.search(name)
-            if match:
-                number = match.group(1) or match.group(2)
-                conclusions.setdefault(int(number), []).append(conclusion)
-        if len(jobs) < 100:
+    expected = expected or {}
+    for attempt in range(SCAN_LOOKUP_ATTEMPTS):
+        latest: dict[str, tuple[tuple[int, int], int, str | None]] = {}
+        page = 1
+        while True:
+            payload = github_api(
+                repository, f"/actions/runs/{run_id}/jobs?per_page=100&filter=all&page={page}", token
+            )
+            if not isinstance(payload, dict) or not isinstance(payload.get("jobs"), list):
+                raise RuntimeError("GitHub returned an invalid jobs response")
+            jobs = payload["jobs"]
+            for job in jobs:
+                if not isinstance(job, dict) or not isinstance(job.get("name"), str):
+                    continue
+                name = job["name"]
+                match = SCAN_JOB_RE.search(name)
+                if not match:
+                    continue
+                number = int(match.group(1) or match.group(2))
+                job_attempt = job.get("run_attempt")
+                job_id = job.get("id")
+                order = (
+                    job_attempt if isinstance(job_attempt, int) else 1,
+                    job_id if isinstance(job_id, int) else 0,
+                )
+                conclusion = job.get("conclusion")
+                if name not in latest or order > latest[name][0]:
+                    latest[name] = (order, number, conclusion if isinstance(conclusion, str) else None)
+            if len(jobs) < 100:
+                break
+            page += 1
+
+        conclusions: dict[int, list[str]] = {}
+        pending: set[int] = set()
+        for name, (order, number, conclusion) in latest.items():
+            # The jobs list can lag behind a finished matrix job. Confirm only
+            # the latest pending job directly, preserving run/attempt identity.
+            if conclusion is None and order[0] >= run_attempt and order[1] > 0:
+                detail = github_api(repository, f"/actions/jobs/{order[1]}", token)
+                if (
+                    isinstance(detail, dict)
+                    and detail.get("id") == order[1]
+                    and str(detail.get("run_id")) == run_id
+                    and detail.get("run_attempt") == order[0]
+                    and detail.get("name") == name
+                    and detail.get("status") == "completed"
+                    and isinstance(detail.get("conclusion"), str)
+                ):
+                    conclusion = detail["conclusion"]
+            if conclusion is None or order[0] < run_attempt:
+                pending.add(number)
+            else:
+                conclusions.setdefault(number, []).append(conclusion)
+        incomplete = {
+            number for number, count in expected.items()
+            if len(conclusions.get(number, [])) < count or number in pending
+        }
+        if not incomplete:
             return conclusions
-        page += 1
+        if attempt + 1 < SCAN_LOOKUP_ATTEMPTS:
+            time.sleep(SCAN_LOOKUP_RETRY_SECONDS)
+
+    # A partial matrix must never be reported as passing.
+    for number in incomplete:
+        conclusions.pop(number, None)
+    return conclusions
+
+
+def artifact_conclusions(results: list, directory: str, run_id: str, run_attempt: int) -> dict[int, list[str]]:
+    """Use only complete, run-bound sanitized reports from the trusted scan jobs."""
+    root = Path(directory).resolve()
+    conclusions: dict[int, list[str]] = {}
+    for result in results:
+        if result.get("state") != "scan":
+            continue
+        number = result["pr_number"]
+        verdicts = []
+        for contribution in result["contributions"]:
+            if not isinstance(contribution, dict):
+                break
+            owner, repo = contribution.get("owner"), contribution.get("repo")
+            if not all(isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.-]+", value) for value in (owner, repo)):
+                break
+            report_file = (root / f"scan-findings-pr-{number}-{owner}-{repo}-attempt-{run_attempt}" / "findings.json").resolve()
+            try:
+                if not report_file.is_relative_to(root) or report_file.stat().st_size > 10_000_000:
+                    break
+                report = json.loads(report_file.read_text())
+                if not isinstance(report, dict):
+                    break
+                score = report.get("score")
+                if (report.get("schema_version") != "sanitized-scan.v1"
+                        or report.get("workflow_run_id") != run_id
+                        or type(report.get("workflow_run_attempt")) is not int
+                        or report.get("workflow_run_attempt") != run_attempt
+                        or not isinstance(report.get("source_commit"), str)
+                        or not re.fullmatch(r"[0-9a-f]{40}", report["source_commit"])
+                        or type(score) not in (int, float) or not 0 <= score <= 100):
+                    break
+            except (OSError, UnicodeError, json.JSONDecodeError):
+                break
+            verdicts.append("success" if score >= 75 else "failure")
+        # A partial or stale matrix can never clear the PR.
+        if len(verdicts) == len(result["contributions"]):
+            conclusions[number] = verdicts
+    return conclusions
 
 
 def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]]) -> tuple[str, str, str]:
@@ -96,33 +194,36 @@ def check_summary(result: dict[str, object], scanner_jobs: dict[int, list[str]])
 
     if state == "failure":
         failure_lines = reasons if isinstance(reasons, list) else []
-        details = "\n".join(f"- {item}" for item in failure_lines if isinstance(item, str))
+        details = "; ".join(item for item in failure_lines if isinstance(item, str))
         return (
             "failure",
             "Contribution requirements failed",
-            "Catalog validation failed.\n\n" + details,
+            one_paragraph(f"Catalog validation failed: {details or 'review the reported catalog findings.'}"),
         )
 
     if state == "scan":
         jobs = scanner_jobs.get(number, [])
         if not jobs:
             return (
-                "success",
-                "scan unavailable",
-                "HOL centralized scan could not run. Catalog validation passed; scanner results are advisory.",
+                "failure",
+                "Centralized score unavailable",
+                "The centralized scan did not establish a score of at least 75. Keep the contribution blocked and rerun the scan before merge.",
             )
         if all(conclusion == "success" for conclusion in jobs):
             return (
                 "success",
-                "scan passed",
-                f"All {len(jobs)} source-repository scanner job(s) passed. Catalog validation passed.",
+                "Centralized score threshold passed",
+                "The centralized scan met the score threshold of 75; finding severities are advisory.",
             )
         job_details = ", ".join(jobs)
         return (
-            "success",
-            "scan findings",
-            "HOL centralized scan reported findings or did not pass: "
-            f"{job_details}. This is advisory and does not block listing.",
+            "failure",
+            "Centralized scan did not pass",
+            f"The centralized scan jobs ended with {job_details}. A non-successful job may still report a numeric score; "
+            "the job conclusion alone cannot distinguish a below-75 score from a scanner execution failure. "
+            "Check the original scan job log and sanitized findings for the measured score or execution error. "
+            "Keep the contribution blocked until a completed catalog-owned scan verifies a score of at least 75. "
+            "Finding severities are advisory for listing eligibility.",
         )
 
     raise RuntimeError(f"unknown validator result state: {state}")
@@ -167,27 +268,99 @@ def missing_scanner_ci_repos(result: dict[str, object]) -> list[str]:
     return missing
 
 
-def optional_scanner_ci_guidance(repos: list[str]) -> str:
-    """Explain that scanner CI is optional and why maintainers should still add it."""
+def one_paragraph(text: str) -> str:
+    """Collapse whitespace for a note that should stay a single paragraph."""
 
-    listed = ", ".join(f"`{item}`" for item in repos)
-    subject = listed if listed else "the source repository"
-    return (
-        "\n\n### Recommended: add scanner CI for security\n"
-        f"This listing can merge without it. HOL still scans {subject} independently.\n\n"
-        "We **recommend including** `hashgraph-online/ai-plugin-scanner-action` under "
-        "`.github/workflows/` on `push` and `pull_request`. Continuous scanning keeps "
-        "this catalog safer for MCP servers, skills, plugins, and other agent "
-        "extensions people install from HOL.\n\n"
-        "Adding it:\n"
-        "- protects the ecosystem by catching secrets, dangerous hooks, and "
-        "supply-chain issues before they ship;\n"
-        "- keeps the listing at the **full trust score** (without maintainer CI it stays "
-        "eligible, with a 10% trust-score reduction);\n"
-        "- can surface findings in GitHub code scanning.\n\n"
-        "See [CONTRIBUTING.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md) "
-        "and [SCANNER_GUIDE.md](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/SCANNER_GUIDE.md).\n"
+    return " ".join(text.split())
+
+
+def prose_sentences(text: str) -> list[str]:
+    """Split scan prose into sentences, including clauses joined by a semicolon."""
+
+    collapsed = " ".join(text.split())
+    sentences: list[str] = []
+    for item in re.split(r"(?<=[.])\s+", collapsed):
+        item = item.strip()
+        if not item:
+            continue
+        pieces = [part.strip() for part in item.split("; ") if part.strip()]
+        for index, piece in enumerate(pieces):
+            piece = piece.replace("a below-75 score", "a score below 75")
+            if index > 0 and piece[:1].islower():
+                piece = piece[0].upper() + piece[1:]
+            if piece[-1] not in ".!?":
+                piece += "."
+            sentences.append(piece)
+    return sentences
+
+
+def status_prose(summary: str) -> str:
+    """Return the score explanation without the findings link appended for the check run."""
+
+    head, _, _ = summary.partition("[Open the source scan job summaries")
+    return head.strip()
+
+
+def emphasize_job_conclusions(sentence: str) -> str:
+    """Mark GitHub job conclusions in the opening line so they read as status values."""
+
+    if "ended with " not in sentence:
+        return sentence
+    prefix, _, tail = sentence.partition("ended with ")
+    return f"{prefix}ended with {JOB_CONCLUSION_RE.sub(r'`\1`', tail)}"
+
+
+def findings_markdown(artifact_prefix: str, run_url: str) -> str:
+    """Return the sanitized-report instructions contributors use to inspect a scan."""
+
+    return "\n".join(
+        [
+            f"[Open the source scan job summaries and download sanitized JSON/SARIF findings]({run_url}).",
+            "",
+            f"Look for the `{artifact_prefix}` artifact.",
+            "",
+            "- Reports include rule IDs and file locations.",
+            "- Reports omit source snippets and credential values.",
+            "- A missing report indicates a scanner execution problem, not a passing scan.",
+        ]
     )
+
+
+def reference_lines(run_url: str) -> list[str]:
+    """Return the standard links for a contribution-gate comment."""
+
+    return [
+        "### References",
+        "",
+        f"- [Contribution requirements]({CONTRIBUTING_URL})",
+        f"- [Scanner guide]({SCANNER_GUIDE_URL})",
+        f"- [Latest sweep]({run_url})",
+    ]
+
+
+def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
+    """Keep scan remediation in one paragraph without treating job failure as a score."""
+
+    sentences = prose_sentences(status_prose(summary))
+    if not sentences:
+        sentences = ["The centralized scan did not establish a score of at least 75."]
+    lead = emphasize_job_conclusions(sentences[0])
+    if lead[:1].isupper():
+        lead = lead[0].lower() + lead[1:]
+    number = result.get("pr_number")
+    artifact_prefix = f"scan-findings-pr-{number}-" if isinstance(number, int) else "scan-findings-pr-"
+    parts = [
+        f"{COMMENT_MARKER} {mention}, {lead}",
+        f"Check the [sanitized findings]({run_url}) in `{artifact_prefix}` for the measured score and rule locations; a failed job alone does not establish a score below 75.",
+        "Fix or document rule-level findings, rerun the catalog scan, and request review once a catalog-owned scan verifies a score of at least 75; finding severities are advisory.",
+        "Source-repository scanner CI is optional.",
+    ]
+    if missing_scanner_ci_repos(result):
+        parts.append(
+            f"If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}). "
+            "Reproduce locally with the appropriate ecosystem, run the same pinned scanner in CI, and link the source run for re-review."
+        )
+    return one_paragraph(" ".join(parts))
 
 
 def remediation_comment(
@@ -197,50 +370,29 @@ def remediation_comment(
     summary: str,
     run_url: str,
 ) -> str:
-    """Build an idempotent contributor-facing remediation comment."""
+    """Build an idempotent contributor-facing contribution-gate comment."""
 
     author_login = result.get("author_login")
     mention = f"@{author_login}" if isinstance(author_login, str) and GITHUB_LOGIN_RE.fullmatch(author_login) else "the contributor"
+
     if conclusion == "success":
-        optional_guidance = ""
-        missing = missing_scanner_ci_repos(result)
-        if missing:
-            optional_guidance += optional_scanner_ci_guidance(missing)
-        if "scan findings" in check_title:
-            optional_guidance += (
-                "\nHOL's centralized scan reported findings. This does not block listing.\n"
-            )
-        elif "scan unavailable" in check_title:
-            optional_guidance += (
-                "\nHOL's centralized scan could not run. This does not block listing.\n"
-            )
-        return (
-            f"{COMMENT_MARKER}\n\n"
-            f"✅ **Contribution check passed.** {mention}, catalog validation succeeded.\n\n"
-            f"### {check_title}\n{summary}{optional_guidance}\n"
-            f"[View the latest sweep]({run_url})."
+        if result.get("state") == "scan":
+            message = "The centralized score threshold of 75 was met; finding severities are advisory."
+        else:
+            message = "No new Community Plugins entries require validation in this pull request."
+        return one_paragraph(
+            f"{COMMENT_MARKER} {mention}, contribution checks passed. {message} No action is needed. [Latest sweep]({run_url})."
         )
 
-    guidance = (
-        "1. Use the Community Plugins format: "
-        "`- [Name](https://github.com/owner/repo) - description`.\n"
-        "2. Add the entry to the correct section, alphabetically, without duplicates."
+    if result.get("state") == "scan":
+        return scan_block_comment(result, summary, run_url, mention)
+
+    guidance = "Use the Community Plugins format `- [Name](https://github.com/owner/repo) - description`, put the entry in the correct section, keep it alphabetical, and avoid duplicates."
+    return one_paragraph(
+        f"{COMMENT_MARKER} {mention}, {summary} {guidance} "
+        f"See [contribution requirements]({CONTRIBUTING_URL}) and "
+        f"[scanner guide]({SCANNER_GUIDE_URL}). [Latest sweep]({run_url})."
     )
-
-    return f"""{COMMENT_MARKER}
-
-{mention} — this pull request needs updates before it can be merged.
-
-### {check_title}
-{summary}
-
-### How to fix it
-{guidance}
-
-See the repository's [contribution requirements](https://github.com/hashgraph-online/awesome-ai-plugins/blob/main/CONTRIBUTING.md).
-
-After pushing the changes, this check and comment will update automatically: {run_url}
-"""
 
 
 def upsert_remediation_comment(
@@ -266,11 +418,7 @@ def upsert_remediation_comment(
         ),
         None,
     )
-    if (
-        conclusion == "success"
-        and existing is None
-        and not missing_scanner_ci_repos(result)
-    ):
+    if conclusion == "success" and existing is None:
         return
 
     body = remediation_comment(result, conclusion, check_title, summary, run_url)
@@ -313,6 +461,10 @@ def publish_check(
         raise RuntimeError("validator returned an invalid PR identity")
 
     conclusion, check_title, summary = check_summary(result, scanner_jobs)
+    rendered = summary
+    if result.get("state") == "scan":
+        rendered = "\n\n".join(prose_sentences(summary))
+        rendered += f"\n\n{findings_markdown(f'scan-findings-pr-{number}-', run_url)}"
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     payload = {
         "name": CHECK_NAME,
@@ -324,7 +476,7 @@ def publish_check(
         "details_url": run_url,
         "output": {
             "title": check_title,
-            "summary": f"PR #{number} — {title}\n\n{summary}",
+            "summary": f"PR #{number} — {title}\n\n{rendered}",
         },
     }
     update_payload = {key: value for key, value in payload.items() if key != "head_sha"}
@@ -356,6 +508,7 @@ def main() -> int:
     repository = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "").strip()
     run_id = os.environ.get("GITHUB_RUN_ID", "").strip()
+    attempt_text = os.environ.get("GITHUB_RUN_ATTEMPT", "1").strip()
     run_url = os.environ.get("SWEEP_RUN_URL", "").strip()
     results_json = os.environ.get("OPEN_PR_RESULTS", "[]")
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
@@ -364,11 +517,25 @@ def main() -> int:
     if not token or not run_id or not run_url:
         print("ERROR: GITHUB_TOKEN, GITHUB_RUN_ID, and SWEEP_RUN_URL are required", file=sys.stderr)
         return 1
+    if not attempt_text.isdigit() or int(attempt_text) < 1:
+        print("ERROR: GITHUB_RUN_ATTEMPT must be a positive integer", file=sys.stderr)
+        return 1
     try:
         results = json.loads(results_json)
         if not isinstance(results, list):
             raise RuntimeError("OPEN_PR_RESULTS must be a JSON array")
-        scanner_jobs = scan_conclusions(repository, run_id, token)
+        expected: dict[int, int] = {}
+        for result in results:
+            if not isinstance(result, dict):
+                raise RuntimeError("validator returned a non-object PR result")
+            if result.get("state") == "scan":
+                number, contributions = result.get("pr_number"), result.get("contributions")
+                if not isinstance(number, int) or not isinstance(contributions, list) or not contributions:
+                    raise RuntimeError("scanner result is missing its PR number or contributions")
+                expected[number] = len(contributions)
+        findings_dir = os.environ.get("SCAN_FINDINGS_DIR", "").strip()
+        scanner_jobs = (artifact_conclusions(results, findings_dir, run_id, int(attempt_text))
+                        if findings_dir else scan_conclusions(repository, run_id, token, expected, int(attempt_text)))
         for result in results:
             if not isinstance(result, dict):
                 raise RuntimeError("validator returned a non-object PR result")
