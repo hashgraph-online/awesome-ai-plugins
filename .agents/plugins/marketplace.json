@@ -7949,6 +7949,20 @@
       "install_url": "https://raw.githubusercontent.com/jburgess/mcp-grafana/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "GraphFlow",
+      "displayName": "GraphFlow",
+      "description": "MCP server and cross-agent installer providing surgical symbol read, edit, exec and macro tools for coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "Roarpeng",
+      "repo": "GraphFlow",
+      "url": "https://github.com/Roarpeng/GraphFlow"
+    },
+    {
       "name": "Gremlyn",
       "displayName": "Gremlyn",
       "description": "Security and chaos engineering for MCP agents: a Claude Code plugin that breaks your agent's MCP tools on purpose to test prompt-injection defenses and resilience",
@@ -11712,6 +11726,20 @@
       "repo": "ai-command-center",
       "url": "https://github.com/Hredo/ai-command-center",
       "install_url": "https://raw.githubusercontent.com/Hredo/ai-command-center/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AI-FluxMux",
+      "displayName": "AI-FluxMux",
+      "description": "Windows desktop router for OpenAI-compatible clients with local and cloud models, per-profile routing, model variants and usage telemetry; source is available under the PolyForm Noncommercial license",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "ArchPrime",
+      "repo": "AI-FluxMux",
+      "url": "https://github.com/ArchPrime/AI-FluxMux"
     },
     {
       "name": "ai-memory-skill",
