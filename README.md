@@ -1160,7 +1160,7 @@ submitting a repository.
 
 ### OpenCode Plugins
 
-OpenCode plugins are npm packages or local directories registered in `opencode.json(c)` (`plugins`) and installed with `opencode plugin add`. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform with repository and documentation links and omits any manifest-URL `install_url`: OpenCode resolves packages through its own installer, so no client-specific install target applies.
+OpenCode plugins are npm packages or local directories. Server plugins are registered in `opencode.json(c)` (`plugins`); CLI-only V2 plugins are registered in the global `cli.json` (`plugins`). Follow each project's documented installation instructions rather than applying server configuration to a CLI-only package. Add verified community plugins here in alphabetical order. The catalog records the `opencode` platform with repository and documentation links and omits any manifest-URL `install_url`: OpenCode resolves packages through its own installer, so no client-specific install target applies.
 
 - [Azure DevOps PR Review](https://github.com/WTLAIB/opencode-azure-devops-pr-review-v2) - OpenCode V2 plugin that reviews Azure DevOps Services pull requests from a URL without a local checkout, with separate verification in review/deep modes and comment previews.
 - [better-opencode-tools](https://github.com/dhaern/better-opencode-tools) - Three OpenCode plugins that replace the built-in glob, grep and read tools, keeping output inside the host budget with a continuation offset, enforcing search deadlines and returning results in a stable order.
@@ -1169,6 +1169,7 @@ OpenCode plugins are npm packages or local directories registered in `opencode.j
 - [LitOpenCode](https://github.com/wjgoarxiv/litopencode) - OpenCode plans, builds, checks and records each lit task, so the next session picks up from a written handoff.
 - [OpenCode Agent Communicator](https://github.com/YidiDev/opencode-agent-communicator) - Native OpenCode V2 plugin for durable workspace-scoped messaging, requests, and advisory locks between independent root sessions on Linux x64, supporting stable OpenCode >=2.1.3 <2.3.0.
 - [OpenCode Attention Inbox](https://github.com/YidiDev/opencode-attention-inbox) - Independent OpenCode V2 TUI sidebar inbox for pending permissions, questions, and successful unread completions, with navigation-only session switching.
+- [OpenCode Tab Wrangler](https://github.com/YidiDev/opencode-tab-wrangler) - Preview-first OpenCode V2 CLI-only tab housekeeping with configurable idle cleanup and Corral recovery, closing tabs without deleting sessions.
 - [opencode-cursor](https://github.com/Nomadcxx/opencode-cursor) - OpenCode plugin for Cursor subscription models with streaming, thinking, tool calls, MCP support, and browser login through Cursor CLI or API-key authentication through the SDK.
 - [opencode-cursor (stablekernel)](https://github.com/stablekernel/opencode-cursor) - OpenCode V1 and V2 plugin that adds Cursor as a native provider backed by the official Cursor SDK, published on npm as `@stablekernel/opencode-cursor`.
 - [opencode-goal-plugin](https://github.com/prevalentWare/opencode-goal-plugin) - OpenCode plugin for persistent goals, completion evidence, and idle auto-continuation.

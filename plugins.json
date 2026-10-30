@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1082,
+  "total": 1083,
   "platforms": [
     "codex",
     "grok",
@@ -14382,6 +14382,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "OpenCode Tab Wrangler",
+      "url": "https://github.com/YidiDev/opencode-tab-wrangler",
+      "owner": "YidiDev",
+      "repo": "opencode-tab-wrangler",
+      "description": "Preview-first OpenCode V2 CLI-only tab housekeeping with configurable idle cleanup and Corral recovery, closing tabs without deleting sessions",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/YidiDev/opencode-tab-wrangler#readme",
       "ecosystems": [
         "opencode"
       ]

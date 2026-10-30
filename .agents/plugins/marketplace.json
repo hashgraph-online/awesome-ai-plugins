@@ -15452,6 +15452,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "OpenCode Tab Wrangler",
+      "displayName": "OpenCode Tab Wrangler",
+      "description": "Preview-first OpenCode V2 CLI-only tab housekeeping with configurable idle cleanup and Corral recovery, closing tabs without deleting sessions",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "YidiDev",
+      "repo": "opencode-tab-wrangler",
+      "url": "https://github.com/YidiDev/opencode-tab-wrangler",
+      "installation_url": "https://github.com/YidiDev/opencode-tab-wrangler#readme"
     }
   ]
 }
