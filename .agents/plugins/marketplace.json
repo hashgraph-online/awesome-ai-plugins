@@ -5613,6 +5613,21 @@
       "installation_url": "https://github.com/HaiyiMei/scorestarling-plugins#readme"
     },
     {
+      "name": "self-host",
+      "displayName": "self-host",
+      "description": "Agent skill and CLI that lets your agent install self-hosted apps on your own hardware and set them up (admin accounts, API keys, apps connected to each other), asking before each step",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ajnart",
+      "repo": "self-host",
+      "url": "https://github.com/ajnart/self-host",
+      "installation_url": "https://github.com/ajnart/self-host#readme"
+    },
+    {
       "name": "Sketchbook Style",
       "displayName": "Sketchbook Style",
       "description": "Agent skill that draws any object as a black-ink industrial-design sketchbook page in four looks with open image models on ComfyUI or mflux, no API key; tested in Claude Code",
@@ -10778,6 +10793,21 @@
       "repo": "superintelligent-ui",
       "url": "https://github.com/levfo/superintelligent-ui",
       "install_url": "https://raw.githubusercontent.com/levfo/superintelligent-ui/HEAD/plugins/superintelligent-ui/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "superlite",
+      "displayName": "superlite",
+      "description": "Claude Code plugin of build lifecycle skills that plan work, run parallel subagent waves, and drive TDD, debugging, and branch finishing",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "iha2",
+      "repo": "superlite",
+      "url": "https://github.com/iha2/superlite",
+      "install_url": "https://raw.githubusercontent.com/iha2/superlite/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Supermod ClaudeCode",
