@@ -83,6 +83,40 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
         self.assertNotIn(411, result)
 
+    def test_completed_job_recovers_a_stale_pending_jobs_list(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 1, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 1, "name": name,
+                  "status": "completed", "conclusion": "success"}
+        with patch.object(MODULE, "github_api", side_effect=[jobs, detail]) as api:
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+        self.assertEqual(api.call_args.args[1], "/actions/jobs/7")
+
+    def test_direct_job_cannot_clear_a_different_run_attempt_or_job(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 2, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 2, "name": name,
+                  "status": "completed", "conclusion": "success"}
+        for field, value in (("id", 8), ("run_id", 2), ("run_attempt", 1),
+                             ("name", "Scan PR (412, owner, other)"),
+                             ("status", "in_progress"), ("conclusion", None)):
+            with self.subTest(field=field), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 1), patch.object(
+                MODULE, "github_api", side_effect=[jobs, {**detail, field: value}]
+            ):
+                result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
+                self.assertNotIn(411, result)
+
+    def test_direct_failed_job_remains_a_failure(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 1, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 1, "name": name,
+                  "status": "completed", "conclusion": "failure"}
+        with patch.object(MODULE, "github_api", side_effect=[jobs, detail]):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["failure"]})
+        self.assertEqual(MODULE.check_summary({"pr_number": 411, "state": "scan"}, result)[0], "failure")
+
     def test_failed_source_scan_blocks_merge(self):
         result = {"pr_number": 411, "state": "scan", "failure_reasons": []}
         conclusion, title, summary = MODULE.check_summary(
