@@ -5283,6 +5283,21 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
+      "name": "97",
+      "displayName": "97",
+      "description": "Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "oribarilan",
+      "repo": "97",
+      "url": "https://github.com/oribarilan/97",
+      "installation_url": "https://github.com/oribarilan/97#readme"
+    },
+    {
       "name": "antirea",
       "displayName": "antirea",
       "description": "A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks",
@@ -5761,6 +5776,21 @@
       "repo": "skills",
       "url": "https://github.com/mouadja02/skills",
       "installation_url": "https://github.com/mouadja02/skills#readme"
+    },
+    {
+      "name": "uCoz",
+      "displayName": "uCoz",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme"
     },
     {
       "name": "UI Verify",
@@ -6704,6 +6734,21 @@
       "install_url": "https://raw.githubusercontent.com/skymanbp/cc-memory/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "cc-stretch",
+      "displayName": "cc-stretch",
+      "description": "Claude Code plugin that has Claude write stretchtext: each reply reads complete at its shortest, and a phrase grows in place when you click it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "pro-vi",
+      "repo": "cc-stretch",
+      "url": "https://github.com/pro-vi/cc-stretch",
+      "install_url": "https://raw.githubusercontent.com/pro-vi/cc-stretch/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "cc-tree",
       "displayName": "cc-tree",
       "description": "Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node",
@@ -7202,6 +7247,21 @@
       "repo": "compact-jev",
       "url": "https://github.com/edoproch/compact-jev",
       "install_url": "https://raw.githubusercontent.com/edoproch/compact-jev/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Concord",
+      "displayName": "Concord",
+      "description": "MCP server: lets Claude Code, Codex, Cursor, Gemini CLI, Grok Build and Goose message each other mid-session and share presence, file claims, handoffs and review packets in one repo, with relay plugins that deliver messages into running sessions",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Get-Concord-AI",
+      "repo": "concord-mcp",
+      "url": "https://github.com/Get-Concord-AI/concord-mcp",
+      "installation_url": "https://github.com/Get-Concord-AI/concord-mcp#readme"
     },
     {
       "name": "Consensus",
@@ -7932,6 +7992,20 @@
       "repo": "mcp-grafana",
       "url": "https://github.com/jburgess/mcp-grafana",
       "install_url": "https://raw.githubusercontent.com/jburgess/mcp-grafana/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GraphFlow",
+      "displayName": "GraphFlow",
+      "description": "MCP server and cross-agent installer providing surgical symbol read, edit, exec and macro tools for coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "Roarpeng",
+      "repo": "GraphFlow",
+      "url": "https://github.com/Roarpeng/GraphFlow"
     },
     {
       "name": "Gremlyn",
@@ -11714,6 +11788,20 @@
       "install_url": "https://raw.githubusercontent.com/Hredo/ai-command-center/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "AI-FluxMux",
+      "displayName": "AI-FluxMux",
+      "description": "Windows desktop router for OpenAI-compatible clients with local and cloud models, per-profile routing, model variants and usage telemetry; source is available under the PolyForm Noncommercial license",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "ArchPrime",
+      "repo": "AI-FluxMux",
+      "url": "https://github.com/ArchPrime/AI-FluxMux"
+    },
+    {
       "name": "ai-memory-skill",
       "displayName": "ai-memory-skill",
       "description": "Persistent memory skill for Claude Code and Kiro that auto-loads markdown context and runs a consolidation pass (`npx ai-memory-skill`)",
@@ -11839,6 +11927,21 @@
       "repo": "cosmosdb-agent-kit",
       "url": "https://github.com/AzureCosmosDB/cosmosdb-agent-kit",
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "b2bsearch",
+      "displayName": "b2bsearch",
+      "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "b2bsearch",
+      "repo": "b2bsearch-plugin",
+      "url": "https://github.com/b2bsearch/b2bsearch-plugin",
+      "install_url": "https://raw.githubusercontent.com/b2bsearch/b2bsearch-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Backlot",
@@ -14646,6 +14749,21 @@
       "install_url": "https://raw.githubusercontent.com/youdotcom-oss/agent-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "your-mail-mcp",
+      "displayName": "your-mail-mcp",
+      "description": "MCP server: read-only search over your IMAP mail, mirrored by mbsync into a local notmuch index and served over stdio or streamable HTTP with OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "wildsurfer",
+      "repo": "your-mail-mcp",
+      "url": "https://github.com/wildsurfer/your-mail-mcp",
+      "installation_url": "https://github.com/wildsurfer/your-mail-mcp#readme"
+    },
+    {
       "name": "YYLO Skills",
       "displayName": "YYLO Skills",
       "description": "Reusable agent skills maintained by YYLO: the canonical, independently versioned source for the ledger-tasks, wiki, workflow, artifact, benchmark, understand-project, plan-ledger-tasks and ralph-loop skills used by YYLO CLI and YYLO Ledger",
@@ -14989,6 +15107,20 @@
       "url": "https://github.com/FeatherHunter/dsh-prompt"
     },
     {
+      "name": "dsh-ui-usage-billing",
+      "displayName": "dsh-ui-usage-billing",
+      "description": "Usage billing dashboard for DeepSeek Harness with sidebar cost metrics, session-log aggregation, and multi-provider pricing",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "kenz1117",
+      "repo": "dsh-ui-usage-billing",
+      "url": "https://github.com/kenz1117/dsh-ui-usage-billing"
+    },
+    {
       "name": "dsh-vision-router",
       "displayName": "dsh-vision-router",
       "description": "Gives text-only DeepSeek Harness agents image understanding through a built-in no-key vision chain plus fourteen tools for Q&A, grounding, OCR, crop, screenshots and pixel diff",
@@ -15275,6 +15407,21 @@
       "repo": "opencode-goal-plugin",
       "url": "https://github.com/prevalentWare/opencode-goal-plugin",
       "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme"
+    },
+    {
+      "name": "opencode-plugins",
+      "displayName": "opencode-plugins",
+      "description": "OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "rizal72",
+      "repo": "opencode-plugins",
+      "url": "https://github.com/rizal72/opencode-plugins",
+      "installation_url": "https://github.com/rizal72/opencode-plugins#readme"
     },
     {
       "name": "Relay",
