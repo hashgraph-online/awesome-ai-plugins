@@ -9,6 +9,7 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -132,6 +133,46 @@ def scan_conclusions(
     # A partial matrix must never be reported as passing.
     for number in incomplete:
         conclusions.pop(number, None)
+    return conclusions
+
+
+def artifact_conclusions(results: list, directory: str, run_id: str, run_attempt: int) -> dict[int, list[str]]:
+    """Use only complete, run-bound sanitized reports from the trusted scan jobs."""
+    root = Path(directory).resolve()
+    conclusions: dict[int, list[str]] = {}
+    for result in results:
+        if result.get("state") != "scan":
+            continue
+        number = result["pr_number"]
+        verdicts = []
+        for contribution in result["contributions"]:
+            if not isinstance(contribution, dict):
+                break
+            owner, repo = contribution.get("owner"), contribution.get("repo")
+            if not all(isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.-]+", value) for value in (owner, repo)):
+                break
+            report_file = (root / f"scan-findings-pr-{number}-{owner}-{repo}-attempt-{run_attempt}" / "findings.json").resolve()
+            try:
+                if not report_file.is_relative_to(root) or report_file.stat().st_size > 10_000_000:
+                    break
+                report = json.loads(report_file.read_text())
+                if not isinstance(report, dict):
+                    break
+                score = report.get("score")
+                if (report.get("schema_version") != "sanitized-scan.v1"
+                        or report.get("workflow_run_id") != run_id
+                        or type(report.get("workflow_run_attempt")) is not int
+                        or report.get("workflow_run_attempt") != run_attempt
+                        or not isinstance(report.get("source_commit"), str)
+                        or not re.fullmatch(r"[0-9a-f]{40}", report["source_commit"])
+                        or type(score) not in (int, float) or not 0 <= score <= 100):
+                    break
+            except (OSError, UnicodeError, json.JSONDecodeError):
+                break
+            verdicts.append("success" if score >= 75 else "failure")
+        # A partial or stale matrix can never clear the PR.
+        if len(verdicts) == len(result["contributions"]):
+            conclusions[number] = verdicts
     return conclusions
 
 
@@ -492,7 +533,9 @@ def main() -> int:
                 if not isinstance(number, int) or not isinstance(contributions, list) or not contributions:
                     raise RuntimeError("scanner result is missing its PR number or contributions")
                 expected[number] = len(contributions)
-        scanner_jobs = scan_conclusions(repository, run_id, token, expected, int(attempt_text))
+        findings_dir = os.environ.get("SCAN_FINDINGS_DIR", "").strip()
+        scanner_jobs = (artifact_conclusions(results, findings_dir, run_id, int(attempt_text))
+                        if findings_dir else scan_conclusions(repository, run_id, token, expected, int(attempt_text)))
         for result in results:
             if not isinstance(result, dict):
                 raise RuntimeError("validator returned a non-object PR result")
