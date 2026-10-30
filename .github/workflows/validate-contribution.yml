@@ -25,7 +25,8 @@ permissions:
 jobs:
   validate:
     name: Check contribution requirements
-    runs-on: ubuntu-latest
+    # Python 3.12.10 has no Ubuntu 26.04 build; keep the pinned runtime supported.
+    runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.entries.outputs.matrix }}
     steps:

@@ -9,6 +9,7 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -101,7 +102,21 @@ def scan_conclusions(
 
         conclusions: dict[int, list[str]] = {}
         pending: set[int] = set()
-        for order, number, conclusion in latest.values():
+        for name, (order, number, conclusion) in latest.items():
+            # The jobs list can lag behind a finished matrix job. Confirm only
+            # the latest pending job directly, preserving run/attempt identity.
+            if conclusion is None and order[0] >= run_attempt and order[1] > 0:
+                detail = github_api(repository, f"/actions/jobs/{order[1]}", token)
+                if (
+                    isinstance(detail, dict)
+                    and detail.get("id") == order[1]
+                    and str(detail.get("run_id")) == run_id
+                    and detail.get("run_attempt") == order[0]
+                    and detail.get("name") == name
+                    and detail.get("status") == "completed"
+                    and isinstance(detail.get("conclusion"), str)
+                ):
+                    conclusion = detail["conclusion"]
             if conclusion is None or order[0] < run_attempt:
                 pending.add(number)
             else:
@@ -118,6 +133,46 @@ def scan_conclusions(
     # A partial matrix must never be reported as passing.
     for number in incomplete:
         conclusions.pop(number, None)
+    return conclusions
+
+
+def artifact_conclusions(results: list, directory: str, run_id: str, run_attempt: int) -> dict[int, list[str]]:
+    """Use only complete, run-bound sanitized reports from the trusted scan jobs."""
+    root = Path(directory).resolve()
+    conclusions: dict[int, list[str]] = {}
+    for result in results:
+        if result.get("state") != "scan":
+            continue
+        number = result["pr_number"]
+        verdicts = []
+        for contribution in result["contributions"]:
+            if not isinstance(contribution, dict):
+                break
+            owner, repo = contribution.get("owner"), contribution.get("repo")
+            if not all(isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.-]+", value) for value in (owner, repo)):
+                break
+            report_file = (root / f"scan-findings-pr-{number}-{owner}-{repo}-attempt-{run_attempt}" / "findings.json").resolve()
+            try:
+                if not report_file.is_relative_to(root) or report_file.stat().st_size > 10_000_000:
+                    break
+                report = json.loads(report_file.read_text())
+                if not isinstance(report, dict):
+                    break
+                score = report.get("score")
+                if (report.get("schema_version") != "sanitized-scan.v1"
+                        or report.get("workflow_run_id") != run_id
+                        or type(report.get("workflow_run_attempt")) is not int
+                        or report.get("workflow_run_attempt") != run_attempt
+                        or not isinstance(report.get("source_commit"), str)
+                        or not re.fullmatch(r"[0-9a-f]{40}", report["source_commit"])
+                        or type(score) not in (int, float) or not 0 <= score <= 100):
+                    break
+            except (OSError, UnicodeError, json.JSONDecodeError):
+                break
+            verdicts.append("success" if score >= 75 else "failure")
+        # A partial or stale matrix can never clear the PR.
+        if len(verdicts) == len(result["contributions"]):
+            conclusions[number] = verdicts
     return conclusions
 
 
@@ -284,7 +339,7 @@ def reference_lines(run_url: str) -> list[str]:
 
 
 def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
-    """Build a sectioned comment for a centralized scan that did not pass."""
+    """Keep scan remediation in one paragraph without treating job failure as a score."""
 
     sentences = prose_sentences(status_prose(summary))
     if not sentences:
@@ -294,41 +349,18 @@ def scan_block_comment(result: dict[str, object], summary: str, run_url: str, me
         lead = lead[0].lower() + lead[1:]
     number = result.get("pr_number")
     artifact_prefix = f"scan-findings-pr-{number}-" if isinstance(number, int) else "scan-findings-pr-"
-    follow_on = sentences[1:]
-    gate = [
-        sentence
-        for sentence in follow_on
-        if sentence.startswith("Keep the contribution blocked")
-        or sentence.startswith("Finding severities are advisory")
+    parts = [
+        f"{COMMENT_MARKER} {mention}, {lead}",
+        f"Check the [sanitized findings]({run_url}) in `{artifact_prefix}` for the measured score and rule locations; a failed job alone does not establish a score below 75.",
+        "Fix or document rule-level findings, rerun the catalog scan, and request review once a catalog-owned scan verifies a score of at least 75; finding severities are advisory.",
+        "Source-repository scanner CI is optional.",
     ]
-    explanation = [sentence for sentence in follow_on if sentence not in gate]
-    lines = [f"{COMMENT_MARKER} {mention}, {lead}", ""]
-    if explanation:
-        lines.extend(["### Result", ""])
-        for sentence in explanation:
-            lines.extend([sentence, ""])
-    lines.extend(["### Merge status", ""])
-    for sentence in gate:
-        lines.extend([sentence, ""])
-    if "source-repository scanner CI is optional" not in summary:
-        lines.extend(["Source-repository scanner CI is optional.", ""])
-    lines.extend(["### Findings", "", findings_markdown(artifact_prefix, run_url), ""])
     if missing_scanner_ci_repos(result):
-        lines.extend(
-            [
-                "### Source repository",
-                "",
-                "If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required.",
-                "",
-                f"1. Use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}).",
-                "2. Reproduce locally, then run the same pinned scanner on push and pull requests.",
-                "3. Fix or document rule-level findings.",
-                "4. Link the source run, rerun the catalog scan, and request review.",
-                "",
-            ]
+        parts.append(
+            f"If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}). "
+            "Reproduce locally with the appropriate ecosystem, run the same pinned scanner in CI, and link the source run for re-review."
         )
-    lines.extend(reference_lines(run_url))
-    return "\n".join(lines)
+    return one_paragraph(" ".join(parts))
 
 
 def remediation_comment(
@@ -501,7 +533,9 @@ def main() -> int:
                 if not isinstance(number, int) or not isinstance(contributions, list) or not contributions:
                     raise RuntimeError("scanner result is missing its PR number or contributions")
                 expected[number] = len(contributions)
-        scanner_jobs = scan_conclusions(repository, run_id, token, expected, int(attempt_text))
+        findings_dir = os.environ.get("SCAN_FINDINGS_DIR", "").strip()
+        scanner_jobs = (artifact_conclusions(results, findings_dir, run_id, int(attempt_text))
+                        if findings_dir else scan_conclusions(repository, run_id, token, expected, int(attempt_text)))
         for result in results:
             if not isinstance(result, dict):
                 raise RuntimeError("validator returned a non-object PR result")
