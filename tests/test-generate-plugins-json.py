@@ -75,6 +75,55 @@ class GeneratorOutputSafetyTests(unittest.TestCase):
             self.assertTrue((Path(folder) / ".agents/plugins/marketplace.json").is_file())
 
 
+    def test_require_upstreams_rejects_offline_mode(self):
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            MODULE.main(["--offline", "--require-upstreams"])
+
+    def test_require_upstreams_codex_failure_leaves_outputs_unchanged(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            old = root / "plugins.json"
+            old.write_text('{"sentinel": true}\\n')
+            with (
+                patch.object(MODULE, "load_codex_plugins", side_effect=OSError("network unavailable")),
+                patch.object(MODULE, "load_grok_plugins") as grok,
+                contextlib.redirect_stdout(io.StringIO()),
+                self.assertRaisesRegex(RuntimeError, "Codex upstream feed unavailable"),
+            ):
+                MODULE.main(["--require-upstreams", "--output-dir", folder])
+            grok.assert_not_called()
+            self.assertEqual(old.read_text(), '{"sentinel": true}\\n')
+            self.assertFalse((root / ".agents/plugins/marketplace.json").exists())
+
+    def test_require_upstreams_missing_grok_leaves_outputs_unchanged(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=[{"name": "Codex Demo"}]),
+                patch.object(MODULE, "load_grok_plugins", return_value=[]),
+                contextlib.redirect_stdout(io.StringIO()),
+                self.assertRaisesRegex(RuntimeError, "Grok upstream feed is unavailable or empty"),
+            ):
+                MODULE.main(["--require-upstreams", "--output-dir", folder])
+            self.assertFalse((root / "plugins.json").exists())
+            self.assertFalse((root / ".agents/plugins/marketplace.json").exists())
+
+    def test_require_upstreams_with_both_sources_writes_both_feeds(self):
+        codex = {"name": "Codex Demo", "owner": "test", "repo": "codex"}
+        grok = {"name": "Grok Demo", "owner": "test", "repo": "grok"}
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=[codex]),
+                patch.object(MODULE, "load_grok_plugins", return_value=[grok]),
+                patch.object(MODULE, "merge_readme_additions", return_value=([codex, grok], 0)),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                MODULE.main(["--require-upstreams", "--output-dir", folder])
+            self.assertEqual(json.loads((root / "plugins.json").read_text())["total"], 2)
+            self.assertEqual(len(json.loads((root / ".agents/plugins/marketplace.json").read_text())["plugins"]), 2)
+
+
 def only_path_resolves(path: str):
     """Fake `urlopen` where `path` answers 200 and every other path 404s."""
 

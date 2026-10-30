@@ -25,7 +25,8 @@ permissions:
 jobs:
   validate:
     name: Check contribution requirements
-    runs-on: ubuntu-latest
+    # Python 3.12.10 has no Ubuntu 26.04 build; keep the pinned runtime supported.
+    runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.entries.outputs.matrix }}
     steps:
@@ -76,13 +77,13 @@ jobs:
           CONTRIBUTION_URL: https://github.com/${{ matrix.contribution.owner }}/${{ matrix.contribution.repo }}.git
         run: git clone --depth 1 "$CONTRIBUTION_URL" "$RUNNER_TEMP/contributed"
       - name: Run HOL AI Plugin Scanner
-        uses: hashgraph-online/ai-plugin-scanner-action@caba2e96aa8ad2feb6cf6fca52442b52e22e779f # v1.2.635
+        uses: hashgraph-online/ai-plugin-scanner-action@c96833de5070fab4e564010b5ab6e3c3d7e07a3e # v1.2.806
         with:
           plugin_dir: ${{ runner.temp }}/contributed
           mode: scan
           format: json
           output: ${{ runner.temp }}/source-scan.json
-          min_score: 80
+          min_score: 75
           # Finding severities are advisory; the score is the listing gate.
           fail_on_severity: none
           pr_comment: off

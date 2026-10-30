@@ -190,13 +190,35 @@ def readme_urls_in_section(readme: str, section: str) -> set[str]:
     return urls
 
 
+def readme_listing_signatures_in_section(
+    readme: str, section: str
+) -> set[tuple[str, str, str]]:
+    """Return name, normalized URL and description for rows in one section."""
+
+    current_section = ""
+    signatures: set[tuple[str, str, str]] = set()
+    for line in readme.splitlines():
+        heading = re.match(r"^##\s+(.+?)\s*$", line)
+        if heading:
+            current_section = heading.group(1).strip()
+            continue
+        if current_section != section:
+            continue
+        match = README_ENTRY_RE.match(line.strip())
+        if match:
+            signatures.add(
+                (match.group(1).strip(), normalize_url(match.group(2)), match.group(5).strip())
+            )
+    return signatures
+
+
 def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in a README diff."""
+    """Find added or revised Community Plugins rows in a README diff."""
 
     if not diff:
         return []
 
-    base_urls = readme_urls_in_section(base_readme, "Community Plugins")
+    base_signatures = readme_listing_signatures_in_section(base_readme, "Community Plugins")
     readme_lines = head_readme.splitlines()
 
     entries: list[Contribution] = []
@@ -212,7 +234,8 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
             match = README_ENTRY_RE.match(content.strip())
             if match and current_readme_section(readme_lines, added_line_number) == "Community Plugins":
                 url = normalize_url(match.group(2))
-                if url not in base_urls and url not in seen_urls:
+                signature = (match.group(1).strip(), url, match.group(5).strip())
+                if signature not in base_signatures and url not in seen_urls:
                     seen_urls.add(url)
                     entries.append(
                         Contribution(
@@ -232,7 +255,7 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
 
 
 def get_new_readme_entries(base_ref: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in the local README diff."""
+    """Find added or revised Community Plugins rows in the local README diff."""
 
     diff = git("diff", base_ref, "--", "README.md")
     if not diff or not README_PATH.exists():
@@ -594,7 +617,7 @@ def scan_open_pull_requests(
                     "failure_reasons": [],
                 }
             )
-            report_lines.append(f"- **{prefix}: PASS** — no new Community Plugins entries")
+            report_lines.append(f"- **{prefix}: PASS** — no new or revised Community Plugins entries")
             continue
 
         report_lines.append(f"- **{prefix}**")
