@@ -1128,6 +1128,7 @@ OpenCode plugins are npm packages or local directories registered in `opencode.j
 - [OpenCode Attention Inbox](https://github.com/YidiDev/opencode-attention-inbox) - Independent OpenCode V2 TUI sidebar inbox for pending permissions, questions, and successful unread completions, with navigation-only session switching.
 - [opencode-cursor](https://github.com/Nomadcxx/opencode-cursor) - OpenCode plugin for Cursor subscription models with streaming, thinking, tool calls, MCP support, and browser login through Cursor CLI or API-key authentication through the SDK.
 - [opencode-goal-plugin](https://github.com/prevalentWare/opencode-goal-plugin) - OpenCode plugin for persistent goals, completion evidence, and idle auto-continuation.
+- [opencode-plugins](https://github.com/rizal72/opencode-plugins) - OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works.
 - [Relay](https://github.com/knopkem/relay) - OpenCode plugin pipeline that plans with a strong model, implements with a fast one, then verifies and audits the work through file-based handoffs and a one-line protocol.
 - [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
 
