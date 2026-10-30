@@ -297,7 +297,7 @@ def scan_block_comment(result: dict[str, object], summary: str, run_url: str, me
     parts = [
         f"{COMMENT_MARKER} {mention}, {lead}",
         f"Check the [sanitized findings]({run_url}) in `{artifact_prefix}` for the measured score and rule locations; a failed job alone does not establish a score below 75.",
-        "Fix or document rule-level findings, rerun the catalog scan, and request review once a score of at least 75 is established; finding severities are advisory.",
+        "Fix or document rule-level findings, rerun the catalog scan, and request review once a catalog-owned scan verifies a score of at least 75; finding severities are advisory.",
         "Source-repository scanner CI is optional.",
     ]
     if missing_scanner_ci_repos(result):
