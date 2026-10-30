@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import difflib
 import importlib.util
 import json
 import sys
@@ -223,6 +224,71 @@ class ValidateContributionTests(unittest.TestCase):
         self.assertEqual([entry.repo for entry in entries], ["moved-plugin"])
 
 
+    def test_modified_existing_listing_requires_fresh_centralized_scan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Example Plugin](https://github.com/example/plugin) - Version 2.0.1.\n"
+        )
+        head = base.replace("Version 2.0.1.", "Version 2.1.0.")
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0].repo, "plugin")
+        self.assertIn("2.1.0", entries[0].description)
+
+    def test_existing_listing_renamed_requires_fresh_centralized_scan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Old Plugin Name](https://github.com/example/plugin) - Same source.\n"
+        )
+        head = base.replace("[Old Plugin Name]", "[New Plugin Name]")
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual([entry.display_name for entry in entries], ["New Plugin Name"])
+
+    def test_identical_listing_reorder_does_not_rescan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Alpha](https://github.com/example/alpha) - Alpha plugin.\n"
+            "- [Beta](https://github.com/example/beta) - Beta plugin.\n"
+        )
+        head = (
+            "## Community Plugins\n"
+            "- [Beta](https://github.com/example/beta) - Beta plugin.\n"
+            "- [Alpha](https://github.com/example/alpha) - Alpha plugin.\n"
+        )
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+        self.assertEqual(MODULE.get_new_readme_entries_from_diff(diff, base, head), [])
+
+
 class PublishOpenPrChecksTests(unittest.TestCase):
     def setUp(self) -> None:
         publisher_path = (
@@ -234,7 +300,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         sys.modules[spec.name] = self.publisher
         spec.loader.exec_module(self.publisher)
 
-    def test_check_succeeds_with_missing_ci_and_includes_optional_guidance(self) -> None:
+    def test_passing_score_does_not_recommend_missing_source_ci(self) -> None:
         result = {
             "pr_number": 12,
             "state": "scan",
@@ -244,10 +310,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
             ],
         }
-        conclusion, title, summary = self.publisher.check_summary(result, {12: []})
+        conclusion, title, summary = self.publisher.check_summary(result, {12: ["success"]})
         self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan unavailable")
-        self.assertIn("advisory", summary.lower())
+        self.assertEqual(title, "Centralized score threshold passed")
         comment = self.publisher.remediation_comment(
             result,
             conclusion,
@@ -255,20 +320,13 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("Contribution check passed", comment)
-        self.assertIn("Recommended: add scanner CI for security", comment)
-        self.assertIn("can merge without it", comment)
-        self.assertIn("MCP servers", comment)
-        self.assertIn("skills", comment)
-        self.assertIn("plugins", comment)
-        self.assertIn("recommend including", comment)
-        self.assertIn("full trust score", comment)
-        self.assertIn("10% trust-score reduction", comment)
-        self.assertIn("`example/plugin`", comment)
-        self.assertNotIn("needs updates before it can be merged", comment)
-        self.assertNotIn("must invoke", comment)
+        self.assertIn("score threshold of 75 was met", comment)
+        self.assertNotIn("scanner CI is recommended", comment)
+        self.assertNotIn("trust score", comment)
+        self.assertNotIn("\n", comment)
+        self.assertNotIn("\\n", comment)
 
-    def test_check_succeeds_when_advisory_scan_fails(self) -> None:
+    def test_failed_source_scan_requires_resolution(self) -> None:
         result = {
             "pr_number": 12,
             "state": "scan",
@@ -279,8 +337,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             {12: ["failure"]},
         )
-        self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan findings")
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Centralized scan did not pass")
+        self.assertIn("job conclusion alone cannot distinguish", summary)
         self.assertIn("advisory", summary.lower())
         comment = self.publisher.remediation_comment(
             result,
@@ -289,7 +348,43 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertNotIn("needs updates before it can be merged", comment)
+        self.assertIn("catalog-owned scan verifies a score of at least 75", comment)
+        self.assertIn("a failed job alone does not establish a score below 75", comment)
+        self.assertIn("Source-repository scanner CI is optional.", comment)
+        self.assertNotIn("\n", comment)
+        self.assertNotIn("###", comment)
+        self.assertIn("sanitized findings", comment)
+        self.assertIn("scan-findings-pr-12-", comment)
+        self.assertNotIn("\\n", comment)
+        self.assertNotIn("recommended, not required", comment)
+
+    def test_low_score_with_missing_ci_gets_conditional_optional_guidance(self) -> None:
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
+        }
+        _conclusion, title, summary = self.publisher.check_summary(result, {12: ["failure"]})
+        comment = self.publisher.remediation_comment(
+            result, "failure", title, summary, "https://example.test/run"
+        )
+
+        self.assertIn("If the completed report confirms a score below 75", comment)
+        self.assertIn("recommended, not required", comment)
+        self.assertIn("SHA-pinned workflow", comment)
+        self.assertIn("Reproduce locally", comment)
+        self.assertIn("Fix or document rule-level findings", comment)
+        self.assertIn("link the source run", comment)
+        self.assertIn("request review", comment)
+        self.assertNotIn("###", comment)
+        self.assertNotIn("\n", comment)
+        self.assertIn("sanitized findings", comment)
+        self.assertNotIn("\\n", comment)
+        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", comment)
 
     def test_scan_passed_title_is_used_when_jobs_succeed(self) -> None:
         conclusion, title, _summary = self.publisher.check_summary(
@@ -301,7 +396,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             {12: ["success", "success"]},
         )
         self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan passed")
+        self.assertEqual(title, "Centralized score threshold passed")
 
     def test_comment_updater_replaces_the_prior_marker_comment(self) -> None:
         calls: list[tuple[str, str]] = []
@@ -340,7 +435,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertEqual(calls, [("PATCH", "/issues/comments/44")])
         self.assertNotIn(("POST", "/issues/12/comments"), calls)
 
-    def test_comment_is_posted_when_scanner_ci_is_missing(self) -> None:
+    def test_success_does_not_post_comment_for_missing_scanner_ci(self) -> None:
         calls: list[tuple[str, str]] = []
 
         def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
@@ -372,7 +467,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 "https://example.test/run",
                 "token",
             )
-        self.assertEqual(calls, [("POST", "/issues/12/comments")])
+        self.assertEqual(calls, [])
 
     def test_success_without_missing_ci_does_not_post_a_new_comment(self) -> None:
         calls: list[tuple[str, str]] = []
