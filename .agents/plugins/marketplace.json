@@ -11826,6 +11826,21 @@
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "b2bsearch",
+      "displayName": "b2bsearch",
+      "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "b2bsearch",
+      "repo": "b2bsearch-plugin",
+      "url": "https://github.com/b2bsearch/b2bsearch-plugin",
+      "install_url": "https://raw.githubusercontent.com/b2bsearch/b2bsearch-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Backlot",
       "displayName": "Backlot",
       "description": "Local emulator for Slack, Gmail, Google Drive, GitHub, Jira, Notion, S3 and other enterprise SaaS APIs, reproducing their response shapes, pagination, auth and per-document ACLs over a corpus you supply, so agents and RAG pipelines can be tested with no vendor account; `backlot mcp` serves every source as MCP tools",
