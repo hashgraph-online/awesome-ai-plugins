@@ -101,7 +101,21 @@ def scan_conclusions(
 
         conclusions: dict[int, list[str]] = {}
         pending: set[int] = set()
-        for order, number, conclusion in latest.values():
+        for name, (order, number, conclusion) in latest.items():
+            # The jobs list can lag behind a finished matrix job. Confirm only
+            # the latest pending job directly, preserving run/attempt identity.
+            if conclusion is None and order[0] >= run_attempt and order[1] > 0:
+                detail = github_api(repository, f"/actions/jobs/{order[1]}", token)
+                if (
+                    isinstance(detail, dict)
+                    and detail.get("id") == order[1]
+                    and str(detail.get("run_id")) == run_id
+                    and detail.get("run_attempt") == order[0]
+                    and detail.get("name") == name
+                    and detail.get("status") == "completed"
+                    and isinstance(detail.get("conclusion"), str)
+                ):
+                    conclusion = detail["conclusion"]
             if conclusion is None or order[0] < run_attempt:
                 pending.add(number)
             else:
