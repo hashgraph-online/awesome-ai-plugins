@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1069,
+  "total": 1070,
   "platforms": [
     "codex",
     "grok",
@@ -13774,6 +13774,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-im-companion",
       "description": "Workspace presence companion for dsh-im: see which workspaces have an assistant on duty and whether they are online",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-jev-plugin",
+      "url": "https://github.com/luobosibing2/dsh-jev-plugin",
+      "owner": "luobosibing2",
+      "repo": "dsh-jev-plugin",
+      "description": "DeepSeek Harness plugin that uses Jev or Luna judgments for skill selection, completion checks, supervision, tool-output filtering, and single-operation approval assistance",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",

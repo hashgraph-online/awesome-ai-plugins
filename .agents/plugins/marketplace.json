@@ -14804,6 +14804,20 @@
       "url": "https://github.com/FeatherHunter/dsh-im-companion"
     },
     {
+      "name": "dsh-jev-plugin",
+      "displayName": "dsh-jev-plugin",
+      "description": "DeepSeek Harness plugin that uses Jev or Luna judgments for skill selection, completion checks, supervision, tool-output filtering, and single-operation approval assistance",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "luobosibing2",
+      "repo": "dsh-jev-plugin",
+      "url": "https://github.com/luobosibing2/dsh-jev-plugin"
+    },
+    {
       "name": "dsh-m",
       "displayName": "dsh-m",
       "description": "DeepSeek Harness plugin marketplace: searchable community and curated listings with install, update, toggle, and uninstall handled from one sidebar panel, plus eight agent tools and a standalone `dshm` CLI; install with `dsh plugin --profile web add dsh-m`",
