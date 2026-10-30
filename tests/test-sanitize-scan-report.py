@@ -9,6 +9,15 @@ spec.loader.exec_module(reporter)
 
 
 class ScanReportTests(unittest.TestCase):
+    def test_workflow_identity_is_allowlisted_and_cannot_come_from_source_report(self):
+        raw = {"score": 75, "findings": [], "workflow_run_id": "999", "workflow_run_attempt": 99}
+        report = reporter.sanitize(raw, Path("/scan"), "a" * 40, "123", "2")
+        self.assertEqual(report["workflow_run_id"], "123")
+        self.assertEqual(report["workflow_run_attempt"], 2)
+        report = reporter.sanitize(raw, Path("/scan"), "a" * 40, "private", "-1")
+        self.assertIsNone(report["workflow_run_id"])
+        self.assertIsNone(report["workflow_run_attempt"])
+
     def test_allowlist_preserves_location_but_never_source_or_secret_text(self):
         raw = {"score": 75, "pluginDir": "/outside/private", "findings": [{
             "ruleId": "HARDCODED_SECRET", "severity": "high", "filePath": "/scan/tests/fixture.py",
