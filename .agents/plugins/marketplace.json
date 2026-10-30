@@ -5283,6 +5283,21 @@
       "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
+      "name": "97",
+      "displayName": "97",
+      "description": "Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "oribarilan",
+      "repo": "97",
+      "url": "https://github.com/oribarilan/97",
+      "installation_url": "https://github.com/oribarilan/97#readme"
+    },
+    {
       "name": "antirea",
       "displayName": "antirea",
       "description": "A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks",
@@ -7947,6 +7962,20 @@
       "repo": "mcp-grafana",
       "url": "https://github.com/jburgess/mcp-grafana",
       "install_url": "https://raw.githubusercontent.com/jburgess/mcp-grafana/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GraphFlow",
+      "displayName": "GraphFlow",
+      "description": "MCP server and cross-agent installer providing surgical symbol read, edit, exec and macro tools for coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "Roarpeng",
+      "repo": "GraphFlow",
+      "url": "https://github.com/Roarpeng/GraphFlow"
     },
     {
       "name": "Gremlyn",
@@ -11714,6 +11743,20 @@
       "install_url": "https://raw.githubusercontent.com/Hredo/ai-command-center/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "AI-FluxMux",
+      "displayName": "AI-FluxMux",
+      "description": "Windows desktop router for OpenAI-compatible clients with local and cloud models, per-profile routing, model variants and usage telemetry; source is available under the PolyForm Noncommercial license",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "ArchPrime",
+      "repo": "AI-FluxMux",
+      "url": "https://github.com/ArchPrime/AI-FluxMux"
+    },
+    {
       "name": "ai-memory-skill",
       "displayName": "ai-memory-skill",
       "description": "Persistent memory skill for Claude Code and Kiro that auto-loads markdown context and runs a consolidation pass (`npx ai-memory-skill`)",
@@ -14987,6 +15030,20 @@
       "owner": "FeatherHunter",
       "repo": "dsh-prompt",
       "url": "https://github.com/FeatherHunter/dsh-prompt"
+    },
+    {
+      "name": "dsh-ui-usage-billing",
+      "displayName": "dsh-ui-usage-billing",
+      "description": "Usage billing dashboard for DeepSeek Harness with sidebar cost metrics, session-log aggregation, and multi-provider pricing",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "kenz1117",
+      "repo": "dsh-ui-usage-billing",
+      "url": "https://github.com/kenz1117/dsh-ui-usage-billing"
     },
     {
       "name": "dsh-vision-router",
