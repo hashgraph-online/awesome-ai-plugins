@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1071,
+  "total": 1072,
   "platforms": [
     "codex",
     "grok",
@@ -14203,6 +14203,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "opencode-plugins",
+      "url": "https://github.com/rizal72/opencode-plugins",
+      "owner": "rizal72",
+      "repo": "opencode-plugins",
+      "description": "OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/rizal72/opencode-plugins#readme",
       "ecosystems": [
         "opencode"
       ]

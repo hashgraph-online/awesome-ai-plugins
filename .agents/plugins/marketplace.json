@@ -15262,6 +15262,21 @@
       "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme"
     },
     {
+      "name": "opencode-plugins",
+      "displayName": "opencode-plugins",
+      "description": "OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "rizal72",
+      "repo": "opencode-plugins",
+      "url": "https://github.com/rizal72/opencode-plugins",
+      "installation_url": "https://github.com/rizal72/opencode-plugins#readme"
+    },
+    {
       "name": "Relay",
       "displayName": "Relay",
       "description": "OpenCode plugin pipeline that plans with a strong model, implements with a fast one, then verifies and audits the work through file-based handoffs and a one-line protocol",
