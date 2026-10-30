@@ -82,7 +82,7 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
-Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must complete successfully and score at least 80 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. Failed or unavailable scans still block merge. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
+Scanner CI in the source repository is optional for listing. The catalog runs its own required source scan: it must establish a normalized score of at least 75 before merge. Finding severities are advisory for listing eligibility and remain visible for maintainer review. An unavailable score blocks merge; non-gating action failures are advisory. We recommend maintainer-owned CI for continuous checks on MCP servers, skills, plugins, and other agent extensions. Projects that maintain scanner CI receive the full Registry trust score; projects without it receive a 10% trust-score reduction.
 
 See the full guide: [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md)
 
@@ -123,12 +123,25 @@ its own scanner workflow.
 
 Existing open pull requests are covered by the scheduled and manually
 dispatchable `.github/workflows/sweep-open-prs.yml` workflow. It reviews each
-PR's exact README base/head revisions without executing fork code, queues an
+PR's exact README base/head revisions without executing fork code, queues a
 required source scan, and publishes the result on each PR head. When the source
 repository has no scanner CI, the bot recommends the action and explains the
 trust-score benefit. Missing scanner CI does not replace or waive the required
 centralized scan.
 Reruns update the existing bot comment and check in place.
+
+### First-time fork workflow approval
+
+GitHub Actions may report `action_required` for a pull request from a first-time
+outside contributor until an authorized repository maintainer approves the
+workflow run. That state means the job has **not run**; it is neither a passing
+check nor a measured scanner failure. The original contributor cannot approve
+their own run by editing the PR or switching accounts. Maintainers should
+review the fork's proposed changes and use GitHub's normal workflow-approval
+controls if appropriate. Separately, the catalog's trusted centralized sweep
+can collect source scan evidence without running code supplied by the fork.
+A passing centralized score still does not waive CI requirements or independent
+human/security review, and no catalog listing is published solely by this gate.
 
 Use scanner outputs as evidence for maintainers/reviewers:
 - Structural lint results
