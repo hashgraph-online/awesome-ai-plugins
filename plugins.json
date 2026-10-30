@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1071,
+  "total": 1072,
   "platforms": [
     "codex",
     "grok",
@@ -4945,6 +4945,20 @@
       "platform": "grok",
       "ecosystems": [
         "grok"
+      ]
+    },
+    {
+      "name": "97",
+      "url": "https://github.com/oribarilan/97",
+      "owner": "oribarilan",
+      "repo": "97",
+      "description": "Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/oribarilan/97#readme",
+      "ecosystems": [
+        "agent-skills"
       ]
     },
     {
