@@ -20,6 +20,23 @@ SPEC.loader.exec_module(MODULE)
 
 
 class DeliveryRegressionTests(unittest.TestCase):
+    def test_docs_list_title_delivers_only_the_actual_catalog_addition(self):
+        with patch.multiple(
+            MODULE, GH_TOKEN="fixture", PR_NUMBER="1075", REPO_FULL="owner/catalog",
+            PR_AUTHOR="author", PR_TITLE="docs: list OpenCode Tab Wrangler with CLI-only installation",
+        ), patch.object(MODULE, "has_existing_claim_comment", return_value=False), patch.object(
+            MODULE, "parse_pr_diff_for_repos", return_value={"owner/plugin"}
+        ), patch.object(MODULE, "catalog_source_repos", return_value={"owner/plugin"}), patch.object(
+            MODULE, "fetch_catalog_repos", return_value=set()
+        ), patch.object(MODULE, "post_comment", return_value=True) as post:
+            self.assertEqual(MODULE.main(), 0)
+            post.assert_called_once_with("author", {"owner/plugin"})
+
+    def test_docs_maintenance_titles_still_skip_claim_delivery(self):
+        for title in ("docs: clarify scanner policy", "docs: add PANews", "chore(catalog): refresh feeds"):
+            with self.subTest(title=title):
+                self.assertTrue(MODULE.should_skip_title(title))
+
     def test_imported_local_link_without_bundle_cannot_block_an_unrelated_notice(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

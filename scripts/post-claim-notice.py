@@ -233,11 +233,11 @@ def fetch_merged_pr_metadata():
 
 def should_skip_title(title: str) -> bool:
     """Return True if the PR title matches a non-plugin pattern."""
-    # `docs: add <plugin>` is a common legitimate contribution title. Allow it
+    # `docs: add/list <plugin>` are legitimate contribution titles. Allow them
     # through the title gate, while retaining specific docs-only exclusions below.
-    allow_docs_add = bool(re.match(r"^docs?:\s+add\b", title.strip(), re.IGNORECASE))
+    allow_docs_listing = bool(re.match(r"^docs?:\s+(?:add|list)\b", title.strip(), re.IGNORECASE))
     for pattern in SKIP_PATTERNS:
-        if pattern == r"^docs?:" and allow_docs_add:
+        if pattern == r"^docs?:" and allow_docs_listing:
             continue
         if re.search(pattern, title, re.IGNORECASE):
             return True
