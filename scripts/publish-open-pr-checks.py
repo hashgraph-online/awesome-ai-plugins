@@ -284,7 +284,7 @@ def reference_lines(run_url: str) -> list[str]:
 
 
 def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
-    """Build a sectioned comment for a centralized scan that did not pass."""
+    """Keep scan remediation in one paragraph without treating job failure as a score."""
 
     sentences = prose_sentences(status_prose(summary))
     if not sentences:
@@ -294,41 +294,18 @@ def scan_block_comment(result: dict[str, object], summary: str, run_url: str, me
         lead = lead[0].lower() + lead[1:]
     number = result.get("pr_number")
     artifact_prefix = f"scan-findings-pr-{number}-" if isinstance(number, int) else "scan-findings-pr-"
-    follow_on = sentences[1:]
-    gate = [
-        sentence
-        for sentence in follow_on
-        if sentence.startswith("Keep the contribution blocked")
-        or sentence.startswith("Finding severities are advisory")
+    parts = [
+        f"{COMMENT_MARKER} {mention}, {lead}",
+        f"Check the [sanitized findings]({run_url}) in `{artifact_prefix}` for the measured score and rule locations; a failed job alone does not establish a score below 75.",
+        "Fix or document rule-level findings, rerun the catalog scan, and request review once a catalog-owned scan verifies a score of at least 75; finding severities are advisory.",
+        "Source-repository scanner CI is optional.",
     ]
-    explanation = [sentence for sentence in follow_on if sentence not in gate]
-    lines = [f"{COMMENT_MARKER} {mention}, {lead}", ""]
-    if explanation:
-        lines.extend(["### Result", ""])
-        for sentence in explanation:
-            lines.extend([sentence, ""])
-    lines.extend(["### Merge status", ""])
-    for sentence in gate:
-        lines.extend([sentence, ""])
-    if "source-repository scanner CI is optional" not in summary:
-        lines.extend(["Source-repository scanner CI is optional.", ""])
-    lines.extend(["### Findings", "", findings_markdown(artifact_prefix, run_url), ""])
     if missing_scanner_ci_repos(result):
-        lines.extend(
-            [
-                "### Source repository",
-                "",
-                "If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required.",
-                "",
-                f"1. Use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}).",
-                "2. Reproduce locally, then run the same pinned scanner on push and pull requests.",
-                "3. Fix or document rule-level findings.",
-                "4. Link the source run, rerun the catalog scan, and request review.",
-                "",
-            ]
+        parts.append(
+            f"If the completed report confirms a score below 75, source-repository scanner CI is recommended, not required: use the SHA-pinned workflow in the [scanner guide]({SCANNER_GUIDE_URL}). "
+            "Reproduce locally with the appropriate ecosystem, run the same pinned scanner in CI, and link the source run for re-review."
         )
-    lines.extend(reference_lines(run_url))
-    return "\n".join(lines)
+    return one_paragraph(" ".join(parts))
 
 
 def remediation_comment(
