@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1078,
+  "total": 1082,
   "platforms": [
     "codex",
     "grok",
@@ -5410,6 +5410,20 @@
       ]
     },
     {
+      "name": "uCoz",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "UI Verify",
       "url": "https://github.com/uiverify/uiverify",
       "owner": "uiverify",
@@ -8579,6 +8593,20 @@
       ]
     },
     {
+      "name": "Mnemosyne OS",
+      "url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS",
+      "owner": "Mnemosyne-OS",
+      "repo": "Mnemosyne-Neural-OS",
+      "description": "MCP server: MIT stdio server that gives an agent the vaults the user chooses in the Mnemosyne OS desktop app, where watched folders feed separate vaults on the user's machine searched by vector and local BM25; the memory tools need the free desktop app running, and its memory engine ships closed",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "model-orchestration",
       "url": "https://github.com/divyamrastogi/model-orchestration",
       "owner": "divyamrastogi",
@@ -11085,6 +11113,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "b2bsearch",
+      "url": "https://github.com/b2bsearch/b2bsearch-plugin",
+      "owner": "b2bsearch",
+      "repo": "b2bsearch-plugin",
+      "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/b2bsearch/b2bsearch-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -14298,6 +14340,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "opencode-plugins",
+      "url": "https://github.com/rizal72/opencode-plugins",
+      "owner": "rizal72",
+      "repo": "opencode-plugins",
+      "description": "OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/rizal72/opencode-plugins#readme",
       "ecosystems": [
         "opencode"
       ]

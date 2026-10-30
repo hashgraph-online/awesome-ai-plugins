@@ -5778,6 +5778,21 @@
       "installation_url": "https://github.com/mouadja02/skills#readme"
     },
     {
+      "name": "uCoz",
+      "displayName": "uCoz",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme"
+    },
+    {
       "name": "UI Verify",
       "displayName": "UI Verify",
       "description": "Agent skills for visual testing: set up screenshot tests on your existing Storybook, Playwright or Vitest suite, check a UI change before pushing, and triage each build's diffs through the UI Verify MCP server",
@@ -9193,6 +9208,21 @@
       "install_url": "https://raw.githubusercontent.com/Ikalus1988/MisakaNet/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Mnemosyne OS",
+      "displayName": "Mnemosyne OS",
+      "description": "MCP server: MIT stdio server that gives an agent the vaults the user chooses in the Mnemosyne OS desktop app, where watched folders feed separate vaults on the user's machine searched by vector and local BM25; the memory tools need the free desktop app running, and its memory engine ships closed",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Mnemosyne-OS",
+      "repo": "Mnemosyne-Neural-OS",
+      "url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS",
+      "installation_url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS#readme"
+    },
+    {
       "name": "model-orchestration",
       "displayName": "model-orchestration",
       "description": "Manager/worker orchestration for Claude Code: keep your smartest model as the manager and delegate implementation and token-hungry work to isolated headless workers backed by any Anthropic-compatible API (z.ai GLM, Kimi, DeepSeek, LiteLLM proxies)",
@@ -11897,6 +11927,21 @@
       "repo": "cosmosdb-agent-kit",
       "url": "https://github.com/AzureCosmosDB/cosmosdb-agent-kit",
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "b2bsearch",
+      "displayName": "b2bsearch",
+      "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "b2bsearch",
+      "repo": "b2bsearch-plugin",
+      "url": "https://github.com/b2bsearch/b2bsearch-plugin",
+      "install_url": "https://raw.githubusercontent.com/b2bsearch/b2bsearch-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Backlot",
@@ -15362,6 +15407,21 @@
       "repo": "opencode-goal-plugin",
       "url": "https://github.com/prevalentWare/opencode-goal-plugin",
       "installation_url": "https://github.com/prevalentWare/opencode-goal-plugin#readme"
+    },
+    {
+      "name": "opencode-plugins",
+      "displayName": "opencode-plugins",
+      "description": "OpenCode plugins: a model picker with each model's intelligence and tok/s beside its price, one-click updates of installed plugins, git status, session search, and a cup of coffee that keeps a Mac awake while the agent works",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "rizal72",
+      "repo": "opencode-plugins",
+      "url": "https://github.com/rizal72/opencode-plugins",
+      "installation_url": "https://github.com/rizal72/opencode-plugins#readme"
     },
     {
       "name": "Relay",
