@@ -152,6 +152,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Sketchbook Style](https://github.com/Keith-CY/sketchbook-style) - Agent skill that draws any object as a black-ink industrial-design sketchbook page in four looks with open image models on ComfyUI or mflux, no API key; tested in Claude Code.
 - [skill-skill](https://github.com/jack-reson8/skill-skill) - Agent skill for writing and linting Claude skills, with a static audit script that reports a 0-100 health score.
 - [skills](https://github.com/mouadja02/skills) - A curated collection of 799 agent skills across 36 categories, installable into Claude Code, Cursor, and other SKILL.md-aware clients.
+- [talk-for-claude](https://github.com/goodrahstar/talk-for-claude) - Claude Code skill that rewrites the last reply for listening and reads it aloud with Kokoro-82M running locally on Apple Silicon Macs, offline and with no API key.
 - [UI Verify](https://github.com/uiverify/uiverify) - Agent skills for visual testing: set up screenshot tests on your existing Storybook, Playwright or Vitest suite, check a UI change before pushing, and triage each build's diffs through the UI Verify MCP server.
 - [ui-craft](https://github.com/educlopez/ui-craft) - Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates.
 - [vibes-plug](https://github.com/roedyrustam/vibes-plug) - Cross-IDE AI skill collection that orchestrates 147 specialized subagents for full-stack development workflows.
