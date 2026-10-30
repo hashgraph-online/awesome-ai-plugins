@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1071,
+  "total": 1072,
   "platforms": [
     "codex",
     "grok",
@@ -5391,6 +5391,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/mouadja02/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "uCoz",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]

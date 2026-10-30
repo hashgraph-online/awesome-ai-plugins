@@ -5763,6 +5763,21 @@
       "installation_url": "https://github.com/mouadja02/skills#readme"
     },
     {
+      "name": "uCoz",
+      "displayName": "uCoz",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme"
+    },
+    {
       "name": "UI Verify",
       "displayName": "UI Verify",
       "description": "Agent skills for visual testing: set up screenshot tests on your existing Storybook, Playwright or Vitest suite, check a UI change before pushing, and triage each build's diffs through the UI Verify MCP server",
