@@ -2996,6 +2996,21 @@
       "install_url": "https://raw.githubusercontent.com/LinespottingOrg/GrokBuildRemote-Agents/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Bulk BG Remove",
+      "displayName": "Bulk BG Remove",
+      "description": "Remove image backgrounds locally and in bulk with BiRefNet or lighter ONNX models, auto-certify clean cut-outs and export shop-ready white square JPEGs.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Btike",
+      "repo": "bulk-bg-remove",
+      "url": "https://github.com/Btike/bulk-bg-remove",
+      "install_url": "https://raw.githubusercontent.com/Btike/bulk-bg-remove/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "BulkTranscripts: YouTube Transcripts",
       "displayName": "BulkTranscripts: YouTube Transcripts",
       "description": "Remote MCP server and skill for YouTube transcripts of one video, a whole channel or a playlist, plus YouTube search and new-upload tracking.",
