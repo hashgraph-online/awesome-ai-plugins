@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -13,6 +14,62 @@ SPEC.loader.exec_module(MODULE)
 
 
 class PublishOpenPrChecksTests(unittest.TestCase):
+    def artifact_fixture(self, directory, **changes):
+        report = {"schema_version": "sanitized-scan.v1", "workflow_run_id": "1",
+                  "workflow_run_attempt": 2, "source_commit": "a" * 40, "score": 75}
+        report.update(changes)
+        path = Path(directory) / "scan-findings-pr-411-owner-plugin-attempt-2" / "findings.json"
+        path.parent.mkdir(exist_ok=True)
+        path.write_text(json.dumps(report))
+        return [{"pr_number": 411, "state": "scan", "contributions": [{"owner": "owner", "repo": "plugin"}]}]
+
+    def test_artifact_score_is_inclusive_and_independent_of_jobs_api(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(MODULE, "github_api", side_effect=AssertionError("Jobs API must not be used")):
+            for score, expected in ((75, "success"), (100, "success"), (74, "failure")):
+                result = self.artifact_fixture(directory, score=score)
+                self.assertEqual(MODULE.artifact_conclusions(result, directory, "1", 2), {411: [expected]})
+
+    def test_invalid_or_stale_artifact_cannot_clear_the_gate(self):
+        for key, value in (("workflow_run_id", "2"), ("workflow_run_attempt", 1),
+                           ("workflow_run_attempt", True), ("schema_version", "unknown"),
+                           ("source_commit", ""), ("score", None), ("score", True),
+                           ("score", 101), ("score", float("nan"))):
+            with self.subTest(key=key, value=value), tempfile.TemporaryDirectory() as directory:
+                result = self.artifact_fixture(directory, **{key: value})
+                self.assertEqual(MODULE.artifact_conclusions(result, directory, "1", 2), {})
+
+    def test_missing_malformed_or_partial_artifact_matrix_never_passes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result = self.artifact_fixture(directory)
+            result[0]["contributions"].append({"owner": "owner", "repo": "missing"})
+            self.assertEqual(MODULE.artifact_conclusions(result, directory, "1", 2), {})
+            result[0]["contributions"].pop()
+            report = Path(directory) / "scan-findings-pr-411-owner-plugin-attempt-2" / "findings.json"
+            report.write_text("invalid")
+            self.assertEqual(MODULE.artifact_conclusions(result, directory, "1", 2), {})
+            report.unlink()
+            self.assertEqual(MODULE.artifact_conclusions(result, directory, "1", 2), {})
+
+    def test_publisher_uses_current_attempt_artifacts_without_polling_jobs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result = self.artifact_fixture(directory)
+            env = {"GITHUB_REPOSITORY": "example/repo", "GITHUB_TOKEN": "test-token",
+                   "GITHUB_RUN_ID": "1", "GITHUB_RUN_ATTEMPT": "2",
+                   "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+                   "OPEN_PR_RESULTS": json.dumps(result), "SCAN_FINDINGS_DIR": directory}
+            with patch.dict(MODULE.os.environ, env, clear=True), patch.object(
+                MODULE, "scan_conclusions", return_value={}
+            ) as legacy, patch.object(MODULE, "publish_check") as publish:
+                self.assertEqual(MODULE.main(), 0)
+            self.assertEqual(publish.call_args.args[2], {411: ["success"]})
+            legacy.assert_not_called()
+
+    def test_sweep_downloads_run_attempt_bound_reports_for_the_publisher(self):
+        text = (Path(__file__).resolve().parents[1] / ".github/workflows/sweep-open-prs.yml").read_text()
+        self.assertIn("actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093", text)
+        self.assertIn("-attempt-${{ github.run_attempt }}", text)
+        self.assertIn("SCAN_FINDINGS_DIR: ${{ runner.temp }}/scan-findings", text)
+
     def test_centralized_scans_use_the_inclusive_75_point_minimum(self):
         root = Path(__file__).resolve().parents[1]
         for workflow in ("sweep-open-prs.yml", "validate-contribution.yml"):
@@ -83,6 +140,40 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
         self.assertNotIn(411, result)
 
+    def test_completed_job_recovers_a_stale_pending_jobs_list(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 1, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 1, "name": name,
+                  "status": "completed", "conclusion": "success"}
+        with patch.object(MODULE, "github_api", side_effect=[jobs, detail]) as api:
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["success"]})
+        self.assertEqual(api.call_args.args[1], "/actions/jobs/7")
+
+    def test_direct_job_cannot_clear_a_different_run_attempt_or_job(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 2, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 2, "name": name,
+                  "status": "completed", "conclusion": "success"}
+        for field, value in (("id", 8), ("run_id", 2), ("run_attempt", 1),
+                             ("name", "Scan PR (412, owner, other)"),
+                             ("status", "in_progress"), ("conclusion", None)):
+            with self.subTest(field=field), patch.object(MODULE, "SCAN_LOOKUP_ATTEMPTS", 1), patch.object(
+                MODULE, "github_api", side_effect=[jobs, {**detail, field: value}]
+            ):
+                result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1}, 2)
+                self.assertNotIn(411, result)
+
+    def test_direct_failed_job_remains_a_failure(self):
+        name = "Scan PR (411, owner, plugin)"
+        jobs = {"jobs": [{"id": 7, "run_attempt": 1, "name": name, "conclusion": None}]}
+        detail = {"id": 7, "run_id": 1, "run_attempt": 1, "name": name,
+                  "status": "completed", "conclusion": "failure"}
+        with patch.object(MODULE, "github_api", side_effect=[jobs, detail]):
+            result = MODULE.scan_conclusions("example/repo", "1", "token", {411: 1})
+        self.assertEqual(result, {411: ["failure"]})
+        self.assertEqual(MODULE.check_summary({"pr_number": 411, "state": "scan"}, result)[0], "failure")
+
     def test_failed_source_scan_blocks_merge(self):
         result = {"pr_number": 411, "state": "scan", "failure_reasons": []}
         conclusion, title, summary = MODULE.check_summary(
@@ -139,12 +230,17 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         self.assertNotIn("\n", body)
         self.assertNotIn("\\n", body)
-        self.assertIn("@builder, The centralized scan did not establish", body)
+        self.assertIn("@builder, the centralized scan did not establish", body)
+        self.assertNotIn("###", body)
+        self.assertIn("sanitized findings", body)
+        self.assertIn("scan-findings-pr-411-", body)
+        self.assertIn("a failed job alone does not establish a score below 75", body)
         self.assertIn("source-repository scanner CI is recommended, not required", body)
         self.assertIn("If the completed report confirms a score below 75", body)
-        self.assertIn("reproduce locally", body)
+        self.assertIn("Reproduce locally", body)
         self.assertIn("link the source run", body)
         self.assertIn("request review", body)
+        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", body)
         self.assertNotIn("Community Plugins format", body)
 
     def test_passing_score_does_not_recommend_source_scanner_ci(self):
