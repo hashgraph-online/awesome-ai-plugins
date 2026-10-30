@@ -14631,6 +14631,21 @@
       "install_url": "https://raw.githubusercontent.com/youdotcom-oss/agent-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "your-mail-mcp",
+      "displayName": "your-mail-mcp",
+      "description": "MCP server: read-only search over your IMAP mail, mirrored by mbsync into a local notmuch index and served over stdio or streamable HTTP with OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "wildsurfer",
+      "repo": "your-mail-mcp",
+      "url": "https://github.com/wildsurfer/your-mail-mcp",
+      "installation_url": "https://github.com/wildsurfer/your-mail-mcp#readme"
+    },
+    {
       "name": "YYLO Skills",
       "displayName": "YYLO Skills",
       "description": "Reusable agent skills maintained by YYLO: the canonical, independently versioned source for the ledger-tasks, wiki, workflow, artifact, benchmark, understand-project, plan-ledger-tasks and ralph-loop skills used by YYLO CLI and YYLO Ledger",
