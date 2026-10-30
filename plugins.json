@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-30",
-  "total": 1072,
+  "total": 1080,
   "platforms": [
     "codex",
     "grok",
@@ -4948,6 +4948,20 @@
       ]
     },
     {
+      "name": "97",
+      "url": "https://github.com/oribarilan/97",
+      "owner": "oribarilan",
+      "repo": "97",
+      "description": "Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/oribarilan/97#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "antirea",
       "url": "https://github.com/MockirDev/antirea",
       "owner": "MockirDev",
@@ -5391,6 +5405,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/mouadja02/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "uCoz",
+      "url": "https://github.com/ucoz-skills/agent-skills",
+      "owner": "ucoz-skills",
+      "repo": "agent-skills",
+      "description": "Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/ucoz-skills/agent-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6270,6 +6298,20 @@
       ]
     },
     {
+      "name": "cc-stretch",
+      "url": "https://github.com/pro-vi/cc-stretch",
+      "owner": "pro-vi",
+      "repo": "cc-stretch",
+      "description": "Claude Code plugin that has Claude write stretchtext: each reply reads complete at its shortest, and a phrase grows in place when you click it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/pro-vi/cc-stretch/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "cc-tree",
       "url": "https://github.com/skymanbp/cc-tree",
       "owner": "skymanbp",
@@ -6732,6 +6774,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Concord",
+      "url": "https://github.com/Get-Concord-AI/concord-mcp",
+      "owner": "Get-Concord-AI",
+      "repo": "concord-mcp",
+      "description": "MCP server: lets Claude Code, Codex, Cursor, Gemini CLI, Grok Build and Goose message each other mid-session and share presence, file claims, handoffs and review packets in one repo, with relay plugins that deliver messages into running sessions",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Get-Concord-AI/concord-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -7409,6 +7465,19 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "GraphFlow",
+      "url": "https://github.com/Roarpeng/GraphFlow",
+      "owner": "Roarpeng",
+      "repo": "GraphFlow",
+      "description": "MCP server and cross-agent installer providing surgical symbol read, edit, exec and macro tools for coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
       ]
     },
     {
@@ -10902,6 +10971,19 @@
       ]
     },
     {
+      "name": "AI-FluxMux",
+      "url": "https://github.com/ArchPrime/AI-FluxMux",
+      "owner": "ArchPrime",
+      "repo": "AI-FluxMux",
+      "description": "Windows desktop router for OpenAI-compatible clients with local and cloud models, per-profile routing, model variants and usage telemetry; source is available under the PolyForm Noncommercial license",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "ai-memory-skill",
       "url": "https://github.com/syedair/ai-memory-skill",
       "owner": "syedair",
@@ -13635,6 +13717,20 @@
       ]
     },
     {
+      "name": "your-mail-mcp",
+      "url": "https://github.com/wildsurfer/your-mail-mcp",
+      "owner": "wildsurfer",
+      "repo": "your-mail-mcp",
+      "description": "MCP server: read-only search over your IMAP mail, mirrored by mbsync into a local notmuch index and served over stdio or streamable HTTP with OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/wildsurfer/your-mail-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "YYLO Skills",
       "url": "https://github.com/yylo-dev/yylo-skills",
       "owner": "yylo-dev",
@@ -13946,6 +14042,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-prompt",
       "description": "Prompt toolbox for DeepSeek Harness: preset and custom prompt templates with one-click insert into the conversation",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-ui-usage-billing",
+      "url": "https://github.com/kenz1117/dsh-ui-usage-billing",
+      "owner": "kenz1117",
+      "repo": "dsh-ui-usage-billing",
+      "description": "Usage billing dashboard for DeepSeek Harness with sidebar cost metrics, session-log aggregation, and multi-provider pricing",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
