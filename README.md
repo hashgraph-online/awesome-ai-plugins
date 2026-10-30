@@ -110,6 +110,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
 
+- [agent-messenger](https://github.com/agent-messenger/agent-messenger) - Agent skills that teach AI agents to send messages, read channels, and manage reactions across twelve messaging platforms via CLI.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
