@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-30",
-  "total": 1114,
+  "last_updated": "2026-10-31",
+  "total": 1115,
   "platforms": [
     "codex",
     "grok",
@@ -5169,6 +5169,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/better-isms/grcskills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Handoff",
+      "url": "https://github.com/YourAKShaw/handoff",
+      "owner": "YourAKShaw",
+      "repo": "handoff",
+      "description": "Agent skill that saves and resumes coding sessions across agents using a repository-root HANDOFF.md with goals, constraints, and next steps",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/YourAKShaw/handoff#readme",
       "ecosystems": [
         "agent-skills"
       ]

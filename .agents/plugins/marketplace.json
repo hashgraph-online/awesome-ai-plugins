@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-30",
+  "last_updated": "2026-10-31",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -5523,6 +5523,21 @@
       "repo": "grcskills",
       "url": "https://github.com/better-isms/grcskills",
       "installation_url": "https://github.com/better-isms/grcskills#readme"
+    },
+    {
+      "name": "Handoff",
+      "displayName": "Handoff",
+      "description": "Agent skill that saves and resumes coding sessions across agents using a repository-root HANDOFF.md with goals, constraints, and next steps",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "YourAKShaw",
+      "repo": "handoff",
+      "url": "https://github.com/YourAKShaw/handoff",
+      "installation_url": "https://github.com/YourAKShaw/handoff#readme"
     },
     {
       "name": "image-use",
