@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-10-31",
-  "total": 1115,
+  "total": 1116,
   "platforms": [
     "codex",
     "grok",
@@ -12009,6 +12009,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "Fair Value Calculator",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

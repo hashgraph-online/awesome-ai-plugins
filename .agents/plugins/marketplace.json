@@ -12894,6 +12894,21 @@
       "install_url": "https://raw.githubusercontent.com/dappros/ethora-mcp-server/HEAD/claude-plugin/.claude-plugin/plugin.json"
     },
     {
+      "name": "Fair Value Calculator",
+      "displayName": "Fair Value Calculator",
+      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
+    },
+    {
       "name": "Firecrawl",
       "displayName": "Firecrawl",
       "description": "Official Firecrawl skills and MCP configuration for Claude Code, Cursor and Codex, giving agents web search, scraping, crawling, URL mapping and browser interaction",
