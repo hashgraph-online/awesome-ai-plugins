@@ -1337,6 +1337,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
 - [Kimi Code](https://github.com/MoonshotAI/kimi-code) - Official Kimi Code runtime and plugin documentation.
+- [omp packages](https://omppackages.com) - Catalog of Oh My Pi (omp) plugins that also tracks which Pi packages work on omp, with install-test results and README status badges.
 - [xAI Grok Plugin Marketplace](https://github.com/xai-org/plugin-marketplace) - Official Grok Build plugin marketplace and catalog format.
 
 ## Claim Your Plugin
