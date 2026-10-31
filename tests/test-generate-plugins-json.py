@@ -108,6 +108,138 @@ class GeneratorOutputSafetyTests(unittest.TestCase):
             self.assertFalse((root / "plugins.json").exists())
             self.assertFalse((root / ".agents/plugins/marketplace.json").exists())
 
+    def test_grok_feed_does_not_claim_unrelated_claude_bundles(self):
+        # A shared GitHub repo is not proof that every independently named
+        # Claude bundle implements every Grok plugin from that repository.
+        codex = [
+            {
+                "name": name, "owner": "example", "repo": "shared",
+                "platform": "claude-code", "ecosystems": ["claude-code"],
+                "install_url": f"https://example.test/{slug}/plugin.json",
+            }
+            for name, slug in (("Sidequest", "sidequest"),
+                               ("Quality Gate", "quality-gate"))
+        ]
+        grok = [
+            {"name": "Unrelated Grok", "owner": "example", "repo": "shared",
+             "platform": "grok", "ecosystems": ["grok"]},
+            {"name": "Another Grok", "owner": "example", "repo": "shared",
+             "platform": "grok", "ecosystems": ["grok"]},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=codex),
+                patch.object(MODULE, "load_grok_plugins", return_value=grok),
+                patch.object(
+                    MODULE, "merge_readme_additions",
+                    side_effect=lambda plugins, _readme, **_kwargs: (plugins, 0),
+                ),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                MODULE.main(["--output-dir", folder])
+            plugins = json.loads(
+                (Path(folder) / "plugins.json").read_text()
+            )["plugins"]
+        self.assertEqual(len(plugins), 4)
+        self.assertEqual([p["name"] for p in plugins], [
+            "Sidequest", "Quality Gate", "Unrelated Grok", "Another Grok",
+        ])
+        self.assertEqual(
+            [p["ecosystems"] for p in plugins],
+            [["claude-code"], ["claude-code"], ["grok"], ["grok"]],
+        )
+
+    def test_grok_feed_matches_one_real_named_bundle_only(self):
+        codex = [
+            {"name": name, "owner": "example", "repo": "shared",
+             "platform": "claude-code", "ecosystems": ["claude-code"]}
+            for name in ("Sidequest", "Quality Gate")
+        ]
+        grok = [
+            {"name": "Quality Gate", "owner": "example", "repo": "shared",
+             "platform": "grok", "ecosystems": ["grok"]},
+            {"name": "New Grok", "owner": "example", "repo": "shared",
+             "platform": "grok", "ecosystems": ["grok"]},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=codex),
+                patch.object(MODULE, "load_grok_plugins", return_value=grok),
+                patch.object(
+                    MODULE, "merge_readme_additions",
+                    side_effect=lambda plugins, _readme, **_kwargs: (plugins, 0),
+                ),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                MODULE.main(["--output-dir", folder])
+            plugins = json.loads(
+                (Path(folder) / "plugins.json").read_text()
+            )["plugins"]
+        self.assertEqual([p["name"] for p in plugins], [
+            "Sidequest", "Quality Gate", "New Grok",
+        ])
+        self.assertEqual([p["ecosystems"] for p in plugins], [
+            ["claude-code"], ["claude-code", "grok"], ["grok"],
+        ])
+
+    def test_single_unrelated_grok_entry_is_not_merged_into_claude(self):
+        # A single existing bundle is not proof that an unrelated Grok
+        # bundle in the same repository provides the Claude runtime.
+        claude = {
+            "name": "Sidequest", "owner": "example", "repo": "shared",
+            "platform": "claude-code", "ecosystems": ["claude-code"],
+        }
+        grok = {
+            "name": "Search Agent", "owner": "example", "repo": "shared",
+            "platform": "grok", "ecosystems": ["grok"],
+        }
+        with tempfile.TemporaryDirectory() as folder:
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=[claude]),
+                patch.object(MODULE, "load_grok_plugins", return_value=[grok]),
+                patch.object(
+                    MODULE, "merge_readme_additions",
+                    side_effect=lambda plugins, _readme, **_kwargs: (plugins, 0),
+                ),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                MODULE.main(["--output-dir", folder])
+            entries = json.loads(
+                (Path(folder) / "plugins.json").read_text()
+            )["plugins"]
+        self.assertEqual([p["name"] for p in entries], ["Sidequest", "Search Agent"])
+        self.assertEqual(
+            [p["ecosystems"] for p in entries], [["claude-code"], ["grok"]]
+        )
+
+    def test_single_matching_grok_entry_joins_existing_bundle(self):
+        # The exact same independently named source bundle still combines
+        # runtime support without publishing a duplicate plugin identity.
+        codex = {
+            "name": "Sidequest", "owner": "example", "repo": "shared",
+            "platform": "codex", "ecosystems": ["codex"],
+        }
+        grok = {
+            "name": "Sidequest", "owner": "example", "repo": "shared",
+            "platform": "grok", "ecosystems": ["grok"],
+        }
+        with tempfile.TemporaryDirectory() as folder:
+            with (
+                patch.object(MODULE, "load_codex_plugins", return_value=[codex]),
+                patch.object(MODULE, "load_grok_plugins", return_value=[grok]),
+                patch.object(
+                    MODULE, "merge_readme_additions",
+                    side_effect=lambda plugins, _readme, **_kwargs: (plugins, 0),
+                ),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                MODULE.main(["--output-dir", folder])
+            entries = json.loads(
+                (Path(folder) / "plugins.json").read_text()
+            )["plugins"]
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["ecosystems"], ["codex", "grok"])
+
     def test_require_upstreams_with_both_sources_writes_both_feeds(self):
         codex = {"name": "Codex Demo", "owner": "test", "repo": "codex"}
         grok = {"name": "Grok Demo", "owner": "test", "repo": "grok"}
@@ -170,6 +302,30 @@ def claude_marketplace_readme(directory: str, name: str) -> Path:
 
 
 class GeneratePluginsJsonTests(unittest.TestCase):
+    def test_manifest_probe_continues_after_one_candidate_network_failure(self) -> None:
+        # A timeout on an earlier manifest location must not suppress a
+        # separately verified later candidate for the same repository.
+        observed = []
+
+        def probe(request, *_args, **_kwargs):
+            observed.append(request.full_url)
+            if request.full_url.endswith("/first/plugin.json"):
+                raise urllib.error.URLError("first location temporarily unavailable")
+            if request.full_url.endswith("/second/plugin.json"):
+                return FakeResponse(200)
+            raise AssertionError(f"unexpected manifest path: {request.full_url}")
+
+        with patch("urllib.request.urlopen", side_effect=probe):
+            result = MODULE.probe_install_url(
+                "example", "mods", ("first/plugin.json", "second/plugin.json")
+            )
+
+        self.assertEqual(
+            result,
+            "https://raw.githubusercontent.com/example/mods/HEAD/second/plugin.json",
+        )
+        self.assertEqual(len(observed), 2)
+
     def test_general_community_entries_do_not_assume_codex(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             readme = Path(directory) / "README.md"
@@ -329,6 +485,123 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             plugins[0]["installation_url"],
             "https://github.com/example/shared-skills#readme",
         )
+
+    def test_native_duplicate_never_probes_unrelated_claude_bundle(self) -> None:
+        for category, description, platform in (
+            ("Agent Skills", "Native Agent Skills collection.", "agent-skills"),
+            ("Development & Workflow", "MCP server: Native stdio tools.", "mcp"),
+        ):
+            with self.subTest(platform=platform), tempfile.TemporaryDirectory() as directory:
+                readme = Path(directory) / "README.md"
+                readme.write_text(
+                    "## Community Plugins\n"
+                    f"### {category}\n"
+                    f"- [Shared](https://github.com/example/shared) - {description}\n"
+                )
+                upstream = [{
+                    "name": "Shared",
+                    "owner": "example",
+                    "repo": "shared",
+                    "platform": "codex",
+                    "ecosystems": ["codex"],
+                    "install_url": "https://raw.githubusercontent.com/example/shared/HEAD/.codex-plugin/plugin.json",
+                }]
+                with patch.object(
+                    MODULE, "probe_claude_marketplace",
+                    side_effect=AssertionError("native duplicate must not trigger Claude probe"),
+                ):
+                    plugins, added = MODULE.merge_readme_additions(upstream, readme)
+                self.assertEqual(added, 0)
+                self.assertEqual(len(plugins), 1)
+                self.assertEqual(plugins[0]["ecosystems"], ["codex", platform])
+
+    def test_native_mcp_stays_separate_from_multiple_claude_bundles(self) -> None:
+        # A repository can contain two separately installable Claude plugins
+        # plus its own MCP server. The native entry must not inherit the first
+        # unrelated Claude bundle's platform, name, or manifest install URL.
+        upstream = [
+            {
+                "name": name,
+                "owner": "example",
+                "repo": "shared",
+                "platform": "claude-code",
+                "ecosystems": ["claude-code"],
+                "install_url": (
+                    "https://raw.githubusercontent.com/example/shared/HEAD/"
+                    f"plugins/{slug}/.claude-plugin/plugin.json"
+                ),
+            }
+            for name, slug in (
+                ("Sidequest", "sidequest"),
+                ("Quality Gate", "quality-gate"),
+            )
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [Native Tools](https://github.com/example/shared)"
+                " - MCP server: Native stdio tools.\n"
+            )
+            with patch.object(
+                MODULE, "probe_claude_marketplace",
+                side_effect=AssertionError("native MCP entry must not probe Claude"),
+            ):
+                plugins, added = MODULE.merge_readme_additions(upstream, readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual(len(plugins), 3)
+        self.assertEqual([p["platform"] for p in plugins], [
+            "claude-code", "claude-code", "mcp",
+        ])
+        self.assertEqual([p["ecosystems"] for p in plugins[:2]], [
+            ["claude-code"], ["claude-code"],
+        ])
+        self.assertEqual(plugins[2]["name"], "Native Tools")
+        self.assertIn("installation_url", plugins[2])
+        self.assertNotIn("install_url", plugins[2])
+
+    def test_same_named_native_bundle_targets_matching_claude_manifest(self) -> None:
+        # When a native integration genuinely shares a display identity with
+        # one of two Claude bundles, merge only into that named bundle.
+        upstream = [
+            {
+                "name": name,
+                "owner": "example",
+                "repo": "shared",
+                "platform": "claude-code",
+                "ecosystems": ["claude-code"],
+                "install_url": (
+                    "https://raw.githubusercontent.com/example/shared/HEAD/"
+                    f"plugins/{slug}/.claude-plugin/plugin.json"
+                ),
+            }
+            for name, slug in (
+                ("Sidequest", "sidequest"),
+                ("Quality Gate", "quality-gate"),
+            )
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [Quality Gate](https://github.com/example/shared)"
+                " - MCP server: Same named native runtime.\n"
+            )
+            with patch.object(
+                MODULE, "probe_claude_marketplace",
+                side_effect=AssertionError("native MCP must not probe Claude"),
+            ):
+                plugins, added = MODULE.merge_readme_additions(upstream, readme)
+        self.assertEqual(added, 0)
+        self.assertEqual(len(plugins), 2)
+        self.assertEqual(plugins[0]["ecosystems"], ["claude-code"])
+        self.assertEqual(plugins[1]["ecosystems"], ["claude-code", "mcp"])
+        self.assertEqual(plugins[1]["platform"], "claude-code")
+        self.assertIn("installation_url", plugins[1])
+        self.assertNotIn("installation_url", plugins[0])
 
     def test_native_mcp_fallback_generates_no_invented_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -641,6 +914,422 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             "/HEAD/token-bar/.claude-plugin/plugin.json",
         )
 
+    def test_distinct_named_claude_plugins_share_repository(self) -> None:
+        marketplace = (
+            b'{"name":"eigenwise-toolshed","plugins":['
+            b'{"name":"sidequest","source":"./plugins/sidequest"},'
+            b'{"name":"quality-gate","source":"./plugins/quality-gate"}]}'
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [sidequest](https://github.com/Eigenwise/eigenwise-toolshed) - Tasks.\n"
+                "- [quality-gate](https://github.com/Eigenwise/eigenwise-toolshed) - Tests.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/sidequest/.claude-plugin/plugin.json": None,
+                    "plugins/quality-gate/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+        self.assertEqual(added, 2)
+        self.assertEqual([p["name"] for p in plugins], ["sidequest", "quality-gate"])
+        self.assertEqual({p["platform"] for p in plugins}, {"claude-code"})
+        self.assertEqual(len({p["install_url"] for p in plugins}), 2)
+        marketplace_entries = [
+            MODULE.marketplace_entry(plugin) for plugin in plugins
+        ]
+        self.assertEqual(
+            [p["name"] for p in marketplace_entries], ["sidequest", "quality-gate"]
+        )
+
+    def test_seven_eigenwise_bundles_keep_distinct_manifests(self) -> None:
+        # Current upstream Toolshed publishes seven separately named Claude
+        # bundles from one repo. No first-bundle aliasing is permissible.
+        names = ["observability","model-gateway","sidequest","codebase-mapper","quartermaster","quality-gate","live-rules"]
+        marketplace = json.dumps({
+            "plugins": [
+                {"name": name, "source": f"./plugins/{name}"}
+                for name in names
+            ],
+        }).encode("utf-8")
+        manifests = {
+            f"plugins/{name}/.claude-plugin/plugin.json": None
+            for name in names
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n### Development & Workflow\n"
+                + "".join(
+                    f"- [{name}](https://github.com/Eigenwise/eigenwise-toolshed) - Plugin.\n"
+                    for name in names
+                ),
+                encoding="utf-8",
+            )
+            with patch(
+                "urllib.request.urlopen",
+                side_effect=serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    **manifests,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+        self.assertEqual(added, 7)
+        self.assertEqual([p["name"] for p in plugins], names)
+        urls = [p["install_url"] for p in plugins]
+        self.assertEqual(len(set(urls)), 7)
+        for name, url in zip(names, urls):
+            self.assertEqual(
+                url,
+                "https://raw.githubusercontent.com/Eigenwise/eigenwise-toolshed"
+                f"/HEAD/plugins/{name}/.claude-plugin/plugin.json",
+            )
+        self.assertEqual(
+            {p["platform"] for p in plugins}, {"claude-code"}
+        )
+
+    def test_shared_repo_first_bundle_prefers_named_marketplace_over_root(self) -> None:
+        # An unrelated root plugin.json must not become the install target of
+        # the first named bundle merely because the generic HEAD probe wins.
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n### Development & Workflow\n"
+                "- [Sidequest](https://github.com/example/shared) - Tasks.\n"
+                "- [Quality Gate](https://github.com/example/shared) - Tests.\n"
+            )
+            def named_probe(owner, repo, name, *, require_named_match=False):
+                self.assertTrue(require_named_match)
+                slug = {"Sidequest": "sidequest", "Quality Gate": "quality-gate"}[name]
+                return True, (
+                    "https://raw.githubusercontent.com/example/shared/HEAD/"
+                    f"plugins/{slug}/.claude-plugin/plugin.json"
+                )
+            with (
+                patch.object(MODULE, "probe_claude_marketplace", side_effect=named_probe),
+                patch.object(
+                    MODULE, "probe_install_url",
+                    return_value="https://raw.githubusercontent.com/example/shared/HEAD/"
+                                 ".claude-plugin/plugin.json",
+                ) as root_probe,
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+            root_probe.assert_not_called()
+        self.assertEqual(added, 2)
+        self.assertEqual([p["name"] for p in plugins], ["Sidequest", "Quality Gate"])
+        self.assertEqual({p["platform"] for p in plugins}, {"claude-code"})
+        self.assertEqual(
+            [p["install_url"].split("/HEAD/")[1] for p in plugins],
+            ["plugins/sidequest/.claude-plugin/plugin.json",
+             "plugins/quality-gate/.claude-plugin/plugin.json"],
+        )
+
+    def test_unavailable_multi_plugin_marketplace_never_claims_root_manifest(self) -> None:
+        # A transient source error is not evidence that the first named row
+        # points at an unrelated root manifest in the same repository.
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n### Development & Workflow\n"
+                "- [Sidequest](https://github.com/example/shared) - Tasks.\n"
+                "- [Quality Gate](https://github.com/example/shared) - Tests.\n"
+            )
+            with (
+                patch.object(
+                    MODULE, "probe_claude_marketplace", return_value=(False, None)
+                ) as source_probe,
+                patch.object(
+                    MODULE, "probe_install_url",
+                    return_value="https://raw.githubusercontent.com/example/shared/"
+                                 "HEAD/.codex-plugin/plugin.json",
+                ) as root_probe,
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 0)
+        self.assertEqual(plugins, [])
+        self.assertEqual(source_probe.call_count, 2)
+        root_probe.assert_not_called()
+
+    def test_unverified_first_named_bundle_does_not_alias_root(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n### Development & Workflow\n"
+                "- [Unlisted](https://github.com/example/shared) - Unknown.\n"
+                "- [Sidequest](https://github.com/example/shared) - Tasks.\n"
+            )
+            def named_probe(owner, repo, name, *, require_named_match=False):
+                self.assertTrue(require_named_match)
+                if name == "Unlisted":
+                    return True, None
+                return True, (
+                    "https://raw.githubusercontent.com/example/shared/HEAD/"
+                    "plugins/sidequest/.claude-plugin/plugin.json"
+                )
+            with (
+                patch.object(MODULE, "probe_claude_marketplace", side_effect=named_probe),
+                patch.object(MODULE, "probe_install_url") as root_probe,
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+            root_probe.assert_not_called()
+        self.assertEqual(added, 1)
+        self.assertEqual([p["name"] for p in plugins], ["Sidequest"])
+
+    def test_readable_names_match_exact_unique_marketplace_slugs(self) -> None:
+        # Real Claude marketplaces use slug names while README catalog rows
+        # display human-readable labels. Both must resolve distinct manifests.
+        marketplace = (
+            b'{"plugins":['
+            b'{"name":"codebase-mapper","source":"./plugins/codebase-mapper"},'
+            b'{"name":"quality-gate","source":"./plugins/quality-gate"}]}'
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [Codebase Mapper](https://github.com/Eigenwise/eigenwise-toolshed) - Project map.\n"
+                "- [Quality Gate](https://github.com/Eigenwise/eigenwise-toolshed) - Code checks.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/codebase-mapper/.claude-plugin/plugin.json": None,
+                    "plugins/quality-gate/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+        self.assertEqual(added, 2)
+        self.assertEqual([p["name"] for p in plugins], ["Codebase Mapper", "Quality Gate"])
+        self.assertTrue(all(p.get("install_url") for p in plugins))
+        self.assertEqual(len({p["install_url"] for p in plugins}), 2)
+
+    def test_readable_aliases_deduplicate_one_verified_manifest(self) -> None:
+        # Display labels and source slugs must not become two catalog entries
+        # for the same installable bundle in a shared marketplace.
+        marketplace = b'{"plugins":[{"name":"codebase-mapper","source":"./plugins/codebase-mapper"}]}'
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [Codebase Mapper](https://github.com/Eigenwise/eigenwise-toolshed) - Project map.\n"
+                "- [codebase-mapper](https://github.com/Eigenwise/eigenwise-toolshed) - Alias.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/codebase-mapper/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual([p["name"] for p in plugins], ["Codebase Mapper"])
+        self.assertTrue(plugins[0].get("install_url"))
+
+    def test_same_name_codex_upstream_and_claude_bundle_are_distinct(self) -> None:
+        # A Codex feed entry must not suppress a separately installable Claude
+        # plugin that shares its repository and display name.
+        marketplace = (
+            b'{"plugins":[{"name":"sidequest","source":"./plugins/sidequest"}]}'
+        )
+        upstream = [{
+            "name": "sidequest",
+            "owner": "Eigenwise",
+            "repo": "eigenwise-toolshed",
+            "url": "https://github.com/Eigenwise/eigenwise-toolshed",
+            "platform": "codex",
+            "ecosystems": ["codex"],
+            "install_url": (
+                "https://raw.githubusercontent.com/Eigenwise/eigenwise-toolshed"
+                "/HEAD/.codex-plugin/plugin.json"
+            ),
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [sidequest](https://github.com/Eigenwise/eigenwise-toolshed) - Claude plugin.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/sidequest/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions(upstream, readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual(len(plugins), 2)
+        self.assertEqual([p["platform"] for p in plugins], ["codex", "claude-code"])
+        self.assertEqual(len({p["install_url"] for p in plugins}), 2)
+        self.assertEqual([p["name"] for p in plugins], ["sidequest", "sidequest"])
+
+    def test_existing_upstream_bundle_and_distinct_nested_bundle(self) -> None:
+        # A Codex/upstream feed may already list one real Claude marketplace
+        # bundle. Another named manifest from that repository still qualifies.
+        marketplace = (
+            b'{"name":"eigenwise-toolshed","plugins":['
+            b'{"name":"sidequest","source":"./plugins/sidequest"},'
+            b'{"name":"quality-gate","source":"./plugins/quality-gate"}]}'
+        )
+        upstream = [{
+            "name": "sidequest",
+            "owner": "Eigenwise",
+            "repo": "eigenwise-toolshed",
+            "url": "https://github.com/Eigenwise/eigenwise-toolshed",
+            "platform": "claude-code",
+            "ecosystems": ["claude-code"],
+            "install_url": (
+                "https://raw.githubusercontent.com/Eigenwise/eigenwise-toolshed"
+                "/HEAD/plugins/sidequest/.claude-plugin/plugin.json"
+            ),
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [sidequest](https://github.com/Eigenwise/eigenwise-toolshed) - Tasks.\n"
+                "- [quality-gate](https://github.com/Eigenwise/eigenwise-toolshed) - Tests.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/sidequest/.claude-plugin/plugin.json": None,
+                    "plugins/quality-gate/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions(upstream, readme)
+
+        self.assertEqual(added, 1)
+        self.assertEqual([p["name"] for p in plugins], ["sidequest", "quality-gate"])
+        self.assertEqual(len({p["install_url"] for p in plugins}), 2)
+        self.assertEqual({p["platform"] for p in plugins}, {"claude-code"})
+
+    def test_ambiguous_marketplace_name_matches_fail_closed(self) -> None:
+        # Marketplace metadata may contain duplicate aliases. An exact
+        # case-insensitive match or slug-normalized match is not enough when
+        # two independent source directories claim the same name.
+        scenarios = (
+            (
+                "sidequest",
+                [{"name": "SideQuest", "source": "./plugins/a"},
+                 {"name": "sidequest", "source": "./plugins/b"}],
+            ),
+            (
+                "Code Base",
+                [{"name": "code_base", "source": "./plugins/a"},
+                 {"name": "code-base", "source": "./plugins/b"}],
+            ),
+        )
+        for name, entries in scenarios:
+            with self.subTest(name=name), patch(
+                "urllib.request.urlopen",
+                side_effect=serves({
+                    ".claude-plugin/marketplace.json": json.dumps(
+                        {"plugins": entries}
+                    ).encode("utf-8"),
+                }),
+            ) as urlopen:
+                self.assertEqual(
+                    MODULE.probe_claude_marketplace(
+                        "example", "mods", name, require_named_match=True
+                    ),
+                    (True, None),
+                )
+                # Never make an install-manifest request for an ambiguous name.
+                self.assertEqual(urlopen.call_count, 1)
+
+    def test_same_manifest_cannot_be_published_under_two_names(self) -> None:
+        marketplace = b'{"plugins":[{"name":"sidequest","source":"./plugins/sidequest"}]}'
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [sidequest](https://github.com/Eigenwise/eigenwise-toolshed) - Tasks.\n"
+                "- [another name](https://github.com/Eigenwise/eigenwise-toolshed) - Same.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/sidequest/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+        self.assertEqual(added, 1)
+        self.assertEqual([p["name"] for p in plugins], ["sidequest"])
+
+    def test_unverified_second_marketplace_name_remains_excluded(self) -> None:
+        marketplace = (
+            b'{"plugins":[{"name":"sidequest","source":"./plugins/sidequest"},'
+            b'{"name":"quality-gate","source":"./plugins/quality-gate"}]}'
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [sidequest](https://github.com/Eigenwise/eigenwise-toolshed) - Tasks.\n"
+                "- [not-a-plugin](https://github.com/Eigenwise/eigenwise-toolshed) - Unknown.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/sidequest/.claude-plugin/plugin.json": None,
+                }),
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+        self.assertEqual(added, 1)
+        self.assertEqual([p["name"] for p in plugins], ["sidequest"])
+
+    def test_existing_repo_cannot_publish_unmatched_single_marketplace_alias(self) -> None:
+        # A README alias is not source evidence for a *second* installable
+        # plugin when the repository already has a catalog entry.
+        marketplace = b'{"plugins":[{"name":"actual-plugin","source":"./plugins/actual-plugin"}]}'
+        upstream = [{
+            "name": "Existing Codex integration",
+            "owner": "example", "repo": "mods",
+            "platform": "codex", "ecosystems": ["codex"],
+            "install_url": "https://raw.githubusercontent.com/example/mods/HEAD/.codex-plugin/plugin.json",
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            readme = Path(directory) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n"
+                "### Development & Workflow\n"
+                "- [Invented alias](https://github.com/example/mods) - An unverified second name.\n"
+            )
+            with patch(
+                "urllib.request.urlopen",
+                side_effect=serves({
+                    ".claude-plugin/marketplace.json": marketplace,
+                    "plugins/actual-plugin/.claude-plugin/plugin.json": None,
+                }),
+            ) as urlopen:
+                plugins, added = MODULE.merge_readme_additions(upstream, readme)
+        self.assertEqual(added, 0)
+        self.assertEqual(len(plugins), 1)
+        self.assertEqual(plugins[0]["name"], "Existing Codex integration")
+        # The unverified alias cannot even trigger a manifest acceptance HEAD.
+        self.assertEqual(urlopen.call_count, 1)
+
     def test_single_plugin_marketplace_resolves_under_another_name(self) -> None:
         marketplace = b'{"plugins": [{"name": "bar", "source": "plugins/bar/"}]}'
         with patch(
@@ -659,8 +1348,49 @@ class GeneratePluginsJsonTests(unittest.TestCase):
             "/HEAD/plugins/bar/.claude-plugin/plugin.json",
         )
 
+    def test_malformed_extra_marketplace_entry_is_not_singleton(self) -> None:
+        # A malformed second record cannot turn a multi-entry marketplace
+        # into a single plugin whose manifest is misattributed to a README alias.
+        marketplace = b'{"plugins":[{"name":"bar","source":"plugins/bar"},"invalid"]}'
+        with patch(
+            "urllib.request.urlopen",
+            side_effect=serves({
+                ".claude-plugin/marketplace.json": marketplace,
+                "plugins/bar/.claude-plugin/plugin.json": None,
+            }),
+        ) as urlopen:
+            found, url = MODULE.probe_claude_marketplace(
+                "example", "mods", "Invented Alias"
+            )
+        self.assertTrue(found)
+        self.assertIsNone(url)
+        self.assertEqual(urlopen.call_count, 1)
+
+    def test_blank_marketplace_source_never_uses_root_manifest(self) -> None:
+        # Empty or whitespace-only source must not accidentally claim a
+        # repository-root plugin as the named marketplace bundle.
+        for source in ("", "   "):
+            with self.subTest(source=source):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "x", "source": source}]
+                }).encode("utf-8")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                        ".claude-plugin/plugin.json": None,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "x"),
+                        (True, None),
+                    )
+                    self.assertEqual(urlopen.call_count, 1)
+
     def test_ignores_marketplace_sources_outside_the_repo(self) -> None:
-        for source in ('"../elsewhere"', '"https://example.com/x"', '{"source": "github", "repo": "a/b"}'):
+        # Rooted paths must not be converted to repository-relative paths;
+        # a matching local manifest in the test would otherwise be accepted.
+        for source in ('"../elsewhere"', '"/elsewhere"', '"https://example.com/x"', '{"source": "github", "repo": "a/b"}'):
             marketplace = ('{"plugins": [{"name": "x", "source": %s}]}' % source).encode()
             with self.subTest(source=source), patch(
                 "urllib.request.urlopen",
@@ -670,6 +1400,133 @@ class GeneratePluginsJsonTests(unittest.TestCase):
                 }),
             ):
                 self.assertEqual(MODULE.probe_claude_marketplace("example", "mods", "x"), (True, None))
+
+    def test_rejects_windows_drive_and_stream_marketplace_sources(self) -> None:
+        # Source directories must be portable, not drive-qualified or NTFS
+        # alternate streams. Even an HTTP 200 must not certify these paths.
+        for source in ("C:/plugins/demo", "plugins/demo:alternate", "C:relative"):
+            with self.subTest(source=source):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "demo", "source": source}]
+                }).encode("utf-8")
+                encoded = source.replace(":", "%3A")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                        f"{encoded}/.claude-plugin/plugin.json": None,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "demo"),
+                        (True, None),
+                    )
+                    self.assertEqual(urlopen.call_count, 1)
+
+    def test_rejects_percent_encoded_marketplace_paths(self) -> None:
+        # Marketplace source is a directory path, not a URL. Encoded dot/slash
+        # segments can be decoded after the initial traversal check.
+        for source in ("plugins/%2e%2e/private", "plugins/%2fprivate", "plugins/%252e%252e/private"):
+            with self.subTest(source=source):
+                marketplace = ('{"plugins":[{"name":"x","source":"%s"}]}' % source).encode()
+                with patch(
+                    "urllib.request.urlopen",
+                    serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                        f"{source}/.claude-plugin/plugin.json": None,
+                    }),
+                ):
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "x"),
+                        (True, None),
+                    )
+
+    def test_quotes_literal_spaced_and_unicode_marketplace_directories(self) -> None:
+        for source, encoded in (
+            ("plugins/my workspace", "plugins/my%20workspace"),
+            ("plugins/café", "plugins/caf%C3%A9"),
+        ):
+            with self.subTest(source=source):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "demo", "source": source}]
+                }).encode("utf-8")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                        f"{encoded}/.claude-plugin/plugin.json": None,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "demo"),
+                        (True, "https://raw.githubusercontent.com/example/mods/HEAD/"
+                         f"{encoded}/.claude-plugin/plugin.json"),
+                    )
+                    self.assertEqual(urlopen.call_count, 2)
+
+    def test_rejects_url_delimiters_in_marketplace_source_paths(self) -> None:
+        # A query or fragment must not change which manifest a raw URL probes.
+        # Simulate a 200 response for the malformed target: successful HTTP
+        # alone must not certify a repository-relative plugin directory.
+        for source in ("plugins/demo?branch=main", "plugins/demo#preview"):
+            with self.subTest(source=source):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "demo", "source": source}]
+                }).encode("utf-8")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                        f"{source}/.claude-plugin/plugin.json": None,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "demo"),
+                        (True, None),
+                    )
+                    # Invalid paths are rejected before any manifest HEAD.
+                    self.assertEqual(urlopen.call_count, 1)
+
+    def test_rejects_json_escaped_unpaired_surrogates_before_url_encoding(self) -> None:
+        # JSON accepts escaped lone surrogates but urllib.parse.quote cannot
+        # encode them to UTF-8. One bad upstream entry must not abort the feed.
+        for source in ("plugins/" + chr(0xD800), "plugins/" + chr(0xDFFF)):
+            with self.subTest(source=repr(source)):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "demo", "source": source}]
+                }).encode("utf-8")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "demo"),
+                        (True, None),
+                    )
+                    self.assertEqual(urlopen.call_count, 1)
+
+    def test_rejects_control_characters_in_marketplace_sources(self) -> None:
+        # Reject invalid URL characters before even attempting the manifest
+        # probe; malformed upstream metadata must not abort catalog generation.
+        for source in ("plugins/name\nbad", "plugins/name\rhidden",
+                       "plugins/name\tbad", "plugins/name\u0000bad"):
+            with self.subTest(source=repr(source)):
+                marketplace = json.dumps({
+                    "plugins": [{"name": "x", "source": source}]
+                }).encode("utf-8")
+                with patch(
+                    "urllib.request.urlopen",
+                    side_effect=serves({
+                        ".claude-plugin/marketplace.json": marketplace,
+                    }),
+                ) as urlopen:
+                    self.assertEqual(
+                        MODULE.probe_claude_marketplace("example", "mods", "x"),
+                        (True, None),
+                    )
+                    self.assertEqual(urlopen.call_count, 1)
 
     def test_ignores_marketplace_whose_plugin_manifest_is_missing(self) -> None:
         marketplace = b'{"plugins": [{"name": "x", "source": "./x"}]}'
@@ -702,6 +1559,120 @@ class GeneratePluginsJsonTests(unittest.TestCase):
         self.assertNotIn("install_url", plugins[0])
         self.assertEqual(plugins[0]["platform"], "claude-code")
         self.assertNotIn("install_url", MODULE.marketplace_entry(plugins[0]))
+
+    def test_truncated_marketplace_http_body_does_not_abort_catalog(self) -> None:
+        import http.client
+
+        class TruncatedResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_exc):
+                return None
+
+            def read(self, _limit):
+                raise http.client.IncompleteRead(b'{"plugins":[', 20)
+
+        with patch("urllib.request.urlopen", return_value=TruncatedResponse()) as fetch:
+            self.assertEqual(
+                MODULE.probe_claude_marketplace(
+                    "example", "mods", "sidequest", require_named_match=True,
+                ),
+                (False, None),
+            )
+            self.assertEqual(fetch.call_count, 1)
+
+        # An interrupted marketplace read also cannot assign a generic root
+        # Codex manifest to either named Claude bundle from the same repo.
+        with tempfile.TemporaryDirectory() as folder:
+            readme = Path(folder) / "README.md"
+            readme.write_text(
+                "## Community Plugins\n### Development & Workflow\n"
+                "- [Sidequest](https://github.com/example/mods) - Tasks.\n"
+                "- [Quality Gate](https://github.com/example/mods) - Tests.\n"
+            )
+            with (
+                patch("urllib.request.urlopen", return_value=TruncatedResponse()),
+                patch.object(MODULE, "probe_install_url") as root_probe,
+            ):
+                plugins, added = MODULE.merge_readme_additions([], readme)
+            self.assertEqual((plugins, added), ([], 0))
+            root_probe.assert_not_called()
+
+    def test_bad_root_manifest_head_reply_does_not_abort_catalog(self) -> None:
+        import http.client
+
+        with patch(
+            "urllib.request.urlopen",
+            side_effect=http.client.BadStatusLine("broken root manifest HEAD"),
+        ) as fetch:
+            self.assertIsNone(
+                MODULE.probe_install_url("example", "mods")
+            )
+            # Each supported candidate fails independently; one bad reply
+            # must not prematurely suppress the others or invent a manifest.
+            self.assertEqual(fetch.call_count, len(MODULE.INSTALL_PATH_CANDIDATES))
+
+    def test_bad_nested_manifest_head_response_is_a_source_miss(self) -> None:
+        import http.client
+
+        marketplace = b'{"plugins":[{"name":"sidequest","source":"plugins/sidequest"}]}'
+        read_marketplace = serves({".claude-plugin/marketplace.json": marketplace})
+
+        def malformed_manifest_probe(request, *args, **kwargs):
+            if getattr(request, "get_method", lambda: None)() == "HEAD":
+                raise http.client.BadStatusLine("broken nested manifest HEAD")
+            return read_marketplace(request, *args, **kwargs)
+
+        with patch(
+            "urllib.request.urlopen", side_effect=malformed_manifest_probe,
+        ) as fetch:
+            self.assertEqual(
+                MODULE.probe_claude_marketplace(
+                    "example", "mods", "sidequest", require_named_match=True,
+                ),
+                (True, None),
+            )
+            self.assertEqual(fetch.call_count, 2)
+
+    def test_bad_http_status_line_is_a_source_miss_not_build_failure(self) -> None:
+        import http.client
+
+        class InvalidHttpResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_exc):
+                return None
+
+            def read(self, _limit):
+                raise http.client.BadStatusLine("broken upstream response")
+
+        with patch("urllib.request.urlopen", return_value=InvalidHttpResponse()) as fetch:
+            self.assertEqual(
+                MODULE.probe_claude_marketplace(
+                    "example", "mods", "sidequest", require_named_match=True,
+                ),
+                (False, None),
+            )
+            self.assertEqual(fetch.call_count, 1)
+
+    def test_excessively_nested_marketplace_does_not_abort_catalog(self) -> None:
+        # A bounded HTTP body can still have enough nesting for json.loads
+        # to raise RecursionError. Ignore this source, not the full registry.
+        malformed = (
+            b'{"plugins":' + b'[' * 12000 + b'0'
+            + b']' * 12000 + b'}'
+        )
+        with patch(
+            "urllib.request.urlopen",
+            side_effect=serves({".claude-plugin/marketplace.json": malformed}),
+        ) as urlopen:
+            self.assertEqual(
+                MODULE.probe_claude_marketplace("example", "mods", "demo"),
+                (True, None),
+            )
+            self.assertEqual(urlopen.call_count, 1)
 
     def test_unreadable_marketplace_has_no_install_target(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
