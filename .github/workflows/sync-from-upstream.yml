@@ -5,10 +5,13 @@ on:
     branches: [main]
     paths:
       - README.md
+      - plugins.json
+      - .agents/plugins/marketplace.json
+      - .github/workflows/sync-from-upstream.yml
   repository_dispatch:
     types: [sync-to-ai-plugins]
 
-# A merged README addition should be checked against the public feeds. This
+# Merged catalog and feed changes should be checked against the public feeds. This
 # push-triggered job must NEVER publish catalog metadata without review.
 permissions:
   contents: read
@@ -20,7 +23,7 @@ concurrency:
 jobs:
   check:
     if: github.event_name == 'push'
-    name: Detect feed drift after a merged README change
+    name: Detect feed drift after a merged catalog change
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
