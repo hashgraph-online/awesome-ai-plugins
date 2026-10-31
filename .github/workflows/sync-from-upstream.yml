@@ -1,6 +1,7 @@
 name: Sync from upstream registries
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -22,7 +23,7 @@ concurrency:
 
 jobs:
   check:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     name: Detect feed drift after a merged catalog change
     runs-on: ubuntu-latest
     timeout-minutes: 40
