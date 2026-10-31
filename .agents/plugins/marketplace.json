@@ -1520,6 +1520,21 @@
       "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "macbox",
+      "displayName": "macbox",
+      "description": "A real Mac for Codex: build, test, run and tap through iOS apps on the iOS simulator from any machine, including Linux and cloud sandboxes.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "opslane",
+      "repo": "macbox-agent",
+      "url": "https://github.com/opslane/macbox-agent",
+      "install_url": "https://raw.githubusercontent.com/opslane/macbox-agent/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Maestro",
       "displayName": "Maestro",
       "description": "Opt-in local multi-CLI fusion engine and orchestration doctrine that fans a prompt across model CLIs, then judges and synthesizes one grounded answer.",
@@ -1820,6 +1835,21 @@
       "repo": "codex-project-autopilot",
       "url": "https://github.com/AlexMi64/codex-project-autopilot",
       "install_url": "https://raw.githubusercontent.com/AlexMi64/codex-project-autopilot/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Proxmox Writing Style",
+      "displayName": "Proxmox Writing Style",
+      "description": "Unofficial skill that writes, edits, and reviews Proxmox VE, Proxmox Backup Server, and Proxmox Mail Gateway documentation with the rules of the Proxmox Technical Writing Style Guide.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "msoltanov",
+      "repo": "Proxmox-Technical-Writing-Style-Skill",
+      "url": "https://github.com/msoltanov/Proxmox-Technical-Writing-Style-Skill",
+      "install_url": "https://raw.githubusercontent.com/msoltanov/Proxmox-Technical-Writing-Style-Skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Quality Engineering Skills",
@@ -4773,6 +4803,21 @@
       "install_url": "https://raw.githubusercontent.com/serply-inc/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "SFXMint",
+      "displayName": "SFXMint",
+      "description": "Free CC0 sound effects for apps and games: find AI-generated sounds by game or app event, as a matching set, or by description, and download the MP3 or WAV files into the project through the hosted SFXMint MCP server and skill, with no API key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "flreey",
+      "repo": "sfxmint-mcp",
+      "url": "https://github.com/flreey/sfxmint-mcp",
+      "install_url": "https://raw.githubusercontent.com/flreey/sfxmint-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Shots",
       "displayName": "Shots",
       "description": "Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.",
@@ -5538,6 +5583,21 @@
       "repo": "handoff",
       "url": "https://github.com/YourAKShaw/handoff",
       "installation_url": "https://github.com/YourAKShaw/handoff#readme"
+    },
+    {
+      "name": "hoi4-ai-modding-skills",
+      "displayName": "hoi4-ai-modding-skills",
+      "description": "Three Hearts of Iron IV Agent Skills plus a local read-only MCP helper for mod diagnosis, validation, and content development",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Fostanico",
+      "repo": "hoi4-ai-modding-skills",
+      "url": "https://github.com/Fostanico/hoi4-ai-modding-skills",
+      "installation_url": "https://github.com/Fostanico/hoi4-ai-modding-skills#readme"
     },
     {
       "name": "image-use",
@@ -8714,6 +8774,21 @@
       "repo": "jump-skills",
       "url": "https://github.com/fabricioctelles/jump-skills",
       "installation_url": "https://github.com/fabricioctelles/jump-skills#readme"
+    },
+    {
+      "name": "Keep Mac Awake",
+      "displayName": "Keep Mac Awake",
+      "description": "Plugin and agent skill for Claude Code, Codex, Cursor and Copilot CLI that let the agent start and stop a closed-lid awake session on a MacBook through the `keepmacawake` command, with a read-only session-start hook; needs the separately installed Keep Mac Awake app (paid, free trial)",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "bartdudzic",
+      "repo": "keepmacawake",
+      "url": "https://github.com/bartdudzic/keepmacawake",
+      "install_url": "https://raw.githubusercontent.com/bartdudzic/keepmacawake/HEAD/plugins/keep-mac-awake/.claude-plugin/plugin.json"
     },
     {
       "name": "keep-the-why",
@@ -12138,14 +12213,10 @@
       "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
       "owner": "b2bsearch",
       "repo": "b2bsearch-plugin",
       "url": "https://github.com/b2bsearch/b2bsearch-plugin",
-      "install_url": "https://raw.githubusercontent.com/b2bsearch/b2bsearch-plugin/HEAD/.claude-plugin/plugin.json"
+      "installation_url": "https://github.com/b2bsearch/b2bsearch-plugin#readme"
     },
     {
       "name": "Backlot",
@@ -14920,6 +14991,21 @@
       "installation_url": "https://github.com/NickHOI/Token-Harbor#readme"
     },
     {
+      "name": "Touchline Wire MCP",
+      "displayName": "Touchline Wire MCP",
+      "description": "MCP server: live Premier League football tactical intelligence with 10 read-only tools for AI predicted starting lineups, squad injury wires, referee disciplinary dossiers, official standings, and tier-graded transfer rumours; no API key required",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Steven-Robinson",
+      "repo": "touchlinewire-mcp",
+      "url": "https://github.com/Steven-Robinson/touchlinewire-mcp",
+      "installation_url": "https://github.com/Steven-Robinson/touchlinewire-mcp#readme"
+    },
+    {
       "name": "ultramotion",
       "displayName": "ultramotion",
       "description": "Motion-template skills for Claude Code and Codex that turn one prompt into a finished vertical video with music: Liquid Glass, Kinetic Type, Hand-drawn Explainer and Variety Captions",
@@ -15861,6 +15947,21 @@
       "installation_url": "https://github.com/YidiDev/opencode-tab-wrangler#readme"
     },
     {
+      "name": "opencode-claude-memory",
+      "displayName": "opencode-claude-memory",
+      "description": "OpenCode plugin providing persistent local-first Markdown memory compatible with Claude Code, with LLM recall, auto extraction, and consolidation",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "kuitos",
+      "repo": "opencode-claude-memory",
+      "url": "https://github.com/kuitos/opencode-claude-memory",
+      "installation_url": "https://github.com/kuitos/opencode-claude-memory#readme"
+    },
+    {
       "name": "opencode-cursor",
       "displayName": "opencode-cursor",
       "description": "OpenCode plugin for Cursor subscription models with streaming, thinking, tool calls, MCP support, and browser login through Cursor CLI or API-key authentication through the SDK",
@@ -15919,6 +16020,21 @@
       "repo": "opencode-plugins",
       "url": "https://github.com/rizal72/opencode-plugins",
       "installation_url": "https://github.com/rizal72/opencode-plugins#readme"
+    },
+    {
+      "name": "OpenUltraCode",
+      "displayName": "OpenUltraCode",
+      "description": "OpenCode plugin and skill bundle adding UltraCode-style slash commands, role agents, and verification tools for build, debug, research, and fusion workflows",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "norandom",
+      "repo": "OpenUltraCode",
+      "url": "https://github.com/norandom/OpenUltraCode",
+      "installation_url": "https://github.com/norandom/OpenUltraCode#readme"
     },
     {
       "name": "Relay",
