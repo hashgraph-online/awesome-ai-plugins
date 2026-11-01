@@ -1640,6 +1640,21 @@
       "install_url": "https://raw.githubusercontent.com/jananthan30/ml-pipeline/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Model Salt",
+      "displayName": "Model Salt",
+      "description": "Gives the model randomness from outside it before a creative task, so one prompt gives different answers that still do what was asked.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "modelsalt",
+      "repo": "model-salt",
+      "url": "https://github.com/modelsalt/model-salt",
+      "install_url": "https://raw.githubusercontent.com/modelsalt/model-salt/HEAD/plugin/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Multi-LLM",
       "displayName": "Multi-LLM",
       "description": "Parallel plan, code, and commit reviews across 19 coding CLIs, with validated findings, task generation, implementation, and automated revision.",
