@@ -14322,6 +14322,21 @@
       "installation_url": "https://github.com/ralforion/orionbelt-analytics#readme"
     },
     {
+      "name": "OutlierKit",
+      "displayName": "OutlierKit",
+      "description": "MCP server: YouTube research for AI assistants, with read-only tools for outlier videos, channels, transcripts, comments and keyword volumes",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "adchat",
+      "repo": "outlierkit-mcp",
+      "url": "https://github.com/adchat/outlierkit-mcp",
+      "installation_url": "https://github.com/adchat/outlierkit-mcp#readme"
+    },
+    {
       "name": "Overleaf LaTeX",
       "displayName": "Overleaf LaTeX",
       "description": "Local MCP/Codex plugin for creating and editing Overleaf projects",
@@ -15976,6 +15991,21 @@
       "repo": "devin-opencode-provider",
       "url": "https://github.com/oakimov/devin-opencode-provider",
       "installation_url": "https://github.com/oakimov/devin-opencode-provider#readme"
+    },
+    {
+      "name": "Ducksay",
+      "displayName": "Ducksay",
+      "description": "OpenCode TUI plugin that swims an ASCII duck across the session sidebar, types a short joke written by the session's model when a turn ends, and answers the `/duck` command",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "zhek",
+      "repo": "opencode-ducksay",
+      "url": "https://github.com/zhek/opencode-ducksay",
+      "installation_url": "https://github.com/zhek/opencode-ducksay#readme"
     },
     {
       "name": "LitOpenCode",

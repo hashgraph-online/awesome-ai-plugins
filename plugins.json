@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-01",
-  "total": 1130,
+  "total": 1132,
   "platforms": [
     "codex",
     "grok",
@@ -13337,6 +13337,20 @@
       ]
     },
     {
+      "name": "OutlierKit",
+      "url": "https://github.com/adchat/outlierkit-mcp",
+      "owner": "adchat",
+      "repo": "outlierkit-mcp",
+      "description": "MCP server: YouTube research for AI assistants, with read-only tools for outlier videos, channels, transcripts, comments and keyword volumes",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/adchat/outlierkit-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Overleaf LaTeX",
       "url": "https://github.com/MarcoDotIO/overleaf-latex",
       "owner": "MarcoDotIO",
@@ -14870,6 +14884,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/oakimov/devin-opencode-provider#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "Ducksay",
+      "url": "https://github.com/zhek/opencode-ducksay",
+      "owner": "zhek",
+      "repo": "opencode-ducksay",
+      "description": "OpenCode TUI plugin that swims an ASCII duck across the session sidebar, types a short joke written by the session's model when a turn ends, and answers the `/duck` command",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/zhek/opencode-ducksay#readme",
       "ecosystems": [
         "opencode"
       ]
