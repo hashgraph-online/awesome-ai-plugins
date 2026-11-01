@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-10-31",
-  "total": 1124,
+  "last_updated": "2026-11-01",
+  "total": 1130,
   "platforms": [
     "codex",
     "grok",
@@ -3324,6 +3324,34 @@
       ]
     },
     {
+      "name": "DESIGN:OS Code2Flow",
+      "url": "https://github.com/jangtrinh/design-os-code2flow",
+      "owner": "jangtrinh",
+      "repo": "design-os-code2flow",
+      "description": "Free, source-available (PolyForm Shield) local-first mapper that turns a Next.js, React Router, SwiftUI, Flutter or Compose codebase into a Mermaid user-flow graph and audits it for UX gaps like dead-end screens.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-code2flow/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "DESIGN:OS SVG Animation Engine",
+      "url": "https://github.com/jangtrinh/design-os-svg-animation",
+      "owner": "jangtrinh",
+      "repo": "design-os-svg-animation",
+      "description": "Free, source-available (PolyForm Shield) deterministic vector motion engine with a virtual-clock player and a 1080p 60fps MP4/WebM compiler for frame-exact product walkthroughs.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-svg-animation/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "dex",
       "url": "https://github.com/exmergo/dex",
       "owner": "exmergo",
@@ -3464,6 +3492,22 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Fair Value Calculator",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "description": "Fair value, quality score, uptrend and the three buy rules for 40,000+ stocks, plus your watchlist and alerts, through the hosted Fair Value Calculator MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/petz00711/fair-value-calculator-mcp/HEAD/plugins/fair-value-calculator/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
     },
     {
       "name": "Fantasy Football Manager",
@@ -3670,6 +3714,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/aklofas/kicad-happy/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Kin",
+      "url": "https://github.com/kinlab-ai/kin-plugin",
+      "owner": "kinlab-ai",
+      "repo": "kin-plugin",
+      "description": "Connects Codex to your accounts through Kin's hosted MCP server, even two of one service such as a work and a personal GitHub, each with its own rule per action: Allow, Ask me or Block.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/kinlab-ai/kin-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -12078,17 +12136,16 @@
       ]
     },
     {
-      "name": "Fair Value Calculator",
-      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
-      "owner": "petz00711",
-      "repo": "fair-value-calculator-mcp",
-      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
+      "name": "ExtraBrain CLI",
+      "url": "https://github.com/ExtraBrainApp/ExtraBrain-cli",
+      "owner": "ExtraBrainApp",
+      "repo": "ExtraBrain-cli",
+      "description": "Standalone macOS and Windows CLI for agents to import, search, and export documents and read meeting sessions as JSON through a running ExtraBrain desktop app",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme",
+      "platform": "standalone",
       "ecosystems": [
-        "mcp"
+        "standalone"
       ]
     },
     {
@@ -12986,6 +13043,20 @@
       "installation_url": "https://github.com/olgasafonova/miro-mcp-server#readme"
     },
     {
+      "name": "Monomi",
+      "url": "https://github.com/0x41io/monomi",
+      "owner": "0x41io",
+      "repo": "monomi",
+      "description": "MCP server: passive external attack surface recon for agents, with subdomain discovery from Certificate Transparency logs, hosting and port/CVE lookups, email spoofing and subdomain takeover checks, and suspicious-IP investigation, each result carrying its source; also a Python CLI with optional evidence-cited AI reports",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/0x41io/monomi#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "motion-launch-videos",
       "url": "https://github.com/Kimeur/motion-launch-videos",
       "owner": "Kimeur",
@@ -13053,6 +13124,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "Nova Research (CIVAI)",
+      "url": "https://github.com/civai-technologies/research-agent-mcp-by-nova-civai",
+      "owner": "civai-technologies",
+      "repo": "research-agent-mcp-by-nova-civai",
+      "description": "MCP server: hosted deep research and sourced report generation over live web search; tool discovery is open, tool calls need a Nova account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/civai-technologies/research-agent-mcp-by-nova-civai#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-10-31",
+  "last_updated": "2026-11-01",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3544,6 +3544,36 @@
       "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-3d-blender/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "DESIGN:OS Code2Flow",
+      "displayName": "DESIGN:OS Code2Flow",
+      "description": "Free, source-available (PolyForm Shield) local-first mapper that turns a Next.js, React Router, SwiftUI, Flutter or Compose codebase into a Mermaid user-flow graph and audits it for UX gaps like dead-end screens.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jangtrinh",
+      "repo": "design-os-code2flow",
+      "url": "https://github.com/jangtrinh/design-os-code2flow",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-code2flow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "DESIGN:OS SVG Animation Engine",
+      "displayName": "DESIGN:OS SVG Animation Engine",
+      "description": "Free, source-available (PolyForm Shield) deterministic vector motion engine with a virtual-clock player and a 1080p 60fps MP4/WebM compiler for frame-exact product walkthroughs.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jangtrinh",
+      "repo": "design-os-svg-animation",
+      "url": "https://github.com/jangtrinh/design-os-svg-animation",
+      "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-svg-animation/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "dex",
       "displayName": "dex",
       "description": "Agent skills for warehouse exploration, dbt transformation and semantic modeling, and schema-drift maintenance.",
@@ -3694,6 +3724,23 @@
       "repo": "exotic-car-rental-skills",
       "url": "https://github.com/sergebulaev/exotic-car-rental-skills",
       "install_url": "https://raw.githubusercontent.com/sergebulaev/exotic-car-rental-skills/HEAD/.codex-marketplace/exotic-car-rental-skills/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Fair Value Calculator",
+      "displayName": "Fair Value Calculator",
+      "description": "Fair value, quality score, uptrend and the three buy rules for 40,000+ stocks, plus your watchlist and alerts, through the hosted Fair Value Calculator MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "install_url": "https://raw.githubusercontent.com/petz00711/fair-value-calculator-mcp/HEAD/plugins/fair-value-calculator/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
     },
     {
       "name": "Fantasy Football Manager",
@@ -3919,6 +3966,21 @@
       "repo": "kicad-happy",
       "url": "https://github.com/aklofas/kicad-happy",
       "install_url": "https://raw.githubusercontent.com/aklofas/kicad-happy/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Kin",
+      "displayName": "Kin",
+      "description": "Connects Codex to your accounts through Kin's hosted MCP server, even two of one service such as a work and a personal GitHub, each with its own rule per action: Allow, Ask me or Block.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kinlab-ai",
+      "repo": "kin-plugin",
+      "url": "https://github.com/kinlab-ai/kin-plugin",
+      "install_url": "https://raw.githubusercontent.com/kinlab-ai/kin-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Kreuzberg",
@@ -12965,19 +13027,18 @@
       "install_url": "https://raw.githubusercontent.com/dappros/ethora-mcp-server/HEAD/claude-plugin/.claude-plugin/plugin.json"
     },
     {
-      "name": "Fair Value Calculator",
-      "displayName": "Fair Value Calculator",
-      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
+      "name": "ExtraBrain CLI",
+      "displayName": "ExtraBrain CLI",
+      "description": "Standalone macOS and Windows CLI for agents to import, search, and export documents and read meeting sessions as JSON through a running ExtraBrain desktop app",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "mcp",
+      "platform": "standalone",
       "ecosystems": [
-        "mcp"
+        "standalone"
       ],
-      "owner": "petz00711",
-      "repo": "fair-value-calculator-mcp",
-      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
-      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
+      "owner": "ExtraBrainApp",
+      "repo": "ExtraBrain-cli",
+      "url": "https://github.com/ExtraBrainApp/ExtraBrain-cli"
     },
     {
       "name": "Firecrawl",
@@ -13943,6 +14004,21 @@
       "installation_url": "https://github.com/olgasafonova/miro-mcp-server#readme"
     },
     {
+      "name": "Monomi",
+      "displayName": "Monomi",
+      "description": "MCP server: passive external attack surface recon for agents, with subdomain discovery from Certificate Transparency logs, hosting and port/CVE lookups, email spoofing and subdomain takeover checks, and suspicious-IP investigation, each result carrying its source; also a Python CLI with optional evidence-cited AI reports",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "0x41io",
+      "repo": "monomi",
+      "url": "https://github.com/0x41io/monomi",
+      "installation_url": "https://github.com/0x41io/monomi#readme"
+    },
+    {
       "name": "motion-launch-videos",
       "displayName": "motion-launch-videos",
       "description": "Claude Code skill that turns a short brief into a looping kinetic-typography launch video, written as one self-contained HTML file and rendered locally to MP4 with motion blur and a seamless loop",
@@ -14016,6 +14092,21 @@
       "repo": "agent-skills",
       "url": "https://github.com/Nimbleway/agent-skills",
       "install_url": "https://raw.githubusercontent.com/Nimbleway/agent-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Nova Research (CIVAI)",
+      "displayName": "Nova Research (CIVAI)",
+      "description": "MCP server: hosted deep research and sourced report generation over live web search; tool discovery is open, tool calls need a Nova account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "civai-technologies",
+      "repo": "research-agent-mcp-by-nova-civai",
+      "url": "https://github.com/civai-technologies/research-agent-mcp-by-nova-civai",
+      "installation_url": "https://github.com/civai-technologies/research-agent-mcp-by-nova-civai#readme"
     },
     {
       "name": "nsfw-ai-skill",
