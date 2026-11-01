@@ -978,6 +978,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) - MCP server: record and replay coding-agent runs, exposing recorded traces for offline inspection.
 - [OrgX](https://github.com/useorgx/orgx-codex-plugin) - MCP access and initiative-aware skills for organizational workflows.
 - [orionbelt-analytics](https://github.com/ralforion/orionbelt-analytics) - MCP server: analyzes database schemas, generates RDF/OWL ontologies with SQL mappings, and validates Text-to-SQL with fan-trap detection.
+- [OutlierKit](https://github.com/adchat/outlierkit-mcp) - MCP server: YouTube research for AI assistants, with read-only tools for outlier videos, channels, transcripts, comments and keyword volumes.
 - [Overleaf LaTeX](https://github.com/MarcoDotIO/overleaf-latex) - Local MCP/Codex plugin for creating and editing Overleaf projects.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
