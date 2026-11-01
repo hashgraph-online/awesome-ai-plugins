@@ -339,14 +339,13 @@ def reference_lines(run_url: str) -> list[str]:
 
 
 def with_marker(paragraph: str) -> str:
-    """Prefix a gate comment with its marker on a line of its own.
+    """Keep feedback in one Markdown paragraph with a trailing marker.
 
-    A GitHub markdown HTML comment consumes the entire line it appears on,
-    so any content sharing that line is emitted as raw text whose markdown
-    (links, bold, code) never renders.
+    A leading HTML comment starts a raw HTML block. Placing the hidden marker
+    after the prose keeps Markdown links renderable without a marker-only line.
     """
 
-    return f"{COMMENT_MARKER}\n\n{paragraph}"
+    return f"{one_paragraph(paragraph)} {COMMENT_MARKER}"
 
 
 def scan_block_comment(result: dict[str, object], summary: str, run_url: str, mention: str) -> str:
