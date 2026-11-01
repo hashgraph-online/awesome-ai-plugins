@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-01",
-  "total": 1132,
+  "total": 1133,
   "platforms": [
     "codex",
     "grok",
@@ -3494,22 +3494,6 @@
       ]
     },
     {
-      "name": "Fair Value Calculator",
-      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
-      "owner": "petz00711",
-      "repo": "fair-value-calculator-mcp",
-      "description": "Fair value, quality score, uptrend and the three buy rules for 40,000+ stocks, plus your watchlist and alerts, through the hosted Fair Value Calculator MCP server.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/petz00711/fair-value-calculator-mcp/HEAD/plugins/fair-value-calculator/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex",
-        "mcp"
-      ],
-      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
-    },
-    {
       "name": "Fantasy Football Manager",
       "url": "https://github.com/krmisystems/fantasy-football-manager",
       "owner": "krmisystems",
@@ -3944,6 +3928,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/loomaly/loomaly/HEAD/loomaly/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "looot",
+      "url": "https://github.com/loootai/looot-plugin",
+      "owner": "loootai",
+      "repo": "looot-plugin",
+      "description": "Search, price and run paid data APIs for SEO, enrichment, email verification and social from one prepaid balance through the hosted looot MCP server and one skill, with browser sign-in and no provider keys.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/loootai/looot-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -12146,6 +12144,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "Fair Value Calculator",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
