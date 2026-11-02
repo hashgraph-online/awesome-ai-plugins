@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-02",
-  "total": 1148,
+  "total": 1150,
   "platforms": [
     "codex",
     "grok",
@@ -1721,6 +1721,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/DuncanMain/project-memory-core/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Ponder",
+      "url": "https://github.com/Quinnod345/ponder",
+      "owner": "Quinnod345",
+      "repo": "ponder",
+      "description": "Coverage-gated, multi-pass deliberative review CLI and skill for Codex and Claude Code where four perspectives argue across passes, retract unverified findings, and block stopping until every unit in scope is graded.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Quinnod345/ponder/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -7486,6 +7500,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "env-guard",
+      "url": "https://github.com/yannigoyal/env-guard",
+      "owner": "yannigoyal",
+      "repo": "env-guard",
+      "description": "Claude Code plugin that checks Read, Bash and Grep requests for `.env` paths and reports tracked `.env` files without reading their values",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/yannigoyal/env-guard/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {

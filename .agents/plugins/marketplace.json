@@ -1835,6 +1835,21 @@
       "install_url": "https://raw.githubusercontent.com/DuncanMain/project-memory-core/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Ponder",
+      "displayName": "Ponder",
+      "description": "Coverage-gated, multi-pass deliberative review CLI and skill for Codex and Claude Code where four perspectives argue across passes, retract unverified findings, and block stopping until every unit in scope is graded.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Quinnod345",
+      "repo": "ponder",
+      "url": "https://github.com/Quinnod345/ponder",
+      "install_url": "https://raw.githubusercontent.com/Quinnod345/ponder/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Praxis",
       "displayName": "Praxis",
       "description": "Intent-driven workflow skills for coding agents: describe what done looks like, not the steps. Triage-first design keeps token costs low across design, TDD, debug, review, and release.",
@@ -8012,6 +8027,21 @@
       "repo": "encore-lite",
       "url": "https://github.com/keegan-dotcom/encore-lite",
       "install_url": "https://raw.githubusercontent.com/keegan-dotcom/encore-lite/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "env-guard",
+      "displayName": "env-guard",
+      "description": "Claude Code plugin that checks Read, Bash and Grep requests for `.env` paths and reports tracked `.env` files without reading their values",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "yannigoyal",
+      "repo": "env-guard",
+      "url": "https://github.com/yannigoyal/env-guard",
+      "install_url": "https://raw.githubusercontent.com/yannigoyal/env-guard/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Evidence Echo",
