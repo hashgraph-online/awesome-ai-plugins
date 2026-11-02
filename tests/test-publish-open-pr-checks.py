@@ -207,68 +207,123 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertEqual(title, "Centralized score unavailable")
         self.assertIn("did not establish a score of at least 75", summary)
 
-    def test_failed_scan_comment_is_one_paragraph_with_conditional_source_ci_guidance(self):
-        result = {
+    def scan_result(self, scanner_ci="not_detected", branch="main"):
+        return {
             "pr_number": 411,
             "state": "scan",
             "author_login": "builder",
             "contributions": [
-                {
-                    "owner": "owner",
-                    "repo": "plugin",
-                    "scanner_ci": "not_detected",
-                }
+                {"owner": "owner", "repo": "plugin", "scanner_ci": scanner_ci, "default_branch": branch}
             ],
         }
-        body = MODULE.remediation_comment(
-            result,
-            "failure",
-            "Centralized score not established",
-            "The centralized scan did not establish a score of at least 75.",
-            "https://github.com/example/repo/actions/runs/1",
-        )
 
-        self.assertTrue(body.endswith(" " + MODULE.COMMENT_MARKER))
-        self.assertFalse(body.startswith("<!--"))
-        self.assertNotIn("\n", body)
-        self.assertNotIn("\\n", body)
-        self.assertIn("@builder, the centralized scan did not establish", body)
-        self.assertNotIn("###", body)
-        self.assertIn("sanitized findings", body)
-        self.assertIn("scan-findings-pr-411-", body)
-        self.assertIn("a failed job alone does not establish a score below 75", body)
-        self.assertIn("source-repository scanner CI is recommended, not required", body)
-        self.assertIn("If the completed report confirms a score below 75", body)
-        self.assertIn("Reproduce locally", body)
-        self.assertIn("link the source run", body)
-        self.assertIn("request review", body)
-        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", body)
-        self.assertNotIn("Community Plugins format", body)
-
-    def test_passing_score_does_not_recommend_source_scanner_ci(self):
-        result = {
-            "pr_number": 411,
-            "state": "scan",
-            "author_login": "builder",
-            "contributions": [{"owner": "owner", "repo": "plugin", "scanner_ci": "not_detected"}],
+    def scan_report(self, score=63, **changes):
+        report = {
+            "source_commit": "a" * 40,
+            "score": score,
+            "scanner_version": "3.58.0",
+            "categories": [
+                {"name": "Security", "score": 10, "max": 20,
+                 "failed_checks": [{"name": "No hardcoded secrets", "points": 0, "max": 10}]},
+                {"name": "Best Practices", "score": 10, "max": 10, "failed_checks": []},
+            ],
+            "findings": [
+                {"ruleId": "HARDCODED_SECRET", "severity": "high", "filePath": "src/config.py",
+                 "lineNumber": 12, "remediation": "Move the secret to an environment variable."},
+                {"ruleId": "HARDCODED_SECRET", "severity": "high", "filePath": "src/config.py",
+                 "lineNumber": 12, "remediation": "Move the secret to an environment variable."},
+                {"ruleId": "LICENSE_MISSING", "severity": "low", "filePath": "LICENSE",
+                 "lineNumber": None, "remediation": "Add a LICENSE file."},
+            ],
         }
-        body = MODULE.remediation_comment(
+        report.update(changes)
+        return {"owner": "owner", "repo": "plugin", "report": report}
+
+    def render(self, result, conclusion, reports):
+        return MODULE.remediation_comment(
             result,
-            "success",
-            "Centralized score threshold passed",
-            "The centralized scan met the score threshold of 75.",
+            conclusion,
+            "title",
+            "summary",
             "https://github.com/example/repo/actions/runs/1",
+            reports=reports,
         )
 
-        self.assertTrue(body.endswith(" " + MODULE.COMMENT_MARKER))
-        self.assertFalse(body.startswith("<!--"))
-        self.assertNotIn("\n", body)
-        self.assertNotIn("\\n", body)
-        self.assertIn("score threshold of 75 was met", body)
-        self.assertNotIn("scanner CI is recommended", body)
-        self.assertNotIn("trust score", body)
+    def test_failed_scan_comment_shows_score_gap_and_tables(self):
+        body = self.render(self.scan_result(), "failure", [self.scan_report()])
 
-    def test_catalog_failure_comment_is_one_paragraph_without_scanner_gate(self):
+        self.assertTrue(body.startswith("## ❌ Plugin scan: 63 / 100 (needs 75)"))
+        self.assertTrue(body.endswith("\n" + MODULE.COMMENT_MARKER))
+        self.assertIn("@builder", body)
+        self.assertIn("12 more points", body)
+        self.assertIn("| Source repository |", body)
+        self.assertIn("| Severity | Rule | Hits | How to fix |", body)
+        self.assertIn("`HARDCODED_SECRET`", body)
+        self.assertIn("blob/" + "a" * 40 + "/src/config.py#L12", body)
+        self.assertIn("×2", body)
+        self.assertIn("(add this file)", body)
+        self.assertNotIn("blob/" + "a" * 40 + "/LICENSE", body)
+        self.assertIn("No hardcoded secrets", body)
+        self.assertIn("[!WARNING]", body)
+        self.assertIn("git commit --allow-empty", body)
+        self.assertIn("scan-findings-pr-411-", body)
+
+    def test_missing_scanner_ci_offers_pinned_one_click_install(self):
+        body = self.render(self.scan_result(), "failure", [self.scan_report()])
+
+        self.assertIn("https://github.com/owner/plugin/new/main?filename=.github/workflows/hol-plugin-scanner.yml&value=", body)
+        self.assertIn("hashgraph-online%2Fai-plugin-scanner-action%40", body)
+        self.assertIn("pipx run --spec plugin-scanner==3.58.0 plugin-scanner scan . --min-score 75", body)
+        self.assertIn("optional", body)
+        template = MODULE.workflow_template()
+        self.assertIsNotNone(template)
+        self.assertRegex(template, r"ai-plugin-scanner-action@[0-9a-f]{40} # v")
+        self.assertIn("contents: read", template)
+        self.assertIn("persist-credentials: false", template)
+
+    def test_invalid_branch_suppresses_install_link(self):
+        for branch in (None, "../main", "-x", "main?x=1"):
+            with self.subTest(branch=branch):
+                body = self.render(self.scan_result(branch=branch), "failure", [self.scan_report()])
+                self.assertNotIn("/new/", body)
+
+    def test_maintained_scanner_ci_is_acknowledged_without_install_link(self):
+        body = self.render(self.scan_result(scanner_ci="maintained"), "failure", [self.scan_report()])
+
+        self.assertIn("Scanner CI detected", body)
+        self.assertNotIn("/new/", body)
+
+    def test_passing_scan_comment_still_offers_scanner_ci(self):
+        body = self.render(self.scan_result(), "success", [self.scan_report(score=88, findings=[])])
+
+        self.assertTrue(body.startswith("## ✅ Plugin scan passed"))
+        self.assertIn("| **88** | 75 | ✅ Passes |", body)
+        self.assertNotIn("git commit --allow-empty", body)
+        self.assertIn("/new/main?", body)
+        self.assertTrue(body.endswith("\n" + MODULE.COMMENT_MARKER))
+
+    def test_missing_report_does_not_claim_a_score(self):
+        body = self.render(self.scan_result(), "failure", None)
+
+        self.assertTrue(body.startswith("## ⚠️ Plugin scan did not produce a score"))
+        self.assertNotIn("needs 75)", body.splitlines()[0])
+
+    def test_untrusted_artifact_text_cannot_inject_markdown(self):
+        report = self.scan_report(findings=[
+            {"ruleId": "RULE_X", "severity": "high", "filePath": "a.py", "lineNumber": 1,
+             "remediation": "see [here](https://evil.example) <img src=x>"},
+            {"ruleId": "bad](x)", "severity": "high", "filePath": "b.py", "lineNumber": 1, "remediation": "x"},
+            {"ruleId": "RULE_Y", "severity": "high", "filePath": "@evil/x", "lineNumber": 1, "remediation": "x"},
+        ], categories=[{"name": "<script>", "score": 1, "max": 2, "failed_checks": []}])
+        body = self.render(self.scan_result(), "failure", [report])
+
+        self.assertNotIn("evil", body)
+        self.assertNotIn("<img", body)
+        self.assertNotIn("<script>", body)
+        self.assertNotIn("bad](x)", body)
+        self.assertIn(MODULE.GENERIC_REMEDIATION, body)
+
+    def test_catalog_failure_comment_lists_reasons_without_scanner_section(self):
         result = {
             "pr_number": 411,
             "state": "failure",
@@ -283,10 +338,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             "https://github.com/example/repo/actions/runs/1",
         )
 
-        self.assertTrue(body.endswith(" " + MODULE.COMMENT_MARKER))
-        self.assertFalse(body.startswith("<!--"))
-        self.assertNotIn("\n", body)
-        self.assertIn("entry is not alphabetical", body)
+        self.assertTrue(body.startswith("## ❌ Contribution checks failed"))
+        self.assertTrue(body.endswith("\n" + MODULE.COMMENT_MARKER))
+        self.assertIn("- entry is not alphabetical", body)
         self.assertNotIn("scanner CI", body)
 
     def test_failed_scan_check_links_sanitized_artifact_for_new_title(self):
