@@ -28,6 +28,30 @@ class ScanReportTests(unittest.TestCase):
         self.assertNotIn("private", json.dumps(report))
         self.assertNotIn("private", json.dumps(reporter.sarif(report)))
 
+    def test_category_breakdown_and_version_keep_only_allowlisted_fields(self):
+        raw = {"score": 63, "tool_version": "3.58.0", "findings": [], "categories": [
+            {"name": "Security", "score": 10, "max": 20, "checks": [
+                {"name": "No hardcoded secrets", "passed": False, "points": 0, "maxPoints": 10,
+                 "message": "token=private", "findings": [{"source": "private"}]},
+                {"name": "Pinned actions", "passed": True, "points": 10, "maxPoints": 10}]},
+            {"name": "<script>", "score": 1, "max": 2, "checks": []},
+            {"name": "Metadata", "score": True, "max": 5, "checks": []}]}
+        report = reporter.sanitize(raw, Path("/scan"), "a" * 40)
+        self.assertEqual("3.58.0", report["scanner_version"])
+        self.assertEqual([{"name": "Security", "score": 10, "max": 20, "failed_checks": [
+            {"name": "No hardcoded secrets", "points": 0, "max": 10}]}], report["categories"])
+        self.assertNotIn("private", json.dumps(report))
+        report = reporter.sanitize({"score": 63, "tool_version": "3.58.0`; rm", "categories": "x"}, Path("/scan"), "a" * 40)
+        self.assertIsNone(report["scanner_version"])
+        self.assertEqual([], report["categories"])
+
+    def test_known_rules_get_specific_guidance(self):
+        report = reporter.sanitize({"score": 63, "findings": [
+            {"ruleId": "GITHUB_ACTION_UNPINNED", "severity": "medium"},
+            {"ruleId": "LICENSE_MISSING", "severity": "low"}]}, Path("/scan"), "a" * 40)
+        self.assertIn("40-character commit SHA", report["findings"][0]["remediation"])
+        self.assertIn("LICENSE", report["findings"][1]["remediation"])
+
     def test_unsafe_paths_and_invalid_rules_are_not_published(self):
         for path in ("/outside/file", "../../file", "bad`name", "github_pat_secret"):
             report = reporter.sanitize({"score": "private", "findings": [{
