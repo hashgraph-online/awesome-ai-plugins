@@ -99,6 +99,14 @@ class ValidateContributionTests(unittest.TestCase):
             with self.assertRaisesRegex(MODULE.ValidationError, "reachable public GitHub repository"):
                 MODULE.ensure_public_github_repository(contribution("missing-plugin"))
 
+    def test_source_default_branch_is_returned_only_when_conservative(self) -> None:
+        for branch, expected in (("main", "main"), ("release/v2", "release/v2"),
+                                 ("../main", None), ("-x", None), ("main?x=1", None), (None, None)):
+            with self.subTest(branch=branch), patch.object(
+                MODULE, "github_json", return_value={"default_branch": branch}
+            ):
+                self.assertEqual(MODULE.ensure_public_github_repository(contribution()), expected)
+
     def test_malformed_readme_change_still_fails(self) -> None:
         head = (
             "## Community Plugins\n"
@@ -320,13 +328,12 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("score threshold of 75 was met", comment)
-        self.assertNotIn("scanner CI is recommended", comment)
-        self.assertNotIn("trust score", comment)
-        self.assertTrue(comment.endswith(" " + self.publisher.COMMENT_MARKER))
-        self.assertFalse(comment.startswith("<!--"))
-        self.assertNotIn("\n", comment)
-        self.assertNotIn("\\n", comment)
+        self.assertTrue(comment.startswith("## ✅ Plugin scan passed"))
+        self.assertIn("cleared the 75-point listing threshold", comment)
+        self.assertNotIn("No score produced", comment)
+        self.assertNotIn("Re-scan after fixing", comment)
+        self.assertIn("Scanner CI is optional for listing", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
 
     def test_failed_source_scan_requires_resolution(self) -> None:
         result = {
@@ -350,17 +357,12 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("catalog-owned scan verifies a score of at least 75", comment)
-        self.assertIn("a failed job alone does not establish a score below 75", comment)
-        self.assertIn("Source-repository scanner CI is optional.", comment)
-        self.assertTrue(comment.endswith(" " + self.publisher.COMMENT_MARKER))
-        self.assertFalse(comment.startswith("<!--"))
-        self.assertNotIn("\n", comment)
-        self.assertNotIn("###", comment)
-        self.assertIn("sanitized findings", comment)
+        self.assertTrue(comment.startswith("## ⚠️ Plugin scan did not produce a score"))
+        self.assertIn("A failed job alone does not mean your plugin scored below 75", comment)
+        self.assertIn("Re-scan after fixing", comment)
         self.assertIn("scan-findings-pr-12-", comment)
-        self.assertNotIn("\\n", comment)
-        self.assertNotIn("recommended, not required", comment)
+        self.assertNotIn("\n\n\n", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
 
     def test_low_score_with_missing_ci_gets_conditional_optional_guidance(self) -> None:
         result = {
@@ -377,20 +379,13 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result, "failure", title, summary, "https://example.test/run"
         )
 
-        self.assertIn("If the completed report confirms a score below 75", comment)
-        self.assertIn("recommended, not required", comment)
-        self.assertIn("SHA-pinned workflow", comment)
-        self.assertIn("Reproduce locally", comment)
-        self.assertIn("Fix or document rule-level findings", comment)
-        self.assertIn("link the source run", comment)
-        self.assertIn("request review", comment)
-        self.assertNotIn("###", comment)
-        self.assertTrue(comment.endswith(" " + self.publisher.COMMENT_MARKER))
-        self.assertFalse(comment.startswith("<!--"))
-        self.assertNotIn("\n", comment)
-        self.assertIn("sanitized findings", comment)
-        self.assertNotIn("\\n", comment)
-        self.assertNotIn("SCANNER_GUIDE.md, reproduce locally", comment)
+        self.assertIn("⚠️ No score produced", comment)
+        self.assertIn("Add the scanner to your repository (recommended)", comment)
+        self.assertIn("ai-plugin-scanner-action@", comment)
+        self.assertIn("pipx run --spec plugin-scanner plugin-scanner scan . --min-score 75", comment)
+        self.assertNotIn("/new/", comment)
+        self.assertIn("Scanner CI is optional for listing", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
 
     def test_scan_passed_title_is_used_when_jobs_succeed(self) -> None:
         conclusion, title, _summary = self.publisher.check_summary(
