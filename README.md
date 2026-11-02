@@ -710,6 +710,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Usage Monitor](https://github.com/Errr0rr404/usage-monitor) - Floating desktop meter that shows remaining Grok, MiniMax, Codex, Claude, Cursor, Copilot, and Gemini usage and keeps each session on this computer.
 - [Vanguard Frontier Agentic](https://github.com/VincentChuWaiChow/vanguard-frontier-agentic) - Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows.
 - [VASTlint](https://github.com/aleksUIX/vastlint) - Validate VAST, VMAP, and DAAST ad tags against IAB Tech Lab specs via Gemini CLI, Claude Code, and a hosted MCP server.
+- [Vectoree](https://github.com/VectoreeAI/vectoree-skills) - Give your coding agent a backend — models, auth, database and storage in one cloud.
 - [Velith](https://github.com/epicsagas/Velith) - AI-native publishing system with a 6-phase pipeline from ideation to EPUB/PDF across 8 genres.
 - [Vesalius](https://github.com/haplollc/Vesalius) - MCP server: on-device code graph for querying a repository's symbols, references and dependencies, with a CLI, Mac app and VS Code extension.
 - [Vibe Prospecting](https://github.com/explorium-ai/vibeprospecting-plugin) - Live B2B company and contact intelligence for building lead lists, researching prospects, enriching contacts, and personalizing outreach.
