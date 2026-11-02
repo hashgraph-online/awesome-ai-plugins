@@ -774,7 +774,7 @@ def publish_check(
         scores = [item["report"]["score"] for item in pr_reports if item["report"] is not None]
         if scores and len(scores) == len(pr_reports):
             check_title = f"Scan score {format_score(min(scores))} / 100 (needs {MIN_SCORE})"
-        body = scan_report_comment(result, pr_reports, run_url, None, scanner_jobs.get(number, []))
+        body = scan_report_comment(result, pr_reports, run_url, None, scanner_jobs.get(number, []), conclusion)
         rendered = body.replace(COMMENT_MARKER, "").rstrip()
     elif result.get("state") == "scan":
         rendered = "\n\n".join(prose_sentences(summary))

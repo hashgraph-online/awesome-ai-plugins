@@ -377,5 +377,35 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("scan-findings-pr-411-", summary)
 
 
+    def test_check_run_renders_report_tables_and_score_title(self):
+        published = []
+
+        def fake_github_api(_repository, path, _token, *, method="GET", payload=None):
+            if path.startswith("/commits/"):
+                return {"check_runs": []}
+            if path == "/check-runs":
+                published.append(payload)
+            return {}
+
+        result = self.scan_result()
+        result.update({"head_sha": "a" * 40, "title": "Add example plugin", "failure_reasons": []})
+        with patch.object(MODULE, "github_api", side_effect=fake_github_api), patch.object(
+            MODULE, "upsert_remediation_comment"
+        ) as upsert:
+            MODULE.publish_check(
+                "example/repo",
+                result,
+                {411: ["failure"]},
+                "https://github.com/example/repo/actions/runs/1",
+                "token",
+                reports={411: [self.scan_report()]},
+            )
+
+        output = published[0]["output"]
+        self.assertEqual(output["title"], "Scan score 63 / 100 (needs 75)")
+        self.assertIn("| Severity | Rule | Hits | How to fix |", output["summary"])
+        self.assertNotIn(MODULE.COMMENT_MARKER, output["summary"])
+        upsert.assert_called_once()
+
 if __name__ == "__main__":
     unittest.main()
