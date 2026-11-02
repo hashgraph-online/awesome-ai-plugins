@@ -368,6 +368,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Emulo](https://github.com/ohad6k/emulo) - Mines selected evidence from local coding-agent sessions into private work, design, and writing profiles for Codex, Claude Code, and GitHub Copilot.
 - [Encore Lite](https://github.com/keegan-dotcom/encore-lite) - Free end-of-week surprise builder for Claude Code and Codex - the night before your weekly usage cap resets, it reads your recent work and builds one bonus deliverable, delivered as a reveal with an optional weekly scheduled run.
 - [Env Lint](./plugins/mturac/env-lint) - `.env` vs `.env.example` key parity — never prints values.
+- [env-guard](https://github.com/yannigoyal/env-guard) - Claude Code plugin with a PreToolUse hook that stops Read, Bash and Grep from exposing `.env` files and other secrets.
 - [Epic Harness](https://github.com/epicsagas/epic-harness) - Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.
 - [Espresso](https://github.com/mirkobozzetto/espresso) - Full token-saving stack in one plugin - output compression, global rules, RTK hook, Caveman ultra, GitNexus config. Detects existing setup, installs only what's missing. Works on Claude Code and Codex.
 - [Evidence Echo](https://github.com/r-hural/evidence-echo) - Claude Code plugin for evidence-based research digests: measured results only, every grade checked.
