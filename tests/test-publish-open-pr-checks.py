@@ -325,6 +325,21 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("/new/main?", body)
         self.assertTrue(body.endswith("\n" + MODULE.COMMENT_MARKER))
 
+    def test_merged_and_closed_comments_do_not_ask_for_a_push(self):
+        merged = self.render({**self.scan_result(), "pr_state": "merged"}, "success",
+                             [self.scan_report(score=88, findings=[])])
+        self.assertIn("This listing has been merged; no action is needed.", merged)
+        self.assertNotIn("a maintainer will review", merged)
+
+        closed = self.render({**self.scan_result(), "pr_state": "closed"}, "failure", [self.scan_report()])
+        self.assertIn("open a new pull request", closed)
+        self.assertNotIn("git commit --allow-empty", closed)
+        unscored = self.render({**self.scan_result(), "pr_state": "closed"}, "failure", None)
+        self.assertNotIn("push to this pull request", unscored)
+
+    def test_no_contributions_never_claims_scanner_ci(self):
+        self.assertEqual(MODULE.scanner_ci_section(self.scan_result(), [], True), [])
+
     def test_missing_report_does_not_claim_a_score(self):
         body = self.render(self.scan_result(), "failure", None)
 

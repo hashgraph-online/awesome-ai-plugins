@@ -504,6 +504,8 @@ def install_link(owner: str, repo: str, branch: object, template: str) -> str | 
 def scanner_ci_section(result: dict[str, object], items: list[dict[str, object]], passed: bool) -> list[str]:
     """Recommend maintainer-owned scanner CI with a reviewed one-click install."""
 
+    if not items:
+        return []
     contributions = {(c.get("owner"), c.get("repo")): c for c in result.get("contributions", []) if isinstance(c, dict)}
     missing = [item for item in items if contributions.get((item["owner"], item["repo"]), {}).get("scanner_ci") != "maintained"]
     if not missing:
@@ -600,11 +602,13 @@ def scan_report_comment(
     else:
         passed = conclusion == "success"
     below = [item for item in scored if item["report"]["score"] < MIN_SCORE]
+    pr_state = result.get("pr_state")
 
     if passed:
         title = "## ✅ Plugin scan passed"
-        intro = addressed(mention, f"The catalog scan cleared the {MIN_SCORE}-point listing threshold. "
-                          "No scan changes are needed; a maintainer will review the listing.")
+        next_step = ("This listing has been merged; no action is needed." if pr_state == "merged"
+                     else "No scan changes are needed; a maintainer will review the listing.")
+        intro = addressed(mention, f"The catalog scan cleared the {MIN_SCORE}-point listing threshold. {next_step}")
     elif below:
         lowest = min(item["report"]["score"] for item in below)
         title = f"## ❌ Plugin scan: {format_score(lowest)} / 100 (needs {MIN_SCORE})"
@@ -617,8 +621,10 @@ def scan_report_comment(
         title = "## ⚠️ Plugin scan did not produce a score"
         intro = addressed(mention, f"{ended} did not produce a usable report, so no score was measured. "
                  f"A failed job alone does not mean your plugin scored below {MIN_SCORE}. "
-                 "Check that the repository is public and clonable, then push to this pull request to retry. "
-                 "If it keeps failing, a maintainer will investigate the scan job log.")
+                 + ("Check that the repository is public and clonable before resubmitting."
+                    if pr_state in ("merged", "closed") else
+                    "Check that the repository is public and clonable, then push to this pull request to retry. "
+                    "If it keeps failing, a maintainer will investigate the scan job log."))
 
     lines = [title, "", intro]
     if items and (scored or not passed):
@@ -641,9 +647,14 @@ def scan_report_comment(
     if any("SECRET" in f["ruleId"] or "CREDENTIAL" in f["ruleId"] for item in scored for f in report_findings(item["report"])):
         lines += ["", "> [!WARNING]",
                   "> Possible credentials were detected. If any are real, rotate them first; removing them from the latest commit does not remove them from Git history."]
-    if not passed:
+    if not passed and pr_state in ("merged", "closed"):
+        lines += ["", "> [!NOTE]", "> This pull request is closed. To resubmit, fix the findings and open a new pull request."]
+    elif not passed:
         lines += ["", *rescan_section()]
-    lines += ["", *scanner_ci_section(result, items, passed), "", *footer_lines(run_url, artifact_prefix)]
+    scanner_ci = scanner_ci_section(result, items, passed)
+    if scanner_ci:
+        lines += ["", *scanner_ci]
+    lines += ["", *footer_lines(run_url, artifact_prefix)]
     return "\n".join(lines)
 
 
