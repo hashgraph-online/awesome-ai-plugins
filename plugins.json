@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-02",
-  "total": 1134,
+  "total": 1147,
   "platforms": [
     "codex",
     "grok",
@@ -1371,6 +1371,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/shitianfang/jev-use/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Keep Mac Awake",
+      "url": "https://github.com/bartdudzic/keepmacawake",
+      "owner": "bartdudzic",
+      "repo": "keepmacawake",
+      "description": "Lets Codex keep a MacBook awake with the lid closed while long tasks run, by starting and stopping timed sessions of the Keep Mac Awake macOS app (a paid app with a free trial).",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bartdudzic/keepmacawake/HEAD/plugins/keep-mac-awake/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3334,8 +3348,10 @@
       "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-3d-blender/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
-      ]
+        "codex",
+        "mcp"
+      ],
+      "installation_url": "https://github.com/jangtrinh/design-os-3d-blender#readme"
     },
     {
       "name": "DESIGN:OS Code2Flow",
@@ -5118,6 +5134,20 @@
       ]
     },
     {
+      "name": "berlin-job-search",
+      "url": "https://github.com/umutyesildal/berlin-job-search",
+      "owner": "umutyesildal",
+      "repo": "berlin-job-search",
+      "description": "Agent skill for Berlin and Germany job search: German-language and visa requirement checks, Lebenslauf drafting and interview practice",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/umutyesildal/berlin-job-search#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "claude-skills",
       "url": "https://github.com/Jeffallan/claude-skills",
       "owner": "Jeffallan",
@@ -5197,6 +5227,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/heydeacon/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "devops-mock-interview",
+      "url": "https://github.com/georgesmomo/devops-mock-interview",
+      "owner": "georgesmomo",
+      "repo": "devops-mock-interview",
+      "description": "Agent skill that runs a DevOps, SRE or platform engineer mock interview with live production incidents and system design, then gives an honest score out of 10 and a written report",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/georgesmomo/devops-mock-interview#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -5412,6 +5456,20 @@
       ]
     },
     {
+      "name": "mock-interview",
+      "url": "https://github.com/georgesmomo/mock-interview",
+      "owner": "georgesmomo",
+      "repo": "mock-interview",
+      "description": "Agent skill that runs a realistic mock job interview for any role, with live research and real follow-up questions, then gives an honest score out of 10 and a written report",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/georgesmomo/mock-interview#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Nitrogen",
       "url": "https://github.com/mksd0398/nitrogen",
       "owner": "mksd0398",
@@ -5491,6 +5549,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Routine Cleanup",
+      "url": "https://github.com/naw103/claude-routine-cleanup",
+      "owner": "naw103",
+      "repo": "claude-routine-cleanup",
+      "description": "Claude Code skill and plugin that bulk-deletes a scheduled routine's old run sessions in the desktop app, keeping the newest runs and every run you replied in",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/naw103/claude-routine-cleanup#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -5603,6 +5675,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/educlopez/ui-craft#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Vectoree",
+      "url": "https://github.com/VectoreeAI/vectoree-skills",
+      "owner": "VectoreeAI",
+      "repo": "vectoree-skills",
+      "description": "Agent skill that gives coding agents a Vectoree Cloud backend for models, auth, databases and storage",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/VectoreeAI/vectoree-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -8261,20 +8347,6 @@
       "installation_url": "https://github.com/fabricioctelles/jump-skills#readme"
     },
     {
-      "name": "Keep Mac Awake",
-      "url": "https://github.com/bartdudzic/keepmacawake",
-      "owner": "bartdudzic",
-      "repo": "keepmacawake",
-      "description": "Plugin and agent skill for Claude Code, Codex, Cursor and Copilot CLI that let the agent start and stop a closed-lid awake session on a MacBook through the `keepmacawake` command, with a read-only session-start hook; needs the separately installed Keep Mac Awake app (paid, free trial)",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/bartdudzic/keepmacawake/HEAD/plugins/keep-mac-awake/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
-    },
-    {
       "name": "keep-the-why",
       "url": "https://github.com/oliver-zehentleitner/keep-the-why",
       "owner": "oliver-zehentleitner",
@@ -8604,6 +8676,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "mach-gtm-mcp",
+      "url": "https://github.com/verma6uc/mach-gtm-mcp",
+      "owner": "verma6uc",
+      "repo": "mach-gtm-mcp",
+      "description": "MCP server: five local tools for B2B ICP templates, prospect-research checklists, heuristic lead scoring, and outreach drafts and sequences from supplied inputs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/verma6uc/mach-gtm-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -9807,6 +9893,20 @@
       ]
     },
     {
+      "name": "Ratchet Loop",
+      "url": "https://github.com/rahilp/Ratchet-Loop",
+      "owner": "rahilp",
+      "repo": "Ratchet-Loop",
+      "description": "Claude Code and Codex plugin that holds a coding agent's \"done\" until tests pass, UI work matches the design, a reviewer model from another company fails to break it, and you sign off",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rahilp/Ratchet-Loop/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "ratification-docket",
       "url": "https://github.com/seevali/claude-skills",
       "owner": "seevali",
@@ -9832,6 +9932,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "readfirst",
+      "url": "https://github.com/jeonghun917/readfirst",
+      "owner": "jeonghun917",
+      "repo": "readfirst",
+      "description": "MCP server: hands coding agents each file's rules, risks and checks from a map kept in the repo before they edit it, also as a Claude Code hook, CLI and GitHub Action, and `verify` runs the checks for what a branch changed",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/jeonghun917/readfirst#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -12044,6 +12158,20 @@
       ]
     },
     {
+      "name": "DMD Costs",
+      "url": "https://github.com/Ments123/dmd-costs-mcp",
+      "owner": "Ments123",
+      "repo": "dmd-costs-mcp",
+      "description": "MCP server: free, read-only legal costs tools for England and Wales over hosted Streamable HTTP with no key, covering CPR deadlines, detailed assessment, Part 36, court fees, interest and fixed costs, each answer citing its rule",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Ments123/dmd-costs-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "DocsMint",
       "url": "https://github.com/HiAi-gg/docsmint",
       "owner": "HiAi-gg",
@@ -12214,6 +12342,20 @@
       "installation_url": "https://github.com/scrapertweeter3-prog/mcp-flatratemath#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "FQGate-agent",
+      "url": "https://github.com/fqgate/FQGate-agent",
+      "owner": "fqgate",
+      "repo": "FQGate-agent",
+      "description": "Codex and Claude Code plugin connecting AI assistants to a local FQGate gateway for A-share quotes, K-lines, Level-2 data, news, and stock research",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fqgate/FQGate-agent/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
@@ -13926,6 +14068,20 @@
       ]
     },
     {
+      "name": "SlickTrip",
+      "url": "https://github.com/sliktrip/slicktrip-mcp",
+      "owner": "sliktrip",
+      "repo": "slicktrip-mcp",
+      "description": "MCP server: live flight, hotel and seat prices, cheapest-day calendars, and price-drop and seat alerts by email or text, hosted with OAuth sign-in",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "SpringBrand",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
       "owner": "springbrand-lab",
@@ -14275,6 +14431,20 @@
       "installation_url": "https://github.com/almogdepaz/wolfpack#readme"
     },
     {
+      "name": "Wudland",
+      "url": "https://github.com/joexk1/wudland-plugins",
+      "owner": "joexk1",
+      "repo": "wudland-plugins",
+      "description": "Linking CLI and plugins for Claude Code, Codex, opencode, and wrapped commands that ship agent status, notes, and letters AES-256-GCM encrypted over a self-hostable ntfy relay, surfaced on a GPLv3 iPhone pixel-village app",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/joexk1/wudland-plugins/HEAD/claude-code/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "XposedOrNot",
       "url": "https://github.com/XposedOrNot/XposedOrNot-API",
       "owner": "XposedOrNot",
@@ -14539,6 +14709,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-im-companion",
       "description": "Workspace presence companion for dsh-im: see which workspaces have an assistant on duty and whether they are online",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-infinite_canvas",
+      "url": "https://github.com/NINKCH/dsh-infinite_canvas",
+      "owner": "NINKCH",
+      "repo": "dsh-infinite_canvas",
+      "description": "A DeepSeek Harness plugin adding a node-based canvas studio for scripting, storyboarding, reference images and multi-shot video generation",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
