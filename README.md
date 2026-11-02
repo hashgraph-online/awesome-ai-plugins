@@ -1,4 +1,4 @@
-<img width="1817" height="1036" alt="image" src="https://github.com/user-attachments/assets/e8a72e3b-161c-4511-b136-8ed3ed15a49c" /><p align="center">
+<p align="center">
   <br>
   <img width="80" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome">
   <br>
