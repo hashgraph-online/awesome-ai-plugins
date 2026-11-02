@@ -64,6 +64,29 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             self.assertEqual(publish.call_args.args[2], {411: ["success"]})
             legacy.assert_not_called()
 
+    def test_artifact_publisher_renders_and_publishes_measured_and_missing_scores(self):
+        for score, expected in ((75, "success"), (74, "failure"), (None, "failure")):
+            with self.subTest(score=score), tempfile.TemporaryDirectory() as directory:
+                results = self.artifact_fixture(directory, score=score)
+                results[0].update(head_sha="b" * 40, title="Add example plugin", failure_reasons=[])
+                env = {"GITHUB_REPOSITORY": "example/repo", "GITHUB_TOKEN": "test-token",
+                       "GITHUB_RUN_ID": "1", "GITHUB_RUN_ATTEMPT": "2",
+                       "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+                       "OPEN_PR_RESULTS": json.dumps(results), "SCAN_FINDINGS_DIR": directory}
+                with patch.dict(MODULE.os.environ, env, clear=True), patch.object(
+                    MODULE, "github_api", return_value={"check_runs": []}
+                ) as api, patch.object(MODULE, "upsert_remediation_comment"):
+                    self.assertEqual(MODULE.main(), 0)
+                payloads = [call.kwargs["payload"] for call in api.call_args_list
+                            if call.args[1] == "/check-runs"]
+                self.assertEqual(len(payloads), 1)
+                self.assertEqual(payloads[0]["conclusion"], expected)
+                self.assertIn("owner/plugin", payloads[0]["output"]["summary"])
+                if score is None:
+                    self.assertIn("No score produced", payloads[0]["output"]["summary"])
+                else:
+                    self.assertIn(f"**{score}**", payloads[0]["output"]["summary"])
+
     def test_sweep_downloads_run_attempt_bound_reports_for_the_publisher(self):
         text = (Path(__file__).resolve().parents[1] / ".github/workflows/sweep-open-prs.yml").read_text()
         self.assertIn("actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093", text)
