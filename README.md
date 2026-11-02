@@ -160,6 +160,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [uCoz](https://github.com/ucoz-skills/agent-skills) - Nine Agent Skills and the official remote uCoz MCP so coding assistants can build landing pages, run ad campaigns, optimize a shop, translate a site, restyle the design, create original templates, write server scripts, manage content, and style popups.
 - [UI Verify](https://github.com/uiverify/uiverify) - Agent skills for visual testing: set up screenshot tests on your existing Storybook, Playwright or Vitest suite, check a UI change before pushing, and triage each build's diffs through the UI Verify MCP server.
 - [ui-craft](https://github.com/educlopez/ui-craft) - Design engineering skill collection for AI coding agents with slash commands, review agents, and MCP quality gates.
+- [Vectoree](https://github.com/VectoreeAI/vectoree-skills) - Agent skill that gives coding agents a Vectoree Cloud backend for models, auth, databases and storage.
 - [vibes-plug](https://github.com/roedyrustam/vibes-plug) - Cross-IDE AI skill collection that orchestrates 147 specialized subagents for full-stack development workflows.
 - [video-to-blender](https://github.com/gokayfem/video-to-blender) - Coding-agent skill that builds procedural Blender Geometry, Shader and compositor node graphs from Python with a tested node-group library and validation tools.
 - [vietnamese-language-skill](https://github.com/trussary/vietnamese-language-skill) - Collection of agent skills that fix Vietnamese register, terminology, and locale formatting across landing pages, docs, marketing, finance, and education, with a standalone validator.
@@ -710,7 +711,6 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Usage Monitor](https://github.com/Errr0rr404/usage-monitor) - Floating desktop meter that shows remaining Grok, MiniMax, Codex, Claude, Cursor, Copilot, and Gemini usage and keeps each session on this computer.
 - [Vanguard Frontier Agentic](https://github.com/VincentChuWaiChow/vanguard-frontier-agentic) - Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows.
 - [VASTlint](https://github.com/aleksUIX/vastlint) - Validate VAST, VMAP, and DAAST ad tags against IAB Tech Lab specs via Gemini CLI, Claude Code, and a hosted MCP server.
-- [Vectoree](https://github.com/VectoreeAI/vectoree-skills) - Give your coding agent a backend — models, auth, database and storage in one cloud.
 - [Velith](https://github.com/epicsagas/Velith) - AI-native publishing system with a 6-phase pipeline from ideation to EPUB/PDF across 8 genres.
 - [Vesalius](https://github.com/haplollc/Vesalius) - MCP server: on-device code graph for querying a repository's symbols, references and dependencies, with a CLI, Mac app and VS Code extension.
 - [Vibe Prospecting](https://github.com/explorium-ai/vibeprospecting-plugin) - Live B2B company and contact intelligence for building lead lists, researching prospects, enriching contacts, and personalizing outreach.
