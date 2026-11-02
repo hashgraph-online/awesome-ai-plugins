@@ -645,6 +645,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [simpleviz](https://github.com/sstoehrm/simpleviz) - Skill teaching agents the simpleviz EDN graph format and CLI so they can author, serve, and compare diagram files.
 - [site-risk-check](https://github.com/kobimantzur/agent-skills) - Zero-dependency skill that scans a live URL for the conditions behind accessibility and privacy demand letters — trackers firing before consent, missing policies, and machine-checkable WCAG gaps — mapped to the jurisdictions the site actually sells to.
 - [skill-sync-publisher](https://github.com/liuyewang/skill-sync-publisher) - Safely synchronize this Codex skill across public agent-skill registries.
+- [SkillForge](https://github.com/gintingism/skillforge) - Universal package manager, security auditor, and context token profiler for portable agent skills. <!-- platform: standalone -->
 - [skills](https://github.com/pwguler/skills) - Agent skills against the debt coding agents leave behind: unsettled plans, untested code, and claims nobody checked.
 - [skillsaw](https://github.com/stbenjam/skillsaw) - A configurable linter for agent skills, plugins, and AI coding assistant context.
 - [Skillstore](https://github.com/aiskillstore/marketplace) - Security-audited Agent Skills marketplace with one-command installation for Claude Code and Codex via the skillstore CLI.
