@@ -1655,6 +1655,21 @@
       "install_url": "https://raw.githubusercontent.com/sarveshsea/memi/HEAD/plugins/memoire/.codex-plugin/plugin.json"
     },
     {
+      "name": "memtomem",
+      "displayName": "memtomem",
+      "description": "Markdown-first long-term memory for Codex that searches, recalls, saves and indexes project notes, and resumes work from a handoff another session or agent wrote.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "memtomem",
+      "repo": "memtomem",
+      "url": "https://github.com/memtomem/memtomem",
+      "install_url": "https://raw.githubusercontent.com/memtomem/memtomem/HEAD/plugins/memtomem/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ML Pipeline",
       "displayName": "ML Pipeline",
       "description": "Enforces a strict 16-step data-first ML workflow \u2014 data inspection, EDA, and problem definition before any model training \u2014 with explicit user-permission gates, marimo notebooks, and matplotlib figures at every step; also works in Claude Code and Kimi.",
@@ -3448,6 +3463,21 @@
       "url": "https://github.com/cometchat/cometchat-skills",
       "install_url": "https://raw.githubusercontent.com/cometchat/cometchat-skills/HEAD/.codex-plugin/plugin.json",
       "installation_url": "https://github.com/cometchat/cometchat-skills#readme"
+    },
+    {
+      "name": "ComputeFirst",
+      "displayName": "ComputeFirst",
+      "description": "Free hosted MCP server and skill for versioned, deterministic checks, conversions and data transforms, with no API key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "321zz321",
+      "repo": "computefirst-skill",
+      "url": "https://github.com/321zz321/computefirst-skill/tree/add-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/321zz321/computefirst-skill/add-codex-plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "Computer Usage Summary",
@@ -5270,6 +5300,21 @@
       "repo": "tokrepo-codex-plugin",
       "url": "https://github.com/henu-wang/tokrepo-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/henu-wang/tokrepo-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Treza",
+      "displayName": "Treza",
+      "description": "Make AI videos from Codex through Treza's hosted MCP server: one clip from a description, edits to media you have, and pipelines that render and post to YouTube and TikTok on a schedule.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "treza-labs",
+      "repo": "treza-plugin",
+      "url": "https://github.com/treza-labs/treza-plugin",
+      "install_url": "https://raw.githubusercontent.com/treza-labs/treza-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Unified AI System",
@@ -14551,6 +14596,17 @@
       "repo": "openai-compatible-imagegen",
       "url": "https://github.com/Syh1906/openai-compatible-imagegen",
       "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "openclaw-napcat-plugin",
+      "displayName": "openclaw-napcat-plugin",
+      "description": "OpenClaw channel plugin that bridges QQ private and group chats via NapCat OneBot 11, sending text, images, voice and group files",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "ProperSAMA",
+      "repo": "openclaw-napcat-plugin",
+      "url": "https://github.com/ProperSAMA/openclaw-napcat-plugin",
+      "installation_url": "https://github.com/ProperSAMA/openclaw-napcat-plugin#readme"
     },
     {
       "name": "opencode-agy-auth",
