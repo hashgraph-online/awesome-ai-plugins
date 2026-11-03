@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-02",
+  "last_updated": "2026-11-03",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -5842,6 +5842,21 @@
       "repo": "image-use",
       "url": "https://github.com/leeguooooo/image-use",
       "installation_url": "https://github.com/leeguooooo/image-use#readme"
+    },
+    {
+      "name": "Jam Skills",
+      "displayName": "Jam Skills",
+      "description": "Agent skills that record a browser session as a Jam, read Jam recordings (video, console, network) to find root causes, and attach proof-of-work Jams to agent PRs",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "jamdotdev",
+      "repo": "skills",
+      "url": "https://github.com/jamdotdev/skills",
+      "installation_url": "https://github.com/jamdotdev/skills#readme"
     },
     {
       "name": "kstack",

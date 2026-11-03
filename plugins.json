@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-02",
-  "total": 1162,
+  "last_updated": "2026-11-03",
+  "total": 1163,
   "platforms": [
     "codex",
     "grok",
@@ -5467,6 +5467,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/leeguooooo/image-use#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Jam Skills",
+      "url": "https://github.com/jamdotdev/skills",
+      "owner": "jamdotdev",
+      "repo": "skills",
+      "description": "Agent skills that record a browser session as a Jam, read Jam recordings (video, console, network) to find root causes, and attach proof-of-work Jams to agent PRs",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/jamdotdev/skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
