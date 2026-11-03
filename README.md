@@ -1133,6 +1133,7 @@ before submitting.
 - [Grok Imagine Cinematic Studio](https://github.com/FineComputer14451/Grok-Imagine-Cinematic-Studio) - Independent multi-agent cinematic production suite (25 Role-Card agents, 64 skills, Production Bible workflow, Character DNA locking, native Grok Imagine Video 1.5 support) for Grok Build.
 - [HTML/CSS to Image API](https://github.com/htmlcsstoimage/agent-plugins) - Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser.
 - [hypergrok-trading-desk](https://github.com/galleonlabs/hypergrok-trading-desk) - Seven-agent Hyperliquid trading desk roles and skills for Grok Bot that research, size, execute and review trades with user approval.
+- [Keenable](https://github.com/keenableai/keenable-grok-plugin) - Adds keyless web search and clean-Markdown page fetch to Grok Build through Keenable's hosted MCP server, with skills for everyday web research and multi-source cited deep research.
 - [ppl](https://github.com/ppl-crm/ppl-grok-plugin) - Connects Grok to ppl, a personal CRM for humans with AI agents, through its hosted MCP server at https://withppl.com/mcp (OAuth) for contacts, notes, reminders and relationship memory; free beta at https://withppl.com/register.
 
 ### Kimi Plugins
