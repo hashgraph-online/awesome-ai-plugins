@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+from collections import Counter
 import difflib
 import json
 import os
@@ -189,13 +190,35 @@ def readme_urls_in_section(readme: str, section: str) -> set[str]:
     return urls
 
 
+def readme_listing_signatures_in_section(
+    readme: str, section: str
+) -> set[tuple[str, str, str]]:
+    """Return name, normalized URL and description for rows in one section."""
+
+    current_section = ""
+    signatures: set[tuple[str, str, str]] = set()
+    for line in readme.splitlines():
+        heading = re.match(r"^##\s+(.+?)\s*$", line)
+        if heading:
+            current_section = heading.group(1).strip()
+            continue
+        if current_section != section:
+            continue
+        match = README_ENTRY_RE.match(line.strip())
+        if match:
+            signatures.add(
+                (match.group(1).strip(), normalize_url(match.group(2)), match.group(5).strip())
+            )
+    return signatures
+
+
 def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in a README diff."""
+    """Find added or revised Community Plugins rows in a README diff."""
 
     if not diff:
         return []
 
-    base_urls = readme_urls_in_section(base_readme, "Community Plugins")
+    base_signatures = readme_listing_signatures_in_section(base_readme, "Community Plugins")
     readme_lines = head_readme.splitlines()
 
     entries: list[Contribution] = []
@@ -211,7 +234,8 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
             match = README_ENTRY_RE.match(content.strip())
             if match and current_readme_section(readme_lines, added_line_number) == "Community Plugins":
                 url = normalize_url(match.group(2))
-                if url not in base_urls and url not in seen_urls:
+                signature = (match.group(1).strip(), url, match.group(5).strip())
+                if signature not in base_signatures and url not in seen_urls:
                     seen_urls.add(url)
                     entries.append(
                         Contribution(
@@ -231,7 +255,7 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
 
 
 def get_new_readme_entries(base_ref: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in the local README diff."""
+    """Find added or revised Community Plugins rows in the local README diff."""
 
     diff = git("diff", base_ref, "--", "README.md")
     if not diff or not README_PATH.exists():
@@ -337,8 +361,11 @@ def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
     return files
 
 
-def ensure_public_github_repository(contribution: Contribution) -> None:
-    """Fail catalog validation when the source repository is not reachable."""
+def ensure_public_github_repository(contribution: Contribution) -> str | None:
+    """Fail catalog validation when the source repository is not reachable.
+
+    Returns the default branch when GitHub reports a conservative branch name.
+    """
 
     url = f"https://api.github.com/repos/{contribution.owner}/{contribution.repo}"
     try:
@@ -351,6 +378,10 @@ def ensure_public_github_repository(contribution: Contribution) -> None:
         raise ValidationError(
             f"{contribution.url} is not a reachable public GitHub repository"
         )
+    branch = payload.get("default_branch")
+    if isinstance(branch, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]{0,99}", branch) and ".." not in branch:
+        return branch
+    return None
 
 
 def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
@@ -396,12 +427,35 @@ def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
     )
 
 
-def malformed_community_plugin_lines(diff: str, head_readme: str) -> list[str]:
-    """Return added Community Plugins bullets that do not match the catalog format."""
+def malformed_community_plugin_lines(
+    diff: str,
+    base_readme: str,
+    head_readme: str,
+) -> list[str]:
+    """Return new Community Plugins bullets that do not match the catalog format.
+
+    Exact lines already present in the base Community Plugins section may appear
+    as additions when an existing entry is reordered. They are not new
+    submissions and should not be rejected for using a legacy or
+    repository-local URL format.
+    """
 
     if not diff:
         return []
+    base_lines = base_readme.splitlines()
+    base_community_lines = Counter(
+        line.strip()
+        for number, line in enumerate(base_lines, start=1)
+        if current_readme_section(base_lines, number) == "Community Plugins"
+        and line.strip().startswith("- [")
+    )
     readme_lines = head_readme.splitlines()
+    head_community_lines = Counter(
+        line.strip()
+        for number, line in enumerate(readme_lines, start=1)
+        if current_readme_section(readme_lines, number) == "Community Plugins"
+        and line.strip().startswith("- [")
+    )
     malformed: list[str] = []
     added_line_number = 0
     for line in diff.splitlines():
@@ -414,6 +468,7 @@ def malformed_community_plugin_lines(diff: str, head_readme: str) -> list[str]:
             if (
                 current_readme_section(readme_lines, added_line_number) == "Community Plugins"
                 and content.startswith("- [")
+                and head_community_lines[content] > base_community_lines[content]
                 and README_ENTRY_RE.match(content) is None
             ):
                 malformed.append(content)
@@ -507,7 +562,7 @@ def entries_for_open_pull_request(repository: str, pull_request: OpenPullRequest
             tofile="README.md",
         )
     )
-    malformed = malformed_community_plugin_lines(diff, head_readme)
+    malformed = malformed_community_plugin_lines(diff, base_readme, head_readme)
     if malformed:
         raise ValidationError(
             "Community Plugins entries must use `- [Name](https://github.com/owner/repo) - description`: "
@@ -569,7 +624,7 @@ def scan_open_pull_requests(
                     "failure_reasons": [],
                 }
             )
-            report_lines.append(f"- **{prefix}: PASS** — no new Community Plugins entries")
+            report_lines.append(f"- **{prefix}: PASS** — no new or revised Community Plugins entries")
             continue
 
         report_lines.append(f"- **{prefix}**")
@@ -578,19 +633,20 @@ def scan_open_pull_requests(
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
             try:
-                ensure_public_github_repository(entry)
+                default_branch = ensure_public_github_repository(entry)
             except ValidationError as error:
                 catalog_failures.append(str(error))
                 report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
                 continue
             inspection = inspect_scanner_ci(entry)
-            scanner_contributions.append(
-                {
-                    "owner": entry.owner,
-                    "repo": entry.repo,
-                    "scanner_ci": inspection.status,
-                }
-            )
+            scanner_contribution = {
+                "owner": entry.owner,
+                "repo": entry.repo,
+                "scanner_ci": inspection.status,
+            }
+            if default_branch:
+                scanner_contribution["default_branch"] = default_branch
+            scanner_contributions.append(scanner_contribution)
             matrix.append(
                 {
                     "pr_number": pull_request.number,
@@ -599,7 +655,7 @@ def scan_open_pull_requests(
                 }
             )
             report_lines.append(
-                f"  - `{contribution}`: scanner CI {inspection.status}; queued for advisory scan"
+                f"  - `{contribution}`: scanner CI {inspection.status}; queued for required source scan"
             )
 
         if catalog_failures:
@@ -639,7 +695,7 @@ def scan_open_pull_requests(
         report_lines.extend(
             [
                 "",
-                "Catalog validation passed. Centralized scanner results are advisory.",
+                "Catalog validation passed. Centralized source scans must pass before merge.",
             ]
         )
 
@@ -743,8 +799,9 @@ def main() -> int:
         return 1
 
     diff = git("diff", args.base_ref, "--", "README.md")
+    base_readme = git("show", f"{args.base_ref}:README.md")
     head_readme = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
-    malformed = malformed_community_plugin_lines(diff, head_readme)
+    malformed = malformed_community_plugin_lines(diff, base_readme, head_readme)
     if malformed:
         print("ERROR: malformed Community Plugins entries:", file=sys.stderr)
         for line in malformed:
@@ -770,7 +827,7 @@ def main() -> int:
             print(f"  FAIL: {error}", file=sys.stderr)
             continue
         inspection = inspect_scanner_ci(entry)
-        print(f"  scanner CI {inspection.status}; queued for advisory centralized scan")
+        print(f"  scanner CI {inspection.status}; queued for required centralized scan")
 
     if catalog_failures:
         print(
