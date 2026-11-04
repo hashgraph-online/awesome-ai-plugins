@@ -2,15 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-03",
-  "total": 1168,
+  "last_updated": "2026-11-04",
+  "total": 1181,
   "platforms": [
     "codex",
     "grok",
     "agent-skills",
     "claude-code",
-    "standalone",
     "mcp",
+    "standalone",
     "kimi",
     "deepseek-harness",
     "opencode"
@@ -2209,6 +2209,20 @@
       ]
     },
     {
+      "name": "Suede AI Skills",
+      "url": "https://github.com/JasonColapietro/suede-creator-skills",
+      "owner": "JasonColapietro",
+      "repo": "suede-creator-skills",
+      "description": "Open-source Codex plugin with SEO and GEO audits, code review with an A-F ship grade, CI gates, AI evals and app shipping skills.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/JasonColapietro/suede-creator-skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Supercov",
       "url": "https://github.com/supercorp-ai/supercov",
       "owner": "supercorp-ai",
@@ -2497,20 +2511,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Eliasjunit/vibestretch/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "vidbyte-memory",
-      "url": "https://github.com/cerredz/vidbyte-memory",
-      "owner": "cerredz",
-      "repo": "vidbyte-memory",
-      "description": "Correction-driven memory for Codex: turns corrections into facts and pytest checks, stages all repository changes for commits and pushes to origin unless --no-push is used, and installs a Stop hook that keeps turns open until checks pass.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/cerredz/vidbyte-memory/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3525,6 +3525,20 @@
       ]
     },
     {
+      "name": "easybrandkit",
+      "url": "https://github.com/EminBudak/easybrandkit",
+      "owner": "EminBudak",
+      "repo": "easybrandkit",
+      "description": "Saves a website's real logo files, colors, fonts and first screen as a brand kit your agent can read.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/EminBudak/easybrandkit/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Education Agent Skills",
       "url": "https://github.com/GarethManning/education-agent-skills",
       "owner": "GarethManning",
@@ -3929,6 +3943,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/BlockchainHB/launchfast_codex_plugin/HEAD/plugins/launchfast/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "launch-film",
+      "url": "https://github.com/EminBudak/launch-film",
+      "owner": "EminBudak",
+      "repo": "launch-film",
+      "description": "Makes a launch film with music from a website or an App Store page, using its real logo, colors, fonts and screens.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/EminBudak/launch-film/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4981,6 +5009,20 @@
       ]
     },
     {
+      "name": "TweetAPI",
+      "url": "https://github.com/tweetapi/agent-skill",
+      "owner": "tweetapi",
+      "repo": "agent-skill",
+      "description": "Read-only lookups of public Twitter/X profiles, tweets, search results, lists, communities and Spaces through TweetAPI's hosted MCP server, with guidance for server-side API reads.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/tweetapi/agent-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Unified AI System",
       "url": "https://github.com/happy520ai/unified-ai-system",
       "owner": "happy520ai",
@@ -5221,6 +5263,20 @@
       ]
     },
     {
+      "name": "answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "owner": "QingYunA",
+      "repo": "answer-me-with-html",
+      "description": "Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/QingYunA/answer-me-with-html#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "antirea",
       "url": "https://github.com/MockirDev/antirea",
       "owner": "MockirDev",
@@ -5417,6 +5473,20 @@
       ]
     },
     {
+      "name": "Find Hiring Manager",
+      "url": "https://github.com/johnisanerd/claude-skill-find-hiring-manager",
+      "owner": "johnisanerd",
+      "repo": "claude-skill-find-hiring-manager",
+      "description": "Agent skill for Claude Code, Cursor and other skills-compatible agents that takes one job posting and finds the hiring manager, recruiter and likely referral contacts, with evidence for each person and outreach drafts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/johnisanerd/claude-skill-find-hiring-manager#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "FMXER",
       "url": "https://github.com/andrea-magni/FMXER",
       "owner": "andrea-magni",
@@ -5501,6 +5571,20 @@
       ]
     },
     {
+      "name": "humanizer-lint",
+      "url": "https://github.com/yanstd888/humanizer-lint",
+      "owner": "yanstd888",
+      "repo": "humanizer-lint",
+      "description": "Agent skill that flags AI stock phrases, flat sentence rhythm, and repetition with per-sentence fix hints across eight languages, running locally with zero dependencies and no data leaving the machine",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/yanstd888/humanizer-lint#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "image-use",
       "url": "https://github.com/leeguooooo/image-use",
       "owner": "leeguooooo",
@@ -5538,6 +5622,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/dwk601/kstack#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Markdown OKF-Schema Studio",
+      "url": "https://github.com/gsemet/markdown-okf-schema-studio",
+      "owner": "gsemet",
+      "repo": "markdown-okf-schema-studio",
+      "description": "Agent skill, packaged as a plugin for Claude Code, GitHub Copilot CLI, VS Code agent plugins, and Agent Plugins clients, that teaches agents to write rich Markdown (cards, tabs, admonitions, charts, diagrams) rendered by the [Markdown OKF-Schema Studio VS Code extension](https://marketplace.visualstudio.com/items?itemName=GaetanSemet.markdown-okf-schema-studio)",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/gsemet/markdown-okf-schema-studio#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -5748,6 +5846,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/ajnart/self-host#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "self-media-content-workflow",
+      "url": "https://github.com/yanhua1010/self-media-content-workflow",
+      "owner": "yanhua1010",
+      "repo": "self-media-content-workflow",
+      "description": "Ten agent skills covering the self-media content cycle, from briefs and trend research (including overseas-versus-China topic heat comparison) to platform copywriting, video production, publishing, and analytics",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/yanhua1010/self-media-content-workflow#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6261,6 +6373,20 @@
       ]
     },
     {
+      "name": "AIAgentCycle",
+      "url": "https://github.com/aiagentcycle/aiagentcycle-mcp",
+      "owner": "aiagentcycle",
+      "repo": "aiagentcycle-mcp",
+      "description": "MCP server: read-only, no-auth access to current AIAgentCycle services, pricing, integrations, case studies, knowledge base, and contact details over Streamable HTTP",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/aiagentcycle/aiagentcycle-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "aide",
       "url": "https://github.com/jmylchreest/aide",
       "owner": "jmylchreest",
@@ -6420,6 +6546,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "AtticDB",
+      "url": "https://github.com/Clawdlinux/atticdb",
+      "owner": "Clawdlinux",
+      "repo": "atticdb",
+      "description": "MCP server: Local, durable Rust memory with session history and keyed facts for Claude Code, Codex, and GitHub Copilot",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Clawdlinux/atticdb#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -8577,11 +8717,7 @@
       "description": "Local-first project memory over MCP for Claude Code, Codex, Cursor and eight other hosts: a SQLite store that retires facts when they change, shares knowledge across linked repos, and retrieves it by hybrid search",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/dat999zx/knowl/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
+      "installation_url": "https://github.com/dat999zx/knowl#readme"
     },
     {
       "name": "Knowledge Loom",
@@ -9797,6 +9933,20 @@
       ]
     },
     {
+      "name": "Pharon",
+      "url": "https://github.com/getpharon/pharon",
+      "owner": "getpharon",
+      "repo": "pharon",
+      "description": "Claude Code plugin that keeps a local inventory of your stack and alerts your team when a compromised package, exploited vulnerability, vendor breach or end-of-life date reaches it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/getpharon/pharon/HEAD/pharon-plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "phaseproof",
       "url": "https://github.com/speedsharmaai/phaseproof",
       "owner": "speedsharmaai",
@@ -10769,20 +10919,6 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
-      ]
-    },
-    {
-      "name": "Suede Creator Skills",
-      "url": "https://github.com/JasonColapietro/suede-creator-skills",
-      "owner": "JasonColapietro",
-      "repo": "suede-creator-skills",
-      "description": "An open-source Agent Skills pack for Claude Code and Codex covering multi-agent workflows, code review, design, copy, SEO, app shipping, creator-rights workflows, and local read-only MCP discovery",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/JasonColapietro/suede-creator-skills/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
@@ -12639,6 +12775,20 @@
       ]
     },
     {
+      "name": "Google Ads Transparency MCP",
+      "url": "https://github.com/GeminiGeorge22/google-ads-transparency-mcp",
+      "owner": "GeminiGeorge22",
+      "repo": "google-ads-transparency-mcp",
+      "description": "MCP server: competitor Google ads from the Google Ads Transparency Center (new, running and stopped, with first and last shown dates), run on your own Apify account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/GeminiGeorge22/google-ads-transparency-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Google Hotels MCP",
       "url": "https://github.com/huynhtanan/google-hotels-mcp",
       "owner": "huynhtanan",
@@ -14342,6 +14492,20 @@
       ]
     },
     {
+      "name": "Spotify Play Count MCP",
+      "url": "https://github.com/GeminiGeorge22/spotify-play-count-mcp",
+      "owner": "GeminiGeorge22",
+      "repo": "spotify-play-count-mcp",
+      "description": "MCP server: Spotify play counts for any track, album, artist or playlist, plus artist monthly listeners and followers, run on your own Apify account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/GeminiGeorge22/spotify-play-count-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "SpringBrand",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
       "owner": "springbrand-lab",
@@ -15139,6 +15303,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-prompt",
       "description": "Prompt toolbox for DeepSeek Harness: preset and custom prompt templates with one-click insert into the conversation",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-skills-tools",
+      "url": "https://github.com/hxlog/dsh-skills-tools",
+      "owner": "hxlog",
+      "repo": "dsh-skills-tools",
+      "description": "Skills manager for the DeepSeek Harness settings page: import Agent Skills from Git repositories, group them by repository, toggle each skill on or off, and expand SKILL.md content; disabled skills never reach the model",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
