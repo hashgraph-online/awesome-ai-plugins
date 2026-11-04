@@ -9749,6 +9749,21 @@
       "installation_url": "https://github.com/Flux159/mcp-server-kubernetes#readme"
     },
     {
+      "name": "mcp-server-lab",
+      "displayName": "mcp-server-lab",
+      "description": "MCP server: a notes server in pure Python stdlib whose strict v2 design (one verb per tool, required fields, structured errors) rejects all 10 adversarial calls that the loose v1 design silently accepts \u2014 three of them mutating the store \u2014 shipped as a runnable, measured head-to-head lab",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ranadhir19",
+      "repo": "mcp-server-lab",
+      "url": "https://github.com/ranadhir19/mcp-server-lab",
+      "installation_url": "https://github.com/ranadhir19/mcp-server-lab#readme"
+    },
+    {
       "name": "mcp-zuul",
       "displayName": "mcp-zuul",
       "description": "MCP server for Zuul CI with 48 tools for build analysis, failure diagnosis, log search, flaky job detection, pipeline status, and live console streaming",

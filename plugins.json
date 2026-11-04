@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-04",
-  "total": 1188,
+  "total": 1189,
   "platforms": [
     "codex",
     "grok",
@@ -9097,6 +9097,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/Flux159/mcp-server-kubernetes#readme"
+    },
+    {
+      "name": "mcp-server-lab",
+      "url": "https://github.com/ranadhir19/mcp-server-lab",
+      "owner": "ranadhir19",
+      "repo": "mcp-server-lab",
+      "description": "MCP server: a notes server in pure Python stdlib whose strict v2 design (one verb per tool, required fields, structured errors) rejects all 10 adversarial calls that the loose v1 design silently accepts \u2014 three of them mutating the store \u2014 shipped as a runnable, measured head-to-head lab",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ranadhir19/mcp-server-lab#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "mcp-zuul",
