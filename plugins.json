@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-04",
-  "total": 1181,
+  "total": 1190,
   "platforms": [
     "codex",
     "grok",
@@ -3397,7 +3397,7 @@
       "url": "https://github.com/vshulcz/deja-vu",
       "owner": "vshulcz",
       "repo": "deja-vu",
-      "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and nineteen more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
+      "description": "Search the coding sessions already on your disk \u2014 Codex, Claude Code, Cursor, opencode and thirty-nine more \u2014 including work from before it was installed, indexed locally with no model in the loop.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/codex-plugin/.codex-plugin/plugin.json",
@@ -5837,6 +5837,20 @@
       ]
     },
     {
+      "name": "SeeCode",
+      "url": "https://github.com/Aryanutkarsh/SeeCode",
+      "owner": "Aryanutkarsh",
+      "repo": "SeeCode",
+      "description": "Agent skill that generates animated, explorable diagrams in 45 types from short JSON specs, exporting SVG, PNG, GIF and MP4",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Aryanutkarsh/SeeCode#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "self-host",
       "url": "https://github.com/ajnart/self-host",
       "owner": "ajnart",
@@ -7310,6 +7324,19 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/Ducksss/codex-profiles#readme"
+    },
+    {
+      "name": "codex-to-agents",
+      "url": "https://github.com/sneezeforever/codex-to-agents",
+      "owner": "sneezeforever",
+      "repo": "codex-to-agents",
+      "description": "Codex plugin that delegates coding tasks to DeepSeek Harness, Hermes Agent CN Desktop, or Qoder CLI executors via a local dashboard",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
     },
     {
       "name": "coffee-paladin",
@@ -9072,6 +9099,20 @@
       "installation_url": "https://github.com/Flux159/mcp-server-kubernetes#readme"
     },
     {
+      "name": "mcp-server-lab",
+      "url": "https://github.com/ranadhir19/mcp-server-lab",
+      "owner": "ranadhir19",
+      "repo": "mcp-server-lab",
+      "description": "MCP server: a notes server in pure Python stdlib whose strict v2 design (one verb per tool, required fields, structured errors) rejects all 10 adversarial calls that the loose v1 design silently accepts \u2014 three of them mutating the store \u2014 shipped as a runnable, measured head-to-head lab",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ranadhir19/mcp-server-lab#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "mcp-zuul",
       "url": "https://github.com/imatza-rh/mcp-zuul",
       "owner": "imatza-rh",
@@ -9131,6 +9172,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "memory-cloud",
+      "url": "https://github.com/kagura-ai/memory-cloud",
+      "owner": "kagura-ai",
+      "repo": "memory-cloud",
+      "description": "MCP server: self-hosted persistent memory for AI agents, with remember and recall tools that keep project facts searchable across sessions",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/kagura-ai/memory-cloud#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -12149,6 +12204,19 @@
       ]
     },
     {
+      "name": "Checkride",
+      "url": "https://github.com/PreethamNoelP/checkride",
+      "owner": "PreethamNoelP",
+      "repo": "checkride",
+      "description": "Static scanner for MCP servers and agent tool code that follows calls through helpers to flag destructive actions (file deletes, shell, SQL, payments) lacking human approval, logging, limits or validation",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "Chorale",
       "url": "https://github.com/hxy9243/chorale",
       "owner": "hxy9243",
@@ -12257,6 +12325,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/sezginkipel/clayform#readme"
+    },
+    {
+      "name": "Clickwise",
+      "url": "https://github.com/softdevfz/clickwise-api",
+      "owner": "softdevfz",
+      "repo": "clickwise-api",
+      "description": "MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/softdevfz/clickwise-api#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "CloudBase AI Toolkit",
@@ -13142,6 +13224,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/leeguooooo/iphone-use#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "IPO Radar",
+      "url": "https://github.com/songiangvan40006-boop/ipo-radar-mcp",
+      "owner": "songiangvan40006-boop",
+      "repo": "ipo-radar-mcp",
+      "description": "MCP server: live India IPO grey-market premium (GMP), subscription/demand stats, and listing-day performance over a free public Streamable HTTP endpoint (https://ipogmpradar.com/mcp, no auth)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/songiangvan40006-boop/ipo-radar-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
@@ -14690,6 +14786,20 @@
       ]
     },
     {
+      "name": "UberLLM",
+      "url": "https://github.com/PSA-Team-source/uberllm",
+      "owner": "PSA-Team-source",
+      "repo": "uberllm",
+      "description": "Claude Code and Codex plugin with a hosted MCP server and a setup skill that let an agent make images and videos, check model prices and balance, and run on one OpenAI- and Anthropic-compatible UberLLM API key (prepaid, key required)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/PSA-Team-source/uberllm/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "ultramotion",
       "url": "https://github.com/sunsiyuan/ultramotion",
       "owner": "sunsiyuan",
@@ -15613,6 +15723,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/YidiDev/opencode-attention-inbox#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "Opencode Hush",
+      "url": "https://github.com/federicobordon09-dev/opencode-Hush",
+      "owner": "federicobordon09-dev",
+      "repo": "opencode-Hush",
+      "description": "Minimal OpenCode sidebar for context pressure, Git branch, and session telemetry",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/federicobordon09-dev/opencode-Hush#readme",
       "ecosystems": [
         "opencode"
       ]
