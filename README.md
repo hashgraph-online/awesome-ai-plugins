@@ -818,6 +818,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [CarsXE](https://github.com/carsxe/carsxe-codex-plugin) - Decode VINs, license plates, market value, vehicle history, recalls, liens, OBD codes, and more via the CarsXE API.
 - [cc-dash-kit](https://github.com/coolthor/cc-dash-kit) - Sidebar dashboard for Claude Code showing 5-hour/weekly usage limits and session cards, installable with one prompt and extensible with custom cards (e.g., GPU or local services).
 - [cguard](https://github.com/simon-init/cguard) - A Claude Code plugin hook that keeps secrets, stray docs and destructive commands out of agent sessions.
+- [Checkride](https://github.com/PreethamNoelP/checkride) - Static scanner for MCP servers and agent tool code that follows calls through helpers to flag destructive actions (file deletes, shell, SQL, payments) lacking human approval, logging, limits or validation. <!-- platform: standalone -->
 - [Chorale](https://github.com/hxy9243/chorale) - An LLM-assisted music sheet analysis and composition local MCP server and a web UI for inspect, annotate, compose, and interactively editing ABC notations for music.
 - [Chrome DevTools](https://github.com/win4r/chrome-devtools-codex-plugin) - One-click Codex plugin wrapper for chrome-devtools-mcp.
 - [chrome-use](https://github.com/leeguooooo/chrome-use) - MCP server: Controls your already-logged-in Chrome through native messaging, with isolated tab groups for concurrent agents and no remote-debugging port.
