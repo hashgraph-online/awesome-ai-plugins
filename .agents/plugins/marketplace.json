@@ -6234,6 +6234,21 @@
       "installation_url": "https://github.com/HaiyiMei/scorestarling-plugins#readme"
     },
     {
+      "name": "SeeCode",
+      "displayName": "SeeCode",
+      "description": "Agent skill that generates animated, explorable diagrams in 45 types from short JSON specs, exporting SVG, PNG, GIF and MP4",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Aryanutkarsh",
+      "repo": "SeeCode",
+      "url": "https://github.com/Aryanutkarsh/SeeCode",
+      "installation_url": "https://github.com/Aryanutkarsh/SeeCode#readme"
+    },
+    {
       "name": "self-host",
       "displayName": "self-host",
       "description": "Agent skill and CLI that lets your agent install self-hosted apps on your own hardware and set them up (admin accounts, API keys, apps connected to each other), asking before each step",
@@ -7819,6 +7834,20 @@
       "repo": "codex-profiles",
       "url": "https://github.com/Ducksss/codex-profiles",
       "installation_url": "https://github.com/Ducksss/codex-profiles#readme"
+    },
+    {
+      "name": "codex-to-agents",
+      "displayName": "codex-to-agents",
+      "description": "Codex plugin that delegates coding tasks to DeepSeek Harness, Hermes Agent CN Desktop, or Qoder CLI executors via a local dashboard",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "sneezeforever",
+      "repo": "codex-to-agents",
+      "url": "https://github.com/sneezeforever/codex-to-agents"
     },
     {
       "name": "coffee-paladin",
@@ -9785,6 +9814,21 @@
       "repo": "memesh",
       "url": "https://github.com/PCIRCLE-AI/memesh",
       "install_url": "https://raw.githubusercontent.com/PCIRCLE-AI/memesh/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "memory-cloud",
+      "displayName": "memory-cloud",
+      "description": "MCP server: self-hosted persistent memory for AI agents, with remember and recall tools that keep project facts searchable across sessions",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "kagura-ai",
+      "repo": "memory-cloud",
+      "url": "https://github.com/kagura-ai/memory-cloud",
+      "installation_url": "https://github.com/kagura-ai/memory-cloud#readme"
     },
     {
       "name": "Mental CLI",
@@ -13022,6 +13066,20 @@
       "install_url": "https://raw.githubusercontent.com/simon-init/cguard/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Checkride",
+      "displayName": "Checkride",
+      "description": "Static scanner for MCP servers and agent tool code that follows calls through helpers to flag destructive actions (file deletes, shell, SQL, payments) lacking human approval, logging, limits or validation",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "PreethamNoelP",
+      "repo": "checkride",
+      "url": "https://github.com/PreethamNoelP/checkride"
+    },
+    {
       "name": "Chorale",
       "displayName": "Chorale",
       "description": "An LLM-assisted music sheet analysis and composition local MCP server and a web UI for inspect, annotate, compose, and interactively editing ABC notations for music",
@@ -13139,6 +13197,21 @@
       "repo": "clayform",
       "url": "https://github.com/sezginkipel/clayform",
       "installation_url": "https://github.com/sezginkipel/clayform#readme"
+    },
+    {
+      "name": "Clickwise",
+      "displayName": "Clickwise",
+      "description": "Affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "softdevfz",
+      "repo": "clickwise-api",
+      "url": "https://github.com/softdevfz/clickwise-api",
+      "install_url": "https://raw.githubusercontent.com/softdevfz/clickwise-api/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "CloudBase AI Toolkit",
@@ -14095,6 +14168,21 @@
       "repo": "iphone-use",
       "url": "https://github.com/leeguooooo/iphone-use",
       "installation_url": "https://github.com/leeguooooo/iphone-use#readme"
+    },
+    {
+      "name": "IPO Radar",
+      "displayName": "IPO Radar",
+      "description": "MCP server: live India IPO grey-market premium (GMP), subscription/demand stats, and listing-day performance over a free public Streamable HTTP endpoint (https://ipogmpradar.com/mcp, no auth)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "songiangvan40006-boop",
+      "repo": "ipo-radar-mcp",
+      "url": "https://github.com/songiangvan40006-boop/ipo-radar-mcp",
+      "installation_url": "https://github.com/songiangvan40006-boop/ipo-radar-mcp#readme"
     },
     {
       "name": "ismail",
@@ -15761,6 +15849,21 @@
       "install_url": "https://raw.githubusercontent.com/GrinZero/tripo-studio-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "UberLLM",
+      "displayName": "UberLLM",
+      "description": "Claude Code and Codex plugin with a hosted MCP server and a setup skill that let an agent make images and videos, check model prices and balance, and run on one OpenAI- and Anthropic-compatible UberLLM API key (prepaid, key required)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "PSA-Team-source",
+      "repo": "uberllm",
+      "url": "https://github.com/PSA-Team-source/uberllm",
+      "install_url": "https://raw.githubusercontent.com/PSA-Team-source/uberllm/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "ultramotion",
       "displayName": "ultramotion",
       "description": "Motion-template skills for Claude Code and Codex that turn one prompt into a finished vertical video with music: Liquid Glass, Kinetic Type, Hand-drawn Explainer and Variety Captions",
@@ -16757,6 +16860,21 @@
       "repo": "opencode-attention-inbox",
       "url": "https://github.com/YidiDev/opencode-attention-inbox",
       "installation_url": "https://github.com/YidiDev/opencode-attention-inbox#readme"
+    },
+    {
+      "name": "Opencode Hush",
+      "displayName": "Opencode Hush",
+      "description": "Minimal OpenCode sidebar for context pressure, Git branch, and session telemetry",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "federicobordon09-dev",
+      "repo": "opencode-Hush",
+      "url": "https://github.com/federicobordon09-dev/opencode-Hush",
+      "installation_url": "https://github.com/federicobordon09-dev/opencode-Hush#readme"
     },
     {
       "name": "OpenCode Tab Wrangler",
