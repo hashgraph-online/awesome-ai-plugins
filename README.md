@@ -329,6 +329,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Codex × Grok Bot Task Bridge](https://github.com/aipmer/codex-grok-task-bridge) - MCP task bridge for queued, read-only research between Codex and Grok Bot, with fenced leases, idempotency, scoped OAuth, evidence-based results, and optional Codex-side continuation.
 - [codex-autoresearch](https://github.com/TheGreenCedar/codex-autoresearch) - Codex plugin that runs measured optimization loops against a benchmark to improve local code.
 - [codex-profiles](https://github.com/Ducksss/codex-profiles) - Switch Codex CLI and Desktop accounts with isolated `CODEX_HOME` profile directories instead of copying token files.
+- [codex-to-agents](https://github.com/sneezeforever/codex-to-agents) - Codex plugin that delegates coding tasks to DeepSeek Harness, Hermes Agent CN Desktop, or Qoder CLI executors via a local dashboard. <!-- platform: standalone -->
 - [coffee-paladin](https://github.com/pawelkwaczynski/coffee-paladin) - Thermal guard for Apple Silicon: pauses hot jobs before the Mac throttles and gates Claude Code, Codex and Gemini CLI before heavy commands.
 - [Commit Narrator](./plugins/mturac/commit-narrator) - Generate semantic commit message from staged diff, including the _why_.
 - [CommitLore](https://github.com/MongLong0214/commitlore) - Keeps constraints, rejected alternatives, and warnings in Git trailers and serves them back to the agent before it edits a file.
