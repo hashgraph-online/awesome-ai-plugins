@@ -1,7 +1,9 @@
 import importlib.util
+import io
 import json
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
 
@@ -114,10 +116,26 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         responses = [
             {"jobs": []},
             {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+            {"state": "open"},
         ]
         with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, patch("time.sleep"):
             self.assertEqual(MODULE.main(), 0)
         self.assertEqual(publish.call_args.args[2], {411: ["success"]})
+
+    def test_publisher_skips_pull_request_closed_during_the_sweep(self):
+        result = {"pr_number": 411, "state": "success", "contributions": []}
+        env = {
+            "GITHUB_REPOSITORY": "example/repo",
+            "GITHUB_TOKEN": "test-token",
+            "GITHUB_RUN_ID": "1",
+            "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+            "OPEN_PR_RESULTS": json.dumps([result]),
+        }
+        responses = [{"jobs": []}, {"state": "closed", "merged": False, "merged_at": None}]
+        with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(MODULE.main(), 0)
+        publish.assert_not_called()
+        self.assertIn("Skipped PR #411", output.getvalue())
 
     def test_waits_for_scanner_job_to_appear(self):
         responses = [
@@ -522,6 +540,31 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 self.assertIn(MODULE.HANDOFF_HEADING, text)
                 self.assertIn(MODULE.HANDOFF_PAID_NOTE, text)
                 self.assertIn("utm_campaign=agent_handoff", text)
+
+class PullRequestStillOpenTests(unittest.TestCase):
+    def check(self, pull: object) -> tuple[bool, dict[str, object]]:
+        result: dict[str, object] = {"pr_number": 7, "state": "scan"}
+        side_effect = pull if isinstance(pull, Exception) else None
+        with patch.object(MODULE, "github_api", return_value=pull, side_effect=side_effect):
+            return MODULE.pull_request_still_open("hashgraph-online/awesome-ai-plugins", result, "token"), result
+
+    def test_open_pull_request_is_published_unchanged(self) -> None:
+        self.assertEqual(self.check({"state": "open"}), (True, {"pr_number": 7, "state": "scan"}))
+
+    def test_pull_request_merged_since_discovery_is_published_as_merged(self) -> None:
+        published, result = self.check({"state": "closed", "merged": True, "merged_at": "2026-11-04T17:55:42Z"})
+        self.assertTrue(published)
+        self.assertEqual(result["pr_state"], "merged")
+
+    def test_pull_request_closed_since_discovery_is_skipped(self) -> None:
+        with redirect_stdout(io.StringIO()):
+            published, result = self.check({"state": "closed", "merged": False, "merged_at": None})
+        self.assertFalse(published)
+        self.assertNotIn("pr_state", result)
+
+    def test_failed_lookup_keeps_publishing(self) -> None:
+        self.assertTrue(self.check(RuntimeError("GitHub API GET failed"))[0])
+
 
 if __name__ == "__main__":
     unittest.main()
