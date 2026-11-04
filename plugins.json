@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-03",
-  "total": 1173,
+  "last_updated": "2026-11-04",
+  "total": 1180,
   "platforms": [
     "codex",
     "grok",
@@ -2203,6 +2203,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/lennney/stop-that-shit/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Suede AI Skills",
+      "url": "https://github.com/JasonColapietro/suede-creator-skills",
+      "owner": "JasonColapietro",
+      "repo": "suede-creator-skills",
+      "description": "Open-source Codex plugin with SEO and GEO audits, code review with an A-F ship grade, CI gates, AI evals and app shipping skills.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/JasonColapietro/suede-creator-skills/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5249,6 +5263,20 @@
       ]
     },
     {
+      "name": "answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "owner": "QingYunA",
+      "repo": "answer-me-with-html",
+      "description": "Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/QingYunA/answer-me-with-html#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "antirea",
       "url": "https://github.com/MockirDev/antirea",
       "owner": "MockirDev",
@@ -5440,6 +5468,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/jiangkoumo/ego-decision-layer#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Find Hiring Manager",
+      "url": "https://github.com/johnisanerd/claude-skill-find-hiring-manager",
+      "owner": "johnisanerd",
+      "repo": "claude-skill-find-hiring-manager",
+      "description": "Agent skill for Claude Code, Cursor and other skills-compatible agents that takes one job posting and finds the hiring manager, recruiter and likely referral contacts, with evidence for each person and outreach drafts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/johnisanerd/claude-skill-find-hiring-manager#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6504,6 +6546,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "AtticDB",
+      "url": "https://github.com/Clawdlinux/atticdb",
+      "owner": "Clawdlinux",
+      "repo": "atticdb",
+      "description": "MCP server: Local, durable Rust memory with session history and keyed facts for Claude Code, Codex, and GitHub Copilot",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Clawdlinux/atticdb#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -8661,11 +8717,7 @@
       "description": "Local-first project memory over MCP for Claude Code, Codex, Cursor and eight other hosts: a SQLite store that retires facts when they change, shares knowledge across linked repos, and retrieves it by hybrid search",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/dat999zx/knowl/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
+      "installation_url": "https://github.com/dat999zx/knowl#readme"
     },
     {
       "name": "Knowledge Loom",
@@ -9881,6 +9933,20 @@
       ]
     },
     {
+      "name": "Pharon",
+      "url": "https://github.com/getpharon/pharon",
+      "owner": "getpharon",
+      "repo": "pharon",
+      "description": "Claude Code plugin that keeps a local inventory of your stack and alerts your team when a compromised package, exploited vulnerability, vendor breach or end-of-life date reaches it",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/getpharon/pharon/HEAD/pharon-plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "phaseproof",
       "url": "https://github.com/speedsharmaai/phaseproof",
       "owner": "speedsharmaai",
@@ -10853,20 +10919,6 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
-      ]
-    },
-    {
-      "name": "Suede Creator Skills",
-      "url": "https://github.com/JasonColapietro/suede-creator-skills",
-      "owner": "JasonColapietro",
-      "repo": "suede-creator-skills",
-      "description": "An open-source Agent Skills pack for Claude Code and Codex covering multi-agent workflows, code review, design, copy, SEO, app shipping, creator-rights workflows, and local read-only MCP discovery",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/JasonColapietro/suede-creator-skills/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
       ]
     },
     {
@@ -12709,6 +12761,20 @@
       ]
     },
     {
+      "name": "Google Ads Transparency MCP",
+      "url": "https://github.com/GeminiGeorge22/google-ads-transparency-mcp",
+      "owner": "GeminiGeorge22",
+      "repo": "google-ads-transparency-mcp",
+      "description": "MCP server: competitor Google ads from the Google Ads Transparency Center (new, running and stopped, with first and last shown dates), run on your own Apify account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/GeminiGeorge22/google-ads-transparency-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Google Hotels MCP",
       "url": "https://github.com/huynhtanan/google-hotels-mcp",
       "owner": "huynhtanan",
@@ -14412,6 +14478,20 @@
       ]
     },
     {
+      "name": "Spotify Play Count MCP",
+      "url": "https://github.com/GeminiGeorge22/spotify-play-count-mcp",
+      "owner": "GeminiGeorge22",
+      "repo": "spotify-play-count-mcp",
+      "description": "MCP server: Spotify play counts for any track, album, artist or playlist, plus artist monthly listeners and followers, run on your own Apify account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/GeminiGeorge22/spotify-play-count-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "SpringBrand",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
       "owner": "springbrand-lab",
@@ -15209,6 +15289,19 @@
       "owner": "FeatherHunter",
       "repo": "dsh-prompt",
       "description": "Prompt toolbox for DeepSeek Harness: preset and custom prompt templates with one-click insert into the conversation",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-skills-tools",
+      "url": "https://github.com/hxlog/dsh-skills-tools",
+      "owner": "hxlog",
+      "repo": "dsh-skills-tools",
+      "description": "Skills manager for the DeepSeek Harness settings page: import Agent Skills from Git repositories, group them by repository, toggle each skill on or off, and expand SKILL.md content; disabled skills never reach the model",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
