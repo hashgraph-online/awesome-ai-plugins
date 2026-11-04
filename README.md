@@ -834,7 +834,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [ClawRouter](https://github.com/BlockRunAI/ClawRouter) - OpenClaw plugin providing local LLM routing across 88 models with x402 USDC or API-key billing, plus crypto, market, and phone-call tools.
 - [Clayform](https://github.com/sezginkipel/clayform) - MCP server that lets agents build 3D models from a semantic scene document, look at them through a software renderer, check them with measuring critics, rig and animate them, and export glTF, with no Blender or GPU.
 - [Clera](https://github.com/getclera/mcp) - Hosted hiring MCP server plus Claude Code, Cursor and Gemini CLI plugins: search 210,000+ vetted startup candidates, review Clera's picks and request intros over OAuth.
-- [Clickwise](https://github.com/softdevfz/clickwise-api) - Affiliate programs, deals, tracked links and product search, plus merchant program setup tools.
+- [Clickwise](https://github.com/softdevfz/clickwise-api) - MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools.
 - [CloudBase AI Toolkit](https://github.com/TencentCloudBase/CloudBase-AI-Toolkit) - Backend for AI coding agents on Tencent CloudBase — database, auth, and functions via Plugin, Skills & MCP.
 - [Cockatoo](https://github.com/louisblythe/cockatoo-mcp) - MCP server: create, edit and publish hosted business websites through Streamable HTTP with OAuth and owner-approved permissions.
 - [Codex Be Serious](https://github.com/lulucatdev/codex-be-serious) - Enforce formal, textbook-grade written register across all agent output.
