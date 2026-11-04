@@ -12303,13 +12303,13 @@
       "url": "https://github.com/softdevfz/clickwise-api",
       "owner": "softdevfz",
       "repo": "clickwise-api",
-      "description": "Affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
+      "description": "MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/softdevfz/clickwise-api/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
+      "platform": "mcp",
+      "installation_url": "https://github.com/softdevfz/clickwise-api#readme",
       "ecosystems": [
-        "codex"
+        "mcp"
       ]
     },
     {

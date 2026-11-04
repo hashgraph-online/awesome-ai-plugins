@@ -13201,17 +13201,17 @@
     {
       "name": "Clickwise",
       "displayName": "Clickwise",
-      "description": "Affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
+      "description": "MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "codex",
+      "platform": "mcp",
       "ecosystems": [
-        "codex"
+        "mcp"
       ],
       "owner": "softdevfz",
       "repo": "clickwise-api",
       "url": "https://github.com/softdevfz/clickwise-api",
-      "install_url": "https://raw.githubusercontent.com/softdevfz/clickwise-api/HEAD/.codex-plugin/plugin.json"
+      "installation_url": "https://github.com/softdevfz/clickwise-api#readme"
     },
     {
       "name": "CloudBase AI Toolkit",
