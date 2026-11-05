@@ -29,6 +29,16 @@
   Listings may target one assistant, several assistants, or open standards such as Agent Skills and MCP. Check each project for its supported clients and installation instructions.
 </p>
 
+<!-- hol-sponsors:start -->
+### Sponsors
+
+#### Bronze sponsors
+
+<p align="center">
+<a href="https://synthetic.new/?referral=FTVR2kb0"><img src="assets/synthetic-sponsor-bronze.png" alt="Synthetic" width="120" height="48" /></a>
+</p>
+<!-- hol-sponsors:end -->
+
 <br>
 
 ## Contents
