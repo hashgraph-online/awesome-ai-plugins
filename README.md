@@ -1189,6 +1189,7 @@ before submitting.
 - [hypergrok-trading-desk](https://github.com/galleonlabs/hypergrok-trading-desk) - Seven-agent Hyperliquid trading desk roles and skills for Grok Bot that research, size, execute and review trades with user approval.
 - [Keenable](https://github.com/keenableai/keenable-grok-plugin) - Adds keyless web search and clean-Markdown page fetch to Grok Build through Keenable's hosted MCP server, with skills for everyday web research and multi-source cited deep research.
 - [ppl](https://github.com/ppl-crm/ppl-grok-plugin) - Connects Grok to ppl, a personal CRM for humans with AI agents, through its hosted MCP server at https://withppl.com/mcp (OAuth) for contacts, notes, reminders and relationship memory; free beta at https://withppl.com/register.
+- [Skycloak MCP](https://github.com/sky-cloak/skycloak-mcp) - Manage Skycloak managed Keycloak clusters, realms, applications, SSO, and users from Grok via https://mcp.skycloak.io.
 
 ### Kimi Plugins
 
