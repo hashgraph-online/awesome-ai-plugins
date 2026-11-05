@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-04",
+  "last_updated": "2026-11-05",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -3625,8 +3625,10 @@
       "platform": "codex",
       "ecosystems": [
         "codex",
+        "grok",
         "kimi",
-        "deepseek-harness"
+        "deepseek-harness",
+        "opencode"
       ],
       "owner": "vshulcz",
       "repo": "deja-vu",
@@ -8447,6 +8449,21 @@
       "install_url": "https://raw.githubusercontent.com/flex-analytics/flexviz/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "flipback",
+      "displayName": "flipback",
+      "description": "A Claude Code plugin that notices when a turn ends with the work unfinished and sends the agent back to finish it, with no goal to type",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "fainir",
+      "repo": "flipback",
+      "url": "https://github.com/fainir/flipback",
+      "install_url": "https://raw.githubusercontent.com/fainir/flipback/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Flow Scenes",
       "displayName": "Flow Scenes",
       "description": "Ambient pixel-art scenes above the prompt (a campfire, surf, rockets, a train, the Tesla Roadster and more) that speed up with the agent's work, give each subagent a companion of its own, and play optional soundscapes, in Claude Code, opencode and pi",
@@ -8835,6 +8852,21 @@
       "repo": "harness-scope",
       "url": "https://github.com/shimo4228/harness-scope",
       "install_url": "https://raw.githubusercontent.com/shimo4228/harness-scope/HEAD/plugin/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "harness-stocktake",
+      "displayName": "harness-stocktake",
+      "description": "Audits your whole Claude Code harness (skills, rules, agents, hooks, CLAUDE.md, ADRs) for stale, contradictory or duplicated content, and changes only what you approve",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "shimo4228",
+      "repo": "harness-stocktake",
+      "url": "https://github.com/shimo4228/harness-stocktake",
+      "install_url": "https://raw.githubusercontent.com/shimo4228/harness-stocktake/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "hemingway",
@@ -13647,6 +13679,21 @@
       "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
     },
     {
+      "name": "Finance-Guru",
+      "displayName": "Finance-Guru",
+      "description": "A Claude Code plugin collection of finance skills and specialist agents driving typed Python calculators, a private SQLite ledger, and fail-closed portfolio guardrails",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "AojdevStudio",
+      "repo": "Finance-Guru",
+      "url": "https://github.com/AojdevStudio/Finance-Guru",
+      "install_url": "https://raw.githubusercontent.com/AojdevStudio/Finance-Guru/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Firecrawl",
       "displayName": "Firecrawl",
       "description": "Official Firecrawl skills and MCP configuration for Claude Code, Cursor and Codex, giving agents web search, scraping, crawling, URL mapping and browser interaction",
@@ -14612,6 +14659,21 @@
       "repo": "memory-mcp",
       "url": "https://github.com/Donk338/memory-mcp",
       "installation_url": "https://github.com/Donk338/memory-mcp#readme"
+    },
+    {
+      "name": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
+      "displayName": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
+      "description": "MCP server: secure tool calls with real-time AI agent policy enforcement, access controls and auditable authorization",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Metamynd",
+      "repo": "metamynd-mcp-gateway",
+      "url": "https://github.com/Metamynd/metamynd-mcp-gateway",
+      "installation_url": "https://github.com/Metamynd/metamynd-mcp-gateway#readme"
     },
     {
       "name": "Mimi Seed",
@@ -15793,6 +15855,21 @@
       "installation_url": "https://github.com/ridemountainpig/threads-analytics#readme"
     },
     {
+      "name": "ThreadShelf",
+      "displayName": "ThreadShelf",
+      "description": "MCP server: local-first semantic and exact search over your archived ChatGPT, Claude, Google AI Studio, OpenRouter, LM Studio and Grok conversations, with a web UI, CLI and HTTP API on the same index",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ChrystianSchutz",
+      "repo": "ThreadShelf",
+      "url": "https://github.com/ChrystianSchutz/ThreadShelf",
+      "installation_url": "https://github.com/ChrystianSchutz/ThreadShelf#readme"
+    },
+    {
       "name": "TikTok Skills",
       "displayName": "TikTok Skills",
       "description": "Codex-ready TikTok marketing bundle with a native .codex-plugin manifest and 8 skills: 3-second hook scripting (spoken line plus on-screen text), caption and hashtag writing under the 2,200-char API limit, trend mapping, profile optimization, AI-tell humanizer, and comment drafting; publishes through Publora with approval before anything goes live; also works in Claude Code",
@@ -16235,6 +16312,21 @@
       "repo": "hypergrok-trading-desk",
       "url": "https://github.com/galleonlabs/hypergrok-trading-desk",
       "install_url": "https://raw.githubusercontent.com/galleonlabs/hypergrok-trading-desk/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "Keenable",
+      "displayName": "Keenable",
+      "description": "Adds keyless web search and clean-Markdown page fetch to Grok Build through Keenable's hosted MCP server, with skills for everyday web research and multi-source cited deep research",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "keenableai",
+      "repo": "keenable-grok-plugin",
+      "url": "https://github.com/keenableai/keenable-grok-plugin",
+      "install_url": "https://raw.githubusercontent.com/keenableai/keenable-grok-plugin/HEAD/.grok-plugin/plugin.json"
     },
     {
       "name": "ppl",

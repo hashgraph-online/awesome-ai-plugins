@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-04",
-  "total": 1189,
+  "last_updated": "2026-11-05",
+  "total": 1195,
   "platforms": [
     "codex",
     "grok",
@@ -3404,8 +3404,10 @@
       "platform": "codex",
       "ecosystems": [
         "codex",
+        "grok",
         "kimi",
-        "deepseek-harness"
+        "deepseek-harness",
+        "opencode"
       ]
     },
     {
@@ -7894,6 +7896,20 @@
       ]
     },
     {
+      "name": "flipback",
+      "url": "https://github.com/fainir/flipback",
+      "owner": "fainir",
+      "repo": "flipback",
+      "description": "A Claude Code plugin that notices when a turn ends with the work unfinished and sends the agent back to finish it, with no goal to type",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fainir/flipback/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Flow Scenes",
       "url": "https://github.com/robdmac/flow",
       "owner": "robdmac",
@@ -8249,6 +8265,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/shimo4228/harness-scope/HEAD/plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "harness-stocktake",
+      "url": "https://github.com/shimo4228/harness-stocktake",
+      "owner": "shimo4228",
+      "repo": "harness-stocktake",
+      "description": "Audits your whole Claude Code harness (skills, rules, agents, hooks, CLAUDE.md, ADRs) for stale, contradictory or duplicated content, and changes only what you approve",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/shimo4228/harness-stocktake/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -12715,6 +12745,20 @@
       ]
     },
     {
+      "name": "Finance-Guru",
+      "url": "https://github.com/AojdevStudio/Finance-Guru",
+      "owner": "AojdevStudio",
+      "repo": "Finance-Guru",
+      "description": "A Claude Code plugin collection of finance skills and specialist agents driving typed Python calculators, a private SQLite ledger, and fail-closed portfolio guardrails",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/AojdevStudio/Finance-Guru/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Firecrawl",
       "url": "https://github.com/firecrawl/skills",
       "owner": "firecrawl",
@@ -13608,6 +13652,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/Donk338/memory-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
+      "url": "https://github.com/Metamynd/metamynd-mcp-gateway",
+      "owner": "Metamynd",
+      "repo": "metamynd-mcp-gateway",
+      "description": "MCP server: secure tool calls with real-time AI agent policy enforcement, access controls and auditable authorization",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Metamynd/metamynd-mcp-gateway#readme",
       "ecosystems": [
         "mcp"
       ]
@@ -14706,6 +14764,20 @@
       "installation_url": "https://github.com/ridemountainpig/threads-analytics#readme"
     },
     {
+      "name": "ThreadShelf",
+      "url": "https://github.com/ChrystianSchutz/ThreadShelf",
+      "owner": "ChrystianSchutz",
+      "repo": "ThreadShelf",
+      "description": "MCP server: local-first semantic and exact search over your archived ChatGPT, Claude, Google AI Studio, OpenRouter, LM Studio and Grok conversations, with a web UI, CLI and HTTP API on the same index",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ChrystianSchutz/ThreadShelf#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "TikTok Skills",
       "url": "https://github.com/sergebulaev/tiktok-skills",
       "owner": "sergebulaev",
@@ -15114,6 +15186,20 @@
       "source": "awesome-ai-plugins",
       "platform": "grok",
       "install_url": "https://raw.githubusercontent.com/galleonlabs/hypergrok-trading-desk/HEAD/.grok-plugin/plugin.json",
+      "ecosystems": [
+        "grok"
+      ]
+    },
+    {
+      "name": "Keenable",
+      "url": "https://github.com/keenableai/keenable-grok-plugin",
+      "owner": "keenableai",
+      "repo": "keenable-grok-plugin",
+      "description": "Adds keyless web search and clean-Markdown page fetch to Grok Build through Keenable's hosted MCP server, with skills for everyday web research and multi-source cited deep research",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "install_url": "https://raw.githubusercontent.com/keenableai/keenable-grok-plugin/HEAD/.grok-plugin/plugin.json",
       "ecosystems": [
         "grok"
       ]
