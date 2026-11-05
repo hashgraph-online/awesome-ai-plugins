@@ -3298,6 +3298,23 @@
       "install_url": "https://raw.githubusercontent.com/getclera/mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Clickwise",
+      "displayName": "Clickwise",
+      "description": "Affiliate programs, deals, tracked links and product search, plus merchant program setup tools.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "softdevfz",
+      "repo": "clickwise-api",
+      "url": "https://github.com/softdevfz/clickwise-api",
+      "install_url": "https://raw.githubusercontent.com/softdevfz/clickwise-api/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/softdevfz/clickwise-api#readme"
+    },
+    {
       "name": "Codex Be Serious",
       "displayName": "Codex Be Serious",
       "description": "Enforce formal, textbook-grade written register across all agent output.",
@@ -4426,6 +4443,21 @@
       "url": "https://github.com/MetaMask/agent-skills",
       "install_url": "https://raw.githubusercontent.com/MetaMask/agent-skills/HEAD/.codex-plugin/plugin.json",
       "installation_url": "https://github.com/MetaMask/agent-skills#readme"
+    },
+    {
+      "name": "Metis Check",
+      "displayName": "Metis Check",
+      "description": "Checks the citations in an answer at the registries that issue them and files a signed report anyone can recheck; hosted MCP with OAuth sign-in, free for 5 checks a month.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "MetisFoundry",
+      "repo": "metis-plugins",
+      "url": "https://github.com/MetisFoundry/metis-plugins",
+      "install_url": "https://raw.githubusercontent.com/MetisFoundry/metis-plugins/HEAD/plugins/metis-check/.codex-plugin/plugin.json"
     },
     {
       "name": "Mnemoverse Memory",
@@ -13246,21 +13278,6 @@
       "installation_url": "https://github.com/sezginkipel/clayform#readme"
     },
     {
-      "name": "Clickwise",
-      "displayName": "Clickwise",
-      "description": "MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "ecosystems": [
-        "mcp"
-      ],
-      "owner": "softdevfz",
-      "repo": "clickwise-api",
-      "url": "https://github.com/softdevfz/clickwise-api",
-      "installation_url": "https://github.com/softdevfz/clickwise-api#readme"
-    },
-    {
       "name": "CloudBase AI Toolkit",
       "displayName": "CloudBase AI Toolkit",
       "description": "Backend for AI coding agents on Tencent CloudBase \u2014 database, auth, and functions via Plugin, Skills & MCP",
@@ -14661,6 +14678,17 @@
       "installation_url": "https://github.com/Donk338/memory-mcp#readme"
     },
     {
+      "name": "MetaMynd AgentSafe Guard \u2013 Runtime Governance for AI Agents",
+      "displayName": "MetaMynd AgentSafe Guard \u2013 Runtime Governance for AI Agents",
+      "description": "Wrap an AI agent's tools so every call is authorized, signed and audited outside the agent's process, and a refused call never runs",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "Metamynd",
+      "repo": "agentsafe-guard",
+      "url": "https://github.com/Metamynd/agentsafe-guard",
+      "installation_url": "https://github.com/Metamynd/agentsafe-guard#readme"
+    },
+    {
       "name": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
       "displayName": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
       "description": "MCP server: secure tool calls with real-time AI agent policy enforcement, access controls and auditable authorization",
@@ -14674,6 +14702,17 @@
       "repo": "metamynd-mcp-gateway",
       "url": "https://github.com/Metamynd/metamynd-mcp-gateway",
       "installation_url": "https://github.com/Metamynd/metamynd-mcp-gateway#readme"
+    },
+    {
+      "name": "MetaMynd OpenShell Integration",
+      "displayName": "MetaMynd OpenShell Integration",
+      "description": "Proof of concept for MetaMynd authorization middleware in NVIDIA OpenShell, demonstrated with a governed purchasing flow",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "Metamynd",
+      "repo": "openshell-integration",
+      "url": "https://github.com/Metamynd/openshell-integration",
+      "installation_url": "https://github.com/Metamynd/openshell-integration#readme"
     },
     {
       "name": "Mimi Seed",
