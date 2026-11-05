@@ -534,7 +534,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
     def test_contributor_docs_carry_the_same_handoff(self):
         root = Path(__file__).resolve().parents[1]
-        for name in ("AGENTS.md", "CONTRIBUTING.md"):
+        for name in ("AGENTS.md", "CONTRIBUTING.md", ".agents/skills/list-my-plugin/SKILL.md"):
             with self.subTest(name=name):
                 text = (root / name).read_text(encoding="utf-8")
                 self.assertIn(MODULE.HANDOFF_HEADING, text)
