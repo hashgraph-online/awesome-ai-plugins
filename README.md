@@ -29,6 +29,8 @@
   Listings may target one assistant, several assistants, or open standards such as Agent Skills and MCP. Check each project for its supported clients and installation instructions.
 </p>
 
+<div align="center">
+
 <!-- hol-sponsors:start -->
 ### Sponsors
 
@@ -39,10 +41,11 @@
 </p>
 <!-- hol-sponsors:end -->
 
-<p align="center">
-  Thank you to our sponsors for supporting this list. <a href="https://synthetic.new/?referral=FTVR2kb0">Synthetic</a> (referral link) offers private inference for open-source models.<br>
-  Sponsorship does not change any plugin's trust score or ranking. To sponsor this list, see <a href="https://hol.org/advertise">hol.org/advertise</a>.
-</p>
+<sub>Thank you to <a href="https://synthetic.new/?referral=FTVR2kb0">Synthetic</a> (referral link) for supporting this list. Synthetic offers private inference for open-source models.<br>Sponsorship does not change any plugin's trust score or ranking.</sub>
+
+<a href="https://hol.org/advertise"><img src="https://img.shields.io/badge/Become_a_sponsor-hol.org%2Fadvertise-1e3970?style=flat" alt="Become a sponsor" height="22"></a>
+
+</div>
 
 <br>
 
