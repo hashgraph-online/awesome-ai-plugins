@@ -15,8 +15,10 @@ to, and never claim, sign up or buy anything on their behalf.
 grep -in "github.com/OWNER/REPO" README.md
 ```
 
-If it is listed, stop and tell your user where. Update an existing line only
-when they asked for a change.
+A match is a duplicate only when an existing line names this plugin. A
+repository can hold several plugins, one line each, so compare the display
+names. If this plugin is listed, stop and tell your user where. Update an
+existing line only when they asked for a change.
 
 ## 2. Write the line
 
