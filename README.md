@@ -748,6 +748,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [VillageSQL Skills](https://github.com/villagesql/villagesql-skills) - Skills for VillageSQL including building extensions from scratch and porting PostgreSQL extensions to VillageSQL.
 - [virtual-team](https://github.com/ovargas/virtual-team) - Claude Code and Codex plugin providing slash commands, skills, agents, and hooks that run a TDD feature pipeline from spec to shipping.
 - [Waggle](https://github.com/Abhigyan-Shekhar/Waggle-mcp) - Persistent graph-backed conversational memory for Codex that recalls project decisions, constraints, preferences, and outcomes across sessions.
+- [web-mcp](https://github.com/amitnarw/web-mcp) - Local Chromium browser control for AI agents to automate websites, test UI, fill forms, navigate pages, and capture screenshots.
 - [Web Search MCP](https://github.com/sydasif/web-search-mcp) - Comprehensive FastMCP server giving LLMs real-time web access across search engines (DuckDuckGo, Exa), social platforms (Reddit, Hacker News, GitHub, X, LinkedIn), and academic tools (arXiv, Wikipedia), with SSRF-protected URL fetching.
 - [web-ai-agent-skills](https://github.com/webmaxru/web-ai-agent-skills) - Agent skills that guide coding agents through integrating browser Web AI APIs: Prompt API, Translator, Language Detector, Proofreader, WebMCP, and WebNN.
 - [WebLatexMCP](https://github.com/elias-ramzi/WebLatexMCP) - MCP server plus bundled skills for editing, compiling, and committing LaTeX in git-hosted projects like Overleaf.
