@@ -41,7 +41,7 @@
 
 <p align="center">
   Thank you to our sponsors for supporting this list. <a href="https://synthetic.new/?referral=FTVR2kb0">Synthetic</a> (referral link) offers private inference for open-source models.<br>
-  Sponsorship does not affect which plugins are listed, their trust scores, or their ranking. To sponsor this list, see <a href="https://hol.org/advertise">hol.org/advertise</a>.
+  Sponsorship does not change any plugin's trust score or ranking. To sponsor this list, see <a href="https://hol.org/advertise">hol.org/advertise</a>.
 </p>
 
 <br>
