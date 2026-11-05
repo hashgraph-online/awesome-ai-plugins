@@ -13029,6 +13029,17 @@
       "installation_url": "https://github.com/doomsday-network/bounty-guard#readme"
     },
     {
+      "name": "Bowmark",
+      "displayName": "Bowmark",
+      "description": "Official Bowmark plugin for Claude Code, Codex, GitHub Copilot and Gemini CLI: the Bowmark skill plus its hosted MCP server, giving agents typed functions for live web data on many sites, tested on a schedule. Requires a Bowmark account; new accounts start with a free $10 of usage",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "bowmark-ai",
+      "repo": "plugin",
+      "url": "https://github.com/bowmark-ai/plugin",
+      "installation_url": "https://github.com/bowmark-ai/plugin#readme"
+    },
+    {
       "name": "BulkPublish",
       "displayName": "BulkPublish",
       "description": "Official BulkPublish MCP server config and agent skills for Claude Code, Cursor, and other Agent Skills clients that draft, schedule, cross-post, and analyze social media posts on 15 platforms, including Instagram, TikTok, YouTube, X, and LinkedIn",
