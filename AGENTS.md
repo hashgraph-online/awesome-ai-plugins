@@ -9,6 +9,7 @@
 
 ## Adding a listing
 
+- The `list-my-plugin` skill (`.agents/skills/list-my-plugin/SKILL.md`) walks through a listing end to end.
 - Follow `CONTRIBUTING.md`: one README line in the right section, alphabetical, `- [Name](https://github.com/owner/repo) - description`.
 - Run `python3 scripts/check-alphabetical.py README.md` before pushing.
 
