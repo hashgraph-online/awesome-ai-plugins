@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-05",
-  "total": 1199,
+  "total": 1207,
   "platforms": [
     "codex",
     "grok",
@@ -5168,13 +5168,13 @@
     },
     {
       "name": "WaveSpeed",
-      "url": "https://github.com/WaveSpeedAI/codex-plugin-wavespeed-cli",
+      "url": "https://github.com/WaveSpeedAI/codex-plugins",
       "owner": "WaveSpeedAI",
-      "repo": "codex-plugin-wavespeed-cli",
-      "description": "Generate and edit AI images, video, audio, and 3D on the WaveSpeed platform with a bundled MCP server and CLI skill, including live catalog search, local-file upload, and price quotes before running.",
+      "repo": "codex-plugins",
+      "description": "Generate and edit AI images, video, audio, and 3D on WaveSpeed through the hosted WaveSpeed MCP server and a CLI skill, with live catalog search and price quotes before running.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/WaveSpeedAI/codex-plugin-wavespeed-cli/HEAD/plugins/wavespeed-cli/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/WaveSpeedAI/codex-plugins/HEAD/plugins/wavespeed-cli/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5654,6 +5654,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/dwk601/kstack#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Lagune",
+      "url": "https://github.com/wellwelwel/lagune",
+      "owner": "wellwelwel",
+      "repo": "lagune",
+      "description": "Agent skill collection that secures a project before, during, and after development, in any language or stack: a security charter, the universal skill that hardens code as it is written, and a Blue Team audit that takes each risk from detection to a verified fix",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/wellwelwel/lagune#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -7964,6 +7978,20 @@
       "installation_url": "https://github.com/rasimme/FlowBoard#readme"
     },
     {
+      "name": "ForAgent",
+      "url": "https://github.com/seankwon816/foragent-skills",
+      "owner": "seankwon816",
+      "repo": "foragent-skills",
+      "description": "Gives AI coding agents (Claude Code, Codex, Cursor, Grok) private dialable phone numbers over Remote MCP so two sessions on different machines can talk directly within a 12-message call budget, approve incoming calls via Accept and Copy, and transfer files up to 25 MB",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/seankwon816/foragent-skills/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Foreman",
       "url": "https://github.com/thruwire/foreman",
       "owner": "thruwire",
@@ -9191,6 +9219,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/dave8172/mcplytics#readme"
+    },
+    {
+      "name": "mcpserverlist-mcp",
+      "url": "https://github.com/sudomichael/mcpserverlist-mcp",
+      "owner": "sudomichael",
+      "repo": "mcpserverlist-mcp",
+      "description": "MCP server: Check if your MCP server is ready for MCP directories, then get it submitted",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/sudomichael/mcpserverlist-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "md-prompt",
@@ -11567,6 +11609,16 @@
       ]
     },
     {
+      "name": "web-mcp",
+      "url": "https://github.com/amitnarw/web-mcp",
+      "owner": "amitnarw",
+      "repo": "web-mcp",
+      "description": "Local Chromium browser control for AI agents to automate websites, test UI, fill forms, navigate pages, and capture screenshots",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/amitnarw/web-mcp#readme"
+    },
+    {
       "name": "WebLatexMCP",
       "url": "https://github.com/elias-ramzi/WebLatexMCP",
       "owner": "elias-ramzi",
@@ -12149,7 +12201,11 @@
       "description": "Official Bowmark plugin for Claude Code, Codex, GitHub Copilot and Gemini CLI: the Bowmark skill plus its hosted MCP server, giving agents typed functions for live web data on many sites, tested on a schedule. Requires a Bowmark account; new accounts start with a free $10 of usage",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/bowmark-ai/plugin#readme"
+      "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "BulkPublish",
@@ -12229,6 +12285,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "cartog",
+      "url": "https://github.com/jrollin/cartog",
+      "owner": "jrollin",
+      "repo": "cartog",
+      "description": "MCP server: code graph indexer and CLI that answers who calls a symbol and what breaks if it changes, with hybrid keyword and semantic search over a prebuilt local index",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/jrollin/cartog#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -12988,6 +13058,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/poliakarmai/gsc#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "GymLog",
+      "url": "https://github.com/armgardtj/gymlog-mcp",
+      "owner": "armgardtj",
+      "repo": "gymlog-mcp",
+      "description": "MCP server: hosted (not open source) OAuth connector for the GymLog strength-training log that lets an AI assistant read workouts, lift history and records, plan sessions with target weights, and log or import workouts, with per-permission consent and 30-day undo in the app",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/armgardtj/gymlog-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
@@ -14355,6 +14439,19 @@
       ]
     },
     {
+      "name": "RAWRS",
+      "url": "https://github.com/winvinayainfosystemsindia/RAWRS---V1",
+      "owner": "winvinayainfosystemsindia",
+      "repo": "RAWRS---V1",
+      "description": "Accessibility remediation tool that turns PDFs into accessible documents for blind readers, drafting headings, tables, reading order and AI alt text for a person to review",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "Reduck Agents",
       "url": "https://github.com/reduck-ai/agents",
       "owner": "reduck-ai",
@@ -14871,6 +14968,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/Steven-Robinson/touchlinewire-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "TravelLog",
+      "url": "https://github.com/armgardtj/travellog-mcp",
+      "owner": "armgardtj",
+      "repo": "travellog-mcp",
+      "description": "MCP server: hosted (not open source) OAuth connector for the TravelLog trip planner and travel log that lets an AI assistant read trips, itineraries, notes, expenses, travel history and places lists, file its ideas as suggestions, and add bookings, entries, expenses or whole past trips you ask for, with per-connection consent, a read-only option and personal access keys for your own bots",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/armgardtj/travellog-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
