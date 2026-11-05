@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-04",
-  "total": 1189,
+  "last_updated": "2026-11-05",
+  "total": 1198,
   "platforms": [
     "codex",
     "grok",
@@ -3094,6 +3094,22 @@
       ]
     },
     {
+      "name": "Clickwise",
+      "url": "https://github.com/softdevfz/clickwise-api",
+      "owner": "softdevfz",
+      "repo": "clickwise-api",
+      "description": "Affiliate programs, deals, tracked links and product search, plus merchant program setup tools.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/softdevfz/clickwise-api/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "installation_url": "https://github.com/softdevfz/clickwise-api#readme"
+    },
+    {
       "name": "Codex Be Serious",
       "url": "https://github.com/lulucatdev/codex-be-serious",
       "owner": "lulucatdev",
@@ -3404,8 +3420,10 @@
       "platform": "codex",
       "ecosystems": [
         "codex",
+        "grok",
         "kimi",
-        "deepseek-harness"
+        "deepseek-harness",
+        "opencode"
       ]
     },
     {
@@ -4147,6 +4165,20 @@
         "agent-skills"
       ],
       "installation_url": "https://github.com/MetaMask/agent-skills#readme"
+    },
+    {
+      "name": "Metis Check",
+      "url": "https://github.com/MetisFoundry/metis-plugins",
+      "owner": "MetisFoundry",
+      "repo": "metis-plugins",
+      "description": "Checks the citations in an answer at the registries that issue them and files a signed report anyone can recheck; hosted MCP with OAuth sign-in, free for 5 checks a month.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/MetisFoundry/metis-plugins/HEAD/plugins/metis-check/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "Mnemoverse Memory",
@@ -7894,6 +7926,20 @@
       ]
     },
     {
+      "name": "flipback",
+      "url": "https://github.com/fainir/flipback",
+      "owner": "fainir",
+      "repo": "flipback",
+      "description": "A Claude Code plugin that notices when a turn ends with the work unfinished and sends the agent back to finish it, with no goal to type",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fainir/flipback/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Flow Scenes",
       "url": "https://github.com/robdmac/flow",
       "owner": "robdmac",
@@ -8249,6 +8295,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/shimo4228/harness-scope/HEAD/plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "harness-stocktake",
+      "url": "https://github.com/shimo4228/harness-stocktake",
+      "owner": "shimo4228",
+      "repo": "harness-stocktake",
+      "description": "Audits your whole Claude Code harness (skills, rules, agents, hooks, CLAUDE.md, ADRs) for stale, contradictory or duplicated content, and changes only what you approve",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/shimo4228/harness-stocktake/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -12313,20 +12373,6 @@
       "installation_url": "https://github.com/sezginkipel/clayform#readme"
     },
     {
-      "name": "Clickwise",
-      "url": "https://github.com/softdevfz/clickwise-api",
-      "owner": "softdevfz",
-      "repo": "clickwise-api",
-      "description": "MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "installation_url": "https://github.com/softdevfz/clickwise-api#readme",
-      "ecosystems": [
-        "mcp"
-      ]
-    },
-    {
       "name": "CloudBase AI Toolkit",
       "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
       "owner": "TencentCloudBase",
@@ -12712,6 +12758,20 @@
       "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "Finance-Guru",
+      "url": "https://github.com/AojdevStudio/Finance-Guru",
+      "owner": "AojdevStudio",
+      "repo": "Finance-Guru",
+      "description": "A Claude Code plugin collection of finance skills and specialist agents driving typed Python calculators, a private SQLite ledger, and fail-closed portfolio guardrails",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/AojdevStudio/Finance-Guru/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -13611,6 +13671,40 @@
       "ecosystems": [
         "mcp"
       ]
+    },
+    {
+      "name": "MetaMynd AgentSafe Guard \u2013 Runtime Governance for AI Agents",
+      "url": "https://github.com/Metamynd/agentsafe-guard",
+      "owner": "Metamynd",
+      "repo": "agentsafe-guard",
+      "description": "Wrap an AI agent's tools so every call is authorized, signed and audited outside the agent's process, and a refused call never runs",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Metamynd/agentsafe-guard#readme"
+    },
+    {
+      "name": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
+      "url": "https://github.com/Metamynd/metamynd-mcp-gateway",
+      "owner": "Metamynd",
+      "repo": "metamynd-mcp-gateway",
+      "description": "MCP server: secure tool calls with real-time AI agent policy enforcement, access controls and auditable authorization",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Metamynd/metamynd-mcp-gateway#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "MetaMynd OpenShell Integration",
+      "url": "https://github.com/Metamynd/openshell-integration",
+      "owner": "Metamynd",
+      "repo": "openshell-integration",
+      "description": "Proof of concept for MetaMynd authorization middleware in NVIDIA OpenShell, demonstrated with a governed purchasing flow",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Metamynd/openshell-integration#readme"
     },
     {
       "name": "Mimi Seed",
@@ -14706,6 +14800,20 @@
       "installation_url": "https://github.com/ridemountainpig/threads-analytics#readme"
     },
     {
+      "name": "ThreadShelf",
+      "url": "https://github.com/ChrystianSchutz/ThreadShelf",
+      "owner": "ChrystianSchutz",
+      "repo": "ThreadShelf",
+      "description": "MCP server: local-first semantic and exact search over your archived ChatGPT, Claude, Google AI Studio, OpenRouter, LM Studio and Grok conversations, with a web UI, CLI and HTTP API on the same index",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ChrystianSchutz/ThreadShelf#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "TikTok Skills",
       "url": "https://github.com/sergebulaev/tiktok-skills",
       "owner": "sergebulaev",
@@ -15114,6 +15222,20 @@
       "source": "awesome-ai-plugins",
       "platform": "grok",
       "install_url": "https://raw.githubusercontent.com/galleonlabs/hypergrok-trading-desk/HEAD/.grok-plugin/plugin.json",
+      "ecosystems": [
+        "grok"
+      ]
+    },
+    {
+      "name": "Keenable",
+      "url": "https://github.com/keenableai/keenable-grok-plugin",
+      "owner": "keenableai",
+      "repo": "keenable-grok-plugin",
+      "description": "Adds keyless web search and clean-Markdown page fetch to Grok Build through Keenable's hosted MCP server, with skills for everyday web research and multi-source cited deep research",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "install_url": "https://raw.githubusercontent.com/keenableai/keenable-grok-plugin/HEAD/.grok-plugin/plugin.json",
       "ecosystems": [
         "grok"
       ]
