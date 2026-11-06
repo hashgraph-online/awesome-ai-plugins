@@ -2956,6 +2956,20 @@
       ]
     },
     {
+      "name": "Bowmark",
+      "url": "https://github.com/bowmark-ai/plugin",
+      "owner": "bowmark-ai",
+      "repo": "plugin",
+      "description": "Typed, tested functions for live websites like LinkedIn, YouTube and Amazon, from Codex. Start with a free $10.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "BrewPage",
       "url": "https://github.com/kochetkov-ma/brewpage-codex-plugin",
       "owner": "kochetkov-ma",
@@ -12438,20 +12452,6 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/doomsday-network/bounty-guard#readme"
-    },
-    {
-      "name": "Bowmark",
-      "url": "https://github.com/bowmark-ai/plugin",
-      "owner": "bowmark-ai",
-      "repo": "plugin",
-      "description": "Official Bowmark plugin for Claude Code, Codex, GitHub Copilot and Gemini CLI: the Bowmark skill plus its hosted MCP server, giving agents typed functions for live web data on many sites, tested on a schedule. Requires a Bowmark account; new accounts start with a free $10 of usage",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
     },
     {
       "name": "BulkPublish",
