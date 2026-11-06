@@ -12386,7 +12386,7 @@
       "owner": "gagoar",
       "repo": "unmistakable",
       "url": "https://github.com/gagoar/unmistakable",
-      "install_url": "https://raw.githubusercontent.com/gagoar/unmistakable/HEAD/.claude-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/gagoar/unmistakable/HEAD/plugins/unmistakable/.claude-plugin/plugin.json"
     },
     {
       "name": "Usage Monitor",
