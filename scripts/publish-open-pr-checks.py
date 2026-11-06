@@ -879,6 +879,31 @@ def publish_check(
                                pr_reports, scanner_jobs.get(number, []))
 
 
+def pull_request_still_open(repository: str, result: dict[str, object], token: str) -> bool:
+    """Re-read the pull request just before publishing.
+
+    A full sweep can run for many minutes, so a pull request found open may have
+    closed since. Merged pull requests are published with their merged state;
+    closed, unmerged ones are skipped. A failed lookup keeps the sweep going.
+    """
+
+    number = result.get("pr_number")
+    if not isinstance(number, int) or result.get("pr_state") in ("merged", "closed"):
+        return True
+    try:
+        pull = github_api(repository, f"/pulls/{number}", token)
+    except RuntimeError as error:
+        print(f"Could not re-check PR #{number}; publishing anyway: {error}", file=sys.stderr)
+        return True
+    if not isinstance(pull, dict) or pull.get("state", "open") == "open":
+        return True
+    if pull.get("merged") is True or pull.get("merged_at"):
+        result["pr_state"] = "merged"
+        return True
+    print(f"Skipped PR #{number}: closed after the sweep found it")
+    return False
+
+
 def main() -> int:
     repository = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -918,6 +943,8 @@ def main() -> int:
         for result in results:
             if not isinstance(result, dict):
                 raise RuntimeError("validator returned a non-object PR result")
+            if not pull_request_still_open(repository, result, token):
+                continue
             publish_check(repository, result, scanner_jobs, run_url, token, reports)
     except (RuntimeError, json.JSONDecodeError) as error:
         print(f"ERROR: {error}", file=sys.stderr)

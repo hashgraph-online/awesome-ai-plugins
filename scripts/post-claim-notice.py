@@ -35,6 +35,18 @@ REGISTRY_MAX_ATTEMPTS = 4
 REGISTRY_MAX_RETRY_DELAY = 60
 REGISTRY_RETRY_STATUSES = {429, 500, 502, 503, 504}
 NOTICE_DEFERRED = 75
+PR_AGENT_MARKED = False
+
+# Accounts whose repositories are maintained here; never mentioned as outside owners.
+MAINTAINER_OWNERS = {"hashgraph-online", "kantorcodes"}
+
+# Strict signs that a coding agent wrote or opened the pull request. These are a
+# floor: many agents leave none, and a miss only means the plain merge link.
+AGENT_BRANCH_PREFIXES = ("claude/", "codex/", "copilot/", "cursor/", "devin/", "jules/")
+AGENT_BODY_PATTERN = re.compile(
+    r"generated with|co-authored-by:\s*(claude|codex|copilot|cursor|devin)|\U0001F916",
+    re.IGNORECASE,
+)
 
 # Skip titles that aren't new plugin additions
 SKIP_PATTERNS = [
@@ -89,7 +101,7 @@ DEFERRED_NOTICE_MARKERS = (
 )
 
 
-def claim_link(repo: str) -> str:
+def claim_link(repo: str, agent_marked: bool = False) -> str:
     return (
         "https://hol.org/guard/plugins?"
         + urlencode(
@@ -97,11 +109,44 @@ def claim_link(repo: str) -> str:
                 "claim": repo,
                 "utm_source": "github",
                 "utm_medium": "pr_comment",
-                "utm_campaign": "plugin_claim",
-                "utm_content": "merge_notice",
+                "utm_campaign": "agent_handoff" if agent_marked else "plugin_claim",
+                "utm_content": "merge_agent" if agent_marked else "merge_notice",
             }
         )
     )
+
+
+def outside_owners(author: str, repositories) -> list[str]:
+    """Repository owners who did not open the pull request themselves."""
+
+    author_key = author.lower()
+    owners = {repo.split("/", 1)[0] for repo in repositories if "/" in repo}
+    return sorted(
+        owner
+        for owner in owners
+        if owner.lower() != author_key and owner.lower() not in MAINTAINER_OWNERS
+    )
+
+
+def is_agent_marked(pull: dict) -> bool:
+    head = pull.get("head")
+    branch = head.get("ref") if isinstance(head, dict) else ""
+    user = pull.get("user")
+    login = user.get("login") if isinstance(user, dict) else ""
+    body = pull.get("body") or ""
+    return (
+        (isinstance(branch, str) and branch.lower().startswith(AGENT_BRANCH_PREFIXES))
+        or (isinstance(login, str) and login.lower().endswith("[bot]"))
+        or (isinstance(body, str) and AGENT_BODY_PATTERN.search(body) is not None)
+    )
+
+
+def pull_request_is_agent_marked() -> bool:
+    """Best effort: a failed lookup only means the plain merge link."""
+
+    url = f"https://api.github.com/repos/{REPO_FULL}/pulls/{PR_NUMBER}"
+    data = api_request(url, headers={"Authorization": f"token {GH_TOKEN}"})
+    return isinstance(data, dict) and is_agent_marked(data)
 
 
 def build_comment_body(author: str, repositories=(), pending_repositories=()) -> str:
@@ -125,11 +170,20 @@ def build_comment_body(author: str, repositories=(), pending_repositories=()) ->
 The listing shows its ✅ owner-verified badge, trust score, installs, and engagement."""
 
     claim_links = "\n".join(
-        f"- [Verify ownership of `{repo}`]({claim_link(repo)})" for repo in claimable
+        f"- [Verify ownership of `{repo}`]({claim_link(repo, PR_AGENT_MARKED)})"
+        for repo in claimable
     )
+    owners = outside_owners(author, claimable)
+    owner_note = ""
+    if owners:
+        mentions = " ".join(f"@{owner}" for owner in owners)
+        owner_note = (
+            f"\n\n{mentions}: this pull request listed your repository. "
+            "If you maintain it, you can claim it with the link below."
+        )
 
     return f"""<!-- hol-claim-notice -->
-🎉 Congrats @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!
+🎉 Congrats @{author}, your plugin has been merged and is now listed in the [HOL Registry](https://hol.org/registry/plugins)!{owner_note}
 
 ## Claim your plugin
 
@@ -384,6 +438,16 @@ def catalog_source_repos():
     root = Path(__file__).resolve().parents[1]
     with open(root / "README.md", encoding="utf-8") as readme:
         content = readme.read()
+    # Only Community Plugins feeds the catalog; navigation and related links
+    # do not create registry listings that an owner can claim.
+    catalog_lines = []
+    in_catalog = False
+    for line in content.splitlines():
+        if line.startswith("## "):
+            in_catalog = line.strip() == "## Community Plugins"
+        elif in_catalog:
+            catalog_lines.append(line)
+    content = "\n".join(catalog_lines)
     links = re.findall(
         r"^\s*-\s+\[[^\]]+\]\((https://github\.com/|\./plugins/)"
         r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)",
@@ -471,7 +535,7 @@ def update_comment(comment_id, author: str, repositories=()) -> bool:
 
 
 def main():
-    global PR_AUTHOR, PR_TITLE
+    global PR_AUTHOR, PR_TITLE, PR_AGENT_MARKED
 
     # Validate required environment variables
     missing = []
@@ -551,6 +615,7 @@ def main():
             print(f"::warning::Owner verification lookup unavailable for {repo}: {error}; including its claim/dashboard link.")
 
     claimable_repos = matched - already_verified
+    PR_AGENT_MARKED = bool(claimable_repos) and pull_request_is_agent_marked()
     if already_verified:
         print(f"  Already verified: {', '.join(sorted(already_verified))}")
 
