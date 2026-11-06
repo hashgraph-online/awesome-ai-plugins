@@ -129,6 +129,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 Individually installable Agent Skills collections, rather than one client-specific plugin bundle.
 
 - [97](https://github.com/oribarilan/97) - Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode.
+- [agent-notion-template-docs](https://github.com/heyman333/agent-notion-template-docs) - Agent skill that renders agent-generated documents with Notion's blocks and visual style using a fixed HTML template and CSS linter.
 - [answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) - Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
