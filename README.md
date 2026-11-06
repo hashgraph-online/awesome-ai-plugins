@@ -1170,6 +1170,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [your-mail-mcp](https://github.com/wildsurfer/your-mail-mcp) - MCP server: read-only search over your IMAP mail, mirrored by mbsync into a local notmuch index and served over stdio or streamable HTTP with OAuth.
 - [YYLO Skills](https://github.com/yylo-dev/yylo-skills) - Reusable agent skills maintained by YYLO: the canonical, independently versioned source for the ledger-tasks, wiki, workflow, artifact, benchmark, understand-project, plan-ledger-tasks and ralph-loop skills used by YYLO CLI and YYLO Ledger.
 - [Zero Slop](https://github.com/manavmishra/ZeroSlop) - Say no to AI slop: a human-in-the-loop learning agentic workflow skill that scores text 0-100 for AI slop and rewrites it tastefully, with a standard-library Python scorer that has zero dependencies and runs offline.
+- [Zolva](https://github.com/zolvaagent/zolva) - MCP server: read-only, no-key Streamable HTTP access to Zolva's paper trading agents on Robinhood Chain, with their hourly buy, sell and hold decisions and reasons, plus stock token and crypto prices.
 - [Zotero Research Tools](https://github.com/summer521521/Zotero_Research_plugin) - Connects Codex to Zotero Desktop for local-library search, citation export, collection and tag inspection, and research workflow support.
 
 ### Grok Plugins
