@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-05",
+  "last_updated": "2026-11-06",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -6131,6 +6131,21 @@
       "repo": "memory-use",
       "url": "https://github.com/leeguooooo/memory-use",
       "installation_url": "https://github.com/leeguooooo/memory-use#readme"
+    },
+    {
+      "name": "MiniCut",
+      "displayName": "MiniCut",
+      "description": "Agent skills for Claude Code, Codex, Cursor and Gemini CLI that make a multi-shot AI short film from an idea (story, shot sheet, takes, voice, music, edit) and run Seedance, Kling and Wan video models, with the price shown before every paid job",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "lliu56",
+      "repo": "minicut-skills",
+      "url": "https://github.com/lliu56/minicut-skills",
+      "installation_url": "https://github.com/lliu56/minicut-skills#readme"
     },
     {
       "name": "mock-interview",
@@ -12922,6 +12937,21 @@
       "installation_url": "https://github.com/gareth-hoyle/authority-md-plugin#readme"
     },
     {
+      "name": "axiocairn-mcp",
+      "displayName": "axiocairn-mcp",
+      "description": "MCP server: portfolio risk checks for AI assistants, covering holdings concentration, SPY beta, what-if scenarios, cost and capacity estimates, and published research retrieval",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "cplj",
+      "repo": "axiocairn-mcp",
+      "url": "https://github.com/cplj/axiocairn-mcp",
+      "installation_url": "https://github.com/cplj/axiocairn-mcp#readme"
+    },
+    {
       "name": "Azure Cosmos DB Agent Kit",
       "displayName": "Azure Cosmos DB Agent Kit",
       "description": "Azure Cosmos DB best-practice skills and MCP tooling for Codex, Claude Code, Cursor, Gemini CLI, Grok Build, Kimi Code, GitHub Copilot, and other Agent Skills-compatible assistants",
@@ -14742,6 +14772,20 @@
       "install_url": "https://raw.githubusercontent.com/GautamTalksDev/mcp-pin/HEAD/plugins/mcp-pin/.claude-plugin/plugin.json"
     },
     {
+      "name": "MCPSense",
+      "displayName": "MCPSense",
+      "description": "MIT-licensed security CLI that inspects supported MCP configurations and metadata, reports review findings, and compares metadata against a reviewed reference",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "fayzkk889",
+      "repo": "MCPSense",
+      "url": "https://github.com/fayzkk889/MCPSense"
+    },
+    {
       "name": "mcpsnoop",
       "displayName": "mcpsnoop",
       "description": "Wireshark for MCP, a transparent proxy that shows the real traffic between your AI client and MCP servers, fails CI on it and exports it as OpenTelemetry spans",
@@ -16442,6 +16486,21 @@
       "install_url": "https://raw.githubusercontent.com/manavmishra/ZeroSlop/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Zolva",
+      "displayName": "Zolva",
+      "description": "MCP server: read-only, no-key Streamable HTTP access to Zolva's paper trading agents on Robinhood Chain, with their hourly buy, sell and hold decisions and reasons, plus stock token and crypto prices",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "zolvaagent",
+      "repo": "zolva",
+      "url": "https://github.com/zolvaagent/zolva",
+      "installation_url": "https://github.com/zolvaagent/zolva#readme"
+    },
+    {
       "name": "BlindOracle",
       "displayName": "BlindOracle",
       "description": "Joins a Grok Bot or Grok Build agent to the BlindOracle agent marketplace with a free ERC-8004 passport, role-scoped MCP tools, counterparty-risk controls for buying or selling A2A, and two $0.01 settlement proofs anyone can verify",
@@ -16515,6 +16574,21 @@
       "repo": "ppl-grok-plugin",
       "url": "https://github.com/ppl-crm/ppl-grok-plugin",
       "install_url": "https://raw.githubusercontent.com/ppl-crm/ppl-grok-plugin/HEAD/.grok-plugin/plugin.json"
+    },
+    {
+      "name": "Skycloak MCP",
+      "displayName": "Skycloak MCP",
+      "description": "Manage Skycloak managed Keycloak clusters, realms, applications, SSO, and users from Grok via https://mcp.skycloak.io",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
+      ],
+      "owner": "sky-cloak",
+      "repo": "skycloak-mcp",
+      "url": "https://github.com/sky-cloak/skycloak-mcp",
+      "install_url": "https://raw.githubusercontent.com/sky-cloak/skycloak-mcp/HEAD/.grok-plugin/plugin.json"
     },
     {
       "name": "GoodMemory",
