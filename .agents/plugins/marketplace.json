@@ -13248,6 +13248,21 @@
       "installation_url": "https://github.com/skeptrunedev/call4me#readme"
     },
     {
+      "name": "career-ops",
+      "displayName": "career-ops",
+      "description": "Open-source AI job search agent for Claude Code, Codex and other AI coding CLIs that scores each job posting against your CV, tailors ATS-friendly resumes and tracks applications, while you submit every application yourself",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "career-ops-hq",
+      "repo": "career-ops",
+      "url": "https://github.com/career-ops-hq/career-ops",
+      "install_url": "https://raw.githubusercontent.com/career-ops-hq/career-ops/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Cargo Skills",
       "displayName": "Cargo Skills",
       "description": "GTM engineering for coding agents \u2014 17 skills over the Cargo CLI for lead sourcing, contact enrichment and email verification, lead scoring, CRM sync, buying-signal monitoring, and workspace-as-code",

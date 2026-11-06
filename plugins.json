@@ -12372,6 +12372,20 @@
       ]
     },
     {
+      "name": "career-ops",
+      "url": "https://github.com/career-ops-hq/career-ops",
+      "owner": "career-ops-hq",
+      "repo": "career-ops",
+      "description": "Open-source AI job search agent for Claude Code, Codex and other AI coding CLIs that scores each job posting against your CV, tailors ATS-friendly resumes and tracks applications, while you submit every application yourself",
+      "category": "Tools & Integrations",
+      "platform": "codex",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/career-ops-hq/career-ops/HEAD/.codex-plugin/plugin.json",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Cargo Skills",
       "url": "https://github.com/getcargohq/cargo-skills",
       "owner": "getcargohq",
