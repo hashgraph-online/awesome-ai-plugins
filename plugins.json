@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-06",
-  "total": 1216,
+  "total": 1217,
   "platforms": [
     "codex",
     "grok",
@@ -21,7 +21,20 @@
       "url": "https://github.com/jhesham/cross-llm-delivery",
       "owner": "jhesham",
       "repo": "cross-llm-delivery",
-      "description": "Cross Llm Delivery plugin for AI coding agents",
+      "description": "Agent skills and a local orchestration engine that turn a lead agent's plan into isolated executor tasks, with acceptance tests and integration checks across coding CLIs",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Design Agent Kit",
+      "url": "https://github.com/jamesonedge/design-agent-kit",
+      "owner": "jamesonedge",
+      "repo": "design-agent-kit",
+      "description": "Critique first. Explore distinct directions. Build only what you choose",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -11555,7 +11568,7 @@
       "description": "Skill that rewrites tool descriptions, error messages and agent instructions so an AI agent cannot misread them, with a dependency-free TypeScript linter that checks the result",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/gagoar/unmistakable/HEAD/.claude-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/gagoar/unmistakable/HEAD/plugins/unmistakable/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
