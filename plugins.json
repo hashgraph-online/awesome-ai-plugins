@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-06",
+  "last_updated": "2026-11-05",
   "total": 1208,
   "platforms": [
     "codex",
@@ -16,20 +16,6 @@
     "opencode"
   ],
   "plugins": [
-    {
-      "name": "ai-tracedoc-mods",
-      "url": "https://github.com/didongke/ai-tracedoc-mods",
-      "owner": "didongke",
-      "repo": "ai-tracedoc-mods",
-      "description": "Records every Claude Code Q&A into a per-project ledger, as a hooks module rather than a binary",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/didongke/ai-tracedoc-mods/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
-    },
     {
       "name": "Registry Broker",
       "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
@@ -2094,6 +2080,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "Skycloak MCP",
+      "url": "https://github.com/sky-cloak/skycloak-mcp",
+      "owner": "sky-cloak",
+      "repo": "skycloak-mcp",
+      "description": "Manage Skycloak managed Keycloak clusters, realms, applications, SSO, and users from Grok via https://mcp.skycloak.io",
+      "category": "Grok Plugins",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/sky-cloak/skycloak-mcp/HEAD/.grok-plugin/plugin.json",
+      "platform": "grok",
+      "ecosystems": [
+        "grok"
       ]
     },
     {
