@@ -380,6 +380,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Dely](https://github.com/hieuphung97/dely) - Multi-harness control protocol that turns requests into approved design contracts, orchestrating isolated worker sessions for sequential implementation and independent code reviews under Orca supervision for Claude Code, Codex, Cursor, Antigravity, and other AI coding agents.
 - [Demo GIF](https://github.com/conorbronsdon/demo-gif-skill) - Agent Skill that scripts, renders, optimizes, and embeds reproducible demo GIFs for CLI, TUI, web, and library projects using VHS or Playwright plus ffmpeg.
 - [Deps Doctor](./plugins/mturac/deps-doctor) - Multi-ecosystem dependency audit (npm, pip, cargo, go) in one report.
+- [Design Agent Kit](https://github.com/jamesonedge/design-agent-kit) - Critique first. Explore distinct directions. Build only what you choose.
 - [Designer Skill](https://github.com/PyModel/designer-skill) - Plug-and-play MCP that gives your coding agent UI superpowers: design references, intent routing and a static anti-slop gate, no API key.
 - [Deskbar](https://github.com/0NE-C0DEMAN/deskbar) - Claude Code mod that adds a row of widgets above the prompt: context usage, Gmail, calendar, tasks across sessions, notes with reminders, a music deck, and a billable-hours timer.
 - [Dev Skills](https://github.com/Jason-chen-coder/dev-skills) - Team workflow skills for specs, plans, TDD, debugging, verification, review, branch finishing, and design context.
