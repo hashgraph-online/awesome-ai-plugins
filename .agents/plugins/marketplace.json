@@ -1670,6 +1670,23 @@
       "install_url": "https://raw.githubusercontent.com/memtomem/memtomem/HEAD/plugins/memtomem/.codex-plugin/plugin.json"
     },
     {
+      "name": "MiniCut",
+      "displayName": "MiniCut",
+      "description": "Agent skills for Claude Code, Codex, Cursor and Gemini CLI that make a multi-shot AI short film from an idea (story, shot sheet, takes, voice, music, edit) and run Seedance, Kling and Wan video models, with the price shown before every paid job.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "lliu56",
+      "repo": "minicut-skills",
+      "url": "https://github.com/lliu56/minicut-skills",
+      "install_url": "https://raw.githubusercontent.com/lliu56/minicut-skills/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/lliu56/minicut-skills#readme"
+    },
+    {
       "name": "ML Pipeline",
       "displayName": "ML Pipeline",
       "description": "Enforces a strict 16-step data-first ML workflow \u2014 data inspection, EDA, and problem definition before any model training \u2014 with explicit user-permission gates, marimo notebooks, and matplotlib figures at every step; also works in Claude Code and Kimi.",
@@ -3118,6 +3135,21 @@
       "install_url": "https://raw.githubusercontent.com/avivsinai/bitbucket-cli/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "BrewPage",
+      "displayName": "BrewPage",
+      "description": "Skill and remote MCP server that publish HTML, Markdown, files and static sites from Codex to an expiring BrewPage HTTPS link with no account or API key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kochetkov-ma",
+      "repo": "brewpage-codex-plugin",
+      "url": "https://github.com/kochetkov-ma/brewpage-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/kochetkov-ma/brewpage-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Build Remote Agent",
       "displayName": "Build Remote Agent",
       "description": "Pair a phone as spectator to a local Codex session via gbr-agent (QR / 8-char) and attach at 127.0.0.1:8788 or gbr-mcp.",
@@ -4366,6 +4398,21 @@
       "repo": "looot-plugin",
       "url": "https://github.com/loootai/looot-plugin",
       "install_url": "https://raw.githubusercontent.com/loootai/looot-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "LurkAPI",
+      "displayName": "LurkAPI",
+      "description": "Social media research skills and LurkAPI's hosted MCP server: public posts, profiles, comments, transcripts and Meta, Google, LinkedIn and TikTok ad library results from TikTok, Instagram, YouTube, Reddit, X and more, paid per call with 100 free credits.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mesmerlord",
+      "repo": "lurkapi-claude-plugin",
+      "url": "https://github.com/mesmerlord/lurkapi-claude-plugin",
+      "install_url": "https://raw.githubusercontent.com/mesmerlord/lurkapi-claude-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Maestro: Costguard",
@@ -6133,21 +6180,6 @@
       "installation_url": "https://github.com/leeguooooo/memory-use#readme"
     },
     {
-      "name": "MiniCut",
-      "displayName": "MiniCut",
-      "description": "Agent skills for Claude Code, Codex, Cursor and Gemini CLI that make a multi-shot AI short film from an idea (story, shot sheet, takes, voice, music, edit) and run Seedance, Kling and Wan video models, with the price shown before every paid job",
-      "category": "Agent Skills",
-      "source": "awesome-ai-plugins",
-      "platform": "agent-skills",
-      "ecosystems": [
-        "agent-skills"
-      ],
-      "owner": "lliu56",
-      "repo": "minicut-skills",
-      "url": "https://github.com/lliu56/minicut-skills",
-      "installation_url": "https://github.com/lliu56/minicut-skills#readme"
-    },
-    {
       "name": "mock-interview",
       "displayName": "mock-interview",
       "description": "Agent skill that runs a realistic mock job interview for any role, with live research and real follow-up questions, then gives an honest score out of 10 and a written report",
@@ -6887,6 +6919,21 @@
       "repo": "ai-native-sdlc",
       "url": "https://github.com/bashebr/ai-native-sdlc",
       "install_url": "https://raw.githubusercontent.com/bashebr/ai-native-sdlc/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ai-tracedoc-mods",
+      "displayName": "ai-tracedoc-mods",
+      "description": "Records every Claude Code Q&A into a per-project ledger, as a hooks module rather than a binary",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "didongke",
+      "repo": "ai-tracedoc-mods",
+      "url": "https://github.com/didongke/ai-tracedoc-mods",
+      "install_url": "https://raw.githubusercontent.com/didongke/ai-tracedoc-mods/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "AIAgentCycle",
