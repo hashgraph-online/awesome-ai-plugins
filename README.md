@@ -132,6 +132,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [agent-notion-template-docs](https://github.com/heyman333/agent-notion-template-docs) - Agent skill that renders agent-generated documents with Notion's blocks and visual style using a fixed HTML template and CSS linter.
 - [answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) - Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
+- [archlang](https://github.com/ChanMeng666/archlang) - Agent skills and MCP server that let coding agents write floor plans in the ArchLang `.arch` language and compile them to dimensioned SVG, DXF or PDF with lint and geometric validation.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
 - [Awesome QA Skills](https://github.com/naodeng/awesome-qa-skills) - Bilingual collection of 330 installable QA agent skills covering test workflows, test types, and skill engineering across the SDLC.
 - [berlin-job-search](https://github.com/umutyesildal/berlin-job-search) - Agent skill for Berlin and Germany job search: German-language and visa requirement checks, Lebenslauf drafting and interview practice.
