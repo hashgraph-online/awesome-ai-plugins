@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-07",
-  "total": 1249,
+  "total": 1248,
   "platforms": [
     "codex",
     "grok",
@@ -13992,16 +13992,6 @@
       "ecosystems": [
         "claude-code"
       ]
-    },
-    {
-      "name": "kyte",
-      "url": "https://github.com/usekyte/kyte-mcp",
-      "owner": "usekyte",
-      "repo": "kyte-mcp",
-      "description": "Kyte options market on Robinhood Chain for your AI agent: live markets, offers, prices, positions, staking, fee proof and Pons launchpad gra",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/usekyte/kyte-mcp#readme"
     },
     {
       "name": "last30days-skill-cn",
