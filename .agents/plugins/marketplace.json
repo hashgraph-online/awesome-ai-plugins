@@ -1460,6 +1460,21 @@
       "install_url": "https://raw.githubusercontent.com/yimwoo/hotl-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Hypercore",
+      "displayName": "Hypercore",
+      "description": "Korean-first agent skills for planning, architecture, design, docs, research, issues, and Git delivery, each with declared triggers, workflows, and validation gates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "alpoxdev",
+      "repo": "hypercore",
+      "url": "https://github.com/alpoxdev/hypercore/tree/dev",
+      "install_url": "https://raw.githubusercontent.com/alpoxdev/hypercore/dev/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Image & Media Skills",
       "displayName": "Image & Media Skills",
       "description": "Eight skills that audit and fix image and video delivery for Core Web Vitals, plus Sirv image CDN, 360 spin, and AI Studio workflows.",
@@ -6270,6 +6285,21 @@
       "installation_url": "https://github.com/jamdotdev/skills#readme"
     },
     {
+      "name": "k-skill",
+      "displayName": "k-skill",
+      "description": "Collection of agent skills automating Korean daily-life tasks such as KTX timetable lookup, Coupang search, and delivery tracking",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "NomaDamas",
+      "repo": "k-skill",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "installation_url": "https://github.com/NomaDamas/k-skill#readme"
+    },
+    {
       "name": "k8s-skills",
       "displayName": "k8s-skills",
       "description": "Kubernetes troubleshooting skills for 30 cases, from pods, nodes and networking to Velero and CloudNativePG, that read first and ask before changing anything",
@@ -10786,6 +10816,17 @@
       "installation_url": "https://github.com/henrikrexed/openclaw-observability-plugin#readme"
     },
     {
+      "name": "openclaw-ruview-presence",
+      "displayName": "openclaw-ruview-presence",
+      "description": "OpenClaw plugin that detects user presence via RuView WiFi sensing, queues non-urgent events while away, and delivers a digest on return",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "DevvGwardo",
+      "repo": "openclaw-ruview-presence",
+      "url": "https://github.com/DevvGwardo/openclaw-ruview-presence",
+      "installation_url": "https://github.com/DevvGwardo/openclaw-ruview-presence#readme"
+    },
+    {
       "name": "OpenCode Orchestrator",
       "displayName": "OpenCode Orchestrator",
       "description": "Multi-agent mission control for OpenCode with Commander, Planner, Worker, and Reviewer workflows",
@@ -11735,6 +11776,21 @@
       "repo": "rtl-terminal",
       "url": "https://github.com/MohammedSaud404/rtl-terminal",
       "install_url": "https://raw.githubusercontent.com/MohammedSaud404/rtl-terminal/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "ru-marketplace-mcp",
+      "displayName": "ru-marketplace-mcp",
+      "description": "Read-only MCP server and 15 Agent Skills for buyer-side product search, cards, seller details, reviews, and cross-marketplace price comparison across 12 Russian and Chinese marketplaces and classifieds (Wildberries, Ozon, Yandex Market, Detsky Mir, Avito, AliExpress, Taobao, Megamarket, Lamoda, DNS, Citilink, and Cian real estate) with no API keys required",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Vladimir-Human",
+      "repo": "ru-marketplace-mcp",
+      "url": "https://github.com/Vladimir-Human/ru-marketplace-mcp",
+      "install_url": "https://raw.githubusercontent.com/Vladimir-Human/ru-marketplace-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Salesforce Compound Engineering",
@@ -14964,6 +15020,21 @@
       "install_url": "https://raw.githubusercontent.com/amd2g2zz/kunglao-agent/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "kyte",
+      "displayName": "kyte",
+      "description": "Kyte options market on Robinhood Chain for your AI agent: live markets, offers, prices, positions, staking, fee proof and Pons launchpad gra",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "usekyte",
+      "repo": "kyte-mcp",
+      "url": "https://github.com/usekyte/kyte-mcp",
+      "install_url": "https://raw.githubusercontent.com/usekyte/kyte-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "last30days-skill-cn",
       "displayName": "last30days-skill-cn",
       "description": "Agent skill that searches eight Chinese platforms for the last 30 days and produces sourced research reports and hot-topic boards",
@@ -15074,6 +15145,21 @@
       "repo": "looot-skills",
       "url": "https://github.com/loootai/looot-skills",
       "installation_url": "https://github.com/loootai/looot-skills#readme"
+    },
+    {
+      "name": "MailVeri MCP",
+      "displayName": "MailVeri MCP",
+      "description": "MCP server: verify single emails and bulk lists (invalid, disposable, catch-all and role detection) from Claude, Cursor and other MCP clients",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "mailveri",
+      "repo": "mailveri-mcp",
+      "url": "https://github.com/mailveri/mailveri-mcp",
+      "installation_url": "https://github.com/mailveri/mailveri-mcp#readme"
     },
     {
       "name": "Maskbolt",
@@ -15237,6 +15323,21 @@
       "installation_url": "https://github.com/activeing123/mcptoon#readme"
     },
     {
+      "name": "MediaWiki MCP Server",
+      "displayName": "MediaWiki MCP Server",
+      "description": "MCP server: single-binary Go server with 43 tools to search, read, edit and audit any MediaWiki wiki (broken links, orphaned pages, stale content, terminology), plus a `wiki` CLI that shares the same client and bot-password auth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "olgasafonova",
+      "repo": "mediawiki-mcp-server",
+      "url": "https://github.com/olgasafonova/mediawiki-mcp-server",
+      "installation_url": "https://github.com/olgasafonova/mediawiki-mcp-server#readme"
+    },
+    {
       "name": "memory-mcp",
       "displayName": "memory-mcp",
       "description": "MCP server: persistent agent memory with semantic recall served as a remote streamable-HTTP endpoint \u2014 your wallet address is your private namespace, no accounts or API keys, paid per call in USDC on Base via x402, with a free wallet-signed tier",
@@ -15387,7 +15488,7 @@
       "owner": "Jovancoding",
       "repo": "Network-AI",
       "url": "https://github.com/Jovancoding/Network-AI",
-      "install_url": "https://raw.githubusercontent.com/Jovancoding/Network-AI/HEAD/.claude-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/Jovancoding/Network-AI/HEAD/plugins/network-ai/.claude-plugin/plugin.json"
     },
     {
       "name": "NeverApply",
