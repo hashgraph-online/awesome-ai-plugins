@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-07",
-  "total": 1239,
+  "total": 1240,
   "platforms": [
     "codex",
     "grok",
@@ -6090,6 +6090,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/naw103/claude-routine-cleanup#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Ryugi",
+      "url": "https://github.com/Innei/ryugi",
+      "owner": "Innei",
+      "repo": "ryugi",
+      "description": "Agent skills that take a coding agent from brainstorming through an approved spec to test-driven implementation, debugging and UI verification, with a live artboard for comparing mockups and commenting on designs, packaged for Claude Code, Codex, Gemini CLI, OpenCode, Pi and other harnesses",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Innei/ryugi#readme",
       "ecosystems": [
         "agent-skills"
       ]
