@@ -15020,17 +15020,6 @@
       "install_url": "https://raw.githubusercontent.com/amd2g2zz/kunglao-agent/HEAD/.claude-plugin/plugin.json"
     },
     {
-      "name": "kyte",
-      "displayName": "kyte",
-      "description": "Kyte options market on Robinhood Chain for your AI agent: live markets, offers, prices, positions, staking, fee proof and Pons launchpad gra",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "owner": "usekyte",
-      "repo": "kyte-mcp",
-      "url": "https://github.com/usekyte/kyte-mcp",
-      "installation_url": "https://github.com/usekyte/kyte-mcp#readme"
-    },
-    {
       "name": "last30days-skill-cn",
       "displayName": "last30days-skill-cn",
       "description": "Agent skill that searches eight Chinese platforms for the last 30 days and produces sourced research reports and hot-topic boards",
