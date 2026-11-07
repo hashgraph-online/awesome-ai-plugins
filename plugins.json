@@ -14001,11 +14001,7 @@
       "description": "Kyte options market on Robinhood Chain for your AI agent: live markets, offers, prices, positions, staking, fee proof and Pons launchpad gra",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/usekyte/kyte-mcp/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
+      "installation_url": "https://github.com/usekyte/kyte-mcp#readme"
     },
     {
       "name": "last30days-skill-cn",
