@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-07",
-  "total": 1240,
+  "total": 1241,
   "platforms": [
     "codex",
     "grok",
@@ -5838,6 +5838,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/leeguooooo/image-use#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Inbox Envoy",
+      "url": "https://github.com/salespeak-ai/inbox-envoy",
+      "owner": "salespeak-ai",
+      "repo": "inbox-envoy",
+      "description": "Agent skill that lets your personal AI agent protect your inbox, keep important mail visible, and research unfamiliar offers",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/salespeak-ai/inbox-envoy#readme",
       "ecosystems": [
         "agent-skills"
       ]

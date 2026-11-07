@@ -6240,6 +6240,21 @@
       "installation_url": "https://github.com/leeguooooo/image-use#readme"
     },
     {
+      "name": "Inbox Envoy",
+      "displayName": "Inbox Envoy",
+      "description": "Agent skill that lets your personal AI agent protect your inbox, keep important mail visible, and research unfamiliar offers",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "salespeak-ai",
+      "repo": "inbox-envoy",
+      "url": "https://github.com/salespeak-ai/inbox-envoy",
+      "installation_url": "https://github.com/salespeak-ai/inbox-envoy#readme"
+    },
+    {
       "name": "Jam Skills",
       "displayName": "Jam Skills",
       "description": "Agent skills that record a browser session as a Jam, read Jam recordings (video, console, network) to find root causes, and attach proof-of-work Jams to agent PRs",
