@@ -13,10 +13,12 @@ from __future__ import annotations
 
 import datetime
 import argparse
+import http.client
 import json
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -111,10 +113,10 @@ def probe_install_url(
                     return url
         except urllib.error.HTTPError:
             continue
-        except (urllib.error.URLError, TimeoutError, OSError):
-            # Network unavailable — callers may retain a documentation link,
-            # but must not claim an unverified client-specific manifest.
-            return None
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):
+            # One broken candidate must not hide a valid manifest at another
+            # supported location. Return only a URL whose HEAD actually passed.
+            continue
     return None
 
 
@@ -123,7 +125,9 @@ CLAUDE_MANIFEST_PATH = ".claude-plugin/plugin.json"
 CLAUDE_MARKETPLACE_MAX_BYTES = 1024 * 1024
 
 
-def probe_claude_marketplace(owner: str, repo: str, name: str) -> tuple[bool, str | None]:
+def probe_claude_marketplace(
+    owner: str, repo: str, name: str, *, require_named_match: bool = False
+) -> tuple[bool, str | None]:
     """Resolve a Claude Code plugin listed in the repo's root marketplace.
 
     A Claude Code marketplace repo keeps `.claude-plugin/marketplace.json` at
@@ -144,23 +148,47 @@ def probe_claude_marketplace(owner: str, repo: str, name: str) -> tuple[bool, st
             f"{base}/{CLAUDE_MARKETPLACE_PATH}", timeout=INSTALL_URL_PROBE_TIMEOUT
         ) as resp:
             payload = resp.read(CLAUDE_MARKETPLACE_MAX_BYTES + 1)
-    except (urllib.error.URLError, TimeoutError, OSError):
+    except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):
+        # A malformed/truncated upstream HTTP response must not abort generation
+        # for unrelated repos or count as a verified marketplace manifest.
         return False, None
     try:
         if len(payload) > CLAUDE_MARKETPLACE_MAX_BYTES:
             return True, None
         marketplace = json.loads(payload.decode("utf-8"))
-    except ValueError:
+    except (ValueError, RecursionError):
+        # Even a byte-bounded JSON body may exceed the decoder's nesting
+        # limit. Treat malformed source metadata as unresolved, not fatal
+        # to generation of unrelated catalog entries.
         return True, None
 
     entries = marketplace.get("plugins") if isinstance(marketplace, dict) else None
     if not isinstance(entries, list):
         return True, None
+    original_entry_count = len(entries)
     entries = [e for e in entries if isinstance(e, dict)]
-    named = [e for e in entries if str(e.get("name", "")).lower() == name.lower()]
+    # Prefer an exact source name. Human-readable README labels such as
+    # "Codebase Mapper" must also resolve the source slug "codebase-mapper"
+    # when (and only when) the normalized marketplace match is unambiguous.
+    raw_target = name.strip().casefold()
+    named = [
+        e for e in entries
+        if isinstance(e.get("name"), str)
+        and e["name"].strip().casefold() == raw_target
+    ]
+    if not named:
+        slug_target = re.sub(r"[\s_-]+", "-", raw_target)
+        named = [
+            e for e in entries
+            if isinstance(e.get("name"), str)
+            and re.sub(r"[\s_-]+", "-", e["name"].strip().casefold()) == slug_target
+        ]
     if len(named) == 1:
         entry = named[0]
-    elif len(entries) == 1:
+    elif original_entry_count == 1 and len(entries) == 1 and not require_named_match:
+        # Legacy single-plugin marketplace aliases may use a README label.
+        # A second entry for an already-listed repository must match its real
+        # source name, not acquire an arbitrary alias via this fallback.
         entry = entries[0]
     else:
         return True, None
@@ -168,20 +196,50 @@ def probe_claude_marketplace(owner: str, repo: str, name: str) -> tuple[bool, st
     # Only a directory inside this repo; remote sources (objects, URLs) have
     # their own manifests elsewhere.
     source = entry.get("source")
-    if not isinstance(source, str) or "://" in source:
+    if not isinstance(source, str) or not source.strip() or "://" in source:
+        return True, None
+    # Absolute paths and Windows-style separators are not a source directory
+    # inside the marketplace repository. Do not silently convert them into
+    # apparently valid raw.githubusercontent.com install targets.
+    if source.startswith("/") or "\\" in source or ":" in source:
+        return True, None
+    # Untrusted marketplace JSON can contain control bytes which a later HTTP
+    # request rejects as an invalid URL, aborting the entire catalog build.
+    # JSON also permits escaped unpaired UTF-16 surrogates; urllib's UTF-8
+    # path encoder raises UnicodeEncodeError before issuing an HTTP request.
+    if any(
+        ord(char) < 0x20 or ord(char) == 0x7F
+        or 0xD800 <= ord(char) <= 0xDFFF
+        for char in source
+    ):
+        return True, None
+    # Marketplace source directories must be literal repository-relative paths.
+    # Percent-encoded bytes can be decoded by an intermediary after the
+    # traversal check, changing which plugin manifest the URL resolves to.
+    if re.search(r"%[0-9a-fA-F]{2}", source):
+        return True, None
+    # These URL delimiters are not literal directory separators. Including
+    # either in an unquoted raw GitHub URL can select a different resource
+    # from the nested manifest claimed by the marketplace entry.
+    if "?" in source or "#" in source:
         return True, None
     parts = [part for part in source.split("/") if part not in {"", "."}]
     if any(part == ".." for part in parts):
         return True, None
 
     manifest_path = "/".join([*parts, CLAUDE_MANIFEST_PATH])
-    url = f"{base}/{manifest_path}"
+    # Quote literal non-ASCII and space characters in legitimate source folder
+    # names. Without this, Request(url) may throw before the probe's exception
+    # handler, aborting generation for every other plugin in the catalog.
+    url = f"{base}/{urllib.parse.quote(manifest_path, safe='/')}"
     req = urllib.request.Request(url, method="HEAD")
     try:
         with urllib.request.urlopen(req, timeout=INSTALL_URL_PROBE_TIMEOUT) as resp:
             if 200 <= resp.status < 300:
                 return True, url
-    except (urllib.error.URLError, TimeoutError, OSError):
+    except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):
+        # Broken HTTP status lines during a nested manifest HEAD are source
+        # misses, not a reason to abort unrelated marketplace generation.
         pass
     return True, None
 
@@ -438,18 +496,62 @@ def merge_readme_additions(
     The upstream Codex catalog is the primary source. Plugins added directly
     to this repo's README (without a corresponding submission upstream) would
     otherwise never reach plugins.json or marketplace.json. This merges them
-    in, deduplicated by owner/repo, and probes for the manifest location so
-    plugins with non-root layouts get a working `install_url` instead of a
-    hardcoded path that 404s.
+    in, deduplicated by owner/repo except for separately named, verified
+    Claude Code marketplace plugins from one repository. Named bundles must
+    resolve to distinct real manifests; a second README line alone is not
+    proof of a second installable plugin.
     """
     seen = {key for key in (normalize_repo_key(p) for p in upstream) if key}
     additions: list[dict] = []
-    for plugin in parse_plugins(readme_path):
+    readme_plugins = parse_plugins(readme_path)
+    readme_repo_counts: dict[str, int] = {}
+    for item in readme_plugins:
+        repo_key = normalize_repo_key(item)
+        if repo_key:
+            readme_repo_counts[repo_key] = readme_repo_counts.get(repo_key, 0) + 1
+    for plugin in readme_plugins:
         key = normalize_repo_key(plugin)
         if not key:
             continue
+        named_key = (key, str(plugin.get("name", "")).strip().casefold())
 
         if key in seen:
+            # A Claude marketplace can contain distinct installable plugins
+            # even when all entries link to the same GitHub repository root.
+            # Add another only after its unique nested manifest resolves.
+            # An upstream Codex entry and a distinct Claude marketplace plugin
+            # may legitimately have the same name and repository. Suppress a
+            # same-name duplicate only when an existing entry already represents
+            # the Claude runtime. Distinct manifest URLs are checked below.
+            already_claude_named = any(
+                normalize_repo_key(existing) == key
+                and str(existing.get("name", "")).strip().casefold() == named_key[1]
+                and (
+                    existing.get("platform") == "claude-code"
+                    or "claude-code" in (existing.get("ecosystems") or [])
+                )
+                for existing in (*upstream, *additions)
+            )
+            if (
+                resolve_install_urls
+                and not already_claude_named
+                and plugin.get("platform") in (None, "claude-code")
+            ):
+                found, manifest_url = probe_claude_marketplace(
+                    plugin["owner"], plugin["repo"], plugin["name"],
+                    require_named_match=True,
+                )
+                if found and manifest_url and not any(
+                    normalize_repo_key(existing) == key
+                    and existing.get("install_url") == manifest_url
+                    for existing in (*upstream, *additions)
+                ):
+                    plugin["install_url"] = manifest_url
+                    plugin.pop("installation_url", None)
+                    plugin["platform"] = "claude-code"
+                    plugin["ecosystems"] = ["claude-code"]
+                    additions.append(normalize_plugin(plugin))
+                    continue
             # A repository can support multiple runtimes. Preserve a native
             # runtime contribution when the same repository already exists in
             # an upstream or earlier README catalog entry.
@@ -462,21 +564,53 @@ def merge_readme_additions(
                 OPENCODE_PLATFORM,
             }:
                 platform = plugin["platform"]
-                for existing in (*upstream, *additions):
-                    if normalize_repo_key(existing) != key:
-                        continue
-                    ecosystems = existing.get("ecosystems")
-                    if not isinstance(ecosystems, list) or not ecosystems:
-                        existing_platform = existing.get("platform")
-                        ecosystems = [existing_platform] if existing_platform else []
-                        existing["ecosystems"] = ecosystems
-                    if not existing.get("platform"):
-                        existing["platform"] = platform
-                    if platform not in ecosystems:
-                        ecosystems.append(platform)
-                    if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
-                        existing["installation_url"] = plugin["installation_url"]
-                    break
+                matches = [
+                    existing for existing in (*upstream, *additions)
+                    if normalize_repo_key(existing) == key
+                ]
+                # When one repository has several distinct Claude bundles, a
+                # native MCP/skills entry must not inherit an arbitrary Claude
+                # bundle's install URL and identity. Prefer the same runtime
+                # or a unique same-name bundle; otherwise retain a separate
+                # native entry with its own installation documentation.
+                preferred = next((
+                    existing for existing in matches
+                    if existing.get("platform") == platform
+                    or (
+                        isinstance(existing.get("ecosystems"), list)
+                        and platform in existing["ecosystems"]
+                    )
+                ), None)
+                if preferred is None:
+                    same_name = [
+                        existing for existing in matches
+                        if str(existing.get("name", "")).strip().casefold() == named_key[1]
+                    ]
+                    if len(same_name) == 1:
+                        preferred = same_name[0]
+                    elif len(matches) == 1 and not (
+                        matches[0].get("platform") == "claude-code"
+                        or "claude-code" in (matches[0].get("ecosystems") or [])
+                    ):
+                        # A native MCP/Skill listing is not the only Claude
+                        # bundle from this repo merely because it shares the
+                        # repository URL. Preserve its separate identity.
+                        preferred = matches[0]
+                if preferred is None:
+                    additions.append(normalize_plugin(plugin))
+                    continue
+
+                ecosystems = preferred.get("ecosystems")
+                if not isinstance(ecosystems, list) or not ecosystems:
+                    existing_platform = preferred.get("platform")
+                    ecosystems = [existing_platform] if existing_platform else []
+                    preferred["ecosystems"] = ecosystems
+                if not preferred.get("platform"):
+                    preferred["platform"] = platform
+                if platform not in ecosystems:
+                    ecosystems.append(platform)
+                if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
+                    preferred["installation_url"] = plugin["installation_url"]
             continue
 
         seen.add(key)
@@ -517,6 +651,31 @@ def merge_readme_additions(
                 plugin["install_url"] = probed
             else:
                 plugin.pop("install_url", None)
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if (
+            resolve_install_urls
+            and readme_repo_counts.get(key, 0) > 1
+            and plugin.get("platform") in (None, "claude-code")
+        ):
+            # A shared repo can also expose an unrelated root manifest.
+            # Resolve the named nested marketplace bundle *before* a generic
+            # root HEAD probe assigns that manifest to the first README row.
+            marketplace_found, named_url = probe_claude_marketplace(
+                plugin["owner"], plugin["repo"], plugin["name"],
+                require_named_match=True,
+            )
+            # Every entry of a multi-listing repository needs its own
+            # independently identified source manifest. A failed marketplace
+            # request is not permission to assign the generic root manifest
+            # to the first arbitrary README row.
+            if not marketplace_found or not named_url:
+                continue
+            plugin["install_url"] = named_url
+            plugin.pop("installation_url", None)
+            plugin["platform"] = "claude-code"
+            plugin["ecosystems"] = ["claude-code"]
             additions.append(normalize_plugin(plugin))
             continue
 
@@ -618,22 +777,38 @@ def main(argv: list[str] | None = None):
         raise RuntimeError("Grok upstream feed is unavailable or empty; refusing to rewrite published catalogs")
     if grok_plugins:
         print(f"Found {len(grok_plugins)} plugins from grok upstream catalog")
-        # Deduplicate by owner/repo: grok plugins that also exist in codex
-        # are tagged with both ecosystems rather than duplicated
+        # A repository can contain several independent plugin bundles.
+        # Do not attach Grok support to the first unrelated Claude/Codex
+        # bundle just because every entry shares one GitHub repository URL.
         existing_keys = {normalize_repo_key(p) for p in plugins}
         for gp in grok_plugins:
             key = normalize_repo_key(gp)
-            if key and key in existing_keys:
-                # Plugin exists in both ecosystems: add grok to ecosystems
-                for existing in plugins:
-                    if normalize_repo_key(existing) == key:
-                        ecos = existing.get("ecosystems", [])
-                        if GROK_PLATFORM not in ecos:
-                            ecos.append(GROK_PLATFORM)
-                            existing["ecosystems"] = ecos
-                        break
-            else:
+            if not key or key not in existing_keys:
                 plugins.append(gp)
+                if key:
+                    existing_keys.add(key)
+                continue
+            matches = [p for p in plugins if normalize_repo_key(p) == key]
+            named = [
+                p for p in matches
+                if str(p.get("name", "")).strip().casefold()
+                == str(gp.get("name", "")).strip().casefold()
+            ]
+            if len(named) == 1:
+                target = named[0]
+            else:
+                # A shared repository does not prove the Grok entry is the
+                # same installable plugin as an existing Claude/Codex entry.
+                # Even a single existing bundle must match by source name
+                # before it inherits another runtime's ecosystem flag.
+                plugins.append(gp)
+                continue
+            ecosystems = target.get("ecosystems")
+            if not isinstance(ecosystems, list):
+                ecosystems = []
+            if GROK_PLATFORM not in ecosystems:
+                ecosystems.append(GROK_PLATFORM)
+                target["ecosystems"] = ecosystems
         print(f"Total after grok merge: {len(plugins)}")
     elif args.offline:
         print("Offline mode skips the Grok upstream catalog")
