@@ -833,6 +833,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Akii: SEO & AI Search Optimizer](https://github.com/akii-technologies-ltd/akii-seo-ai-search-optimizer) - Free Claude Code plugin that audits sites, checks links, plans content and creates JSON-LD.
 - [Anode](https://github.com/skulitom/Anode) - Claude Code plugin for a hidden background Windows desktop for agents: GUI automation, UI Automation, screenshots and app testing without taking over your mouse.
 - [Antigravity 2.0](https://github.com/comprono/antigravity-2-codex-plugin) - Local Codex bridge for Antigravity desktop with setup checks, model limit summaries, DevTools UI automation, and safe project/chat handoff.
+- [antigravity-desktop-live-quota-mcp](https://github.com/Mefamex/antigravity-desktop-live-quota-mcp) - MCP server: inject a persistent live quota and countdown badge directly into the Google Antigravity Desktop title bar via CDP with zero external dependencies.
 - [AnyCap](https://github.com/anycap-ai/anycap) - Multimodal media generation, analysis, live web research, file sharing, and page publishing through one CLI, Agent Skill, and local MCP server.
 - [anymd](https://github.com/SylphxAI/anymd) - Local MCP server and CLI that converts PDF, Office, EPUB, HTML, image, audio and video files into clean Markdown for agents.
 - [Anywhere](https://github.com/raph559/anywhere) - Self-hosted web app to start, open and stop Claude Code Remote Control sessions on your own Linux, WSL and Windows machines from your phone: pick a device, pick a folder, tap Start.
