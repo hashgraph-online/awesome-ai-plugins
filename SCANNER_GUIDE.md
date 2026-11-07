@@ -15,6 +15,14 @@ pipx run plugin-scanner lint .
 pipx run plugin-scanner verify .
 ```
 
+### Reproduce the catalog scan
+
+The catalog comment prints the exact scanner version it used. Run the same version locally:
+
+```bash
+pipx run --spec plugin-scanner==<version> plugin-scanner scan . --min-score 75
+```
+
 ## Basic Usage
 
 ### Lint a plugin directory
@@ -106,6 +114,12 @@ every ecosystem and recommended for security. HOL still scans listed projects in
 ## CI/CD Integration
 
 ### GitHub Actions
+
+Scanner CI is the fastest path through catalog review: every push gets a score, fixes are verified before the catalog re-scans, and the listing keeps its full trust score.
+
+**One-step install:** when the catalog scan comments on your listing PR, it includes an **Add scanner workflow** link. The link opens GitHub's new-file editor in your repository with [`templates/hol-plugin-scanner.yml`](templates/hol-plugin-scanner.yml) pre-filled at `.github/workflows/hol-plugin-scanner.yml`. Review the file and commit it; nothing is written until you do. Without write access, GitHub offers to propose the file from a fork.
+
+To add it by hand, copy the template (kept pinned to the current scanner release) or this equivalent:
 
 ```yaml
 name: Plugin Security Scan

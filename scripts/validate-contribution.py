@@ -361,8 +361,11 @@ def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
     return files
 
 
-def ensure_public_github_repository(contribution: Contribution) -> None:
-    """Fail catalog validation when the source repository is not reachable."""
+def ensure_public_github_repository(contribution: Contribution) -> str | None:
+    """Fail catalog validation when the source repository is not reachable.
+
+    Returns the default branch when GitHub reports a conservative branch name.
+    """
 
     url = f"https://api.github.com/repos/{contribution.owner}/{contribution.repo}"
     try:
@@ -375,6 +378,10 @@ def ensure_public_github_repository(contribution: Contribution) -> None:
         raise ValidationError(
             f"{contribution.url} is not a reachable public GitHub repository"
         )
+    branch = payload.get("default_branch")
+    if isinstance(branch, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]{0,99}", branch) and ".." not in branch:
+        return branch
+    return None
 
 
 def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
@@ -486,6 +493,10 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
     pull_requests: list[OpenPullRequest] = []
     for payload in payloads:
         if not isinstance(payload, dict):
+            continue
+        # A manually dispatched number can name a closed or merged pull request;
+        # skip it so the gate never posts to a pull request that is no longer open.
+        if payload.get("state", "open") != "open":
             continue
         number = payload.get("number")
         title = payload.get("title")
@@ -626,19 +637,20 @@ def scan_open_pull_requests(
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
             try:
-                ensure_public_github_repository(entry)
+                default_branch = ensure_public_github_repository(entry)
             except ValidationError as error:
                 catalog_failures.append(str(error))
                 report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
                 continue
             inspection = inspect_scanner_ci(entry)
-            scanner_contributions.append(
-                {
-                    "owner": entry.owner,
-                    "repo": entry.repo,
-                    "scanner_ci": inspection.status,
-                }
-            )
+            scanner_contribution = {
+                "owner": entry.owner,
+                "repo": entry.repo,
+                "scanner_ci": inspection.status,
+            }
+            if default_branch:
+                scanner_contribution["default_branch"] = default_branch
+            scanner_contributions.append(scanner_contribution)
             matrix.append(
                 {
                     "pr_number": pull_request.number,

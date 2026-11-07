@@ -40,7 +40,8 @@ permissions:
   issues: read
 
 concurrency:
-  group: plugin-claim-notices
+  # Separate PRs must not replace each other's pending notice jobs.
+  group: plugin-claim-notices-${{ github.event.pull_request.number || (inputs.mode == 'single' && inputs.pr_number) || 'backfill' }}
   cancel-in-progress: false
 
 jobs:

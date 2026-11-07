@@ -41,6 +41,7 @@ class DeliveryRegressionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "README.md").write_text(
+                "## Community Plugins\n"
                 "- [Plugin](https://github.com/owner/plugin) - Plugin\n"
                 "- [Imported](./plugins/mirror/alias) - Imported listing\n"
             )
@@ -66,7 +67,7 @@ class DeliveryRegressionTests(unittest.TestCase):
             MODULE, "fetch_catalog_repos",
             side_effect=MODULE.RegistryCatalogFetchError("registry catalog exceeded 100 pages"),
         ), patch(
-            "builtins.open", mock_open(read_data="- [Plugin](https://github.com/owner/plugin) - Plugin")
+            "builtins.open", mock_open(read_data="## Community Plugins\n- [Plugin](https://github.com/owner/plugin) - Plugin")
         ), patch.object(MODULE, "post_comment", return_value=True) as post:
             self.assertEqual(MODULE.main(), 0)
             post.assert_called_once_with("author", {"owner/plugin"})
@@ -185,7 +186,17 @@ class ClaimNoticeTests(unittest.TestCase):
         self.lookup = patch.object(MODULE, "fetch_catalog_repos", return_value=set()).start()
         self.post = patch.object(MODULE, "post_comment", return_value=True).start()
         self.update = patch.object(MODULE, "update_comment", return_value=True).start()
+        self.agent = patch.object(MODULE, "pull_request_is_agent_marked", return_value=False).start()
+        patch.object(MODULE, "PR_AGENT_MARKED", False).start()
         self.addCleanup(patch.stopall)
+
+    def test_agent_markers_are_read_only_when_a_claim_link_is_posted(self):
+        self.assertEqual(MODULE.main(), 0)
+        self.agent.assert_called_once_with()
+        self.agent.reset_mock()
+        self.lookup.return_value = {"owner/plugin"}
+        self.assertEqual(MODULE.main(), 0)
+        self.agent.assert_not_called()
 
     def test_unindexed_listing_gets_a_claim_link(self):
         self.assertEqual(MODULE.main(), 0)
@@ -249,10 +260,31 @@ class ClaimNoticeTests(unittest.TestCase):
 
 
 class NoticeEvidenceTests(unittest.TestCase):
+    def test_source_excludes_navigation_and_related_projects(self):
+        readme = "\n".join([
+            "# Catalog",
+            "## Contents",
+            "- [Navigation](https://github.com/owner/navigation) - Reference",
+            "## Community Plugins",
+            "### Tools & Integrations",
+            "- [Plugin](https://github.com/owner/plugin) - Actual listing",
+            "## Related Projects",
+            "- [Related](https://github.com/owner/related) - Reference",
+        ])
+        with patch("builtins.open", mock_open(read_data=readme)):
+            self.assertEqual(MODULE.catalog_source_repos(), {"owner/plugin"})
+
+    def test_source_without_community_catalog_is_not_claimable(self):
+        with patch("builtins.open", mock_open(read_data=
+            "## Related Projects\n- [Related](https://github.com/owner/related) - Reference\n"
+        )):
+            self.assertEqual(MODULE.catalog_source_repos(), set())
+
     def test_source_tolerates_imported_links_without_local_bundle_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "README.md").write_text(
+                "## Community Plugins\n"
                 "- [Imported](./plugins/mirror/alias) - Imported listing\n"
                 "- [Plugin](https://github.com/owner/plugin) - Plugin\n"
             )
@@ -261,6 +293,7 @@ class NoticeEvidenceTests(unittest.TestCase):
 
     def test_source_accepts_exact_listing_links_only(self):
         readme = "\n".join([
+            "## Community Plugins",
             "- [Plugin](https://github.com/Owner/Plugin.git/tree/main) - Plugin",
             "Documentation mentions https://github.com/other/unlisted",
         ])
@@ -270,7 +303,7 @@ class NoticeEvidenceTests(unittest.TestCase):
     def test_local_mirror_uses_trusted_upstream_identity_instead_of_folder_name(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / "README.md").write_text("- [Mirror](./plugins/author/alias) - Plugin")
+            (root / "README.md").write_text("## Community Plugins\n- [Mirror](./plugins/author/alias) - Plugin")
             manifest = root / "plugins" / "author" / "alias" / ".codex-plugin" / "plugin.json"
             manifest.parent.mkdir(parents=True)
             manifest.write_text(json.dumps({"repository": "https://github.com/author/upstream.git"}))
@@ -278,7 +311,7 @@ class NoticeEvidenceTests(unittest.TestCase):
                 self.assertEqual(MODULE.catalog_source_repos(), {"author/upstream"})
 
     def test_local_listing_cannot_read_metadata_outside_the_catalog(self):
-        with patch("builtins.open", mock_open(read_data="- [Bad](./plugins/../../outside) - Plugin")):
+        with patch("builtins.open", mock_open(read_data="## Community Plugins\n- [Bad](./plugins/../../outside) - Plugin")):
             with self.assertRaises(OSError):
                 MODULE.catalog_source_repos()
 
@@ -328,6 +361,54 @@ class NoticeEvidenceTests(unittest.TestCase):
             "+- [New](https://github.com/owner/new) - New"])
         with patch.object(MODULE.subprocess, "run", return_value=CompletedProcess([], 0, stdout=diff)):
             self.assertEqual(MODULE.parse_pr_diff_for_repos(), {"owner/new"})
+
+
+class OwnerHandoffTests(unittest.TestCase):
+    def setUp(self):
+        patch.object(MODULE, "PR_AGENT_MARKED", False).start()
+        self.addCleanup(patch.stopall)
+
+    def test_outside_repository_owner_is_mentioned(self):
+        body = MODULE.build_comment_body("contributor", {"owner/plugin"})
+        self.assertIn("@owner: this pull request listed your repository.", body)
+        self.assertIn("Congrats @contributor", body)
+
+    def test_author_who_owns_the_repository_is_not_mentioned_twice(self):
+        body = MODULE.build_comment_body("Owner", {"owner/plugin"})
+        self.assertNotIn("listed your repository", body)
+
+    def test_maintainer_repositories_are_not_mentioned(self):
+        body = MODULE.build_comment_body("contributor", {"hashgraph-online/plugin"})
+        self.assertNotIn("listed your repository", body)
+
+    def test_verified_owner_dashboard_notice_has_no_mention(self):
+        self.assertNotIn("listed your repository", MODULE.build_comment_body("contributor", set()))
+
+    def test_agent_marked_pull_request_uses_agent_handoff_attribution(self):
+        with patch.object(MODULE, "PR_AGENT_MARKED", True):
+            body = MODULE.build_comment_body("contributor", {"owner/plugin"})
+        query = parse_qs(urlparse(re.search(r"\((https://hol\.org/guard/plugins\?[^)]+)\)", body).group(1)).query)
+        self.assertEqual(query["utm_campaign"], ["agent_handoff"])
+        self.assertEqual(query["utm_content"], ["merge_agent"])
+        self.assertEqual(query["claim"], ["owner/plugin"])
+
+    def test_plain_pull_request_keeps_merge_notice_attribution(self):
+        query = parse_qs(urlparse(MODULE.claim_link("owner/plugin")).query)
+        self.assertEqual(query["utm_campaign"], ["plugin_claim"])
+        self.assertEqual(query["utm_content"], ["merge_notice"])
+
+    def test_agent_markers(self):
+        marked = [
+            {"head": {"ref": "codex/add-plugin"}, "user": {"login": "dev"}, "body": ""},
+            {"head": {"ref": "add-plugin"}, "user": {"login": "helper[bot]"}, "body": ""},
+            {"head": {"ref": "add-plugin"}, "user": {"login": "dev"}, "body": "Generated with a coding agent"},
+            {"head": {"ref": "add-plugin"}, "user": {"login": "dev"}, "body": "Co-Authored-By: Claude <noreply@example.com>"},
+            {"head": {"ref": "add-plugin"}, "user": {"login": "dev"}, "body": "\U0001F916 opened by an agent"},
+        ]
+        for pull in marked:
+            with self.subTest(pull=pull):
+                self.assertTrue(MODULE.is_agent_marked(pull))
+        self.assertFalse(MODULE.is_agent_marked({"head": {"ref": "add-plugin"}, "user": {"login": "dev"}, "body": None}))
 
 
 if __name__ == "__main__":

@@ -21,6 +21,7 @@ PINNED_FILES = (
     REPO_ROOT / "SCANNER_GUIDE.md",
     REPO_ROOT / ".github/workflows/validate-contribution.yml",
     REPO_ROOT / ".github/workflows/sweep-open-prs.yml",
+    REPO_ROOT / "templates/hol-plugin-scanner.yml",
 )
 ACTION_PATTERN = re.compile(
     r"(hashgraph-online/ai-plugin-scanner-action@)([0-9a-f]{40})"
