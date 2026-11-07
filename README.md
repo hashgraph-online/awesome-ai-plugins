@@ -997,6 +997,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Kreuzberg Cloud](https://github.com/kreuzberg-dev/plugins) - Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.
 - [Kreuzcrawl](https://github.com/kreuzberg-dev/plugins) - Web crawling and scraping for Codex with skills for single-page scraping, site crawls, URL mapping, and headless browser fallback.
 - [kunglao-agent](https://github.com/amd2g2zz/kunglao-agent) - Reverse-engineering expert agent for binaries, firmware, protocols, and web/JS: MCP servers registered by kunglao-init (ghidra, sequential-thinking, x64dbg, ...), see the MCP supply table under Internals.
+- [kyte](https://github.com/usekyte/kyte-mcp) - Kyte options market on Robinhood Chain for your AI agent: live markets, offers, prices, positions, staking, fee proof and Pons launchpad gra.
 - [Lacuna Music](https://github.com/JOYLINK-LTD/lacuna-plugin) - Generate original instrumental music and vocal songs from Codex through the Lacuna MCP server.
 - [Langfuse Observability](https://github.com/avivsinai/langfuse-mcp) - Query traces, debug exceptions, analyze sessions, and manage prompts via MCP tools.
 - [last30days-skill-cn](https://github.com/Jesseovo/last30days-skill-cn) - Agent skill that searches eight Chinese platforms for the last 30 days and produces sourced research reports and hot-topic boards.
