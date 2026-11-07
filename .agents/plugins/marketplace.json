@@ -6941,6 +6941,17 @@
       "install_url": "https://raw.githubusercontent.com/awrshift/agent-memory-kit/HEAD/plugins/memory-kit/.claude-plugin/plugin.json"
     },
     {
+      "name": "agent-rules",
+      "displayName": "agent-rules",
+      "description": "Modular AGENTS.md, CLAUDE.md, Cursor rules, Copilot instructions and Claude Code skills for Next.js, TypeScript, React, Node, NestJS, Prisma, Drizzle, Tailwind and shadcn, with one installer that keeps the formats in sync",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "fabwaseem",
+      "repo": "agent-rules",
+      "url": "https://github.com/fabwaseem/agent-rules",
+      "installation_url": "https://github.com/fabwaseem/agent-rules#readme"
+    },
+    {
       "name": "agent-sounds",
       "displayName": "agent-sounds",
       "description": "Sound feedback plugin playing game voice lines on Claude Code and Codex session events, configurable by source and volume",
