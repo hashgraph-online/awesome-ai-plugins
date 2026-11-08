@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-07",
+  "last_updated": "2026-11-08",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -32,7 +32,7 @@
       "owner": "RBraga01",
       "repo": "a-team",
       "url": "https://github.com/RBraga01/a-team",
-      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/plugin.json"
     },
     {
       "name": "Aegis",
@@ -152,7 +152,7 @@
       "owner": "exadel-inc",
       "repo": "agentic-readiness-assessment",
       "url": "https://github.com/exadel-inc/agentic-readiness-assessment",
-      "install_url": "https://raw.githubusercontent.com/exadel-inc/agentic-readiness-assessment/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/exadel-inc/agentic-readiness-assessment/HEAD/plugin.json"
     },
     {
       "name": "Agentizer",
@@ -797,7 +797,7 @@
       "owner": "ctdaniel",
       "repo": "codex-quota-optimizer",
       "url": "https://github.com/ctdaniel/codex-quota-optimizer",
-      "install_url": "https://raw.githubusercontent.com/ctdaniel/codex-quota-optimizer/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/ctdaniel/codex-quota-optimizer/HEAD/plugin.json"
     },
     {
       "name": "Codex Quota Title",
@@ -1022,7 +1022,7 @@
       "owner": "davidmosiah",
       "repo": "delx-plugins",
       "url": "https://github.com/davidmosiah/delx-plugins",
-      "install_url": "https://raw.githubusercontent.com/davidmosiah/delx-plugins/HEAD/delx-recovery/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/davidmosiah/delx-plugins/HEAD/delx-recovery/plugin.json"
     },
     {
       "name": "design-helper",
@@ -1112,7 +1112,7 @@
       "owner": "jquinteiroo",
       "repo": "devrecap",
       "url": "https://github.com/jquinteiroo/devrecap",
-      "install_url": "https://raw.githubusercontent.com/jquinteiroo/devrecap/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/jquinteiroo/devrecap/HEAD/plugin.json"
     },
     {
       "name": "Docflow",
@@ -1157,7 +1157,7 @@
       "owner": "prekuter",
       "repo": "dryforge",
       "url": "https://github.com/prekuter/dryforge",
-      "install_url": "https://raw.githubusercontent.com/prekuter/dryforge/HEAD/codex/plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/prekuter/dryforge/HEAD/agent-plugin/plugin.json"
     },
     {
       "name": "ejentum-mcp",
@@ -1202,7 +1202,7 @@
       "owner": "requie",
       "repo": "endostack",
       "url": "https://github.com/requie/endostack",
-      "install_url": "https://raw.githubusercontent.com/requie/endostack/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/requie/endostack/HEAD/plugin.json"
     },
     {
       "name": "Epic Harness",
@@ -1277,7 +1277,7 @@
       "owner": "thiagoxikota",
       "repo": "figma-maxxing",
       "url": "https://github.com/thiagoxikota/figma-maxxing",
-      "install_url": "https://raw.githubusercontent.com/thiagoxikota/figma-maxxing/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/thiagoxikota/figma-maxxing/HEAD/plugin.json"
     },
     {
       "name": "Frappe Agent",
@@ -1412,7 +1412,7 @@
       "owner": "hashgraph-online",
       "repo": "hol-guard-plugin",
       "url": "https://github.com/hashgraph-online/hol-guard-plugin",
-      "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard-plugin/HEAD/plugin.json"
     },
     {
       "name": "Homie",
@@ -1517,7 +1517,7 @@
       "owner": "JoxoAI",
       "repo": "joxo",
       "url": "https://github.com/JoxoAI/joxo",
-      "install_url": "https://raw.githubusercontent.com/JoxoAI/joxo/HEAD/plugins/joxo/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/JoxoAI/joxo/HEAD/plugins/joxo/plugin.json"
     },
     {
       "name": "Keep Mac Awake",
@@ -1712,7 +1712,7 @@
       "owner": "memtomem",
       "repo": "memtomem",
       "url": "https://github.com/memtomem/memtomem",
-      "install_url": "https://raw.githubusercontent.com/memtomem/memtomem/HEAD/plugins/memtomem/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/memtomem/memtomem/HEAD/packages/memtomem-hermes-plugin/plugin.json"
     },
     {
       "name": "MiniCut",
@@ -1759,7 +1759,7 @@
       "owner": "modelsalt",
       "repo": "model-salt",
       "url": "https://github.com/modelsalt/model-salt",
-      "install_url": "https://raw.githubusercontent.com/modelsalt/model-salt/HEAD/plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/modelsalt/model-salt/HEAD/plugin.json"
     },
     {
       "name": "Multi-LLM",
@@ -1894,7 +1894,7 @@
       "owner": "pixeltable",
       "repo": "pixeltable-skill",
       "url": "https://github.com/pixeltable/pixeltable-skill",
-      "install_url": "https://raw.githubusercontent.com/pixeltable/pixeltable-skill/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/pixeltable/pixeltable-skill/HEAD/plugin.json"
     },
     {
       "name": "Plugin Stack",
@@ -2091,7 +2091,7 @@
       "owner": "redfox-data",
       "repo": "redfox-agent-plugins",
       "url": "https://github.com/redfox-data/redfox-agent-plugins",
-      "install_url": "https://raw.githubusercontent.com/redfox-data/redfox-agent-plugins/HEAD/plugins/account-video-downloader/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/redfox-data/redfox-agent-plugins/HEAD/plugins/account-video-downloader/plugin.json"
     },
     {
       "name": "Rekall",
@@ -2137,7 +2137,7 @@
       "owner": "KalarisLabs",
       "repo": "research-agent-skills",
       "url": "https://github.com/KalarisLabs/research-agent-skills",
-      "install_url": "https://raw.githubusercontent.com/KalarisLabs/research-agent-skills/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/KalarisLabs/research-agent-skills/HEAD/plugin.json",
       "installation_url": "https://github.com/KalarisLabs/research-agent-skills#readme"
     },
     {
@@ -2258,7 +2258,7 @@
       "owner": "MohammadHijjawi97",
       "repo": "since-cutoff",
       "url": "https://github.com/MohammadHijjawi97/since-cutoff",
-      "install_url": "https://raw.githubusercontent.com/MohammadHijjawi97/since-cutoff/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/MohammadHijjawi97/since-cutoff/HEAD/plugin.json"
     },
     {
       "name": "Skill Skill",
@@ -2455,7 +2455,7 @@
       "owner": "supercorp-ai",
       "repo": "supercov",
       "url": "https://github.com/supercorp-ai/supercov",
-      "install_url": "https://raw.githubusercontent.com/supercorp-ai/supercov/HEAD/plugins/supercov/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/supercorp-ai/supercov/HEAD/plugins/supercov/plugin.json"
     },
     {
       "name": "Superloopy",
@@ -2530,7 +2530,7 @@
       "owner": "tartinerlabs",
       "repo": "skills",
       "url": "https://github.com/tartinerlabs/skills",
-      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/design/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/tartinerlabs/skills/HEAD/plugins/design/plugin.json"
     },
     {
       "name": "Team Skills Platform",
@@ -2635,7 +2635,7 @@
       "owner": "uizze",
       "repo": "uizze",
       "url": "https://github.com/uizze/uizze",
-      "install_url": "https://raw.githubusercontent.com/uizze/uizze/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/uizze/uizze/HEAD/plugin.json"
     },
     {
       "name": "Unforgit",
@@ -2890,7 +2890,7 @@
       "owner": "Sandyzzx",
       "repo": "codex-zcode-bridge",
       "url": "https://github.com/Sandyzzx/codex-zcode-bridge",
-      "install_url": "https://raw.githubusercontent.com/Sandyzzx/codex-zcode-bridge/HEAD/plugins/codex-zcode-bridge/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/Sandyzzx/codex-zcode-bridge/HEAD/plugins/codex-zcode-bridge/plugin.json"
     },
     {
       "name": "/call-me",
@@ -2995,7 +2995,7 @@
       "owner": "mustafaakmese",
       "repo": "agentmart-plugins",
       "url": "https://github.com/mustafaakmese/agentmart-plugins",
-      "install_url": "https://raw.githubusercontent.com/mustafaakmese/agentmart-plugins/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/mustafaakmese/agentmart-plugins/HEAD/plugin.json"
     },
     {
       "name": "Ahel",
@@ -3010,7 +3010,7 @@
       "owner": "ahel-technologies",
       "repo": "ahel",
       "url": "https://github.com/ahel-technologies/ahel",
-      "install_url": "https://raw.githubusercontent.com/ahel-technologies/ahel/HEAD/plugins/ahel/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/ahel-technologies/ahel/HEAD/plugins/ahel/plugin.json"
     },
     {
       "name": "Aident Loadout",
@@ -3102,7 +3102,7 @@
       "owner": "arcmira",
       "repo": "mcp",
       "url": "https://github.com/arcmira/mcp",
-      "install_url": "https://raw.githubusercontent.com/arcmira/mcp/HEAD/plugins/arcmira/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/arcmira/mcp/HEAD/plugins/arcmira/plugin.json"
     },
     {
       "name": "AutoCAD Tianzheng Tools",
@@ -3147,7 +3147,7 @@
       "owner": "reliable-ly0411",
       "repo": "babeldoc-pdf-translate",
       "url": "https://github.com/reliable-ly0411/babeldoc-pdf-translate",
-      "install_url": "https://raw.githubusercontent.com/reliable-ly0411/babeldoc-pdf-translate/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/reliable-ly0411/babeldoc-pdf-translate/HEAD/plugin.json"
     },
     {
       "name": "BankBridge",
@@ -3162,7 +3162,7 @@
       "owner": "bankbridge-money",
       "repo": "bankbridge-plugin",
       "url": "https://github.com/bankbridge-money/bankbridge-plugin",
-      "install_url": "https://raw.githubusercontent.com/bankbridge-money/bankbridge-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/bankbridge-money/bankbridge-plugin/HEAD/plugin.json"
     },
     {
       "name": "BestPrice",
@@ -3177,7 +3177,7 @@
       "owner": "TheBestCo",
       "repo": "bestprice-mcp",
       "url": "https://github.com/TheBestCo/bestprice-mcp",
-      "install_url": "https://raw.githubusercontent.com/TheBestCo/bestprice-mcp/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/TheBestCo/bestprice-mcp/HEAD/plugin.json"
     },
     {
       "name": "Bifrost",
@@ -3222,7 +3222,7 @@
       "owner": "bowmark-ai",
       "repo": "plugin",
       "url": "https://github.com/bowmark-ai/plugin",
-      "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/plugin.json"
     },
     {
       "name": "BrewPage",
@@ -3282,7 +3282,7 @@
       "owner": "pratie",
       "repo": "bulktranscripts-mcp",
       "url": "https://github.com/pratie/bulktranscripts-mcp",
-      "install_url": "https://raw.githubusercontent.com/pratie/bulktranscripts-mcp/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/pratie/bulktranscripts-mcp/HEAD/plugin.json"
     },
     {
       "name": "BurpSuite MCP Bridge",
@@ -3342,7 +3342,7 @@
       "owner": "sergebulaev",
       "repo": "car-rental-skills",
       "url": "https://github.com/sergebulaev/car-rental-skills",
-      "install_url": "https://raw.githubusercontent.com/sergebulaev/car-rental-skills/HEAD/.codex-marketplace/car-rental-skills/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/car-rental-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "CarsXE",
@@ -3372,7 +3372,7 @@
       "owner": "zeyu-j",
       "repo": "centricmem-skill",
       "url": "https://github.com/zeyu-j/centricmem-skill",
-      "install_url": "https://raw.githubusercontent.com/zeyu-j/centricmem-skill/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/zeyu-j/centricmem-skill/HEAD/plugin.json"
     },
     {
       "name": "Chrome DevTools",
@@ -3584,7 +3584,7 @@
       "owner": "cohesivity-org",
       "repo": "cohesivity-plugin",
       "url": "https://github.com/cohesivity-org/cohesivity-plugin",
-      "install_url": "https://raw.githubusercontent.com/cohesivity-org/cohesivity-plugin/HEAD/packages/codex/plugins/cohesivity/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/cohesivity-org/cohesivity-plugin/HEAD/plugin.json"
     },
     {
       "name": "CometChat",
@@ -3600,7 +3600,7 @@
       "owner": "cometchat",
       "repo": "cometchat-skills",
       "url": "https://github.com/cometchat/cometchat-skills",
-      "install_url": "https://raw.githubusercontent.com/cometchat/cometchat-skills/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/cometchat/cometchat-skills/HEAD/plugin.json",
       "installation_url": "https://github.com/cometchat/cometchat-skills#readme"
     },
     {
@@ -3752,7 +3752,7 @@
       "owner": "f-o-x11",
       "repo": "deed-page-skill",
       "url": "https://github.com/f-o-x11/deed-page-skill",
-      "install_url": "https://raw.githubusercontent.com/f-o-x11/deed-page-skill/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/f-o-x11/deed-page-skill/HEAD/plugin.json",
       "installation_url": "https://github.com/f-o-x11/deed-page-skill#readme"
     },
     {
@@ -3772,7 +3772,7 @@
       "owner": "vshulcz",
       "repo": "deja-vu",
       "url": "https://github.com/vshulcz/deja-vu",
-      "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/codex-plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/vshulcz/deja-vu/HEAD/plugin.json"
     },
     {
       "name": "DESIGN:OS 3D Blender",
@@ -3835,7 +3835,7 @@
       "owner": "exmergo",
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "install_url": "https://raw.githubusercontent.com/exmergo/dex/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/exmergo/dex/HEAD/plugin.json",
       "installation_url": "https://github.com/exmergo/dex#readme"
     },
     {
@@ -3851,7 +3851,7 @@
       "owner": "indranilbanerjee",
       "repo": "digital-marketing-pro",
       "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
-      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/indranilbanerjee/digital-marketing-pro/HEAD/plugin.json"
     },
     {
       "name": "Dodo Payments",
@@ -3866,7 +3866,7 @@
       "owner": "dodopayments",
       "repo": "dodo-agent-plugin",
       "url": "https://github.com/dodopayments/dodo-agent-plugin",
-      "install_url": "https://raw.githubusercontent.com/dodopayments/dodo-agent-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/dodopayments/dodo-agent-plugin/HEAD/plugin.json"
     },
     {
       "name": "Droplinked",
@@ -3896,7 +3896,7 @@
       "owner": "bosmdavid-gif",
       "repo": "dropthehassle-skill",
       "url": "https://github.com/bosmdavid-gif/dropthehassle-skill",
-      "install_url": "https://raw.githubusercontent.com/bosmdavid-gif/dropthehassle-skill/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/bosmdavid-gif/dropthehassle-skill/HEAD/plugin.json"
     },
     {
       "name": "easybrandkit",
@@ -3911,7 +3911,7 @@
       "owner": "EminBudak",
       "repo": "easybrandkit",
       "url": "https://github.com/EminBudak/easybrandkit",
-      "install_url": "https://raw.githubusercontent.com/EminBudak/easybrandkit/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/EminBudak/easybrandkit/HEAD/plugin.json"
     },
     {
       "name": "Education Agent Skills",
@@ -3956,7 +3956,7 @@
       "owner": "daniel3303",
       "repo": "stock-market-mcp-server",
       "url": "https://github.com/daniel3303/stock-market-mcp-server",
-      "install_url": "https://raw.githubusercontent.com/daniel3303/stock-market-mcp-server/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/daniel3303/stock-market-mcp-server/HEAD/plugin.json"
     },
     {
       "name": "Exa Web Search",
@@ -3986,7 +3986,7 @@
       "owner": "sergebulaev",
       "repo": "exotic-car-rental-skills",
       "url": "https://github.com/sergebulaev/exotic-car-rental-skills",
-      "install_url": "https://raw.githubusercontent.com/sergebulaev/exotic-car-rental-skills/HEAD/.codex-marketplace/exotic-car-rental-skills/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/exotic-car-rental-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Fantasy Football Manager",
@@ -4076,7 +4076,7 @@
       "owner": "fainir",
       "repo": "frugal",
       "url": "https://github.com/fainir/frugal",
-      "install_url": "https://raw.githubusercontent.com/fainir/frugal/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/fainir/frugal/HEAD/plugin.json"
     },
     {
       "name": "FXMacroData",
@@ -4136,7 +4136,7 @@
       "owner": "host0-ai",
       "repo": "skills",
       "url": "https://github.com/host0-ai/skills",
-      "install_url": "https://raw.githubusercontent.com/host0-ai/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/host0-ai/skills/HEAD/plugin.json"
     },
     {
       "name": "Imagera",
@@ -4151,7 +4151,7 @@
       "owner": "alexadams6ix",
       "repo": "imagera-skills",
       "url": "https://github.com/alexadams6ix/imagera-skills",
-      "install_url": "https://raw.githubusercontent.com/alexadams6ix/imagera-skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/alexadams6ix/imagera-skills/HEAD/plugin.json"
     },
     {
       "name": "Jenkins CLI",
@@ -4181,7 +4181,7 @@
       "owner": "jetformat",
       "repo": "jetformat-agent",
       "url": "https://github.com/jetformat/jetformat-agent",
-      "install_url": "https://raw.githubusercontent.com/jetformat/jetformat-agent/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/jetformat/jetformat-agent/HEAD/plugin.json"
     },
     {
       "name": "Jev Social",
@@ -4256,7 +4256,7 @@
       "owner": "kinlab-ai",
       "repo": "kin-plugin",
       "url": "https://github.com/kinlab-ai/kin-plugin",
-      "install_url": "https://raw.githubusercontent.com/kinlab-ai/kin-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/kinlab-ai/kin-plugin/HEAD/plugin.json"
     },
     {
       "name": "Kreuzberg",
@@ -4395,7 +4395,7 @@
       "owner": "EminBudak",
       "repo": "launch-film",
       "url": "https://github.com/EminBudak/launch-film",
-      "install_url": "https://raw.githubusercontent.com/EminBudak/launch-film/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/EminBudak/launch-film/HEAD/plugin.json"
     },
     {
       "name": "LienDeadline",
@@ -4410,7 +4410,7 @@
       "owner": "LienDeadline",
       "repo": "skills",
       "url": "https://github.com/LienDeadline/skills",
-      "install_url": "https://raw.githubusercontent.com/LienDeadline/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/LienDeadline/skills/HEAD/plugin.json"
     },
     {
       "name": "LinkedIn Skills",
@@ -4425,7 +4425,7 @@
       "owner": "sergebulaev",
       "repo": "linkedin-skills",
       "url": "https://github.com/sergebulaev/linkedin-skills",
-      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-marketplace/linkedin-skills/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/linkedin-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "LinkMCP",
@@ -4440,7 +4440,7 @@
       "owner": "linkmcp-io",
       "repo": "linkmcp",
       "url": "https://github.com/linkmcp-io/linkmcp",
-      "install_url": "https://raw.githubusercontent.com/linkmcp-io/linkmcp/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/linkmcp-io/linkmcp/HEAD/plugin.json"
     },
     {
       "name": "LLMSlim",
@@ -4456,7 +4456,7 @@
       "owner": "Thanatos9404",
       "repo": "llmslim",
       "url": "https://github.com/Thanatos9404/llmslim",
-      "install_url": "https://raw.githubusercontent.com/Thanatos9404/llmslim/HEAD/plugins/llmslim/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/Thanatos9404/llmslim/HEAD/plugins/llmslim/plugin.json",
       "installation_url": "https://github.com/Thanatos9404/llmslim#readme"
     },
     {
@@ -4532,7 +4532,7 @@
       "owner": "mesmerlord",
       "repo": "lurkapi-claude-plugin",
       "url": "https://github.com/mesmerlord/lurkapi-claude-plugin",
-      "install_url": "https://raw.githubusercontent.com/mesmerlord/lurkapi-claude-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/mesmerlord/lurkapi-claude-plugin/HEAD/plugin.json"
     },
     {
       "name": "Maestro: Costguard",
@@ -4577,7 +4577,7 @@
       "owner": "negm17111995",
       "repo": "mcp-server",
       "url": "https://github.com/negm17111995/mcp-server",
-      "install_url": "https://raw.githubusercontent.com/negm17111995/mcp-server/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/negm17111995/mcp-server/HEAD/plugin.json"
     },
     {
       "name": "MATLAB Simulink Tools",
@@ -4608,7 +4608,7 @@
       "owner": "MetaMask",
       "repo": "agent-skills",
       "url": "https://github.com/MetaMask/agent-skills",
-      "install_url": "https://raw.githubusercontent.com/MetaMask/agent-skills/HEAD/.codex-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/MetaMask/agent-skills/HEAD/plugin.json",
       "installation_url": "https://github.com/MetaMask/agent-skills#readme"
     },
     {
@@ -4624,7 +4624,7 @@
       "owner": "MetisFoundry",
       "repo": "metis-plugins",
       "url": "https://github.com/MetisFoundry/metis-plugins",
-      "install_url": "https://raw.githubusercontent.com/MetisFoundry/metis-plugins/HEAD/plugins/metis-check/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/MetisFoundry/metis-plugins/HEAD/plugins/metis-check/plugin.json"
     },
     {
       "name": "Mnemoverse Memory",
@@ -4639,7 +4639,7 @@
       "owner": "mnemoverse",
       "repo": "claude-plugin",
       "url": "https://github.com/mnemoverse/claude-plugin",
-      "install_url": "https://raw.githubusercontent.com/mnemoverse/claude-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/mnemoverse/claude-plugin/HEAD/plugin.json"
     },
     {
       "name": "Mobazha",
@@ -4669,7 +4669,7 @@
       "owner": "mobbin",
       "repo": "skills",
       "url": "https://github.com/mobbin/skills",
-      "install_url": "https://raw.githubusercontent.com/mobbin/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/mobbin/skills/HEAD/plugin.json"
     },
     {
       "name": "MoltNode by Chord",
@@ -4714,7 +4714,7 @@
       "owner": "nowork-studio",
       "repo": "notfair-plugin",
       "url": "https://github.com/nowork-studio/notfair-plugin",
-      "install_url": "https://raw.githubusercontent.com/nowork-studio/notfair-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/nowork-studio/notfair-plugin/HEAD/plugin.json"
     },
     {
       "name": "NPMScan",
@@ -4774,7 +4774,7 @@
       "owner": "varaprasadreddy9676",
       "repo": "openproject-codex-plugin",
       "url": "https://github.com/varaprasadreddy9676/openproject-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.agents/plugins/plugins/openproject-codex/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/varaprasadreddy9676/openproject-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Ophis",
@@ -4991,6 +4991,21 @@
       "install_url": "https://raw.githubusercontent.com/qrstuff/codex-plugins/HEAD/plugins/qrstuff-mcp-server/.codex-plugin/plugin.json"
     },
     {
+      "name": "QuestionPunk",
+      "displayName": "QuestionPunk",
+      "description": "Create and review survey drafts, publish studies on request, and analyze responses through the QuestionPunk MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "questionpunk",
+      "repo": "codex-plugin",
+      "url": "https://github.com/questionpunk/codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/questionpunk/codex-plugin/HEAD/plugins/questionpunk/plugin.json"
+    },
+    {
       "name": "Read Image",
       "displayName": "Read Image",
       "description": "Read local images, videos, web pages, and Windows screenshots through Doubao, GLM, or Qwen-compatible vision APIs.",
@@ -5065,7 +5080,7 @@
       "owner": "olegvg",
       "repo": "resume-tailor-plugin",
       "url": "https://github.com/olegvg/resume-tailor-plugin",
-      "install_url": "https://raw.githubusercontent.com/olegvg/resume-tailor-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/olegvg/resume-tailor-plugin/HEAD/plugin.json"
     },
     {
       "name": "Revid",
@@ -5080,7 +5095,7 @@
       "owner": "tmakersas",
       "repo": "revid-skills",
       "url": "https://github.com/tmakersas/revid-skills",
-      "install_url": "https://raw.githubusercontent.com/tmakersas/revid-skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/tmakersas/revid-skills/HEAD/plugin.json"
     },
     {
       "name": "Roomcomm",
@@ -5096,6 +5111,21 @@
       "repo": "codex-roomcomm",
       "url": "https://github.com/kotinder/codex-roomcomm",
       "install_url": "https://raw.githubusercontent.com/kotinder/codex-roomcomm/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ru-marketplace-mcp",
+      "displayName": "ru-marketplace-mcp",
+      "description": "Read-only Codex plugin (`.codex-plugin/plugin.json`), MCP server, and 15 Agent Skills for buyer-side product search, cards, seller details, reviews, and cross-marketplace price comparison across 12 Russian and Chinese marketplaces and classifieds (Wildberries, Ozon, Yandex Market, Detsky Mir, Avito, AliExpress, Taobao, Megamarket, Lamoda, DNS, Citilink, and Cian real estate) with no API keys required.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Vladimir-Human",
+      "repo": "ru-marketplace-mcp",
+      "url": "https://github.com/Vladimir-Human/ru-marketplace-mcp",
+      "install_url": "https://raw.githubusercontent.com/Vladimir-Human/ru-marketplace-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "ru-text",
@@ -5230,7 +5260,7 @@
       "owner": "AddisonHoff",
       "repo": "sendsets",
       "url": "https://github.com/AddisonHoff/sendsets",
-      "install_url": "https://raw.githubusercontent.com/AddisonHoff/sendsets/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/AddisonHoff/sendsets/HEAD/plugin.json"
     },
     {
       "name": "Seonix",
@@ -5245,7 +5275,7 @@
       "owner": "seonix-ai",
       "repo": "mcp",
       "url": "https://github.com/seonix-ai/mcp",
-      "install_url": "https://raw.githubusercontent.com/seonix-ai/mcp/HEAD/plugins/seonix/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/seonix-ai/mcp/HEAD/plugins/seonix/plugin.json"
     },
     {
       "name": "Serply",
@@ -5305,7 +5335,7 @@
       "owner": "phnx-labs",
       "repo": "svatlas-mcp",
       "url": "https://github.com/phnx-labs/svatlas-mcp",
-      "install_url": "https://raw.githubusercontent.com/phnx-labs/svatlas-mcp/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/phnx-labs/svatlas-mcp/HEAD/plugin.json"
     },
     {
       "name": "SolidPing",
@@ -5395,7 +5425,7 @@
       "owner": "Hugo0",
       "repo": "swarmmemo",
       "url": "https://github.com/Hugo0/swarmmemo",
-      "install_url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/HEAD/plugins/swarmmemo/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/HEAD/plugins/swarmmemo/plugin.json"
     },
     {
       "name": "sync. labs",
@@ -5410,7 +5440,7 @@
       "owner": "synchronicity-labs",
       "repo": "skills",
       "url": "https://github.com/synchronicity-labs/skills",
-      "install_url": "https://raw.githubusercontent.com/synchronicity-labs/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/synchronicity-labs/skills/HEAD/plugin.json"
     },
     {
       "name": "Synta MCP",
@@ -5575,7 +5605,7 @@
       "owner": "treza-labs",
       "repo": "treza-plugin",
       "url": "https://github.com/treza-labs/treza-plugin",
-      "install_url": "https://raw.githubusercontent.com/treza-labs/treza-plugin/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/treza-labs/treza-plugin/HEAD/plugin.json"
     },
     {
       "name": "TweetAPI",
@@ -5757,7 +5787,7 @@
       "owner": "sergebulaev",
       "repo": "x-skills",
       "url": "https://github.com/sergebulaev/x-skills",
-      "install_url": "https://raw.githubusercontent.com/sergebulaev/x-skills/HEAD/.codex-marketplace/x-skills/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/sergebulaev/x-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "X Twitter Scraper",
@@ -5772,7 +5802,7 @@
       "owner": "Xquik-dev",
       "repo": "x-twitter-scraper",
       "url": "https://github.com/Xquik-dev/x-twitter-scraper",
-      "install_url": "https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/HEAD/plugin.json"
     },
     {
       "name": "Yandex Direct",
@@ -5848,6 +5878,51 @@
       "repo": "97",
       "url": "https://github.com/oribarilan/97",
       "installation_url": "https://github.com/oribarilan/97#readme"
+    },
+    {
+      "name": "Agent Skill Builder",
+      "displayName": "Agent Skill Builder",
+      "description": "Agent Skill that builds Claude Code or portable Agent Skills and validates frontmatter, invocation controls, tool grants, links, and spec drift, with tests showing that malformed skills fail",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "agent-skill-builder",
+      "url": "https://github.com/conorbronsdon/agent-skill-builder",
+      "installation_url": "https://github.com/conorbronsdon/agent-skill-builder#readme"
+    },
+    {
+      "name": "Agent Skills",
+      "displayName": "Agent Skills",
+      "description": "Nine Agent Skills for session management, multi-session reconciliation, worktree recovery, multi-model code review, eval integrity, SSOT drift checks, skill creation, guest research, and angel diligence, installable for Claude Code, Codex, Cursor, and OpenCode",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "agent-skills",
+      "url": "https://github.com/conorbronsdon/agent-skills",
+      "installation_url": "https://github.com/conorbronsdon/agent-skills#readme"
+    },
+    {
+      "name": "Agent Workspace",
+      "displayName": "Agent Workspace",
+      "description": "Six Agent Skills for persistent workspace state, session checkpoints, daily briefings, multi-session reconciliation, and approval-gated worktree recovery, with a configurable file layout",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "agent-workspace",
+      "url": "https://github.com/conorbronsdon/agent-workspace",
+      "installation_url": "https://github.com/conorbronsdon/agent-workspace#readme"
     },
     {
       "name": "agent-notion-template-docs",
@@ -11495,6 +11570,21 @@
       "install_url": "https://raw.githubusercontent.com/Aqua-123/pstack-for-codex/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "pstack-claude",
+      "displayName": "pstack-claude",
+      "description": "Port of Lauren Tan's pstack skill stack for Claude Code, Codex, Pi, GitHub Copilot, and other agent harnesses, where poteto-mode routes each task to a workflow that reproduces, fixes, and verifies the change",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "michael-denyer",
+      "repo": "pstack-claude",
+      "url": "https://github.com/michael-denyer/pstack-claude",
+      "install_url": "https://raw.githubusercontent.com/michael-denyer/pstack-claude/HEAD/plugins/pstack/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Pyrite",
       "displayName": "Pyrite",
       "description": "MCP server: alpha Knowledge-as-Code for agents and humans, a git-backed, typed Markdown knowledge base with a CLI and web UI",
@@ -11776,21 +11866,6 @@
       "repo": "rtl-terminal",
       "url": "https://github.com/MohammedSaud404/rtl-terminal",
       "install_url": "https://raw.githubusercontent.com/MohammedSaud404/rtl-terminal/HEAD/.claude-plugin/plugin.json"
-    },
-    {
-      "name": "ru-marketplace-mcp",
-      "displayName": "ru-marketplace-mcp",
-      "description": "Read-only MCP server and 15 Agent Skills for buyer-side product search, cards, seller details, reviews, and cross-marketplace price comparison across 12 Russian and Chinese marketplaces and classifieds (Wildberries, Ozon, Yandex Market, Detsky Mir, Avito, AliExpress, Taobao, Megamarket, Lamoda, DNS, Citilink, and Cian real estate) with no API keys required",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "Vladimir-Human",
-      "repo": "ru-marketplace-mcp",
-      "url": "https://github.com/Vladimir-Human/ru-marketplace-mcp",
-      "install_url": "https://raw.githubusercontent.com/Vladimir-Human/ru-marketplace-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Salesforce Compound Engineering",
@@ -13317,6 +13392,21 @@
       "install_url": "https://raw.githubusercontent.com/skulitom/Anode/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "antigravity-desktop-live-quota-mcp",
+      "displayName": "antigravity-desktop-live-quota-mcp",
+      "description": "MCP server: inject a persistent live quota and countdown badge directly into the Google Antigravity Desktop title bar via CDP with zero external dependencies",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Mefamex",
+      "repo": "antigravity-desktop-live-quota-mcp",
+      "url": "https://github.com/Mefamex/antigravity-desktop-live-quota-mcp",
+      "installation_url": "https://github.com/Mefamex/antigravity-desktop-live-quota-mcp#readme"
+    },
+    {
       "name": "AnyCap",
       "displayName": "AnyCap",
       "description": "Multimodal media generation, analysis, live web research, file sharing, and page publishing through one CLI, Agent Skill, and local MCP server",
@@ -14176,6 +14266,17 @@
       "repo": "drip-ai-water-usage",
       "url": "https://github.com/beausterling/drip-ai-water-usage",
       "installation_url": "https://github.com/beausterling/drip-ai-water-usage#readme"
+    },
+    {
+      "name": "EasyRunCraft MCP",
+      "displayName": "EasyRunCraft MCP",
+      "description": "Professional online office suite for AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "eastling",
+      "repo": "easyruncraft-mcp",
+      "url": "https://github.com/eastling/easyruncraft-mcp",
+      "installation_url": "https://github.com/eastling/easyruncraft-mcp#readme"
     },
     {
       "name": "edgeone-makers-tools",
@@ -15583,6 +15684,21 @@
       "installation_url": "https://github.com/withoneai/mcp#readme"
     },
     {
+      "name": "OP3 MCP",
+      "displayName": "OP3 MCP",
+      "description": "MCP server: read-only OP3 podcast analytics, including downloads over time, listener geography, app share, per-episode download counts, and raw download events",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "op3-mcp",
+      "url": "https://github.com/conorbronsdon/op3-mcp",
+      "installation_url": "https://github.com/conorbronsdon/op3-mcp#readme"
+    },
+    {
       "name": "open-cross-session",
       "displayName": "open-cross-session",
       "description": "Lets Claude Code, Codex, Pi, Hermes and terminal agent sessions message and wake each other on one machine or across paired LAN computers over a mutually authenticated, encrypted link, with no server or account",
@@ -15974,6 +16090,21 @@
       "repo": "claude-plugin",
       "url": "https://github.com/posteverywhere/claude-plugin",
       "install_url": "https://raw.githubusercontent.com/posteverywhere/claude-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Postlint MCP",
+      "displayName": "Postlint MCP",
+      "description": "MCP server: checks social drafts against X, Bluesky, LinkedIn, Threads, Mastodon, and Discord length rules, including t.co URL weighting and grapheme counting, with no authentication or network access",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "conorbronsdon",
+      "repo": "postlint-mcp",
+      "url": "https://github.com/conorbronsdon/postlint-mcp",
+      "installation_url": "https://github.com/conorbronsdon/postlint-mcp#readme"
     },
     {
       "name": "powercontext",
