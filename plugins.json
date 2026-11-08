@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-08",
-  "total": 1257,
+  "total": 1269,
   "platforms": [
     "codex",
     "grok",
@@ -4280,6 +4280,20 @@
       ]
     },
     {
+      "name": "ManuWright",
+      "url": "https://github.com/grotyx/Academic_writing_c_claudecode",
+      "owner": "grotyx",
+      "repo": "Academic_writing_c_claudecode",
+      "description": "Medical manuscript workflow that blocks drafting without approved plans, checks citations against an evidence ledger and checks reported numbers against results CSV files.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/grotyx/Academic_writing_c_claudecode/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "MAQAMI Travel",
       "url": "https://github.com/negm17111995/mcp-server",
       "owner": "negm17111995",
@@ -5788,6 +5802,20 @@
       ]
     },
     {
+      "name": "econ-slides-skill",
+      "url": "https://github.com/hanlulong/econ-slides-skill",
+      "owner": "hanlulong",
+      "repo": "econ-slides-skill",
+      "description": "Agent skill that builds economics research talks in LaTeX/Beamer from papers, with discussant decks and timed speaker scripts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/hanlulong/econ-slides-skill#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "ego-decision-layer",
       "url": "https://github.com/jiangkoumo/ego-decision-layer",
       "owner": "jiangkoumo",
@@ -5979,6 +6007,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/k8s-servant/k8s-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "kaggle-tools",
+      "url": "https://github.com/yassineAlouini/kaggle-tools",
+      "owner": "yassineAlouini",
+      "repo": "kaggle-tools",
+      "description": "Nine Agent Skills for Kaggle competitions covering CV design, code-competition submissions, LLM reasoning, serving and fine-tuning, leaderboard analysis, bioacoustics, medical imaging and tabular work, distilled from real competitions and packaged as a Claude Code plugin",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/yassineAlouini/kaggle-tools#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6590,6 +6632,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/awrshift/agent-memory-kit/HEAD/plugins/memory-kit/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "agent-recap",
+      "url": "https://github.com/rogermas05/agent-recap",
+      "owner": "rogermas05",
+      "repo": "agent-recap",
+      "description": "Stop hook for Claude Code and Codex that sends an agent back once if its last test run failed and its final message does not say so",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/rogermas05/agent-recap/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -13119,6 +13175,20 @@
       "installation_url": "https://github.com/foklepoint/court-rules-mcp#readme"
     },
     {
+      "name": "CreatorsCompanion",
+      "url": "https://github.com/Amine-Mhiri/creatorscompanion-plugin",
+      "owner": "Amine-Mhiri",
+      "repo": "creatorscompanion-plugin",
+      "description": "Claude Code plugin plus remote MCP server for content creators that finds viral posts in a niche, pulls transcripts and writes Reels, TikTok, LinkedIn, X, YouTube and newsletter content in the creator's own voice",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Amine-Mhiri/creatorscompanion-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Creo",
       "url": "https://github.com/RaazKetan/creo",
       "owner": "RaazKetan",
@@ -13516,6 +13586,16 @@
       "installation_url": "https://github.com/lennix1337/Genexus18MCP#readme"
     },
     {
+      "name": "Ghostfolio MCP Server",
+      "url": "https://github.com/mhajder/ghostfolio-mcp",
+      "owner": "mhajder",
+      "repo": "ghostfolio-mcp",
+      "description": "MCP server for analyzing and managing Ghostfolio investment portfolios through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/ghostfolio-mcp#readme"
+    },
+    {
       "name": "GitHub Issues for Claude Code",
       "url": "https://github.com/MarcoCarnevali/claude-code-mods",
       "owner": "MarcoCarnevali",
@@ -13528,6 +13608,16 @@
       "ecosystems": [
         "claude-code"
       ]
+    },
+    {
+      "name": "GLPI MCP Server",
+      "url": "https://github.com/mhajder/glpi-mcp",
+      "owner": "mhajder",
+      "repo": "glpi-mcp",
+      "description": "MCP server for working with GLPI tickets, assets and the knowledge base through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/glpi-mcp#readme"
     },
     {
       "name": "GodotPrompter",
@@ -14140,6 +14230,16 @@
       "installation_url": "https://github.com/LetsFG/LetsFG#readme"
     },
     {
+      "name": "LibreNMS MCP Server",
+      "url": "https://github.com/mhajder/librenms-mcp",
+      "owner": "mhajder",
+      "repo": "librenms-mcp",
+      "description": "MCP server for querying and managing LibreNMS network monitoring through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/librenms-mcp#readme"
+    },
+    {
       "name": "Light Cloud MCP Server",
       "url": "https://github.com/light-cloud-com/mcp-server",
       "owner": "light-cloud-com",
@@ -14497,6 +14597,16 @@
       ]
     },
     {
+      "name": "NetBox MCP Server",
+      "url": "https://github.com/mhajder/netbox-mcp",
+      "owner": "mhajder",
+      "repo": "netbox-mcp",
+      "description": "MCP server giving AI agents structured access to NetBox as a network source of truth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/netbox-mcp#readme"
+    },
+    {
       "name": "Network-AI",
       "url": "https://github.com/Jovancoding/Network-AI",
       "owner": "Jovancoding",
@@ -14799,6 +14909,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Oxidized MCP Server",
+      "url": "https://github.com/mhajder/oxidized-mcp",
+      "owner": "mhajder",
+      "repo": "oxidized-mcp",
+      "description": "MCP server for searching, comparing and backing up network device configurations stored in Oxidized",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/oxidized-mcp#readme"
     },
     {
       "name": "ParlayAPI",
@@ -15949,6 +16069,16 @@
       ]
     },
     {
+      "name": "Zabbix MCP Server",
+      "url": "https://github.com/mhajder/zabbix-mcp",
+      "owner": "mhajder",
+      "repo": "zabbix-mcp",
+      "description": "MCP server for querying and managing Zabbix monitoring through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/mhajder/zabbix-mcp#readme"
+    },
+    {
       "name": "Zero Slop",
       "url": "https://github.com/manavmishra/ZeroSlop",
       "owner": "manavmishra",
@@ -16119,6 +16249,19 @@
       "owner": "sixtysevenlf",
       "repo": "dsh-blender-plugin",
       "description": "DSH plugin that lets an AI model drive Blender over a direct TCP channel: viewport frames, custom-angle renders, Python execution, headless offload, and a judgment/acceptance layer (`blender_rt_plan`, 28 families / 183 ops)",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-bloom-theme",
+      "url": "https://github.com/webkubor/dsh-bloom-theme",
+      "owner": "webkubor",
+      "repo": "dsh-bloom-theme",
+      "description": "Theme plugin for DeepSeek Harness with 15 Morandi palettes, three glass styles, independent light and dark backgrounds, and WCAG AA-checked accent pairs",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",

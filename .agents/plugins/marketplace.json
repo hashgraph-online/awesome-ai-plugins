@@ -4565,6 +4565,21 @@
       "install_url": "https://raw.githubusercontent.com/magichourhq/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "ManuWright",
+      "displayName": "ManuWright",
+      "description": "Medical manuscript workflow that blocks drafting without approved plans, checks citations against an evidence ledger and checks reported numbers against results CSV files.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "grotyx",
+      "repo": "Academic_writing_c_claudecode",
+      "url": "https://github.com/grotyx/Academic_writing_c_claudecode",
+      "install_url": "https://raw.githubusercontent.com/grotyx/Academic_writing_c_claudecode/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "MAQAMI Travel",
       "displayName": "MAQAMI Travel",
       "description": "Search hotels (3M+ hotels) and flights worldwide, read hotel details, then get a secure checkout link on book.maqami.co through the hosted MAQAMI MCP server (no API key), with a booking skill that confirms with you before holding a rate.",
@@ -6180,6 +6195,21 @@
       "installation_url": "https://github.com/kklimuk/docx-cli#readme"
     },
     {
+      "name": "econ-slides-skill",
+      "displayName": "econ-slides-skill",
+      "description": "Agent skill that builds economics research talks in LaTeX/Beamer from papers, with discussant decks and timed speaker scripts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "hanlulong",
+      "repo": "econ-slides-skill",
+      "url": "https://github.com/hanlulong/econ-slides-skill",
+      "installation_url": "https://github.com/hanlulong/econ-slides-skill#readme"
+    },
+    {
       "name": "ego-decision-layer",
       "displayName": "ego-decision-layer",
       "description": "Agent skill for ego lite browser automation with a swappable per-step decision model, guarded execution, and schema-validated extraction",
@@ -6388,6 +6418,21 @@
       "repo": "k8s-skills",
       "url": "https://github.com/k8s-servant/k8s-skills",
       "installation_url": "https://github.com/k8s-servant/k8s-skills#readme"
+    },
+    {
+      "name": "kaggle-tools",
+      "displayName": "kaggle-tools",
+      "description": "Nine Agent Skills for Kaggle competitions covering CV design, code-competition submissions, LLM reasoning, serving and fine-tuning, leaderboard analysis, bioacoustics, medical imaging and tabular work, distilled from real competitions and packaged as a Claude Code plugin",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "yassineAlouini",
+      "repo": "kaggle-tools",
+      "url": "https://github.com/yassineAlouini/kaggle-tools",
+      "installation_url": "https://github.com/yassineAlouini/kaggle-tools#readme"
     },
     {
       "name": "kstack",
@@ -7044,6 +7089,21 @@
       "repo": "agent-memory-kit",
       "url": "https://github.com/awrshift/agent-memory-kit",
       "install_url": "https://raw.githubusercontent.com/awrshift/agent-memory-kit/HEAD/plugins/memory-kit/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "agent-recap",
+      "displayName": "agent-recap",
+      "description": "Stop hook for Claude Code and Codex that sends an agent back once if its last test run failed and its final message does not say so",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "rogermas05",
+      "repo": "agent-recap",
+      "url": "https://github.com/rogermas05/agent-recap",
+      "install_url": "https://raw.githubusercontent.com/rogermas05/agent-recap/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "agent-rules",
@@ -14078,6 +14138,21 @@
       "installation_url": "https://github.com/foklepoint/court-rules-mcp#readme"
     },
     {
+      "name": "CreatorsCompanion",
+      "displayName": "CreatorsCompanion",
+      "description": "Claude Code plugin plus remote MCP server for content creators that finds viral posts in a niche, pulls transcripts and writes Reels, TikTok, LinkedIn, X, YouTube and newsletter content in the creator's own voice",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "Amine-Mhiri",
+      "repo": "creatorscompanion-plugin",
+      "url": "https://github.com/Amine-Mhiri/creatorscompanion-plugin",
+      "install_url": "https://raw.githubusercontent.com/Amine-Mhiri/creatorscompanion-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Creo",
       "displayName": "Creo",
       "description": "macOS menu bar app for searching and resuming Claude Code and Codex sessions, with live 5-hour and weekly plan usage for both",
@@ -14506,6 +14581,17 @@
       "installation_url": "https://github.com/lennix1337/Genexus18MCP#readme"
     },
     {
+      "name": "Ghostfolio MCP Server",
+      "displayName": "Ghostfolio MCP Server",
+      "description": "MCP server for analyzing and managing Ghostfolio investment portfolios through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "ghostfolio-mcp",
+      "url": "https://github.com/mhajder/ghostfolio-mcp",
+      "installation_url": "https://github.com/mhajder/ghostfolio-mcp#readme"
+    },
+    {
       "name": "GitHub Issues for Claude Code",
       "displayName": "GitHub Issues for Claude Code",
       "description": "Claude Code mod that lists a repository's GitHub issues as cards in a side pane, with search, label filters and linked pull requests, and hands an issue to Claude with one click",
@@ -14519,6 +14605,17 @@
       "repo": "claude-code-mods",
       "url": "https://github.com/MarcoCarnevali/claude-code-mods",
       "installation_url": "https://github.com/MarcoCarnevali/claude-code-mods#readme"
+    },
+    {
+      "name": "GLPI MCP Server",
+      "displayName": "GLPI MCP Server",
+      "description": "MCP server for working with GLPI tickets, assets and the knowledge base through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "glpi-mcp",
+      "url": "https://github.com/mhajder/glpi-mcp",
+      "installation_url": "https://github.com/mhajder/glpi-mcp#readme"
     },
     {
       "name": "GodotPrompter",
@@ -15177,6 +15274,17 @@
       "installation_url": "https://github.com/LetsFG/LetsFG#readme"
     },
     {
+      "name": "LibreNMS MCP Server",
+      "displayName": "LibreNMS MCP Server",
+      "description": "MCP server for querying and managing LibreNMS network monitoring through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "librenms-mcp",
+      "url": "https://github.com/mhajder/librenms-mcp",
+      "installation_url": "https://github.com/mhajder/librenms-mcp#readme"
+    },
+    {
       "name": "Light Cloud MCP Server",
       "displayName": "Light Cloud MCP Server",
       "description": "MCP server: deploy a GitHub repo or local folder to Light Cloud from Claude Code, Claude Desktop or any MCP client, with sign-up, databases, logs and rollbacks in the same conversation (`npx @light-cloud/mcp-server`)",
@@ -15562,6 +15670,17 @@
       "install_url": "https://raw.githubusercontent.com/skulitom/nestbolt-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "NetBox MCP Server",
+      "displayName": "NetBox MCP Server",
+      "description": "MCP server giving AI agents structured access to NetBox as a network source of truth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "netbox-mcp",
+      "url": "https://github.com/mhajder/netbox-mcp",
+      "installation_url": "https://github.com/mhajder/netbox-mcp#readme"
+    },
+    {
       "name": "Network-AI",
       "displayName": "Network-AI",
       "description": "TypeScript multi-agent orchestrator shipped as a Claude Code plugin, Gemini CLI extension, and MCP server that adds an atomic shared blackboard, per-agent token budgets, permission gating, and audit trails across 32 agent frameworks",
@@ -15889,6 +16008,17 @@
       "repo": "overleaf-latex",
       "url": "https://github.com/MarcoDotIO/overleaf-latex",
       "install_url": "https://raw.githubusercontent.com/MarcoDotIO/overleaf-latex/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Oxidized MCP Server",
+      "displayName": "Oxidized MCP Server",
+      "description": "MCP server for searching, comparing and backing up network device configurations stored in Oxidized",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "oxidized-mcp",
+      "url": "https://github.com/mhajder/oxidized-mcp",
+      "installation_url": "https://github.com/mhajder/oxidized-mcp#readme"
     },
     {
       "name": "ParlayAPI",
@@ -17127,6 +17257,17 @@
       "install_url": "https://raw.githubusercontent.com/yylo-dev/yylo-skills/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Zabbix MCP Server",
+      "displayName": "Zabbix MCP Server",
+      "description": "MCP server for querying and managing Zabbix monitoring through AI agents",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "mhajder",
+      "repo": "zabbix-mcp",
+      "url": "https://github.com/mhajder/zabbix-mcp",
+      "installation_url": "https://github.com/mhajder/zabbix-mcp#readme"
+    },
+    {
       "name": "Zero Slop",
       "displayName": "Zero Slop",
       "description": "Say no to AI slop: a human-in-the-loop learning agentic workflow skill that scores text 0-100 for AI slop and rewrites it tastefully, with a standard-library Python scorer that has zero dependencies and runs offline",
@@ -17316,6 +17457,20 @@
       "owner": "sixtysevenlf",
       "repo": "dsh-blender-plugin",
       "url": "https://github.com/sixtysevenlf/dsh-blender-plugin"
+    },
+    {
+      "name": "dsh-bloom-theme",
+      "displayName": "dsh-bloom-theme",
+      "description": "Theme plugin for DeepSeek Harness with 15 Morandi palettes, three glass styles, independent light and dark backgrounds, and WCAG AA-checked accent pairs",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "webkubor",
+      "repo": "dsh-bloom-theme",
+      "url": "https://github.com/webkubor/dsh-bloom-theme"
     },
     {
       "name": "dsh-commandcode-provider",
