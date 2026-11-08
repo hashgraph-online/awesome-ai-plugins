@@ -130,6 +130,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 
 - [97](https://github.com/oribarilan/97) - Agent skills distilled from established programming practice that load at decision points like refactoring, testing, API design, and code review, packaged as a plugin for Claude Code, GitHub Copilot CLI, and OpenCode.
 - [Agent Skill Builder](https://github.com/conorbronsdon/agent-skill-builder) - Agent Skill that builds Claude Code or portable Agent Skills and validates frontmatter, invocation controls, tool grants, links, and spec drift, with tests showing that malformed skills fail.
+- [Agent Skills](https://github.com/conorbronsdon/agent-skills) - Nine Agent Skills for session management, multi-session reconciliation, worktree recovery, multi-model code review, eval integrity, SSOT drift checks, skill creation, guest research, and angel diligence, installable for Claude Code, Codex, Cursor, and OpenCode.
 - [agent-notion-template-docs](https://github.com/heyman333/agent-notion-template-docs) - Agent skill that renders agent-generated documents with Notion's blocks and visual style using a fixed HTML template and CSS linter.
 - [answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) - Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
