@@ -35,6 +35,21 @@
       "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/plugin.json"
     },
     {
+      "name": "Actera",
+      "displayName": "Actera",
+      "description": "Checks each Codex tool call against Actera workspace policies before it runs, holds calls that need a reviewer's approval, and records every decision and outcome.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Actera-AI",
+      "repo": "actera-codex",
+      "url": "https://github.com/Actera-AI/actera-codex",
+      "install_url": "https://raw.githubusercontent.com/Actera-AI/actera-codex/HEAD/plugins/actera/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Aegis",
       "displayName": "Aegis",
       "description": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.",

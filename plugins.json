@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-09",
-  "total": 1287,
+  "total": 1288,
   "platforms": [
     "codex",
     "grok",
@@ -40,6 +40,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Actera",
+      "url": "https://github.com/Actera-AI/actera-codex",
+      "owner": "Actera-AI",
+      "repo": "actera-codex",
+      "description": "Checks each Codex tool call against Actera workspace policies before it runs, holds calls that need a reviewer's approval, and records every decision and outcome.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Actera-AI/actera-codex/HEAD/plugins/actera/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
