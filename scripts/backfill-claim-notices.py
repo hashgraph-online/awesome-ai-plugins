@@ -4,7 +4,9 @@
 import importlib.util
 import os
 import sys
+import time
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -55,7 +57,9 @@ def list_merged_prs(repository: str, token: str, since: str, max_prs: int):
 def main():
     token = os.environ.get("GH_TOKEN", "")
     repository = os.environ.get("GITHUB_REPOSITORY", "")
-    since = os.environ.get("BACKFILL_SINCE", "2026-07-04")
+    since = os.environ.get("BACKFILL_SINCE") or (
+        datetime.now(timezone.utc) - timedelta(days=7)
+    ).date().isoformat()
     if not token or not repository:
         print("Error: GH_TOKEN and GITHUB_REPOSITORY are required", file=sys.stderr)
         return 1
@@ -68,9 +72,9 @@ def main():
         return 1
 
     print(f"Backfilling {len(pull_requests)} merged PRs since {since}")
-    os.environ["CLAIM_NOTICE_CACHE_CATALOG"] = "1"
     NOTICE.GH_TOKEN = token
     NOTICE.REPO_FULL = repository
+    failures = []
 
     for pull_request in pull_requests:
         number = pull_request.get("number")
@@ -79,13 +83,25 @@ def main():
         author = user.get("login") if isinstance(user, dict) else None
         if not isinstance(number, int) or not isinstance(title, str) or not isinstance(author, str):
             print("Error: GitHub returned incomplete pull request metadata", file=sys.stderr)
-            return 1
+            failures.append(str(number))
+            continue
         NOTICE.PR_NUMBER = str(number)
         NOTICE.PR_TITLE = title
         NOTICE.PR_AUTHOR = author
-        if NOTICE.main() != 0:
-            print(f"Error: claim notice backfill stopped at PR #{number}", file=sys.stderr)
-            return 1
+        result = NOTICE.main()
+        # Keep comment writes and optional ownership queries below burst limits.
+        time.sleep(1.25)
+        if result == NOTICE.NOTICE_DEFERRED:
+            print(f"::warning::Claim notice backfill deferred at PR #{number}; a later backfill will retry it.")
+            failures.append(str(number))
+            continue
+        if result != 0:
+            print(f"Error: claim notice backfill failed at PR #{number}", file=sys.stderr)
+            failures.append(str(number))
+
+    if failures:
+        print(f"::error::Claim notices need retry for PRs: {', '.join(failures)}")
+        return 1
 
     print("Claim notice backfill completed")
     return 0

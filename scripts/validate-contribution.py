@@ -190,13 +190,35 @@ def readme_urls_in_section(readme: str, section: str) -> set[str]:
     return urls
 
 
+def readme_listing_signatures_in_section(
+    readme: str, section: str
+) -> set[tuple[str, str, str]]:
+    """Return name, normalized URL and description for rows in one section."""
+
+    current_section = ""
+    signatures: set[tuple[str, str, str]] = set()
+    for line in readme.splitlines():
+        heading = re.match(r"^##\s+(.+?)\s*$", line)
+        if heading:
+            current_section = heading.group(1).strip()
+            continue
+        if current_section != section:
+            continue
+        match = README_ENTRY_RE.match(line.strip())
+        if match:
+            signatures.add(
+                (match.group(1).strip(), normalize_url(match.group(2)), match.group(5).strip())
+            )
+    return signatures
+
+
 def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in a README diff."""
+    """Find added or revised Community Plugins rows in a README diff."""
 
     if not diff:
         return []
 
-    base_urls = readme_urls_in_section(base_readme, "Community Plugins")
+    base_signatures = readme_listing_signatures_in_section(base_readme, "Community Plugins")
     readme_lines = head_readme.splitlines()
 
     entries: list[Contribution] = []
@@ -212,7 +234,8 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
             match = README_ENTRY_RE.match(content.strip())
             if match and current_readme_section(readme_lines, added_line_number) == "Community Plugins":
                 url = normalize_url(match.group(2))
-                if url not in base_urls and url not in seen_urls:
+                signature = (match.group(1).strip(), url, match.group(5).strip())
+                if signature not in base_signatures and url not in seen_urls:
                     seen_urls.add(url)
                     entries.append(
                         Contribution(
@@ -232,7 +255,7 @@ def get_new_readme_entries_from_diff(diff: str, base_readme: str, head_readme: s
 
 
 def get_new_readme_entries(base_ref: str) -> list[Contribution]:
-    """Find newly added Community Plugins entries in the local README diff."""
+    """Find added or revised Community Plugins rows in the local README diff."""
 
     diff = git("diff", base_ref, "--", "README.md")
     if not diff or not README_PATH.exists():
@@ -338,8 +361,11 @@ def workflow_files(owner: str, repo: str) -> list[tuple[str, str]]:
     return files
 
 
-def ensure_public_github_repository(contribution: Contribution) -> None:
-    """Fail catalog validation when the source repository is not reachable."""
+def ensure_public_github_repository(contribution: Contribution) -> str | None:
+    """Fail catalog validation when the source repository is not reachable.
+
+    Returns the default branch when GitHub reports a conservative branch name.
+    """
 
     url = f"https://api.github.com/repos/{contribution.owner}/{contribution.repo}"
     try:
@@ -352,6 +378,10 @@ def ensure_public_github_repository(contribution: Contribution) -> None:
         raise ValidationError(
             f"{contribution.url} is not a reachable public GitHub repository"
         )
+    branch = payload.get("default_branch")
+    if isinstance(branch, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]{0,99}", branch) and ".." not in branch:
+        return branch
+    return None
 
 
 def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
@@ -463,6 +493,10 @@ def list_open_pull_requests(repository: str, pull_request_number: int | None) ->
     pull_requests: list[OpenPullRequest] = []
     for payload in payloads:
         if not isinstance(payload, dict):
+            continue
+        # A manually dispatched number can name a closed or merged pull request;
+        # skip it so the gate never posts to a pull request that is no longer open.
+        if payload.get("state", "open") != "open":
             continue
         number = payload.get("number")
         title = payload.get("title")
@@ -594,7 +628,7 @@ def scan_open_pull_requests(
                     "failure_reasons": [],
                 }
             )
-            report_lines.append(f"- **{prefix}: PASS** — no new Community Plugins entries")
+            report_lines.append(f"- **{prefix}: PASS** — no new or revised Community Plugins entries")
             continue
 
         report_lines.append(f"- **{prefix}**")
@@ -603,19 +637,20 @@ def scan_open_pull_requests(
         for entry in entries:
             contribution = f"{entry.owner}/{entry.repo}"
             try:
-                ensure_public_github_repository(entry)
+                default_branch = ensure_public_github_repository(entry)
             except ValidationError as error:
                 catalog_failures.append(str(error))
                 report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
                 continue
             inspection = inspect_scanner_ci(entry)
-            scanner_contributions.append(
-                {
-                    "owner": entry.owner,
-                    "repo": entry.repo,
-                    "scanner_ci": inspection.status,
-                }
-            )
+            scanner_contribution = {
+                "owner": entry.owner,
+                "repo": entry.repo,
+                "scanner_ci": inspection.status,
+            }
+            if default_branch:
+                scanner_contribution["default_branch"] = default_branch
+            scanner_contributions.append(scanner_contribution)
             matrix.append(
                 {
                     "pr_number": pull_request.number,

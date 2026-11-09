@@ -1,26 +1,58 @@
 name: Sync from upstream registries
 
 on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - plugins.json
+      - .agents/plugins/marketplace.json
+      - .github/workflows/sync-from-upstream.yml
   repository_dispatch:
     types: [sync-to-ai-plugins]
 
+# Merged catalog and feed changes should be checked against the public feeds. This
+# push-triggered job must NEVER publish catalog metadata without review.
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: registry-feed-sync-main
+  cancel-in-progress: false
 
 jobs:
+  check:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    name: Detect feed drift after a merged catalog change
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout catalog
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Compare published feeds without modifying them
+        run: python3 scripts/generate_plugins_json.py --require-upstreams --check
+
   sync:
+    if: github.event_name == 'repository_dispatch'
     name: Sync from upstream plugin registries
     runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
     steps:
       - name: Checkout awesome-ai-plugins
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          # Queued imports must include earlier feed publications.
+          ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
 
       - name: Regenerate combined JSON from all upstream sources
-        run: |
-          python3 scripts/generate_plugins_json.py || true
+        run: python3 scripts/generate_plugins_json.py --require-upstreams
 
       - name: Commit and push
         run: |

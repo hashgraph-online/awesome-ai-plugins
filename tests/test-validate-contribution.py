@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import difflib
 import importlib.util
 import json
 import sys
@@ -53,6 +54,22 @@ jobs:
 
 
 class ValidateContributionTests(unittest.TestCase):
+    def test_manual_pull_request_number_skips_closed_pull_requests(self) -> None:
+        def payload(state: str) -> dict[str, object]:
+            return {
+                "number": 7,
+                "state": state,
+                "title": "Add example plugin",
+                "user": {"login": "octocat"},
+                "head": {"ref": "add-plugin", "sha": "a" * 40, "repo": {"full_name": "octocat/awesome-ai-plugins"}},
+                "base": {"ref": "main", "sha": "b" * 40},
+            }
+
+        for state, expected in (("open", [7]), ("closed", [])):
+            with patch.object(MODULE, "github_json", return_value=payload(state)):
+                pull_requests = MODULE.list_open_pull_requests("hashgraph-online/awesome-ai-plugins", 7)
+            self.assertEqual([pull.number for pull in pull_requests], expected)
+
     def test_repository_without_scanner_ci_is_valid_and_enters_scan_matrix(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             matrix_path = Path(directory) / "matrix.json"
@@ -97,6 +114,14 @@ class ValidateContributionTests(unittest.TestCase):
         ):
             with self.assertRaisesRegex(MODULE.ValidationError, "reachable public GitHub repository"):
                 MODULE.ensure_public_github_repository(contribution("missing-plugin"))
+
+    def test_source_default_branch_is_returned_only_when_conservative(self) -> None:
+        for branch, expected in (("main", "main"), ("release/v2", "release/v2"),
+                                 ("../main", None), ("-x", None), ("main?x=1", None), (None, None)):
+            with self.subTest(branch=branch), patch.object(
+                MODULE, "github_json", return_value={"default_branch": branch}
+            ):
+                self.assertEqual(MODULE.ensure_public_github_repository(contribution()), expected)
 
     def test_malformed_readme_change_still_fails(self) -> None:
         head = (
@@ -223,6 +248,71 @@ class ValidateContributionTests(unittest.TestCase):
         self.assertEqual([entry.repo for entry in entries], ["moved-plugin"])
 
 
+    def test_modified_existing_listing_requires_fresh_centralized_scan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Example Plugin](https://github.com/example/plugin) - Version 2.0.1.\n"
+        )
+        head = base.replace("Version 2.0.1.", "Version 2.1.0.")
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0].repo, "plugin")
+        self.assertIn("2.1.0", entries[0].description)
+
+    def test_existing_listing_renamed_requires_fresh_centralized_scan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Old Plugin Name](https://github.com/example/plugin) - Same source.\n"
+        )
+        head = base.replace("[Old Plugin Name]", "[New Plugin Name]")
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+
+        entries = MODULE.get_new_readme_entries_from_diff(diff, base, head)
+
+        self.assertEqual([entry.display_name for entry in entries], ["New Plugin Name"])
+
+    def test_identical_listing_reorder_does_not_rescan(self) -> None:
+        base = (
+            "## Community Plugins\n"
+            "- [Alpha](https://github.com/example/alpha) - Alpha plugin.\n"
+            "- [Beta](https://github.com/example/beta) - Beta plugin.\n"
+        )
+        head = (
+            "## Community Plugins\n"
+            "- [Beta](https://github.com/example/beta) - Beta plugin.\n"
+            "- [Alpha](https://github.com/example/alpha) - Alpha plugin.\n"
+        )
+        diff = "".join(
+            difflib.unified_diff(
+                base.splitlines(keepends=True),
+                head.splitlines(keepends=True),
+                fromfile="README.md",
+                tofile="README.md",
+                n=0,
+            )
+        )
+        self.assertEqual(MODULE.get_new_readme_entries_from_diff(diff, base, head), [])
+
+
 class PublishOpenPrChecksTests(unittest.TestCase):
     def setUp(self) -> None:
         publisher_path = (
@@ -234,7 +324,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         sys.modules[spec.name] = self.publisher
         spec.loader.exec_module(self.publisher)
 
-    def test_check_succeeds_with_missing_ci_and_includes_optional_guidance(self) -> None:
+    def test_passing_score_does_not_recommend_missing_source_ci(self) -> None:
         result = {
             "pr_number": 12,
             "state": "scan",
@@ -244,10 +334,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
             ],
         }
-        conclusion, title, summary = self.publisher.check_summary(result, {12: []})
+        conclusion, title, summary = self.publisher.check_summary(result, {12: ["success"]})
         self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan unavailable")
-        self.assertIn("advisory", summary.lower())
+        self.assertEqual(title, "Centralized score threshold passed")
         comment = self.publisher.remediation_comment(
             result,
             conclusion,
@@ -255,20 +344,14 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertIn("Contribution check passed", comment)
-        self.assertIn("Recommended: add scanner CI for security", comment)
-        self.assertIn("can merge without it", comment)
-        self.assertIn("MCP servers", comment)
-        self.assertIn("skills", comment)
-        self.assertIn("plugins", comment)
-        self.assertIn("recommend including", comment)
-        self.assertIn("full trust score", comment)
-        self.assertIn("10% trust-score reduction", comment)
-        self.assertIn("`example/plugin`", comment)
-        self.assertNotIn("needs updates before it can be merged", comment)
-        self.assertNotIn("must invoke", comment)
+        self.assertTrue(comment.startswith("## ✅ Plugin scan passed"))
+        self.assertIn("cleared the 75-point listing threshold", comment)
+        self.assertNotIn("No score produced", comment)
+        self.assertNotIn("Re-scan after fixing", comment)
+        self.assertIn("Scanner CI is optional for listing", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
 
-    def test_check_succeeds_when_advisory_scan_fails(self) -> None:
+    def test_failed_source_scan_requires_resolution(self) -> None:
         result = {
             "pr_number": 12,
             "state": "scan",
@@ -279,8 +362,9 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             result,
             {12: ["failure"]},
         )
-        self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan findings")
+        self.assertEqual(conclusion, "failure")
+        self.assertEqual(title, "Centralized scan did not pass")
+        self.assertIn("job conclusion alone cannot distinguish", summary)
         self.assertIn("advisory", summary.lower())
         comment = self.publisher.remediation_comment(
             result,
@@ -289,7 +373,35 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             summary,
             "https://example.test/run",
         )
-        self.assertNotIn("needs updates before it can be merged", comment)
+        self.assertTrue(comment.startswith("## ⚠️ Plugin scan did not produce a score"))
+        self.assertIn("A failed job alone does not mean your plugin scored below 75", comment)
+        self.assertIn("Re-scan after fixing", comment)
+        self.assertIn("scan-findings-pr-12-", comment)
+        self.assertNotIn("\n\n\n", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
+
+    def test_low_score_with_missing_ci_gets_conditional_optional_guidance(self) -> None:
+        result = {
+            "pr_number": 12,
+            "state": "scan",
+            "title": "Add example plugin",
+            "author_login": "octocat",
+            "contributions": [
+                {"owner": "example", "repo": "plugin", "scanner_ci": "not_detected"},
+            ],
+        }
+        _conclusion, title, summary = self.publisher.check_summary(result, {12: ["failure"]})
+        comment = self.publisher.remediation_comment(
+            result, "failure", title, summary, "https://example.test/run"
+        )
+
+        self.assertIn("⚠️ No score produced", comment)
+        self.assertIn("Add the scanner to your repository (recommended)", comment)
+        self.assertIn("ai-plugin-scanner-action@", comment)
+        self.assertIn("pipx run --spec plugin-scanner plugin-scanner scan . --min-score 75", comment)
+        self.assertNotIn("/new/", comment)
+        self.assertIn("Scanner CI is optional for listing", comment)
+        self.assertTrue(comment.endswith("\n" + self.publisher.COMMENT_MARKER))
 
     def test_scan_passed_title_is_used_when_jobs_succeed(self) -> None:
         conclusion, title, _summary = self.publisher.check_summary(
@@ -301,7 +413,7 @@ class PublishOpenPrChecksTests(unittest.TestCase):
             {12: ["success", "success"]},
         )
         self.assertEqual(conclusion, "success")
-        self.assertEqual(title, "scan passed")
+        self.assertEqual(title, "Centralized score threshold passed")
 
     def test_comment_updater_replaces_the_prior_marker_comment(self) -> None:
         calls: list[tuple[str, str]] = []
@@ -340,11 +452,15 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertEqual(calls, [("PATCH", "/issues/comments/44")])
         self.assertNotIn(("POST", "/issues/12/comments"), calls)
 
-    def test_comment_is_posted_when_scanner_ci_is_missing(self) -> None:
+    def test_success_posts_one_owner_handoff_comment_for_listing(self) -> None:
         calls: list[tuple[str, str]] = []
+        bodies: list[str] = []
 
         def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
             calls.append((str(kwargs.get("method", "GET")), path))
+            payload = kwargs.get("payload")
+            if isinstance(payload, dict):
+                bodies.append(str(payload.get("body", "")))
             if path == "/issues/12/comments":
                 return {"id": 99}
             return {}
@@ -373,8 +489,10 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 "token",
             )
         self.assertEqual(calls, [("POST", "/issues/12/comments")])
+        self.assertEqual(len(bodies), 1)
+        self.assertIn(self.publisher.HANDOFF_HEADING, bodies[0])
 
-    def test_success_without_missing_ci_does_not_post_a_new_comment(self) -> None:
+    def test_success_without_listing_does_not_post_a_new_comment(self) -> None:
         calls: list[tuple[str, str]] = []
 
         def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
@@ -383,12 +501,10 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         result = {
             "pr_number": 12,
-            "state": "scan",
+            "state": "success",
             "title": "Add example plugin",
             "author_login": "octocat",
-            "contributions": [
-                {"owner": "example", "repo": "plugin", "scanner_ci": "maintained"},
-            ],
+            "contributions": [],
         }
         with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
             self.publisher,
