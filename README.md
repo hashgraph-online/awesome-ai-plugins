@@ -828,6 +828,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
+- [agent-assh](https://github.com/izzzzzi/agent-assh) - SSH workflow CLI and agent skill that runs remote commands in persistent tmux sessions and returns paginated JSON output to keep agent context small.
 - [Agent402](https://github.com/MikeyPetrillo/Agent402) - Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key.
 - [AgentAlarm](https://github.com/achubnet/agentalarm-plugins) - Claude Code and Cursor plugins plus an npm CLI whose hooks alert your iPhone when an agent finishes or needs a decision, with a remote OAuth MCP server for reminders and urgent alerts that ring like an alarm clock.
 - [AgentBadge MCP](https://github.com/spreadzp/agentbadge-mcp) - Verify agents, check trust scores, and pay for services with x402 — ERC-8004 identity on Arc via MCP.
