@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-09",
-  "total": 1277,
+  "total": 1287,
   "platforms": [
     "codex",
     "grok",
@@ -2156,6 +2156,20 @@
       ]
     },
     {
+      "name": "Smart Glasses Skills",
+      "url": "https://github.com/hinty-eu/smart-glasses-skills",
+      "owner": "hinty-eu",
+      "repo": "smart-glasses-skills",
+      "description": "Agent skills for building apps on smart glasses from any brand (Even Realities G2, Meta Ray-Ban Display, Rokid, Vuzix Z100, audio-only and USB-C display glasses): choose a target, get text onto the display, handle input and audio, test without hardware, and check what can be published today.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hinty-eu/smart-glasses-skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Sno Station Skills",
       "url": "https://github.com/sno-ai/sno-station-skills",
       "owner": "sno-ai",
@@ -2739,6 +2753,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/kubec/abuzzhive.com/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AdMakeAI",
+      "url": "https://github.com/mesmerlord/admakeai-claude-plugin",
+      "owner": "mesmerlord",
+      "repo": "admakeai-claude-plugin",
+      "description": "Design ad images, UGC-style video ads and ad copy for your brand, look up the ads any brand runs in the Meta Ad Library, and prepare Meta campaign drafts through AdMakeAI's hosted MCP server and one skill, with browser sign-in and designs paid from account credits.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mesmerlord/admakeai-claude-plugin/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -3740,6 +3768,22 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "Fair Value Calculator",
+      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
+      "owner": "petz00711",
+      "repo": "fair-value-calculator-mcp",
+      "description": "Fair value, quality score, uptrend and the three buy rules for 40,000+ stocks, plus your watchlist and alerts, through the hosted Fair Value Calculator MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/petz00711/fair-value-calculator-mcp/HEAD/plugins/fair-value-calculator/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme"
     },
     {
       "name": "Fantasy Football Manager",
@@ -5718,6 +5762,20 @@
       ]
     },
     {
+      "name": "Competitive Skills by LMTY",
+      "url": "https://github.com/LMTYdotcom/skills",
+      "owner": "LMTYdotcom",
+      "repo": "skills",
+      "description": "Sixteen Agent Skills for founders and go-to-market teams who sell against competitors: research competitors, answer \"how are you different from X?\", prep competitive deals, build battlecards, analyze wins and losses, and pressure-test positioning, messaging, and pricing; they run standalone, and with the LMTY MCP server connected each one starts from your tracked competitors, what changed and when, and the source behind every finding",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/LMTYdotcom/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "conventional-commits-framework",
       "url": "https://github.com/YourAKShaw/conventional-commits-framework",
       "owner": "YourAKShaw",
@@ -6091,6 +6149,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/wellwelwel/lagune#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "LogBrew",
+      "url": "https://github.com/LogBrewCo/skills",
+      "owner": "LogBrewCo",
+      "repo": "skills",
+      "description": "Agent skills that let any AI agent read your production errors, logs, and traces in LogBrew to find why something broke, add error monitoring to an app, and check each release",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/LogBrewCo/skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6701,11 +6773,7 @@
       "description": "Stop hook for Claude Code and Codex that sends an agent back once if its last test run failed and its final message does not say so",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/rogermas05/agent-recap/HEAD/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
+      "installation_url": "https://github.com/rogermas05/agent-recap#readme"
     },
     {
       "name": "agent-rules",
@@ -11982,6 +12050,20 @@
       ]
     },
     {
+      "name": "tonone",
+      "url": "https://github.com/tonone-ai/tonone",
+      "owner": "tonone-ai",
+      "repo": "tonone",
+      "description": "Claude Code plugin where /apex-plan scopes an engineering build into depth tiers with specialists and token costs, then runs the one you pick, backed by 140 specialist agents that scope, build, audit, and document work",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/tonone-ai/tonone/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "trace-mcp",
       "url": "https://github.com/nikolai-vysotskyi/trace-mcp",
       "owner": "nikolai-vysotskyi",
@@ -12853,6 +12935,20 @@
       "installation_url": "https://github.com/doomsday-network/bounty-guard#readme"
     },
     {
+      "name": "Brilliant Directories MCP",
+      "url": "https://github.com/brilliantdirectories/brilliant-directories-mcp",
+      "owner": "brilliantdirectories",
+      "repo": "brilliant-directories-mcp",
+      "description": "MCP server: manage Brilliant Directories directory and membership websites (members, leads, posts, pages, reviews, forms and menus) through the site's REST API, hosted or installed from npm",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/brilliantdirectories/brilliant-directories-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "BulkPublish",
       "url": "https://github.com/azeemkafridi/bulkpublish-ai-toolkit",
       "owner": "azeemkafridi",
@@ -13165,6 +13261,20 @@
       ]
     },
     {
+      "name": "Compartment",
+      "url": "https://github.com/MaxFreedomPollard/Compartment",
+      "owner": "MaxFreedomPollard",
+      "repo": "Compartment",
+      "description": "MCP server: encrypted, fully offline long-term memory for AI agents with XChaCha20-Poly1305 encryption at rest, Argon2id keyslots, a hash-chained audit log, and hybrid vector and keyword recall",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/MaxFreedomPollard/Compartment#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "ConnectMachine",
       "url": "https://github.com/connectmachine/claude-plugin",
       "owner": "connectmachine",
@@ -13287,7 +13397,7 @@
       "url": "https://github.com/waynehamadi/datacircle-plugin",
       "owner": "waynehamadi",
       "repo": "datacircle-plugin",
-      "description": "MCP server: find the best GTM APIs. We benchmark all the GTM APIs and we put the results on our website",
+      "description": "MCP server: find the best GTM APIs. We benchmark all the GTM APIs and we put the results on our website. [datacircle.dev](https://datacircle.dev)",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -13511,20 +13621,6 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
-      ]
-    },
-    {
-      "name": "Fair Value Calculator",
-      "url": "https://github.com/petz00711/fair-value-calculator-mcp",
-      "owner": "petz00711",
-      "repo": "fair-value-calculator-mcp",
-      "description": "MCP server: proprietary hosted stock-valuation service with daily fair-value and quality estimates, OAuth, and Claude Code, Cursor and Gemini CLI install files; free account with paid full-access plans",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "installation_url": "https://github.com/petz00711/fair-value-calculator-mcp#readme",
-      "ecosystems": [
-        "mcp"
       ]
     },
     {
@@ -15012,6 +15108,20 @@
       ]
     },
     {
+      "name": "Panda Greetings",
+      "url": "https://github.com/Gerti05/panda-greetings-mcp",
+      "owner": "Gerti05",
+      "repo": "panda-greetings-mcp",
+      "description": "MCP server: shows ready-made greeting card designs for an occasion with your card message already inside, each opening on pandagreetings.com to order as a printed card mailed in the US or a group card; hosted, read-only, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Gerti05/panda-greetings-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "ParlayAPI",
       "url": "https://github.com/JacobiusMakes/parlay-api-mcp",
       "owner": "JacobiusMakes",
@@ -15638,6 +15748,34 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Soku CLI",
+      "url": "https://github.com/About-Intelligence/soku-cli",
+      "owner": "About-Intelligence",
+      "repo": "soku-cli",
+      "description": "Claude Code, Codex and Cursor plugin and CLI that lets coding agents read Google, Meta, TikTok and ChatGPT Ads, GA4 and PostHog data through a Soku workspace and prepare campaign changes that run only after a person approves them",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/About-Intelligence/soku-cli/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "spanish-top-tech-companies",
+      "url": "https://github.com/pugarte7/spanish-top-tech-companies",
+      "owner": "pugarte7",
+      "repo": "spanish-top-tech-companies",
+      "description": "MCP server: salaries at tech companies in Spain from Levels.fyi, by company, role, region and experience, plus the open postings at those companies for an agent to search and apply to, hosted with no sign-in",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/pugarte7/spanish-top-tech-companies#readme",
       "ecosystems": [
         "mcp"
       ]
