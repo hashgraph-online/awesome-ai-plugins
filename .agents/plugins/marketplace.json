@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-08",
+  "last_updated": "2026-11-09",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -6075,6 +6075,21 @@
       "installation_url": "https://github.com/Jeffallan/claude-skills#readme"
     },
     {
+      "name": "Coacus",
+      "displayName": "Coacus",
+      "description": "Cross-harness collection of agent skills, agents, and workflows with filtered installation and discovery tooling",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "dandgabr",
+      "repo": "Coacus",
+      "url": "https://github.com/dandgabr/Coacus",
+      "installation_url": "https://github.com/dandgabr/Coacus#readme"
+    },
+    {
       "name": "CoMPaSS Prompt Framework",
       "displayName": "CoMPaSS Prompt Framework",
       "description": "Agent skill for analysis-first prompting that clarifies intention, assembles consequential prompts from explicit components, and verifies their success criteria",
@@ -6163,6 +6178,21 @@
       "repo": "skills",
       "url": "https://github.com/heydeacon/skills",
       "installation_url": "https://github.com/heydeacon/skills#readme"
+    },
+    {
+      "name": "design-intelligence",
+      "displayName": "design-intelligence",
+      "description": "Helps AI agents understand your product and users first, then design UI with a direction that fits them, not a generic template",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ryuxdsgn",
+      "repo": "design-intelligence",
+      "url": "https://github.com/ryuxdsgn/design-intelligence",
+      "installation_url": "https://github.com/ryuxdsgn/design-intelligence#readme"
     },
     {
       "name": "devops-mock-interview",
@@ -6343,6 +6373,21 @@
       "repo": "humanizer-lint",
       "url": "https://github.com/yanstd888/humanizer-lint",
       "installation_url": "https://github.com/yanstd888/humanizer-lint#readme"
+    },
+    {
+      "name": "idea-to-motion",
+      "displayName": "idea-to-motion",
+      "description": "Agent skill that turns any idea into a motion-design video (MP4) with procedural music, synthesised sound effects and an optional local voice-over with captions; asks up to 3 questions only when the brief is incomplete, 14 styles, rendered locally with HyperFrames, no API key",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "georgesmomo",
+      "repo": "idea-to-motion",
+      "url": "https://github.com/georgesmomo/idea-to-motion",
+      "installation_url": "https://github.com/georgesmomo/idea-to-motion#readme"
     },
     {
       "name": "image-use",
@@ -6793,6 +6838,21 @@
       "repo": "skills",
       "url": "https://github.com/mouadja02/skills",
       "installation_url": "https://github.com/mouadja02/skills#readme"
+    },
+    {
+      "name": "tech-to-motion",
+      "displayName": "tech-to-motion",
+      "description": "Agent skill that turns real technical sources (docker-compose, Kubernetes, Terraform, CI workflows, postmortems) into a motion-design explainer video with animated architecture diagrams and synthesised sound effects, rendered locally with HyperFrames",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "georgesmomo",
+      "repo": "tech-to-motion",
+      "url": "https://github.com/georgesmomo/tech-to-motion",
+      "installation_url": "https://github.com/georgesmomo/tech-to-motion#readme"
     },
     {
       "name": "uCoz",
@@ -15552,10 +15612,14 @@
       "description": "Wrap an AI agent's tools so every call is authorized, signed and audited outside the agent's process, and a refused call never runs",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
       "owner": "Metamynd",
       "repo": "agentsafe-guard",
       "url": "https://github.com/Metamynd/agentsafe-guard",
-      "installation_url": "https://github.com/Metamynd/agentsafe-guard#readme"
+      "install_url": "https://raw.githubusercontent.com/Metamynd/agentsafe-guard/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "MetaMynd MCP Gateway \u2013 AI Agent Security & Governance",
@@ -15578,10 +15642,14 @@
       "description": "Proof of concept for MetaMynd authorization middleware in NVIDIA OpenShell, demonstrated with a governed purchasing flow",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
       "owner": "Metamynd",
       "repo": "openshell-integration",
       "url": "https://github.com/Metamynd/openshell-integration",
-      "installation_url": "https://github.com/Metamynd/openshell-integration#readme"
+      "install_url": "https://raw.githubusercontent.com/Metamynd/openshell-integration/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Mimi Seed",
@@ -15858,6 +15926,20 @@
       "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Openbar",
+      "displayName": "Openbar",
+      "description": "Mac and Windows notch app that shows Claude Code and Codex sessions and lets you approve, answer and reply to them from there",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "MF-DEEV",
+      "repo": "Openbar",
+      "url": "https://github.com/MF-DEEV/Openbar"
+    },
+    {
       "name": "openclaw-napcat-plugin",
       "displayName": "openclaw-napcat-plugin",
       "description": "OpenClaw channel plugin that bridges QQ private and group chats via NapCat OneBot 11, sending text, images, voice and group files",
@@ -16019,6 +16101,21 @@
       "repo": "oxidized-mcp",
       "url": "https://github.com/mhajder/oxidized-mcp",
       "installation_url": "https://github.com/mhajder/oxidized-mcp#readme"
+    },
+    {
+      "name": "Oya Browser",
+      "displayName": "Oya Browser",
+      "description": "MCP server, agent skill and desktop browser that give agents real signed-in browsers: start_browser, analyze_page, click and type, several agents each in their own tab beside the person, and model-free replay of recorded workflows",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "OyadotAI",
+      "repo": "oya-browser",
+      "url": "https://github.com/OyadotAI/oya-browser",
+      "install_url": "https://raw.githubusercontent.com/OyadotAI/oya-browser/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "ParlayAPI",
@@ -16944,6 +17041,17 @@
       "install_url": "https://raw.githubusercontent.com/GrinZero/tripo-studio-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "TweetClaw",
+      "displayName": "TweetClaw",
+      "description": "OpenClaw plugin that adds Twitter search, follower exports, account monitoring, media, and approval-gated X actions to an agent",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "Xquik-dev",
+      "repo": "tweetclaw",
+      "url": "https://github.com/Xquik-dev/tweetclaw",
+      "installation_url": "https://github.com/Xquik-dev/tweetclaw#readme"
+    },
+    {
       "name": "UberLLM",
       "displayName": "UberLLM",
       "description": "Claude Code and Codex plugin with a hosted MCP server and a setup skill that let an agent make images and videos, check model prices and balance, and run on one OpenAI- and Anthropic-compatible UberLLM API key (prepaid, key required)",
@@ -17695,6 +17803,20 @@
       "owner": "FeatherHunter",
       "repo": "dsh-prompt",
       "url": "https://github.com/FeatherHunter/dsh-prompt"
+    },
+    {
+      "name": "dsh-pstack",
+      "displayName": "dsh-pstack",
+      "description": "Plugin that ports pstack's skills, playbooks, and subagent role routing to DeepSeek Harness",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "l246804",
+      "repo": "dsh-pstack",
+      "url": "https://github.com/l246804/dsh-pstack"
     },
     {
       "name": "dsh-skills-tools",
