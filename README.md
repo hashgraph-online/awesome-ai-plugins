@@ -419,6 +419,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [dryforge](https://github.com/prekuter/dryforge) - Intent to implementation: ready, then go.
 - [dsh-product-subagent-console](https://github.com/Jokasa7/dsh-product-subagent-console) - Designs multi-Agent plans, observes real child-session trees, compares approved tasks with runtime attempts, and prepares evidence-backed recovery inside DeepSeek Harness conversations.
 - [dsh-whale-musume](https://github.com/Sutera-Diffusus/dsh-whale-musume) - Whale-girl desktop pet for the DSH Web UI with pat-to-raise growth, work-state poses, 494 dialogue lines, 30 achievements and a built-in settings panel; local-first, zero telemetry.
+- [easi.run](https://github.com/julianosig/easi.run) - Self-hosted Chrome for AI agents via MCP or REST, with live human handoff.
 - [Easy-MCP](https://github.com/Mark007-R/Easy-MCP) - Turns plain Python functions into secure MCP servers, with ready-made read-only GitHub and Postgres servers installable in one command.
 - [EditLens](https://github.com/mymotomaker-ai/EditLens) - EditLens highlights each Claude edit on the page you're building, with its file and line, and shows Claude's chat and code beside it.
 - [effect-actions](https://github.com/gjermundgaraba/effect-actions) - Agent skill and Effect library for defining a typed action once and serving it over HTTP, as MCP tools, as an AI Toolkit, and from a CLI.
