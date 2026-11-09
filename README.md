@@ -1097,6 +1097,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Overleaf LaTeX](https://github.com/MarcoDotIO/overleaf-latex) - Local MCP/Codex plugin for creating and editing Overleaf projects.
 - [Oxidized MCP Server](https://github.com/mhajder/oxidized-mcp) - MCP server for searching, comparing and backing up network device configurations stored in Oxidized.
 - [Oya Browser](https://github.com/OyadotAI/oya-browser) - MCP server, agent skill and desktop browser that give agents real signed-in browsers: start_browser, analyze_page, click and type, several agents each in their own tab beside the person, and model-free replay of recorded workflows.
+- [Panda Greetings](https://github.com/Gerti05/panda-greetings-mcp) - MCP server: shows ready-made greeting card designs for an occasion with your card message already inside, each opening on pandagreetings.com to order as a printed card mailed in the US or a group card; hosted, read-only, no API key.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
 - [ParlayAPI](https://github.com/JacobiusMakes/parlay-api-mcp) - Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances.
