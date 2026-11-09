@@ -54,6 +54,22 @@ jobs:
 
 
 class ValidateContributionTests(unittest.TestCase):
+    def test_manual_pull_request_number_skips_closed_pull_requests(self) -> None:
+        def payload(state: str) -> dict[str, object]:
+            return {
+                "number": 7,
+                "state": state,
+                "title": "Add example plugin",
+                "user": {"login": "octocat"},
+                "head": {"ref": "add-plugin", "sha": "a" * 40, "repo": {"full_name": "octocat/awesome-ai-plugins"}},
+                "base": {"ref": "main", "sha": "b" * 40},
+            }
+
+        for state, expected in (("open", [7]), ("closed", [])):
+            with patch.object(MODULE, "github_json", return_value=payload(state)):
+                pull_requests = MODULE.list_open_pull_requests("hashgraph-online/awesome-ai-plugins", 7)
+            self.assertEqual([pull.number for pull in pull_requests], expected)
+
     def test_repository_without_scanner_ci_is_valid_and_enters_scan_matrix(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             matrix_path = Path(directory) / "matrix.json"
@@ -436,11 +452,15 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertEqual(calls, [("PATCH", "/issues/comments/44")])
         self.assertNotIn(("POST", "/issues/12/comments"), calls)
 
-    def test_success_does_not_post_comment_for_missing_scanner_ci(self) -> None:
+    def test_success_posts_one_owner_handoff_comment_for_listing(self) -> None:
         calls: list[tuple[str, str]] = []
+        bodies: list[str] = []
 
         def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
             calls.append((str(kwargs.get("method", "GET")), path))
+            payload = kwargs.get("payload")
+            if isinstance(payload, dict):
+                bodies.append(str(payload.get("body", "")))
             if path == "/issues/12/comments":
                 return {"id": 99}
             return {}
@@ -468,9 +488,11 @@ class PublishOpenPrChecksTests(unittest.TestCase):
                 "https://example.test/run",
                 "token",
             )
-        self.assertEqual(calls, [])
+        self.assertEqual(calls, [("POST", "/issues/12/comments")])
+        self.assertEqual(len(bodies), 1)
+        self.assertIn(self.publisher.HANDOFF_HEADING, bodies[0])
 
-    def test_success_without_missing_ci_does_not_post_a_new_comment(self) -> None:
+    def test_success_without_listing_does_not_post_a_new_comment(self) -> None:
         calls: list[tuple[str, str]] = []
 
         def fake_github_api(_repository: str, path: str, _token: str, **kwargs: object) -> object:
@@ -479,12 +501,10 @@ class PublishOpenPrChecksTests(unittest.TestCase):
 
         result = {
             "pr_number": 12,
-            "state": "scan",
+            "state": "success",
             "title": "Add example plugin",
             "author_login": "octocat",
-            "contributions": [
-                {"owner": "example", "repo": "plugin", "scanner_ci": "maintained"},
-            ],
+            "contributions": [],
         }
         with patch.object(self.publisher, "github_api", side_effect=fake_github_api), patch.object(
             self.publisher,

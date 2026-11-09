@@ -1,7 +1,9 @@
 import importlib.util
+import io
 import json
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
 
@@ -114,10 +116,26 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         responses = [
             {"jobs": []},
             {"jobs": [{"id": 7, "run_attempt": 1, "name": "Scan PR (411, owner, plugin)", "conclusion": "success"}]},
+            {"state": "open"},
         ]
         with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, patch("time.sleep"):
             self.assertEqual(MODULE.main(), 0)
         self.assertEqual(publish.call_args.args[2], {411: ["success"]})
+
+    def test_publisher_skips_pull_request_closed_during_the_sweep(self):
+        result = {"pr_number": 411, "state": "success", "contributions": []}
+        env = {
+            "GITHUB_REPOSITORY": "example/repo",
+            "GITHUB_TOKEN": "test-token",
+            "GITHUB_RUN_ID": "1",
+            "SWEEP_RUN_URL": "https://github.com/example/repo/actions/runs/1",
+            "OPEN_PR_RESULTS": json.dumps([result]),
+        }
+        responses = [{"jobs": []}, {"state": "closed", "merged": False, "merged_at": None}]
+        with patch.dict(MODULE.os.environ, env, clear=True), patch.object(MODULE, "github_api", side_effect=responses), patch.object(MODULE, "publish_check") as publish, redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(MODULE.main(), 0)
+        publish.assert_not_called()
+        self.assertIn("Skipped PR #411", output.getvalue())
 
     def test_waits_for_scanner_job_to_appear(self):
         responses = [
@@ -444,6 +462,111 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("| Severity | Rule | Hits | How to fix |", output["summary"])
         self.assertNotIn(MODULE.COMMENT_MARKER, output["summary"])
         upsert.assert_called_once()
+
+    def test_open_listing_comment_hands_owner_next_steps_to_agents(self):
+        body = self.render(self.scan_result(), "success", [self.scan_report(score=88, findings=[])])
+
+        self.assertIn(MODULE.HANDOFF_HEADING, body)
+        self.assertIn("once this pull request merges", body)
+        self.assertIn("https://hol.org/guard/plugins?claim=owner%2Fplugin&utm_source=github&utm_medium=pr_comment"
+                      "&utm_campaign=agent_handoff&utm_content=pr_open", body)
+        self.assertIn("https://hol.org/checkmark?utm_source=github", body)
+        self.assertIn("**Optional, paid:**", body)
+        self.assertIn(MODULE.HANDOFF_PAID_NOTE, body)
+        self.assertLess(body.index(MODULE.HANDOFF_HEADING), body.index(MODULE.COMMENT_MARKER))
+
+    def test_failed_listing_still_hands_off_after_fix_instructions(self):
+        body = self.render(self.scan_result(), "failure", [self.scan_report()])
+
+        self.assertLess(body.index("git commit --allow-empty"), body.index(MODULE.HANDOFF_HEADING))
+
+    def test_handoff_follows_pull_request_state(self):
+        merged = self.render({**self.scan_result(), "pr_state": "merged"}, "success",
+                             [self.scan_report(score=88, findings=[])])
+        self.assertIn("**Claim the listing** (now)", merged)
+
+        closed = self.render({**self.scan_result(), "pr_state": "closed"}, "failure", [self.scan_report()])
+        self.assertNotIn(MODULE.HANDOFF_HEADING, closed)
+        self.assertNotIn("agent_handoff", closed)
+
+    def test_check_run_handoff_links_are_tagged_as_check_summary(self):
+        published = []
+
+        def fake_github_api(_repository, path, _token, *, method="GET", payload=None):
+            if path.startswith("/commits/"):
+                return {"check_runs": []}
+            if path == "/check-runs":
+                published.append(payload)
+            return {}
+
+        result = self.scan_result()
+        result.update({"head_sha": "a" * 40, "title": "Add example plugin", "failure_reasons": []})
+        with patch.object(MODULE, "github_api", side_effect=fake_github_api), patch.object(
+            MODULE, "upsert_remediation_comment"
+        ):
+            MODULE.publish_check("example/repo", result, {411: ["success"]},
+                                 "https://github.com/example/repo/actions/runs/1", "token",
+                                 reports={411: [self.scan_report(score=88, findings=[])]})
+
+        summary = published[0]["output"]["summary"]
+        self.assertIn(MODULE.HANDOFF_HEADING, summary)
+        self.assertIn("utm_medium=check_run&utm_campaign=agent_handoff&utm_content=check_summary", summary)
+        self.assertNotIn("utm_content=pr_open", summary)
+
+    def test_passing_listing_posts_one_comment_but_other_passing_prs_stay_quiet(self):
+        calls = []
+
+        def fake_github_api(_repository, path, _token, *, method="GET", payload=None):
+            calls.append((method, path))
+            return []
+
+        listing = {**self.scan_result(), "pr_number": 411}
+        other = {"pr_number": 412, "state": "no_entries", "author_login": "builder"}
+        with patch.object(MODULE, "github_api", side_effect=fake_github_api):
+            MODULE.upsert_remediation_comment("example/repo", listing, "success", "t", "s",
+                                              "https://github.com/example/repo/actions/runs/1", "token",
+                                              [self.scan_report(score=88, findings=[])])
+            MODULE.upsert_remediation_comment("example/repo", other, "success", "t", "s",
+                                              "https://github.com/example/repo/actions/runs/1", "token")
+
+        posts = [path for method, path in calls if method == "POST"]
+        self.assertEqual(posts, ["/issues/411/comments"])
+
+    def test_contributor_docs_carry_the_same_handoff(self):
+        root = Path(__file__).resolve().parents[1]
+        for name in ("AGENTS.md", "CONTRIBUTING.md", ".agents/skills/list-my-plugin/SKILL.md"):
+            with self.subTest(name=name):
+                text = (root / name).read_text(encoding="utf-8")
+                self.assertIn(MODULE.HANDOFF_HEADING, text)
+                self.assertIn(MODULE.HANDOFF_PAID_NOTE, text)
+                self.assertIn("utm_campaign=agent_handoff", text)
+
+class PullRequestStillOpenTests(unittest.TestCase):
+    def check(self, pull: object) -> tuple[bool, dict[str, object]]:
+        result: dict[str, object] = {"pr_number": 7, "state": "scan"}
+        side_effect = pull if isinstance(pull, Exception) else None
+        with patch.object(MODULE, "github_api", return_value=pull, side_effect=side_effect):
+            return MODULE.pull_request_still_open("hashgraph-online/awesome-ai-plugins", result, "token"), result
+
+    def test_open_pull_request_is_published_unchanged(self) -> None:
+        self.assertEqual(self.check({"state": "open"}), (True, {"pr_number": 7, "state": "scan"}))
+
+    def test_pull_request_merged_since_discovery_is_published_as_merged(self) -> None:
+        published, result = self.check({"state": "closed", "merged": True, "merged_at": "2026-11-04T17:55:42Z"})
+        self.assertTrue(published)
+        self.assertEqual(result["pr_state"], "merged")
+
+    def test_pull_request_closed_since_discovery_is_skipped(self) -> None:
+        with redirect_stdout(io.StringIO()):
+            published, result = self.check({"state": "closed", "merged": False, "merged_at": None})
+        self.assertFalse(published)
+        self.assertNotIn("pr_state", result)
+
+    def test_failed_lookup_keeps_publishing_and_says_so(self) -> None:
+        with redirect_stderr(io.StringIO()) as errors:
+            self.assertTrue(self.check(RuntimeError("GitHub API GET failed"))[0])
+        self.assertIn("Could not re-check PR #7", errors.getvalue())
+
 
 if __name__ == "__main__":
     unittest.main()
