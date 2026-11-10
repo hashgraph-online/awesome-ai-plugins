@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-10",
-  "total": 1293,
+  "total": 1298,
   "platforms": [
     "codex",
     "grok",
@@ -6616,6 +6616,20 @@
       ]
     },
     {
+      "name": "whatishipped",
+      "url": "https://github.com/selan-ai/whatishipped",
+      "owner": "selan-ai",
+      "repo": "whatishipped",
+      "description": "A Claude Code skill that recreates a mobile app's UI as it ships: every screen, state, component and journey of an iOS or Android app, drawn from its code and checked against the app's own screenshots",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/selan-ai/whatishipped#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "writing-with-agents",
       "url": "https://github.com/Jeffallan/writing-with-agents",
       "owner": "Jeffallan",
@@ -9274,6 +9288,20 @@
       ]
     },
     {
+      "name": "Ironheights",
+      "url": "https://github.com/Frank-Masciopinto/ironheights",
+      "owner": "Frank-Masciopinto",
+      "repo": "ironheights",
+      "description": "MCP server: local, rule-based pre-install scanner that grades agent skills (OpenClaw, Claude Code, Codex, Cursor) A-F for prompt injection, credential reads, remote-exec installs and persistence, with integrity pinning and drift checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Frank-Masciopinto/ironheights#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Janus",
       "url": "https://github.com/RamitVishwakarma/Janus",
       "owner": "RamitVishwakarma",
@@ -10382,6 +10410,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "open-plan-annotator",
+      "url": "https://github.com/ndom91/open-plan-annotator",
+      "owner": "ndom91",
+      "repo": "open-plan-annotator",
+      "description": "Local plugin that intercepts agent plan mode and opens a browser annotation UI for reviewing and revising plans",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ndom91/open-plan-annotator/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -14293,6 +14335,19 @@
       ]
     },
     {
+      "name": "Jori",
+      "url": "https://github.com/jori-ai/jori",
+      "owner": "jori-ai",
+      "repo": "jori",
+      "description": "Personal AI assistant that runs your errands, home and money on your own Mac, with per-action Face ID approval for anything consequential",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "JVM Pulse",
       "url": "https://github.com/brunoborges/jvm-pulse",
       "owner": "brunoborges",
@@ -16697,6 +16752,19 @@
       "owner": "hxlog",
       "repo": "dsh-mcp-tools",
       "description": "MCP server manager for the DeepSeek Harness settings page: add streamable-HTTP or stdio MCP servers, paste Postman-style request headers, test connectivity, and toggle individual MCP tools so disabled ones never reach the model",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-mobile",
+      "url": "https://github.com/saya-ch/dsh-mobile",
+      "owner": "saya-ch",
+      "repo": "dsh-mobile",
+      "description": "DeepSeek Harness plugin with a companion Android app that lets a paired phone or browser continue the computer's sessions and workspaces over LAN or a remote tunnel",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",

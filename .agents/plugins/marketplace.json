@@ -7067,6 +7067,21 @@
       "installation_url": "https://github.com/trussary/vietnamese-language-skill#readme"
     },
     {
+      "name": "whatishipped",
+      "displayName": "whatishipped",
+      "description": "A Claude Code skill that recreates a mobile app's UI as it ships: every screen, state, component and journey of an iOS or Android app, drawn from its code and checked against the app's own screenshots",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "selan-ai",
+      "repo": "whatishipped",
+      "url": "https://github.com/selan-ai/whatishipped",
+      "installation_url": "https://github.com/selan-ai/whatishipped#readme"
+    },
+    {
       "name": "writing-with-agents",
       "displayName": "writing-with-agents",
       "description": "Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy",
@@ -9932,6 +9947,21 @@
       "install_url": "https://raw.githubusercontent.com/intersystems-community/iris-agentic-dev/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Ironheights",
+      "displayName": "Ironheights",
+      "description": "MCP server: local, rule-based pre-install scanner that grades agent skills (OpenClaw, Claude Code, Codex, Cursor) A-F for prompt injection, credential reads, remote-exec installs and persistence, with integrity pinning and drift checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Frank-Masciopinto",
+      "repo": "ironheights",
+      "url": "https://github.com/Frank-Masciopinto/ironheights",
+      "installation_url": "https://github.com/Frank-Masciopinto/ironheights#readme"
+    },
+    {
       "name": "Janus",
       "displayName": "Janus",
       "description": "macOS menu bar app that saves each Claude Code account's session so switching between accounts is one click, and reclaims disk space by measuring developer caches and moving them to the Trash",
@@ -11127,6 +11157,21 @@
       "repo": "open-pr",
       "url": "https://github.com/TOMOSIA-VIETNAM/open-pr",
       "install_url": "https://raw.githubusercontent.com/TOMOSIA-VIETNAM/open-pr/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "open-plan-annotator",
+      "displayName": "open-plan-annotator",
+      "description": "Local plugin that intercepts agent plan mode and opens a browser annotation UI for reviewing and revising plans",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ndom91",
+      "repo": "open-plan-annotator",
+      "url": "https://github.com/ndom91/open-plan-annotator",
+      "install_url": "https://raw.githubusercontent.com/ndom91/open-plan-annotator/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "openclaw-otel-observability",
@@ -15341,6 +15386,20 @@
       "url": "https://github.com/dzhng/jevgrep"
     },
     {
+      "name": "Jori",
+      "displayName": "Jori",
+      "description": "Personal AI assistant that runs your errands, home and money on your own Mac, with per-action Face ID approval for anything consequential",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "jori-ai",
+      "repo": "jori",
+      "url": "https://github.com/jori-ai/jori"
+    },
+    {
       "name": "JVM Pulse",
       "displayName": "JVM Pulse",
       "description": "Claude Code plugin and GitHub Copilot canvas extension for profiling Java garbage collection and JFR telemetry, with a portable CLI and shareable HTML reports",
@@ -17938,6 +17997,34 @@
       "owner": "hxlog",
       "repo": "dsh-mcp-tools",
       "url": "https://github.com/hxlog/dsh-mcp-tools"
+    },
+    {
+      "name": "dsh-mobile",
+      "displayName": "dsh-mobile",
+      "description": "DeepSeek Harness plugin with a companion Android app that lets a paired phone or browser continue the computer's sessions and workspaces over LAN or a remote tunnel",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "saya-ch",
+      "repo": "dsh-mobile",
+      "url": "https://github.com/saya-ch/dsh-mobile"
+    },
+    {
+      "name": "dsh-music-player",
+      "displayName": "dsh-music-player",
+      "description": "DeepSeek Harness plugin that streams local music, online music, radio, AI-narrated audiobooks, and daily news briefs inside the agent web UI",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "kendu76",
+      "repo": "dsh-music-player",
+      "url": "https://github.com/kendu76/dsh-music-player"
     },
     {
       "name": "dsh-oh-my-claude",
