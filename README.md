@@ -217,6 +217,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [video-to-blender](https://github.com/gokayfem/video-to-blender) - Coding-agent skill that builds procedural Blender Geometry, Shader and compositor node graphs from Python with a tested node-group library and validation tools.
 - [vietnamese-language-skill](https://github.com/trussary/vietnamese-language-skill) - Collection of agent skills that fix Vietnamese register, terminology, and locale formatting across landing pages, docs, marketing, finance, and education, with a standalone validator.
 - [Webly](https://github.com/Webly-AI/webly-plugin) - Agent skill and hosted MCP server that publish a website or share files and folders at a live URL in seconds with no account, then let the person claim it, edit it over MCP, and publish drafts they approve, also packaged as Claude Code, Codex, Cursor, and Gemini CLI plugins.
+- [whatishipped](https://github.com/selan-ai/whatishipped) - A Claude Code skill that recreates a mobile app's UI as it ships: every screen, state, component and journey of an iOS or Android app, drawn from its code and checked against the app's own screenshots.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
 
 ### Development & Workflow
