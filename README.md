@@ -823,6 +823,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 
 - [10ML Perfume Finder](https://github.com/10ml-com/perfume-finder-mcp) - MCP server: the 10ML Fragrance Index for AI assistants, with perfume notes, accords, families, similar scents and expert guides; free, no API key.
 - [actual-budget-mcp](https://github.com/henfrydls/actual-budget-mcp) - MCP server: ask your Actual Budget where the money went, and record transactions, transfers and budget moves from any MCP client, with duplicate checks before anything is written.
+- [adsctl](https://github.com/imrenagicom/adsctl) - Plugin bundling three agent skills that drive a CLI for auditing, monitoring, and managing Meta ad campaigns with explicit account scope.
 - [affine-mcp-server](https://github.com/DAWNCR0W/affine-mcp-server) - MCP server exposing AFFiNE workspaces, documents, and databases to AI clients over stdio or HTTP.
 - [Agent Face](https://github.com/ericphamhoangdev/agent-face-skills) - Agent skills that give a coding agent a small always-on-top desktop face showing its state (working, thinking, happy, stuck) with captions and lip-synced voice clips.
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
