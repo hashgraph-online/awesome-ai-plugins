@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-10",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -6137,6 +6137,21 @@
       "installation_url": "https://github.com/Jeffallan/claude-skills#readme"
     },
     {
+      "name": "claudemy",
+      "displayName": "claudemy",
+      "description": "Claude Code skill that researches a named topic on the web and builds a course of 2-minute audio lessons with citations",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "assafkip",
+      "repo": "claudemy",
+      "url": "https://github.com/assafkip/claudemy",
+      "installation_url": "https://github.com/assafkip/claudemy#readme"
+    },
+    {
       "name": "Coacus",
       "displayName": "Coacus",
       "description": "Cross-harness collection of agent skills, agents, and workflows with filtered installation and discovery tooling",
@@ -8999,6 +9014,17 @@
       "installation_url": "https://github.com/Sutera-Diffusus/dsh-whale-musume#readme"
     },
     {
+      "name": "easi.run",
+      "displayName": "easi.run",
+      "description": "Self-hosted Chrome for AI agents via MCP or REST, with live human handoff",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "julianosig",
+      "repo": "easi.run",
+      "url": "https://github.com/julianosig/easi.run",
+      "installation_url": "https://github.com/julianosig/easi.run#readme"
+    },
+    {
       "name": "Easy-MCP",
       "displayName": "Easy-MCP",
       "description": "Turns plain Python functions into secure MCP servers, with ready-made read-only GitHub and Postgres servers installable in one command",
@@ -9391,6 +9417,21 @@
       "repo": "gm-aiagent-plugins",
       "url": "https://github.com/ghozimahdi/gm-aiagent-plugins",
       "installation_url": "https://github.com/ghozimahdi/gm-aiagent-plugins#readme"
+    },
+    {
+      "name": "Gnomonkit",
+      "displayName": "Gnomonkit",
+      "description": "Working discipline and memory for Claude Code: skills, safety hooks and a local memory toolkit for AI coding agents",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "joshualytle",
+      "repo": "Gnomonkit",
+      "url": "https://github.com/joshualytle/Gnomonkit",
+      "installation_url": "https://github.com/joshualytle/Gnomonkit#readme"
     },
     {
       "name": "Gnos",
@@ -13395,6 +13436,21 @@
       "repo": "agent-qa",
       "url": "https://github.com/vostride/agent-qa",
       "installation_url": "https://github.com/vostride/agent-qa#readme"
+    },
+    {
+      "name": "agent-assh",
+      "displayName": "agent-assh",
+      "description": "SSH workflow CLI and agent skill that runs remote commands in persistent tmux sessions and returns paginated JSON output to keep agent context small",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "izzzzzi",
+      "repo": "agent-assh",
+      "url": "https://github.com/izzzzzi/agent-assh",
+      "install_url": "https://raw.githubusercontent.com/izzzzzi/agent-assh/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Agent402",
