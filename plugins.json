@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-10",
-  "total": 1292,
+  "total": 1293,
   "platforms": [
     "codex",
     "grok",
@@ -16697,6 +16697,19 @@
       "owner": "hxlog",
       "repo": "dsh-mcp-tools",
       "description": "MCP server manager for the DeepSeek Harness settings page: add streamable-HTTP or stdio MCP servers, paste Postman-style request headers, test connectivity, and toggle individual MCP tools so disabled ones never reach the model",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-music-player",
+      "url": "https://github.com/kendu76/dsh-music-player",
+      "owner": "kendu76",
+      "repo": "dsh-music-player",
+      "description": "DeepSeek Harness plugin that streams local music, online music, radio, AI-narrated audiobooks, and daily news briefs inside the agent web UI",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
