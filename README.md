@@ -1273,6 +1273,9 @@ before submitting.
 - [CloudBase AI Toolkit](https://github.com/TencentCloudBase/CloudBase-AI-Toolkit) - Backend for AI coding agents on Tencent CloudBase — database, auth, and functions via Plugin, Skills & MCP.
 - [deja](https://github.com/vshulcz/deja-vu) - Recalls the sessions the other coding agents on the machine already wrote to disk, including work from before it was installed, through MCP tools, a `/deja:recall` command and recall on every prompt.
 - [GoodMemory](https://github.com/hjqcan/GoodMemory) - Local-first, auditable cross-session project memory for Kimi Code with scoped recall, traceable provenance, and approval-gated writes.
+- [kimi-agent-desktop](https://github.com/mnshkv/kimi-agent-desktop) - Computer Use on macOS for Kimi Code and Kimi Code Desktop: AX-tree with element refs, headless clicks, typing, scrolling and screenshots through 21 MCP tools with zero dependencies, as a drop-in kimi-cu replacement.
+- [kimi-android-studio-plugin](https://github.com/mnshkv/kimi-android-studio-plugin) - Android development from Kimi Code: adb, emulators and devices, screenshots, UI automation and Gradle builds over MCP — the Android counterpart of the Xcode plugin.
+- [kimi-xcode-plugin](https://github.com/mnshkv/kimi-xcode-plugin) - Xcode from Kimi Code: builds, tests, SwiftUI previews, simulators, devices, logs and Apple docs via Xcode's own MCP server (xcrun mcpbridge) — the Apple plugin for Claude Code, repackaged.
 - [HTML/CSS to Image API](https://github.com/htmlcsstoimage/agent-plugins) - Let AI agents capture live website screenshots, render HTML/CSS and populate reusable templates as images or PDFs without managing a browser.
 
 ### DeepSeek Harness Plugins
