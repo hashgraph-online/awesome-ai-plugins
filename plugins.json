@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-11",
-  "total": 1311,
+  "total": 1313,
   "platforms": [
     "codex",
     "grok",
@@ -6443,6 +6443,34 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/DRincs-Productions/pixi-vn#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "NQTR",
+      "url": "https://github.com/DRincs-Productions/nqtr",
+      "owner": "DRincs-Productions",
+      "repo": "nqtr",
+      "description": "Agent skills for implementing navigation, quests, time systems, activities, and character routines in Pixi\u2019VN games",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/DRincs-Productions/nqtr#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Pixi\u2019VN Ink",
+      "url": "https://github.com/DRincs-Productions/pixi-vn-ink",
+      "owner": "DRincs-Productions",
+      "repo": "pixi-vn-ink",
+      "description": "Agent skills for writing interactive narratives with Ink in Pixi\u2019VN, including dialogue, canvas, sound, and assets",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/DRincs-Productions/pixi-vn-ink#readme",
       "ecosystems": [
         "agent-skills"
       ]
