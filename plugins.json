@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-11",
-  "total": 1313,
+  "total": 1318,
   "platforms": [
     "codex",
     "grok",
@@ -6070,6 +6070,20 @@
       ]
     },
     {
+      "name": "fstack",
+      "url": "https://github.com/Scino/fstack",
+      "owner": "Scino",
+      "repo": "fstack",
+      "description": "Cross-harness agent skill collection with 59 user-facing skills spanning founder operations and engineering, installable into Cursor, Claude Code, Codex, OpenCode, and more",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Scino/fstack#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Global Engineering Standards",
       "url": "https://github.com/Enki-DEV-expert/engineering-standards",
       "owner": "Enki-DEV-expert",
@@ -6079,6 +6093,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/Enki-DEV-expert/engineering-standards#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "GoVisit Toolkit",
+      "url": "https://github.com/inhotel-io/govisit-toolkit",
+      "owner": "inhotel-io",
+      "repo": "govisit-toolkit",
+      "description": "22 portable Agent Skills that help Codex, Claude Code, GitHub Copilot, and Cursor find and interpret public GoVisit destinations and places",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/inhotel-io/govisit-toolkit#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6121,6 +6149,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/Fostanico/hoi4-ai-modding-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "HoneyVid",
+      "url": "https://github.com/HoneyVid/skills",
+      "owner": "HoneyVid",
+      "repo": "skills",
+      "description": "Agent skills for Claude Code, Codex and other SKILL.md agents that make AI videos and images with HoneyVid through its remote MCP server or `npx honeyvid` CLI: trending video templates, Kling, Veo and Seedance generation, credit quotes and spend caps",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/HoneyVid/skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -6401,6 +6443,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/owoevan-dev/music-skill#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "native-subtitle-quote-image",
+      "url": "https://github.com/chengyi-ai/native-subtitle-quote-image",
+      "owner": "chengyi-ai",
+      "repo": "native-subtitle-quote-image",
+      "description": "Agent skill for Codex, Claude Code and other agents that extracts precise frames from subtitled videos and stitches them into compact 3:4 quote long images, keeping the original burned-in subtitles",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/chengyi-ai/native-subtitle-quote-image#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -7501,6 +7557,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "bhived-mcp",
+      "url": "https://github.com/ArtKeyAi/bhived-mcp",
+      "owner": "ArtKeyAi",
+      "repo": "bhived-mcp",
+      "description": "MCP server: teammates' coding agents share verified fixes and known mistakes as lessons, and find skills and MCP servers mid-task",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ArtKeyAi/bhived-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

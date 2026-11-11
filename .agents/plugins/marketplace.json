@@ -6482,6 +6482,21 @@
       "installation_url": "https://github.com/nagameTW/formosa-humanizer#readme"
     },
     {
+      "name": "fstack",
+      "displayName": "fstack",
+      "description": "Cross-harness agent skill collection with 59 user-facing skills spanning founder operations and engineering, installable into Cursor, Claude Code, Codex, OpenCode, and more",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Scino",
+      "repo": "fstack",
+      "url": "https://github.com/Scino/fstack",
+      "installation_url": "https://github.com/Scino/fstack#readme"
+    },
+    {
       "name": "Global Engineering Standards",
       "displayName": "Global Engineering Standards",
       "description": "Twelve engineering standards and six Claude Code and Codex skills for security, privacy, cost and architecture, installable with `npm install -g @enki-dev-expert/global-engineering-standards`",
@@ -6495,6 +6510,21 @@
       "repo": "engineering-standards",
       "url": "https://github.com/Enki-DEV-expert/engineering-standards",
       "installation_url": "https://github.com/Enki-DEV-expert/engineering-standards#readme"
+    },
+    {
+      "name": "GoVisit Toolkit",
+      "displayName": "GoVisit Toolkit",
+      "description": "22 portable Agent Skills that help Codex, Claude Code, GitHub Copilot, and Cursor find and interpret public GoVisit destinations and places",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "inhotel-io",
+      "repo": "govisit-toolkit",
+      "url": "https://github.com/inhotel-io/govisit-toolkit",
+      "installation_url": "https://github.com/inhotel-io/govisit-toolkit#readme"
     },
     {
       "name": "grcskills",
@@ -6540,6 +6570,21 @@
       "repo": "hoi4-ai-modding-skills",
       "url": "https://github.com/Fostanico/hoi4-ai-modding-skills",
       "installation_url": "https://github.com/Fostanico/hoi4-ai-modding-skills#readme"
+    },
+    {
+      "name": "HoneyVid",
+      "displayName": "HoneyVid",
+      "description": "Agent skills for Claude Code, Codex and other SKILL.md agents that make AI videos and images with HoneyVid through its remote MCP server or `npx honeyvid` CLI: trending video templates, Kling, Veo and Seedance generation, credit quotes and spend caps",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "HoneyVid",
+      "repo": "skills",
+      "url": "https://github.com/HoneyVid/skills",
+      "installation_url": "https://github.com/HoneyVid/skills#readme"
     },
     {
       "name": "humanizer-lint",
@@ -6840,6 +6885,21 @@
       "repo": "music-skill",
       "url": "https://github.com/owoevan-dev/music-skill",
       "installation_url": "https://github.com/owoevan-dev/music-skill#readme"
+    },
+    {
+      "name": "native-subtitle-quote-image",
+      "displayName": "native-subtitle-quote-image",
+      "description": "Agent skill for Codex, Claude Code and other agents that extracts precise frames from subtitled videos and stitches them into compact 3:4 quote long images, keeping the original burned-in subtitles",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "chengyi-ai",
+      "repo": "native-subtitle-quote-image",
+      "url": "https://github.com/chengyi-ai/native-subtitle-quote-image",
+      "installation_url": "https://github.com/chengyi-ai/native-subtitle-quote-image#readme"
     },
     {
       "name": "Nitrogen",
@@ -8021,6 +8081,21 @@
       "repo": "better-harness",
       "url": "https://github.com/QoderAI/better-harness",
       "install_url": "https://raw.githubusercontent.com/QoderAI/better-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "bhived-mcp",
+      "displayName": "bhived-mcp",
+      "description": "MCP server: teammates' coding agents share verified fixes and known mistakes as lessons, and find skills and MCP servers mid-task",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ArtKeyAi",
+      "repo": "bhived-mcp",
+      "url": "https://github.com/ArtKeyAi/bhived-mcp",
+      "installation_url": "https://github.com/ArtKeyAi/bhived-mcp#readme"
     },
     {
       "name": "BioNexus",
