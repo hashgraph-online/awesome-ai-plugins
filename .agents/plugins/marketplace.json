@@ -6887,6 +6887,36 @@
       "installation_url": "https://github.com/DRincs-Productions/pixi-vn#readme"
     },
     {
+      "name": "NQTR",
+      "displayName": "NQTR",
+      "description": "Agent skills for implementing navigation, quests, time systems, activities, and character routines in Pixi\u2019VN games",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "DRincs-Productions",
+      "repo": "nqtr",
+      "url": "https://github.com/DRincs-Productions/nqtr",
+      "installation_url": "https://github.com/DRincs-Productions/nqtr#readme"
+    },
+    {
+      "name": "Pixi\u2019VN Ink",
+      "displayName": "Pixi\u2019VN Ink",
+      "description": "Agent skills for writing interactive narratives with Ink in Pixi\u2019VN, including dialogue, canvas, sound, and assets",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "DRincs-Productions",
+      "repo": "pixi-vn-ink",
+      "url": "https://github.com/DRincs-Productions/pixi-vn-ink",
+      "installation_url": "https://github.com/DRincs-Productions/pixi-vn-ink#readme"
+    },
+    {
       "name": "PlayCanvas Skills",
       "displayName": "PlayCanvas Skills",
       "description": "16 portable Agent Skills that teach AI coding agents to build, inspect, and verify PlayCanvas Engine, React, and Web Components applications, also packaged as Claude Code, Codex, and Cursor plugins",
