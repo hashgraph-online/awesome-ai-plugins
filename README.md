@@ -1186,6 +1186,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [SessionCost](https://github.com/kish21/sessioncost) - Shows how many tokens each turn and call of a Claude Code, Codex, Cursor or Antigravity session sent, what it cost, and measured fixes to send fewer.
 
 - [Settled](https://github.com/justinedwardvolmer/settled-skill) - Agent skill and Claude Code plugin that checks an x402 endpoint against independent evidence (live probes, paid test purchases, on-chain payments) before an agent pays it.
+- [ShipStatic for Antigravity](https://github.com/shipstatic/antigravity) - Antigravity plugin that adds the hosted ShipStatic MCP server and its publish-online skill, so Antigravity publishes static sites with no account and returns a link to share.
 - [Shipvela](https://github.com/stefanautomateed/shipvela-codex) - MIT client bundle for owner-confirmed static website and GitHub publishing through a proprietary, account-based hosting service with OAuth MCP, exact deployment tracking, and plan limits.
 - [Shotbase](https://github.com/route1-ai/shotbase) - Self-hostable screenshot API and MCP server returning page screenshots plus structured data, with AI extraction running on your own model including a local Ollama so page content never leaves your network.
 - [Shots](https://github.com/hitSlop/shots) - Agent-native App Store screenshot, app icon, ASO, and localization workflows through the hosted Shots MCP server.
