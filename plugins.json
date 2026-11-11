@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-11",
-  "total": 1310,
+  "total": 1311,
   "platforms": [
     "codex",
     "grok",
@@ -6247,6 +6247,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/yassineAlouini/kaggle-tools#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "kill-my-idea",
+      "url": "https://github.com/RemiPelloux/kill-my-idea",
+      "owner": "RemiPelloux",
+      "repo": "kill-my-idea",
+      "description": "Scores a startup idea out of 100 with sourced research and gives a GO / PIVOT / NO-GO verdict, an HTML report and a 7-day test",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/RemiPelloux/kill-my-idea#readme",
       "ecosystems": [
         "agent-skills"
       ]

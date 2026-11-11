@@ -6677,6 +6677,21 @@
       "installation_url": "https://github.com/yassineAlouini/kaggle-tools#readme"
     },
     {
+      "name": "kill-my-idea",
+      "displayName": "kill-my-idea",
+      "description": "Scores a startup idea out of 100 with sourced research and gives a GO / PIVOT / NO-GO verdict, an HTML report and a 7-day test",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "RemiPelloux",
+      "repo": "kill-my-idea",
+      "url": "https://github.com/RemiPelloux/kill-my-idea",
+      "installation_url": "https://github.com/RemiPelloux/kill-my-idea#readme"
+    },
+    {
       "name": "kstack",
       "displayName": "kstack",
       "description": "Eleven agent skills for Herdr that plan with two models checking each other, build with parallel reviewed workers, run a verification swarm, then push a PR and fix it until checks are green",
