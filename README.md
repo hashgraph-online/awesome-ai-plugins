@@ -194,6 +194,15 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Nitrogen](https://github.com/mksd0398/nitrogen) - Agent skill and CLI that scaffold and deploy Shopify embedded apps on Firebase, with one Cloud Function per API resource, Firestore, and admin pages built from Polaris web components, also packaged as a Claude Code plugin marketplace.
 - [nuthinking/skills](https://github.com/nuthinking/skills) - Agent skills for Claude Code, Codex and Cursor, including site-edit, where editors pin notes on a live site and Claude Code turns them into pull requests, and product-map, which keeps a feature map and product flows in the repo.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
+
+<details>
+<summary>Related Pixi’VN Agent Skills</summary>
+
+- [NQTR](https://github.com/DRincs-Productions/nqtr) - Agent skills for implementing navigation, quests, time systems, activities, and character routines in Pixi’VN games.
+- [Pixi’VN Ink](https://github.com/DRincs-Productions/pixi-vn-ink) - Agent skills for writing interactive narratives with Ink in Pixi’VN, including dialogue, canvas, sound, and assets.
+
+</details>
+
 - [PlayCanvas Skills](https://github.com/playcanvas/skills) - 16 portable Agent Skills that teach AI coding agents to build, inspect, and verify PlayCanvas Engine, React, and Web Components applications, also packaged as Claude Code, Codex, and Cursor plugins.
 - [post](https://github.com/jack-reson8/post-skill) - Agent skill that builds Xiaohongshu and X share-image sets with App Store poster layouts, real screenshots, and faithful app-UI mocks.
 - [Principal Engineer OS](https://github.com/YourAKShaw/principal-engineer-os) - Agent skill that guides AI-assisted engineering with explicit trade-offs, boundary-focused correctness, security and privacy review, operational judgment, and evidence-based delivery.
