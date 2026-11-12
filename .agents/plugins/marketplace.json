@@ -2650,7 +2650,7 @@
       "owner": "ooples",
       "repo": "token-optimizer-mcp",
       "url": "https://github.com/ooples/token-optimizer-mcp",
-      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/integrations/codex/plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/ooples/token-optimizer-mcp/HEAD/src/integrations/codex/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "Tool Advisor",
@@ -3118,6 +3118,21 @@
       "repo": "aient-codex-plugin",
       "url": "https://github.com/aient-ai/aient-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Amazon 249-Byte Search Terms Optimizer",
+      "displayName": "Amazon 249-Byte Search Terms Optimizer",
+      "description": "Optimize Amazon Seller Central backend search terms within 249 UTF-8 bytes, sanitize listing HTML, and format Rufus AI copy.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kuaai",
+      "repo": "amazon-search-terms-bytes-counter",
+      "url": "https://github.com/kuaai/amazon-search-terms-bytes-counter",
+      "install_url": "https://raw.githubusercontent.com/kuaai/amazon-search-terms-bytes-counter/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Anime Reaction GIF",
@@ -5445,6 +5460,21 @@
       "install_url": "https://raw.githubusercontent.com/hitSlop/shots/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Shopify AI SEO & Liquid",
+      "displayName": "Shopify AI SEO & Liquid",
+      "description": "Audit Shopify robots.txt for AI search crawlers, generate Product Schema JSON-LD, and build shoppable blog product cards.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kuaai",
+      "repo": "shopify-liquid-ai-seo",
+      "url": "https://github.com/kuaai/shopify-liquid-ai-seo",
+      "install_url": "https://raw.githubusercontent.com/kuaai/shopify-liquid-ai-seo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Silicon Valley Atlas",
       "displayName": "Silicon Valley Atlas",
       "description": "Search sourced profiles of AI startups, founders and funding, rank the companies most likely to buy a product from its website, and keep outreach lists through a hosted MCP server with OAuth sign-in.",
@@ -5458,6 +5488,21 @@
       "repo": "svatlas-mcp",
       "url": "https://github.com/phnx-labs/svatlas-mcp",
       "install_url": "https://raw.githubusercontent.com/phnx-labs/svatlas-mcp/HEAD/plugin.json"
+    },
+    {
+      "name": "Sofya",
+      "displayName": "Sofya",
+      "description": "Web search with page content, URL and document reading (PDF, Office) as markdown, single-fact extraction and cited research reports through Sofya's hosted MCP server with browser sign-in, plus search and research skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sofya-co",
+      "repo": "sofya-mcp",
+      "url": "https://github.com/sofya-co/sofya-mcp",
+      "install_url": "https://raw.githubusercontent.com/sofya-co/sofya-mcp/HEAD/plugin.json"
     },
     {
       "name": "SolidPing",
@@ -5518,6 +5563,21 @@
       "repo": "storyflo-codex-plugin",
       "url": "https://github.com/droplinked/storyflo-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/droplinked/storyflo-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "StupidMirror",
+      "displayName": "StupidMirror",
+      "description": "Free for one device: the StupidMirror Mac app and its local MCP server let Codex see and operate iPhones, Android phones, iOS Simulators and Android emulators, with taps, swipes, typing, screenshots with OCR, the UI tree, app installs and screen recording.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "LiuTianjie",
+      "repo": "StupidMirror",
+      "url": "https://github.com/LiuTianjie/StupidMirror",
+      "install_url": "https://raw.githubusercontent.com/LiuTianjie/StupidMirror/HEAD/plugins/stupidmirror/plugin.json"
     },
     {
       "name": "SwapWallet",
@@ -5698,21 +5758,6 @@
       "repo": "tokenchronicle-marketplace",
       "url": "https://github.com/HuaHuiJian/tokenchronicle-marketplace",
       "install_url": "https://raw.githubusercontent.com/HuaHuiJian/tokenchronicle-marketplace/HEAD/plugins/tokenchronicle/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "TokRepo Search",
-      "displayName": "TokRepo Search",
-      "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "henu-wang",
-      "repo": "tokrepo-codex-plugin",
-      "url": "https://github.com/henu-wang/tokrepo-codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/henu-wang/tokrepo-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Treza",
@@ -17599,6 +17644,17 @@
       "repo": "Token-Harbor",
       "url": "https://github.com/NickHOI/Token-Harbor",
       "installation_url": "https://github.com/NickHOI/Token-Harbor#readme"
+    },
+    {
+      "name": "TokRepo Search",
+      "displayName": "TokRepo Search",
+      "description": "Search and install AI assets from TokRepo with a bundled skill and MCP server for Codex",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "henu-wang",
+      "repo": "tokrepo-codex-plugin",
+      "url": "https://github.com/henu-wang/tokrepo-codex-plugin",
+      "installation_url": "https://github.com/henu-wang/tokrepo-codex-plugin#readme"
     },
     {
       "name": "Toolbox POD",
