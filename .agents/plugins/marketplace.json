@@ -2246,6 +2246,21 @@
       "install_url": "https://raw.githubusercontent.com/runtypelabs/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Rush",
+      "displayName": "Rush",
+      "description": "Hand a task to a cloud agent that works in its own cloud computer and returns a pull request, a report, files or an answer; start, wait for, reply to and stop tasks through a hosted MCP server with OAuth sign-in.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "phnx-labs",
+      "repo": "rush-mcp",
+      "url": "https://github.com/phnx-labs/rush-mcp",
+      "install_url": "https://raw.githubusercontent.com/phnx-labs/rush-mcp/HEAD/plugin.json"
+    },
+    {
       "name": "Sealos",
       "displayName": "Sealos",
       "description": "Deploy apps to Sealos Cloud from Codex with readiness checks, Dockerfile generation, Compose conversion, image builds, and rollout updates.",
@@ -5565,21 +5580,6 @@
       "install_url": "https://raw.githubusercontent.com/droplinked/storyflo-codex-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
-      "name": "StupidMirror",
-      "displayName": "StupidMirror",
-      "description": "Free for one device: the StupidMirror Mac app and its local MCP server let Codex see and operate iPhones, Android phones, iOS Simulators and Android emulators, with taps, swipes, typing, screenshots with OCR, the UI tree, app installs and screen recording.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "LiuTianjie",
-      "repo": "StupidMirror",
-      "url": "https://github.com/LiuTianjie/StupidMirror",
-      "install_url": "https://raw.githubusercontent.com/LiuTianjie/StupidMirror/HEAD/plugins/stupidmirror/plugin.json"
-    },
-    {
       "name": "SwapWallet",
       "displayName": "SwapWallet",
       "description": "Official SwapWallet plugin: read crypto balances, P&L and history, and request swaps, transfers and withdrawals that run only after the user approves them in Telegram, over a hosted OAuth MCP server.",
@@ -8330,6 +8330,21 @@
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Bulkhead",
+      "displayName": "Bulkhead",
+      "description": "Pre-tool-use hooks for Claude Code, Codex, Gemini CLI, Cursor and OpenCode that stop one agent session from killing another session's processes, taking its port, or stashing, resetting or checking out over its uncommitted work on the same machine",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dooly6276",
+      "repo": "claude-bulkhead",
+      "url": "https://github.com/dooly6276/claude-bulkhead",
+      "install_url": "https://raw.githubusercontent.com/dooly6276/claude-bulkhead/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "bury-bench",
       "displayName": "bury-bench",
       "description": "Deterministic zero-LLM-judge CLI that scores coding-agent replies for answer-burial and builds a Markdown leaderboard",
@@ -10763,6 +10778,21 @@
       "repo": "logicprobe",
       "url": "https://github.com/AmethystLuna/logicprobe",
       "install_url": "https://raw.githubusercontent.com/AmethystLuna/logicprobe/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "loom-code-skill",
+      "displayName": "loom-code-skill",
+      "description": "Code search and code intelligence for repositories in a Loom code index (the loom-code Agent Skill: code.* first, then read only that), and",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ClickHouse",
+      "repo": "loom",
+      "url": "https://github.com/ClickHouse/loom",
+      "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "loose-ends",
@@ -13544,6 +13574,21 @@
       "installation_url": "https://github.com/aleksUIX/vastlint#readme"
     },
     {
+      "name": "VeriPower",
+      "displayName": "VeriPower",
+      "description": "Give your coding agent a spiral workflow for chip front-end design and verification",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "chipweaver",
+      "repo": "veripower",
+      "url": "https://github.com/chipweaver/veripower",
+      "install_url": "https://raw.githubusercontent.com/chipweaver/veripower/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Vesalius",
       "displayName": "Vesalius",
       "description": "MCP server: on-device code graph for querying a repository's symbols, references and dependencies, with a CLI, Mac app and VS Code extension",
@@ -13953,6 +13998,21 @@
       "repo": "agentic-seo",
       "url": "https://github.com/dalroot/agentic-seo",
       "installation_url": "https://github.com/dalroot/agentic-seo#readme"
+    },
+    {
+      "name": "Agentik",
+      "displayName": "Agentik",
+      "description": "MCP server: one connection that lets Claude, ChatGPT, Codex and Cursor find, price and call 3,500+ paid data, search and media tools from 165 providers, each call at the provider's price from one prepaid balance; the hosted service is closed source and the Claude Code plugin, CLI and TypeScript SDK in this repo are MIT",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "agent-tool-router",
+      "repo": "agentik",
+      "url": "https://github.com/agent-tool-router/agentik",
+      "installation_url": "https://github.com/agent-tool-router/agentik#readme"
     },
     {
       "name": "agentmailkit",
@@ -16130,6 +16190,21 @@
       "install_url": "https://raw.githubusercontent.com/GautamTalksDev/mcp-pin/HEAD/plugins/mcp-pin/.claude-plugin/plugin.json"
     },
     {
+      "name": "mcp-server-ftp",
+      "displayName": "mcp-server-ftp",
+      "description": "MCP server: file management for FTP, FTPS, and SFTP servers, with binary-safe and streamed local transfers, in-place text edits, and SSH key, 1Password, or encrypted-credential authentication",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "alxspiker",
+      "repo": "mcp-server-ftp",
+      "url": "https://github.com/alxspiker/mcp-server-ftp",
+      "installation_url": "https://github.com/alxspiker/mcp-server-ftp#readme"
+    },
+    {
       "name": "MCPSense",
       "displayName": "MCPSense",
       "description": "MCP server: MIT-licensed local scanner for inspecting MCP configurations and comparing tool metadata against a reviewed reference from a coding assistant or the CLI",
@@ -16725,6 +16800,21 @@
       "repo": "panda-greetings-mcp",
       "url": "https://github.com/Gerti05/panda-greetings-mcp",
       "installation_url": "https://github.com/Gerti05/panda-greetings-mcp#readme"
+    },
+    {
+      "name": "Parent Recap",
+      "displayName": "Parent Recap",
+      "description": "Claude Code and Codex plugin that turns school, daycare and club messages into one evening email for parents in Europe, starting with Finland (Wilma, eVaka, Eepos, MyClub, school email and class WhatsApp groups), with action items and calendar events, in Finnish, English and Chinese to start and more languages coming for immigrant families",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "kinlace",
+      "repo": "parent-recap",
+      "url": "https://github.com/kinlace/parent-recap",
+      "install_url": "https://raw.githubusercontent.com/kinlace/parent-recap/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "ParlayAPI",
@@ -17869,6 +17959,21 @@
       "install_url": "https://raw.githubusercontent.com/WatermelonCorp/watermelon-platform/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Wavegrain",
+      "displayName": "Wavegrain",
+      "description": "MCP server: curated slideshows and carousels for your brand on autopilot, a hosted server (OAuth) that writes TikTok slideshows and Instagram carousels in the brand's voice, then schedules and posts them",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "wavegrain",
+      "repo": "wavegrain-mcp",
+      "url": "https://github.com/wavegrain/wavegrain-mcp",
+      "installation_url": "https://github.com/wavegrain/wavegrain-mcp#readme"
+    },
+    {
       "name": "web-researcher-mcp",
       "displayName": "web-researcher-mcp",
       "description": "MCP server: web search, page extraction and citation verification across web, academic, patent, legal and filing sources, with source credibility scoring and retraction checks",
@@ -18370,6 +18475,20 @@
       "owner": "FeatherHunter",
       "repo": "dsh-im-companion",
       "url": "https://github.com/FeatherHunter/dsh-im-companion"
+    },
+    {
+      "name": "dsh-imagegen-video",
+      "displayName": "dsh-imagegen-video",
+      "description": "DeepSeek Harness plugin for image and video generation with an infinite canvas, storyboard nodes, and local clip stitching",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "q253595422",
+      "repo": "dsh-imagegen-video",
+      "url": "https://github.com/q253595422/dsh-imagegen-video"
     },
     {
       "name": "dsh-infinite_canvas",
@@ -18941,6 +19060,21 @@
       "repo": "opencode-claude-memory",
       "url": "https://github.com/kuitos/opencode-claude-memory",
       "installation_url": "https://github.com/kuitos/opencode-claude-memory#readme"
+    },
+    {
+      "name": "opencode-cmux",
+      "displayName": "opencode-cmux",
+      "description": "OpenCode plugin that sends cmux desktop notifications and sidebar status updates when a session finishes, errors, or needs a permission or an answer",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "0xCaso",
+      "repo": "opencode-cmux",
+      "url": "https://github.com/0xCaso/opencode-cmux",
+      "installation_url": "https://github.com/0xCaso/opencode-cmux#readme"
     },
     {
       "name": "opencode-cursor",
