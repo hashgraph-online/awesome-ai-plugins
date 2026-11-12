@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-12",
-  "total": 1337,
+  "total": 1338,
   "platforms": [
     "codex",
     "grok",
@@ -16,6 +16,19 @@
     "opencode"
   ],
   "plugins": [
+    {
+      "name": "Agent Bridge",
+      "url": "https://github.com/avas-app/agent-bridge",
+      "owner": "avas-app",
+      "repo": "agent-bridge",
+      "description": "Lets coding agents drive a running React Native or Expo app from inside: read and press the screen, set state, mock the network, then undo it all.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
     {
       "name": "Registry Broker",
       "url": "https://github.com/hashgraph-online/registry-broker-codex-plugin",
