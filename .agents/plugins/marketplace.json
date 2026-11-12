@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-11",
+  "last_updated": "2026-11-12",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -6077,6 +6077,21 @@
       "installation_url": "https://github.com/heyman333/agent-notion-template-docs#readme"
     },
     {
+      "name": "ai-agent-skills",
+      "displayName": "ai-agent-skills",
+      "description": "A collection of standalone SKILL.md thinking-method skills, from five-whys root-cause analysis to tradeoff and pre-mortem workflows, for AI coding agents",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "ysskrishna",
+      "repo": "ai-agent-skills",
+      "url": "https://github.com/ysskrishna/ai-agent-skills",
+      "installation_url": "https://github.com/ysskrishna/ai-agent-skills#readme"
+    },
+    {
       "name": "answer-me-with-html",
       "displayName": "answer-me-with-html",
       "description": "Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos",
@@ -6767,6 +6782,21 @@
       "installation_url": "https://github.com/wellwelwel/lagune#readme"
     },
     {
+      "name": "launch-guard",
+      "displayName": "launch-guard",
+      "description": "Agent skill and Claude Code plugin that checks a private git repository, or the npm package you are about to publish, before it goes public, and never prints what it finds, so it is safe to run under an assistant",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "voyageurworks",
+      "repo": "launch-guard-pack",
+      "url": "https://github.com/voyageurworks/launch-guard-pack",
+      "installation_url": "https://github.com/voyageurworks/launch-guard-pack#readme"
+    },
+    {
       "name": "LogBrew",
       "displayName": "LogBrew",
       "description": "Agent skills that let any AI agent read your production errors, logs, and traces in LogBrew to find why something broke, add error monitoring to an app, and check each release",
@@ -6840,6 +6870,21 @@
       "repo": "max-skills",
       "url": "https://github.com/vasinl124/max-skills",
       "installation_url": "https://github.com/vasinl124/max-skills#readme"
+    },
+    {
+      "name": "mcp-proof",
+      "displayName": "mcp-proof",
+      "description": "Agent skill and Claude Code plugin that proves an MCP server really starts in the real clients installed on your computer, in a throwaway home, and records a dated, labelled result as a README table and badges",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "voyageurworks",
+      "repo": "mcp-proof",
+      "url": "https://github.com/voyageurworks/mcp-proof",
+      "installation_url": "https://github.com/voyageurworks/mcp-proof#readme"
     },
     {
       "name": "memory-use",
@@ -14560,6 +14605,21 @@
       "install_url": "https://raw.githubusercontent.com/TencentCloudBase/CloudBase-AI-Toolkit/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "CloudGPU",
+      "displayName": "CloudGPU",
+      "description": "MCP server: lets an agent rent a GPU by the minute, run a job, retrieve the results and shut the instance down, and call hosted open models through the same account's compatible API",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "mrhy7176",
+      "repo": "cloudgpu-mcp",
+      "url": "https://github.com/mrhy7176/cloudgpu-mcp",
+      "installation_url": "https://github.com/mrhy7176/cloudgpu-mcp#readme"
+    },
+    {
       "name": "Cockatoo",
       "displayName": "Cockatoo",
       "description": "MCP server: create, edit and publish hosted business websites through Streamable HTTP with OAuth and owner-approved permissions",
@@ -16027,16 +16087,17 @@
     {
       "name": "MCPSense",
       "displayName": "MCPSense",
-      "description": "MIT-licensed security CLI that inspects supported MCP configurations and metadata, reports review findings, and compares metadata against a reviewed reference",
+      "description": "MCP server: MIT-licensed local scanner for inspecting MCP configurations and comparing tool metadata against a reviewed reference from a coding assistant or the CLI",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "standalone",
+      "platform": "mcp",
       "ecosystems": [
-        "standalone"
+        "mcp"
       ],
       "owner": "fayzkk889",
       "repo": "MCPSense",
-      "url": "https://github.com/fayzkk889/MCPSense"
+      "url": "https://github.com/fayzkk889/MCPSense",
+      "installation_url": "https://github.com/fayzkk889/MCPSense#readme"
     },
     {
       "name": "mcpsnoop",
@@ -16968,6 +17029,17 @@
       "installation_url": "https://github.com/reduck-ai/agents#readme"
     },
     {
+      "name": "Research Figure Kit",
+      "displayName": "Research Figure Kit",
+      "description": "A Codex plugin for research diagrams and scientific plots, with editable sources, reproducible workflows, and explicit validation records",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "yss-off",
+      "repo": "research-figure-kit",
+      "url": "https://github.com/yss-off/research-figure-kit",
+      "installation_url": "https://github.com/yss-off/research-figure-kit#readme"
+    },
+    {
       "name": "respira-wordpress-mcp",
       "displayName": "respira-wordpress-mcp",
       "description": "MCP server: exposes WordPress page builders, posts, SEO and site tools to AI agents",
@@ -17527,6 +17599,21 @@
       "repo": "Token-Harbor",
       "url": "https://github.com/NickHOI/Token-Harbor",
       "installation_url": "https://github.com/NickHOI/Token-Harbor#readme"
+    },
+    {
+      "name": "Toolbox POD",
+      "displayName": "Toolbox POD",
+      "description": "MCP server: hosted, closed-source server at `https://mcp.toolboxpod.com/mcp` (OAuth sign-in) to design custom tees and hoodies, see mockups, and order prints made and shipped from Utah, with a Claude Code plugin, Cursor plugin, Grok plugin and Gemini CLI extension in the repository",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Toolbox-POD",
+      "repo": "toolbox-pod-mcp",
+      "url": "https://github.com/Toolbox-POD/toolbox-pod-mcp",
+      "installation_url": "https://github.com/Toolbox-POD/toolbox-pod-mcp#readme"
     },
     {
       "name": "Touchline Wire MCP",
