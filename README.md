@@ -1136,6 +1136,8 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Panda Greetings](https://github.com/Gerti05/panda-greetings-mcp) - MCP server: shows ready-made greeting card designs for an occasion with your card message already inside, each opening on pandagreetings.com to order as a printed card mailed in the US or a group card; hosted, read-only, no API key.
 - [PANews Agent Toolkit](https://github.com/panewslab/skills) - Crypto and blockchain news discovery, authenticated creator publishing workflows, and page-to-Markdown reading.
 - [PapersFlow](https://github.com/papersflow-ai/papersflow-codex-plugin) - Paper discovery, citation verification, graph exploration, and DeepScan analysis.
+- [Parent Recap](https://github.com/kinlace/parent-recap) - Claude Code and Codex plugin that turns school, daycare and club messages into one evening email for parents in Europe, starting with Finland (Wilma, eVaka, Eepos, MyClub, school email and class WhatsApp groups), with action items and calendar events, in Finnish, English and Chinese to start and more languages coming for immigrant families.
+
 - [ParlayAPI](https://github.com/JacobiusMakes/parlay-api-mcp) - Python MCP server for sports odds, player props, public event discovery, and account usage; account data tools require your own API key and allowances.
 - [PDF Monster](https://github.com/jbaehova/pdf-monster) - Analyzes PDFs as extracted text, OCR text, rendered page images, and embedded figures for coding agents.
 - [PDFtoAgent (Dow Theory MCP)](https://github.com/babaksh/PDFtoAgent) - Turnkey FastMCP server built with the PDFtoAgent pipeline, extracting 100+ deterministic tools from the book into a unified RAG + Skill + Tools bundle.
