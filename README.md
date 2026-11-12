@@ -930,6 +930,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Clera](https://github.com/getclera/mcp) - Hosted hiring MCP server plus Claude Code, Cursor and Gemini CLI plugins: search 210,000+ vetted startup candidates, review Clera's picks and request intros over OAuth.
 - [Clickwise](https://github.com/softdevfz/clickwise-api) - MCP server: affiliate programs, deals, tracked links and product search, plus merchant program setup tools.
 - [CloudBase AI Toolkit](https://github.com/TencentCloudBase/CloudBase-AI-Toolkit) - Backend for AI coding agents on Tencent CloudBase — database, auth, and functions via Plugin, Skills & MCP.
+- [CloudGPU](https://github.com/mrhy7176/cloudgpu-mcp) - MCP server: lets an agent rent a GPU by the minute, run a job, retrieve the results and shut the instance down, and call hosted open models through the same account's compatible API.
 - [Cockatoo](https://github.com/louisblythe/cockatoo-mcp) - MCP server: create, edit and publish hosted business websites through Streamable HTTP with OAuth and owner-approved permissions.
 - [Codex Be Serious](https://github.com/lulucatdev/codex-be-serious) - Enforce formal, textbook-grade written register across all agent output.
 - [Codex Mem](https://github.com/2kDarki/codex-mem) - Automatically capture, compress, and inject session context back into future Codex sessions.
