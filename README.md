@@ -322,6 +322,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Azzle](https://github.com/azzle-lab/azzle) - Base-native task coordination and settlement for AI agents, exposed through a hosted MCP server and TypeScript agent SDK.
 - [BABOK Analyst](https://github.com/GSkuza/BABOK_ANALYST) - BABOK v3 business analysis agent with 16 MCP tools, a 9-stage pipeline, and human-in-the-loop approval gates.
 - [BanyanCode](https://github.com/EkagraAgarwal/BanyanCode) - Terminal coding agent with parallel subagents, cross-session memory, Tree-sitter code graph, and free web research.
+- [beautify-tmux](https://github.com/felpk/beautify-tmux) - tmux config and Claude Code hooks that colour each pane border by the agent's state: working, finished, or waiting for input.
 - [Better Harness](https://github.com/QoderAI/better-harness) - Evidence-backed workflow analysis for coding agents that turns project and session signals into prioritized, verifiable improvements across supported hosts.
 - [BGS Modding Superpowers](https://github.com/BB-84C/bgs-modding-superpowers) - Agentic Bethesda Game Studio modpack curation toolkit with MCP-driven xEdit conflict audit, MO2 control plane, BA2/BSA and Papyrus tooling, and skills for setup, dev-log, and release-changelog workflows.
 - [bhived-mcp](https://github.com/ArtKeyAi/bhived-mcp) - MCP server: teammates' coding agents share verified fixes and known mistakes as lessons, and find skills and MCP servers mid-task.
