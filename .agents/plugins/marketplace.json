@@ -1175,6 +1175,21 @@
       "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "DocSpring Agent Playbook",
+      "displayName": "DocSpring Agent Playbook",
+      "description": "DocSpring's engineering principles, AGENTS.md templates and six workflow skills (ticket kickoff, PR review, second-opinion review, fix CI, browser QA, session wrap-up) for Claude Code, Codex and other agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "DocSpring",
+      "repo": "docspring-agent-playbook",
+      "url": "https://github.com/DocSpring/docspring-agent-playbook",
+      "install_url": "https://raw.githubusercontent.com/DocSpring/docspring-agent-playbook/HEAD/plugin.json"
+    },
+    {
       "name": "done-gate",
       "displayName": "done-gate",
       "description": "Stop hook that blocks \"fixed/done\" claims when no test output or exit code appeared in that turn (Claude Code & Codex, MIT).",
@@ -3103,6 +3118,21 @@
       "repo": "AgentDomains-skill",
       "url": "https://github.com/tashfeenahmed/AgentDomains-skill",
       "install_url": "https://raw.githubusercontent.com/tashfeenahmed/AgentDomains-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AgentDrives",
+      "displayName": "AgentDrives",
+      "description": "Look up a SaaS tool, API or provider before your agent picks it: its agent level (0-5), where our agent stopped, and whether an agent can sign up, get a key and pay on its own. Read-only remote MCP server and skill, no key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AgentDrives",
+      "repo": "agentdrives-mcp",
+      "url": "https://github.com/AgentDrives/agentdrives-mcp",
+      "install_url": "https://raw.githubusercontent.com/AgentDrives/agentdrives-mcp/HEAD/plugin.json"
     },
     {
       "name": "Agentgram",
@@ -6351,6 +6381,21 @@
       "installation_url": "https://github.com/tcballard/build-omarchy-plugins#readme"
     },
     {
+      "name": "cheap-eyes",
+      "displayName": "cheap-eyes",
+      "description": "Claude Code skill and plugin that checks a web page at phone and desktop widths and reports visible bugs (overflow, covered buttons, 404s, JS errors, dead links, low contrast) as text, with a subagent that views screenshot crops so images stay out of the main conversation",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "felpk",
+      "repo": "cheap-eyes",
+      "url": "https://github.com/felpk/cheap-eyes",
+      "installation_url": "https://github.com/felpk/cheap-eyes#readme"
+    },
+    {
       "name": "claude-skills",
       "displayName": "claude-skills",
       "description": "67 Agent Skills for full-stack development across languages, frameworks, infrastructure, testing, security, and data/ML, with 371 reference files that load only when a task needs them and 9 project workflow commands",
@@ -7219,6 +7264,21 @@
       "repo": "profile-use",
       "url": "https://github.com/leeguooooo/profile-use",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme"
+    },
+    {
+      "name": "Resume Claim Guard",
+      "displayName": "Resume Claim Guard",
+      "description": "Open-source Agent Skill (MIT) that writes job-tailored resumes from confirmed facts only, then audits claims and previews interview follow-ups",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "korey2028-prog",
+      "repo": "resume-claim-guard",
+      "url": "https://github.com/korey2028-prog/resume-claim-guard",
+      "installation_url": "https://github.com/korey2028-prog/resume-claim-guard#readme"
     },
     {
       "name": "Routine Cleanup",
@@ -8280,6 +8340,17 @@
       "repo": "BanyanCode",
       "url": "https://github.com/EkagraAgarwal/BanyanCode",
       "installation_url": "https://github.com/EkagraAgarwal/BanyanCode#readme"
+    },
+    {
+      "name": "beautify-tmux",
+      "displayName": "beautify-tmux",
+      "description": "tmux config and Claude Code hooks that colour each pane border by the agent's state: working, finished, or waiting for input",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "felpk",
+      "repo": "beautify-tmux",
+      "url": "https://github.com/felpk/beautify-tmux",
+      "installation_url": "https://github.com/felpk/beautify-tmux#readme"
     },
     {
       "name": "Better Harness",
@@ -15536,10 +15607,10 @@
       "ecosystems": [
         "mcp"
       ],
-      "owner": "armgardtj",
+      "owner": "jarm-dev",
       "repo": "gymlog-mcp",
-      "url": "https://github.com/armgardtj/gymlog-mcp",
-      "installation_url": "https://github.com/armgardtj/gymlog-mcp#readme"
+      "url": "https://github.com/jarm-dev/gymlog-mcp",
+      "installation_url": "https://github.com/jarm-dev/gymlog-mcp#readme"
     },
     {
       "name": "hcom",
@@ -16557,6 +16628,21 @@
       "installation_url": "https://github.com/kasovy/neverapply-mcp#readme"
     },
     {
+      "name": "Nia Teams Agent Bridge",
+      "displayName": "Nia Teams Agent Bridge",
+      "description": "Connects local coding agents to Nia Teams group chats with live activity and TaskBar tool approvals",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone",
+        "deepseek-harness"
+      ],
+      "owner": "nia-teams",
+      "repo": "agent-bridge",
+      "url": "https://github.com/nia-teams/agent-bridge"
+    },
+    {
       "name": "Nimble",
       "displayName": "Nimble",
       "description": "Web Search Agents that search, browse, extract, and reason across live pages and return cited, schema-enforced results, with self-learning retrieval that improves accuracy and lowers cost per task on repeat work, plus Search and Extract skills for fast raw web data in Claude Code, Codex, Cursor, and Grok Build",
@@ -17439,6 +17525,21 @@
       "installation_url": "https://github.com/superagents-lab/search1api-mcp#readme"
     },
     {
+      "name": "SellerForge",
+      "displayName": "SellerForge",
+      "description": "MCP server: hosted, closed-source Amazon seller data server at `https://www.sellerforge.ai/api/mcp` that gives agents read-only OAuth access to a seller's own account health, FBA inventory, reimbursements, Plan of Action cases, keywords, listing audits and campaigns",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "SellerForgeAI",
+      "repo": "sellerforge-mcp",
+      "url": "https://github.com/SellerForgeAI/sellerforge-mcp",
+      "installation_url": "https://github.com/SellerForgeAI/sellerforge-mcp#readme"
+    },
+    {
       "name": "SEO GSC Wizard",
       "displayName": "SEO GSC Wizard",
       "description": "Claude Code, Cursor and Gemini CLI plugin with 34 SEO skills (site audits, traffic-drop diagnosis, content decay, cannibalization, indexing, migrations, client reports) on top of the hosted GSC Wizard MCP server, which reads your Google Search Console, Bing Webmaster Tools, GA4, Merchant Center and Yandex data over OAuth with a GSC Wizard account",
@@ -17902,10 +18003,10 @@
       "ecosystems": [
         "mcp"
       ],
-      "owner": "armgardtj",
+      "owner": "jarm-dev",
       "repo": "travellog-mcp",
-      "url": "https://github.com/armgardtj/travellog-mcp",
-      "installation_url": "https://github.com/armgardtj/travellog-mcp#readme"
+      "url": "https://github.com/jarm-dev/travellog-mcp",
+      "installation_url": "https://github.com/jarm-dev/travellog-mcp#readme"
     },
     {
       "name": "Tripo Studio for Codex",
@@ -19086,6 +19187,21 @@
       "repo": "opencode-ducksay",
       "url": "https://github.com/zhek/opencode-ducksay",
       "installation_url": "https://github.com/zhek/opencode-ducksay#readme"
+    },
+    {
+      "name": "FlowDeck",
+      "displayName": "FlowDeck",
+      "description": "OpenCode plugin that guides coding agents through structured task, review, execution, verification, and completion stages with persistent planning state and multi-agent workflows",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "DVNghiem",
+      "repo": "FlowDeck",
+      "url": "https://github.com/DVNghiem/FlowDeck",
+      "installation_url": "https://github.com/DVNghiem/FlowDeck#readme"
     },
     {
       "name": "LitOpenCode",
