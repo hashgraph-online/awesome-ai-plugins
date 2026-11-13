@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-12",
+  "last_updated": "2026-11-13",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -515,6 +515,21 @@
       "install_url": "https://raw.githubusercontent.com/hyhmrright/brooks-lint/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Bulkhead",
+      "displayName": "Bulkhead",
+      "description": "Guards for machines that run many Codex and other agent sessions at once: a PreToolUse hook on Bash blocks name-based process kills, port collisions, destructive git commands on another session's worktree, whole-disk scans and long foreground sleeps, and holds heavy commands back when RAM runs low.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dooly6276",
+      "repo": "claude-bulkhead",
+      "url": "https://github.com/dooly6276/claude-bulkhead",
+      "install_url": "https://raw.githubusercontent.com/dooly6276/claude-bulkhead/HEAD/plugin.json"
+    },
+    {
       "name": "Casefile",
       "displayName": "Casefile",
       "description": "Persistent security case tracking for bug bounties, CTFs, and security audits.",
@@ -753,6 +768,21 @@
       "repo": "codex-auto-resume-windows",
       "url": "https://github.com/songyb111-gachon/codex-auto-resume-windows",
       "install_url": "https://raw.githubusercontent.com/songyb111-gachon/codex-auto-resume-windows/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Design",
+      "displayName": "Codex Design",
+      "description": "A visual design canvas for Codex: compare UI images and live HTML screens side by side in the in-app browser, then refine them on the canvas or in conversation.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ummydev",
+      "repo": "codexdesign",
+      "url": "https://github.com/ummydev/codexdesign",
+      "install_url": "https://raw.githubusercontent.com/ummydev/codexdesign/HEAD/plugins/codexdesign/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex How To",
@@ -1623,6 +1653,21 @@
       "repo": "llm-transpile",
       "url": "https://github.com/epicsagas/llm-transpile",
       "install_url": "https://raw.githubusercontent.com/epicsagas/llm-transpile/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Loom",
+      "displayName": "Loom",
+      "description": "Self-hosted shared long-term memory and code index (definitions, callers, change impact) for Codex, stored in ClickHouse, with lifecycle hooks that capture each session and MCP tools that save and recall decisions across sessions and teammates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ClickHouse",
+      "repo": "loom",
+      "url": "https://github.com/ClickHouse/loom",
+      "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/integrations/codex-plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "LVTD Skills",
@@ -3542,6 +3587,23 @@
       "installation_url": "https://github.com/softdevfz/clickwise-api#readme"
     },
     {
+      "name": "CloudGPU",
+      "displayName": "CloudGPU",
+      "description": "Rent a per-minute GPU from your agent, run a job, download results, shut it down.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "mrhy7176",
+      "repo": "cloudgpu-mcp",
+      "url": "https://github.com/mrhy7176/cloudgpu-mcp",
+      "install_url": "https://raw.githubusercontent.com/mrhy7176/cloudgpu-mcp/HEAD/plugin.json",
+      "installation_url": "https://github.com/mrhy7176/cloudgpu-mcp#readme"
+    },
+    {
       "name": "Codex Be Serious",
       "displayName": "Codex Be Serious",
       "description": "Enforce formal, textbook-grade written register across all agent output.",
@@ -4505,6 +4567,21 @@
       "install_url": "https://raw.githubusercontent.com/EminBudak/launch-film/HEAD/plugin.json"
     },
     {
+      "name": "Leeway",
+      "displayName": "Leeway",
+      "description": "Connects Codex to a Leeway drive your team and its agents share, with skills to save without overwriting, find, undo from history, publish from a workspace and leave a hand-off note.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "supersethvos",
+      "repo": "leeway-codex",
+      "url": "https://github.com/supersethvos/leeway-codex",
+      "install_url": "https://raw.githubusercontent.com/supersethvos/leeway-codex/HEAD/plugins/leeway/plugin.json"
+    },
+    {
       "name": "LienDeadline",
       "displayName": "LienDeadline",
       "description": "US mechanics lien and preliminary notice deadlines for construction material suppliers, with statute citations, plus lien guides for all 50 states and DC; read-only.",
@@ -5308,6 +5385,21 @@
       "repo": "rust-reverse-engineering-skill",
       "url": "https://github.com/jingjing2222/rust-reverse-engineering-skill",
       "install_url": "https://raw.githubusercontent.com/jingjing2222/rust-reverse-engineering-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Scrape.ly",
+      "displayName": "Scrape.ly",
+      "description": "Find, run and read ready-made web scrapers for sites like Google Maps, Amazon and LinkedIn from Codex through the hosted Scrape.ly MCP server (OAuth) and the scrapely-scrape skill.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "scrapely-app",
+      "repo": "scrapely-mcp",
+      "url": "https://github.com/scrapely-app/scrapely-mcp",
+      "install_url": "https://raw.githubusercontent.com/scrapely-app/scrapely-mcp/HEAD/plugin.json"
     },
     {
       "name": "ScrapeGraph AI",
@@ -7472,6 +7564,21 @@
       "install_url": "https://raw.githubusercontent.com/aegotrax-dev/aegotrax/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Agent Bridge",
+      "displayName": "Agent Bridge",
+      "description": "Lets coding agents drive a running React Native or Expo app from inside: read and press the screen, set state, mock the network, then undo it all",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "avas-app",
+      "repo": "agent-bridge",
+      "url": "https://github.com/avas-app/agent-bridge",
+      "installation_url": "https://github.com/avas-app/agent-bridge#readme"
+    },
+    {
       "name": "Agent Context OS",
       "displayName": "Agent Context OS",
       "description": "Portable Git-backed context and session workflow layer with first-class Claude Code, Codex, and OpenClaw support plus experimental adapters for Hermes, Cursor, and Devin",
@@ -8328,21 +8435,6 @@
       "repo": "browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.claude-plugin/plugin.json"
-    },
-    {
-      "name": "Bulkhead",
-      "displayName": "Bulkhead",
-      "description": "Pre-tool-use hooks for Claude Code, Codex, Gemini CLI, Cursor and OpenCode that stop one agent session from killing another session's processes, taking its port, or stashing, resetting or checking out over its uncommitted work on the same machine",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "dooly6276",
-      "repo": "claude-bulkhead",
-      "url": "https://github.com/dooly6276/claude-bulkhead",
-      "install_url": "https://raw.githubusercontent.com/dooly6276/claude-bulkhead/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "bury-bench",
@@ -10778,21 +10870,6 @@
       "repo": "logicprobe",
       "url": "https://github.com/AmethystLuna/logicprobe",
       "install_url": "https://raw.githubusercontent.com/AmethystLuna/logicprobe/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "loom-code-skill",
-      "displayName": "loom-code-skill",
-      "description": "Code search and code intelligence for repositories in a Loom code index (the loom-code Agent Skill: code.* first, then read only that), and",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
-      "owner": "ClickHouse",
-      "repo": "loom",
-      "url": "https://github.com/ClickHouse/loom",
-      "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "loose-ends",
@@ -14708,21 +14785,6 @@
       "repo": "CloudBase-AI-Toolkit",
       "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
       "install_url": "https://raw.githubusercontent.com/TencentCloudBase/CloudBase-AI-Toolkit/HEAD/.claude-plugin/plugin.json"
-    },
-    {
-      "name": "CloudGPU",
-      "displayName": "CloudGPU",
-      "description": "MCP server: lets an agent rent a GPU by the minute, run a job, retrieve the results and shut the instance down, and call hosted open models through the same account's compatible API",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "ecosystems": [
-        "mcp"
-      ],
-      "owner": "mrhy7176",
-      "repo": "cloudgpu-mcp",
-      "url": "https://github.com/mrhy7176/cloudgpu-mcp",
-      "installation_url": "https://github.com/mrhy7176/cloudgpu-mcp#readme"
     },
     {
       "name": "Cockatoo",
