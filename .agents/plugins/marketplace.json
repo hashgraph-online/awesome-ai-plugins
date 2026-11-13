@@ -1662,12 +1662,14 @@
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "mcp"
       ],
       "owner": "ClickHouse",
       "repo": "loom",
       "url": "https://github.com/ClickHouse/loom",
-      "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/integrations/codex-plugin/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/integrations/codex-plugin/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
       "name": "LVTD Skills",
@@ -5049,6 +5051,21 @@
       "repo": "papersflow-codex-plugin",
       "url": "https://github.com/papersflow-ai/papersflow-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/papersflow-ai/papersflow-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "phonedriver",
+      "displayName": "phonedriver",
+      "description": "Lets Codex see and operate Android phones, emulators, the iOS Simulator and iPhones through a local MCP server and its skill, and asks you before any tap that pays.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hridaya423",
+      "repo": "phonedriver",
+      "url": "https://github.com/hridaya423/phonedriver",
+      "install_url": "https://raw.githubusercontent.com/hridaya423/phonedriver/HEAD/packaging/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "PlaceCall",
@@ -10217,6 +10234,21 @@
       "install_url": "https://raw.githubusercontent.com/Vladimir-Human/humanizer-ru/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "hyperresearch",
+      "displayName": "hyperresearch",
+      "description": "Deep research skill for Claude Code and Codex that runs a tiered 16-step pipeline, cite-checks sources, and builds a persistent searchable source vault",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "jordan-gibbs",
+      "repo": "hyperresearch",
+      "url": "https://github.com/jordan-gibbs/hyperresearch",
+      "install_url": "https://raw.githubusercontent.com/jordan-gibbs/hyperresearch/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "i-hate-editing",
       "displayName": "i-hate-editing",
       "description": "Claude Code skill that turns raw talking-head footage into a finished cut with local whisper.cpp + ffmpeg (model never watches the pixels)",
@@ -14103,6 +14135,21 @@
       "installation_url": "https://github.com/ariaxhan/agentmailkit#readme"
     },
     {
+      "name": "AgentWeb",
+      "displayName": "AgentWeb",
+      "description": "MCP server: lets any agent act on real signed-in sites through typed, verified actions",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "AgentWeb-Labs",
+      "repo": "agentweb-mcp",
+      "url": "https://github.com/AgentWeb-Labs/agentweb-mcp",
+      "installation_url": "https://github.com/AgentWeb-Labs/agentweb-mcp#readme"
+    },
+    {
       "name": "aginxbrowser",
       "displayName": "aginxbrowser",
       "description": "Rust MCP server and HTTP service that lets agents fetch JS-rendered or protected pages as clean markdown, meta-search 14 engines, screenshot, and run persistent logged-in sessions \u2014 each session exposes a live view URL so a human can watch and take over with the mouse",
@@ -17462,6 +17509,17 @@
       "install_url": "https://raw.githubusercontent.com/justinedwardvolmer/settled-skill/HEAD/plugins/settled/.claude-plugin/plugin.json"
     },
     {
+      "name": "ShipStatic for Antigravity",
+      "displayName": "ShipStatic for Antigravity",
+      "description": "Antigravity plugin that adds the hosted ShipStatic MCP server and its publish-online skill, so Antigravity publishes static sites with no account and returns a link to share",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "shipstatic",
+      "repo": "antigravity",
+      "url": "https://github.com/shipstatic/antigravity",
+      "installation_url": "https://github.com/shipstatic/antigravity#readme"
+    },
+    {
       "name": "Shipvela",
       "displayName": "Shipvela",
       "description": "MIT client bundle for owner-confirmed static website and GitHub publishing through a proprietary, account-based hosting service with OAuth MCP, exact deployment tracking, and plan limits",
@@ -17620,14 +17678,10 @@
       "description": "Hosted go-to-market MCP server with setup guides for Claude Code, Codex, Cursor and other agents: social listening across X, TikTok, Instagram, YouTube, Reddit and Xiaohongshu, website traffic and SEO research, company, contact and creator discovery, and copy, image, video and voiceover generation over OAuth, billed per call",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
       "owner": "springbrand-lab",
       "repo": "springbrand-agent-setup",
       "url": "https://github.com/springbrand-lab/springbrand-agent-setup",
-      "install_url": "https://raw.githubusercontent.com/springbrand-lab/springbrand-agent-setup/HEAD/.codex-plugin/plugin.json"
+      "installation_url": "https://github.com/springbrand-lab/springbrand-agent-setup#readme"
     },
     {
       "name": "Statsnet MCP",

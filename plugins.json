@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-13",
-  "total": 1341,
+  "total": 1345,
   "platforms": [
     "codex",
     "grok",
@@ -1570,8 +1570,10 @@
       "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/integrations/codex-plugin/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
-      ]
+        "codex",
+        "mcp"
+      ],
+      "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
       "name": "LVTD Skills",
@@ -4728,6 +4730,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/papersflow-ai/papersflow-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "phonedriver",
+      "url": "https://github.com/hridaya423/phonedriver",
+      "owner": "hridaya423",
+      "repo": "phonedriver",
+      "description": "Lets Codex see and operate Android phones, emulators, the iOS Simulator and iPhones through a local MCP server and its skill, and asks you before any tap that pays.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hridaya423/phonedriver/HEAD/packaging/plugin/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -9542,6 +9558,20 @@
       ]
     },
     {
+      "name": "hyperresearch",
+      "url": "https://github.com/jordan-gibbs/hyperresearch",
+      "owner": "jordan-gibbs",
+      "repo": "hyperresearch",
+      "description": "Deep research skill for Claude Code and Codex that runs a tiered 16-step pipeline, cite-checks sources, and builds a persistent searchable source vault",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/jordan-gibbs/hyperresearch/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "i-hate-editing",
       "url": "https://github.com/ranahaani/i-hate-editing",
       "owner": "ranahaani",
@@ -13146,6 +13176,20 @@
       "installation_url": "https://github.com/ariaxhan/agentmailkit#readme"
     },
     {
+      "name": "AgentWeb",
+      "url": "https://github.com/AgentWeb-Labs/agentweb-mcp",
+      "owner": "AgentWeb-Labs",
+      "repo": "agentweb-mcp",
+      "description": "MCP server: lets any agent act on real signed-in sites through typed, verified actions",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/AgentWeb-Labs/agentweb-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "aginxbrowser",
       "url": "https://github.com/yinnho/aginxbrowser",
       "owner": "yinnho",
@@ -16263,6 +16307,16 @@
       ]
     },
     {
+      "name": "ShipStatic for Antigravity",
+      "url": "https://github.com/shipstatic/antigravity",
+      "owner": "shipstatic",
+      "repo": "antigravity",
+      "description": "Antigravity plugin that adds the hosted ShipStatic MCP server and its publish-online skill, so Antigravity publishes static sites with no account and returns a link to share",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/shipstatic/antigravity#readme"
+    },
+    {
       "name": "Shipvela",
       "url": "https://github.com/stefanautomateed/shipvela-codex",
       "owner": "stefanautomateed",
@@ -16412,11 +16466,7 @@
       "description": "Hosted go-to-market MCP server with setup guides for Claude Code, Codex, Cursor and other agents: social listening across X, TikTok, Instagram, YouTube, Reddit and Xiaohongshu, website traffic and SEO research, company, contact and creator discovery, and copy, image, video and voiceover generation over OAuth, billed per call",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/springbrand-lab/springbrand-agent-setup/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
+      "installation_url": "https://github.com/springbrand-lab/springbrand-agent-setup#readme"
     },
     {
       "name": "Statsnet MCP",
