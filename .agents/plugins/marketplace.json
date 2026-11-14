@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-13",
+  "last_updated": "2026-11-14",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2445,6 +2445,21 @@
       "install_url": "https://raw.githubusercontent.com/sno-ai/sno-station-skills/HEAD/plugins/sno-station-standalone/.codex-plugin/plugin.json"
     },
     {
+      "name": "SSH Ops",
+      "displayName": "SSH Ops",
+      "description": "Operate Linux and Windows servers over SSH from Codex and the CLI using YAML configurations for commands, SFTP transfers, deployments, and background jobs on bash servers.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "leehom0123",
+      "repo": "ssh-ops",
+      "url": "https://github.com/leehom0123/ssh-ops",
+      "install_url": "https://raw.githubusercontent.com/leehom0123/ssh-ops/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Spec-Driven Development",
       "displayName": "Spec-Driven Development",
       "description": "Three-phase Requirements \u2192 Design \u2192 Tasks workflow for Claude Code and Codex \u2014 EARS notation acceptance criteria, autonomous execution loop, cross-spec dependencies, and post-implementation acceptance testing.",
@@ -2893,6 +2908,21 @@
       "repo": "vibestretch",
       "url": "https://github.com/Eliasjunit/vibestretch",
       "install_url": "https://raw.githubusercontent.com/Eliasjunit/vibestretch/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "vidbyte-memory",
+      "displayName": "vidbyte-memory",
+      "description": "Correction-driven memory for Codex: turns corrections into facts and pytest checks, stages all repository changes for commits and pushes to origin unless --no-push is used, and installs a Stop hook that keeps turns open until checks pass.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "cerredz",
+      "repo": "vidbyte-memory",
+      "url": "https://github.com/cerredz/vidbyte-memory",
+      "install_url": "https://raw.githubusercontent.com/cerredz/vidbyte-memory/HEAD/plugin.json"
     },
     {
       "name": "VillageSQL Skills",
@@ -5051,6 +5081,21 @@
       "repo": "orgx-codex-plugin",
       "url": "https://github.com/useorgx/orgx-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/useorgx/orgx-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "OsmO Phone Calls",
+      "displayName": "OsmO Phone Calls",
+      "description": "Lets Codex place real phone calls to businesses and helplines through OsmO's hosted MCP server after you confirm each one, and read back the summary and transcript; 50 free credits for new users in the US, Canada, UK and Australia, paid after that; with free credits, OsmO calls businesses and toll-free numbers; calling your contacts and scheduling calls need an OsmO app plan.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Mountainheads-Private-limited",
+      "repo": "osmo-ai-plugins",
+      "url": "https://github.com/Mountainheads-Private-limited/osmo-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Mountainheads-Private-limited/osmo-ai-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "PANews Agent Toolkit",
@@ -14976,6 +15021,21 @@
       "install_url": "https://raw.githubusercontent.com/connectmachine/claude-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Control Plane",
+      "displayName": "Control Plane",
+      "description": "MCP server: deploy, operate and troubleshoot Control Plane workloads across AWS, GCP, Azure and your own Kubernetes clusters from Claude Code, Codex or Cursor",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "controlplane-com",
+      "repo": "ai-plugin",
+      "url": "https://github.com/controlplane-com/ai-plugin",
+      "installation_url": "https://github.com/controlplane-com/ai-plugin#readme"
+    },
+    {
       "name": "Cordon",
       "displayName": "Cordon",
       "description": "Deterministic trust boundary between untrusted content and agent actions for Claude Code, Gemini CLI, MCP hosts and LangChain that strips the hidden layer, keeps provenance of every piece of data, issues an intent certificate and gates calls against it with no model call anywhere on the hot path, covered by 998 tests over 18 pinned attack vectors",
@@ -15131,7 +15191,7 @@
     {
       "name": "DC Hub",
       "displayName": "DC Hub",
-      "description": "MCP server: DC Hub is the live data layer for data-center site selection. Its Data Center Power Index (DCPI) is a daily score of where data centers can get grid power, across 300+ markets. 94 tools at https://dchub.cloud/mcp",
+      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 95 tools at https://dchub.cloud/mcp",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -16790,6 +16850,17 @@
       "install_url": "https://raw.githubusercontent.com/Syh1906/openai-compatible-imagegen/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "OpenAny",
+      "displayName": "OpenAny",
+      "description": "The B2A (business to agent) marketplace. One MCP endpoint for 3,200+ APIs and 168+ AI models. Browse free; pay per call. https://mcp.openany.si",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "openanysi",
+      "repo": "openany-mcp",
+      "url": "https://github.com/openanysi/openany-mcp",
+      "installation_url": "https://github.com/openanysi/openany-mcp#readme"
+    },
+    {
       "name": "Openbar",
       "displayName": "Openbar",
       "description": "Mac and Windows notch app that shows Claude Code and Codex sessions and lets you approve, answer and reply to them from there",
@@ -17645,6 +17716,21 @@
       "repo": "shotbase",
       "url": "https://github.com/route1-ai/shotbase",
       "installation_url": "https://github.com/route1-ai/shotbase#readme"
+    },
+    {
+      "name": "SightRadar Face Recognition API MCP",
+      "displayName": "SightRadar Face Recognition API MCP",
+      "description": "MCP server: official server for the SightRadar face recognition API to index photos, find every photo of a person from one selfie, compare and detect faces, and run batches, as a remote OAuth endpoint or a local npx server",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "sightradar-hq",
+      "repo": "sightradar-mcp",
+      "url": "https://github.com/sightradar-hq/sightradar-mcp",
+      "installation_url": "https://github.com/sightradar-hq/sightradar-mcp#readme"
     },
     {
       "name": "site-spec",

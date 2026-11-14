@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-13",
-  "total": 1353,
+  "last_updated": "2026-11-14",
+  "total": 1359,
   "platforms": [
     "codex",
     "grok",
@@ -2298,6 +2298,20 @@
       ]
     },
     {
+      "name": "SSH Ops",
+      "url": "https://github.com/leehom0123/ssh-ops",
+      "owner": "leehom0123",
+      "repo": "ssh-ops",
+      "description": "Operate Linux and Windows servers over SSH from Codex and the CLI using YAML configurations for commands, SFTP transfers, deployments, and background jobs on bash servers.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/leehom0123/ssh-ops/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Spec-Driven Development",
       "url": "https://github.com/Habib0x0/spec-driven-plugin",
       "owner": "Habib0x0",
@@ -2712,6 +2726,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Eliasjunit/vibestretch/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "vidbyte-memory",
+      "url": "https://github.com/cerredz/vidbyte-memory",
+      "owner": "cerredz",
+      "repo": "vidbyte-memory",
+      "description": "Correction-driven memory for Codex: turns corrections into facts and pytest checks, stages all repository changes for commits and pushes to origin unless --no-push is used, and installs a Stop hook that keeps turns open until checks pass.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/cerredz/vidbyte-memory/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4730,6 +4758,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/useorgx/orgx-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "OsmO Phone Calls",
+      "url": "https://github.com/Mountainheads-Private-limited/osmo-ai-plugins",
+      "owner": "Mountainheads-Private-limited",
+      "repo": "osmo-ai-plugins",
+      "description": "Lets Codex place real phone calls to businesses and helplines through OsmO's hosted MCP server after you confirm each one, and read back the summary and transcript; 50 free credits for new users in the US, Canada, UK and Australia, paid after that; with free credits, OsmO calls businesses and toll-free numbers; calling your contacts and scheduling calls need an OsmO app plan.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Mountainheads-Private-limited/osmo-ai-plugins/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -13957,6 +13999,20 @@
       ]
     },
     {
+      "name": "Control Plane",
+      "url": "https://github.com/controlplane-com/ai-plugin",
+      "owner": "controlplane-com",
+      "repo": "ai-plugin",
+      "description": "MCP server: deploy, operate and troubleshoot Control Plane workloads across AWS, GCP, Azure and your own Kubernetes clusters from Claude Code, Codex or Cursor",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/controlplane-com/ai-plugin#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Cordon",
       "url": "https://github.com/ilyautov/cordon",
       "owner": "ilyautov",
@@ -14103,7 +14159,7 @@
       "url": "https://github.com/azmartone67/dchub-mcp-server",
       "owner": "azmartone67",
       "repo": "dchub-mcp-server",
-      "description": "MCP server: DC Hub is the live data layer for data-center site selection. Its Data Center Power Index (DCPI) is a daily score of where data centers can get grid power, across 300+ markets. 94 tools at https://dchub.cloud/mcp",
+      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 95 tools at https://dchub.cloud/mcp",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -15641,6 +15697,16 @@
       ]
     },
     {
+      "name": "OpenAny",
+      "url": "https://github.com/openanysi/openany-mcp",
+      "owner": "openanysi",
+      "repo": "openany-mcp",
+      "description": "The B2A (business to agent) marketplace. One MCP endpoint for 3,200+ APIs and 168+ AI models. Browse free; pay per call. https://mcp.openany.si",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/openanysi/openany-mcp#readme"
+    },
+    {
       "name": "Openbar",
       "url": "https://github.com/MF-DEEV/Openbar",
       "owner": "MF-DEEV",
@@ -16433,6 +16499,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/route1-ai/shotbase#readme"
+    },
+    {
+      "name": "SightRadar Face Recognition API MCP",
+      "url": "https://github.com/sightradar-hq/sightradar-mcp",
+      "owner": "sightradar-hq",
+      "repo": "sightradar-mcp",
+      "description": "MCP server: official server for the SightRadar face recognition API to index photos, find every photo of a person from one selfie, compare and detect faces, and run batches, as a remote OAuth endpoint or a local npx server",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/sightradar-hq/sightradar-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "site-spec",
