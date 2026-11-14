@@ -294,6 +294,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [ai-tracedoc-mods](https://github.com/didongke/ai-tracedoc-mods) - Records every Claude Code Q&A into a per-project ledger, as a hooks module rather than a binary.
 - [AIAgentCycle](https://github.com/aiagentcycle/aiagentcycle-mcp) - MCP server: read-only, no-auth access to current AIAgentCycle services, pricing, integrations, case studies, knowledge base, and contact details over Streamable HTTP.
 - [AIBoarding](https://github.com/gustavo-meilus/aiboarding) - Generate, maintain, compress, and audit standard AI-agent onboarding files with AGENTS.md, CLAUDE.md, drift tracking, and lifecycle hooks.
+- [AID](https://github.com/ilandahan/AID) - Claude Code plugin bundling 28 skills, 39 sub-agents, and commands that enforce a six-phase development lifecycle from discovery to release.
 - [aide](https://github.com/jmylchreest/aide) - Persistent memory, code intelligence, and multi-agent orchestration for Claude Code, OpenCode, and Codex CLI via skills, hooks, and an MCP server.
 - [Aident Loadout](https://github.com/Aident-AI/aident-skill) - MCP server: app integrations for coding assistants through OAuth, with an agent skill and an action audit trail.
 - [akc-cycle](https://github.com/shimo4228/akc-cycle) - Claude Code plugin for the Agent Knowledge Cycle: ten skills for its six phases (research, extract, curate, promote, measure, maintain) and seven companion skills for model-generation audits, ADRs with expiry conditions, review-to-lint and LLM-as-judge design.
