@@ -1344,6 +1344,7 @@ submitting a repository.
 - [dsh-im-companion](https://github.com/FeatherHunter/dsh-im-companion) - Workspace presence companion for dsh-im: see which workspaces have an assistant on duty and whether they are online.
 - [dsh-imagegen-video](https://github.com/q253595422/dsh-imagegen-video) - DeepSeek Harness plugin for image and video generation with an infinite canvas, storyboard nodes, and local clip stitching.
 - [dsh-infinite_canvas](https://github.com/NINKCH/dsh-infinite_canvas) - A DeepSeek Harness plugin adding a node-based canvas studio for scripting, storyboarding, reference images and multi-shot video generation.
+- [dsh-liketavern](https://github.com/Amakurai/dsh-liketavern) - DeepSeek Harness plugin for SillyTavern-style roleplay with character cards, prompt presets, lorebooks, personas, BM25 memory, and isolated story branches.
 - [dsh-m](https://github.com/iasiv5/dsh-m) - DeepSeek Harness plugin marketplace: searchable community and curated listings with install, update, toggle, and uninstall handled from one sidebar panel, plus eight agent tools and a standalone `dshm` CLI; install with `dsh plugin --profile web add dsh-m`.
 - [dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) - DSH plugin that renders GitHub issues as a task board panel and bundles 25 mattpocock/skills for one-click loading.
 - [dsh-mcp-manager](https://github.com/hyqhyq3/dsh-mcp-manager) - DeepSeek Harness plugin for managing OAuth PKCE and static-token HTTP MCP servers, local stdio processes, and per-workspace tool registration.
