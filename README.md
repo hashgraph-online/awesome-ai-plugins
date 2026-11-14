@@ -241,6 +241,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Webly](https://github.com/Webly-AI/webly-plugin) - Agent skill and hosted MCP server that publish a website or share files and folders at a live URL in seconds with no account, then let the person claim it, edit it over MCP, and publish drafts they approve, also packaged as Claude Code, Codex, Cursor, and Gemini CLI plugins.
 - [whatishipped](https://github.com/selan-ai/whatishipped) - A Claude Code skill that recreates a mobile app's UI as it ships: every screen, state, component and journey of an iOS or Android app, drawn from its code and checked against the app's own screenshots.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
+- [YouTube Transcript Skills](https://github.com/tubeagentkit/youtube-transcript-skills) - Agent Skill for Claude Code, Cursor, Codex and OpenClaw that fetches YouTube transcripts and browses search results, channels and playlists.
 
 ### Development & Workflow
 
