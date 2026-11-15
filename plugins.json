@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-14",
-  "total": 1359,
+  "last_updated": "2026-11-15",
+  "total": 1366,
   "platforms": [
     "codex",
     "grok",
@@ -5738,6 +5738,20 @@
       "installation_url": "https://github.com/Webly-AI/webly-plugin#readme"
     },
     {
+      "name": "Worktable",
+      "url": "https://github.com/worktable/worktable-plugin",
+      "owner": "worktable",
+      "repo": "worktable-plugin",
+      "description": "Connects Codex to a Worktable workspace through a hosted MCP server and six skills to create and revise docs, interactive HTML, drawings, records, annotations, and threads shared by people and agents.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/worktable/worktable-plugin/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "X (Twitter) Skills",
       "url": "https://github.com/sergebulaev/x-skills",
       "owner": "sergebulaev",
@@ -7124,6 +7138,20 @@
       ]
     },
     {
+      "name": "YouTube Transcript Skills",
+      "url": "https://github.com/tubeagentkit/youtube-transcript-skills",
+      "owner": "tubeagentkit",
+      "repo": "youtube-transcript-skills",
+      "description": "Agent Skill for Claude Code, Cursor, Codex and OpenClaw that fetches YouTube transcripts and browses search results, channels and playlists",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/tubeagentkit/youtube-transcript-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "geml",
       "url": "https://github.com/geml-spec/geml",
       "owner": "geml-spec",
@@ -7412,6 +7440,20 @@
       ]
     },
     {
+      "name": "agentwhy",
+      "url": "https://github.com/karolkozer/agentwhy",
+      "owner": "karolkozer",
+      "repo": "agentwhy",
+      "description": "Claude Code plugin that audits local file access, alerts on private-file reads, and enforces user-configured file blocks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/karolkozer/agentwhy/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "AgentWiki",
       "url": "https://github.com/tidusvn05/agentwiki",
       "owner": "tidusvn05",
@@ -7565,6 +7607,20 @@
       "installation_url": "https://github.com/aiagentcycle/aiagentcycle-mcp#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "AID",
+      "url": "https://github.com/ilandahan/AID",
+      "owner": "ilandahan",
+      "repo": "AID",
+      "description": "Claude Code plugin bundling 28 skills, 39 sub-agents, and commands that enforce a six-phase development lifecycle from discovery to release",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ilandahan/AID/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -8453,20 +8509,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/skymanbp/CodeEraser/HEAD/plugin/.claude-plugin/plugin.json",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ]
-    },
-    {
-      "name": "Codex Attachment Manager",
-      "url": "https://github.com/chipfighter/codex-attachment-manager",
-      "owner": "chipfighter",
-      "repo": "codex-attachment-manager",
-      "description": "Choose which past images in a Codex desktop task go to the model with your next message; unchecked ones become short placeholders",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/chipfighter/codex-attachment-manager/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -10012,6 +10054,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/fabricioctelles/jump-skills#readme"
+    },
+    {
+      "name": "kamikaze-tasks",
+      "url": "https://github.com/felpk/kamikaze-tasks",
+      "owner": "felpk",
+      "repo": "kamikaze-tasks",
+      "description": "CLI and Claude Code skill that turns a one-shot task into a contract with verifiable checks, runs it with destructive commands denied, verifies every check with evidence, parks side findings in an inbox and closes the tmux pane",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/felpk/kamikaze-tasks/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "keep-the-why",
@@ -14964,6 +15020,20 @@
       ]
     },
     {
+      "name": "JuzPost",
+      "url": "https://github.com/juzpost/juzpost-agent",
+      "owner": "juzpost",
+      "repo": "juzpost-agent",
+      "description": "MCP server: draft, schedule and publish social media posts to 11 networks from ChatGPT, with OAuth sign-in and approval before anything is scheduled, published or deleted",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/juzpost/juzpost-agent#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "JVM Pulse",
       "url": "https://github.com/brunoborges/jvm-pulse",
       "owner": "brunoborges",
@@ -15680,7 +15750,11 @@
       "description": "Document framework for agents: write React/TSX or import Markdown, render to real A4 pages, and export PDF, HTML, or Word, with bundled Agent Skills and an opt-in MCP server for editing documents",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/simonliu-ai-product/open-doc#readme"
+      "install_url": "https://raw.githubusercontent.com/simonliu-ai-product/open-doc/HEAD/plugins/open-doc/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "OpenAI-Compatible Images",
@@ -15704,7 +15778,11 @@
       "description": "The B2A (business to agent) marketplace. One MCP endpoint for 3,200+ APIs and 168+ AI models. Browse free; pay per call. https://mcp.openany.si",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/openanysi/openany-mcp#readme"
+      "install_url": "https://raw.githubusercontent.com/openanysi/openany-mcp/HEAD/plugins/claude-code/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "Openbar",
@@ -17579,6 +17657,19 @@
       ]
     },
     {
+      "name": "dsh-mobile-plugin",
+      "url": "https://github.com/WNLUO/dsh-mobile-plugin",
+      "owner": "WNLUO",
+      "repo": "dsh-mobile-plugin",
+      "description": "DeepSeek Harness plugin that lets Android and iOS phones and tablets continue conversations, browse files and manage plugins on a host computer or server, and open sessions on several other DSH hosts from the one currently in use",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
       "name": "dsh-music-player",
       "url": "https://github.com/kendu76/dsh-music-player",
       "owner": "kendu76",
@@ -17636,6 +17727,19 @@
       "owner": "wingsky-1",
       "repo": "dsh-plugin-hub",
       "description": "Plugin collection for the DeepSeek Harness web GUI: task notifications, provider usage tracking, MCP management, and LAN access",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ]
+    },
+    {
+      "name": "dsh-plugin-smooth-stream",
+      "url": "https://github.com/SpookySandwich/dsh-plugin-smooth-stream",
+      "owner": "SpookySandwich",
+      "repo": "dsh-plugin-smooth-stream",
+      "description": "Plugin for DeepSeek Harness that batches streaming output by paragraph, with entrance animations, smooth scrolling, and a settings panel",
       "category": "DeepSeek Harness Plugins",
       "source": "awesome-ai-plugins",
       "platform": "deepseek-harness",
