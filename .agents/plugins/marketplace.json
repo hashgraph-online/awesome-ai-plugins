@@ -967,7 +967,7 @@
     {
       "name": "Context Attachment Manager",
       "displayName": "Context Attachment Manager",
-      "description": "Manage image history in Codex desktop and Claude Desktop Code with on-demand image retrieval, pinned references, and search by description or feedback.",
+      "description": "Keep image-heavy Codex and Claude Code chats small: earlier images go out as short placeholders instead of being sent again with every message, the model fetches the original back by its ID (also after compaction), and the prompt cache keeps working.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "platform": "codex",
@@ -9063,6 +9063,21 @@
       "install_url": "https://raw.githubusercontent.com/shanjeevrajendran/cloakroom-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Cloud Alter Ego",
+      "displayName": "Cloud Alter Ego",
+      "description": "MCP server: Remote connector that gives every AI chat your rules, profile and journals as plain Markdown files in your own OneDrive, Google Drive, Dropbox, GitHub or Azure DevOps",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "SebastiaanBoon",
+      "repo": "cloud-alter-ego",
+      "url": "https://github.com/SebastiaanBoon/cloud-alter-ego",
+      "installation_url": "https://github.com/SebastiaanBoon/cloud-alter-ego#readme"
+    },
+    {
       "name": "Cloudish",
       "displayName": "Cloudish",
       "description": "Deploy a Dockerfile, source folder, or container image to Cloudish from Claude Code or Codex and report the live URL, with persistent volumes and an agent-created, credit-capped API key",
@@ -16363,10 +16378,14 @@
       "description": "21 Agent Skills that search, price and run 2,500+ data API endpoints (work emails, company and people search, Google results, web pages) with one prepaid balance",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
       "owner": "loootai",
       "repo": "looot-skills",
       "url": "https://github.com/loootai/looot-skills",
-      "installation_url": "https://github.com/loootai/looot-skills#readme"
+      "install_url": "https://raw.githubusercontent.com/loootai/looot-skills/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "MailVeri MCP",

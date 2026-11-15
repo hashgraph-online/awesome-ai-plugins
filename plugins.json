@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-15",
-  "total": 1366,
+  "total": 1367,
   "platforms": [
     "codex",
     "grok",
@@ -919,7 +919,7 @@
       "url": "https://github.com/chipfighter/context-attachment-manager",
       "owner": "chipfighter",
       "repo": "context-attachment-manager",
-      "description": "Manage image history in Codex desktop and Claude Desktop Code with on-demand image retrieval, pinned references, and search by description or feedback.",
+      "description": "Keep image-heavy Codex and Claude Code chats small: earlier images go out as short placeholders instead of being sent again with every message, the model fetches the original back by its ID (also after compaction), and the prompt cache keeps working.",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/chipfighter/context-attachment-manager/HEAD/plugin/.codex-plugin/plugin.json",
@@ -8473,6 +8473,20 @@
       ]
     },
     {
+      "name": "Cloud Alter Ego",
+      "url": "https://github.com/SebastiaanBoon/cloud-alter-ego",
+      "owner": "SebastiaanBoon",
+      "repo": "cloud-alter-ego",
+      "description": "MCP server: Remote connector that gives every AI chat your rules, profile and journals as plain Markdown files in your own OneDrive, Google Drive, Dropbox, GitHub or Azure DevOps",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/SebastiaanBoon/cloud-alter-ego#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Cloudish",
       "url": "https://github.com/cloudishai/skills",
       "owner": "cloudishai",
@@ -15248,7 +15262,11 @@
       "description": "21 Agent Skills that search, price and run 2,500+ data API endpoints (work emails, company and people search, Google results, web pages) with one prepaid balance",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/loootai/looot-skills#readme"
+      "install_url": "https://raw.githubusercontent.com/loootai/looot-skills/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
     },
     {
       "name": "MailVeri MCP",
