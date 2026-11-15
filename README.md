@@ -280,6 +280,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [AgentPack](https://github.com/vishal2612200/agentpack) - Ranks repo context for Codex with likely files, skill recommendations, agent rules, commands, warnings, and compact task-focused packs before editing.
 - [agentRamen](https://github.com/palrajjp/agentRamen) - Local SQLite graph of code and git history plus session memory, so the agent stops re-reading the repo every prompt.
 - [Agentry Observability](https://github.com/fr33dr4g0n/agentry-public) - Agent-native product analytics, error logging, and deploy attribution for coding agents through one HTTP API.
+- [agentwhy](https://github.com/karolkozer/agentwhy) - Claude Code plugin that audits local file access, alerts on private-file reads, and enforces user-configured file blocks.
 - [AgentWiki](https://github.com/tidusvn05/agentwiki) - Rust CLI that generates C4-style architecture docs for any repository using already-authenticated agent CLIs (Claude Code, Codex, Devin) as the LLM backend.
 - [AgiFlow](https://github.com/AgiFlow/ai-plugin) - Project management workflows for AI coding agents with planning, grooming, task execution, review, and AgiFlow MCP integration.
 - [agmsg](https://github.com/fujibee/agmsg) - Cross-vendor messaging for CLI coding agents (Claude Code, Codex, Gemini CLI, Grok): sessions join a team by name and hand work to each other through a shared local SQLite file, with durable history and ext-tool members that let a program such as Slack or Jev join like any agent.
