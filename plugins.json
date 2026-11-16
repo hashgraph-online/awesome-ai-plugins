@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-16",
-  "total": 1369,
+  "total": 1373,
   "platforms": [
     "codex",
     "grok",
@@ -3736,6 +3736,20 @@
       ]
     },
     {
+      "name": "Dawn",
+      "url": "https://github.com/hraness/product-skills",
+      "owner": "hraness",
+      "repo": "product-skills",
+      "description": "Compose, arrange and render original songs offline with the Dawn TypeScript music SDK and headless CLI; needs an authorized Dawn private-preview install.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/dawn/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "deed.page",
       "url": "https://github.com/f-o-x11/deed-page-skill",
       "owner": "f-o-x11",
@@ -5400,6 +5414,20 @@
       ]
     },
     {
+      "name": "Sponge",
+      "url": "https://github.com/hraness/product-skills",
+      "owner": "hraness",
+      "repo": "product-skills",
+      "description": "Search, cite and annotate the articles and PDFs in your own Sponge reading library through its local CLI and MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/sponge/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Story Skills",
       "url": "https://github.com/danjdewhurst/story-skills",
       "owner": "danjdewhurst",
@@ -5562,6 +5590,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/YujxZJCN/teaching-skills-codex/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Textmock",
+      "url": "https://github.com/hraness/product-skills",
+      "owner": "hraness",
+      "repo": "product-skills",
+      "description": "Make iMessage-style conversation links that open as editable copies in Textmock, then save them as images or videos.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/textmock/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5816,6 +5858,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/nebelov/yandex-direct-for-all/HEAD/plugins/yandex-direct-for-all/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Yaptake",
+      "url": "https://github.com/hraness/product-skills",
+      "owner": "hraness",
+      "repo": "product-skills",
+      "description": "Cut fillers, fix captions and preview edits in the video project open in the Yaptake Mac app through its local MCP server; needs the app.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/yaptake/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -16948,14 +17004,14 @@
     },
     {
       "name": "Touchline Wire MCP",
-      "url": "https://github.com/Steven-Robinson/touchlinewire-mcp",
-      "owner": "Steven-Robinson",
+      "url": "https://github.com/touchlinewire/touchlinewire-mcp",
+      "owner": "touchlinewire",
       "repo": "touchlinewire-mcp",
-      "description": "MCP server: live Premier League football tactical intelligence with 10 read-only tools for AI predicted starting lineups, squad injury wires, referee disciplinary dossiers, official standings, and tier-graded transfer rumours; no API key required",
+      "description": "MCP server: live Premier League football tactical intelligence with 16 read-only tools for AI predicted starting lineups, squad injury wires, referee disciplinary dossiers, official standings, and tier-graded transfer rumours; no API key required",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
-      "installation_url": "https://github.com/Steven-Robinson/touchlinewire-mcp#readme",
+      "installation_url": "https://github.com/touchlinewire/touchlinewire-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
