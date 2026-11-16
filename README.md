@@ -353,6 +353,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [cc-memory](https://github.com/skymanbp/cc-memory) - Persistent memory for Claude Code across compaction and sessions: reconcile-on-write with LLM-judged de-duplication, a forced PROGRESS.md handoff, a live PLAN.md anchor, FTS5 search, MCP tools and a GUI, in pure stdlib Python.
 - [cc-stretch](https://github.com/pro-vi/cc-stretch) - Claude Code plugin that has Claude write stretchtext: each reply reads complete at its shortest, and a phrase grows in place when you click it.
 - [cc-tree](https://github.com/skymanbp/cc-tree) - Claude Code plugin that runs brainstorming, adversarial critique, design-space comparison and code audit as an auditable radial tree with file:line or URL evidence on every node.
+- [ccx](https://github.com/AaronWong1999/ccx) - macOS menu bar app and Claude Code plugin that hands a task between Claude Code, Codex and Antigravity with its context intact, so a usage-limit wall is a pause instead of a stop.
 - [Changelog Forge](./plugins/mturac/changelog-forge) - Conventional commits → CHANGELOG section + semver bump.
 - [chat-history](https://github.com/ay-bh/chat-history) - Claude Code/Codex/Cursor history search + export.
 - [ChatVault](https://github.com/ssanaullahrais/Chat-Vault) - Windows app that reads, searches, backs up and continues your Claude Code, Codex, Cursor, Gemini CLI, OpenCode and Cline chats across accounts. <!-- platform: standalone -->
