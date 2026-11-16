@@ -485,6 +485,21 @@
       "install_url": "https://raw.githubusercontent.com/echoVic/boss-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "brief2mp4",
+      "displayName": "brief2mp4",
+      "description": "Turns a written video brief into a finished MP4 motion graphic with HyperFrames, Three.js or Blender, then measures the file and checks real frames against every line of the brief before delivering it with a report.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "qualixar",
+      "repo": "brief2mp4",
+      "url": "https://github.com/qualixar/brief2mp4",
+      "install_url": "https://raw.githubusercontent.com/qualixar/brief2mp4/HEAD/plugin/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Bring Your AI Migration Auditor",
       "displayName": "Bring Your AI Migration Auditor",
       "description": "Read-only audit of AGENTS.md/CLAUDE.md scope, hooks, MCP config, skills, secret references, and validation notes before Codex edits migrated projects.",
@@ -7386,6 +7401,21 @@
       "installation_url": "https://github.com/playcanvas/skills#readme"
     },
     {
+      "name": "PostOnce Skills",
+      "displayName": "PostOnce Skills",
+      "description": "Agent Skills and a hosted MCP server that post one video or post to TikTok, Instagram, YouTube, LinkedIn, Facebook, X, Threads, Pinterest and Bluesky through official APIs",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "postoncehq",
+      "repo": "postonce-skills",
+      "url": "https://github.com/postoncehq/postonce-skills",
+      "installation_url": "https://github.com/postoncehq/postonce-skills#readme"
+    },
+    {
       "name": "Principal Engineer OS",
       "displayName": "Principal Engineer OS",
       "description": "Agent skill that guides AI-assisted engineering with explicit trade-offs, boundary-focused correctness, security and privacy review, operational judgment, and evidence-based delivery",
@@ -7890,21 +7920,6 @@
       "repo": "agent-guard",
       "url": "https://github.com/hahahahahahahahah6/agent-guard",
       "installation_url": "https://github.com/hahahahahahahahah6/agent-guard#readme"
-    },
-    {
-      "name": "agent-kit",
-      "displayName": "agent-kit",
-      "description": "Extension pack of slash commands, skills, rules, and hooks adding plan-driven, confirmation-gated coding and staging-to-prod git workflows to Cursor and Claude Code",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "agent-kit-startup",
-      "repo": "agent-kit",
-      "url": "https://github.com/agent-kit-startup/agent-kit",
-      "install_url": "https://raw.githubusercontent.com/agent-kit-startup/agent-kit/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "agent-memory-kit",
@@ -11570,6 +11585,21 @@
       "install_url": "https://raw.githubusercontent.com/Ikalus1988/MisakaNet/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Mission Kit",
+      "displayName": "Mission Kit",
+      "description": "Extension pack of slash commands, skills, rules, and hooks adding plan-driven, confirmation-gated coding and staging-to-prod git workflows to Cursor and Claude Code",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "agent-kit-startup",
+      "repo": "agent-kit",
+      "url": "https://github.com/agent-kit-startup/agent-kit",
+      "install_url": "https://raw.githubusercontent.com/agent-kit-startup/agent-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Mnemosyne OS",
       "displayName": "Mnemosyne OS",
       "description": "MCP server: MIT stdio server that gives an agent the vaults the user chooses in the Mnemosyne OS desktop app, where watched folders feed separate vaults on the user's machine searched by vector and local BM25; the memory tools need the free desktop app running, and its memory engine ships closed",
@@ -13356,6 +13386,21 @@
       "repo": "squadra",
       "url": "https://github.com/dagoSte/squadra",
       "install_url": "https://raw.githubusercontent.com/dagoSte/squadra/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Squaretrue",
+      "displayName": "Squaretrue",
+      "description": "Coding-agent workflow for Claude Code and portable Agent Skills covering scoped changes, verification, documentation, and evidence-backed delivery reports",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "Yoanns",
+      "repo": "squaretrue",
+      "url": "https://github.com/Yoanns/squaretrue",
+      "install_url": "https://raw.githubusercontent.com/Yoanns/squaretrue/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "squidward",
@@ -17444,6 +17489,21 @@
       "repo": "plane-codex-mcp",
       "url": "https://github.com/Bene-2020/plane-codex-mcp",
       "installation_url": "https://github.com/Bene-2020/plane-codex-mcp#readme"
+    },
+    {
+      "name": "PlushSource MCP",
+      "displayName": "PlushSource MCP",
+      "description": "MCP server: search, filter and compare the 55 custom plush manufacturers listed on [PlushSource](https://plushsource.com) by country, MOQ, lead time, OEM/ODM and claimed certifications, with facts taken from each manufacturer's own website; runs locally over stdio with no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "quickman924",
+      "repo": "plushsource-mcp",
+      "url": "https://github.com/quickman924/plushsource-mcp",
+      "installation_url": "https://github.com/quickman924/plushsource-mcp#readme"
     },
     {
       "name": "Portway",
