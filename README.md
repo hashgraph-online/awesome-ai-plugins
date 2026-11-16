@@ -213,6 +213,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 
 - [PlayCanvas Skills](https://github.com/playcanvas/skills) - 16 portable Agent Skills that teach AI coding agents to build, inspect, and verify PlayCanvas Engine, React, and Web Components applications, also packaged as Claude Code, Codex, and Cursor plugins.
 - [post](https://github.com/jack-reson8/post-skill) - Agent skill that builds Xiaohongshu and X share-image sets with App Store poster layouts, real screenshots, and faithful app-UI mocks.
+- [PostOnce Skills](https://github.com/postoncehq/postonce-skills) - Agent Skills and a hosted MCP server that post one video or post to TikTok, Instagram, YouTube, LinkedIn, Facebook, X, Threads, Pinterest and Bluesky through official APIs.
 - [Principal Engineer OS](https://github.com/YourAKShaw/principal-engineer-os) - Agent skill that guides AI-assisted engineering with explicit trade-offs, boundary-focused correctness, security and privacy review, operational judgment, and evidence-based delivery.
 - [pro-launch](https://github.com/jack-reson8/pro-launch) - Agent skill for building a product from zero to one with phase gates: references, naming and trademark checks, style frames, UI build loop, launch and shipping.
 - [pro-motion](https://github.com/jack-reson8/pro-motion) - Agent skill that plans the music first, then renders motion-graphics launch and brand films in code (canvas to MP4) cut to the track.
