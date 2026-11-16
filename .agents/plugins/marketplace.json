@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-15",
+  "last_updated": "2026-11-16",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2700,6 +2700,21 @@
       "install_url": "https://raw.githubusercontent.com/Colin4k1024/tsp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Telegram Bot UI",
+      "displayName": "Telegram Bot UI",
+      "description": "Design, build and audit Telegram bot interfaces (texts, keyboards, colored buttons, streaming AI replies, Rich Messages, channel posts) with a skill updated for every Bot API release.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "hlibsuslov",
+      "repo": "telegram-bot-ui",
+      "url": "https://github.com/hlibsuslov/telegram-bot-ui",
+      "install_url": "https://raw.githubusercontent.com/hlibsuslov/telegram-bot-ui/HEAD/plugin.json"
+    },
+    {
       "name": "TMCRA Local Memory",
       "displayName": "TMCRA Local Memory",
       "description": "Owner-local memory for Codex that recalls user and project evidence before each answer and carries source-attributed project context across sessions and supported agent tools.",
@@ -4338,6 +4353,21 @@
       "repo": "claude-plugin-fxmacrodata",
       "url": "https://github.com/fxmacrodata/claude-plugin-fxmacrodata",
       "install_url": "https://raw.githubusercontent.com/fxmacrodata/claude-plugin-fxmacrodata/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GetYouTubeTranscript",
+      "displayName": "GetYouTubeTranscript",
+      "description": "YouTube transcripts in any caption language, YouTube search, channel uploads and playlist videos through a hosted MCP server, plus a skill that writes REST API code for transcripts; 100 free credits on sign-up, paid after that.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "tubeagentkit",
+      "repo": "youtube-mcp",
+      "url": "https://github.com/tubeagentkit/youtube-mcp",
+      "install_url": "https://raw.githubusercontent.com/tubeagentkit/youtube-mcp/HEAD/plugin.json"
     },
     {
       "name": "GH Project",
@@ -15266,7 +15296,7 @@
     {
       "name": "DC Hub",
       "displayName": "DC Hub",
-      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 95 tools at https://dchub.cloud/mcp",
+      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 96 tools at https://dchub.cloud/mcp",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
