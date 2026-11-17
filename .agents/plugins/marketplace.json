@@ -3484,6 +3484,21 @@
       "install_url": "https://raw.githubusercontent.com/bankbridge-money/bankbridge-plugin/HEAD/plugin.json"
     },
     {
+      "name": "Banking Access Index",
+      "displayName": "Banking Access Index",
+      "description": "Skill that looks up what 19 US business banking providers publish about US LLC owners who aren't US tax residents, across 8 countries, citing each provider's own page and the date it was read.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "global-solo",
+      "repo": "banking-access-index-mcp",
+      "url": "https://github.com/global-solo/banking-access-index-mcp/tree/codex",
+      "install_url": "https://raw.githubusercontent.com/global-solo/banking-access-index-mcp/codex/plugins/banking-access-index/plugin.json"
+    },
+    {
       "name": "BestPrice",
       "displayName": "BestPrice",
       "description": "Official remote MCP server and skill for read-only shopping decisions, product search, Greek merchant offers with delivered totals, and price history from BestPrice.gr.",
@@ -6066,6 +6081,21 @@
       "install_url": "https://raw.githubusercontent.com/YujxZJCN/teaching-skills-codex/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Tensorust",
+      "displayName": "Tensorust",
+      "description": "Public-records skills plus a hosted MCP server: who owns a US company or home, vendor screening against DoD 1260H, Section 889, FCC Covered List, UFLPA and BIOSECURE, BDC loan marks, and dated LLM API prices.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Mattbusel",
+      "repo": "tensorust-skills",
+      "url": "https://github.com/Mattbusel/tensorust-skills",
+      "install_url": "https://raw.githubusercontent.com/Mattbusel/tensorust-skills/HEAD/plugin.json"
+    },
+    {
       "name": "Textmock",
       "displayName": "Textmock",
       "description": "Make iMessage-style conversation links that open as editable copies in Textmock, then save them as images or videos.",
@@ -7446,6 +7476,21 @@
       "repo": "skills",
       "url": "https://github.com/nuthinking/skills",
       "installation_url": "https://github.com/nuthinking/skills#readme"
+    },
+    {
+      "name": "Perq",
+      "displayName": "Perq",
+      "description": "Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "f-o-x11",
+      "repo": "perq-skill",
+      "url": "https://github.com/f-o-x11/perq-skill",
+      "installation_url": "https://github.com/f-o-x11/perq-skill#readme"
     },
     {
       "name": "Pixi\u2019VN",
