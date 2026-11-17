@@ -19781,6 +19781,21 @@
       "installation_url": "https://github.com/federicobordon09-dev/opencode-Hush#readme"
     },
     {
+      "name": "OpenCode Message Nav",
+      "displayName": "OpenCode Message Nav",
+      "description": "OpenCode TUI plugin that adds mouse-driven Prev/Next buttons under the Jump to latest row for moving quickly between user messages",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "zhek",
+      "repo": "opencode-message-nav",
+      "url": "https://github.com/zhek/opencode-message-nav",
+      "installation_url": "https://github.com/zhek/opencode-message-nav#readme"
+    },
+    {
       "name": "OpenCode Tab Wrangler",
       "displayName": "OpenCode Tab Wrangler",
       "description": "Preview-first OpenCode V2 CLI-only tab housekeeping with configurable idle cleanup and Corral recovery, closing tabs without deleting sessions",

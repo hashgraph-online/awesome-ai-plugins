@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-17",
-  "total": 1387,
+  "total": 1388,
   "platforms": [
     "codex",
     "grok",
@@ -18416,6 +18416,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/federicobordon09-dev/opencode-Hush#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "OpenCode Message Nav",
+      "url": "https://github.com/zhek/opencode-message-nav",
+      "owner": "zhek",
+      "repo": "opencode-message-nav",
+      "description": "OpenCode TUI plugin that adds mouse-driven Prev/Next buttons under the Jump to latest row for moving quickly between user messages",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/zhek/opencode-message-nav#readme",
       "ecosystems": [
         "opencode"
       ]
