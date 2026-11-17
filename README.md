@@ -202,6 +202,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [native-subtitle-quote-image](https://github.com/chengyi-ai/native-subtitle-quote-image) - Agent skill for Codex, Claude Code and other agents that extracts precise frames from subtitled videos and stitches them into compact 3:4 quote long images, keeping the original burned-in subtitles.
 - [Nitrogen](https://github.com/mksd0398/nitrogen) - Agent skill and CLI that scaffold and deploy Shopify embedded apps on Firebase, with one Cloud Function per API resource, Firestore, and admin pages built from Polaris web components, also packaged as a Claude Code plugin marketplace.
 - [nuthinking/skills](https://github.com/nuthinking/skills) - Agent skills for Claude Code, Codex and Cursor, including site-edit, where editors pin notes on a live site and Claude Code turns them into pull requests, and product-map, which keeps a feature map and product flows in the repo.
+- [Perq](https://github.com/f-o-x11/perq-skill) - Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
 
 <details>
