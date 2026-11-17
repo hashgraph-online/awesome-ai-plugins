@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-16",
+  "last_updated": "2026-11-17",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -365,6 +365,21 @@
       "install_url": "https://raw.githubusercontent.com/armoriq/armorCodex/HEAD/plugins/armorcodex/.codex-plugin/plugin.json"
     },
     {
+      "name": "AsItIs",
+      "displayName": "AsItIs",
+      "description": "Read-only linter for AGENTS.md, CLAUDE.md and SKILL.md that shows what Codex loads at launch, what gets cut at the 32 KiB limit, and instructions hidden in comments or invisible characters.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Katta041",
+      "repo": "asitis-agent-tools",
+      "url": "https://github.com/Katta041/asitis-agent-tools",
+      "install_url": "https://raw.githubusercontent.com/Katta041/asitis-agent-tools/HEAD/plugins/asitis/.codex-plugin/plugin.json"
+    },
+    {
       "name": "assay",
       "displayName": "assay",
       "description": "Opens a web page you changed, drives every control on it, and reports what it did and what happened in one line, clean or broken.",
@@ -558,6 +573,21 @@
       "repo": "casefile",
       "url": "https://github.com/x4cc3/casefile",
       "install_url": "https://raw.githubusercontent.com/x4cc3/casefile/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ccx",
+      "displayName": "ccx",
+      "description": "Syncs task context between Claude Code, Codex and Antigravity, so a Claude Code session or an Antigravity conversation can be imported into a Codex thread, kept in sync, or handed over.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AaronWong1999",
+      "repo": "ccx",
+      "url": "https://github.com/AaronWong1999/ccx",
+      "install_url": "https://raw.githubusercontent.com/AaronWong1999/ccx/HEAD/packaging/codex-directory/.codex-plugin/plugin.json"
     },
     {
       "name": "ChatGPT Agent",
@@ -1247,7 +1277,7 @@
       "owner": "tester-army",
       "repo": "e2e",
       "url": "https://github.com/tester-army/e2e",
-      "install_url": "https://raw.githubusercontent.com/tester-army/e2e/HEAD/plugins/e2e/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/tester-army/e2e/HEAD/plugins/e2e/plugin.json"
     },
     {
       "name": "ejentum-mcp",
@@ -1413,6 +1443,21 @@
       "repo": "Generative-Media-Skills",
       "url": "https://github.com/SamurAIGPT/Generative-Media-Skills",
       "install_url": "https://raw.githubusercontent.com/SamurAIGPT/Generative-Media-Skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "GitRanks Contribute",
+      "displayName": "GitRanks Contribute",
+      "description": "Find open-source GitHub issues matched to your skills, fix one with your agent, and approve the pull request yourself.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "gitranks",
+      "repo": "contribute",
+      "url": "https://github.com/gitranks/contribute",
+      "install_url": "https://raw.githubusercontent.com/gitranks/contribute/HEAD/plugin.json"
     },
     {
       "name": "Goal Progress",
@@ -1668,6 +1713,21 @@
       "repo": "krypton",
       "url": "https://github.com/jturntdev/krypton",
       "install_url": "https://raw.githubusercontent.com/jturntdev/krypton/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "lgpd-skills",
+      "displayName": "lgpd-skills",
+      "description": "Modular Agent Skills toolkit (Claude Code, Codex, Cursor, Gemini CLI, OpenCode) for LGPD & ECA Digital privacy engineering, automated compliance audits, LINDDUN threat modeling, consent ledgers, and DSAR endpoints.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "goul4rt",
+      "repo": "lgpd-skills",
+      "url": "https://github.com/goul4rt/lgpd-skills",
+      "install_url": "https://raw.githubusercontent.com/goul4rt/lgpd-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "LLM Transpile",
@@ -2261,6 +2321,23 @@
       "url": "https://github.com/KalarisLabs/research-agent-skills",
       "install_url": "https://raw.githubusercontent.com/KalarisLabs/research-agent-skills/HEAD/plugin.json",
       "installation_url": "https://github.com/KalarisLabs/research-agent-skills#readme"
+    },
+    {
+      "name": "Revenue Skills",
+      "displayName": "Revenue Skills",
+      "description": "Eleven Agent Skills for code that moves money: an audit of payment, credit and payout paths that backs each finding with file, line and a request proof or code trace, and builders for ledgers, payment webhooks, refunds, subscriptions, AI usage credits, payouts and referrals.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "moonetix",
+      "repo": "revenue-skills",
+      "url": "https://github.com/moonetix/revenue-skills",
+      "install_url": "https://raw.githubusercontent.com/moonetix/revenue-skills/HEAD/plugin.json",
+      "installation_url": "https://github.com/moonetix/revenue-skills#readme"
     },
     {
       "name": "Reviewable HTML Workbench",
@@ -6034,6 +6111,21 @@
       "install_url": "https://raw.githubusercontent.com/HuaHuiJian/tokenchronicle-marketplace/HEAD/plugins/tokenchronicle/.codex-plugin/plugin.json"
     },
     {
+      "name": "tossithere",
+      "displayName": "tossithere",
+      "description": "Publish the HTML Codex makes as a private link people comment on element by element, then read the comments back and push fixes to the same link, through a hosted MCP server with OAuth sign-in. Website: https://tossithere.com",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kush-daga",
+      "repo": "tossithere-plugin",
+      "url": "https://github.com/kush-daga/tossithere-plugin",
+      "install_url": "https://raw.githubusercontent.com/kush-daga/tossithere-plugin/HEAD/plugin.json"
+    },
+    {
       "name": "Treza",
       "displayName": "Treza",
       "description": "Make AI videos from Codex through Treza's hosted MCP server: one clip from a description, edits to media you have, and pipelines that render and post to YouTube and TikTok on a schedule.",
@@ -7234,6 +7326,21 @@
       "repo": "max-skills",
       "url": "https://github.com/vasinl124/max-skills",
       "installation_url": "https://github.com/vasinl124/max-skills#readme"
+    },
+    {
+      "name": "MCP Write Safety",
+      "displayName": "MCP Write Safety",
+      "description": "Two Agent Skills, also packaged as a plugin, with build and call rules for MCP tools that create, update or delete state, each tied to a requirement ID in the MCP Write-Safety Requirements (MWS 0.9)",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "isokron-ai",
+      "repo": "mcp-writecheck-action",
+      "url": "https://github.com/isokron-ai/mcp-writecheck-action",
+      "installation_url": "https://github.com/isokron-ai/mcp-writecheck-action#readme"
     },
     {
       "name": "mcp-proof",
@@ -9211,6 +9318,21 @@
       "repo": "cluadex",
       "url": "https://github.com/leepokai/cluadex",
       "install_url": "https://raw.githubusercontent.com/leepokai/cluadex/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Code Gauntlet",
+      "displayName": "Code Gauntlet",
+      "description": "Adversarial code review for Claude Code: seven specialist agents review each GitHub PR, GitLab MR or local change, and every finding must survive verification, a skeptical validator and a blind challenge before it posts",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "liatrio-labs",
+      "repo": "claude-code-gauntlet",
+      "url": "https://github.com/liatrio-labs/claude-code-gauntlet",
+      "install_url": "https://raw.githubusercontent.com/liatrio-labs/claude-code-gauntlet/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "CodeEraser",
@@ -15160,6 +15282,20 @@
       "install_url": "https://raw.githubusercontent.com/TencentCloudBase/CloudBase-AI-Toolkit/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "clx",
+      "displayName": "clx",
+      "description": "Linux launcher for Claude Code that starts on whichever of your own Pro/Max accounts has the most usage left and moves a running session to your next account at a usage threshold, without a restart; unofficial, MIT",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "KrasimirKralev",
+      "repo": "clx",
+      "url": "https://github.com/KrasimirKralev/clx"
+    },
+    {
       "name": "Cockatoo",
       "displayName": "Cockatoo",
       "description": "MCP server: create, edit and publish hosted business websites through Streamable HTTP with OAuth and owner-approved permissions",
@@ -16859,6 +16995,21 @@
       "repo": "motion-launch-videos",
       "url": "https://github.com/Kimeur/motion-launch-videos",
       "install_url": "https://raw.githubusercontent.com/Kimeur/motion-launch-videos/HEAD/plugins/motion-launch-videos/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Neblex Integration Fabric",
+      "displayName": "Neblex Integration Fabric",
+      "description": "MCP server: build, test and run integration flows across 300+ connectors, with run history and data quality steps, under OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "neblexhq",
+      "repo": "neblex-cursor-plugin",
+      "url": "https://github.com/neblexhq/neblex-cursor-plugin",
+      "installation_url": "https://github.com/neblexhq/neblex-cursor-plugin#readme"
     },
     {
       "name": "Nestbolt",
