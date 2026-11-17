@@ -1959,6 +1959,21 @@
       "install_url": "https://raw.githubusercontent.com/beastlabai/multi-llm-plugin/HEAD/packaging/codex/multi-llm/.codex-plugin/plugin.json"
     },
     {
+      "name": "Mycelium",
+      "displayName": "Mycelium",
+      "description": "A plugin that keeps you and your AI coding agent focused on building the right thing, from first idea to market.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "haabe",
+      "repo": "mycelium",
+      "url": "https://github.com/haabe/mycelium",
+      "install_url": "https://raw.githubusercontent.com/haabe/mycelium/HEAD/plugins/mycelium/plugin.json"
+    },
+    {
       "name": "Nightshift",
       "displayName": "Nightshift",
       "description": "Accountable, time-bounded Codex shifts with a persistent punch list, parked decisions, and reviewable run history.",
@@ -9580,6 +9595,21 @@
       "installation_url": "https://github.com/evermeer/context-optimizer#readme"
     },
     {
+      "name": "ContextOS",
+      "displayName": "ContextOS",
+      "description": "MCP server: Local engineering memory for coding agents that stores decisions, todos and skills in per-workspace SQLite with hybrid vector and BM25 search, and loads the current branch, recent commits and recent decisions at session start",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "aftabkh4n",
+      "repo": "contextos",
+      "url": "https://github.com/aftabkh4n/contextos",
+      "installation_url": "https://github.com/aftabkh4n/contextos#readme"
+    },
+    {
       "name": "ContextPilot",
       "displayName": "ContextPilot",
       "description": "Context optimization engine that reorders and deduplicates context blocks to raise cache hits, shipping as plugins for OpenClaw and Hermes",
@@ -10267,6 +10297,21 @@
       "repo": "genie",
       "url": "https://github.com/automagik-dev/genie",
       "installation_url": "https://github.com/automagik-dev/genie#readme"
+    },
+    {
+      "name": "ghost-qa",
+      "displayName": "ghost-qa",
+      "description": "MCP server: Headless Playwright QA that tests a local dev server across viewports and themes for console errors, failed requests, accessibility and Core Web Vitals",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "avivgerz-hue",
+      "repo": "ghost-qa",
+      "url": "https://github.com/avivgerz-hue/ghost-qa",
+      "installation_url": "https://github.com/avivgerz-hue/ghost-qa#readme"
     },
     {
       "name": "GitCortex",
@@ -14139,6 +14184,21 @@
       "install_url": "https://raw.githubusercontent.com/gagoar/unmistakable/HEAD/plugins/unmistakable/.claude-plugin/plugin.json"
     },
     {
+      "name": "unslop",
+      "displayName": "unslop",
+      "description": "MCP server: UI and CSS design linter with 72 rules and 4 tools that audits AI-generated front-end code and generates refactor plans",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "avivgerz-hue",
+      "repo": "unslop",
+      "url": "https://github.com/avivgerz-hue/unslop",
+      "installation_url": "https://github.com/avivgerz-hue/unslop#readme"
+    },
+    {
       "name": "Usage Monitor",
       "displayName": "Usage Monitor",
       "description": "Floating desktop meter that shows remaining Grok, MiniMax, Codex, Claude, Cursor, Copilot, and Gemini usage and keeps each session on this computer",
@@ -14204,6 +14264,21 @@
       "repo": "Vesalius",
       "url": "https://github.com/haplollc/Vesalius",
       "installation_url": "https://github.com/haplollc/Vesalius#readme"
+    },
+    {
+      "name": "vibe-shield",
+      "displayName": "vibe-shield",
+      "description": "MCP server: Static security scanner with 92 rules for AI-generated TypeScript, Next.js and Supabase apps, including MCP and SKILL.md file checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "avivgerz-hue",
+      "repo": "vibe-shield",
+      "url": "https://github.com/avivgerz-hue/vibe-shield",
+      "installation_url": "https://github.com/avivgerz-hue/vibe-shield#readme"
     },
     {
       "name": "vibekit",
@@ -16672,6 +16747,21 @@
       "repo": "linkbit-mcp",
       "url": "https://github.com/yutotanakastar/linkbit-mcp",
       "installation_url": "https://github.com/yutotanakastar/linkbit-mcp#readme"
+    },
+    {
+      "name": "Linq.es MCP",
+      "displayName": "Linq.es MCP",
+      "description": "MCP server: manage Link-in-Bio profiles, `/s/` shortlinks with UTM tags, click analytics, and captured leads over Streamable HTTP (`https://linq.es/mcp`, `lnq_live_` API key), with Claude Code, Cursor, Gemini CLI, and Agent Skill manifests",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "giulianobr",
+      "repo": "linqes-mcp",
+      "url": "https://github.com/giulianobr/linqes-mcp",
+      "installation_url": "https://github.com/giulianobr/linqes-mcp#readme"
     },
     {
       "name": "Logo Design Skill",

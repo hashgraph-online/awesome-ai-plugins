@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-17",
-  "total": 1391,
+  "total": 1397,
   "platforms": [
     "codex",
     "grok",
@@ -1838,6 +1838,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/beastlabai/multi-llm-plugin/HEAD/packaging/codex/multi-llm/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Mycelium",
+      "url": "https://github.com/haabe/mycelium",
+      "owner": "haabe",
+      "repo": "mycelium",
+      "description": "A plugin that keeps you and your AI coding agent focused on building the right thing, from first idea to market.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/haabe/mycelium/HEAD/plugins/mycelium/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -8955,6 +8969,20 @@
       "installation_url": "https://github.com/evermeer/context-optimizer#readme"
     },
     {
+      "name": "ContextOS",
+      "url": "https://github.com/aftabkh4n/contextos",
+      "owner": "aftabkh4n",
+      "repo": "contextos",
+      "description": "MCP server: Local engineering memory for coding agents that stores decisions, todos and skills in per-workspace SQLite with hybrid vector and BM25 search, and loads the current branch, recent commits and recent decisions at session start",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/aftabkh4n/contextos#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "ContextPilot",
       "url": "https://github.com/EfficientContext/ContextPilot",
       "owner": "EfficientContext",
@@ -9592,6 +9620,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/automagik-dev/genie#readme"
+    },
+    {
+      "name": "ghost-qa",
+      "url": "https://github.com/avivgerz-hue/ghost-qa",
+      "owner": "avivgerz-hue",
+      "repo": "ghost-qa",
+      "description": "MCP server: Headless Playwright QA that tests a local dev server across viewports and themes for console errors, failed requests, accessibility and Core Web Vitals",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/ghost-qa#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "GitCortex",
@@ -13183,6 +13225,20 @@
       ]
     },
     {
+      "name": "unslop",
+      "url": "https://github.com/avivgerz-hue/unslop",
+      "owner": "avivgerz-hue",
+      "repo": "unslop",
+      "description": "MCP server: UI and CSS design linter with 72 rules and 4 tools that audits AI-generated front-end code and generates refactor plans",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/unslop#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Usage Monitor",
       "url": "https://github.com/Errr0rr404/usage-monitor",
       "owner": "Errr0rr404",
@@ -13240,6 +13296,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/haplollc/Vesalius#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "vibe-shield",
+      "url": "https://github.com/avivgerz-hue/vibe-shield",
+      "owner": "avivgerz-hue",
+      "repo": "vibe-shield",
+      "description": "MCP server: Static security scanner with 92 rules for AI-generated TypeScript, Next.js and Supabase apps, including MCP and SKILL.md file checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/vibe-shield#readme",
       "ecosystems": [
         "mcp"
       ]
@@ -15532,6 +15602,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/yutotanakastar/linkbit-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Linq.es MCP",
+      "url": "https://github.com/giulianobr/linqes-mcp",
+      "owner": "giulianobr",
+      "repo": "linqes-mcp",
+      "description": "MCP server: manage Link-in-Bio profiles, `/s/` shortlinks with UTM tags, click analytics, and captured leads over Streamable HTTP (`https://linq.es/mcp`, `lnq_live_` API key), with Claude Code, Cursor, Gemini CLI, and Agent Skill manifests",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/giulianobr/linqes-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
