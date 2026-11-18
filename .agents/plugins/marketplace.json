@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-17",
+  "last_updated": "2026-11-18",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1762,21 +1762,6 @@
       "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
-      "name": "LVTD Skills",
-      "displayName": "LVTD Skills",
-      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "LVTD-LLC",
-      "repo": "skills",
-      "url": "https://github.com/LVTD-LLC/skills",
-      "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json"
-    },
-    {
       "name": "macbox",
       "displayName": "macbox",
       "description": "A real Mac for Codex: build, test, run and tap through iOS apps on the iOS simulator from any machine, including Linux and cloud sandboxes.",
@@ -2505,6 +2490,21 @@
       "url": "https://github.com/jack-reson8/skill-skill",
       "install_url": "https://raw.githubusercontent.com/jack-reson8/skill-skill/HEAD/plugins/skill-skill/.codex-plugin/plugin.json",
       "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
+    },
+    {
+      "name": "skill-check",
+      "displayName": "skill-check",
+      "description": "Warns when a skill you use is out of date compared with its upstream source.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "louis8408",
+      "repo": "skill-check",
+      "url": "https://github.com/louis8408/skill-check",
+      "install_url": "https://raw.githubusercontent.com/louis8408/skill-check/HEAD/plugin/.codex-plugin/plugin.json"
     },
     {
       "name": "skill-sync-publisher",
@@ -3906,6 +3906,21 @@
       "repo": "codex-seo",
       "url": "https://github.com/BestLemoon/codex-seo",
       "install_url": "https://raw.githubusercontent.com/BestLemoon/codex-seo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Telegram",
+      "displayName": "Codex Telegram",
+      "description": "One Codex conversation shared between your terminal and Telegram, with files, voice notes, reactions, answer buttons and group topics, that stays connected when the terminal closes.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AXEG0",
+      "repo": "codex-telegram",
+      "url": "https://github.com/AXEG0/codex-telegram",
+      "install_url": "https://raw.githubusercontent.com/AXEG0/codex-telegram/HEAD/plugins/gelios-codex-telegram/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex Tools Bridge",
@@ -5631,6 +5646,21 @@
       "install_url": "https://raw.githubusercontent.com/talkstream/ru-text/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "RunLater",
+      "displayName": "RunLater",
+      "description": "Remote MCP server and skill that let Codex schedule HTTP requests: once at an exact time or on a cron schedule, with retries and a log of every run; paid, plans from $15/month with a 14-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "runlater-app",
+      "repo": "runlater-plugin",
+      "url": "https://github.com/runlater-app/runlater-plugin",
+      "install_url": "https://raw.githubusercontent.com/runlater-app/runlater-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Rust Reverse Engineering",
       "displayName": "Rust Reverse Engineering",
       "description": "Triage Rust ELF, Mach-O, and PE binaries, demangle symbols, recover likely crate namespaces, trace runtime and FFI paths, and optionally export pseudocode with headless Ghidra.",
@@ -6079,6 +6109,21 @@
       "repo": "task-scheduler-codex-plugin",
       "url": "https://github.com/6Delta9/task-scheduler-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/6Delta9/task-scheduler-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Taskhold",
+      "displayName": "Taskhold",
+      "description": "Remote MCP server and skill that give Codex a task list you share: it picks up the next task, plans it in steps, reports live progress and blocks with a question when it needs you; paid, $12/month with a 7-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "gettaskhold",
+      "repo": "taskhold-plugin",
+      "url": "https://github.com/gettaskhold/taskhold-plugin",
+      "install_url": "https://raw.githubusercontent.com/gettaskhold/taskhold-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Teaching Skills",
@@ -7341,6 +7386,21 @@
       "repo": "MARS",
       "url": "https://github.com/andrea-magni/MARS",
       "installation_url": "https://github.com/andrea-magni/MARS#readme"
+    },
+    {
+      "name": "masry-skills",
+      "displayName": "masry-skills",
+      "description": "Agent Skill that makes AI write natural Egyptian Arabic: picks Egyptian or plain MSA for the reader, strips AI tells, never invents facts, and converts Franco to Arabic script, backed by a blind with/without-skill eval",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Tayel-Ai-Labs",
+      "repo": "masry-skills",
+      "url": "https://github.com/Tayel-Ai-Labs/masry-skills",
+      "installation_url": "https://github.com/Tayel-Ai-Labs/masry-skills#readme"
     },
     {
       "name": "Master Skills",
@@ -11470,6 +11530,17 @@
       "repo": "lumberroom-claude-code",
       "url": "https://github.com/lumberroom/lumberroom-claude-code",
       "install_url": "https://raw.githubusercontent.com/lumberroom/lumberroom-claude-code/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "LVTD Skills",
+      "displayName": "LVTD Skills",
+      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "LVTD-LLC",
+      "repo": "skills",
+      "url": "https://github.com/LVTD-LLC/skills",
+      "installation_url": "https://github.com/LVTD-LLC/skills#readme"
     },
     {
       "name": "mach-gtm-mcp",
