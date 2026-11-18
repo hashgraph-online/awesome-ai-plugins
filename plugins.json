@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-17",
-  "total": 1397,
+  "last_updated": "2026-11-18",
+  "total": 1399,
   "platforms": [
     "codex",
     "grok",
@@ -2356,6 +2356,20 @@
       "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
     },
     {
+      "name": "skill-check",
+      "url": "https://github.com/louis8408/skill-check",
+      "owner": "louis8408",
+      "repo": "skill-check",
+      "description": "Warns when a skill you use is out of date compared with its upstream source.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/louis8408/skill-check/HEAD/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "skill-sync-publisher",
       "url": "https://github.com/liuyewang/skill-sync-publisher",
       "owner": "liuyewang",
@@ -3660,6 +3674,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/BestLemoon/codex-seo/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Codex Telegram",
+      "url": "https://github.com/AXEG0/codex-telegram",
+      "owner": "AXEG0",
+      "repo": "codex-telegram",
+      "description": "One Codex conversation shared between your terminal and Telegram, with files, voice notes, reactions, answer buttons and group topics, that stays connected when the terminal closes.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/AXEG0/codex-telegram/HEAD/plugins/gelios-codex-telegram/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"

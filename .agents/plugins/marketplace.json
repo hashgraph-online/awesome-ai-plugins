@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-17",
+  "last_updated": "2026-11-18",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -2507,6 +2507,21 @@
       "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
     },
     {
+      "name": "skill-check",
+      "displayName": "skill-check",
+      "description": "Warns when a skill you use is out of date compared with its upstream source.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "louis8408",
+      "repo": "skill-check",
+      "url": "https://github.com/louis8408/skill-check",
+      "install_url": "https://raw.githubusercontent.com/louis8408/skill-check/HEAD/plugin/.codex-plugin/plugin.json"
+    },
+    {
       "name": "skill-sync-publisher",
       "displayName": "skill-sync-publisher",
       "description": "Safely synchronize this Codex skill across public agent-skill registries.",
@@ -3906,6 +3921,21 @@
       "repo": "codex-seo",
       "url": "https://github.com/BestLemoon/codex-seo",
       "install_url": "https://raw.githubusercontent.com/BestLemoon/codex-seo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Codex Telegram",
+      "displayName": "Codex Telegram",
+      "description": "One Codex conversation shared between your terminal and Telegram, with files, voice notes, reactions, answer buttons and group topics, that stays connected when the terminal closes.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AXEG0",
+      "repo": "codex-telegram",
+      "url": "https://github.com/AXEG0/codex-telegram",
+      "install_url": "https://raw.githubusercontent.com/AXEG0/codex-telegram/HEAD/plugins/gelios-codex-telegram/.codex-plugin/plugin.json"
     },
     {
       "name": "Codex Tools Bridge",
