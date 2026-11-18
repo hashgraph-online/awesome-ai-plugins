@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-18",
-  "total": 1399,
+  "total": 1402,
   "platforms": [
     "codex",
     "grok",
@@ -1658,20 +1658,6 @@
         "mcp"
       ],
       "installation_url": "https://github.com/ClickHouse/loom#readme"
-    },
-    {
-      "name": "LVTD Skills",
-      "url": "https://github.com/LVTD-LLC/skills",
-      "owner": "LVTD-LLC",
-      "repo": "skills",
-      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
     },
     {
       "name": "macbox",
@@ -5305,6 +5291,20 @@
       ]
     },
     {
+      "name": "RunLater",
+      "url": "https://github.com/runlater-app/runlater-plugin",
+      "owner": "runlater-app",
+      "repo": "runlater-plugin",
+      "description": "Remote MCP server and skill that let Codex schedule HTTP requests: once at an exact time or on a cron schedule, with retries and a log of every run; paid, plans from $15/month with a 14-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/runlater-app/runlater-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Rust Reverse Engineering",
       "url": "https://github.com/jingjing2222/rust-reverse-engineering-skill",
       "owner": "jingjing2222",
@@ -5719,6 +5719,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/6Delta9/task-scheduler-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Taskhold",
+      "url": "https://github.com/gettaskhold/taskhold-plugin",
+      "owner": "gettaskhold",
+      "repo": "taskhold-plugin",
+      "description": "Remote MCP server and skill that give Codex a task list you share: it picks up the next task, plans it in steps, reports live progress and blocks with a question when it needs you; paid, $12/month with a 7-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gettaskhold/taskhold-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -6898,6 +6912,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/andrea-magni/MARS#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "masry-skills",
+      "url": "https://github.com/Tayel-Ai-Labs/masry-skills",
+      "owner": "Tayel-Ai-Labs",
+      "repo": "masry-skills",
+      "description": "Agent Skill that makes AI write natural Egyptian Arabic: picks Egyptian or plain MSA for the reader, strips AI tells, never invents facts, and converts Franco to Arabic script, backed by a blind with/without-skill eval",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Tayel-Ai-Labs/masry-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -10735,6 +10763,16 @@
       "ecosystems": [
         "claude-code"
       ]
+    },
+    {
+      "name": "LVTD Skills",
+      "url": "https://github.com/LVTD-LLC/skills",
+      "owner": "LVTD-LLC",
+      "repo": "skills",
+      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/LVTD-LLC/skills#readme"
     },
     {
       "name": "mach-gtm-mcp",
