@@ -155,6 +155,21 @@
       "install_url": "https://raw.githubusercontent.com/1139030773-cmd/agent-workflow-system/HEAD/plugins/agent-workflow-system/.codex-plugin/plugin.json"
     },
     {
+      "name": "AgentAvow Trust",
+      "displayName": "AgentAvow Trust",
+      "description": "Checks your MCP servers at session start and stops a `codex mcp add` or package install that reads Do not connect, with the reason and a signed 0-100 trust score.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AgentAvow",
+      "repo": "agentavow-codex-plugin",
+      "url": "https://github.com/AgentAvow/agentavow-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/AgentAvow/agentavow-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Agentic Readiness Assessment",
       "displayName": "Agentic Readiness Assessment",
       "description": "Assess repository readiness for AI coding agents with an evidence-based scorecard and prioritized fixes.",
@@ -603,6 +618,21 @@
       "repo": "chatgpt-review-agent-skill",
       "url": "https://github.com/TohmaN233/chatgpt-review-agent-skill",
       "install_url": "https://raw.githubusercontent.com/TohmaN233/chatgpt-review-agent-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Chunsik's Garage",
+      "displayName": "Chunsik's Garage",
+      "description": "AQ checkup that reads your local Claude Code, Codex, and Gemini CLI records and settings, scores how you set up and use them, and turns off unused Claude Code and Codex skills and MCP servers with your approval and undo.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "yeunlee1",
+      "repo": "chunsik-garage",
+      "url": "https://github.com/yeunlee1/chunsik-garage/tree/main",
+      "install_url": "https://raw.githubusercontent.com/yeunlee1/chunsik-garage/main/.codex-plugin/plugin.json"
     },
     {
       "name": "Claude Code Codex Plugin",
@@ -1668,6 +1698,23 @@
       "repo": "joxo",
       "url": "https://github.com/JoxoAI/joxo",
       "install_url": "https://raw.githubusercontent.com/JoxoAI/joxo/HEAD/plugins/joxo/plugin.json"
+    },
+    {
+      "name": "kaoyan-study-skills",
+      "displayName": "kaoyan-study-skills",
+      "description": "Exam-prep plugin with nine skills: try-first tutoring, photo-to-report grading with rubric scoring and an independent regrade, checkpoint reviews and Markdown-to-PDF reports.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "keienhrri-bit",
+      "repo": "kaoyan-study-skills",
+      "url": "https://github.com/keienhrri-bit/kaoyan-study-skills",
+      "install_url": "https://raw.githubusercontent.com/keienhrri-bit/kaoyan-study-skills/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/keienhrri-bit/kaoyan-study-skills#readme"
     },
     {
       "name": "Keep Mac Awake",
@@ -5646,6 +5693,21 @@
       "install_url": "https://raw.githubusercontent.com/talkstream/ru-text/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Runheed",
+      "displayName": "Runheed",
+      "description": "Error tracking your coding agent can read: search production errors, read stack traces, fix and resolve them. Hosted MCP server, paid.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "getrunheed",
+      "repo": "runheed-plugin",
+      "url": "https://github.com/getrunheed/runheed-plugin",
+      "install_url": "https://raw.githubusercontent.com/getrunheed/runheed-plugin/HEAD/plugin.json"
+    },
+    {
       "name": "RunLater",
       "displayName": "RunLater",
       "description": "Remote MCP server and skill that let Codex schedule HTTP requests: once at an exact time or on a cron schedule, with retries and a log of every run; paid, plans from $15/month with a 14-day trial.",
@@ -5944,6 +6006,21 @@
       "repo": "product-skills",
       "url": "https://github.com/hraness/product-skills",
       "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/sponge/plugin.json"
+    },
+    {
+      "name": "StalkChain",
+      "displayName": "StalkChain",
+      "description": "Research public crypto trader wallets, token holders, and on-chain trade flow through a hosted OAuth MCP with metered account credits and optional price alerts that require confirmation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "StalkC",
+      "repo": "stalkchain-plugin",
+      "url": "https://github.com/StalkC/stalkchain-plugin",
+      "install_url": "https://raw.githubusercontent.com/StalkC/stalkchain-plugin/HEAD/plugin.json"
     },
     {
       "name": "Story Skills",
@@ -7116,6 +7193,21 @@
       "repo": "handoff",
       "url": "https://github.com/YourAKShaw/handoff",
       "installation_url": "https://github.com/YourAKShaw/handoff#readme"
+    },
+    {
+      "name": "HiAPI GPT Image 2",
+      "displayName": "HiAPI GPT Image 2",
+      "description": "GPT Image 2 text-to-image and image-to-image skill for Claude Code, Codex and other SKILL.md agents, installed with `npx -y github:HiAPIAI/hiapi-gpt-image-2-skill`",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "HiAPIAI",
+      "repo": "hiapi-gpt-image-2-skill",
+      "url": "https://github.com/HiAPIAI/hiapi-gpt-image-2-skill",
+      "installation_url": "https://github.com/HiAPIAI/hiapi-gpt-image-2-skill#readme"
     },
     {
       "name": "hoi4-ai-modding-skills",
@@ -9761,6 +9853,21 @@
       "repo": "cover-my-repo",
       "url": "https://github.com/sjh9714/cover-my-repo",
       "install_url": "https://raw.githubusercontent.com/sjh9714/cover-my-repo/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Cowork",
+      "displayName": "Cowork",
+      "description": "MCP server: Self-hosted Streamable HTTP MCP hub and web dashboard connecting Claude Code, Codex, Gemini CLI, and local Hermes/SGLang/Ollama workers to one file-backed task queue with automatic rate-limit fallback chains",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "slashman413",
+      "repo": "cowork",
+      "url": "https://github.com/slashman413/cowork",
+      "installation_url": "https://github.com/slashman413/cowork#readme"
     },
     {
       "name": "Craft",
@@ -15056,6 +15163,21 @@
       "installation_url": "https://github.com/Extelligence-ai/bagel#readme"
     },
     {
+      "name": "BatchData",
+      "displayName": "BatchData",
+      "description": "MCP server: hosted U.S. real estate data for AI agents, covering property lookup and search, comparables, skip tracing, DNC/TCPA phone checks and address verification across 169 million+ parcels, with a Claude Code plugin and Agent Skills; requires a BatchData account",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "batchdataco",
+      "repo": "batchdata-mcp-server",
+      "url": "https://github.com/batchdataco/batchdata-mcp-server",
+      "installation_url": "https://github.com/batchdataco/batchdata-mcp-server#readme"
+    },
+    {
       "name": "Bestax",
       "displayName": "Bestax",
       "description": "Agent Skills and a local MCP server for building React apps with Bestax on Bulma v1, covering forms, layouts, theming, icons, CSS size, and migration from older Bulma libraries",
@@ -15728,7 +15850,7 @@
     {
       "name": "DC Hub",
       "displayName": "DC Hub",
-      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 96 tools at https://dchub.cloud/mcp",
+      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 97 tools at https://dchub.cloud/mcp",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -16706,6 +16828,21 @@
       "repo": "claude-plugins",
       "url": "https://github.com/l3a0/claude-plugins",
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Kling AI",
+      "displayName": "Kling AI",
+      "description": "Official regional MCP plugins for Kling image and video generation, distributed on npm as [Global Plugin](https://www.npmjs.com/package/@klingai/plugin-global), [China Plugin](https://www.npmjs.com/package/@klingai/plugin-cn), [Global CLI](https://www.npmjs.com/package/@klingai/cli-global), and [China CLI](https://www.npmjs.com/package/@klingai/cli-cn)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "klingai-tech",
+      "repo": "claude-plugin",
+      "url": "https://github.com/klingai-tech/claude-plugin",
+      "install_url": "https://raw.githubusercontent.com/klingai-tech/claude-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "kunglao-agent",
@@ -18754,6 +18891,20 @@
       "repo": "ultramotion",
       "url": "https://github.com/sunsiyuan/ultramotion",
       "installation_url": "https://github.com/sunsiyuan/ultramotion#readme"
+    },
+    {
+      "name": "UndoHaven",
+      "displayName": "UndoHaven",
+      "description": "Unofficial, third-party end-to-end encrypted snapshots, rollback and machine migration for the dsh agent runtime, with an open source client and a free tier",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "Antipas",
+      "repo": "undohaven",
+      "url": "https://github.com/Antipas/undohaven"
     },
     {
       "name": "unic",
