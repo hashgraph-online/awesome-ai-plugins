@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-17",
-  "total": 1388,
+  "last_updated": "2026-11-18",
+  "total": 1402,
   "platforms": [
     "codex",
     "grok",
@@ -1660,20 +1660,6 @@
       "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
-      "name": "LVTD Skills",
-      "url": "https://github.com/LVTD-LLC/skills",
-      "owner": "LVTD-LLC",
-      "repo": "skills",
-      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/LVTD-LLC/skills/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "macbox",
       "url": "https://github.com/opslane/macbox-agent",
       "owner": "opslane",
@@ -1838,6 +1824,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/beastlabai/multi-llm-plugin/HEAD/packaging/codex/multi-llm/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Mycelium",
+      "url": "https://github.com/haabe/mycelium",
+      "owner": "haabe",
+      "repo": "mycelium",
+      "description": "A plugin that keeps you and your AI coding agent focused on building the right thing, from first idea to market.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/haabe/mycelium/HEAD/plugins/mycelium/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2340,6 +2340,20 @@
         "agent-skills"
       ],
       "installation_url": "https://github.com/jack-reson8/skill-skill#readme"
+    },
+    {
+      "name": "skill-check",
+      "url": "https://github.com/louis8408/skill-check",
+      "owner": "louis8408",
+      "repo": "skill-check",
+      "description": "Warns when a skill you use is out of date compared with its upstream source.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/louis8408/skill-check/HEAD/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "skill-sync-publisher",
@@ -3269,6 +3283,21 @@
       ]
     },
     {
+      "name": "Banking Access Index",
+      "url": "https://github.com/global-solo/banking-access-index-mcp/tree/codex",
+      "owner": "global-solo",
+      "repo": "banking-access-index-mcp",
+      "description": "Skill that looks up what 19 US business banking providers publish about US LLC owners who aren't US tax residents, across 8 countries, citing each provider's own page and the date it was read.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/global-solo/banking-access-index-mcp/codex/plugins/banking-access-index/plugin.json",
+      "source_ref": "codex",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "BestPrice",
       "url": "https://github.com/TheBestCo/bestprice-mcp",
       "owner": "TheBestCo",
@@ -3631,6 +3660,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/BestLemoon/codex-seo/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Codex Telegram",
+      "url": "https://github.com/AXEG0/codex-telegram",
+      "owner": "AXEG0",
+      "repo": "codex-telegram",
+      "description": "One Codex conversation shared between your terminal and Telegram, with files, voice notes, reactions, answer buttons and group topics, that stays connected when the terminal closes.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/AXEG0/codex-telegram/HEAD/plugins/gelios-codex-telegram/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5248,6 +5291,20 @@
       ]
     },
     {
+      "name": "RunLater",
+      "url": "https://github.com/runlater-app/runlater-plugin",
+      "owner": "runlater-app",
+      "repo": "runlater-plugin",
+      "description": "Remote MCP server and skill that let Codex schedule HTTP requests: once at an exact time or on a cron schedule, with retries and a log of every run; paid, plans from $15/month with a 14-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/runlater-app/runlater-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Rust Reverse Engineering",
       "url": "https://github.com/jingjing2222/rust-reverse-engineering-skill",
       "owner": "jingjing2222",
@@ -5668,6 +5725,20 @@
       ]
     },
     {
+      "name": "Taskhold",
+      "url": "https://github.com/gettaskhold/taskhold-plugin",
+      "owner": "gettaskhold",
+      "repo": "taskhold-plugin",
+      "description": "Remote MCP server and skill that give Codex a task list you share: it picks up the next task, plans it in steps, reports live progress and blocks with a question when it needs you; paid, $12/month with a 7-day trial.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/gettaskhold/taskhold-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Teaching Skills",
       "url": "https://github.com/YujxZJCN/teaching-skills-codex",
       "owner": "YujxZJCN",
@@ -5676,6 +5747,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/YujxZJCN/teaching-skills-codex/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Tensorust",
+      "url": "https://github.com/Mattbusel/tensorust-skills",
+      "owner": "Mattbusel",
+      "repo": "tensorust-skills",
+      "description": "Public-records skills plus a hosted MCP server: who owns a US company or home, vendor screening against DoD 1260H, Section 889, FCC Covered List, UFLPA and BIOSECURE, BDC loan marks, and dated LLM API prices.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Mattbusel/tensorust-skills/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -6832,6 +6917,20 @@
       ]
     },
     {
+      "name": "masry-skills",
+      "url": "https://github.com/Tayel-Ai-Labs/masry-skills",
+      "owner": "Tayel-Ai-Labs",
+      "repo": "masry-skills",
+      "description": "Agent Skill that makes AI write natural Egyptian Arabic: picks Egyptian or plain MSA for the reader, strips AI tells, never invents facts, and converts Franco to Arabic script, backed by a blind with/without-skill eval",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Tayel-Ai-Labs/masry-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Master Skills",
       "url": "https://github.com/sinhoneyy/master-skills",
       "owner": "sinhoneyy",
@@ -6967,6 +7066,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/nuthinking/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Perq",
+      "url": "https://github.com/f-o-x11/perq-skill",
+      "owner": "f-o-x11",
+      "repo": "perq-skill",
+      "description": "Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/f-o-x11/perq-skill#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -8912,6 +9025,20 @@
       "installation_url": "https://github.com/evermeer/context-optimizer#readme"
     },
     {
+      "name": "ContextOS",
+      "url": "https://github.com/aftabkh4n/contextos",
+      "owner": "aftabkh4n",
+      "repo": "contextos",
+      "description": "MCP server: Local engineering memory for coding agents that stores decisions, todos and skills in per-workspace SQLite with hybrid vector and BM25 search, and loads the current branch, recent commits and recent decisions at session start",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/aftabkh4n/contextos#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "ContextPilot",
       "url": "https://github.com/EfficientContext/ContextPilot",
       "owner": "EfficientContext",
@@ -9549,6 +9676,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/automagik-dev/genie#readme"
+    },
+    {
+      "name": "ghost-qa",
+      "url": "https://github.com/avivgerz-hue/ghost-qa",
+      "owner": "avivgerz-hue",
+      "repo": "ghost-qa",
+      "description": "MCP server: Headless Playwright QA that tests a local dev server across viewports and themes for console errors, failed requests, accessibility and Core Web Vitals",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/ghost-qa#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "GitCortex",
@@ -10622,6 +10763,16 @@
       "ecosystems": [
         "claude-code"
       ]
+    },
+    {
+      "name": "LVTD Skills",
+      "url": "https://github.com/LVTD-LLC/skills",
+      "owner": "LVTD-LLC",
+      "repo": "skills",
+      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/LVTD-LLC/skills#readme"
     },
     {
       "name": "mach-gtm-mcp",
@@ -13140,6 +13291,20 @@
       ]
     },
     {
+      "name": "unslop",
+      "url": "https://github.com/avivgerz-hue/unslop",
+      "owner": "avivgerz-hue",
+      "repo": "unslop",
+      "description": "MCP server: UI and CSS design linter with 72 rules and 4 tools that audits AI-generated front-end code and generates refactor plans",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/unslop#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Usage Monitor",
       "url": "https://github.com/Errr0rr404/usage-monitor",
       "owner": "Errr0rr404",
@@ -13197,6 +13362,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/haplollc/Vesalius#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "vibe-shield",
+      "url": "https://github.com/avivgerz-hue/vibe-shield",
+      "owner": "avivgerz-hue",
+      "repo": "vibe-shield",
+      "description": "MCP server: Static security scanner with 92 rules for AI-generated TypeScript, Next.js and Supabase apps, including MCP and SKILL.md file checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/avivgerz-hue/vibe-shield#readme",
       "ecosystems": [
         "mcp"
       ]
@@ -15489,6 +15668,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/yutotanakastar/linkbit-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Linq.es MCP",
+      "url": "https://github.com/giulianobr/linqes-mcp",
+      "owner": "giulianobr",
+      "repo": "linqes-mcp",
+      "description": "MCP server: manage Link-in-Bio profiles, `/s/` shortlinks with UTM tags, click analytics, and captured leads over Streamable HTTP (`https://linq.es/mcp`, `lnq_live_` API key), with Claude Code, Cursor, Gemini CLI, and Agent Skill manifests",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/giulianobr/linqes-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
