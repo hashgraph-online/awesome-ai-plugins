@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-18",
-  "total": 1412,
+  "total": 1417,
   "platforms": [
     "codex",
     "grok",
@@ -7158,6 +7158,20 @@
       ]
     },
     {
+      "name": "Octopost",
+      "url": "https://github.com/octopost-ink/octopost-plugin",
+      "owner": "octopost-ink",
+      "repo": "octopost-plugin",
+      "description": "Agent skill and hosted MCP server that let an agent post, schedule and thread to X, Bluesky, Mastodon and LinkedIn, with a human approval queue before anything goes out",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/octopost-ink/octopost-plugin#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Perq",
       "url": "https://github.com/f-o-x11/perq-skill",
       "owner": "f-o-x11",
@@ -7382,6 +7396,20 @@
       ]
     },
     {
+      "name": "Siebly Agent Skills",
+      "url": "https://github.com/sieblyio/agent-skills",
+      "owner": "sieblyio",
+      "repo": "agent-skills",
+      "description": "Agent skill that helps coding agents build Node.js, JavaScript and TypeScript integrations with crypto exchange REST and WebSocket APIs (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken and Hyperliquid) using the MIT-licensed Siebly SDKs",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/sieblyio/agent-skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Sketchbook Style",
       "url": "https://github.com/Keith-CY/sketchbook-style",
       "owner": "Keith-CY",
@@ -7405,6 +7433,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/mouadja02/skills#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Stealth Company \u2014 Agent Skills",
+      "url": "https://github.com/stealth-factory/skills",
+      "owner": "stealth-factory",
+      "repo": "skills",
+      "description": "21 Agent Skills for Claude Code, Cursor and other SKILL.md clients, installed with `npx skills add stealth-factory/skills`, covering a Vercel deployment password gate, release and branch automation, Next.js locale routing, PR review loops and Safari 26 Liquid Glass layout fixes",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/stealth-factory/skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -15684,6 +15726,20 @@
       ]
     },
     {
+      "name": "Kitbay",
+      "url": "https://github.com/northlarkhq/kitbay-mcp",
+      "owner": "northlarkhq",
+      "repo": "kitbay-mcp",
+      "description": "MCP server: hosted, read-only Streamable HTTP server (`https://kitbay.app/mcp`, no auth) that searches 48,000+ MCP servers and agent skills by tool, with sourced facts and install configs; ships with a Claude Code plugin and agent skill",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/northlarkhq/kitbay-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Kling AI",
       "url": "https://github.com/klingai-tech/claude-plugin",
       "owner": "klingai-tech",
@@ -17285,6 +17341,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Social Fetch",
+      "url": "https://github.com/social-freak-ltd/socialfetch-mcp",
+      "owner": "social-freak-ltd",
+      "repo": "socialfetch-mcp",
+      "description": "MCP server: public profiles, posts, comments, transcripts and search from TikTok, Instagram, YouTube, X, Reddit and LinkedIn. Hosted endpoint with OAuth, plus an MIT licensed stdio server for clients that only run local servers",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/social-freak-ltd/socialfetch-mcp#readme",
       "ecosystems": [
         "mcp"
       ]

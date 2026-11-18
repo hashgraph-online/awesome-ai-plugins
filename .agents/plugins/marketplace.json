@@ -7645,6 +7645,21 @@
       "installation_url": "https://github.com/nuthinking/skills#readme"
     },
     {
+      "name": "Octopost",
+      "displayName": "Octopost",
+      "description": "Agent skill and hosted MCP server that let an agent post, schedule and thread to X, Bluesky, Mastodon and LinkedIn, with a human approval queue before anything goes out",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "octopost-ink",
+      "repo": "octopost-plugin",
+      "url": "https://github.com/octopost-ink/octopost-plugin",
+      "installation_url": "https://github.com/octopost-ink/octopost-plugin#readme"
+    },
+    {
       "name": "Perq",
       "displayName": "Perq",
       "description": "Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC",
@@ -7885,6 +7900,21 @@
       "installation_url": "https://github.com/yanhua1010/self-media-content-workflow#readme"
     },
     {
+      "name": "Siebly Agent Skills",
+      "displayName": "Siebly Agent Skills",
+      "description": "Agent skill that helps coding agents build Node.js, JavaScript and TypeScript integrations with crypto exchange REST and WebSocket APIs (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken and Hyperliquid) using the MIT-licensed Siebly SDKs",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "sieblyio",
+      "repo": "agent-skills",
+      "url": "https://github.com/sieblyio/agent-skills",
+      "installation_url": "https://github.com/sieblyio/agent-skills#readme"
+    },
+    {
       "name": "Sketchbook Style",
       "displayName": "Sketchbook Style",
       "description": "Agent skill that draws any object as a black-ink industrial-design sketchbook page in four looks with open image models on ComfyUI or mflux, no API key; tested in Claude Code",
@@ -7913,6 +7943,21 @@
       "repo": "skills",
       "url": "https://github.com/mouadja02/skills",
       "installation_url": "https://github.com/mouadja02/skills#readme"
+    },
+    {
+      "name": "Stealth Company \u2014 Agent Skills",
+      "displayName": "Stealth Company \u2014 Agent Skills",
+      "description": "21 Agent Skills for Claude Code, Cursor and other SKILL.md clients, installed with `npx skills add stealth-factory/skills`, covering a Vercel deployment password gate, release and branch automation, Next.js locale routing, PR review loops and Safari 26 Liquid Glass layout fixes",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "stealth-factory",
+      "repo": "skills",
+      "url": "https://github.com/stealth-factory/skills",
+      "installation_url": "https://github.com/stealth-factory/skills#readme"
     },
     {
       "name": "tech-to-motion",
@@ -16830,6 +16875,21 @@
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Kitbay",
+      "displayName": "Kitbay",
+      "description": "MCP server: hosted, read-only Streamable HTTP server (`https://kitbay.app/mcp`, no auth) that searches 48,000+ MCP servers and agent skills by tool, with sourced facts and install configs; ships with a Claude Code plugin and agent skill",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "northlarkhq",
+      "repo": "kitbay-mcp",
+      "url": "https://github.com/northlarkhq/kitbay-mcp",
+      "installation_url": "https://github.com/northlarkhq/kitbay-mcp#readme"
+    },
+    {
       "name": "Kling AI",
       "displayName": "Kling AI",
       "description": "Official regional MCP plugins for Kling image and video generation, distributed on npm as [Global Plugin](https://www.npmjs.com/package/@klingai/plugin-global), [China Plugin](https://www.npmjs.com/package/@klingai/plugin-cn), [Global CLI](https://www.npmjs.com/package/@klingai/cli-global), and [China CLI](https://www.npmjs.com/package/@klingai/cli-cn)",
@@ -18559,6 +18619,21 @@
       "repo": "slicktrip-mcp",
       "url": "https://github.com/sliktrip/slicktrip-mcp",
       "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme"
+    },
+    {
+      "name": "Social Fetch",
+      "displayName": "Social Fetch",
+      "description": "MCP server: public profiles, posts, comments, transcripts and search from TikTok, Instagram, YouTube, X, Reddit and LinkedIn. Hosted endpoint with OAuth, plus an MIT licensed stdio server for clients that only run local servers",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "social-freak-ltd",
+      "repo": "socialfetch-mcp",
+      "url": "https://github.com/social-freak-ltd/socialfetch-mcp",
+      "installation_url": "https://github.com/social-freak-ltd/socialfetch-mcp#readme"
     },
     {
       "name": "Soku CLI",
