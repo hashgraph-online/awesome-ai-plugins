@@ -8130,7 +8130,11 @@
       "owner": "BjoernSchotte",
       "repo": "agentglass-herdr",
       "url": "https://github.com/BjoernSchotte/agentglass-herdr",
-      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme"
+      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Agentic Ship",
@@ -10540,7 +10544,8 @@
       "source": "awesome-ai-plugins",
       "platform": "claude-code",
       "ecosystems": [
-        "claude-code"
+        "claude-code",
+        "herdr"
       ],
       "owner": "shimo4228",
       "repo": "herdr-toolkit",
@@ -10555,7 +10560,8 @@
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "herdr"
       ],
       "owner": "transparent-pegasus",
       "repo": "herdrpowers",
@@ -16070,7 +16076,11 @@
       "owner": "frankjoshua",
       "repo": "herdr-acp",
       "url": "https://github.com/frankjoshua/herdr-acp",
-      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme"
+      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Hesper",
@@ -19929,6 +19939,20 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "herdr-plugin-manager",
+      "url": "https://github.com/speardragon/herdr-plugin-manager",
+      "owner": "speardragon",
+      "repo": "herdr-plugin-manager",
+      "description": "Herdr plugin manager for installing, updating, enabling, disabling, uninstalling, and browsing community plugins",
+      "category": "Herdr Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "herdr",
+      "installation_url": "https://github.com/speardragon/herdr-plugin-manager#readme",
+      "ecosystems": [
+        "herdr"
+      ]
     }
   ]
 }

@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-17",
-  "total": 1387,
+  "last_updated": "2026-11-19",
+  "total": 1388,
   "platforms": [
     "codex",
     "grok",
@@ -13,7 +13,8 @@
     "standalone",
     "kimi",
     "deepseek-harness",
-    "opencode"
+    "opencode",
+    "herdr"
   ],
   "plugins": [
     {
@@ -7607,7 +7608,11 @@
       "description": "herdr plugin that opens agentglass as a popup, jumps from any agent pane to its session, and adds opt-in cost and alert tokens for Claude Code, Codex and other agents to the herdr sidebar",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme"
+      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Agentic Ship",
@@ -9848,7 +9853,8 @@
       "install_url": "https://raw.githubusercontent.com/shimo4228/herdr-toolkit/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
-        "claude-code"
+        "claude-code",
+        "herdr"
       ]
     },
     {
@@ -9862,7 +9868,8 @@
       "install_url": "https://raw.githubusercontent.com/transparent-pegasus/herdrpowers/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "herdr"
       ]
     },
     {
@@ -14974,7 +14981,11 @@
       "description": "Exposes a Herdr terminal pane running Claude Code, Codex, Pi, or a plain shell as an Agent Client Protocol agent, streaming everything in the pane to the client as one shared session",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme"
+      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Hesper",
@@ -18558,6 +18569,20 @@
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
       "ecosystems": [
         "opencode"
+      ]
+    },
+    {
+      "name": "herdr-plugin-manager",
+      "url": "https://github.com/speardragon/herdr-plugin-manager",
+      "owner": "speardragon",
+      "repo": "herdr-plugin-manager",
+      "description": "Herdr plugin manager for installing, updating, enabling, disabling, uninstalling, and browsing community plugins",
+      "category": "Herdr Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "herdr",
+      "installation_url": "https://github.com/speardragon/herdr-plugin-manager#readme",
+      "ecosystems": [
+        "herdr"
       ]
     }
   ]
