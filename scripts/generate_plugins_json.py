@@ -39,6 +39,7 @@ INSTALL_PATH_CANDIDATES = (
     ".codex/plugin.json",
     ".claude-plugin/plugin.json",
 )
+HERDR_MANIFEST_PATH_CANDIDATES = ("herdr-plugin.toml",)
 KIMI_MANIFEST_PATH_CANDIDATES = (
     "kimi.plugin.json",
     ".kimi-plugin/plugin.json",
@@ -52,6 +53,7 @@ KIMI_PLATFORM = "kimi"
 MCP_PLATFORM = "mcp"
 AGENT_SKILLS_PLATFORM = "agent-skills"
 OPENCODE_PLATFORM = "opencode"
+HERDR_PLATFORM = "herdr"
 
 # `## Community Plugins` subsections such as `Development & Workflow` mix
 # platforms, so the heading cannot classify their entries. Derive the platform
@@ -70,6 +72,7 @@ PLATFORM_MANIFEST_PATHS = {
     "claude-code": ".claude-plugin/plugin.json",
     GROK_PLATFORM: ".grok-plugin/plugin.json",
     KIMI_PLATFORM: "kimi.plugin.json",
+    HERDR_PLATFORM: "herdr-plugin.toml",
 }
 
 # Community entries live under one README section. Keep the platform attached
@@ -84,6 +87,7 @@ COMMUNITY_CATEGORY_PLATFORMS = {
     "Kimi Plugins": KIMI_PLATFORM,
     "DeepSeek Harness Plugins": DEEPSEEK_HARNESS_PLATFORM,
     "OpenCode Plugins": OPENCODE_PLATFORM,
+    "Herdr Plugins": HERDR_PLATFORM,
 }
 
 
@@ -412,7 +416,7 @@ def parse_plugins(readme_path: Path) -> list[dict]:
         if platform:
             plugin["platform"] = platform
         manifest_path = PLATFORM_MANIFEST_PATHS.get(platform)
-        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM, OPENCODE_PLATFORM}:
+        if platform in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM, OPENCODE_PLATFORM, HERDR_PLATFORM}:
             # Native MCP, Agent Skills, and OpenCode entries link to their
             # source instructions, not a client-specific plugin manifest.
             plugin["installation_url"] = f"https://github.com/{owner}/{repo}#readme"
@@ -460,6 +464,7 @@ def merge_readme_additions(
                 MCP_PLATFORM,
                 AGENT_SKILLS_PLATFORM,
                 OPENCODE_PLATFORM,
+                HERDR_PLATFORM,
             }:
                 platform = plugin["platform"]
                 for existing in (*upstream, *additions):
@@ -482,6 +487,18 @@ def merge_readme_additions(
         seen.add(key)
 
         if plugin.get("platform") in {MCP_PLATFORM, AGENT_SKILLS_PLATFORM}:
+            additions.append(normalize_plugin(plugin))
+            continue
+
+        if plugin.get("platform") == HERDR_PLATFORM:
+            probed = probe_install_url(
+                plugin["owner"],
+                plugin["repo"],
+                HERDR_MANIFEST_PATH_CANDIDATES,
+            )
+            if probed:
+                plugin["install_url"] = probed
+                plugin.pop("installation_url", None)
             additions.append(normalize_plugin(plugin))
             continue
 

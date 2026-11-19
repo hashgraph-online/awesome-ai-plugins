@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-18",
+  "last_updated": "2026-11-19",
   "total": 1417,
   "platforms": [
     "codex",
@@ -13,7 +13,8 @@
     "standalone",
     "kimi",
     "deepseek-harness",
-    "opencode"
+    "opencode",
+    "herdr"
   ],
   "plugins": [
     {
@@ -7849,7 +7850,11 @@
       "description": "herdr plugin that opens agentglass as a popup, jumps from any agent pane to its session, and adds opt-in cost and alert tokens for Claude Code, Codex and other agents to the herdr sidebar",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme"
+      "installation_url": "https://github.com/BjoernSchotte/agentglass-herdr#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Agentic Ship",
@@ -10132,7 +10137,8 @@
       "install_url": "https://raw.githubusercontent.com/shimo4228/herdr-toolkit/HEAD/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
-        "claude-code"
+        "claude-code",
+        "herdr"
       ]
     },
     {
@@ -10146,7 +10152,8 @@
       "install_url": "https://raw.githubusercontent.com/transparent-pegasus/herdrpowers/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "herdr"
       ]
     },
     {
@@ -15310,7 +15317,11 @@
       "description": "Exposes a Herdr terminal pane running Claude Code, Codex, Pi, or a plain shell as an Agent Client Protocol agent, streaming everything in the pane to the client as one shared session",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme"
+      "installation_url": "https://github.com/frankjoshua/herdr-acp#readme",
+      "ecosystems": [
+        "herdr"
+      ],
+      "platform": "herdr"
     },
     {
       "name": "Hesper",
