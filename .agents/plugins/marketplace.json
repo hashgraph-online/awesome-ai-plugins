@@ -155,6 +155,21 @@
       "install_url": "https://raw.githubusercontent.com/summationai/agent-retro/HEAD/plugins/agent-retro/.codex-plugin/plugin.json"
     },
     {
+      "name": "Agent Session Lineage",
+      "displayName": "Agent Session Lineage",
+      "description": "View indexed Codex and Claude Code sessions and recorded handoff links on Windows using a local M\u00f6bius vault.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TardisBooo",
+      "repo": "agent-session-lineage",
+      "url": "https://github.com/TardisBooo/agent-session-lineage",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/agent-session-lineage/HEAD/plugins/mobius-connect/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Agent Workflow System",
       "displayName": "Agent Workflow System",
       "description": "\u4e00\u5957\u4e2d\u6587AI\u5de5\u4f5c\u6d41\u7cfb\u7edf\uff1a7\u4e2a\u534f\u4f5c\u6280\u80fd + \u884c\u4e3a\u89c4\u8303\u5baa\u6cd5 + \u4f1a\u8bdd\u6062\u590d\u673a\u5236\uff0c\u6a21\u7cca\u76ee\u6807\u2192\u53ef\u6267\u884c\u4efb\u52a1\uff0c\u5168\u751f\u547d\u5468\u671f\u5f15\u5bfc\u3002Codex & Claude Code \u53cc\u5e73\u53f0\uff0c\u65b0\u624b\u53cb\u597d\u3002",
@@ -1790,6 +1805,36 @@
       "repo": "kernel-claude",
       "url": "https://github.com/ariaxhan/kernel-claude",
       "install_url": "https://raw.githubusercontent.com/ariaxhan/kernel-claude/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Kling AI China Plugin",
+      "displayName": "Kling AI China Plugin",
+      "description": "Official China-region OAuth MCP plugin for Claude and Gemini CLI, with image and video generation, Elements, motion-library browsing, and task tracking.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "klingai-tech",
+      "repo": "claude-plugin-cn",
+      "url": "https://github.com/klingai-tech/claude-plugin-cn",
+      "install_url": "https://raw.githubusercontent.com/klingai-tech/claude-plugin-cn/HEAD/plugin.json"
+    },
+    {
+      "name": "Kling AI Global Plugin",
+      "displayName": "Kling AI Global Plugin",
+      "description": "Official Global-region OAuth MCP plugin for Claude and Gemini CLI, with image and video generation, Elements, and task tracking.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "klingai-tech",
+      "repo": "claude-plugin",
+      "url": "https://github.com/klingai-tech/claude-plugin",
+      "install_url": "https://raw.githubusercontent.com/klingai-tech/claude-plugin/HEAD/plugin.json"
     },
     {
       "name": "Krypton",
@@ -4270,6 +4315,21 @@
       "repo": "dataproduct-builder-dbt",
       "url": "https://github.com/entropy-data/dataproduct-builder-dbt",
       "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "DataXAPI",
+      "displayName": "DataXAPI",
+      "description": "Market research from Codex through skills and a hosted MCP server: posts, comments, creators, trends, transcripts, ads and products on Douyin, Xiaohongshu (RedNote), WeChat, TikTok, YouTube, X and more, paid per call.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "data-x-api",
+      "repo": "skills",
+      "url": "https://github.com/data-x-api/skills",
+      "install_url": "https://raw.githubusercontent.com/data-x-api/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Dawn",
@@ -15762,14 +15822,10 @@
       "description": "Comprehensive FastMCP server giving LLMs real-time web access across search engines (DuckDuckGo, Exa), social platforms (Reddit, Hacker News, GitHub, X, LinkedIn), and academic tools (arXiv, Wikipedia), with SSRF-protected URL fetching",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
       "owner": "sydasif",
       "repo": "web-search-mcp",
       "url": "https://github.com/sydasif/web-search-mcp",
-      "install_url": "https://raw.githubusercontent.com/sydasif/web-search-mcp/HEAD/.claude-plugin/plugin.json"
+      "installation_url": "https://github.com/sydasif/web-search-mcp#readme"
     },
     {
       "name": "web-ai-agent-skills",
@@ -18348,21 +18404,6 @@
       "repo": "kitbay-mcp",
       "url": "https://github.com/northlarkhq/kitbay-mcp",
       "installation_url": "https://github.com/northlarkhq/kitbay-mcp#readme"
-    },
-    {
-      "name": "Kling AI Plugin",
-      "displayName": "Kling AI Plugin",
-      "description": "Official regional MCP plugins for Kling image and video generation, distributed on npm as [Global Plugin](https://www.npmjs.com/package/@klingai/plugin-global), [China Plugin](https://www.npmjs.com/package/@klingai/plugin-cn), [Global CLI](https://www.npmjs.com/package/@klingai/cli-global), and [China CLI](https://www.npmjs.com/package/@klingai/cli-cn)",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "claude-code",
-      "ecosystems": [
-        "claude-code"
-      ],
-      "owner": "klingai-tech",
-      "repo": "claude-plugin",
-      "url": "https://github.com/klingai-tech/claude-plugin",
-      "install_url": "https://raw.githubusercontent.com/klingai-tech/claude-plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "kunglao-agent",
