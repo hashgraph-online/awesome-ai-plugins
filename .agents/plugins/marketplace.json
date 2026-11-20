@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-19",
+  "last_updated": "2026-11-20",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -33,6 +33,21 @@
       "repo": "a-team",
       "url": "https://github.com/RBraga01/a-team",
       "install_url": "https://raw.githubusercontent.com/RBraga01/a-team/HEAD/plugin.json"
+    },
+    {
+      "name": "abliterate",
+      "displayName": "abliterate",
+      "description": "Security review of source changes before a push or pull request, with attack-surface, sink and dependency-reachability evidence and SARIF output.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "andreaborio",
+      "repo": "abliterate",
+      "url": "https://github.com/andreaborio/abliterate",
+      "install_url": "https://raw.githubusercontent.com/andreaborio/abliterate/HEAD/plugin.json"
     },
     {
       "name": "Actera",
@@ -1385,6 +1400,23 @@
       "install_url": "https://raw.githubusercontent.com/mirkobozzetto/espresso/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "exam-prep-skills",
+      "displayName": "exam-prep-skills",
+      "description": "Exam-prep plugin with nine skills: try-first tutoring, photo-to-report grading with rubric scoring and an independent regrade, checkpoint reviews and Markdown-to-PDF reports.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "keienhrri-bit",
+      "repo": "exam-prep-skills",
+      "url": "https://github.com/keienhrri-bit/exam-prep-skills",
+      "install_url": "https://raw.githubusercontent.com/keienhrri-bit/exam-prep-skills/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/keienhrri-bit/exam-prep-skills#readme"
+    },
+    {
       "name": "falsegreen-skill",
       "displayName": "falsegreen-skill",
       "description": "Finds tests that stay green when the code they cover is broken, applying six ordered judgments over Python, TypeScript, JavaScript, and Robot Framework suites in Codex CLI and Claude Code.",
@@ -1428,6 +1460,21 @@
       "repo": "figma-maxxing",
       "url": "https://github.com/thiagoxikota/figma-maxxing",
       "install_url": "https://raw.githubusercontent.com/thiagoxikota/figma-maxxing/HEAD/plugin.json"
+    },
+    {
+      "name": "FigureAtlas",
+      "displayName": "FigureAtlas",
+      "description": "Pick one of 300 verified figure types for a paper, slide, poster, or video frame, then export HTML or SVG.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TardisBooo",
+      "repo": "figureatlas",
+      "url": "https://github.com/TardisBooo/figureatlas",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/figureatlas/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Frappe Agent",
@@ -1698,21 +1745,6 @@
       "repo": "joxo",
       "url": "https://github.com/JoxoAI/joxo",
       "install_url": "https://raw.githubusercontent.com/JoxoAI/joxo/HEAD/plugins/joxo/plugin.json"
-    },
-    {
-      "name": "kaoyan-study-skills",
-      "displayName": "kaoyan-study-skills",
-      "description": "Exam-prep plugin with nine skills: try-first tutoring, photo-to-report grading with rubric scoring and an independent regrade, checkpoint reviews and Markdown-to-PDF reports.",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "keienhrri-bit",
-      "repo": "kaoyan-study-skills",
-      "url": "https://github.com/keienhrri-bit/kaoyan-study-skills",
-      "install_url": "https://raw.githubusercontent.com/keienhrri-bit/kaoyan-study-skills/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Keep Mac Awake",
@@ -2180,6 +2212,21 @@
       "repo": "praxis",
       "url": "https://github.com/ouonet/praxis",
       "install_url": "https://raw.githubusercontent.com/ouonet/praxis/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Preview Lab",
+      "displayName": "Preview Lab",
+      "description": "Review the screens Codex changed on screenshots and send approvals and marked areas back to the session.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "dbalas",
+      "repo": "preview-lab",
+      "url": "https://github.com/dbalas/preview-lab",
+      "install_url": "https://raw.githubusercontent.com/dbalas/preview-lab/HEAD/plugin.json"
     },
     {
       "name": "Pro Launch",
@@ -4088,6 +4135,23 @@
       "install_url": "https://raw.githubusercontent.com/Rothschildiuk/context-pack/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Converter Studio",
+      "displayName": "Converter Studio",
+      "description": "Convert video, audio, images, PDFs, documents, e-books, subtitles and archives between 67 formats through Converter Studio's hosted MCP server, with skills for whole folders, web-ready media and audio extraction, paid from account credits (13 free a day). Website: https://converter.studio",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "tariksucu",
+      "repo": "converter-studio",
+      "url": "https://github.com/tariksucu/converter-studio",
+      "install_url": "https://raw.githubusercontent.com/tariksucu/converter-studio/HEAD/plugin.json",
+      "installation_url": "https://github.com/tariksucu/converter-studio#readme"
+    },
+    {
       "name": "Coolify",
       "displayName": "Coolify",
       "description": "Control Coolify Cloud and self-hosted Coolify instances through API-aware workflow skills and local tools.",
@@ -4349,6 +4413,21 @@
       "repo": "easybrandkit",
       "url": "https://github.com/EminBudak/easybrandkit",
       "install_url": "https://raw.githubusercontent.com/EminBudak/easybrandkit/HEAD/plugin.json"
+    },
+    {
+      "name": "edeka-shopping",
+      "displayName": "edeka-shopping",
+      "description": "Shop EDEKA, E center and Marktkauf online markets in Germany for pickup: offers, basket from plain words, earliest slot, order after confirmation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "StardawnAI",
+      "repo": "german-grocery-plugins",
+      "url": "https://github.com/StardawnAI/german-grocery-plugins",
+      "install_url": "https://raw.githubusercontent.com/StardawnAI/german-grocery-plugins/HEAD/plugins/edeka/.codex-plugin/plugin.json"
     },
     {
       "name": "Education Agent Skills",
@@ -5171,6 +5250,21 @@
       "install_url": "https://raw.githubusercontent.com/luoz76070-art/MobiCodex/codex-plugin/plugin.json"
     },
     {
+      "name": "Moli Browser",
+      "displayName": "Moli Browser",
+      "description": "Local Codex MCP plugin for browser-backed web search, rendered page fetching, screenshots, and PDF capture through Moli.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "27painter",
+      "repo": "dsh-moli",
+      "url": "https://github.com/27painter/dsh-moli",
+      "install_url": "https://raw.githubusercontent.com/27painter/dsh-moli/HEAD/plugins/codex-moli/plugin.json"
+    },
+    {
       "name": "MoltNode by Chord",
       "displayName": "MoltNode by Chord",
       "description": "Read 31 blockchains over JSON-RPC and get best-route DEX swap quotes with unsigned transactions via Chord, through two hosted no-key MCP servers and three skills.",
@@ -5411,6 +5505,21 @@
       "install_url": "https://raw.githubusercontent.com/voygr-tech/placecall/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Plinth",
+      "displayName": "Plinth",
+      "description": "Publish HTML pages and Markdown documents from Codex to a hosted or self-hosted Plinth, with versions, comments and per-artifact access control, through a remote MCP server and a skill.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mr0b0t0",
+      "repo": "plinth",
+      "url": "https://github.com/mr0b0t0/plinth",
+      "install_url": "https://raw.githubusercontent.com/mr0b0t0/plinth/HEAD/integrations/plugin/plugin.json"
+    },
+    {
       "name": "plori",
       "displayName": "plori",
       "description": "Create and drive plori AI agents in persistent cloud environments over remote MCP, with OAuth auto-discovery and a bundled Agent Skill.",
@@ -5565,21 +5674,6 @@
       "install_url": "https://raw.githubusercontent.com/questionpunk/codex-plugin/HEAD/plugins/questionpunk/plugin.json"
     },
     {
-      "name": "qURL",
-      "displayName": "qURL",
-      "description": "Share a running local app with approved people or agents from Codex through OpenNHP identity-first access, without deployment, a publisher account or a public inbound app port.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "layervai",
-      "repo": "codex-plugins",
-      "url": "https://github.com/layervai/codex-plugins",
-      "install_url": "https://raw.githubusercontent.com/layervai/codex-plugins/HEAD/plugins/qurl/plugin.json"
-    },
-    {
       "name": "Read Image",
       "displayName": "Read Image",
       "description": "Read local images, videos, web pages, and Windows screenshots through Doubao, GLM, or Qwen-compatible vision APIs.",
@@ -5670,6 +5764,21 @@
       "repo": "revid-skills",
       "url": "https://github.com/tmakersas/revid-skills",
       "install_url": "https://raw.githubusercontent.com/tmakersas/revid-skills/HEAD/plugin.json"
+    },
+    {
+      "name": "rewe-shopping",
+      "displayName": "rewe-shopping",
+      "description": "Shop REWE in Germany for pickup: offers, basket from plain words, earliest slot, recipes to basket, order after confirmation.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "StardawnAI",
+      "repo": "german-grocery-plugins",
+      "url": "https://github.com/StardawnAI/german-grocery-plugins",
+      "install_url": "https://raw.githubusercontent.com/StardawnAI/german-grocery-plugins/HEAD/plugins/rewe/.codex-plugin/plugin.json"
     },
     {
       "name": "Risk Desk",
@@ -6814,6 +6923,21 @@
       "installation_url": "https://github.com/MockirDev/antirea#readme"
     },
     {
+      "name": "ArborynSkills",
+      "displayName": "ArborynSkills",
+      "description": "Reusable Codex and coding-agent skills for persistent plan trees and functional semantic growth",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "GhabiX",
+      "repo": "ArborynSkills",
+      "url": "https://github.com/GhabiX/ArborynSkills",
+      "installation_url": "https://github.com/GhabiX/ArborynSkills#readme"
+    },
+    {
       "name": "archlang",
       "displayName": "archlang",
       "description": "Agent skills and MCP server that let coding agents write floor plans in the ArchLang `.arch` language and compile them to dimensioned SVG, DXF or PDF with lint and geometric validation",
@@ -7142,21 +7266,6 @@
       "repo": "ego-decision-layer",
       "url": "https://github.com/jiangkoumo/ego-decision-layer",
       "installation_url": "https://github.com/jiangkoumo/ego-decision-layer#readme"
-    },
-    {
-      "name": "exam-prep-skills",
-      "displayName": "exam-prep-skills",
-      "description": "Nine Agent Skills for months-long exam prep (China's postgraduate entrance exam): a tutor that has you try first, a photo-to-report grading pipeline with rubric scoring and an independent regrade, checkpoint reviews and a Markdown-to-PDF report builder, installable for Claude Code and Codex",
-      "category": "Agent Skills",
-      "source": "awesome-ai-plugins",
-      "platform": "agent-skills",
-      "ecosystems": [
-        "agent-skills"
-      ],
-      "owner": "keienhrri-bit",
-      "repo": "exam-prep-skills",
-      "url": "https://github.com/keienhrri-bit/exam-prep-skills",
-      "installation_url": "https://github.com/keienhrri-bit/exam-prep-skills#readme"
     },
     {
       "name": "excalidraw-cli",
@@ -11433,6 +11542,17 @@
       "installation_url": "https://github.com/sysangel/hemingway#readme"
     },
     {
+      "name": "herdr-nagne-custom",
+      "displayName": "herdr-nagne-custom",
+      "description": "herdr layout, mods and worker templates for supervising Claude Code, Codex, Grok and OpenRouter workers, with a live worker column, usage bars, read-only workers where each CLI enforces its own limit, and linking computers over Tailscale without ssh",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "ggleebwg-stack",
+      "repo": "herdr-nagne-custom",
+      "url": "https://github.com/ggleebwg-stack/herdr-nagne-custom",
+      "installation_url": "https://github.com/ggleebwg-stack/herdr-nagne-custom#readme"
+    },
+    {
       "name": "herdr-toolkit",
       "displayName": "herdr-toolkit",
       "description": "Claude Code plugin with two skills for the Herdr agent multiplexer: spawn-session starts detached Remote Control sessions in Herdr panes, and agent-send sends prompts to agents in Herdr panes and reports whether each one landed and when the work is done",
@@ -13618,6 +13738,28 @@
       "install_url": "https://raw.githubusercontent.com/freibergergarcia/phone-a-friend/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "pi-background-job",
+      "displayName": "pi-background-job",
+      "description": "Pi coding agent extension providing non-blocking background jobs and line-buffered stdout monitors whose exits and matching log lines wake the agent without polling",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "GhabiX",
+      "repo": "pi-background-job",
+      "url": "https://github.com/GhabiX/pi-background-job",
+      "installation_url": "https://github.com/GhabiX/pi-background-job#readme"
+    },
+    {
+      "name": "pi-btw-cached",
+      "displayName": "pi-btw-cached",
+      "description": "Pi coding agent extension adding /btw side questions that reuse the active session's prompt-cache prefix without running tools or modifying conversation history",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "GhabiX",
+      "repo": "pi-btw-cached",
+      "url": "https://github.com/GhabiX/pi-btw-cached",
+      "installation_url": "https://github.com/GhabiX/pi-btw-cached#readme"
+    },
+    {
       "name": "pi-codex-web-search",
       "displayName": "pi-codex-web-search",
       "description": "A Pi extension that searches the web through the authenticated Codex CLI",
@@ -13627,6 +13769,39 @@
       "repo": "pi-codex-web-search",
       "url": "https://github.com/devinat1/pi-codex-web-search",
       "installation_url": "https://github.com/devinat1/pi-codex-web-search#readme"
+    },
+    {
+      "name": "pi-compact-tree",
+      "displayName": "pi-compact-tree",
+      "description": "Pi coding agent TUI extension that folds tool calls into one-line summaries and thinking into titles with a borderless input and companion themes",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "GhabiX",
+      "repo": "pi-compact-tree",
+      "url": "https://github.com/GhabiX/pi-compact-tree",
+      "installation_url": "https://github.com/GhabiX/pi-compact-tree#readme"
+    },
+    {
+      "name": "pi-spinejit",
+      "displayName": "pi-spinejit",
+      "description": "Pi coding agent extension for persistent subtask-tree context compilation (@spinejit/pi-spinejit), folding completed subtasks into submitted memories while preserving prefix cache hits",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "GhabiX",
+      "repo": "spine-plugin",
+      "url": "https://github.com/GhabiX/spine-plugin",
+      "installation_url": "https://github.com/GhabiX/spine-plugin#readme"
+    },
+    {
+      "name": "pi-timeout-policy",
+      "displayName": "pi-timeout-policy",
+      "description": "Pi coding agent extension enforcing a unified 60s default and 2h cap foreground timeout policy across bash, grep, and find",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "GhabiX",
+      "repo": "pi-timeout-policy",
+      "url": "https://github.com/GhabiX/pi-timeout-policy",
+      "installation_url": "https://github.com/GhabiX/pi-timeout-policy#readme"
     },
     {
       "name": "piia-engram",
@@ -16729,6 +16904,21 @@
       "repo": "cockatoo-mcp",
       "url": "https://github.com/louisblythe/cockatoo-mcp",
       "installation_url": "https://github.com/louisblythe/cockatoo-mcp#readme"
+    },
+    {
+      "name": "Codex-Canvas",
+      "displayName": "Codex-Canvas",
+      "description": "Codex plugin with a local infinite canvas for AI image editing, visual annotations, layer separation, and PSD export",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Xiangyu-CAS",
+      "repo": "codex-canvas",
+      "url": "https://github.com/Xiangyu-CAS/codex-canvas",
+      "install_url": "https://raw.githubusercontent.com/Xiangyu-CAS/codex-canvas/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Command Code Usage",
@@ -20041,6 +20231,20 @@
       "installation_url": "https://github.com/pugarte7/spanish-top-tech-companies#readme"
     },
     {
+      "name": "SpineCodex",
+      "displayName": "SpineCodex",
+      "description": "Open-source OpenAI Codex CLI distribution (@spinejit/spine-codex) with built-in subtask-tree context compilation that preserves prompt-cache prefixes and cuts long-horizon token costs by 32%\u201374%",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "GhabiX",
+      "repo": "SpineCodex",
+      "url": "https://github.com/GhabiX/SpineCodex"
+    },
+    {
       "name": "Spotify Play Count MCP",
       "displayName": "Spotify Play Count MCP",
       "description": "MCP server: Spotify play counts for any track, album, artist or playlist, plus artist monthly listeners and followers, run on your own Apify account",
@@ -21417,6 +21621,20 @@
       "url": "https://github.com/hxlog/dsh-skills-tools"
     },
     {
+      "name": "dsh-spinejit",
+      "displayName": "dsh-spinejit",
+      "description": "Persistent subtask-tree context management for DeepSeek Harness (spine_open, spine_close, spine_next, spine_spawn) that folds closed subtasks into submitted memories while preserving prefix cache hits across Web, Desktop, and TUI; install with dsh plugin --profile web add @spinejit/dsh-spinejit",
+      "category": "DeepSeek Harness Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "deepseek-harness",
+      "ecosystems": [
+        "deepseek-harness"
+      ],
+      "owner": "GhabiX",
+      "repo": "dsh-spinejit",
+      "url": "https://github.com/GhabiX/dsh-spinejit"
+    },
+    {
       "name": "dsh-ui-usage-billing",
       "displayName": "dsh-ui-usage-billing",
       "description": "Usage billing dashboard for DeepSeek Harness with sidebar cost metrics, session-log aggregation, and multi-provider pricing",
@@ -21896,6 +22114,21 @@
       "repo": "opencode-plugins",
       "url": "https://github.com/rizal72/opencode-plugins",
       "installation_url": "https://github.com/rizal72/opencode-plugins#readme"
+    },
+    {
+      "name": "opencode-wakelock",
+      "displayName": "opencode-wakelock",
+      "description": "OpenCode plugin that prevents system sleep on macOS and Linux during agent sessions and while managed background shell commands run in OpenCode V2",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "IgnisDa",
+      "repo": "opencode-wakelock",
+      "url": "https://github.com/IgnisDa/opencode-wakelock",
+      "installation_url": "https://github.com/IgnisDa/opencode-wakelock#readme"
     },
     {
       "name": "OpenUltraCode",
