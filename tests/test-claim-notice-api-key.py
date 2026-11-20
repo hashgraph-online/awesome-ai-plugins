@@ -12,6 +12,18 @@ SPEC.loader.exec_module(MODULE)
 
 
 class MergedCatalogCheckoutTests(unittest.TestCase):
+    def test_claim_notice_scopes_write_permissions_to_its_job(self):
+        workflow = yaml.safe_load((Path(__file__).resolve().parents[1] / '.github/workflows/claim-notice.yml').read_text())
+        self.assertEqual(workflow['permissions'], {})
+        self.assertEqual(
+            workflow['jobs']['post-claim-notice']['permissions'],
+            {'contents': 'read', 'issues': 'read', 'pull-requests': 'write'},
+        )
+        self.assertEqual(
+            workflow['jobs']['backfill-claim-notices']['permissions'],
+            {'contents': 'read', 'issues': 'read', 'pull-requests': 'write'},
+        )
+
     def test_closed_event_reads_catalog_after_the_merge(self):
         workflow = yaml.safe_load((Path(__file__).resolve().parents[1] / '.github/workflows/claim-notice.yml').read_text())
         snapshots = {
