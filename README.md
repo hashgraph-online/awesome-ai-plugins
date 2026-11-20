@@ -1634,6 +1634,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
 - [Kimi Code](https://github.com/MoonshotAI/kimi-code) - Official Kimi Code runtime and plugin documentation.
 - [omp packages](https://omppackages.com) - Catalog of Oh My Pi (omp) plugins that also tracks which Pi packages work on omp, with install-test results and README status badges.
+- [Takes video agents list](https://gettakes.app/video-agents) - Free list of 47 skills, MCP servers and tools for making video with Claude Code, Codex, Cursor and Gemini CLI, each with its install line.
 - [xAI Grok Plugin Marketplace](https://github.com/xai-org/plugin-marketplace) - Official Grok Build plugin marketplace and catalog format.
 
 ## Claim Your Plugin
