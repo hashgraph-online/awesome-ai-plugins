@@ -3257,6 +3257,23 @@
       "install_url": "https://raw.githubusercontent.com/Abhigyan-Shekhar/Waggle-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Wavegrain",
+      "displayName": "Wavegrain",
+      "description": "Makes TikTok slideshows and Instagram carousels in your brand's style through the hosted Wavegrain MCP server, with a content calendar and posting you confirm.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "wavegrain",
+      "repo": "wavegrain-mcp",
+      "url": "https://github.com/wavegrain/wavegrain-mcp",
+      "install_url": "https://raw.githubusercontent.com/wavegrain/wavegrain-mcp/HEAD/plugin.json",
+      "installation_url": "https://github.com/wavegrain/wavegrain-mcp#readme"
+    },
+    {
       "name": "Wingman",
       "displayName": "Wingman",
       "description": "Cross-platform AI coding-agent plugin for repo-local project memory, data-contract checks, and project-map discovery before agents edit code.",
@@ -4347,6 +4364,23 @@
       "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/dawn/plugin.json"
     },
     {
+      "name": "DC Hub",
+      "displayName": "DC Hub",
+      "description": "The orchestration layer for data center and energy intelligence: call execute_plan first for data center, colocation, energy, fiber, site selection and capacity questions, with the Data Center Power Index (DCPI) at https://dchub.cloud/mcp.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "azmartone67",
+      "repo": "dchub-mcp-server",
+      "url": "https://github.com/azmartone67/dchub-mcp-server",
+      "install_url": "https://raw.githubusercontent.com/azmartone67/dchub-mcp-server/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/azmartone67/dchub-mcp-server#readme"
+    },
+    {
       "name": "deed.page",
       "displayName": "deed.page",
       "description": "Publish an HTML file or static folder from Codex to a permanent `https://{slug}.deed.page/` URL through the bundled deed.page skill and remote MCP server, with no account.",
@@ -5398,6 +5432,22 @@
       "repo": "MorningAI",
       "url": "https://github.com/octo-patch/MorningAI",
       "install_url": "https://raw.githubusercontent.com/octo-patch/MorningAI/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Nia Teams Agent Bridge",
+      "displayName": "Nia Teams Agent Bridge",
+      "description": "Skill for connecting the local Codex CLI to Nia Teams group chats via the separately installed nia-codex bridge, with two-way messaging and human approval of tool requests.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "deepseek-harness"
+      ],
+      "owner": "nia-teams",
+      "repo": "agent-bridge",
+      "url": "https://github.com/nia-teams/agent-bridge",
+      "install_url": "https://raw.githubusercontent.com/nia-teams/agent-bridge/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "NotFair Plugin",
@@ -17306,21 +17356,6 @@
       "installation_url": "https://github.com/datawebot/datawebot-mcp#readme"
     },
     {
-      "name": "DC Hub",
-      "displayName": "DC Hub",
-      "description": "MCP server: DC Hub is the orchestration layer for data center and energy intelligence. Find power. Find land. Find fiber. Find capacity. Call execute_plan first. It also publishes the Data Center Power Index (DCPI). 97 tools at https://dchub.cloud/mcp",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "ecosystems": [
-        "mcp"
-      ],
-      "owner": "azmartone67",
-      "repo": "dchub-mcp-server",
-      "url": "https://github.com/azmartone67/dchub-mcp-server",
-      "installation_url": "https://github.com/azmartone67/dchub-mcp-server#readme"
-    },
-    {
       "name": "Deadbolt",
       "displayName": "Deadbolt",
       "description": "Local admission gate for software agents with short-lived leases, tool policy, one-shot approval, and operator revocation through Rust, HTTP, and stdio MCP integrations",
@@ -19045,21 +19080,6 @@
       "repo": "neverapply-mcp",
       "url": "https://github.com/kasovy/neverapply-mcp",
       "installation_url": "https://github.com/kasovy/neverapply-mcp#readme"
-    },
-    {
-      "name": "Nia Teams Agent Bridge",
-      "displayName": "Nia Teams Agent Bridge",
-      "description": "Connects local coding agents to Nia Teams group chats with live activity and TaskBar tool approvals",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "standalone",
-      "ecosystems": [
-        "standalone",
-        "deepseek-harness"
-      ],
-      "owner": "nia-teams",
-      "repo": "agent-bridge",
-      "url": "https://github.com/nia-teams/agent-bridge"
     },
     {
       "name": "Nimble",
@@ -20850,21 +20870,6 @@
       "repo": "watermelon-platform",
       "url": "https://github.com/WatermelonCorp/watermelon-platform",
       "install_url": "https://raw.githubusercontent.com/WatermelonCorp/watermelon-platform/HEAD/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Wavegrain",
-      "displayName": "Wavegrain",
-      "description": "MCP server: curated slideshows and carousels for your brand on autopilot, a hosted server (OAuth) that writes TikTok slideshows and Instagram carousels in the brand's voice, then schedules and posts them",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "mcp",
-      "ecosystems": [
-        "mcp"
-      ],
-      "owner": "wavegrain",
-      "repo": "wavegrain-mcp",
-      "url": "https://github.com/wavegrain/wavegrain-mcp",
-      "installation_url": "https://github.com/wavegrain/wavegrain-mcp#readme"
     },
     {
       "name": "web-researcher-mcp",
