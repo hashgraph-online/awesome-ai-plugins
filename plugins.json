@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-20",
-  "total": 1539,
+  "total": 1545,
   "platforms": [
     "codex",
     "grok",
@@ -265,6 +265,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/AgiFlow/ai-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AI Coding Daily Report",
+      "url": "https://github.com/TardisBooo/ai-coding-daily-report",
+      "owner": "TardisBooo",
+      "repo": "ai-coding-daily-report",
+      "description": "Generates a Markdown work report from local AI coding sessions with your chosen writer CLI.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/ai-coding-daily-report/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -2098,6 +2112,20 @@
       ]
     },
     {
+      "name": "Prewalk",
+      "url": "https://github.com/TardisBooo/prewalk",
+      "owner": "TardisBooo",
+      "repo": "prewalk",
+      "description": "Completes and verifies a first task, then hands the remaining work to a configured executor.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/prewalk/HEAD/hosts/codex/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Pro Launch",
       "url": "https://github.com/jack-reson8/pro-launch",
       "owner": "jack-reson8",
@@ -2730,6 +2758,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/hlibsuslov/telegram-bot-ui/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Tigang Reminder",
+      "url": "https://github.com/TardisBooo/tigang-plugin",
+      "owner": "TardisBooo",
+      "repo": "tigang-plugin",
+      "description": "Displays a Kegel break reminder after successful Git commits and pushes, with local counts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/tigang-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -6156,6 +6198,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/prateeks367/voicemoat-skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Waiting Gaming",
+      "url": "https://github.com/paranoiadd/waiting-gaming",
+      "owner": "paranoiadd",
+      "repo": "waiting-gaming",
+      "description": "Offline 2048 for Windows Codex with opt-in waiting invitations, saved game progress, and remembered window position.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/paranoiadd/waiting-gaming/HEAD/package/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -15104,6 +15160,20 @@
       ]
     },
     {
+      "name": "Allscreenshots",
+      "url": "https://github.com/allscreenshots/allscreenshots-plugin",
+      "owner": "allscreenshots",
+      "repo": "allscreenshots-plugin",
+      "description": "MCP server: capture website screenshots with viewport sizing, full-page capture, dark mode, and ad or cookie banner blocking",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/allscreenshots/allscreenshots-plugin#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Anode",
       "url": "https://github.com/skulitom/Anode",
       "owner": "skulitom",
@@ -15538,6 +15608,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "CerebrixOS MCP servers",
+      "url": "https://github.com/cerebrixos-org/brand-mcp-servers",
+      "owner": "cerebrixos-org",
+      "repo": "brand-mcp-servers",
+      "description": "MCP server: hosted Trazio (read-only questions over logs, traces and security events) and Forward Deployed (research and analysis jobs, priced and approved per job) over Streamable HTTP with OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/cerebrixos-org/brand-mcp-servers#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

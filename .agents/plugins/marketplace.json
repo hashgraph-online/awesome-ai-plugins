@@ -275,6 +275,21 @@
       "install_url": "https://raw.githubusercontent.com/AgiFlow/ai-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "AI Coding Daily Report",
+      "displayName": "AI Coding Daily Report",
+      "description": "Generates a Markdown work report from local AI coding sessions with your chosen writer CLI.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TardisBooo",
+      "repo": "ai-coding-daily-report",
+      "url": "https://github.com/TardisBooo/ai-coding-daily-report",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/ai-coding-daily-report/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "AI-Native SDLC Loop",
       "displayName": "AI-Native SDLC Loop",
       "description": "Six-stage SDLC in committed Markdown where hooks enforce the loop at the tool-call level: an artifact gate refuses source writes no approved plan covers and keeps a change declared low-risk away from sensitive paths, with 8 skills and 2 read-only subagents.",
@@ -2229,6 +2244,21 @@
       "install_url": "https://raw.githubusercontent.com/dbalas/preview-lab/HEAD/plugin.json"
     },
     {
+      "name": "Prewalk",
+      "displayName": "Prewalk",
+      "description": "Completes and verifies a first task, then hands the remaining work to a configured executor.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TardisBooo",
+      "repo": "prewalk",
+      "url": "https://github.com/TardisBooo/prewalk",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/prewalk/HEAD/hosts/codex/plugin.json"
+    },
+    {
       "name": "Pro Launch",
       "displayName": "Pro Launch",
       "description": "Takes an app or product from idea to launch with phase gates for naming and domain checks, references, style frames, UI loop, GTM and shipping.",
@@ -2910,6 +2940,21 @@
       "repo": "telegram-bot-ui",
       "url": "https://github.com/hlibsuslov/telegram-bot-ui",
       "install_url": "https://raw.githubusercontent.com/hlibsuslov/telegram-bot-ui/HEAD/plugin.json"
+    },
+    {
+      "name": "Tigang Reminder",
+      "displayName": "Tigang Reminder",
+      "description": "Displays a Kegel break reminder after successful Git commits and pushes, with local counts.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TardisBooo",
+      "repo": "tigang-plugin",
+      "url": "https://github.com/TardisBooo/tigang-plugin",
+      "install_url": "https://raw.githubusercontent.com/TardisBooo/tigang-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "TMCRA Local Memory",
@@ -6574,6 +6619,21 @@
       "repo": "voicemoat-skills",
       "url": "https://github.com/prateeks367/voicemoat-skills",
       "install_url": "https://raw.githubusercontent.com/prateeks367/voicemoat-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Waiting Gaming",
+      "displayName": "Waiting Gaming",
+      "description": "Offline 2048 for Windows Codex with opt-in waiting invitations, saved game progress, and remembered window position.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "paranoiadd",
+      "repo": "waiting-gaming",
+      "url": "https://github.com/paranoiadd/waiting-gaming",
+      "install_url": "https://raw.githubusercontent.com/paranoiadd/waiting-gaming/HEAD/package/.codex-plugin/plugin.json"
     },
     {
       "name": "WakeWire",
@@ -16199,6 +16259,21 @@
       "install_url": "https://raw.githubusercontent.com/akii-technologies-ltd/akii-seo-ai-search-optimizer/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Allscreenshots",
+      "displayName": "Allscreenshots",
+      "description": "MCP server: capture website screenshots with viewport sizing, full-page capture, dark mode, and ad or cookie banner blocking",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "allscreenshots",
+      "repo": "allscreenshots-plugin",
+      "url": "https://github.com/allscreenshots/allscreenshots-plugin",
+      "installation_url": "https://github.com/allscreenshots/allscreenshots-plugin#readme"
+    },
+    {
       "name": "Anode",
       "displayName": "Anode",
       "description": "Claude Code plugin for a hidden background Windows desktop for agents: GUI automation, UI Automation, screenshots and app testing without taking over your mouse",
@@ -16667,6 +16742,21 @@
       "repo": "cc-dash-kit",
       "url": "https://github.com/coolthor/cc-dash-kit",
       "install_url": "https://raw.githubusercontent.com/coolthor/cc-dash-kit/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "CerebrixOS MCP servers",
+      "displayName": "CerebrixOS MCP servers",
+      "description": "MCP server: hosted Trazio (read-only questions over logs, traces and security events) and Forward Deployed (research and analysis jobs, priced and approved per job) over Streamable HTTP with OAuth",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "cerebrixos-org",
+      "repo": "brand-mcp-servers",
+      "url": "https://github.com/cerebrixos-org/brand-mcp-servers",
+      "installation_url": "https://github.com/cerebrixos-org/brand-mcp-servers#readme"
     },
     {
       "name": "cguard",
