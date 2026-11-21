@@ -1897,6 +1897,21 @@
       "install_url": "https://raw.githubusercontent.com/ClickHouse/loom/HEAD/integrations/codex-plugin/.codex-plugin/plugin.json"
     },
     {
+      "name": "Loupe Code Review",
+      "displayName": "Loupe Code Review",
+      "description": "Runs independent Codex code reviews, optionally adds configured Claude reviewers, then verifies and consolidates evidence for working trees, commits, and pull requests.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "pallgeuer",
+      "repo": "la-dev-codex-plugins",
+      "url": "https://github.com/pallgeuer/la-dev-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/pallgeuer/la-dev-codex-plugins/HEAD/plugins/la-review/.codex-plugin/plugin.json"
+    },
+    {
       "name": "macbox",
       "displayName": "macbox",
       "description": "A real Mac for Codex: build, test, run and tap through iOS apps on the iOS simulator from any machine, including Linux and cloud sandboxes.",
@@ -2197,6 +2212,21 @@
       "repo": "open-dynamic-workflows",
       "url": "https://github.com/Suraj1235/open-dynamic-workflows",
       "install_url": "https://raw.githubusercontent.com/Suraj1235/open-dynamic-workflows/HEAD/packages/codex-adapter/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Perform Action Toolkit",
+      "displayName": "Perform Action Toolkit",
+      "description": "Lets Codex preview and run named development actions using configurable local definitions and required variable binding.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "pallgeuer",
+      "repo": "la-dev-codex-plugins",
+      "url": "https://github.com/pallgeuer/la-dev-codex-plugins/tree/main",
+      "install_url": "https://raw.githubusercontent.com/pallgeuer/la-dev-codex-plugins/main/plugins/toolkit/.codex-plugin/plugin.json"
     },
     {
       "name": "Personal Data Protection",
