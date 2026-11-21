@@ -871,6 +871,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [unmistakable](https://github.com/gagoar/unmistakable) - Skill that rewrites tool descriptions, error messages and agent instructions so an AI agent cannot misread them, with a dependency-free TypeScript linter that checks the result.
 - [unslop](https://github.com/avivgerz-hue/unslop) - MCP server: UI and CSS design linter with 72 rules and 4 tools that audits AI-generated front-end code and generates refactor plans.
 - [Usage Monitor](https://github.com/Errr0rr404/usage-monitor) - Floating desktop meter that shows remaining Grok, MiniMax, Codex, Claude, Cursor, Copilot, and Gemini usage and keeps each session on this computer.
+- [ux-audit-skill](https://github.com/andhubanov/ux-audit-skill) - Claude skill that audits UX from a screenshot, URL or Figma link and returns a verdict, the top fixes and findings ranked blocker to polish.
 - [Vanguard Frontier Agentic](https://github.com/VincentChuWaiChow/vanguard-frontier-agentic) - Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows.
 - [VASTlint](https://github.com/aleksUIX/vastlint) - Validate VAST, VMAP, and DAAST ad tags against IAB Tech Lab specs via Gemini CLI, Claude Code, and a hosted MCP server.
 - [Velith](https://github.com/epicsagas/Velith) - AI-native publishing system with a 6-phase pipeline from ideation to EPUB/PDF across 8 genres.
