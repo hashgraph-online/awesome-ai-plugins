@@ -1661,6 +1661,7 @@ The score is best used as a quick trust signal and triage summary (not the only 
 - [awesome-ai-coding-tools](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools) - Curated 3-tier taxonomy of coding agents, CLI harnesses, MCP servers, `AGENTS.md` templates, and local LLM execution guides.
 - [awesome-codex-plugins](https://github.com/hashgraph-online/awesome-codex-plugins) - Codex-focused catalog that inspired this cross-platform list.
 - [dsplugin.app](https://dsplugin.app/) - DeepSeek Harness plugin directory.
+- [FindOpenSource Agent Skill Builder](https://findoss.dev/en/skills) - Free, no-login web tool that turns a selection from 346 open-source agent skills (10 packs) into one paste-in install prompt or the matching `npx skills add` commands for Codex, Claude Code, Cursor, Gemini CLI, GitHub Copilot or OpenCode, at project or global scope.
 - [HOL Plugin Registry](https://hol.org/registry/plugins) - Browse plugins with scanner-backed security analysis and trust scores.
 - [Kimi Code](https://github.com/MoonshotAI/kimi-code) - Official Kimi Code runtime and plugin documentation.
 - [omp packages](https://omppackages.com) - Catalog of Oh My Pi (omp) plugins that also tracks which Pi packages work on omp, with install-test results and README status badges.
