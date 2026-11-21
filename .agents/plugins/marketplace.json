@@ -8100,6 +8100,21 @@
       "installation_url": "https://github.com/georgesmomo/mock-interview#readme"
     },
     {
+      "name": "motlab",
+      "displayName": "motlab",
+      "description": "Two Agent Skills, motlab and motlab-assets, plus the `@motlab/cli` CLI, that turn your references into videos and reusable asset kits built as code-driven canvas scenes, with a frame-by-frame review viewer and up to 4K MP4 export, installable for Claude Code, Codex, Cursor, Hermes Agent, Muse Code, and more",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "staryone",
+      "repo": "motlab",
+      "url": "https://github.com/staryone/motlab",
+      "installation_url": "https://github.com/staryone/motlab#readme"
+    },
+    {
       "name": "music-skill",
       "displayName": "music-skill",
       "description": "Agent skill that composes original instrumental music as editable notes, performs it on sampled instruments and synthesizers, and renders MIDI, stems and mastered audio",
@@ -15948,6 +15963,17 @@
       "installation_url": "https://github.com/Errr0rr404/usage-monitor#readme"
     },
     {
+      "name": "ux-audit-skill",
+      "displayName": "ux-audit-skill",
+      "description": "Claude skill that audits UX from a screenshot, URL or Figma link and returns a verdict, the top fixes and findings ranked blocker to polish",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "andhubanov",
+      "repo": "ux-audit-skill",
+      "url": "https://github.com/andhubanov/ux-audit-skill",
+      "installation_url": "https://github.com/andhubanov/ux-audit-skill#readme"
+    },
+    {
       "name": "Vanguard Frontier Agentic",
       "displayName": "Vanguard Frontier Agentic",
       "description": "Multi-harness marketplace of skills, specialist agents, rules, and MCP references for guarded cloud, platform, compliance, and business workflows",
@@ -20741,6 +20767,20 @@
       "repo": "substack-mcp",
       "url": "https://github.com/conorbronsdon/substack-mcp",
       "install_url": "https://raw.githubusercontent.com/conorbronsdon/substack-mcp/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Tally",
+      "displayName": "Tally",
+      "description": "Native macOS menu bar app with live Claude Code, Codex and OpenCode quota meters, reset countdowns and pace alerts, plus a cross-platform Wrapped of your AI coding usage (`npx tally-menubar wrapped`)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "PratikRai0101",
+      "repo": "tally",
+      "url": "https://github.com/PratikRai0101/tally"
     },
     {
       "name": "Tanod",
