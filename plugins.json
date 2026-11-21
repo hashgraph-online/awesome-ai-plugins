@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-21",
-  "total": 1563,
+  "total": 1568,
   "platforms": [
     "codex",
     "grok",
@@ -5705,6 +5705,20 @@
       ]
     },
     {
+      "name": "s2f Agent",
+      "url": "https://github.com/JiaqiLi1024/s2f-agent",
+      "owner": "JiaqiLi1024",
+      "repo": "s2f-agent",
+      "description": "Codex skills and routing playbooks for computational genomics, including sequence-model inference and variant-effect analysis.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/JiaqiLi1024/s2f-agent/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "Scrape.ly",
       "url": "https://github.com/scrapely-app/scrapely-mcp",
       "owner": "scrapely-app",
@@ -6405,6 +6419,20 @@
         "agent-skills"
       ],
       "installation_url": "https://github.com/Webly-AI/webly-plugin#readme"
+    },
+    {
+      "name": "Wiro AI",
+      "url": "https://github.com/wiroai/Wiro-Plugin",
+      "owner": "wiroai",
+      "repo": "Wiro-Plugin",
+      "description": "Run 1,000+ image, video, audio and LLM models on Wiro AI, chain them into workflows and deploy your own AI agents through the hosted Wiro MCP server, five agent skills and eleven ready commands, with browser sign-in and the price shown before each paid run.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/wiroai/Wiro-Plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "Worktable",
@@ -7900,6 +7928,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/georgesmomo/tech-to-motion#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Tray UI",
+      "url": "https://github.com/VladislavKorzh/trayui",
+      "owner": "VladislavKorzh",
+      "repo": "trayui",
+      "description": "Agent skill that builds and fixes web pages and app screens with Tray UI, an MIT-licensed design system in plain HTML and CSS (108 components, 64 blocks, 118 icons, 10 themes and typed React components), with every docs page as Markdown and a checker for the markup it writes, installable in Claude Code, claude.ai and other agents",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/VladislavKorzh/trayui#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -16028,6 +16070,19 @@
       ]
     },
     {
+      "name": "Clips Kitty",
+      "url": "https://github.com/ColinGPT9/clips-studio",
+      "owner": "ColinGPT9",
+      "repo": "clips-studio",
+      "description": "Free, open-source Windows app that turns long streams, VODs and videos into captioned 9:16 clips with speaker tracking using local AI, and ships a local stdio MCP server and an agent skill so any MCP client can queue a Twitch, Kick or YouTube link, follow the job, read the chosen clips and export one",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "clx",
       "url": "https://github.com/KrasimirKralev/clx",
       "owner": "KrasimirKralev",
@@ -16510,6 +16565,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "eu-us-opendata-mcp",
+      "url": "https://github.com/yannabadie/eu-us-opendata-mcp",
+      "owner": "yannabadie",
+      "repo": "eu-us-opendata-mcp",
+      "description": "MCP server: Zero-dependency, zero-API-key Python stdio server querying 5 official EU & U.S. open-data registries directly (French SIRENE/RNE companies with computed EU VAT, EU TED v3 tenders with buyer contacts, NIH ClinicalTrials.gov v2, U.S. CMS NPI providers, and EMBL-EBI Europe PMC/PubMed); listed in the Official MCP Registry (`io.github.yannabadie/eu-us-opendata-mcp`) and rated A on Glama (MIT)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/yannabadie/eu-us-opendata-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {

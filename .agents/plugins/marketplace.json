@@ -6086,6 +6086,21 @@
       "install_url": "https://raw.githubusercontent.com/jingjing2222/rust-reverse-engineering-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "s2f Agent",
+      "displayName": "s2f Agent",
+      "description": "Codex skills and routing playbooks for computational genomics, including sequence-model inference and variant-effect analysis.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "JiaqiLi1024",
+      "repo": "s2f-agent",
+      "url": "https://github.com/JiaqiLi1024/s2f-agent",
+      "install_url": "https://raw.githubusercontent.com/JiaqiLi1024/s2f-agent/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Scrape.ly",
       "displayName": "Scrape.ly",
       "description": "Find, run and read ready-made web scrapers for sites like Google Maps, Amazon and LinkedIn from Codex through the hosted Scrape.ly MCP server (OAuth) and the scrapely-scrape skill.",
@@ -6836,6 +6851,21 @@
       "url": "https://github.com/Webly-AI/webly-plugin",
       "install_url": "https://raw.githubusercontent.com/Webly-AI/webly-plugin/HEAD/.codex-plugin/plugin.json",
       "installation_url": "https://github.com/Webly-AI/webly-plugin#readme"
+    },
+    {
+      "name": "Wiro AI",
+      "displayName": "Wiro AI",
+      "description": "Run 1,000+ image, video, audio and LLM models on Wiro AI, chain them into workflows and deploy your own AI agents through the hosted Wiro MCP server, five agent skills and eleven ready commands, with browser sign-in and the price shown before each paid run.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "wiroai",
+      "repo": "Wiro-Plugin",
+      "url": "https://github.com/wiroai/Wiro-Plugin",
+      "install_url": "https://raw.githubusercontent.com/wiroai/Wiro-Plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Worktable",
@@ -8441,6 +8471,21 @@
       "repo": "tech-to-motion",
       "url": "https://github.com/georgesmomo/tech-to-motion",
       "installation_url": "https://github.com/georgesmomo/tech-to-motion#readme"
+    },
+    {
+      "name": "Tray UI",
+      "displayName": "Tray UI",
+      "description": "Agent skill that builds and fixes web pages and app screens with Tray UI, an MIT-licensed design system in plain HTML and CSS (108 components, 64 blocks, 118 icons, 10 themes and typed React components), with every docs page as Markdown and a checker for the markup it writes, installable in Claude Code, claude.ai and other agents",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "VladislavKorzh",
+      "repo": "trayui",
+      "url": "https://github.com/VladislavKorzh/trayui",
+      "installation_url": "https://github.com/VladislavKorzh/trayui#readme"
     },
     {
       "name": "uCoz",
@@ -17192,6 +17237,20 @@
       "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
+      "name": "Clips Kitty",
+      "displayName": "Clips Kitty",
+      "description": "Free, open-source Windows app that turns long streams, VODs and videos into captioned 9:16 clips with speaker tracking using local AI, and ships a local stdio MCP server and an agent skill so any MCP client can queue a Twitch, Kick or YouTube link, follow the job, read the chosen clips and export one",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "ColinGPT9",
+      "repo": "clips-studio",
+      "url": "https://github.com/ColinGPT9/clips-studio"
+    },
+    {
       "name": "clx",
       "displayName": "clx",
       "description": "Linux launcher for Claude Code that starts on whichever of your own Pro/Max accounts has the most usage left and moves a running session to your next account at a usage threshold, without a restart; unofficial, MIT",
@@ -17712,6 +17771,21 @@
       "repo": "ethora-mcp-server",
       "url": "https://github.com/dappros/ethora-mcp-server",
       "install_url": "https://raw.githubusercontent.com/dappros/ethora-mcp-server/HEAD/claude-plugin/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "eu-us-opendata-mcp",
+      "displayName": "eu-us-opendata-mcp",
+      "description": "MCP server: Zero-dependency, zero-API-key Python stdio server querying 5 official EU & U.S. open-data registries directly (French SIRENE/RNE companies with computed EU VAT, EU TED v3 tenders with buyer contacts, NIH ClinicalTrials.gov v2, U.S. CMS NPI providers, and EMBL-EBI Europe PMC/PubMed); listed in the Official MCP Registry (`io.github.yannabadie/eu-us-opendata-mcp`) and rated A on Glama (MIT)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "yannabadie",
+      "repo": "eu-us-opendata-mcp",
+      "url": "https://github.com/yannabadie/eu-us-opendata-mcp",
+      "installation_url": "https://github.com/yannabadie/eu-us-opendata-mcp#readme"
     },
     {
       "name": "Exotic Car Rental Skills",
