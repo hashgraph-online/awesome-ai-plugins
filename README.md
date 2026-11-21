@@ -918,6 +918,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Agent Face](https://github.com/ericphamhoangdev/agent-face-skills) - Agent skills that give a coding agent a small always-on-top desktop face showing its state (working, thinking, happy, stuck) with captions and lip-synced voice clips.
 - [Agent Message Queue](https://github.com/avivsinai/agent-message-queue) - File-based inter-agent messaging with co-op mode, cross-project federation, and orchestrator integrations.
 - [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
+- [No Stairs Please MCP](https://nostairsplease.com/mcp) - Remote MCP server for searching 2,200+ step-free North American live-music venues, load-in stairs, drive-time routing, and public booking contacts.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
 - [agent-assh](https://github.com/izzzzzi/agent-assh) - SSH workflow CLI and agent skill that runs remote commands in persistent tmux sessions and returns paginated JSON output to keep agent context small.
 - [Agent402](https://github.com/MikeyPetrillo/Agent402) - Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key.
