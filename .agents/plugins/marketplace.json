@@ -4401,12 +4401,14 @@
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "agent-skills"
       ],
       "owner": "data-x-api",
       "repo": "skills",
       "url": "https://github.com/data-x-api/skills",
-      "install_url": "https://raw.githubusercontent.com/data-x-api/skills/HEAD/.codex-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/data-x-api/skills/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/data-x-api/skills#readme"
     },
     {
       "name": "Dawn",
@@ -8561,6 +8563,21 @@
       "repo": "ui-craft",
       "url": "https://github.com/educlopez/ui-craft",
       "installation_url": "https://github.com/educlopez/ui-craft#readme"
+    },
+    {
+      "name": "UNDERCOVER",
+      "displayName": "UNDERCOVER",
+      "description": "Clean-room Agent Skill and zero-dependency Python CLI for Claude Code, Antigravity, Codex, Cursor, Gemini CLI, and OpenCode that neutralizes AI commit/PR attribution watermarks, enforces SessionStart/PreToolUse and 3-layer Git hooks, cleans invisible Unicode watermarks, and safely scrubs unpushed commit history",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "planners1490",
+      "repo": "undercover",
+      "url": "https://github.com/planners1490/undercover",
+      "installation_url": "https://github.com/planners1490/undercover#readme"
     },
     {
       "name": "Vectoree",
@@ -21063,6 +21080,21 @@
       "repo": "agent",
       "url": "https://github.com/uxkin/agent",
       "install_url": "https://raw.githubusercontent.com/uxkin/agent/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "VBASE",
+      "displayName": "VBASE",
+      "description": "Claude Code plugin that edits talking-head videos with word-timed cuts and captions, and turns pinned frame notes into the next take",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ekanshvcpkg",
+      "repo": "VBASE",
+      "url": "https://github.com/ekanshvcpkg/VBASE",
+      "install_url": "https://raw.githubusercontent.com/ekanshvcpkg/VBASE/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Vessel",
