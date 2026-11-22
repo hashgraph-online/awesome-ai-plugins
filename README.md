@@ -1057,6 +1057,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Scholar Feed](https://github.com/YGao2005/scholar-feed-mcp) - MCP server over 600k+ CS/AI/ML papers: rank by citations or forecast rising impact, trace 23.2M citation edges, and pull full text and BibTeX; `npx -y scholar-feed-mcp`.
 - [ScrapeGraph AI](https://github.com/ScrapeGraphAI/just-scrape) - AI-powered web scraping CLI to search, scrape, extract structured JSON, crawl, and monitor web pages via the ScrapeGraph AI API.
 - [SCVD General Store](https://github.com/seancrecord/scvd-general-store-repo) - Skills and hosted MCP for x402 endpoint preflight, signed receipt verification, and evidence-backed agentic commerce workflows.
+- [search-console-mcp](https://github.com/sudomichael/search-console-mcp) - MCP server: Google Search Console for any MCP client - 30-second login, no Google Cloud project.
 - [search1api-mcp](https://github.com/superagents-lab/search1api-mcp) - MCP server providing web search, news, page crawling, sitemaps, and trending topics via Search1API.
 - [sectionsight](https://github.com/Majny/sectionsight) - Claude Code skill that sets up cookieless, privacy-first website analytics (time per page section, consent banner, Slack or e-mail reports, health alerts) and proves the privacy claims with a headless-browser check.
 - [SEO Dungeon](https://github.com/avalonreset/seo-dungeon) - Gamified local SEO audits that turn website issues into 16-bit dungeon battles for Codex, Claude, and Gemini CLI workflows.
