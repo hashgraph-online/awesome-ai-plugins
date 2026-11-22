@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-21",
-  "total": 1575,
+  "last_updated": "2026-11-22",
+  "total": 1580,
   "platforms": [
     "codex",
     "grok",
@@ -17026,6 +17026,16 @@
       "installation_url": "https://github.com/frankjoshua/herdr-acp#readme"
     },
     {
+      "name": "Hermes Attention",
+      "url": "https://github.com/xraysight/hermes-attention",
+      "owner": "xraysight",
+      "repo": "hermes-attention",
+      "description": "Repeating sound alerts for pending approvals and questions in Hermes Desktop",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/xraysight/hermes-attention#readme"
+    },
+    {
       "name": "Hesper",
       "url": "https://github.com/derzierau/hesper",
       "owner": "derzierau",
@@ -17141,6 +17151,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "I2v.ai",
+      "url": "https://github.com/i2v-ai/i2v-mcp",
+      "owner": "i2v-ai",
+      "repo": "i2v-mcp",
+      "description": "MCP server: image generation and text-to-video or image-to-video across 12 image and 16 video models, with parameter schemas, a USD quote before every paid task and a caller-set maxCostUsd ceiling",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/i2v-ai/i2v-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -17331,6 +17355,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "JustFill",
+      "url": "https://github.com/mrmaciej1/justfill-mcp",
+      "owner": "mrmaciej1",
+      "repo": "justfill-mcp",
+      "description": "MCP server: detect, visually preview, and fill existing AcroForm, flat, or scanned PDF forms and save reusable templates via hosted Streamable HTTP with OAuth 2.1 (`https://justfill.app/api/mcp`) or a local MIT stdio client (`uvx justfill-mcp`), plus a Gemini CLI extension",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/mrmaciej1/justfill-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -19031,6 +19069,20 @@
       ]
     },
     {
+      "name": "send21",
+      "url": "https://github.com/send21io/mcp",
+      "owner": "send21io",
+      "repo": "mcp",
+      "description": "MCP server: remote Streamable HTTP server at https://send21.io/mcp for non-custodial pay links and payment drafts; no key can move funds, and the person signs and sends the payment from their own wallet",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/send21io/mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "SEO GSC Wizard",
       "url": "https://github.com/jbobbink/seo-gsc-wizard",
       "owner": "jbobbink",
@@ -19756,6 +19808,16 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/rxmna8502/vybe-intelligence-vault#readme"
+    },
+    {
+      "name": "Warmerly",
+      "url": "https://github.com/WarmerlyApp/mcp",
+      "owner": "WarmerlyApp",
+      "repo": "mcp",
+      "description": "MCP server for cold email outreach, deliverability and reply triage from Claude, ChatGPT, Cursor and other MCP clients",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/WarmerlyApp/mcp#readme"
     },
     {
       "name": "Watermelon UI",

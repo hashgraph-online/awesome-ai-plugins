@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-21",
+  "last_updated": "2026-11-22",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -18265,6 +18265,17 @@
       "installation_url": "https://github.com/frankjoshua/herdr-acp#readme"
     },
     {
+      "name": "Hermes Attention",
+      "displayName": "Hermes Attention",
+      "description": "Repeating sound alerts for pending approvals and questions in Hermes Desktop",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "xraysight",
+      "repo": "hermes-attention",
+      "url": "https://github.com/xraysight/hermes-attention",
+      "installation_url": "https://github.com/xraysight/hermes-attention#readme"
+    },
+    {
       "name": "Hesper",
       "displayName": "Hesper",
       "description": "MIT-licensed standalone macOS workspace for Claude Code and Codex with live terminals, attention controls, cross-Mac session handoffs, and Homebrew installation",
@@ -18390,6 +18401,21 @@
       "repo": "hyreflow-plugins",
       "url": "https://github.com/automindz-solutions/hyreflow-plugins",
       "install_url": "https://raw.githubusercontent.com/automindz-solutions/hyreflow-plugins/HEAD/hyreflow/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "I2v.ai",
+      "displayName": "I2v.ai",
+      "description": "MCP server: image generation and text-to-video or image-to-video across 12 image and 16 video models, with parameter schemas, a USD quote before every paid task and a caller-set maxCostUsd ceiling",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "i2v-ai",
+      "repo": "i2v-mcp",
+      "url": "https://github.com/i2v-ai/i2v-mcp",
+      "installation_url": "https://github.com/i2v-ai/i2v-mcp#readme"
     },
     {
       "name": "icon-mcp",
@@ -18594,6 +18620,21 @@
       "owner": "jori-ai",
       "repo": "jori",
       "url": "https://github.com/jori-ai/jori"
+    },
+    {
+      "name": "JustFill",
+      "displayName": "JustFill",
+      "description": "MCP server: detect, visually preview, and fill existing AcroForm, flat, or scanned PDF forms and save reusable templates via hosted Streamable HTTP with OAuth 2.1 (`https://justfill.app/api/mcp`) or a local MIT stdio client (`uvx justfill-mcp`), plus a Gemini CLI extension",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "mrmaciej1",
+      "repo": "justfill-mcp",
+      "url": "https://github.com/mrmaciej1/justfill-mcp",
+      "installation_url": "https://github.com/mrmaciej1/justfill-mcp#readme"
     },
     {
       "name": "JuzPost",
@@ -20424,6 +20465,21 @@
       "installation_url": "https://github.com/SellerForgeAI/sellerforge-mcp#readme"
     },
     {
+      "name": "send21",
+      "displayName": "send21",
+      "description": "MCP server: remote Streamable HTTP server at https://send21.io/mcp for non-custodial pay links and payment drafts; no key can move funds, and the person signs and sends the payment from their own wallet",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "send21io",
+      "repo": "mcp",
+      "url": "https://github.com/send21io/mcp",
+      "installation_url": "https://github.com/send21io/mcp#readme"
+    },
+    {
       "name": "SEO GSC Wizard",
       "displayName": "SEO GSC Wizard",
       "description": "Claude Code, Cursor and Gemini CLI plugin with 34 SEO skills (site audits, traffic-drop diagnosis, content decay, cannibalization, indexing, migrations, client reports) on top of the hosted GSC Wizard MCP server, which reads your Google Search Console, Bing Webmaster Tools, GA4, Merchant Center and Yandex data over OAuth with a GSC Wizard account",
@@ -21205,6 +21261,17 @@
       "repo": "vybe-intelligence-vault",
       "url": "https://github.com/rxmna8502/vybe-intelligence-vault",
       "installation_url": "https://github.com/rxmna8502/vybe-intelligence-vault#readme"
+    },
+    {
+      "name": "Warmerly",
+      "displayName": "Warmerly",
+      "description": "MCP server for cold email outreach, deliverability and reply triage from Claude, ChatGPT, Cursor and other MCP clients",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "WarmerlyApp",
+      "repo": "mcp",
+      "url": "https://github.com/WarmerlyApp/mcp",
+      "installation_url": "https://github.com/WarmerlyApp/mcp#readme"
     },
     {
       "name": "Watermelon UI",
