@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-22",
-  "total": 1580,
+  "total": 1587,
   "platforms": [
     "codex",
     "grok",
@@ -1487,6 +1487,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/ezra-y/codex-goal-progress/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Graphify",
+      "url": "https://github.com/Graphify-Labs/graphify-codex-plugin",
+      "owner": "Graphify-Labs",
+      "repo": "graphify-codex-plugin",
+      "description": "Shared codebase context from a code knowledge graph: find symbols, trace callers and dependencies, check the impact of a change, and share team memory and pull request review results.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Graphify-Labs/graphify-codex-plugin/HEAD/plugins/graphify/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5532,6 +5546,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/questionpunk/codex-plugin/HEAD/plugins/questionpunk/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "qURL",
+      "url": "https://github.com/layervai/codex-plugins",
+      "owner": "layervai",
+      "repo": "codex-plugins",
+      "description": "Share a running local app with approved people or agents from Codex through OpenNHP identity-first access, without deployment, a publisher account or a public inbound app port.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/layervai/codex-plugins/HEAD/plugins/qurl/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -10407,6 +10435,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "dortort/claude-plugins",
+      "url": "https://github.com/dortort/claude-plugins",
+      "owner": "dortort",
+      "repo": "claude-plugins",
+      "description": "Claude Code plugin marketplace bundling native OS task scheduling (`scheduler`), session taint-tracking guardrails (`taint-guard`), interactive HTML artifact callbacks (`artifact-callbacks`), and portable agent skills",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/dortort/claude-plugins#readme",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -15393,6 +15435,19 @@
       "installation_url": "https://github.com/ariaxhan/agentmailkit#readme"
     },
     {
+      "name": "Agentry",
+      "url": "https://github.com/dortort/agentry",
+      "owner": "dortort",
+      "repo": "agentry",
+      "description": "Playwright-style end-to-end testing CLI for AI coding agents (Claude Code, Codex, Gemini, Antigravity), MCP servers, and skills with deterministic CI transcript replay",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "AgentWeb",
       "url": "https://github.com/AgentWeb-Labs/agentweb-mcp",
       "owner": "AgentWeb-Labs",
@@ -18241,7 +18296,7 @@
       "description": "Document framework for agents: write React/TSX or import Markdown, render to real A4 pages, and export PDF, HTML, or Word, with bundled Agent Skills and an opt-in MCP server for editing documents",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/simonliu-ai-product/open-doc/HEAD/plugins/open-doc/.claude-plugin/plugin.json",
+      "installation_url": "https://github.com/simonliu-ai-product/open-doc#readme",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -18962,6 +19017,20 @@
       ]
     },
     {
+      "name": "sagemath-mcp",
+      "url": "https://github.com/XBP-Europe/sagemath-mcp",
+      "owner": "XBP-Europe",
+      "repo": "sagemath-mcp",
+      "description": "MCP server: evaluates SageMath expressions for agents in an isolated worker after checking the syntax tree against an allowlist",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/XBP-Europe/sagemath-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Sando",
       "url": "https://github.com/yuzushi-dev/sando",
       "owner": "yuzushi-dev",
@@ -19000,6 +19069,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "Scento Perfume API",
+      "url": "https://github.com/Scento-com/perfume-mcp-server",
+      "owner": "Scento-com",
+      "repo": "perfume-mcp-server",
+      "description": "MCP server: perfume and fragrance answers for AI assistants from Scento's verified database of 1,600+ perfumes, with notes, scent families, similar perfumes, raw materials and houses; free, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Scento-com/perfume-mcp-server#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -19581,6 +19664,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/touchlinewire/touchlinewire-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Transformer.gg",
+      "url": "https://github.com/NBV-AppFactory/transformer-mcp",
+      "owner": "NBV-AppFactory",
+      "repo": "transformer-mcp",
+      "description": "MCP server: remote Streamable HTTP server at https://transformer.gg/mcp (OAuth 2.1 or workspace API key) for booking sponsored posts from X creators, finding matched creators, sending offers, and tracking clicks and conversions, with a CLI and agent skills",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/NBV-AppFactory/transformer-mcp#readme",
       "ecosystems": [
         "mcp"
       ]
