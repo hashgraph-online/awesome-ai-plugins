@@ -228,6 +228,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Octopost](https://github.com/octopost-ink/octopost-plugin) - Agent skill and hosted MCP server that let an agent post, schedule and thread to X, Bluesky, Mastodon and LinkedIn, with a human approval queue before anything goes out.
 - [Perq](https://github.com/f-o-x11/perq-skill) - Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
+- [Runheed](https://github.com/getrunheed/runheed-plugin) - Agent skills and hosted MCP server that let a coding agent search production errors, read stack traces and breadcrumbs, and resolve an error with the fixing commit.
 
 <details>
 <summary>Related Pixi’VN Agent Skills</summary>
