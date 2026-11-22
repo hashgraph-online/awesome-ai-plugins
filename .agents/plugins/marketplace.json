@@ -6110,12 +6110,14 @@
       "source": "awesome-ai-plugins",
       "platform": "codex",
       "ecosystems": [
-        "codex"
+        "codex",
+        "agent-skills"
       ],
       "owner": "getrunheed",
       "repo": "runheed-plugin",
       "url": "https://github.com/getrunheed/runheed-plugin",
-      "install_url": "https://raw.githubusercontent.com/getrunheed/runheed-plugin/HEAD/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/getrunheed/runheed-plugin/HEAD/plugin.json",
+      "installation_url": "https://github.com/getrunheed/runheed-plugin#readme"
     },
     {
       "name": "RunLater",
@@ -9494,6 +9496,17 @@
       "repo": "antigravity-context-meter",
       "url": "https://github.com/Dunphil692/antigravity-context-meter",
       "installation_url": "https://github.com/Dunphil692/antigravity-context-meter#readme"
+    },
+    {
+      "name": "Antigravity Pet",
+      "displayName": "Antigravity Pet",
+      "description": "Native Windows & macOS pixel desktop pet for Google Antigravity \u2014 6 animated pets, live agent status sync, click to jump back to chat",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "Wlaeg",
+      "repo": "antigravity-pet",
+      "url": "https://github.com/Wlaeg/antigravity-pet",
+      "installation_url": "https://github.com/Wlaeg/antigravity-pet#readme"
     },
     {
       "name": "Aplica",
@@ -16436,6 +16449,20 @@
       "install_url": "https://raw.githubusercontent.com/izzzzzi/agent-assh/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "agent-dead-man-switch",
+      "displayName": "agent-dead-man-switch",
+      "description": "Heartbeat dead man's switch for autonomous agents that sweeps hot-wallet ETH to your cold wallet if the heartbeat goes stale (unaudited \u2014 read before you arm)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "manteclaw",
+      "repo": "agent-dead-man-switch",
+      "url": "https://github.com/manteclaw/agent-dead-man-switch"
+    },
+    {
       "name": "Agent402",
       "displayName": "Agent402",
       "description": "Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key",
@@ -19116,6 +19143,32 @@
       "installation_url": "https://github.com/mailveri/mailveri-mcp#readme"
     },
     {
+      "name": "MakeAIVideo",
+      "displayName": "MakeAIVideo",
+      "description": "MCP server: create short-form AI videos with voiceover, AI or stock scenes, captions and music, then post them to TikTok, Instagram or YouTube (hosted at mcp.makeaivideo.ai with OAuth, or npx @makeaivideo/mcp)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "makeaivideo-ai",
+      "repo": "mcp",
+      "url": "https://github.com/makeaivideo-ai/mcp",
+      "installation_url": "https://github.com/makeaivideo-ai/mcp#readme"
+    },
+    {
+      "name": "Manteclaw x402 Tools",
+      "displayName": "Manteclaw x402 Tools",
+      "description": "200 pay-per-call API endpoints for crypto market data, on-chain analytics and dev utilities, paid in USDC on Base via the x402 protocol",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "manteclaw",
+      "repo": "manteclaw-x402",
+      "url": "https://github.com/manteclaw/manteclaw-x402",
+      "installation_url": "https://github.com/manteclaw/manteclaw-x402#readme"
+    },
+    {
       "name": "Maskbolt",
       "displayName": "Maskbolt",
       "description": "Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary)",
@@ -20114,6 +20167,20 @@
       "installation_url": "https://github.com/quickman924/plushsource-mcp#readme"
     },
     {
+      "name": "poe-fallback-bot",
+      "displayName": "poe-fallback-bot",
+      "description": "Poe server-bot template with primary-to-fallback LLM failover, so one provider's outage doesn't kill your bot",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "manteclaw",
+      "repo": "poe-fallback-bot",
+      "url": "https://github.com/manteclaw/poe-fallback-bot"
+    },
+    {
       "name": "Portway",
       "displayName": "Portway",
       "description": "A local HTTP proxy for Claude Code, Codex, and OpenAI-compatible endpoints on vLLM or SGLang that sends each turn as a zstd delta against the previous one: about 1 KiB, not the whole context",
@@ -20810,6 +20877,20 @@
       "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme"
     },
     {
+      "name": "SoapBridge",
+      "displayName": "SoapBridge",
+      "description": "Generate a REST API, an OpenAPI spec, and an MCP tool server from any WSDL SOAP service, with read-only and destructive tool annotations inferred from operation names and overridable in config",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "harshhh28",
+      "repo": "soapbridge",
+      "url": "https://github.com/harshhh28/soapbridge"
+    },
+    {
       "name": "Social Fetch",
       "displayName": "Social Fetch",
       "description": "MCP server: public profiles, posts, comments, transcripts and search from TikTok, Instagram, YouTube, X, Reddit and LinkedIn. Hosted endpoint with OAuth, plus an MIT licensed stdio server for clients that only run local servers",
@@ -21415,6 +21496,21 @@
       "install_url": "https://raw.githubusercontent.com/WatermelonCorp/watermelon-platform/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "WaveSpeedAI MCP Server",
+      "displayName": "WaveSpeedAI MCP Server",
+      "description": "MCP server: search, inspect and run WaveSpeedAI image, video, audio and 3D generation models from any MCP client, with local file upload",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "WaveSpeedAI",
+      "repo": "mcp-server",
+      "url": "https://github.com/WaveSpeedAI/mcp-server",
+      "installation_url": "https://github.com/WaveSpeedAI/mcp-server#readme"
+    },
+    {
       "name": "web-researcher-mcp",
       "displayName": "web-researcher-mcp",
       "description": "MCP server: web search, page extraction and citation verification across web, academic, patent, legal and filing sources, with source credibility scoring and retraction checks",
@@ -21510,6 +21606,20 @@
       "repo": "x-twitter-scraper",
       "url": "https://github.com/Xquik-dev/x-twitter-scraper",
       "install_url": "https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "x402-earnings-digest",
+      "displayName": "x402-earnings-digest",
+      "description": "Daily earnings digest for an x402 service on Base, reconstructed from on-chain USDC settlements \u2014 no facilitator dashboard needed",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "manteclaw",
+      "repo": "x402-earnings-digest",
+      "url": "https://github.com/manteclaw/x402-earnings-digest"
     },
     {
       "name": "XposedOrNot",
