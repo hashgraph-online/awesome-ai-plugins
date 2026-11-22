@@ -1743,7 +1743,7 @@ Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md
 
 To add a plugin:
 
-1. Fork this repo and add a single line to the appropriate section in `README.md` (alphabetical order)
+1. Fork this repo and add a line per plugin (or one whole-marketplace entry; see [CONTRIBUTING.md](CONTRIBUTING.md#claude-code-submissions)) to the appropriate section in `README.md` (alphabetical order)
 2. Submit a PR with the plugin repo URL. Scanner CI in the source repository is optional for listing and recommended for security.
 
 **You do not need to copy plugin files into this repo.** A generator fetches your bundle from your source repo and regenerates catalog files automatically.
