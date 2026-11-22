@@ -161,6 +161,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [claude-skills](https://github.com/Jeffallan/claude-skills) - 67 Agent Skills for full-stack development across languages, frameworks, infrastructure, testing, security, and data/ML, with 371 reference files that load only when a task needs them and 9 project workflow commands.
 - [claude-video-kit](https://github.com/runesleo/claude-video-kit) - Agent Skill for producing reviewed 9:16 explainer videos from briefs or scripts, including a narrated, captioned Remotion fallback gated by a script-bound pre-render review receipt.
 - [claudemy](https://github.com/assafkip/claudemy) - Claude Code skill that researches a named topic on the web and builds a course of 2-minute audio lessons with citations.
+- [CallForMe](https://github.com/callforme-tel/callforme) - Agent skill and hosted MCP server that let an agent phone a business, work the phone menu, wait on hold and return a transcript with answers.
 - [Coacus](https://github.com/dandgabr/Coacus) - Cross-harness collection of agent skills, agents, and workflows with filtered installation and discovery tooling.
 - [cometchat-skills](https://github.com/cometchat/cometchat-skills) - Agent skill collection that has your AI coding agent add CometChat chat and voice/video calling into an existing React, Angular, React Native, iOS, Android or Flutter app, bundled as a plugin with the CometChat docs MCP server.
 - [CoMPaSS Prompt Framework](https://github.com/YourAKShaw/CoMPaSS-prompt-framework) - Agent skill for analysis-first prompting that clarifies intention, assembles consequential prompts from explicit components, and verifies their success criteria.
@@ -228,7 +229,6 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Octopost](https://github.com/octopost-ink/octopost-plugin) - Agent skill and hosted MCP server that let an agent post, schedule and thread to X, Bluesky, Mastodon and LinkedIn, with a human approval queue before anything goes out.
 - [Perq](https://github.com/f-o-x11/perq-skill) - Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
-- [Runheed](https://github.com/getrunheed/runheed-plugin) - Agent skills and hosted MCP server that let a coding agent search production errors, read stack traces and breadcrumbs, and resolve an error with the fixing commit.
 
 <details>
 <summary>Related Pixi’VN Agent Skills</summary>
