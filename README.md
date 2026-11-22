@@ -228,6 +228,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Octopost](https://github.com/octopost-ink/octopost-plugin) - Agent skill and hosted MCP server that let an agent post, schedule and thread to X, Bluesky, Mastodon and LinkedIn, with a human approval queue before anything goes out.
 - [Perq](https://github.com/f-o-x11/perq-skill) - Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
+- [Runheed](https://github.com/getrunheed/runheed-plugin) - Agent skills and hosted MCP server that let a coding agent search production errors, read stack traces and breadcrumbs, and resolve an error with the fixing commit.
 
 <details>
 <summary>Related Pixi’VN Agent Skills</summary>
@@ -342,6 +343,7 @@ Individually installable Agent Skills collections, rather than one client-specif
  - [angles-video-skill](https://github.com/anglesvideo/angles-video-skills) - AI video generation skill for Claude Code supporting Veo3, Kling 3.0, Wan, and HunyuanVideo via the angles.video API.
 - [antidote](https://github.com/Avtr99/antidote) - An antidote to AI patchwork: stops agents from hiding bugs behind guards and makes them remove the cause.
 - [Antigravity Context Meter](https://github.com/Dunphil692/antigravity-context-meter) - Real-time 1:1 Cursor-style context meter & zero-loss session migration for Google Antigravity (Desktop HUD & IDE Extension).
+- [Antigravity Pet](https://github.com/Wlaeg/antigravity-pet) - Native Windows & macOS pixel desktop pet for Google Antigravity — 6 animated pets, live agent status sync, click to jump back to chat.
 - [Antigravity Workspace Template](https://github.com/study8677/antigravity-workspace-template) - Multi-agent codebase knowledge graph generator with context-aware planning and automatic scope management — turns codebases into coherent agent workspaces.
 - [Aplica](https://github.com/eurafaeldecarvalho/aplica) - Claude Code plugin that scores public job postings against your own profile and applies in your logged-in Chrome with your real data under daily caps, never paying, uploading documents or inventing answers; needs a paid Claude plan, Claude in Chrome and Python 3.11+, and job sites' terms restrict automated access, so your account can be limited.
 - [ARC](https://github.com/avandall/ARC) - Autonomous Reliability, Deterministic simulation, zero-prod replay, and chaos-engineering test harness for AI agents
@@ -924,6 +926,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Agent QA](https://github.com/vostride/agent-qa) - MCP server and Agent Skills for authoring, running, and triaging natural-language web and mobile tests with reusable execution memory.
 - [Agent Vision](https://github.com/zfifteen/agent-vision) - macOS-only local camera plugin for explicit snapshots, streaming controls, and file-backed image input.
 - [agent-assh](https://github.com/izzzzzi/agent-assh) - SSH workflow CLI and agent skill that runs remote commands in persistent tmux sessions and returns paginated JSON output to keep agent context small.
+- [agent-dead-man-switch](https://github.com/manteclaw/agent-dead-man-switch) - Heartbeat dead man's switch for autonomous agents that sweeps hot-wallet ETH to your cold wallet if the heartbeat goes stale (unaudited — read before you arm). <!-- platform: standalone -->
 - [Agent402](https://github.com/MikeyPetrillo/Agent402) - Open-source MCP server and x402 seller: 500+ tools for web search, rendering, PDFs, OCR, market and SEC data, paid per call in USDC or free via proof-of-work, no account or API key.
 - [AgentAlarm](https://github.com/achubnet/agentalarm-plugins) - Claude Code and Cursor plugins plus an npm CLI whose hooks alert your iPhone when an agent finishes or needs a decision, with a remote OAuth MCP server for reminders and urgent alerts that ring like an alarm clock.
 - [AgentBadge MCP](https://github.com/spreadzp/agentbadge-mcp) - Verify agents, check trust scores, and pay for services with x402 — ERC-8004 identity on Arc via MCP.
@@ -1166,6 +1169,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Maestro: Costguard](https://github.com/mbanderas/costguard) - Cost auditor for Codex that flags CI/cron and cloud-spend waste via read-only provider checks, then previews and applies surgical CI workflow fixes locally without writing to provider accounts or pushing git.
 - [MailVeri MCP](https://github.com/mailveri/mailveri-mcp) - MCP server: verify single emails and bulk lists (invalid, disposable, catch-all and role detection) from Claude, Cursor and other MCP clients.
 - [MakeAIVideo](https://github.com/makeaivideo-ai/mcp) - MCP server: create short-form AI videos with voiceover, AI or stock scenes, captions and music, then post them to TikTok, Instagram or YouTube (hosted at mcp.makeaivideo.ai with OAuth, or npx @makeaivideo/mcp).
+- [Manteclaw x402 Tools](https://github.com/manteclaw/manteclaw-x402) - 200 pay-per-call API endpoints for crypto market data, on-chain analytics and dev utilities, paid in USDC on Base via the x402 protocol.
 - [Mantis](./plugins/deonmenezes/mantishack) - Autonomous bug bounty hunter for authorized engagements — 7-phase FSM (RECON → AUTH → HUNT → CHAIN → VERIFY → GRADE → REPORT), parallel hunter sub-agents, cryptographic scope enforcement, and BLAKE3/Ed25519 Merkle event logs.
 - [Maskbolt](https://github.com/skulitom/Maskbolt) - Claude Code plugin for Maskbolt, Segment Anything (SAM) on the CPU as a local MCP server and skill that cuts objects out of images as transparent PNGs, finds and counts every object, and exports masks and SVG or JSON outlines, with no Python, no GPU and nothing uploaded (needs the maskbolt binary).
 - [mathtype-for-word](https://github.com/felimet/mathtype-for-word) - Codex and Claude Code plugin with a local MCP server and Agent Skill that creates editable MathType 7 equations in Word and PowerPoint on Windows, with MathType-native equation numbering and cross-references in Word.
@@ -1252,6 +1256,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [plane-codex-mcp](https://github.com/Bene-2020/plane-codex-mcp) - Codex plugin that captures project work events and syncs tasks, bugs, decisions and risks to Plane via a local SQLite outbox.
 - [plori](https://github.com/plori-ai/codex-plugin) - Create and drive plori cloud agents (each an AI agent on its own cloud computer) over plori's remote MCP server, with OAuth auto-discovery.
 - [PlushSource MCP](https://github.com/quickman924/plushsource-mcp) - MCP server: search, filter and compare the 55 custom plush manufacturers listed on [PlushSource](https://plushsource.com) by country, MOQ, lead time, OEM/ODM and claimed certifications, with facts taken from each manufacturer's own website; runs locally over stdio with no API key.
+- [poe-fallback-bot](https://github.com/manteclaw/poe-fallback-bot) - Poe server-bot template with primary-to-fallback LLM failover, so one provider's outage doesn't kill your bot. <!-- platform: standalone -->
 - [Portway](https://github.com/rath/portway) - A local HTTP proxy for Claude Code, Codex, and OpenAI-compatible endpoints on vLLM or SGLang that sends each turn as a zstd delta against the previous one: about 1 KiB, not the whole context.
 - [PostEverywhere](https://github.com/posteverywhere/claude-plugin) - Social media scheduler plugin: write, schedule and publish posts to Instagram, TikTok, YouTube, LinkedIn, X, Threads, Pinterest, Bluesky and more, plan a content calendar and see analytics, through a hosted MCP server and 15 skills ([posteverywhere.ai](https://posteverywhere.ai)).
 - [Postlint MCP](https://github.com/conorbronsdon/postlint-mcp) - MCP server: checks social drafts against X, Bluesky, LinkedIn, Threads, Mastodon, and Discord length rules, including t.co URL weighting and grapheme counting, with no authentication or network access.
@@ -1309,6 +1314,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [SkyAccess](https://github.com/sky-access/skyaccess-mcp) - Search 5,000+ live empty leg flights, get charter price estimates and booking links; no account or API key.
 - [Slashbooks](https://github.com/giltotherescue/slashbooks) - Local-first AI bookkeeping plugin for Claude Cowork, Claude Code, and Codex that imports bank activity, closes the month, answers questions, and exports accountant-ready files for cash-basis businesses.
 - [SlickTrip](https://github.com/sliktrip/slicktrip-mcp) - MCP server: live flight, hotel and seat prices, cheapest-day calendars, and price-drop and seat alerts by email or text, hosted with OAuth sign-in.
+- [SoapBridge](https://github.com/harshhh28/soapbridge) - Generate a REST API, an OpenAPI spec, and an MCP tool server from any WSDL SOAP service, with read-only and destructive tool annotations inferred from operation names and overridable in config. <!-- platform: standalone -->
 - [Social Fetch](https://github.com/social-freak-ltd/socialfetch-mcp) - MCP server: public profiles, posts, comments, transcripts and search from TikTok, Instagram, YouTube, X, Reddit and LinkedIn. Hosted endpoint with OAuth, plus an MIT licensed stdio server for clients that only run local servers.
 - [Soku CLI](https://github.com/About-Intelligence/soku-cli) - Claude Code, Codex and Cursor plugin and CLI that lets coding agents read Google, Meta, TikTok and ChatGPT Ads, GA4 and PostHog data through a Soku workspace and prepare campaign changes that run only after a person approves them.
 - [SolidPing](https://github.com/fclairamb/solidping-plugin) - Uptime monitoring plugin for Codex and Claude Code over the hosted SolidPing MCP server: checks across 40+ types, incidents, failure diagnosis and status pages, with every write confirmed first.
@@ -1366,6 +1372,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Warmerly](https://github.com/WarmerlyApp/mcp) - MCP server for cold email outreach, deliverability and reply triage from Claude, ChatGPT, Cursor and other MCP clients.
 - [Watermelon UI](https://github.com/WatermelonCorp/watermelon-platform) - MCP server exposing 850+ source-backed React components, blocks, dashboards, and templates through search, retrieval, category, and page-composition tools.
 - [Wavegrain](https://github.com/wavegrain/wavegrain-mcp) - MCP server: curated slideshows and carousels for your brand on autopilot, a hosted server (OAuth) that writes TikTok slideshows and Instagram carousels in the brand's voice, then schedules and posts them.
+- [WaveSpeedAI MCP Server](https://github.com/WaveSpeedAI/mcp-server) - MCP server: search, inspect and run WaveSpeedAI image, video, audio and 3D generation models from any MCP client, with local file upload.
 - [web-researcher-mcp](https://github.com/zoharbabin/web-researcher-mcp) - MCP server: web search, page extraction and citation verification across web, academic, patent, legal and filing sources, with source credibility scoring and retraction checks.
 - [wechat-use](https://github.com/leeguooooo/wechat-use) - Turns WeChat on macOS into a local API for agents and bots, with history and full-text search, contacts and groups, background sending without a UI flash, real-time listening, an HTTP bridge and a Wechaty gateway, plus experimental Windows x64 support.
 - [whatsapp-claude-plugin](https://github.com/Rich627/whatsapp-claude-plugin) - Claude Code channel plugin and stdio MCP server that connects WhatsApp as a linked device for messaging, voice transcription, and remote tool approval.
@@ -1374,6 +1381,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Wudland](https://github.com/joexk1/wudland-plugins) - Linking CLI and plugins for Claude Code, Codex, opencode, and wrapped commands that ship agent status, notes, and letters AES-256-GCM encrypted over a self-hostable ntfy relay, surfaced on a GPLv3 iPhone pixel-village app.
 - [X (Twitter) Skills](https://github.com/sergebulaev/x-skills) - Codex-ready X (Twitter) marketing bundle with a native .codex-plugin manifest: tweet and thread writing with corpus-validated hook formulas (validated against ~450 top tweets), AI-tell humanizer, hook extraction, reply drafting, content planning, and audience insights; also works in Claude Code.
 - [X Twitter Scraper](https://github.com/Xquik-dev/x-twitter-scraper) - X/Twitter data, monitored workflows, HMAC webhooks, and MCP access through the Xquik REST API with confirmation-gated write guidance.
+- [x402-earnings-digest](https://github.com/manteclaw/x402-earnings-digest) - Daily earnings digest for an x402 service on Base, reconstructed from on-chain USDC settlements — no facilitator dashboard needed. <!-- platform: standalone -->
 - [XposedOrNot](https://github.com/XposedOrNot/XposedOrNot-API) - MCP server: XposedOrNot data breach lookups for emails and domains, with breach history, a breach catalog and domain exposure counts; remote, read-only, no API key.
 - [Yandex Direct](https://github.com/nebelov/yandex-direct-for-all) - GitHub-ready Codex plugin bundle for Yandex Direct, Wordstat, Metrika, and Roistat.
 - [Yap MCP](https://github.com/founden-bot/yap-mcp) - MCP server: transcribes local audio and video files on your own computer for Claude Code, Cursor and other MCP clients, with on-device speech recognition, no upload and no API key.
@@ -1744,7 +1752,7 @@ Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md
 
 To add a plugin:
 
-1. Fork this repo and add a single line to the appropriate section in `README.md` (alphabetical order)
+1. Fork this repo and add a line per plugin (or one whole-marketplace entry; see [CONTRIBUTING.md](CONTRIBUTING.md#claude-code-submissions)) to the appropriate section in `README.md` (alphabetical order)
 2. Submit a PR with the plugin repo URL. Scanner CI in the source repository is optional for listing and recommended for security.
 
 **You do not need to copy plugin files into this repo.** A generator fetches your bundle from your source repo and regenerates catalog files automatically.
