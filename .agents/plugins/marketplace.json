@@ -9186,6 +9186,17 @@
       "install_url": "https://raw.githubusercontent.com/AutoResearch-Factory/Agon/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "agy-fast",
+      "displayName": "agy-fast",
+      "description": "Zero-dependency local MCP plugin and SessionStart hook for Google Antigravity (CLI, Desktop 2.0, IDE) that batches concurrent searches, 15-language symbol outlines, atomic multi-file edits with inline verification, and parallel build/test checks to cut LLM turns by 33.7% and token quota by 31.5% without touching native UI or safety checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "INK-Q",
+      "repo": "agy-fast",
+      "url": "https://github.com/INK-Q/agy-fast",
+      "installation_url": "https://github.com/INK-Q/agy-fast#readme"
+    },
+    {
       "name": "AI Quota HUD",
       "displayName": "AI Quota HUD",
       "description": "Windows desktop HUD showing % left and reset countdown for every Codex/ChatGPT and Claude Code account (local + VPS over SSH) plus xKiro credit, flagging early/bonus resets while reading only local logs so it uses zero quota",
@@ -12651,6 +12662,17 @@
       "repo": "krypton",
       "url": "https://github.com/jturntdev/krypton",
       "install_url": "https://raw.githubusercontent.com/jturntdev/krypton/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "kvdiff",
+      "displayName": "kvdiff",
+      "description": "Zero-code local proxy for Claude Code, Codex, Gemini CLI, and llama.cpp/vLLM that pinpoints the exact UTF-8 byte and JSONPath breaking your LLM prompt cache, tallies wasted spend, and optionally auto-heals tool-order prefixes live with `--heal`",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "owner": "flipcyde101",
+      "repo": "kvdiff",
+      "url": "https://github.com/flipcyde101/kvdiff",
+      "installation_url": "https://github.com/flipcyde101/kvdiff#readme"
     },
     {
       "name": "Labtasker",

@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-22",
-  "total": 1587,
+  "total": 1589,
   "platforms": [
     "codex",
     "grok",
@@ -8598,6 +8598,16 @@
       ]
     },
     {
+      "name": "agy-fast",
+      "url": "https://github.com/INK-Q/agy-fast",
+      "owner": "INK-Q",
+      "repo": "agy-fast",
+      "description": "Zero-dependency local MCP plugin and SessionStart hook for Google Antigravity (CLI, Desktop 2.0, IDE) that batches concurrent searches, 15-language symbol outlines, atomic multi-file edits with inline verification, and parallel build/test checks to cut LLM turns by 33.7% and token quota by 31.5% without touching native UI or safety checks",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/INK-Q/agy-fast#readme"
+    },
+    {
       "name": "AI Quota HUD",
       "url": "https://github.com/Pakapong26/ai-quota-hud",
       "owner": "Pakapong26",
@@ -11814,6 +11824,16 @@
       "ecosystems": [
         "claude-code"
       ]
+    },
+    {
+      "name": "kvdiff",
+      "url": "https://github.com/flipcyde101/kvdiff",
+      "owner": "flipcyde101",
+      "repo": "kvdiff",
+      "description": "Zero-code local proxy for Claude Code, Codex, Gemini CLI, and llama.cpp/vLLM that pinpoints the exact UTF-8 byte and JSONPath breaking your LLM prompt cache, tallies wasted spend, and optionally auto-heals tool-order prefixes live with `--heal`",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/flipcyde101/kvdiff#readme"
     },
     {
       "name": "Labtasker",
