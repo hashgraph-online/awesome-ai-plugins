@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-23",
-  "total": 1597,
+  "total": 1602,
   "platforms": [
     "codex",
     "grok",
@@ -4830,6 +4830,20 @@
       ]
     },
     {
+      "name": "lemlist",
+      "url": "https://github.com/l3mpire/lemlist-plugin",
+      "owner": "l3mpire",
+      "repo": "lemlist-plugin",
+      "description": "Official lemlist plugin: connects Codex to the hosted lemlist MCP server (OAuth) to find leads in the lemlist B2B people database, launch email and LinkedIn campaigns, read campaign stats and check sending-domain deliverability, with four workflow skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/l3mpire/lemlist-plugin/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "LienDeadline",
       "url": "https://github.com/LienDeadline/skills",
       "owner": "LienDeadline",
@@ -9310,6 +9324,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Buddy",
+      "url": "https://github.com/buddy/buddy-plugin",
+      "owner": "buddy",
+      "repo": "buddy-plugin",
+      "description": "Official Buddy.Works plugin and skill for Claude Code and other coding agents that deploys apps to sandboxes or static sites, exposes localhost through tunnels, attaches domains and runs CI/CD pipelines with the `bdy` CLI",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/buddy/buddy-plugin#readme",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -16822,6 +16850,20 @@
       ]
     },
     {
+      "name": "FlowFeed",
+      "url": "https://github.com/loyt1/flowfeed-mcp",
+      "owner": "loyt1",
+      "repo": "flowfeed-mcp",
+      "description": "MCP server: hosted remote server and Claude Code plugin with real-time macro, forex and crypto news, an economic calendar and central bank releases (OAuth, paid)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/loyt1/flowfeed-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "FQGate-agent",
       "url": "https://github.com/fqgate/FQGate-agent",
       "owner": "fqgate",
@@ -19101,6 +19143,20 @@
       ]
     },
     {
+      "name": "RZLT",
+      "url": "https://github.com/therzlt/rzlt-mcp",
+      "owner": "therzlt",
+      "repo": "rzlt-mcp",
+      "description": "MCP server: no-auth access to RZLT's services, case studies, site search and fit check, a free website AI-readiness check, and a contact tool that sends only after the user approves the text, over Streamable HTTP",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/therzlt/rzlt-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "sagemath-mcp",
       "url": "https://github.com/XBP-Europe/sagemath-mcp",
       "owner": "XBP-Europe",
@@ -19843,6 +19899,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "ultrafast",
+      "url": "https://github.com/ultrafastmov/ultrafast",
+      "owner": "ultrafastmov",
+      "repo": "ultrafast",
+      "description": "Claude Code plugin and Gemini CLI extension that bundle the ultrafast skill and the local `uf mcp` server (20 tools), so an agent can make and edit videos as JSON documents rendered on a Metal or Vulkan GPU",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ultrafastmov/ultrafast/HEAD/plugins/ultrafast/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
