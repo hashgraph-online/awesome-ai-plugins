@@ -1151,6 +1151,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Lacuna Music](https://github.com/JOYLINK-LTD/lacuna-plugin) - Generate original instrumental music and vocal songs from Codex through the Lacuna MCP server.
 - [Langfuse Observability](https://github.com/avivsinai/langfuse-mcp) - Query traces, debug exceptions, analyze sessions, and manage prompts via MCP tools.
 - [langgraph-whatsapp](https://github.com/ahmad2b/langgraph-whatsapp) - LangGraph starter that gives an agent its own WhatsApp through WAHA, with text, voice notes and photos in, and a separate conversation and memory for each person who messages it. <!-- platform: standalone -->
+- [last30days](https://github.com/mvanhorn/last30days-skill) - Agent skill and plugin for Claude Code, Codex, Grok, and other Agent Skills hosts that researches any topic across Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web from the last 30 days, ranks results by real engagement, and writes one cited brief.
 - [last30days-skill-cn](https://github.com/Jesseovo/last30days-skill-cn) - Agent skill that searches eight Chinese platforms for the last 30 days and produces sourced research reports and hot-topic boards.
 - [Launch Fast](https://github.com/BlockchainHB/launchfast_codex_plugin) - Official Launch Fast plugin adapter for rapid SaaS deployment.
 - [LawBox](https://github.com/Samwang-afk/LawBox) - A collection of 58 Chinese legal workflow skills with unified task routing, source verification, and adversarial review protocols.
