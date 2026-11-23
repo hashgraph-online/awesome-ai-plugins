@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-22",
+  "last_updated": "2026-11-23",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -8220,6 +8220,21 @@
       "repo": "octopost-plugin",
       "url": "https://github.com/octopost-ink/octopost-plugin",
       "installation_url": "https://github.com/octopost-ink/octopost-plugin#readme"
+    },
+    {
+      "name": "OmniForge Launch Audit",
+      "displayName": "OmniForge Launch Audit",
+      "description": "Agent skills and hosted MCP server for read-only web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt readiness",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "zColdWater",
+      "repo": "omniforge-codex-plugin",
+      "url": "https://github.com/zColdWater/omniforge-codex-plugin",
+      "installation_url": "https://github.com/zColdWater/omniforge-codex-plugin#readme"
     },
     {
       "name": "Perq",
@@ -18939,6 +18954,21 @@
       "owner": "ahmad2b",
       "repo": "langgraph-whatsapp",
       "url": "https://github.com/ahmad2b/langgraph-whatsapp"
+    },
+    {
+      "name": "last30days",
+      "displayName": "last30days",
+      "description": "Agent skill and plugin for Claude Code, Codex, Grok, and other Agent Skills hosts that researches any topic across Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web from the last 30 days, ranks results by real engagement, and writes one cited brief",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "mvanhorn",
+      "repo": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "install_url": "https://raw.githubusercontent.com/mvanhorn/last30days-skill/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "last30days-skill-cn",

@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-22",
-  "total": 1597,
+  "last_updated": "2026-11-23",
+  "total": 1599,
   "platforms": [
     "codex",
     "grok",
@@ -7695,6 +7695,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/octopost-ink/octopost-plugin#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "OmniForge Launch Audit",
+      "url": "https://github.com/zColdWater/omniforge-codex-plugin",
+      "owner": "zColdWater",
+      "repo": "omniforge-codex-plugin",
+      "description": "Agent skills and hosted MCP server for read-only web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt readiness",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/zColdWater/omniforge-codex-plugin#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -17651,6 +17665,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "last30days",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "repo": "last30days-skill",
+      "description": "Agent skill and plugin for Claude Code, Codex, Grok, and other Agent Skills hosts that researches any topic across Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web from the last 30 days, ranks results by real engagement, and writes one cited brief",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mvanhorn/last30days-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
       ]
     },
     {
