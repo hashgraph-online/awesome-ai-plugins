@@ -2199,6 +2199,23 @@
       "install_url": "https://raw.githubusercontent.com/alexeyco/oh-my-openspec/HEAD/plugins/oh-my-openspec/.codex-plugin/plugin.json"
     },
     {
+      "name": "OmniForge Launch Audit",
+      "displayName": "OmniForge Launch Audit",
+      "description": "Read-only pre-launch web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt audit skills with a zero-auth hosted MCP server.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "owner": "zColdWater",
+      "repo": "omniforge-codex-plugin",
+      "url": "https://github.com/zColdWater/omniforge-codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/zColdWater/omniforge-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "installation_url": "https://github.com/zColdWater/omniforge-codex-plugin#readme"
+    },
+    {
       "name": "Ontoly",
       "displayName": "Ontoly",
       "description": "Deterministic Software Graph workflows for Codex: architecture review, dependency analysis, request tracing, configuration analysis, and impact analysis.",
@@ -8190,21 +8207,6 @@
       "repo": "octopost-plugin",
       "url": "https://github.com/octopost-ink/octopost-plugin",
       "installation_url": "https://github.com/octopost-ink/octopost-plugin#readme"
-    },
-    {
-      "name": "OmniForge Launch Audit",
-      "displayName": "OmniForge Launch Audit",
-      "description": "Agent skills and hosted MCP server for read-only web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt readiness",
-      "category": "Agent Skills",
-      "source": "awesome-ai-plugins",
-      "platform": "agent-skills",
-      "ecosystems": [
-        "agent-skills"
-      ],
-      "owner": "zColdWater",
-      "repo": "omniforge-codex-plugin",
-      "url": "https://github.com/zColdWater/omniforge-codex-plugin",
-      "installation_url": "https://github.com/zColdWater/omniforge-codex-plugin#readme"
     },
     {
       "name": "Perq",
