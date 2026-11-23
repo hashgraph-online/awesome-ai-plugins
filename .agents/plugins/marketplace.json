@@ -3589,6 +3589,21 @@
       "install_url": "https://raw.githubusercontent.com/ahel-technologies/ahel/HEAD/plugins/ahel/plugin.json"
     },
     {
+      "name": "AI SDR Kit",
+      "displayName": "AI SDR Kit",
+      "description": "The SDR harness for your AI, open source. Gives Codex Zevari's AI Sales Director, an outbound SOP, every LinkedIn and email sequence, automations and an approval-gated LinkedIn and email sending engine.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "zevarihq",
+      "repo": "ai-sdr-kit",
+      "url": "https://github.com/zevarihq/ai-sdr-kit",
+      "install_url": "https://raw.githubusercontent.com/zevarihq/ai-sdr-kit/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Aident Loadout",
       "displayName": "Aident Loadout",
       "description": "Remote MCP server connecting Codex, Claude Code, Cursor, ChatGPT and other MCP clients to their connected apps and 400+ Skills through one reusable setup, with Vault-protected credentials and Audit logging. Website: https://aident.ai",
@@ -5006,51 +5021,6 @@
       "repo": "kin-plugin",
       "url": "https://github.com/kinlab-ai/kin-plugin",
       "install_url": "https://raw.githubusercontent.com/kinlab-ai/kin-plugin/HEAD/plugin.json"
-    },
-    {
-      "name": "Kreuzberg",
-      "displayName": "Kreuzberg",
-      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Kreuzberg Cloud",
-      "displayName": "Kreuzberg Cloud",
-      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "Kreuzcrawl",
-      "displayName": "Kreuzcrawl",
-      "description": "Web crawling and scraping for Codex with skills for single-page scraping, site crawls, URL mapping, and headless browser fallback.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ],
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json"
     },
     {
       "name": "Krexa",
