@@ -5149,6 +5149,21 @@
       "install_url": "https://raw.githubusercontent.com/supersethvos/leeway-codex/HEAD/plugins/leeway/plugin.json"
     },
     {
+      "name": "lemlist",
+      "displayName": "lemlist",
+      "description": "Official lemlist plugin: connects Codex to the hosted lemlist MCP server (OAuth) to find leads in the lemlist B2B people database, launch email and LinkedIn campaigns, read campaign stats and check sending-domain deliverability, with four workflow skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "l3mpire",
+      "repo": "lemlist-plugin",
+      "url": "https://github.com/l3mpire/lemlist-plugin",
+      "install_url": "https://raw.githubusercontent.com/l3mpire/lemlist-plugin/HEAD/plugin.json"
+    },
+    {
       "name": "LienDeadline",
       "displayName": "LienDeadline",
       "description": "US mechanics lien and preliminary notice deadlines for construction material suppliers, with statute citations, plus lien guides for all 50 states and DC; read-only.",
@@ -9957,6 +9972,21 @@
       "repo": "browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Buddy",
+      "displayName": "Buddy",
+      "description": "Official Buddy.Works plugin and skill for Claude Code and other coding agents that deploys apps to sandboxes or static sites, exposes localhost through tunnels, attaches domains and runs CI/CD pipelines with the `bdy` CLI",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "buddy",
+      "repo": "buddy-plugin",
+      "url": "https://github.com/buddy/buddy-plugin",
+      "installation_url": "https://github.com/buddy/buddy-plugin#readme"
     },
     {
       "name": "Bulkhead",
@@ -18045,6 +18075,21 @@
       "installation_url": "https://github.com/scrapertweeter3-prog/mcp-flatratemath#readme"
     },
     {
+      "name": "FlowFeed",
+      "displayName": "FlowFeed",
+      "description": "MCP server: hosted remote server and Claude Code plugin with real-time macro, forex and crypto news, an economic calendar and central bank releases (OAuth, paid)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "loyt1",
+      "repo": "flowfeed-mcp",
+      "url": "https://github.com/loyt1/flowfeed-mcp",
+      "installation_url": "https://github.com/loyt1/flowfeed-mcp#readme"
+    },
+    {
       "name": "FQGate-agent",
       "displayName": "FQGate-agent",
       "description": "Codex and Claude Code plugin connecting AI assistants to a local FQGate gateway for A-share quotes, K-lines, Level-2 data, news, and stock research",
@@ -20500,6 +20545,21 @@
       "install_url": "https://raw.githubusercontent.com/jingjing2222/rust-reverse-engineering-skill/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "RZLT",
+      "displayName": "RZLT",
+      "description": "MCP server: no-auth access to RZLT's services, case studies, site search and fit check, a free website AI-readiness check, and a contact tool that sends only after the user approves the text, over Streamable HTTP",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "therzlt",
+      "repo": "rzlt-mcp",
+      "url": "https://github.com/therzlt/rzlt-mcp",
+      "installation_url": "https://github.com/therzlt/rzlt-mcp#readme"
+    },
+    {
       "name": "sagemath-mcp",
       "displayName": "sagemath-mcp",
       "description": "MCP server: evaluates SageMath expressions for agents in an isolated worker after checking the syntax tree against an allowlist",
@@ -21300,6 +21360,21 @@
       "repo": "uberllm",
       "url": "https://github.com/PSA-Team-source/uberllm",
       "install_url": "https://raw.githubusercontent.com/PSA-Team-source/uberllm/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "ultrafast",
+      "displayName": "ultrafast",
+      "description": "Claude Code plugin and Gemini CLI extension that bundle the ultrafast skill and the local `uf mcp` server (20 tools), so an agent can make and edit videos as JSON documents rendered on a Metal or Vulkan GPU",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "ultrafastmov",
+      "repo": "ultrafast",
+      "url": "https://github.com/ultrafastmov/ultrafast",
+      "install_url": "https://raw.githubusercontent.com/ultrafastmov/ultrafast/HEAD/plugins/ultrafast/.claude-plugin/plugin.json"
     },
     {
       "name": "ultramotion",
