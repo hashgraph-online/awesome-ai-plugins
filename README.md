@@ -136,7 +136,7 @@ Community-built plugins, native skills, MCP servers, and related agent extension
 Native plugins for the Herdr agent multiplexer. Herdr plugins declare their actions and hooks in `herdr-plugin.toml` and install from a GitHub repository with `herdr plugin install`.
 
 - [agentglass-herdr](https://github.com/BjoernSchotte/agentglass-herdr) - Herdr plugin that opens AgentGlass as a popup, jumps from any agent pane to its session, and adds opt-in cost and alert tokens to the Herdr sidebar.
-- [herdr-insights](https://github.com/GaganSD/coding-agent-toolkit/tree/main/herdr-insights) - A Herdr dashboard for coding-agent token usage. See which models you use, how usage changes over time, and your daily activity.
+- [herdr-insights](https://github.com/GaganSD/coding-agent-toolkit/) - A Herdr dashboard for coding-agent token usage. See which models you use and how usage changes over time.
 - [herdr-toolkit](https://github.com/shimo4228/herdr-toolkit) - Herdr plugin skills for spawning detached Remote Control sessions and sending prompts to agents in Herdr panes.
 - [herdrpowers](https://github.com/transparent-pegasus/herdrpowers) - Herdr workflow pack for a multi-phase TDD cycle with delegated implementation, testing, and review panes.
 
