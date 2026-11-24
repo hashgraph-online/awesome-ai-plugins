@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-23",
-  "total": 1602,
+  "last_updated": "2026-11-24",
+  "total": 1607,
   "platforms": [
     "codex",
     "grok",
@@ -1942,6 +1942,20 @@
         "agent-skills"
       ],
       "installation_url": "https://github.com/lliu56/minicut-skills#readme"
+    },
+    {
+      "name": "Mission Kit",
+      "url": "https://github.com/agent-kit-startup/agent-kit",
+      "owner": "agent-kit-startup",
+      "repo": "agent-kit",
+      "description": "Plans, handoff and durable memory for long-term projects with your own coding agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/agent-kit-startup/agent-kit/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
     },
     {
       "name": "ML Pipeline",
@@ -4191,7 +4205,7 @@
       "description": "Compose, arrange and render original songs offline with the Dawn TypeScript music SDK and headless CLI; needs an authorized Dawn private-preview install.",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/dawn/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/hraness/product-skills/HEAD/plugins/oh/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5498,6 +5512,22 @@
       ]
     },
     {
+      "name": "publicrecords",
+      "url": "https://github.com/GeminiGeorge22/publicrecords-skills",
+      "owner": "GeminiGeorge22",
+      "repo": "publicrecords-skills",
+      "description": "Nine skills plus Apify's hosted MCP server for official public data: SAM.gov, Grants.gov and USAspending contracts and grants, UK and EU tenders, city council meetings, ATS job postings, company social links, Etsy market data, competitor Google ads, sports odds, Spotify play counts, forecast track records and Skool community search, run on your own Apify account (pay per event).",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/GeminiGeorge22/publicrecords-skills/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/GeminiGeorge22/publicrecords-skills#readme"
+    },
+    {
       "name": "Publora Skills",
       "url": "https://github.com/publora/skills",
       "owner": "publora",
@@ -6212,8 +6242,10 @@
       "install_url": "https://raw.githubusercontent.com/gettaskhold/taskhold-plugin/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
-      ]
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/gettaskhold/taskhold-plugin#readme"
     },
     {
       "name": "Teaching Skills",
@@ -6322,6 +6354,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/tweetapi/agent-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "ultrafast",
+      "url": "https://github.com/ultrafastmov/ultrafast",
+      "owner": "ultrafastmov",
+      "repo": "ultrafast",
+      "description": "Make and edit videos as JSON documents rendered on your GPU, through the ultrafast skill and the local `uf mcp` server (20 tools).",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ultrafastmov/ultrafast/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -6857,6 +6903,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/tcballard/build-omarchy-plugins#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "CallForMe",
+      "url": "https://github.com/callforme-tel/callforme",
+      "owner": "callforme-tel",
+      "repo": "callforme",
+      "description": "Agent skill and hosted MCP server that let an agent phone a business, work the phone menu, wait on hold and return a transcript with answers",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/callforme-tel/callforme#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -12466,20 +12526,6 @@
       ]
     },
     {
-      "name": "Mission Kit",
-      "url": "https://github.com/agent-kit-startup/agent-kit",
-      "owner": "agent-kit-startup",
-      "repo": "agent-kit",
-      "description": "Extension pack of slash commands, skills, rules, and hooks adding plan-driven, confirmation-gated coding and staging-to-prod git workflows to Cursor and Claude Code",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/agent-kit-startup/agent-kit/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Mnemosyne OS",
       "url": "https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS",
       "owner": "Mnemosyne-OS",
@@ -13627,7 +13673,7 @@
       "description": "A code-size budget for your repo that only goes down, so coding agents can't grow the code without a human-approved grant",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/krishansubudhi/ratchet/HEAD/.claude-plugin/plugin.json",
+      "install_url": "https://raw.githubusercontent.com/krishansubudhi/ratchet/HEAD/plugin/.claude-plugin/plugin.json",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -14905,10 +14951,10 @@
       "description": "Agent skills for the Ultralytics YOLO computer vision lifecycle: datasets, training, tuning, inference, tracking, and export",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/ultralytics/skills/HEAD/.codex-plugin/plugin.json",
-      "platform": "codex",
+      "install_url": "https://raw.githubusercontent.com/ultralytics/skills/HEAD/plugins/yolo/.claude-plugin/plugin.json",
+      "platform": "claude-code",
       "ecosystems": [
-        "codex"
+        "claude-code"
       ]
     },
     {
@@ -16131,6 +16177,20 @@
       ]
     },
     {
+      "name": "ClaraConverts",
+      "url": "https://github.com/cognicores/claraconverts-agents",
+      "owner": "cognicores",
+      "repo": "claraconverts-agents",
+      "description": "Plugin for Claude Code, Antigravity and DeepSeek Harness with a Skill and hosted MCP server for adding Clara, a voice and text AI agent that guides visitors to book, buy or sign up, to a website: trial, embed code, site content, settings and integrations",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/cognicores/claraconverts-agents/HEAD/claude-plugin/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "claude-ai-music-skills",
       "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills",
       "owner": "bitwize-music-studio",
@@ -16820,6 +16880,16 @@
       "ecosystems": [
         "codex"
       ]
+    },
+    {
+      "name": "FlashData",
+      "url": "https://github.com/flashdatadev/flashdata-skills",
+      "owner": "flashdatadev",
+      "repo": "flashdata-skills",
+      "description": "Official Agent Skills and hosted Remote MCP server for real-time Google Search, YouTube transcripts and metadata, and cloud video downloads (free trial, no credit card required)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/flashdatadev/flashdata-skills#readme"
     },
     {
       "name": "flacli",
