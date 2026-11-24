@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-22",
-  "total": 1589,
+  "last_updated": "2026-11-23",
+  "total": 1602,
   "platforms": [
     "codex",
     "grok",
@@ -2070,6 +2070,22 @@
       ]
     },
     {
+      "name": "OmniForge Launch Audit",
+      "url": "https://github.com/zColdWater/omniforge-codex-plugin",
+      "owner": "zColdWater",
+      "repo": "omniforge-codex-plugin",
+      "description": "Read-only pre-launch web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt audit skills with a zero-auth hosted MCP server.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/zColdWater/omniforge-codex-plugin/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/zColdWater/omniforge-codex-plugin#readme"
+    },
+    {
       "name": "Ontoly",
       "url": "https://github.com/0xsarwagya/ontoly-codex-plugin",
       "owner": "0xsarwagya",
@@ -3364,6 +3380,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/ahel-technologies/ahel/HEAD/plugins/ahel/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "AI SDR Kit",
+      "url": "https://github.com/zevarihq/ai-sdr-kit",
+      "owner": "zevarihq",
+      "repo": "ai-sdr-kit",
+      "description": "The SDR harness for your AI, open source. Gives Codex Zevari's AI Sales Director, an outbound SOP, every LinkedIn and email sequence, automations and an approval-gated LinkedIn and email sending engine.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/zevarihq/ai-sdr-kit/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4698,48 +4728,6 @@
       ]
     },
     {
-      "name": "Kreuzberg",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "description": "Local document extraction for 91+ formats with skills for CLI usage, OCR, table extraction, output formats, and a local MCP server.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Kreuzberg Cloud",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "description": "Managed document extraction for Codex with API-key setup, presigned uploads, job tracking, webhook workflows, and usage guidance.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
-      "name": "Kreuzcrawl",
-      "url": "https://github.com/kreuzberg-dev/plugins",
-      "owner": "kreuzberg-dev",
-      "repo": "plugins",
-      "description": "Web crawling and scraping for Codex with skills for single-page scraping, site crawls, URL mapping, and headless browser fallback.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/kreuzberg-dev/plugins/HEAD/plugins/crawlberg/.codex-plugin/plugin.json",
-      "platform": "codex",
-      "ecosystems": [
-        "codex"
-      ]
-    },
-    {
       "name": "Krexa",
       "url": "https://github.com/Krexa-xyz/skills",
       "owner": "Krexa-xyz",
@@ -4836,6 +4824,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/supersethvos/leeway-codex/HEAD/plugins/leeway/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "lemlist",
+      "url": "https://github.com/l3mpire/lemlist-plugin",
+      "owner": "l3mpire",
+      "repo": "lemlist-plugin",
+      "description": "Official lemlist plugin: connects Codex to the hosted lemlist MCP server (OAuth) to find leads in the lemlist B2B people database, launch email and LinkedIn campaigns, read campaign stats and check sending-domain deliverability, with four workflow skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/l3mpire/lemlist-plugin/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -5732,8 +5734,10 @@
       "install_url": "https://raw.githubusercontent.com/getrunheed/runheed-plugin/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
-        "codex"
-      ]
+        "codex",
+        "agent-skills"
+      ],
+      "installation_url": "https://github.com/getrunheed/runheed-plugin#readme"
     },
     {
       "name": "RunLater",
@@ -8886,6 +8890,16 @@
       "installation_url": "https://github.com/Dunphil692/antigravity-context-meter#readme"
     },
     {
+      "name": "Antigravity Pet",
+      "url": "https://github.com/Wlaeg/antigravity-pet",
+      "owner": "Wlaeg",
+      "repo": "antigravity-pet",
+      "description": "Native Windows & macOS pixel desktop pet for Google Antigravity \u2014 6 animated pets, live agent status sync, click to jump back to chat",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/Wlaeg/antigravity-pet#readme"
+    },
+    {
       "name": "Aplica",
       "url": "https://github.com/eurafaeldecarvalho/aplica",
       "owner": "eurafaeldecarvalho",
@@ -9310,6 +9324,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/browser-use/browser-harness/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Buddy",
+      "url": "https://github.com/buddy/buddy-plugin",
+      "owner": "buddy",
+      "repo": "buddy-plugin",
+      "description": "Official Buddy.Works plugin and skill for Claude Code and other coding agents that deploys apps to sandboxes or static sites, exposes localhost through tunnels, attaches domains and runs CI/CD pipelines with the `bdy` CLI",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/buddy/buddy-plugin#readme",
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
@@ -15327,6 +15355,19 @@
       ]
     },
     {
+      "name": "agent-dead-man-switch",
+      "url": "https://github.com/manteclaw/agent-dead-man-switch",
+      "owner": "manteclaw",
+      "repo": "agent-dead-man-switch",
+      "description": "Heartbeat dead man's switch for autonomous agents that sweeps hot-wallet ETH to your cold wallet if the heartbeat goes stale (unaudited \u2014 read before you arm)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "Agent402",
       "url": "https://github.com/MikeyPetrillo/Agent402",
       "owner": "MikeyPetrillo",
@@ -16809,6 +16850,20 @@
       ]
     },
     {
+      "name": "FlowFeed",
+      "url": "https://github.com/loyt1/flowfeed-mcp",
+      "owner": "loyt1",
+      "repo": "flowfeed-mcp",
+      "description": "MCP server: hosted remote server and Claude Code plugin with real-time macro, forex and crypto news, an economic calendar and central bank releases (OAuth, paid)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/loyt1/flowfeed-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "FQGate-agent",
       "url": "https://github.com/fqgate/FQGate-agent",
       "owner": "fqgate",
@@ -17629,6 +17684,20 @@
       ]
     },
     {
+      "name": "last30days",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "repo": "last30days-skill",
+      "description": "Agent skill and plugin for Claude Code, Codex, Grok, and other Agent Skills hosts that researches any topic across Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web from the last 30 days, ranks results by real engagement, and writes one cited brief",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/mvanhorn/last30days-skill/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
       "name": "last30days-skill-cn",
       "url": "https://github.com/Jesseovo/last30days-skill-cn",
       "owner": "Jesseovo",
@@ -17815,6 +17884,30 @@
       "ecosystems": [
         "mcp"
       ]
+    },
+    {
+      "name": "MakeAIVideo",
+      "url": "https://github.com/makeaivideo-ai/mcp",
+      "owner": "makeaivideo-ai",
+      "repo": "mcp",
+      "description": "MCP server: create short-form AI videos with voiceover, AI or stock scenes, captions and music, then post them to TikTok, Instagram or YouTube (hosted at mcp.makeaivideo.ai with OAuth, or npx @makeaivideo/mcp)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/makeaivideo-ai/mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "Manteclaw x402 Tools",
+      "url": "https://github.com/manteclaw/manteclaw-x402",
+      "owner": "manteclaw",
+      "repo": "manteclaw-x402",
+      "description": "200 pay-per-call API endpoints for crypto market data, on-chain analytics and dev utilities, paid in USDC on Base via the x402 protocol",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/manteclaw/manteclaw-x402#readme"
     },
     {
       "name": "Maskbolt",
@@ -18742,6 +18835,19 @@
       ]
     },
     {
+      "name": "poe-fallback-bot",
+      "url": "https://github.com/manteclaw/poe-fallback-bot",
+      "owner": "manteclaw",
+      "repo": "poe-fallback-bot",
+      "description": "Poe server-bot template with primary-to-fallback LLM failover, so one provider's outage doesn't kill your bot",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ]
+    },
+    {
       "name": "Portway",
       "url": "https://github.com/rath/portway",
       "owner": "rath",
@@ -19034,6 +19140,20 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "RZLT",
+      "url": "https://github.com/therzlt/rzlt-mcp",
+      "owner": "therzlt",
+      "repo": "rzlt-mcp",
+      "description": "MCP server: no-auth access to RZLT's services, case studies, site search and fit check, a free website AI-readiness check, and a contact tool that sends only after the user approves the text, over Streamable HTTP",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/therzlt/rzlt-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -19386,6 +19506,19 @@
       "installation_url": "https://github.com/sliktrip/slicktrip-mcp#readme",
       "ecosystems": [
         "mcp"
+      ]
+    },
+    {
+      "name": "SoapBridge",
+      "url": "https://github.com/harshhh28/soapbridge",
+      "owner": "harshhh28",
+      "repo": "soapbridge",
+      "description": "Generate a REST API, an OpenAPI spec, and an MCP tool server from any WSDL SOAP service, with read-only and destructive tool annotations inferred from operation names and overridable in config",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
       ]
     },
     {
@@ -19769,6 +19902,20 @@
       ]
     },
     {
+      "name": "ultrafast",
+      "url": "https://github.com/ultrafastmov/ultrafast",
+      "owner": "ultrafastmov",
+      "repo": "ultrafast",
+      "description": "Claude Code plugin and Gemini CLI extension that bundle the ultrafast skill and the local `uf mcp` server (20 tools), so an agent can make and edit videos as JSON documents rendered on a Metal or Vulkan GPU",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/ultrafastmov/ultrafast/HEAD/plugins/ultrafast/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "ultramotion",
       "url": "https://github.com/sunsiyuan/ultramotion",
       "owner": "sunsiyuan",
@@ -19951,6 +20098,20 @@
       ]
     },
     {
+      "name": "WaveSpeedAI MCP Server",
+      "url": "https://github.com/WaveSpeedAI/mcp-server",
+      "owner": "WaveSpeedAI",
+      "repo": "mcp-server",
+      "description": "MCP server: search, inspect and run WaveSpeedAI image, video, audio and 3D generation models from any MCP client, with local file upload",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/WaveSpeedAI/mcp-server#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "web-researcher-mcp",
       "url": "https://github.com/zoharbabin/web-researcher-mcp",
       "owner": "zoharbabin",
@@ -20038,6 +20199,19 @@
       "platform": "claude-code",
       "ecosystems": [
         "claude-code"
+      ]
+    },
+    {
+      "name": "x402-earnings-digest",
+      "url": "https://github.com/manteclaw/x402-earnings-digest",
+      "owner": "manteclaw",
+      "repo": "x402-earnings-digest",
+      "description": "Daily earnings digest for an x402 service on Base, reconstructed from on-chain USDC settlements \u2014 no facilitator dashboard needed",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
       ]
     },
     {
