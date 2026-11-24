@@ -43,7 +43,11 @@ Under `## Community Plugins` in `README.md`:
 | Everything else: MCP servers, connectors, data and service tools | `### Tools & Integrations` |
 
 `CONTRIBUTING.md` has the extra rules for native skills, MCP servers and each
-client's submissions. Read the matching part before writing the line.
+client's submissions (including Claude Code `.claude-plugin/plugin.json` and
+`.claude-plugin/marketplace.json` repositories, which go under
+`### Development & Workflow` or `### Tools & Integrations` and must match
+marketplace plugin names when listing multiple plugins from one repository).
+Read the matching part before writing the line.
 
 ## 4. Place it alphabetically and check
 

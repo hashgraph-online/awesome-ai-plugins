@@ -66,6 +66,48 @@ package must expose an `apply(ctx)` plugin entry point and declare an installabl
 not required. Use the exact GitHub repository URL in the README and document the
 package name or `dsh plugin add` command in that repository's README.
 
+### Claude Code submissions
+
+Add Claude Code plugins and marketplaces under the appropriate shared category in
+`README.md` (`### Development & Workflow` or `### Tools & Integrations`); there
+is no separate `Claude Code Plugins` subsection.
+
+- **Single-plugin repositories:** If the repository provides a root
+  `.claude-plugin/plugin.json` manifest (and does not resolve a
+  `.codex-plugin/plugin.json` or `.codex/plugin.json` manifest first), the
+  generator sets `platform: claude-code` and points `install_url` at that root
+  manifest.
+- **Marketplace repositories (`.claude-plugin/marketplace.json`):**
+  - **Whole-marketplace listing:** Listing a multi-plugin marketplace repository
+    once (under the marketplace or repository name rather than a specific plugin
+    name) records `platform: claude-code` and links `installation_url` to the
+    repository README, while omitting `install_url` because no single
+    `.claude-plugin/plugin.json` represents all plugins in the marketplace. If
+    `.claude-plugin/marketplace.json` contains only one valid plugin entry, a
+    single listing resolves that plugin's `install_url` even when the display
+    name differs.
+  - **Individual named entries:** To list plugins from a shared marketplace
+    repository separately with their own `install_url`, add one alphabetical
+    line per plugin linking to the same `https://github.com/owner/repo` URL.
+    Each entry's display name must unambiguously match one plugin's `name` in
+    `.claude-plugin/marketplace.json` (case-insensitive exact match, or
+    normalized slug match where spaces, underscores, and hyphens collapse to
+    `-`, such as `Codebase Mapper` for `codebase-mapper`). Duplicate aliases for
+    the same manifest are deduplicated, and unresolved multi-entry rows are
+    excluded from the generated catalog.
+  - **Local relative `source` paths:** Every resolvable entry in
+    `.claude-plugin/marketplace.json` must set `source` to a literal relative
+    directory inside the same repository (for example `./plugins/my-plugin` or
+    `plugins/my-plugin`) whose `<source>/.claude-plugin/plugin.json` exists on
+    the default branch. Remote URLs, object `source` specs, rooted paths (`/`),
+    Windows separators or colons (`\`, `:`), parent traversal (`..`),
+    percent-encoding, and `?` or `#` delimiters are ignored.
+
+Multiple README lines referencing the same `https://github.com/owner/repo` URL
+pass PR validation as long as each line follows the standard catalog format; the
+validator deduplicates repository URLs so the source scan runs once per
+repository.
+
 ## What an accepted listing provides
 
 Accepted extensions can be indexed in the [HOL Plugin Registry](https://hol.org/registry/plugins), where they receive a dedicated public profile with trust signals and links to the project.

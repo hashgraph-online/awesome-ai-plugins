@@ -10,7 +10,7 @@
 ## Adding a listing
 
 - The `list-my-plugin` skill (`.agents/skills/list-my-plugin/SKILL.md`) walks through a listing end to end.
-- Follow `CONTRIBUTING.md`: one README line in the right section, alphabetical, `- [Name](https://github.com/owner/repo) - description`.
+- Follow `CONTRIBUTING.md`: one README line per plugin in the right section, alphabetical, `- [Name](https://github.com/owner/repo) - description` (for `.claude-plugin/marketplace.json` repos, list either the whole marketplace once or each named plugin matching `.claude-plugin/marketplace.json`).
 - Run `python3 scripts/check-alphabetical.py README.md` before pushing.
 
 ## When you finish
