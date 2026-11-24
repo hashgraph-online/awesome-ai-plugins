@@ -249,6 +249,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [whatishipped](https://github.com/selan-ai/whatishipped) - A Claude Code skill that recreates a mobile app's UI as it ships: every screen, state, component and journey of an iOS or Android app, drawn from its code and checked against the app's own screenshots.
 - [writing-with-agents](https://github.com/Jeffallan/writing-with-agents) - Ten Agent Skills that turn Betty Flowers' Madman, Architect, Carpenter, Judge writing method into a human-in-the-loop workflow, with SEO, a quality rubric, and content strategy.
 - [YouTube Transcript Skills](https://github.com/tubeagentkit/youtube-transcript-skills) - Agent Skill for Claude Code, Cursor, Codex and OpenClaw that fetches YouTube transcripts and browses search results, channels and playlists.
+- [Taskhold](https://github.com/gettaskhold/taskhold-plugin) - Agent skill and hosted MCP server that let a coding agent pick up tasks from a shared list, plan them in steps, report live progress and ask the person a question when blocked.
 
 ### Development & Workflow
 
