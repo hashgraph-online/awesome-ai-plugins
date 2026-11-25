@@ -37,7 +37,7 @@
 #### Gold sponsors
 
 <p align="center">
-<a href="https://seltz.ai/?utm_source=hol-newsletter&amp;utm_medium=newsletter&amp;utm_campaign=the-stack-2026-11-09&amp;utm_content=banner"><img src="assets/seltz-sponsor-gold.svg" alt="Seltz" width="240" height="72" /></a>
+<a href="https://seltz.ai/?utm_source=hol-newsletter&amp;utm_medium=newsletter&amp;utm_campaign=the-stack-2026-11-09&amp;utm_content=banner"><img src="assets/seltz-sponsor-gold.svg" alt="Seltz" h="240" height="72" /></a>
 </p>
 
 #### Bronze sponsors
@@ -1046,7 +1046,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [CurlShot MCP](https://github.com/SergiuPogor/curlshot-mcp) - MCP server: hosted streamable-HTTP server whose `take_screenshot` tool renders a public web page in a real browser and returns PNG, JPEG, WebP, PDF or a scrolling video; needs a CurlShot API key (free plan available).
 - [Cutbolt](https://github.com/skulitom/cutbolt-plugin) - Claude Code plugin for Cutbolt, a local video editing engine, with its MCP tools and six skills for captions, talking-head recuts, multi-camera interviews, screen tutorials and delivery, saved as reversible edits (needs the cutbolt engine and FFmpeg).
 - [CutVoke](https://github.com/frankShan001/CutVoke) - MCP server: local-first desktop video editor (Windows, macOS, Linux) where Claude Code, Codex, Cursor or any MCP client can cut, caption and add effects on the same multi-track timeline you finish by hand.
-  - [Darkmoon](https://github.com/ASCIT31/darkmoon-mcp-server) - Claude Code plugin and MCP server that drives a self-hosted Darkmoon Pro instance (autonomous AI pentest engine, GPL-3.0) to start a run against an authorized target, poll status, list campaigns and read findings; requires Darkmoon Pro and run_pentest is not read-only.
+- [Darkmoon](https://github.com/ASCIT31/darkmoon-mcp-server) - Claude Code plugin and MCP server that drives a self-hosted Darkmoon Pro instance (autonomous AI pentest engine, GPL-3.0) to start a run against an authorized target, poll status, list campaigns and read findings; requires Darkmoon Pro and run_pentest is not read-only.
 - [Data Product Builder for dbt](https://github.com/entropy-data/dataproduct-builder-dbt) - Full data-product lifecycle on dbt for Entropy Data: scaffold, audit, and integrate projects with ODCS, ODPS, OpenLineage, and GitHub Actions.
 - [Datacircle](https://github.com/waynehamadi/datacircle-plugin) - MCP server: find the best GTM APIs. We benchmark all the GTM APIs and we put the results on our website. [datacircle.dev](https://datacircle.dev)
 - [DataForge](https://github.com/ianktoo/data-forge) - Turns any website into a quality-scored LLM fine-tuning dataset in JSONL, Parquet or on the Hugging Face Hub, with a CLI and a `dataforge mcp` server exposing tools to scrape, explore, validate, run and inspect a dataset build.
