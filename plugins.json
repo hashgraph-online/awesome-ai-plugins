@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-24",
-  "total": 1607,
+  "last_updated": "2026-11-25",
+  "total": 1608,
   "platforms": [
     "codex",
     "grok",
@@ -4298,6 +4298,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/jangtrinh/design-os-svg-animation/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Devault",
+      "url": "https://github.com/devault-design/chatgpt-plugin",
+      "owner": "devault-design",
+      "repo": "chatgpt-plugin",
+      "description": "Search real UI design references from shipped websites and apps, analyze design patterns across the library, and fetch ready-made design systems as Tailwind, CSS variables, shadcn/ui or DESIGN.md through Devault's hosted MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/devault-design/chatgpt-plugin/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
