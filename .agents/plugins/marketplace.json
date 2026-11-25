@@ -6831,6 +6831,21 @@
       "install_url": "https://raw.githubusercontent.com/happy520ai/unified-ai-system/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Unpolish AI Writing",
+      "displayName": "Unpolish AI Writing",
+      "description": "Removes common AI writing tells from a draft and can optionally add sparse, hash-seeded typing errors at human-like rates.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "wilu222",
+      "repo": "unpolish-ai-writing",
+      "url": "https://github.com/wilu222/unpolish-ai-writing",
+      "install_url": "https://raw.githubusercontent.com/wilu222/unpolish-ai-writing/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "unslop",
       "displayName": "unslop",
       "description": "Strip AI writing patterns from text output \u2014 removes filler phrases, hedging language, and generic constructs to produce cleaner written content. Install: `npm install -g unslop`.",
