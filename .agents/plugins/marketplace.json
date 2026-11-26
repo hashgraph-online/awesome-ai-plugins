@@ -7345,6 +7345,21 @@
       "installation_url": "https://github.com/heyman333/agent-notion-template-docs#readme"
     },
     {
+      "name": "agent-skills",
+      "displayName": "agent-skills",
+      "description": "Agent skill that guides step-by-step Tencent RTC integration for video conferencing, calling, chat, push notifications, and conversational AI across Web and mobile platforms",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Tencent-RTC",
+      "repo": "agent-skills",
+      "url": "https://github.com/Tencent-RTC/agent-skills",
+      "installation_url": "https://github.com/Tencent-RTC/agent-skills#readme"
+    },
+    {
       "name": "ai-agent-skills",
       "displayName": "ai-agent-skills",
       "description": "A collection of standalone SKILL.md thinking-method skills, from five-whys root-cause analysis to tradeoff and pre-mortem workflows, for AI coding agents",

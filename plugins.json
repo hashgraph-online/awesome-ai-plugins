@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-26",
-  "total": 1635,
+  "total": 1636,
   "platforms": [
     "codex",
     "grok",
@@ -6877,6 +6877,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/heyman333/agent-notion-template-docs#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "agent-skills",
+      "url": "https://github.com/Tencent-RTC/agent-skills",
+      "owner": "Tencent-RTC",
+      "repo": "agent-skills",
+      "description": "Agent skill that guides step-by-step Tencent RTC integration for video conferencing, calling, chat, push notifications, and conversational AI across Web and mobile platforms",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Tencent-RTC/agent-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
