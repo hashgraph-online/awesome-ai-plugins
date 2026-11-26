@@ -6788,6 +6788,21 @@
       "install_url": "https://raw.githubusercontent.com/Mattbusel/tensorust-skills/HEAD/plugin.json"
     },
     {
+      "name": "Termalin",
+      "displayName": "Termalin",
+      "description": "Manage your own Linux servers from Codex through Termalin's hosted MCP server (commands, background jobs, files over SFTP, databases, metrics, alerts) with ten ops skills, without handing the agent an SSH key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "termalinapp",
+      "repo": "termalin-plugin",
+      "url": "https://github.com/termalinapp/termalin-plugin",
+      "install_url": "https://raw.githubusercontent.com/termalinapp/termalin-plugin/HEAD/plugin.json"
+    },
+    {
       "name": "Textmock",
       "displayName": "Textmock",
       "description": "Make iMessage-style conversation links that open as editable copies in Textmock, then save them as images or videos.",

@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-26",
-  "total": 1640,
+  "total": 1641,
   "platforms": [
     "codex",
     "grok",
@@ -6356,6 +6356,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Mattbusel/tensorust-skills/HEAD/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Termalin",
+      "url": "https://github.com/termalinapp/termalin-plugin",
+      "owner": "termalinapp",
+      "repo": "termalin-plugin",
+      "description": "Manage your own Linux servers from Codex through Termalin's hosted MCP server (commands, background jobs, files over SFTP, databases, metrics, alerts) with ten ops skills, without handing the agent an SSH key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/termalinapp/termalin-plugin/HEAD/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
