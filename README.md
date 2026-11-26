@@ -515,6 +515,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Filesystem MCP](https://github.com/j0hanz/filesystem-mcp) - MCP server: read, write, search, diff and patch files in allowed folders, with secret files blocked and confirmation before risky changes.
 - [FinBridge](https://github.com/Jakechj/finbridge-mcp) - Remote MCP server for Korean and US market data with filings, screeners, insider activity, and portfolio backtests.
 - [Flaky Detector](./plugins/mturac/flaky-detector) - Run a test command N times, report per-test flakiness %.
+- [Flavian](https://github.com/PMDevSolutions/Flavian) - Claude Code plugin for WordPress development with 27 agents and 16 skills, Figma, Canva and InDesign to FSE block theme pipelines with screenshot and Lighthouse QA after conversion, and a hook that stops production deploys and local data wipes for a human.
 - [Fleetglass](https://github.com/thejoyfulist/fleetglass) - Self-hosted, read-only cockpit that ties every Claude Code and Codex session to the machine it runs on, with CPU, memory, tokens per second, cost per model, and quotas with pace. <!-- platform: standalone -->
 - [FlexViz](https://github.com/flex-analytics/flexviz) - Interactive cross-filter dashboards for large datasets with a Claude Code skill for agent-driven data exploration.
 - [flipback](https://github.com/fainir/flipback) - A Claude Code plugin that notices when a turn ends with the work unfinished and sends the agent back to finish it, with no goal to type.
