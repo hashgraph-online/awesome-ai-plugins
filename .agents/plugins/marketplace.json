@@ -17325,6 +17325,20 @@
       "installation_url": "https://github.com/blockvectra/mcp#readme"
     },
     {
+      "name": "blum-studio",
+      "displayName": "blum-studio",
+      "description": "Open-source MCP server and local graphic design engine that gives AI agents 20 tools to create fully editable designs, access thousands of graphic assets, draw custom SVG illustrations, inspect rendered previews, detect layout and readability issues, and export high-resolution PNG or vector PDF files",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "Loann110",
+      "repo": "blum_studio",
+      "url": "https://github.com/Loann110/blum_studio"
+    },
+    {
       "name": "bookstack-mcp",
       "displayName": "bookstack-mcp",
       "description": "MCP server for searching, reading, and managing BookStack wiki content from AI assistants",
@@ -17780,6 +17794,21 @@
       "installation_url": "https://github.com/ClickHouse/loom#readme"
     },
     {
+      "name": "Clipoteca Comunitaria",
+      "displayName": "Clipoteca Comunitaria",
+      "description": "MCP server: community library of AI-cut clips up to 20 seconds, searchable in Spanish, English, Chinese and Russian, plus a script-to-video engine; users can attach their own videos or photos in the chat and the agent uploads them and returns the rendered MP4",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "riquelmechile",
+      "repo": "clipoteca-comunitaria",
+      "url": "https://github.com/riquelmechile/clipoteca-comunitaria",
+      "installation_url": "https://github.com/riquelmechile/clipoteca-comunitaria#readme"
+    },
+    {
       "name": "Clips Kitty",
       "displayName": "Clips Kitty",
       "description": "Free, open-source Windows app that turns long streams, VODs and videos into captioned 9:16 clips with speaker tracking using local AI, and ships a local stdio MCP server and an agent skill so any MCP client can queue a Twitch, Kick or YouTube link, follow the job, read the chosen clips and export one",
@@ -18209,6 +18238,21 @@
       "repo": "edgeone-makers-tools",
       "url": "https://github.com/TencentEdgeOne/edgeone-makers-tools",
       "install_url": "https://raw.githubusercontent.com/TencentEdgeOne/edgeone-makers-tools/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Edgrapi",
+      "displayName": "Edgrapi",
+      "description": "MCP server: read-only US government and SEC data (SAM.gov opportunities, USAspending awards, Grants.gov, House STOCK Act trades, EDGAR filings) at https://api.edgrapi.com/mcp, with OAuth or an API key (free tier)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "paperandbeyond23-gif",
+      "repo": "edgrapi-skills",
+      "url": "https://github.com/paperandbeyond23-gif/edgrapi-skills",
+      "installation_url": "https://github.com/paperandbeyond23-gif/edgrapi-skills#readme"
     },
     {
       "name": "Editmamei",
@@ -19332,6 +19376,20 @@
       "repo": "claude-plugins",
       "url": "https://github.com/l3a0/claude-plugins",
       "install_url": "https://raw.githubusercontent.com/l3a0/claude-plugins/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "kitbag",
+      "displayName": "kitbag",
+      "description": "Carry your AI agent setup between tools: MCP servers, rules and skills move between Claude Code, Cursor, Codex, Gemini CLI, Claude Desktop and Antigravity in one command",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "standalone",
+      "ecosystems": [
+        "standalone"
+      ],
+      "owner": "cargopete",
+      "repo": "kitbag",
+      "url": "https://github.com/cargopete/kitbag"
     },
     {
       "name": "Kitbay",
