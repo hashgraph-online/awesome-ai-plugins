@@ -66,6 +66,17 @@ class ScannerCiInspection:
 
 
 @dataclass(frozen=True)
+class EcosystemEvidence:
+    """Recognized install or integration surfaces in a source repository."""
+
+    surfaces: tuple[str, ...]
+
+    @property
+    def has_skill(self) -> bool:
+        return "agent-skills" in self.surfaces
+
+
+@dataclass(frozen=True)
 class OpenPullRequest:
     number: int
     title: str
@@ -384,6 +395,85 @@ def ensure_public_github_repository(contribution: Contribution) -> str | None:
     return None
 
 
+KNOWN_MANIFESTS = {
+    ".claude-plugin/plugin.json": "claude-code",
+    ".codex-plugin/plugin.json": "codex",
+    ".grok-plugin/plugin.json": "grok",
+    ".kimi-plugin/plugin.json": "kimi",
+    "kimi.plugin.json": "kimi",
+    "dsh.bundle": "deepseek-harness",
+    ".mcp.json": "mcp",
+    "mcp.json": "mcp",
+}
+INSTALL_EVIDENCE_RE = re.compile(
+    r"(?i)(?:npx\s+skills\s+add|agent\s+skills?|mcp\s+server|"
+    r"model\s+context\s+protocol|(?:claude|codex|grok|kimi)\s+plugin|"
+    r"dsh\s+plugin)"
+)
+
+
+def source_ecosystem_evidence(contribution: Contribution, default_branch: str) -> EcosystemEvidence:
+    """Find conservative evidence that a source repo is an AI extension."""
+
+    tree_url = (
+        f"https://api.github.com/repos/{contribution.owner}/{contribution.repo}"
+        f"/git/trees/{quote(default_branch, safe='')}?recursive=1"
+    )
+    payload = github_json(tree_url)
+    paths = (
+        {
+            item.get("path")
+            for item in payload.get("tree", [])
+            if isinstance(item, dict) and isinstance(item.get("path"), str)
+        }
+        if isinstance(payload, dict)
+        else set()
+    )
+    surfaces: set[str] = set()
+    for path, surface in KNOWN_MANIFESTS.items():
+        if path in paths:
+            surfaces.add(surface)
+    if any(path.startswith("skills/") and path.endswith("/SKILL.md") for path in paths):
+        surfaces.add("agent-skills")
+
+    try:
+        readme = content_file(
+            f"{contribution.owner}/{contribution.repo}", "README.md", default_branch
+        )
+    except ValidationError:
+        readme = ""
+    if INSTALL_EVIDENCE_RE.search(readme):
+        surfaces.add("documented-install")
+    return EcosystemEvidence(tuple(sorted(surfaces)))
+
+
+def validate_ecosystem_entry(
+    contribution: Contribution, default_branch: str | None
+) -> EcosystemEvidence:
+    """Require every new listing to identify a real AI extension surface."""
+
+    if not default_branch:
+        raise ValidationError(
+            f"{contribution.url} does not expose a safe default branch for ecosystem validation"
+        )
+    evidence = source_ecosystem_evidence(contribution, default_branch)
+    if not evidence.surfaces:
+        raise ValidationError(
+            f"{contribution.url} does not expose a recognized AI extension surface "
+            "such as a plugin manifest, Agent Skill, MCP server, or documented client install"
+        )
+    marker = re.search(r"<!--\s*platform:\s*([a-z0-9-]+)\s*-->", contribution.description)
+    if marker and marker.group(1) == "standalone" and evidence.has_skill and set(evidence.surfaces) <= {
+        "agent-skills",
+        "documented-install",
+    }:
+        raise ValidationError(
+            f"{contribution.url} exposes an Agent Skills extension; list it under "
+            "Community Plugins → Agent Skills with `platform: agent-skills`, not `platform: standalone`"
+        )
+    return evidence
+
+
 def inspect_scanner_ci(contribution: Contribution) -> ScannerCiInspection:
     """Detect maintainer scanner CI without treating absence as a hard failure."""
 
@@ -638,6 +728,7 @@ def scan_open_pull_requests(
             contribution = f"{entry.owner}/{entry.repo}"
             try:
                 default_branch = ensure_public_github_repository(entry)
+                validate_ecosystem_entry(entry, default_branch)
             except ValidationError as error:
                 catalog_failures.append(str(error))
                 report_lines.append(f"  - `{contribution}`: **FAIL** — {error}")
@@ -825,7 +916,8 @@ def main() -> int:
     for entry in entries:
         print(f"Checking {entry.display_name} ({entry.owner}/{entry.repo})...")
         try:
-            ensure_public_github_repository(entry)
+            default_branch = ensure_public_github_repository(entry)
+            validate_ecosystem_entry(entry, default_branch)
         except ValidationError as error:
             catalog_failures += 1
             print(f"  FAIL: {error}", file=sys.stderr)

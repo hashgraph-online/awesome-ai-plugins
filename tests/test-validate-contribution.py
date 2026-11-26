@@ -29,6 +29,16 @@ def contribution(repo: str = "example-plugin") -> Contribution:
     )
 
 
+def marked_contribution(marker: str) -> Contribution:
+    return Contribution(
+        display_name="Example Plugin",
+        url="https://github.com/example/example-plugin",
+        owner="example",
+        repo="example-plugin",
+        description=f"An example plugin. <!-- platform: {marker} -->",
+    )
+
+
 MAINTAINED_WORKFLOW = """
 name: Scan
 on:
@@ -92,6 +102,29 @@ class ValidateContributionTests(unittest.TestCase):
             inspection = MODULE.inspect_scanner_ci(contribution())
         self.assertEqual(inspection.status, "maintained")
         self.assertEqual(inspection.workflow_paths, ("scan.yml",))
+
+    def test_ecosystem_validation_accepts_codex_manifest(self) -> None:
+        tree = {"tree": [{"path": ".codex-plugin/plugin.json"}]}
+        with patch.object(MODULE, "github_json", return_value=tree), patch.object(
+            MODULE, "content_file", return_value=""
+        ):
+            evidence = MODULE.validate_ecosystem_entry(contribution(), "main")
+        self.assertEqual(evidence.surfaces, ("codex",))
+
+    def test_ecosystem_validation_rejects_repository_without_extension_surface(self) -> None:
+        with patch.object(MODULE, "github_json", return_value={"tree": []}), patch.object(
+            MODULE, "content_file", return_value="A Python library."
+        ):
+            with self.assertRaisesRegex(MODULE.ValidationError, "recognized AI extension surface"):
+                MODULE.validate_ecosystem_entry(contribution(), "main")
+
+    def test_ecosystem_validation_rejects_standalone_marker_for_agent_skills(self) -> None:
+        tree = {"tree": [{"path": "skills/example/SKILL.md"}]}
+        with patch.object(MODULE, "github_json", return_value=tree), patch.object(
+            MODULE, "content_file", return_value="npx skills add example/example-plugin"
+        ):
+            with self.assertRaisesRegex(MODULE.ValidationError, "Agent Skills extension"):
+                MODULE.validate_ecosystem_entry(marked_contribution("standalone"), "main")
 
     def test_unreadable_workflows_are_unknown(self) -> None:
         with patch.object(

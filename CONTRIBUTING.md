@@ -12,8 +12,16 @@ Thank you for considering a contribution!
    ```
 4. **Add to the appropriate section** - Agent Skills, a platform-specific plugin subsection, or the shared Development & Workflow / Tools & Integrations categories
 
-Entries in the shared Community Plugins categories are ecosystem-neutral by
-default. A Codex `.codex-plugin/plugin.json` manifest is not required; the
+Every listing must expose an installable or documented integration surface for
+an AI ecosystem. A scanner score alone is not evidence that a repository is a
+plugin. Use the section that matches the source repository's manifest, skill,
+MCP server, or client install instructions. Reserve `platform: standalone` for
+an actual standalone AI client or agent tool. Repositories that ship
+`skills/*/SKILL.md` belong in Agent Skills.
+
+Entries in the shared Community Plugins categories may support more than one
+ecosystem, but they still need a documented AI extension surface. A Codex
+`.codex-plugin/plugin.json` manifest is not required for a shared listing. The
 generated catalogs only advertise a client-specific install target when the
 listing identifies that platform or a supported manifest is actually present.
 
@@ -176,8 +184,9 @@ The example in [`SCANNER_GUIDE.md`](./SCANNER_GUIDE.md) pins GitHub Actions to i
 
 Pull requests that add a Community Plugin entry, including the DeepSeek Harness
 Plugins subsection, are checked automatically by
-`.github/workflows/validate-contribution.yml`. Catalog format, section, and
-discovery checks are required. Scanner CI in the source repository is optional.
+`.github/workflows/validate-contribution.yml`. Catalog format, section,
+discovery, and ecosystem-surface checks are required. Scanner CI in the source
+repository is optional.
 HOL clones and scans each valid new source repository. The centralized scan
 must pass before the listing can merge; the source repository does not need
 its own scanner workflow.
