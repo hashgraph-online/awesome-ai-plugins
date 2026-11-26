@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-25",
+  "last_updated": "2026-11-26",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -1323,6 +1323,21 @@
       "repo": "done-gate",
       "url": "https://github.com/kuroudo-ai/done-gate",
       "install_url": "https://raw.githubusercontent.com/kuroudo-ai/done-gate/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Dopamine Talk",
+      "displayName": "Dopamine Talk",
+      "description": "Three Markdown skills (EN and RU) for chat, changelogs, and READMEs that drop file-path recaps, hedging, and unasked critic-gates.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "AnnenkovLabs",
+      "repo": "dopamine-talk",
+      "url": "https://github.com/AnnenkovLabs/dopamine-talk",
+      "install_url": "https://raw.githubusercontent.com/AnnenkovLabs/dopamine-talk/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "Dryforge",
@@ -3486,6 +3501,21 @@
       "install_url": "https://raw.githubusercontent.com/radres/call-me/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "A1 Gallery",
+      "displayName": "A1 Gallery",
+      "description": "Search a hand-picked gallery of real live websites by style, font, colour and section, and read the type sizes, spacing and palette measured off each page, through A1's hosted MCP server with free-account OAuth sign-in.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "a1-gallery",
+      "repo": "a1-mcp",
+      "url": "https://github.com/a1-gallery/a1-mcp",
+      "install_url": "https://raw.githubusercontent.com/a1-gallery/a1-mcp/HEAD/plugin.json"
+    },
+    {
       "name": "AbuzzHive",
       "displayName": "AbuzzHive",
       "description": "Remote MCP server and skill for AbuzzHive, public Q&A boards where AI agents look up errors other agents solved and help each other.",
@@ -3666,6 +3696,21 @@
       "repo": "aient-codex-plugin",
       "url": "https://github.com/aient-ai/aient-codex-plugin",
       "install_url": "https://raw.githubusercontent.com/aient-ai/aient-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AllSwap MCP Server",
+      "displayName": "AllSwap MCP Server",
+      "description": "Read-only local MCP server and skill with tools for AllSwap's public asset catalog, official channels and block-explorer links.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "allswapio",
+      "repo": "mcp-server",
+      "url": "https://github.com/allswapio/mcp-server",
+      "install_url": "https://raw.githubusercontent.com/allswapio/mcp-server/HEAD/plugin.json"
     },
     {
       "name": "Amazon 249-Byte Search Terms Optimizer",
@@ -6649,6 +6694,21 @@
       "install_url": "https://raw.githubusercontent.com/talivia-group/agent/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Taplio for LinkedIn",
+      "displayName": "Taplio for LinkedIn",
+      "description": "Official Taplio plugin: connects Codex to the hosted Taplio MCP server (OAuth) to write, schedule and analyze LinkedIn posts, find inspiration, draft comments and replies, like posts and send connection requests, with 26 LinkedIn skills.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "TaplioOfficial",
+      "repo": "taplio-linkedin-plugin",
+      "url": "https://github.com/TaplioOfficial/taplio-linkedin-plugin",
+      "install_url": "https://raw.githubusercontent.com/TaplioOfficial/taplio-linkedin-plugin/HEAD/plugin.json"
+    },
+    {
       "name": "Task Scheduler",
       "displayName": "Task Scheduler",
       "description": "OpenAI Codex plugin and local MCP server for turning task lists into realistic schedules with blocked dates, capacity overrides, overflow tracking, and markdown planning output.",
@@ -9207,14 +9267,14 @@
       "description": "Claude Code plugin that audits local file access, alerts on private-file reads, and enforces user-configured file blocks",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
-      "platform": "claude-code",
+      "platform": "codex",
       "ecosystems": [
-        "claude-code"
+        "codex"
       ],
       "owner": "karolkozer",
       "repo": "agentwhy",
       "url": "https://github.com/karolkozer/agentwhy",
-      "install_url": "https://raw.githubusercontent.com/karolkozer/agentwhy/HEAD/.claude-plugin/plugin.json"
+      "install_url": "https://raw.githubusercontent.com/karolkozer/agentwhy/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "AgentWiki",
