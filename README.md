@@ -230,6 +230,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [OmniForge Launch Audit](https://github.com/zColdWater/omniforge-codex-plugin) - Agent skills and hosted MCP server for read-only web security (Supabase RLS and JS secrets), SPF/DKIM/DMARC email DNS, 78-TLD domain RDAP, and /llms.txt readiness.
 - [Perq](https://github.com/f-o-x11/perq-skill) - Agent skill and MCP server that find verified free AI credits, free tiers and startup programs, each with a source link and last-verified date. Built by Avatar 8 LLC.
 - [Pixi’VN](https://github.com/DRincs-Productions/pixi-vn) - Agent skill collection teaching AI assistants to build story-driven games (visual novels, point-and-click, and interactive fiction) with the Pixi’VN engine.
+- [Ratatui Skill](https://github.com/programmersd21/ratatui-skill) - Agent Skill that walks AI assistants through Research, Design, Build and Verify steps for Ratatui terminal UIs, checking finished screens with TestBackend dumps at three sizes and PTY smoke tests.
 - [Runheed](https://github.com/getrunheed/runheed-plugin) - Agent skills and hosted MCP server that let a coding agent search production errors, read stack traces and breadcrumbs, and resolve an error with the fixing commit.
 
 <details>
