@@ -2004,6 +2004,21 @@
       "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json"
     },
     {
+      "name": "MarginCue",
+      "displayName": "MarginCue",
+      "description": "Shows how Codex will read your prompt before it starts, with names checked against the repo and a control for each open choice, and turns the choices Codex makes on its own into switches while it works.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "fus3r",
+      "repo": "margincue",
+      "url": "https://github.com/fus3r/margincue",
+      "install_url": "https://raw.githubusercontent.com/fus3r/margincue/HEAD/mods/codex/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Markdown Reader",
       "displayName": "Markdown Reader",
       "description": "Navigate Markdown structure and retrieve only the relevant section through a portable Codex MCP plugin.",
@@ -4920,23 +4935,6 @@
       "repo": "codex-lark",
       "url": "https://github.com/zlsbksdxl/codex-lark",
       "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-lark/HEAD/plugins/feishu2codex/.codex-plugin/plugin.json"
-    },
-    {
-      "name": "FeraTerra",
-      "displayName": "FeraTerra",
-      "description": "Trading skill and hosted Streamable HTTP MCP server for Arena Exchange spot, perpetuals, order margin previews, zero-capital flash arbitrage, and Base Sepolia L2 Clearinghouse custody.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "platform": "codex",
-      "ecosystems": [
-        "codex",
-        "mcp"
-      ],
-      "owner": "FeraTerra",
-      "repo": "feraterra-sdk",
-      "url": "https://github.com/FeraTerra/feraterra-sdk/tree/codex-plugin",
-      "install_url": "https://raw.githubusercontent.com/FeraTerra/feraterra-sdk/codex-plugin/plugin.json",
-      "installation_url": "https://github.com/FeraTerra/feraterra-sdk#readme"
     },
     {
       "name": "Firecrawl",
@@ -9338,17 +9336,6 @@
       "install_url": "https://raw.githubusercontent.com/awrshift/agent-memory-kit/HEAD/plugins/memory-kit/.claude-plugin/plugin.json"
     },
     {
-      "name": "agent-recap",
-      "displayName": "agent-recap",
-      "description": "Stop hook for Claude Code and Codex that sends an agent back once if its last test run failed and its final message does not say so",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "rogermas05",
-      "repo": "agent-recap",
-      "url": "https://github.com/rogermas05/agent-recap",
-      "installation_url": "https://github.com/rogermas05/agent-recap#readme"
-    },
-    {
       "name": "agent-rules",
       "displayName": "agent-rules",
       "description": "Modular AGENTS.md, CLAUDE.md, Cursor rules, Copilot instructions and Claude Code skills for Next.js, TypeScript, React, Node, NestJS, Prisma, Drizzle, Tailwind and shadcn, with one installer that keeps the formats in sync",
@@ -10979,17 +10966,6 @@
       "repo": "codetruss-plugins",
       "url": "https://github.com/DeliriumPulse/codetruss-plugins",
       "install_url": "https://raw.githubusercontent.com/DeliriumPulse/codetruss-plugins/HEAD/plugins/codetruss-claude/.claude-plugin/plugin.json"
-    },
-    {
-      "name": "Codex Full-Stack Workflow",
-      "displayName": "Codex Full-Stack Workflow",
-      "description": "Turns rough product requests into staged, reviewable full-stack delivery with persistent requirements, change control, visual evidence, and completion gates",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "kevin592",
-      "repo": "codex-full-stack-workflow",
-      "url": "https://github.com/kevin592/codex-full-stack-workflow",
-      "installation_url": "https://github.com/kevin592/codex-full-stack-workflow#readme"
     },
     {
       "name": "Codex Subagent Playbook",
@@ -13047,17 +13023,6 @@
       "install_url": "https://raw.githubusercontent.com/Open-Dev-Society/kitbash/HEAD/plugin/.claude-plugin/plugin.json"
     },
     {
-      "name": "Knowl",
-      "displayName": "Knowl",
-      "description": "Local-first project memory over MCP for Claude Code, Codex, Cursor and eight other hosts: a SQLite store that retires facts when they change, shares knowledge across linked repos, and retrieves it by hybrid search",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "dat999zx",
-      "repo": "knowl",
-      "url": "https://github.com/dat999zx/knowl",
-      "installation_url": "https://github.com/dat999zx/knowl#readme"
-    },
-    {
       "name": "Knowledge Loom",
       "displayName": "Knowledge Loom",
       "description": "Agent-neutral skills for initializing, auditing, using, and maintaining governed local Markdown knowledge vaults across Agent Skills-compatible runtimes",
@@ -13423,17 +13388,6 @@
       "repo": "lumberroom-claude-code",
       "url": "https://github.com/lumberroom/lumberroom-claude-code",
       "install_url": "https://raw.githubusercontent.com/lumberroom/lumberroom-claude-code/HEAD/.claude-plugin/plugin.json"
-    },
-    {
-      "name": "LVTD Skills",
-      "displayName": "LVTD Skills",
-      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "LVTD-LLC",
-      "repo": "skills",
-      "url": "https://github.com/LVTD-LLC/skills",
-      "installation_url": "https://github.com/LVTD-LLC/skills#readme"
     },
     {
       "name": "mach-gtm-mcp",
@@ -14546,17 +14500,6 @@
       "repo": "patent-lineage",
       "url": "https://github.com/cadeos/patent-lineage",
       "installation_url": "https://github.com/cadeos/patent-lineage#readme"
-    },
-    {
-      "name": "pawl",
-      "displayName": "pawl",
-      "description": "Deterministic hooks for Claude Code, Codex, and Antigravity that gate destructive commands, credential access, outbound messages, and repeated tool calls using Python's standard library",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "owner": "ulukaya",
-      "repo": "pawl",
-      "url": "https://github.com/ulukaya/pawl",
-      "installation_url": "https://github.com/ulukaya/pawl#readme"
     },
     {
       "name": "pbx-mcp",
@@ -18618,6 +18561,21 @@
       "repo": "fdic-bank-health-financials-mcp",
       "url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp",
       "installation_url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp#readme"
+    },
+    {
+      "name": "feraterra-sdk",
+      "displayName": "feraterra-sdk",
+      "description": "MCP server: Zero-dependency 24-tool Python stdio and Streamable HTTP gateway (plus Python/CCXT SDK and C++23 64-byte HFT wire/ITCH headers) for Arena Exchange (`testnet.feraterra.app` on Base Sepolia), with EIP-191 wallet onboarding, stateless margin preview dry-runs, cross-margined Spot/Perps/FormulaPerps/BoundedClaims/SpreadBooks, zero-capital flash-arbitrage and liquidation tools, and live Gladiator Leaderboard queries (`io.github.FeraTerra/feraterra-sdk`, MIT)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "FeraTerra",
+      "repo": "feraterra-sdk",
+      "url": "https://github.com/FeraTerra/feraterra-sdk",
+      "installation_url": "https://github.com/FeraTerra/feraterra-sdk#readme"
     },
     {
       "name": "Finance-Guru",
