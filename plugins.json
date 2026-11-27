@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-27",
-  "total": 1651,
+  "total": 1658,
   "platforms": [
     "codex",
     "grok",
@@ -8296,6 +8296,20 @@
       ]
     },
     {
+      "name": "Skillable",
+      "url": "https://github.com/marc-aurele-besner/skillable",
+      "owner": "marc-aurele-besner",
+      "repo": "skillable",
+      "description": "Agent Skills installable with the skills CLI for Claude Code, Cursor, Codex, GitHub Copilot and Cline covering dependency PR sweeps, CI repair, GitHub issue shipping, expert and persona code review, and UI prototyping",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/marc-aurele-besner/skillable#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "skills",
       "url": "https://github.com/mouadja02/skills",
       "owner": "mouadja02",
@@ -9219,6 +9233,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "Antigravity Action Launchpad",
+      "url": "https://github.com/404kidwiz/antigravity-action-launchpad",
+      "owner": "404kidwiz",
+      "repo": "antigravity-action-launchpad",
+      "description": "MCP server: zero-framework inline MCP App command pills, A2UI-inspired toggles/chips/inputs, and 2-step approval gates for Google Antigravity",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/404kidwiz/antigravity-action-launchpad#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -16136,6 +16164,20 @@
       ]
     },
     {
+      "name": "B2B Market Intel MCP",
+      "url": "https://github.com/truonggiang0111/b2b-market-intel-mcp",
+      "owner": "truonggiang0111",
+      "repo": "b2b-market-intel-mcp",
+      "description": "MCP server: zero-dependency stdio server with three zero-key tools (Google News URL decoding, UK government tenders, and ClinicalTrials biotech sponsor leads) plus five Apify batch tools for RAG article extraction, app review churn, UK/AU direct jobs, and Google Ads intelligence",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/truonggiang0111/b2b-market-intel-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "b2bsearch",
       "url": "https://github.com/b2bsearch/b2bsearch-plugin",
       "owner": "b2bsearch",
@@ -17401,6 +17443,20 @@
       ]
     },
     {
+      "name": "Fork",
+      "url": "https://github.com/moxclaw/fork-skill",
+      "owner": "moxclaw",
+      "repo": "fork-skill",
+      "description": "MCP server: free, no-account, read-only remote server (fork.zone/api/mcp/core) plus an Agent Skill, so an agent can search the rules, skills and settings other agents share and fork on Fork before it writes its own",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/moxclaw/fork-skill#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "FQGate-agent",
       "url": "https://github.com/fqgate/FQGate-agent",
       "owner": "fqgate",
@@ -17537,6 +17593,16 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/mhajder/ghostfolio-mcp#readme"
+    },
+    {
+      "name": "GiftChecker MCP",
+      "url": "https://github.com/lightsmite/giftchecker-mcp",
+      "owner": "lightsmite",
+      "repo": "giftchecker-mcp",
+      "description": "Public read-only Streamable HTTP MCP server for Telegram collectible gift valuations, trait floors, sales history, and market analytics",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "installation_url": "https://github.com/lightsmite/giftchecker-mcp#readme"
     },
     {
       "name": "Ginta",
@@ -19519,6 +19585,20 @@
       ]
     },
     {
+      "name": "POPA Recon",
+      "url": "https://github.com/lightsmite/popa-recon-mcp",
+      "owner": "lightsmite",
+      "repo": "popa-recon-mcp",
+      "description": "MCP server: zero-auth Web3, DeFi, token contract risk, and on-chain deep research (`https://poparecon.com/mcp`) plus Python STDIO bridge (`uvx popa-recon-mcp`)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/lightsmite/popa-recon-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Portway",
       "url": "https://github.com/rath/portway",
       "owner": "rath",
@@ -19933,6 +20013,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/superagents-lab/search1api-mcp#readme"
+    },
+    {
+      "name": "SearchApi MCP",
+      "url": "https://github.com/SearchApi/searchapi-mcp",
+      "owner": "SearchApi",
+      "repo": "searchapi-mcp",
+      "description": "MCP server: SearchApi's hosted Streamable HTTP server at `https://www.searchapi.io/mcp`, with OAuth or an `X-MCP-Token` header, giving AI assistants real-time Google (web, Maps, Shopping, Flights, Hotels, News, Scholar), Bing, YouTube, Amazon and 100+ other search engines as structured JSON",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/SearchApi/searchapi-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
     },
     {
       "name": "sectionsight",

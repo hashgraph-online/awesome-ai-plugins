@@ -8860,6 +8860,21 @@
       "installation_url": "https://github.com/Keith-CY/sketchbook-style#readme"
     },
     {
+      "name": "Skillable",
+      "displayName": "Skillable",
+      "description": "Agent Skills installable with the skills CLI for Claude Code, Cursor, Codex, GitHub Copilot and Cline covering dependency PR sweeps, CI repair, GitHub issue shipping, expert and persona code review, and UI prototyping",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "marc-aurele-besner",
+      "repo": "skillable",
+      "url": "https://github.com/marc-aurele-besner/skillable",
+      "installation_url": "https://github.com/marc-aurele-besner/skillable#readme"
+    },
+    {
       "name": "skills",
       "displayName": "skills",
       "description": "A curated collection of 799 agent skills across 36 categories, installable into Claude Code, Cursor, and other SKILL.md-aware clients",
@@ -9853,6 +9868,21 @@
       "repo": "antidote",
       "url": "https://github.com/Avtr99/antidote",
       "install_url": "https://raw.githubusercontent.com/Avtr99/antidote/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Antigravity Action Launchpad",
+      "displayName": "Antigravity Action Launchpad",
+      "description": "MCP server: zero-framework inline MCP App command pills, A2UI-inspired toggles/chips/inputs, and 2-step approval gates for Google Antigravity",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "404kidwiz",
+      "repo": "antigravity-action-launchpad",
+      "url": "https://github.com/404kidwiz/antigravity-action-launchpad",
+      "installation_url": "https://github.com/404kidwiz/antigravity-action-launchpad#readme"
     },
     {
       "name": "Antigravity Codex Monitor",
@@ -17303,6 +17333,21 @@
       "install_url": "https://raw.githubusercontent.com/AzureCosmosDB/cosmosdb-agent-kit/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "B2B Market Intel MCP",
+      "displayName": "B2B Market Intel MCP",
+      "description": "MCP server: zero-dependency stdio server with three zero-key tools (Google News URL decoding, UK government tenders, and ClinicalTrials biotech sponsor leads) plus five Apify batch tools for RAG article extraction, app review churn, UK/AU direct jobs, and Google Ads intelligence",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "truonggiang0111",
+      "repo": "b2b-market-intel-mcp",
+      "url": "https://github.com/truonggiang0111/b2b-market-intel-mcp",
+      "installation_url": "https://github.com/truonggiang0111/b2b-market-intel-mcp#readme"
+    },
+    {
       "name": "b2bsearch",
       "displayName": "b2bsearch",
       "description": "Cursor, Claude Code and Grok Bot plugin with six Agent Skills and the hosted Apify MCP server for B2B people and company data: free segment counts, leads with live emails, decision makers by company domain, company lists and job postings, paid per row found on Apify",
@@ -18664,6 +18709,21 @@
       "installation_url": "https://github.com/loyt1/flowfeed-mcp#readme"
     },
     {
+      "name": "Fork",
+      "displayName": "Fork",
+      "description": "MCP server: free, no-account, read-only remote server (fork.zone/api/mcp/core) plus an Agent Skill, so an agent can search the rules, skills and settings other agents share and fork on Fork before it writes its own",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "moxclaw",
+      "repo": "fork-skill",
+      "url": "https://github.com/moxclaw/fork-skill",
+      "installation_url": "https://github.com/moxclaw/fork-skill#readme"
+    },
+    {
       "name": "FQGate-agent",
       "displayName": "FQGate-agent",
       "description": "Codex and Claude Code plugin connecting AI assistants to a local FQGate gateway for A-share quotes, K-lines, Level-2 data, news, and stock research",
@@ -18811,6 +18871,17 @@
       "repo": "ghostfolio-mcp",
       "url": "https://github.com/mhajder/ghostfolio-mcp",
       "installation_url": "https://github.com/mhajder/ghostfolio-mcp#readme"
+    },
+    {
+      "name": "GiftChecker MCP",
+      "displayName": "GiftChecker MCP",
+      "description": "Public read-only Streamable HTTP MCP server for Telegram collectible gift valuations, trait floors, sales history, and market analytics",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "lightsmite",
+      "repo": "giftchecker-mcp",
+      "url": "https://github.com/lightsmite/giftchecker-mcp",
+      "installation_url": "https://github.com/lightsmite/giftchecker-mcp#readme"
     },
     {
       "name": "Ginta",
@@ -20946,6 +21017,21 @@
       "url": "https://github.com/manteclaw/poe-fallback-bot"
     },
     {
+      "name": "POPA Recon",
+      "displayName": "POPA Recon",
+      "description": "MCP server: zero-auth Web3, DeFi, token contract risk, and on-chain deep research (`https://poparecon.com/mcp`) plus Python STDIO bridge (`uvx popa-recon-mcp`)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "lightsmite",
+      "repo": "popa-recon-mcp",
+      "url": "https://github.com/lightsmite/popa-recon-mcp",
+      "installation_url": "https://github.com/lightsmite/popa-recon-mcp#readme"
+    },
+    {
       "name": "Portway",
       "displayName": "Portway",
       "description": "A local HTTP proxy for Claude Code, Codex, and OpenAI-compatible endpoints on vLLM or SGLang that sends each turn as a zstd delta against the previous one: about 1 KiB, not the whole context",
@@ -21391,6 +21477,21 @@
       "repo": "search1api-mcp",
       "url": "https://github.com/superagents-lab/search1api-mcp",
       "installation_url": "https://github.com/superagents-lab/search1api-mcp#readme"
+    },
+    {
+      "name": "SearchApi MCP",
+      "displayName": "SearchApi MCP",
+      "description": "MCP server: SearchApi's hosted Streamable HTTP server at `https://www.searchapi.io/mcp`, with OAuth or an `X-MCP-Token` header, giving AI assistants real-time Google (web, Maps, Shopping, Flights, Hotels, News, Scholar), Bing, YouTube, Amazon and 100+ other search engines as structured JSON",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "SearchApi",
+      "repo": "searchapi-mcp",
+      "url": "https://github.com/SearchApi/searchapi-mcp",
+      "installation_url": "https://github.com/SearchApi/searchapi-mcp#readme"
     },
     {
       "name": "sectionsight",
