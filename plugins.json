@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-27",
-  "total": 1655,
+  "total": 1651,
   "platforms": [
     "codex",
     "grok",
@@ -1882,6 +1882,20 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/Alex0nder/MailAgent/HEAD/examples/codex/plugin/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "MarginCue",
+      "url": "https://github.com/fus3r/margincue",
+      "owner": "fus3r",
+      "repo": "margincue",
+      "description": "Shows how Codex will read your prompt before it starts, with names checked against the repo and a control for each open choice, and turns the choices Codex makes on its own into switches while it works.",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/fus3r/margincue/HEAD/mods/codex/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"
@@ -4616,23 +4630,6 @@
       "ecosystems": [
         "codex"
       ]
-    },
-    {
-      "name": "FeraTerra",
-      "url": "https://github.com/FeraTerra/feraterra-sdk/tree/codex-plugin",
-      "owner": "FeraTerra",
-      "repo": "feraterra-sdk",
-      "description": "Trading skill and hosted Streamable HTTP MCP server for Arena Exchange spot, perpetuals, order margin previews, zero-capital flash arbitrage, and Base Sepolia L2 Clearinghouse custody.",
-      "category": "Tools & Integrations",
-      "source": "awesome-ai-plugins",
-      "install_url": "https://raw.githubusercontent.com/FeraTerra/feraterra-sdk/codex-plugin/plugin.json",
-      "source_ref": "codex-plugin",
-      "platform": "codex",
-      "ecosystems": [
-        "codex",
-        "mcp"
-      ],
-      "installation_url": "https://github.com/FeraTerra/feraterra-sdk#readme"
     },
     {
       "name": "Firecrawl",
@@ -8743,16 +8740,6 @@
       ]
     },
     {
-      "name": "agent-recap",
-      "url": "https://github.com/rogermas05/agent-recap",
-      "owner": "rogermas05",
-      "repo": "agent-recap",
-      "description": "Stop hook for Claude Code and Codex that sends an agent back once if its last test run failed and its final message does not say so",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/rogermas05/agent-recap#readme"
-    },
-    {
       "name": "agent-rules",
       "url": "https://github.com/fabwaseem/agent-rules",
       "owner": "fabwaseem",
@@ -10268,16 +10255,6 @@
       "ecosystems": [
         "claude-code"
       ]
-    },
-    {
-      "name": "Codex Full-Stack Workflow",
-      "url": "https://github.com/kevin592/codex-full-stack-workflow",
-      "owner": "kevin592",
-      "repo": "codex-full-stack-workflow",
-      "description": "Turns rough product requests into staged, reviewable full-stack delivery with persistent requirements, change control, visual evidence, and completion gates",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/kevin592/codex-full-stack-workflow#readme"
     },
     {
       "name": "Codex Subagent Playbook",
@@ -12185,16 +12162,6 @@
       ]
     },
     {
-      "name": "Knowl",
-      "url": "https://github.com/dat999zx/knowl",
-      "owner": "dat999zx",
-      "repo": "knowl",
-      "description": "Local-first project memory over MCP for Claude Code, Codex, Cursor and eight other hosts: a SQLite store that retires facts when they change, shares knowledge across linked repos, and retrieves it by hybrid search",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/dat999zx/knowl#readme"
-    },
-    {
       "name": "Knowledge Loom",
       "url": "https://github.com/magickaichen/knowledge-loom",
       "owner": "magickaichen",
@@ -12535,16 +12502,6 @@
       "ecosystems": [
         "claude-code"
       ]
-    },
-    {
-      "name": "LVTD Skills",
-      "url": "https://github.com/LVTD-LLC/skills",
-      "owner": "LVTD-LLC",
-      "repo": "skills",
-      "description": "Reusable Agent Skills for Codex, Claude Code, and compatible clients, covering Django, Rust, Cookiecutter, SEO, traction, product marketing, and nonfiction publishing workflows",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/LVTD-LLC/skills#readme"
     },
     {
       "name": "mach-gtm-mcp",
@@ -13574,16 +13531,6 @@
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
       "installation_url": "https://github.com/cadeos/patent-lineage#readme"
-    },
-    {
-      "name": "pawl",
-      "url": "https://github.com/ulukaya/pawl",
-      "owner": "ulukaya",
-      "repo": "pawl",
-      "description": "Deterministic hooks for Claude Code, Codex, and Antigravity that gate destructive commands, credential access, outbound messages, and repeated tool calls using Python's standard library",
-      "category": "Development & Workflow",
-      "source": "awesome-ai-plugins",
-      "installation_url": "https://github.com/ulukaya/pawl#readme"
     },
     {
       "name": "pbx-mcp",
@@ -17355,6 +17302,20 @@
       "source": "awesome-ai-plugins",
       "platform": "mcp",
       "installation_url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
+      "name": "feraterra-sdk",
+      "url": "https://github.com/FeraTerra/feraterra-sdk",
+      "owner": "FeraTerra",
+      "repo": "feraterra-sdk",
+      "description": "MCP server: Zero-dependency 24-tool Python stdio and Streamable HTTP gateway (plus Python/CCXT SDK and C++23 64-byte HFT wire/ITCH headers) for Arena Exchange (`testnet.feraterra.app` on Base Sepolia), with EIP-191 wallet onboarding, stateless margin preview dry-runs, cross-margined Spot/Perps/FormulaPerps/BoundedClaims/SpreadBooks, zero-capital flash-arbitrage and liquidation tools, and live Gladiator Leaderboard queries (`io.github.FeraTerra/feraterra-sdk`, MIT)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/FeraTerra/feraterra-sdk#readme",
       "ecosystems": [
         "mcp"
       ]

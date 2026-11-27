@@ -111,6 +111,22 @@ class ValidateContributionTests(unittest.TestCase):
             evidence = MODULE.validate_ecosystem_entry(contribution(), "main")
         self.assertEqual(evidence.surfaces, ("codex",))
 
+    def test_ecosystem_validation_accepts_herdr_manifest(self) -> None:
+        tree = {"tree": [{"path": "herdr-plugin.toml"}]}
+        with patch.object(MODULE, "github_json", return_value=tree), patch.object(
+            MODULE, "content_file", return_value=""
+        ):
+            evidence = MODULE.validate_ecosystem_entry(contribution(), "main")
+        self.assertEqual(evidence.surfaces, ("herdr",))
+
+    def test_ecosystem_validation_accepts_nested_agent_skill(self) -> None:
+        tree = {"tree": [{"path": "vendor/skills/review/SKILL.md"}]}
+        with patch.object(MODULE, "github_json", return_value=tree), patch.object(
+            MODULE, "content_file", return_value=""
+        ):
+            evidence = MODULE.validate_ecosystem_entry(contribution(), "main")
+        self.assertEqual(evidence.surfaces, ("agent-skills",))
+
     def test_ecosystem_validation_rejects_repository_without_extension_surface(self) -> None:
         with patch.object(MODULE, "github_json", return_value={"tree": []}), patch.object(
             MODULE, "content_file", return_value="A Python library."

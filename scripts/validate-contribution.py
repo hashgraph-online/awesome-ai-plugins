@@ -404,10 +404,11 @@ KNOWN_MANIFESTS = {
     "dsh.bundle": "deepseek-harness",
     ".mcp.json": "mcp",
     "mcp.json": "mcp",
+    "herdr-plugin.toml": "herdr",
 }
 INSTALL_EVIDENCE_RE = re.compile(
     r"(?i)(?:npx\s+skills\s+add|agent\s+skills?|mcp\s+server|"
-    r"model\s+context\s+protocol|(?:claude|codex|grok|kimi)\s+plugin|"
+    r"model\s+context\s+protocol|(?:claude|codex|grok|kimi|herdr|opencode)\s+plugin|"
     r"dsh\s+plugin)"
 )
 
@@ -433,7 +434,11 @@ def source_ecosystem_evidence(contribution: Contribution, default_branch: str) -
     for path, surface in KNOWN_MANIFESTS.items():
         if path in paths:
             surfaces.add(surface)
-    if any(path.startswith("skills/") and path.endswith("/SKILL.md") for path in paths):
+    if any(
+        path.endswith("/SKILL.md")
+        and not path.startswith(("docs/", "examples/"))
+        for path in paths
+    ):
         surfaces.add("agent-skills")
 
     try:

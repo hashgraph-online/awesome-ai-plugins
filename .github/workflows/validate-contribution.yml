@@ -17,6 +17,7 @@ on:
       - "tests/test-publish-open-pr-checks.py"
       - "tests/test-validate-contribution.py"
       - ".github/workflows/validate-contribution.yml"
+      - ".github/workflows/audit-catalog.yml"
   workflow_dispatch:
 
 permissions:
