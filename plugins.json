@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-27",
-  "total": 1658,
+  "total": 1659,
   "platforms": [
     "codex",
     "grok",
@@ -5678,6 +5678,20 @@
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "install_url": "https://raw.githubusercontent.com/publora/skills/HEAD/.codex-plugin/plugin.json",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ]
+    },
+    {
+      "name": "Pushary",
+      "url": "https://github.com/Pushary/pushary-skill",
+      "owner": "Pushary",
+      "repo": "pushary-skill",
+      "description": "Sends a push to your phone when a Codex task finishes or fails, and lets you answer the agent's questions from your phone.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/Pushary/pushary-skill/HEAD/.codex-plugin/plugin.json",
       "platform": "codex",
       "ecosystems": [
         "codex"

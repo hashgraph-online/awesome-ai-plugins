@@ -6062,6 +6062,21 @@
       "install_url": "https://raw.githubusercontent.com/publora/skills/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Pushary",
+      "displayName": "Pushary",
+      "description": "Sends a push to your phone when a Codex task finishes or fails, and lets you answer the agent's questions from your phone.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "Pushary",
+      "repo": "pushary-skill",
+      "url": "https://github.com/Pushary/pushary-skill",
+      "install_url": "https://raw.githubusercontent.com/Pushary/pushary-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Qatom",
       "displayName": "Qatom",
       "description": "An MCP agentic commerce market. One-step register your MCP server. Build your API & services catalog. Sell with your own merchant agent. Customers, agents, and consumers discover and purchase from your catalog. Control your own payments, auditable records, payouts to supply chain and bank.",
