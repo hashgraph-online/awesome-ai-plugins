@@ -66,6 +66,19 @@ https://github.com/owner/repo` flow and follow the [official Kimi plugin
 documentation](https://github.com/MoonshotAI/kimi-code/blob/main/docs/en/customization/plugins.md)
 before submitting.
 
+### Herdr submissions
+
+Herdr plugins must expose a root `herdr-plugin.toml` manifest and document the
+tested `herdr plugin install owner/repo` flow. Keep them under `Herdr Plugins`
+so the generated registry preserves the `herdr` platform.
+
+### OpenCode submissions
+
+OpenCode plugins belong under `OpenCode Plugins` and must document the tested
+OpenCode installation or loading flow in the source README. The validator uses
+the documented plugin surface as eligibility evidence while the generated
+registry preserves the `opencode` platform.
+
 ### DeepSeek Harness submissions
 
 DeepSeek Harness (DSH) plugins are Cordis modules or npm packages. A listed
@@ -199,6 +212,14 @@ repository has no scanner CI, the bot recommends the action and explains the
 trust-score benefit. Missing scanner CI does not replace or waive the required
 centralized scan.
 Reruns update the existing bot comment and check in place.
+
+The scheduled `.github/workflows/audit-catalog.yml` workflow rechecks every
+Community Plugins listing, including entries added before ecosystem-surface
+validation existed. It produces JSON and Markdown reports for unreachable,
+unclassified, or otherwise unverifiable sources. The report also marks
+possible HOL Guard candidates for maintainer follow-up. Audit findings require
+a focused reclassification or removal pull request before the catalog is
+considered fully clean.
 
 ### First-time fork workflow approval
 
