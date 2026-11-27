@@ -7377,6 +7377,21 @@
       "installation_url": "https://github.com/oribarilan/97#readme"
     },
     {
+      "name": "AdaptOrch",
+      "displayName": "AdaptOrch",
+      "description": "Multi-platform AI plugin and Agent Skill for Claude Code, Kimi Code CLI, Grok Build, and Cursor that connects to [AdaptOrch](https://adaptorch.com) MCP for DAG topology routing, multi-model synthesis, and verifiable execution receipts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "dmae97",
+      "repo": "Adaptorch-MCP",
+      "url": "https://github.com/dmae97/Adaptorch-MCP",
+      "installation_url": "https://github.com/dmae97/Adaptorch-MCP#readme"
+    },
+    {
       "name": "Agent Skill Builder",
       "displayName": "Agent Skill Builder",
       "description": "Agent Skill that builds Claude Code or portable Agent Skills and validates frontmatter, invocation controls, tool grants, links, and spec drift, with tests showing that malformed skills fail",
@@ -8470,6 +8485,21 @@
       "repo": "music-skill",
       "url": "https://github.com/owoevan-dev/music-skill",
       "installation_url": "https://github.com/owoevan-dev/music-skill#readme"
+    },
+    {
+      "name": "nano-banana",
+      "displayName": "nano-banana",
+      "description": "Agent skill and Claude Code plugin for generating and editing images with Google's Nano Banana models, with a price estimate before every call and the real cost after",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "jakubcurik",
+      "repo": "nano-banana",
+      "url": "https://github.com/jakubcurik/nano-banana",
+      "installation_url": "https://github.com/jakubcurik/nano-banana#readme"
     },
     {
       "name": "native-subtitle-quote-image",
@@ -9836,6 +9866,21 @@
       "repo": "antidote",
       "url": "https://github.com/Avtr99/antidote",
       "install_url": "https://raw.githubusercontent.com/Avtr99/antidote/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Antigravity Codex Monitor",
+      "displayName": "Antigravity Codex Monitor",
+      "description": "MCP server: native Google Antigravity MCP App side-pane monitor and cross-platform codex-worker delegation bundle for local OpenAI Codex CLI (codex exec), streaming live commands, syntax-colored diffs, and token metrics with Git worktree isolation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "Lyl101010",
+      "repo": "antigravity-codex-monitor",
+      "url": "https://github.com/Lyl101010/antigravity-codex-monitor",
+      "installation_url": "https://github.com/Lyl101010/antigravity-codex-monitor#readme"
     },
     {
       "name": "Antigravity Context Meter",
@@ -17521,6 +17566,21 @@
       "install_url": "https://raw.githubusercontent.com/bowmark-ai/plugin/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "branching-story-mcp",
+      "displayName": "branching-story-mcp",
+      "description": "MCP server: validate and step deterministic branching story graphs, query the CC-BY-4.0 2026 Consumer AI Story Continuity Benchmark (doi:10.7910/DVN/YEBHQR), and classify transcript state drift; zero dependencies, stdio, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "ouba-studio",
+      "repo": "branching-story-mcp",
+      "url": "https://github.com/ouba-studio/branching-story-mcp",
+      "installation_url": "https://github.com/ouba-studio/branching-story-mcp#readme"
+    },
+    {
       "name": "Brilliant Directories MCP",
       "displayName": "Brilliant Directories MCP",
       "description": "MCP server: manage Brilliant Directories directory and membership websites (members, leads, posts, pages, reviews, forms and menus) through the site's REST API, hosted or installed from npm",
@@ -18543,6 +18603,21 @@
       "owner": "ExtraBrainApp",
       "repo": "ExtraBrain-cli",
       "url": "https://github.com/ExtraBrainApp/ExtraBrain-cli"
+    },
+    {
+      "name": "FDIC Bank Health & Financials MCP",
+      "displayName": "FDIC Bank Health & Financials MCP",
+      "description": "MCP server: free keyless hosted Streamable HTTP server for US FDIC bank health, deposit insurance verification, quarterly Call Report financials (assets, deposits, uninsured %, CET1/Tier 1 capital, ROA/ROE), failed banks, and branches",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "theluckystrike",
+      "repo": "fdic-bank-health-financials-mcp",
+      "url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp",
+      "installation_url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp#readme"
     },
     {
       "name": "Finance-Guru",

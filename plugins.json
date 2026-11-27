@@ -3,7 +3,7 @@
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
   "last_updated": "2026-11-27",
-  "total": 1650,
+  "total": 1655,
   "platforms": [
     "codex",
     "grok",
@@ -6913,6 +6913,20 @@
       ]
     },
     {
+      "name": "AdaptOrch",
+      "url": "https://github.com/dmae97/Adaptorch-MCP",
+      "owner": "dmae97",
+      "repo": "Adaptorch-MCP",
+      "description": "Multi-platform AI plugin and Agent Skill for Claude Code, Kimi Code CLI, Grok Build, and Cursor that connects to [AdaptOrch](https://adaptorch.com) MCP for DAG topology routing, multi-model synthesis, and verifiable execution receipts",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/dmae97/Adaptorch-MCP#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
       "name": "Agent Skill Builder",
       "url": "https://github.com/conorbronsdon/agent-skill-builder",
       "owner": "conorbronsdon",
@@ -7930,6 +7944,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/owoevan-dev/music-skill#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "nano-banana",
+      "url": "https://github.com/jakubcurik/nano-banana",
+      "owner": "jakubcurik",
+      "repo": "nano-banana",
+      "description": "Agent skill and Claude Code plugin for generating and editing images with Google's Nano Banana models, with a price estimate before every call and the real cost after",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/jakubcurik/nano-banana#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -9204,6 +9232,20 @@
       "platform": "codex",
       "ecosystems": [
         "codex"
+      ]
+    },
+    {
+      "name": "Antigravity Codex Monitor",
+      "url": "https://github.com/Lyl101010/antigravity-codex-monitor",
+      "owner": "Lyl101010",
+      "repo": "antigravity-codex-monitor",
+      "description": "MCP server: native Google Antigravity MCP App side-pane monitor and cross-platform codex-worker delegation bundle for local OpenAI Codex CLI (codex exec), streaming live commands, syntax-colored diffs, and token metrics with Git worktree isolation",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/Lyl101010/antigravity-codex-monitor#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
@@ -16338,6 +16380,20 @@
       ]
     },
     {
+      "name": "branching-story-mcp",
+      "url": "https://github.com/ouba-studio/branching-story-mcp",
+      "owner": "ouba-studio",
+      "repo": "branching-story-mcp",
+      "description": "MCP server: validate and step deterministic branching story graphs, query the CC-BY-4.0 2026 Consumer AI Story Continuity Benchmark (doi:10.7910/DVN/YEBHQR), and classify transcript state drift; zero dependencies, stdio, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/ouba-studio/branching-story-mcp#readme",
+      "ecosystems": [
+        "mcp"
+      ]
+    },
+    {
       "name": "Brilliant Directories MCP",
       "url": "https://github.com/brilliantdirectories/brilliant-directories-mcp",
       "owner": "brilliantdirectories",
@@ -17287,6 +17343,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "FDIC Bank Health & Financials MCP",
+      "url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp",
+      "owner": "theluckystrike",
+      "repo": "fdic-bank-health-financials-mcp",
+      "description": "MCP server: free keyless hosted Streamable HTTP server for US FDIC bank health, deposit insurance verification, quarterly Call Report financials (assets, deposits, uninsured %, CET1/Tier 1 capital, ROA/ROE), failed banks, and branches",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "installation_url": "https://github.com/theluckystrike/fdic-bank-health-financials-mcp#readme",
+      "ecosystems": [
+        "mcp"
       ]
     },
     {
