@@ -1117,6 +1117,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [Genexus18MCP](https://github.com/lennix1337/Genexus18MCP) - MCP server that lets AI agents read, edit, analyze, and refactor objects in GeneXus Knowledge Bases through supported GeneXus SDKs and compatibility drivers.
 - [GH Project](https://github.com/zfifteen/gh-project-plugin) - Create GitHub repositories from Codex with inferred defaults, native menus, explicit confirmation, and deterministic local cloning.
 - [Ghostfolio MCP Server](https://github.com/mhajder/ghostfolio-mcp) - MCP server for analyzing and managing Ghostfolio investment portfolios through AI agents.
+- [GiftChecker MCP](https://github.com/lightsmite/giftchecker-mcp) - Public read-only Streamable HTTP MCP server for Telegram collectible gift valuations, trait floors, sales history, and market analytics.
 - [Ginta](https://github.com/justlinuxnoob/ginta-mcp) - MCP server: build, publish and edit small-business websites with contact forms, bookings, an online shop and a blog from Claude, ChatGPT, Claude Code or Gemini CLI, over Streamable HTTP with OAuth.
 - [GitHub Issues for Claude Code](https://github.com/MarcoCarnevali/claude-code-mods) - Claude Code mod that lists a repository's GitHub issues as cards in a side pane, with search, label filters and linked pull requests, and hands an issue to Claude with one click.
 - [GLPI MCP Server](https://github.com/mhajder/glpi-mcp) - MCP server for working with GLPI tickets, assets and the knowledge base through AI agents.
