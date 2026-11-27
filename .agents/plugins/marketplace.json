@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-26",
+  "last_updated": "2026-11-27",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -13067,6 +13067,21 @@
       "install_url": "https://raw.githubusercontent.com/Zigzag968/claude-code-lgtmgate/HEAD/.claude-plugin/plugin.json"
     },
     {
+      "name": "Lightkeeper",
+      "displayName": "Lightkeeper",
+      "description": "A map of your codebase kept as markdown notes outside the repo; hooks make Claude Code, Hermes Agent and Codex read the note that owns a file before editing it, and name the notes a session left stale before it stops",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "Light5566",
+      "repo": "claude-lightkeeper",
+      "url": "https://github.com/Light5566/claude-lightkeeper",
+      "install_url": "https://raw.githubusercontent.com/Light5566/claude-lightkeeper/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Limitless Library",
       "displayName": "Limitless Library",
       "description": "MCP server: Python CLI and stdio server for reusing source-free methods and explicitly shared code with receiver-controlled verification",
@@ -14278,10 +14293,14 @@
       "description": "Plugin and agent skills for Claude Code, Codex, Cursor, GitHub Copilot and Pi that draft GitHub Issues with testable acceptance criteria and, in repositories that run the open-source Orbi agent, hand them off to be implemented, tested, reviewed by a separate AI session and merged",
       "category": "Development & Workflow",
       "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
       "owner": "orbi-build",
       "repo": "orbi",
       "url": "https://github.com/orbi-build/orbi",
-      "installation_url": "https://github.com/orbi-build/orbi#readme"
+      "install_url": "https://raw.githubusercontent.com/orbi-build/orbi/HEAD/integrations/claude-plugin/.claude-plugin/plugin.json"
     },
     {
       "name": "Orchestrate Task Force",
@@ -19615,6 +19634,21 @@
       "installation_url": "https://github.com/light-cloud-com/mcp-server#readme"
     },
     {
+      "name": "Liliphant",
+      "displayName": "Liliphant",
+      "description": "MCP server: Liliphant joins your meetings and remembers the work across all of them; ask what was decided and who promised what, over Streamable HTTP with OAuth sign-in",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "walkover-mcp",
+      "repo": "liliphant",
+      "url": "https://github.com/walkover-mcp/liliphant",
+      "installation_url": "https://github.com/walkover-mcp/liliphant#readme"
+    },
+    {
       "name": "LinkBit",
       "displayName": "LinkBit",
       "description": "MCP server: shorten URLs, generate QR codes, and read click analytics via LinkBit (npx linkbit-mcp, slk_ API key)",
@@ -22064,6 +22098,17 @@
       "repo": "VMware-AIops",
       "url": "https://github.com/vmware-skills/VMware-AIops",
       "install_url": "https://raw.githubusercontent.com/vmware-skills/VMware-AIops/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Voice Wake",
+      "displayName": "Voice Wake",
+      "description": "Offline macOS wake-word and global hotkey plugin for Google Antigravity with local English keyword spotting, few-shot recorded voice samples, built-in mic Bluetooth protection, Silero VAD auto-submit, and a bilingual Auxiliary Pane UI",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "owner": "rmqg",
+      "repo": "antigravity-voice-wake",
+      "url": "https://github.com/rmqg/antigravity-voice-wake",
+      "installation_url": "https://github.com/rmqg/antigravity-voice-wake#readme"
     },
     {
       "name": "VoiceMoat Skills",
