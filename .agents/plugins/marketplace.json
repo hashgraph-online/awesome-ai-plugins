@@ -3668,6 +3668,21 @@
       "install_url": "https://raw.githubusercontent.com/ahel-technologies/ahel/HEAD/plugins/ahel/plugin.json"
     },
     {
+      "name": "AI Science Tracker",
+      "displayName": "AI Science Tracker",
+      "description": "Search a curated catalog of AI-enabled scientific discoveries and AI-found vulnerabilities through a hosted, read-only MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "marcello-pichini",
+      "repo": "ai-science-tracker",
+      "url": "https://github.com/marcello-pichini/ai-science-tracker",
+      "install_url": "https://raw.githubusercontent.com/marcello-pichini/ai-science-tracker/HEAD/plugins/chatgpt-ai-science-tracker/plugin.json"
+    },
+    {
       "name": "AI SDR Kit",
       "displayName": "AI SDR Kit",
       "description": "The SDR harness for your AI, open source. Gives Codex Zevari's AI Sales Director, an outbound SOP, every LinkedIn and email sequence, automations and an approval-gated LinkedIn and email sending engine.",
@@ -4518,6 +4533,21 @@
       "install_url": "https://raw.githubusercontent.com/entropy-data/dataproduct-builder-dbt/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Databuddy",
+      "displayName": "Databuddy",
+      "description": "Web and product analytics: traffic, funnels, errors, Web Vitals, replays, and why a metric moved, through a hosted MCP server with OAuth sign-in, plus a skill for adding Databuddy tracking to an app.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "databuddy-analytics",
+      "repo": "skills",
+      "url": "https://github.com/databuddy-analytics/skills",
+      "install_url": "https://raw.githubusercontent.com/databuddy-analytics/skills/HEAD/plugin.json"
+    },
+    {
       "name": "DataXAPI",
       "displayName": "DataXAPI",
       "description": "Market research from Codex through skills and a hosted MCP server: posts, comments, creators, trends, transcripts, ads and products on Douyin, Xiaohongshu (RedNote), WeChat, TikTok, YouTube, X and more, paid per call.",
@@ -4892,6 +4922,23 @@
       "install_url": "https://raw.githubusercontent.com/zlsbksdxl/codex-lark/HEAD/plugins/feishu2codex/.codex-plugin/plugin.json"
     },
     {
+      "name": "FeraTerra",
+      "displayName": "FeraTerra",
+      "description": "Trading skill and hosted Streamable HTTP MCP server for Arena Exchange spot, perpetuals, order margin previews, zero-capital flash arbitrage, and Base Sepolia L2 Clearinghouse custody.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex",
+        "mcp"
+      ],
+      "owner": "FeraTerra",
+      "repo": "feraterra-sdk",
+      "url": "https://github.com/FeraTerra/feraterra-sdk/tree/codex-plugin",
+      "install_url": "https://raw.githubusercontent.com/FeraTerra/feraterra-sdk/codex-plugin/plugin.json",
+      "installation_url": "https://github.com/FeraTerra/feraterra-sdk#readme"
+    },
+    {
       "name": "Firecrawl",
       "displayName": "Firecrawl",
       "description": "Search, scrape, crawl, and map the web from Codex with Firecrawl CLI skills for live research and extraction.",
@@ -4997,6 +5044,21 @@
       "install_url": "https://raw.githubusercontent.com/zfifteen/gh-project-plugin/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Groundsocial",
+      "displayName": "Groundsocial",
+      "description": "Eight read-only social research skills (brand mentions, competitor audits, creator vetting, subreddit research, TikTok trends, YouTube transcripts, comment mining) on public data from Reddit, X, TikTok, YouTube and 70+ more platforms through the hosted Groundsocial MCP server.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "shivanshmehendiratta",
+      "repo": "groundsocial-skills",
+      "url": "https://github.com/shivanshmehendiratta/groundsocial-skills",
+      "install_url": "https://raw.githubusercontent.com/shivanshmehendiratta/groundsocial-skills/HEAD/plugin.json"
+    },
+    {
       "name": "Hermes Tweet",
       "displayName": "Hermes Tweet",
       "description": "Hermes Agent X/Twitter plugin for read-first social research, monitoring, and approval-gated actions through Xquik.",
@@ -5085,6 +5147,21 @@
       "repo": "jimeng-skills",
       "url": "https://github.com/andreamzhang/jimeng-skills",
       "install_url": "https://raw.githubusercontent.com/andreamzhang/jimeng-skills/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "job-agent",
+      "displayName": "job-agent",
+      "description": "Job-search skills with the TrueInterview MCP: score postings, tailor r\u00e9sum\u00e9s, fill application forms up to Submit, track applications and prep for interviews.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "kevin-2023-code",
+      "repo": "job-agent",
+      "url": "https://github.com/kevin-2023-code/job-agent",
+      "install_url": "https://raw.githubusercontent.com/kevin-2023-code/job-agent/HEAD/plugins/codex/.codex-plugin/plugin.json"
     },
     {
       "name": "Kachilu Browser",
@@ -7478,6 +7555,21 @@
       "repo": "art-prompt-framework",
       "url": "https://github.com/YourAKShaw/art-prompt-framework",
       "installation_url": "https://github.com/YourAKShaw/art-prompt-framework#readme"
+    },
+    {
+      "name": "Auto Poster AI",
+      "displayName": "Auto Poster AI",
+      "description": "Seven Agent Skills plus the hosted Auto Poster AI MCP server for drafting, scheduling, publishing and analyzing social media posts on Instagram, TikTok, LinkedIn, X and more; also ships Claude Code, Cursor, Grok and Gemini CLI manifests",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "autoposterai",
+      "repo": "agent-skills",
+      "url": "https://github.com/autoposterai/agent-skills",
+      "installation_url": "https://github.com/autoposterai/agent-skills#readme"
     },
     {
       "name": "Awesome QA Skills",
