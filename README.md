@@ -1550,6 +1550,7 @@ OpenCode plugins are npm packages or local directories. Server plugins are regis
 - [OpenUltraCode](https://github.com/norandom/OpenUltraCode) - OpenCode plugin and skill bundle adding UltraCode-style slash commands, role agents, and verification tools for build, debug, research, and fusion workflows.
 - [Relay](https://github.com/knopkem/relay) - OpenCode plugin pipeline that plans with a strong model, implements with a fast one, then verifies and audits the work through file-based handoffs and a one-line protocol.
 - [RTL_OpenCode](https://github.com/programmer-1998/RTL_OpenCode) - OpenCode plugin that fixes bidirectional Persian, Arabic, and Hebrew text rendering with Unicode isolates, keeping code blocks and paths intact.
+- [TokenDefrag](https://github.com/yuseferi/token-defrag) - OpenCode V2 plugin that estimates potential context-token savings on live requests in shadow mode without rewriting them.
 
 ### ZCode Plugins & Localization
 
