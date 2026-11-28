@@ -1524,6 +1524,7 @@ submitting a repository.
 - [SteelUnion/dsh-softsensor-hub](https://github.com/SteelUnion/dsh-softsensor-hub) - Event hub for DSH: collectors produce events, rules rank them into critical/warn/info, and the store keeps them for later review. It never acts on its own.
 - [SteelUnion/dsh-wechat-queue](https://github.com/SteelUnion/dsh-wechat-queue) - WeChat channel with a durable serial queue: messages land on disk first, one reply at a time, and unfinished work survives a restart.
 - [Vibe-Mathematics](https://github.com/ChongCyrus/Vibe-Mathematics) - Plugin bundle installing four multi-agent math problem-solving and cross-verification agent presets into DeepSeek Harness.
+- [kiwi-dsh-plugin](https://github.com/harrylabsj/kiwi/tree/main/integrations/plugins/kiwi-dsh-plugin) - Kiwi buyer plugin for DeepSeek Harness: mounts the kiwi-buyer-mcp server and ships a kiwi-buyer skill for sourcing, RFQs and negotiation on the Kiwi commerce network.
 
 ### OpenCode Plugins
 
