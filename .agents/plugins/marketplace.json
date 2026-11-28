@@ -3835,6 +3835,21 @@
       "install_url": "https://raw.githubusercontent.com/arcmira/mcp/HEAD/plugins/arcmira/plugin.json"
     },
     {
+      "name": "ASOScan",
+      "displayName": "ASOScan",
+      "description": "Complete App Store Optimization platform for the App Store and Google Play, in your AI assistant through skills and an MCP server and in a web dashboard: keyword research, daily ranks, competitor keywords, a listing audit and review replies for your own apps.",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "ASOScan",
+      "repo": "aso-skills",
+      "url": "https://github.com/ASOScan/aso-skills",
+      "install_url": "https://raw.githubusercontent.com/ASOScan/aso-skills/HEAD/plugin.json"
+    },
+    {
       "name": "AutoCAD Tianzheng Tools",
       "displayName": "AutoCAD Tianzheng Tools",
       "description": "Connects Codex to AutoCAD and Tianzheng HVAC through a local MCP server for DWG-aware HVAC drawing inspection and workflow automation.",
@@ -7540,6 +7555,21 @@
       "installation_url": "https://github.com/MockirDev/antirea#readme"
     },
     {
+      "name": "Apple App Intents Skill",
+      "displayName": "Apple App Intents Skill",
+      "description": "Agent skill for Claude Code, Cursor, Codex, and OpenClaw that teaches coding agents to build iOS apps with App Intents, App Schemas, Siri, Shortcuts, and Apple Intelligence",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Sdefendre",
+      "repo": "apple-app-intents-skill",
+      "url": "https://github.com/Sdefendre/apple-app-intents-skill",
+      "installation_url": "https://github.com/Sdefendre/apple-app-intents-skill#readme"
+    },
+    {
       "name": "ArborynSkills",
       "displayName": "ArborynSkills",
       "description": "Reusable Codex and coding-agent skills for persistent plan trees and functional semantic growth",
@@ -7808,6 +7838,21 @@
       "repo": "CutWater",
       "url": "https://github.com/YourAKShaw/CutWater",
       "installation_url": "https://github.com/YourAKShaw/CutWater#readme"
+    },
+    {
+      "name": "DataLens Scrape",
+      "displayName": "DataLens Scrape",
+      "description": "Agent skill that collects whole lists, tables and comment threads from a web page into CSV across pagination, infinite scroll and load-more, running locally on Playwright with no API key",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "weird94",
+      "repo": "datalens-scrape-skill",
+      "url": "https://github.com/weird94/datalens-scrape-skill",
+      "installation_url": "https://github.com/weird94/datalens-scrape-skill#readme"
     },
     {
       "name": "DCC-MCP Agent Plugins",
@@ -12750,6 +12795,21 @@
       "repo": "iris-agentic-dev",
       "url": "https://github.com/intersystems-community/iris-agentic-dev",
       "install_url": "https://raw.githubusercontent.com/intersystems-community/iris-agentic-dev/HEAD/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Iron Veil",
+      "displayName": "Iron Veil",
+      "description": "Claude Code plugin and Python CLI that strips hidden Unicode tags, bidi overrides, and HTML/CSS prompt-injection payloads from untrusted inputs, quarantines repository hook traps, and audits local transcripts via `xray`",
+      "category": "Development & Workflow",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "argoness-prime",
+      "repo": "iron-veil",
+      "url": "https://github.com/argoness-prime/iron-veil",
+      "install_url": "https://raw.githubusercontent.com/argoness-prime/iron-veil/HEAD/.claude-plugin/plugin.json"
     },
     {
       "name": "Ironheights",
@@ -18410,7 +18470,7 @@
     {
       "name": "Embarko",
       "displayName": "Embarko",
-      "description": "MCP server: deploy and host AI-built apps and websites and get a live URL without any DevOps setup, over Streamable HTTP with OAuth sign-in",
+      "description": "MCP server: a shared workspace to publish, use and improve anything built with AI, over Streamable HTTP with OAuth sign-in",
       "category": "Tools & Integrations",
       "source": "awesome-ai-plugins",
       "platform": "mcp",
@@ -21423,6 +21483,21 @@
       "repo": "settled-skill",
       "url": "https://github.com/justinedwardvolmer/settled-skill",
       "install_url": "https://raw.githubusercontent.com/justinedwardvolmer/settled-skill/HEAD/plugins/settled/.claude-plugin/plugin.json"
+    },
+    {
+      "name": "Shellway",
+      "displayName": "Shellway",
+      "description": "Claude Code, Codex, Cursor and Gemini CLI plugin that adds the hosted Shellway MCP server (`https://mcp.getshellway.com/mcp`, OAuth sign-in) and a skill, so the agent can run commands and work with files on your own Windows, Mac or Linux computers and servers, which connect outbound only with read-only mode, allowed folders and blocked commands enforced on the machine",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "codex",
+      "ecosystems": [
+        "codex"
+      ],
+      "owner": "sandeepkumar466",
+      "repo": "shellway-agent",
+      "url": "https://github.com/sandeepkumar466/shellway-agent",
+      "install_url": "https://raw.githubusercontent.com/sandeepkumar466/shellway-agent/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "ShipStatic for Antigravity",
