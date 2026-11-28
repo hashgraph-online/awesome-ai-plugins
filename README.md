@@ -1400,6 +1400,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [VBASE](https://github.com/ekanshvcpkg/VBASE) - Claude Code plugin that edits talking-head videos with word-timed cuts and captions, and turns pinned frame notes into the next take.
 - [Vessel](https://github.com/spenceclark/Vessel) - Local reverse proxy that records every request and response between agents and Ollama, OpenAI-compatible or Anthropic backends to SQLite for search, replay and comparison, with a read-only MCP server for Claude Code and other MCP clients.
 - [VidSeeds.ai](https://github.com/CarrotGamesStudios/vidseeds-mcp) - Hosted MCP connector for pre-upload video SEO, metadata optimization, AI thumbnails, and multi-platform publishing with workflow skills for Codex agents.
+- [VulnPath-AI](https://github.com/zenithVeil/vulnpath-ai) - Offline Python hybrid scanner for AI/agent app code risks (secrets, shell patterns, path escape, and related issues). <!-- platform: standalone -->
 - [VMware-AIops](https://github.com/vmware-skills/VMware-AIops) - Skill and MCP server with 60 tools for VMware vCenter and ESXi VM lifecycle, OVA/template deployment, snapshots, guest operations and cluster management, where every destructive tool previews what it would change and acts only on an explicit confirm.
 - [Voice Wake](https://github.com/rmqg/antigravity-voice-wake) - Offline macOS wake-word and global hotkey plugin for Google Antigravity with local English keyword spotting, few-shot recorded voice samples, built-in mic Bluetooth protection, Silero VAD auto-submit, and a bilingual Auxiliary Pane UI.
 - [VoiceMoat Skills](https://github.com/prateeks367/voicemoat-skills) - 26 Agent Skills for LinkedIn and Twitter posts that draft in your own voice, audit a post before you publish, fix weak openings, draft comments and replies, read your numbers and plan the week, for Claude Code, Codex and any client that reads SKILL.md.
@@ -1795,4 +1796,4 @@ To add a plugin:
 1. Fork this repo and add a line per plugin (or one whole-marketplace entry; see [CONTRIBUTING.md](CONTRIBUTING.md#claude-code-submissions)) to the appropriate section in `README.md` (alphabetical order)
 2. Submit a PR with the plugin repo URL. Scanner CI in the source repository is optional for listing and recommended for security.
 
-**You do not need to copy plugin files into this repo.** A generator fetches your bundle from your source repo and regenerates catalog files automatically.
+**You do not need to copy plugin files into this repo.** A generator fetches your bundle from your source repo and regenerates catalog files automatically. 
