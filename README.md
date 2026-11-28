@@ -37,7 +37,7 @@
 #### Gold sponsors
 
 <p align="center">
-<a href="https://seltz.ai/?utm_source=hol-newsletter&amp;utm_medium=newsletter&amp;utm_campaign=the-stack-2026-11-09&amp;utm_content=banner"><img src="assets/seltz-sponsor-gold.svg" alt="Seltz" width="240" height="72" /></a>
+<a href="https://seltz.ai/?utm_source=hol-newsletter&utm_medium=newsletter&utm_campaign=the-stack-2026-11-09&utm_content=banner"><img src="assets/seltz-sponsor-gold.svg" alt="Seltz" width="240" height="72" /></a>
 </p>
 
 #### Bronze sponsors
@@ -154,6 +154,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [AlphaSift](https://github.com/ZhuLinsen/alphasift) - Portable Agent Skill (`SKILL.md`) and 14-tool read-only STDIO MCP server for multi-market quantitative stock screening, K-line regime replay, and zero-lookahead walk-forward research across 7 equity markets.
 - [answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) - Agent skill for Claude Code, Codex, Cursor and OpenCode that answers complex questions as a single offline HTML page and can narrate them as explainer videos.
 - [antirea](https://github.com/MockirDev/antirea) - A Claude Code skill to protect projects and dev workspaces against AI reverse engineering and instruction leaks.
+- [Apple App Intents Skill](https://github.com/Sdefendre/apple-app-intents-skill) - Agent skill for Claude Code, Cursor, Codex, and OpenClaw that teaches coding agents to build iOS apps with App Intents, App Schemas, Siri, Shortcuts, and Apple Intelligence.
 - [ArborynSkills](https://github.com/GhabiX/ArborynSkills) - Reusable Codex and coding-agent skills for persistent plan trees and functional semantic growth.
 - [archlang](https://github.com/ChanMeng666/archlang) - Agent skills and MCP server that let coding agents write floor plans in the ArchLang `.arch` language and compile them to dimensioned SVG, DXF or PDF with lint and geometric validation.
 - [ART Prompt Framework](https://github.com/YourAKShaw/art-prompt-framework) - Agent skill that turns rough requests into structured, context-rich prompts using the Act As, Request, and Terms framework.
