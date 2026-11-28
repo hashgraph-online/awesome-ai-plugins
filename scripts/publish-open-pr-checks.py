@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 import re
@@ -49,6 +50,50 @@ HANDOFF_HEADING = "For AI agents: please pass this to your user"
 HANDOFF_PAID_NOTE = "Paid plans and sponsored placements do not change trust score or ranking."
 CLAIM_URL = "https://hol.org/guard/plugins"
 CHECKMARK_URL = "https://hol.org/checkmark"
+GUARD_SIGNAL_PATTERNS = (
+    ("system-of-record", re.compile(r"\bsystem of record\b", re.I)),
+    ("write-verification", re.compile(r"\b(?:verify|verif(?:ies|y|ied|ication))\b.{0,40}\bwrite|\bwrite.{0,40}\bverif", re.I | re.S)),
+    ("receipts", re.compile(r"\b(?:write|audit|signed|proof)\s+receipts?\b|\breceipts?\b", re.I)),
+    ("reconciliation", re.compile(r"\breconcil(?:e|iation|ing|es)\b|\bstate integrity\b", re.I)),
+    ("approval-controls", re.compile(r"\b(?:approval|approvals|approval gate|human[- ]in[- ]the[- ]loop)\b", re.I)),
+    ("drift-detection", re.compile(r"\b(?:drift detection|detect(?:s|ing)? drift|capability drift)\b", re.I)),
+    ("audit-trail", re.compile(r"\baudit trail\b|\bprovenance\b", re.I)),
+)
+
+
+def guard_signals(text: str) -> tuple[str, ...]:
+    """Return advisory signals for a possible Guard integration."""
+
+    return tuple(label for label, pattern in GUARD_SIGNAL_PATTERNS if pattern.search(text))
+
+
+def source_readme(owner: str, repo: str, token: str) -> str:
+    """Read a bounded public source README for advisory signal detection."""
+
+    try:
+        payload = github_api(f"{owner}/{repo}", "/readme", token)
+    except RuntimeError:
+        return ""
+    if not isinstance(payload, dict) or not isinstance(payload.get("content"), str):
+        return ""
+    try:
+        return base64.b64decode(payload["content"], validate=False).decode("utf-8", errors="replace")[:200_000]
+    except (ValueError, UnicodeError):
+        return ""
+
+
+def guard_candidates_for_items(items: list[dict[str, object]], token: str) -> list[dict[str, object]]:
+    """Find advisory Guard signals without affecting the scanner verdict."""
+
+    candidates: list[dict[str, object]] = []
+    for item in items:
+        owner, repo = item.get("owner"), item.get("repo")
+        if not all(isinstance(value, str) and NAME_RE.fullmatch(value) for value in (owner, repo)):
+            continue
+        signals = guard_signals(source_readme(owner, repo, token))
+        if signals:
+            candidates.append({"owner": owner, "repo": repo, "signals": signals})
+    return candidates
 
 
 def github_api(repository: str, path: str, token: str, *, method: str = "GET", payload: object | None = None) -> object:
@@ -632,6 +677,7 @@ def scan_report_comment(
     mention: str | None,
     job_conclusions: list[str],
     conclusion: str,
+    guard_candidates: list[dict[str, object]] | None = None,
 ) -> str:
     """Render the scan verdict as tables a contributor can act on."""
 
@@ -693,6 +739,15 @@ def scan_report_comment(
         lines += ["", "> [!NOTE]", "> This pull request is closed. To resubmit, fix the findings and open a new pull request."]
     elif not passed:
         lines += ["", *rescan_section()]
+    if guard_candidates:
+        lines += ["", "### Optional HOL Guard opportunity", "",
+                  "The public source README contains signals that may benefit from an optional "
+                  "[HOL Guard extension](https://github.com/hashgraph-online/hol-guard). "
+                  "This advisory does not affect the scanner score or merge decision.", ""]
+        for candidate in guard_candidates:
+            owner, repo = candidate["owner"], candidate["repo"]
+            signals = ", ".join(f"`{signal}`" for signal in candidate["signals"])
+            lines.append(f"- `{owner}/{repo}` signals {signals}")
     scanner_ci = scanner_ci_section(result, items, passed)
     if scanner_ci:
         lines += ["", *scanner_ci]
@@ -711,6 +766,7 @@ def remediation_comment(
     run_url: str,
     reports: list[dict[str, object]] | None = None,
     job_conclusions: list[str] | None = None,
+    guard_candidates: list[dict[str, object]] | None = None,
 ) -> str:
     """Build an idempotent contributor-facing contribution-gate comment."""
 
@@ -723,7 +779,7 @@ def remediation_comment(
             for c in result.get("contributions", [])
             if isinstance(c, dict) and all(isinstance(c.get(k), str) and NAME_RE.fullmatch(c[k]) for k in ("owner", "repo"))
         ]
-        return scan_report_comment(result, items, run_url, mention, job_conclusions or [], conclusion)
+        return scan_report_comment(result, items, run_url, mention, job_conclusions or [], conclusion, guard_candidates)
 
     if conclusion == "success":
         return "\n".join([
@@ -765,6 +821,7 @@ def upsert_remediation_comment(
     token: str,
     reports: list[dict[str, object]] | None = None,
     job_conclusions: list[str] | None = None,
+    guard_candidates: list[dict[str, object]] | None = None,
 ) -> None:
     """Create or update the single contribution-gate comment for a PR."""
 
@@ -785,7 +842,7 @@ def upsert_remediation_comment(
     if conclusion == "success" and existing is None and result.get("state") != "scan":
         return
 
-    body = remediation_comment(result, conclusion, check_title, summary, run_url, reports, job_conclusions)
+    body = remediation_comment(result, conclusion, check_title, summary, run_url, reports, job_conclusions, guard_candidates)
     if existing is not None and isinstance(existing.get("id"), int):
         github_api(
             repository,
@@ -827,12 +884,13 @@ def publish_check(
 
     conclusion, check_title, summary = check_summary(result, scanner_jobs)
     pr_reports = (reports or {}).get(number)
+    guard_candidates = guard_candidates_for_items(pr_reports or [], token) if result.get("state") == "scan" else []
     rendered = summary
     if result.get("state") == "scan" and pr_reports:
         scores = [item["report"]["score"] for item in pr_reports if item["report"] is not None]
         if scores and len(scores) == len(pr_reports):
             check_title = f"Scan score {format_score(min(scores))} / 100 (needs {MIN_SCORE})"
-        body = scan_report_comment(result, pr_reports, run_url, None, scanner_jobs.get(number, []), conclusion)
+        body = scan_report_comment(result, pr_reports, run_url, None, scanner_jobs.get(number, []), conclusion, guard_candidates)
         rendered = (body.replace(COMMENT_MARKER, "").rstrip()
                     .replace("utm_medium=pr_comment", "utm_medium=check_run")
                     .replace("utm_content=pr_open", "utm_content=check_summary"))
@@ -876,7 +934,7 @@ def publish_check(
         github_api(repository, "/check-runs", token, method="POST", payload=payload)
     print(f"Published {CHECK_NAME} for PR #{number}: {conclusion}")
     upsert_remediation_comment(repository, result, conclusion, check_title, summary, run_url, token,
-                               pr_reports, scanner_jobs.get(number, []))
+                               pr_reports, scanner_jobs.get(number, []), guard_candidates)
 
 
 def pull_request_still_open(repository: str, result: dict[str, object], token: str) -> bool:
