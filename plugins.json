@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-ai-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-27",
-  "total": 1638,
+  "last_updated": "2026-11-28",
+  "total": 1642,
   "platforms": [
     "codex",
     "grok",
@@ -8151,6 +8151,20 @@
       "source": "awesome-ai-plugins",
       "platform": "agent-skills",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme",
+      "ecosystems": [
+        "agent-skills"
+      ]
+    },
+    {
+      "name": "Qonvert Marketing Skills",
+      "url": "https://github.com/Qonvert-Marketing-AI/qonvert-marketing-skills",
+      "owner": "Qonvert-Marketing-AI",
+      "repo": "qonvert-marketing-skills",
+      "description": "Six Agent Skills for reviewing existing Google Ads and Yandex Direct campaigns, auditing conversion tracking and SEO, and connecting authorized project sources through Qonvert Connect",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "installation_url": "https://github.com/Qonvert-Marketing-AI/qonvert-marketing-skills#readme",
       "ecosystems": [
         "agent-skills"
       ]
@@ -20346,6 +20360,20 @@
       ]
     },
     {
+      "name": "Tote",
+      "url": "https://github.com/generalmachines/tote-plugin",
+      "owner": "generalmachines",
+      "repo": "tote-plugin",
+      "description": "Claude Code plugin with a hosted OAuth MCP connector (`https://tote.machinecommerce.co/mcp`, no API key) that remembers your sizes and taste to find deals that fit, checks 90 days of price history to tell if a sale is real, and saves items or Deal Watch price alerts, with a Gemini CLI extension in the repository",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/generalmachines/tote-plugin/HEAD/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ]
+    },
+    {
       "name": "Touchline Wire MCP",
       "url": "https://github.com/touchlinewire/touchlinewire-mcp",
       "owner": "touchlinewire",
@@ -20609,6 +20637,20 @@
       "platform": "standalone",
       "ecosystems": [
         "standalone"
+      ]
+    },
+    {
+      "name": "vwatch",
+      "url": "https://github.com/kashaf12/vwatch",
+      "owner": "kashaf12",
+      "repo": "vwatch",
+      "description": "Claude Code plugin and MCP server that lets an agent watch local video files with timestamped frame grids, crops, transcript and loudness, plus model-free signals read from every frame to flag the flash frames, freezes and audio dropouts that one-frame-a-second sampling misses; no model calls, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "install_url": "https://raw.githubusercontent.com/kashaf12/vwatch/HEAD/plugins/vwatch/.claude-plugin/plugin.json",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
       ]
     },
     {
@@ -22062,6 +22104,20 @@
       "source": "awesome-ai-plugins",
       "platform": "opencode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme",
+      "ecosystems": [
+        "opencode"
+      ]
+    },
+    {
+      "name": "TokenDefrag",
+      "url": "https://github.com/yuseferi/token-defrag",
+      "owner": "yuseferi",
+      "repo": "token-defrag",
+      "description": "OpenCode V2 plugin that estimates potential context-token savings on live requests in shadow mode without rewriting them",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "installation_url": "https://github.com/yuseferi/token-defrag#readme",
       "ecosystems": [
         "opencode"
       ]

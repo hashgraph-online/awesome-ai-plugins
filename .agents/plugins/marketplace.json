@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "awesome-ai-plugins",
-  "last_updated": "2026-11-27",
+  "last_updated": "2026-11-28",
   "plugins": [
     {
       "name": "Registry Broker",
@@ -8708,6 +8708,21 @@
       "repo": "profile-use",
       "url": "https://github.com/leeguooooo/profile-use",
       "installation_url": "https://github.com/leeguooooo/profile-use#readme"
+    },
+    {
+      "name": "Qonvert Marketing Skills",
+      "displayName": "Qonvert Marketing Skills",
+      "description": "Six Agent Skills for reviewing existing Google Ads and Yandex Direct campaigns, auditing conversion tracking and SEO, and connecting authorized project sources through Qonvert Connect",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "Qonvert-Marketing-AI",
+      "repo": "qonvert-marketing-skills",
+      "url": "https://github.com/Qonvert-Marketing-AI/qonvert-marketing-skills",
+      "installation_url": "https://github.com/Qonvert-Marketing-AI/qonvert-marketing-skills#readme"
     },
     {
       "name": "QuestionPunk Research Skills",
@@ -21833,6 +21848,21 @@
       "installation_url": "https://github.com/Toolbox-POD/toolbox-pod-mcp#readme"
     },
     {
+      "name": "Tote",
+      "displayName": "Tote",
+      "description": "Claude Code plugin with a hosted OAuth MCP connector (`https://tote.machinecommerce.co/mcp`, no API key) that remembers your sizes and taste to find deals that fit, checks 90 days of price history to tell if a sale is real, and saves items or Deal Watch price alerts, with a Gemini CLI extension in the repository",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "generalmachines",
+      "repo": "tote-plugin",
+      "url": "https://github.com/generalmachines/tote-plugin",
+      "install_url": "https://raw.githubusercontent.com/generalmachines/tote-plugin/HEAD/.claude-plugin/plugin.json"
+    },
+    {
       "name": "Touchline Wire MCP",
       "displayName": "Touchline Wire MCP",
       "description": "MCP server: live Premier League football tactical intelligence with 16 read-only tools for AI predicted starting lineups, squad injury wires, referee disciplinary dossiers, official standings, and tier-graded transfer rumours; no API key required",
@@ -22117,6 +22147,21 @@
       "owner": "h1rdr3v2",
       "repo": "vox-cli",
       "url": "https://github.com/h1rdr3v2/vox-cli"
+    },
+    {
+      "name": "vwatch",
+      "displayName": "vwatch",
+      "description": "Claude Code plugin and MCP server that lets an agent watch local video files with timestamped frame grids, crops, transcript and loudness, plus model-free signals read from every frame to flag the flash frames, freezes and audio dropouts that one-frame-a-second sampling misses; no model calls, no API key",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "claude-code",
+      "ecosystems": [
+        "claude-code"
+      ],
+      "owner": "kashaf12",
+      "repo": "vwatch",
+      "url": "https://github.com/kashaf12/vwatch",
+      "install_url": "https://raw.githubusercontent.com/kashaf12/vwatch/HEAD/plugins/vwatch/.claude-plugin/plugin.json"
     },
     {
       "name": "vybe-intelligence-vault",
@@ -23681,6 +23726,21 @@
       "repo": "RTL_OpenCode",
       "url": "https://github.com/programmer-1998/RTL_OpenCode",
       "installation_url": "https://github.com/programmer-1998/RTL_OpenCode#readme"
+    },
+    {
+      "name": "TokenDefrag",
+      "displayName": "TokenDefrag",
+      "description": "OpenCode V2 plugin that estimates potential context-token savings on live requests in shadow mode without rewriting them",
+      "category": "OpenCode Plugins",
+      "source": "awesome-ai-plugins",
+      "platform": "opencode",
+      "ecosystems": [
+        "opencode"
+      ],
+      "owner": "yuseferi",
+      "repo": "token-defrag",
+      "url": "https://github.com/yuseferi/token-defrag",
+      "installation_url": "https://github.com/yuseferi/token-defrag#readme"
     }
   ]
 }
