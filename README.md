@@ -1115,6 +1115,7 @@ Individually installable Agent Skills collections, rather than one client-specif
 - [GDS Agent](https://github.com/neo4j-contrib/gds-agent) - Graph data scientist as an MCP server and skill: project Neo4j graphs and run GDS algorithms for centrality, community, path finding, similarity, embeddings, and ML pipelines.
 - [Genexus18MCP](https://github.com/lennix1337/Genexus18MCP) - MCP server that lets AI agents read, edit, analyze, and refactor objects in GeneXus Knowledge Bases through supported GeneXus SDKs and compatibility drivers.
 - [GH Project](https://github.com/zfifteen/gh-project-plugin) - Create GitHub repositories from Codex with inferred defaults, native menus, explicit confirmation, and deterministic local cloning.
+- [gh-notifs](https://github.com/aymanbagabas/gh-notifs) - Browse, filter, and manage GitHub notifications from the terminal. <!-- platform: standalone -->
 - [Ghostfolio MCP Server](https://github.com/mhajder/ghostfolio-mcp) - MCP server for analyzing and managing Ghostfolio investment portfolios through AI agents.
 - [GiftChecker MCP](https://github.com/lightsmite/giftchecker-mcp) - Public read-only Streamable HTTP MCP server for Telegram collectible gift valuations, trait floors, sales history, and market analytics.
 - [Ginta](https://github.com/justlinuxnoob/ginta-mcp) - MCP server: build, publish and edit small-business websites with contact forms, bookings, an online shop and a blog from Claude, ChatGPT, Claude Code or Gemini CLI, over Streamable HTTP with OAuth.
