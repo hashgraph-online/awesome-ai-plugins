@@ -7930,6 +7930,21 @@
       "installation_url": "https://github.com/georgesmomo/devops-mock-interview#readme"
     },
     {
+      "name": "digital-footprint-multiplier",
+      "displayName": "digital-footprint-multiplier",
+      "description": "Agent skill that scores how a developer or engineering manager looks to recruiters and AI screening from a LinkedIn URL, with a fix plan",
+      "category": "Agent Skills",
+      "source": "awesome-ai-plugins",
+      "platform": "agent-skills",
+      "ecosystems": [
+        "agent-skills"
+      ],
+      "owner": "marian-kamenistak",
+      "repo": "digital-footprint-multiplier",
+      "url": "https://github.com/marian-kamenistak/digital-footprint-multiplier",
+      "installation_url": "https://github.com/marian-kamenistak/digital-footprint-multiplier#readme"
+    },
+    {
       "name": "docx-cli",
       "displayName": "docx-cli",
       "description": "Agent skill/CLI for AI agents to work with Word documents without breaking their formatting: fill in forms, update tables, add images, restyle, write reports, and redline with tracked changes and comments",
@@ -17559,6 +17574,21 @@
       "install_url": "https://raw.githubusercontent.com/ttpears/bookstack-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "booksy-mcp",
+      "displayName": "booksy-mcp",
+      "description": "MCP server: unofficial access to Booksy Biz salon software (calendar, clients, staff, payments) through your own logged-in Chrome tab, with no session tokens leaving the browser",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "PiotrZapolski",
+      "repo": "booksy-mcp",
+      "url": "https://github.com/PiotrZapolski/booksy-mcp",
+      "installation_url": "https://github.com/PiotrZapolski/booksy-mcp#readme"
+    },
+    {
       "name": "BoondManager MCP Server",
       "displayName": "BoondManager MCP Server",
       "description": "MCP server for the BoondManager staffing ERP/CRM exposing 182 tools, 12 prompts and 22 resources over candidates, resources, opportunities, projects, invoices and expense reports, with stdio and OAuth-protected HTTP transports",
@@ -19595,6 +19625,21 @@
       "repo": "cursor-plugin",
       "url": "https://github.com/klingai-tech/cursor-plugin",
       "installation_url": "https://github.com/klingai-tech/cursor-plugin#readme"
+    },
+    {
+      "name": "Kliv",
+      "displayName": "Kliv",
+      "description": "MCP server: hosted Streamable HTTP server (`https://mcp.kliv.dev/mcp`, OAuth) that lets your AI tool build and change Kliv web apps, with their files, database, functions, payments, tests and publishing (free plan)",
+      "category": "Tools & Integrations",
+      "source": "awesome-ai-plugins",
+      "platform": "mcp",
+      "ecosystems": [
+        "mcp"
+      ],
+      "owner": "kliv-dev",
+      "repo": "kliv-mcp",
+      "url": "https://github.com/kliv-dev/kliv-mcp",
+      "installation_url": "https://github.com/kliv-dev/kliv-mcp#readme"
     },
     {
       "name": "kunglao-agent",
