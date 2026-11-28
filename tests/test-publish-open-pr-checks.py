@@ -343,6 +343,28 @@ class PublishOpenPrChecksTests(unittest.TestCase):
         self.assertIn("/new/main?", body)
         self.assertTrue(body.endswith("\n" + MODULE.COMMENT_MARKER))
 
+    def test_scan_comment_surfaces_advisory_guard_opportunity(self):
+        body = MODULE.remediation_comment(
+            self.scan_result(),
+            "success",
+            "title",
+            "summary",
+            "https://github.com/example/repo/actions/runs/1",
+            reports=[self.scan_report(score=88, findings=[])],
+            guard_candidates=[{"owner": "owner", "repo": "plugin", "signals": ("write-verification", "receipts")}],
+        )
+        self.assertIn("Optional HOL Guard opportunity", body)
+        self.assertIn("`write-verification`", body)
+        self.assertIn("`receipts`", body)
+        self.assertIn("does not affect the scanner score or merge decision", body)
+
+    def test_guard_detector_reads_only_public_readme_signals(self):
+        encoded = MODULE.base64.b64encode(b"Writes use reconciliation and produce signed receipts.").decode()
+        with patch.object(MODULE, "github_api", return_value={"content": encoded}) as api:
+            candidates = MODULE.guard_candidates_for_items([{"owner": "owner", "repo": "plugin"}], "token")
+        self.assertEqual(candidates[0]["signals"], ("receipts", "reconciliation"))
+        self.assertEqual(api.call_args.args[:2], ("owner/plugin", "/readme"))
+
     def test_merged_and_closed_comments_do_not_ask_for_a_push(self):
         merged = self.render({**self.scan_result(), "pr_state": "merged"}, "success",
                              [self.scan_report(score=88, findings=[])])
